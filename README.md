@@ -1,2 +1,5 @@
 # W3Schools
-W3Schools Full Offline Version
+W3Schools Full Offline Version Weekly Update.
+
+
+
