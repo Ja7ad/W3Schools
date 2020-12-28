@@ -1,0 +1,67 @@
+<div id="appml_filtercontainer" class="w3-container w3-light-grey w3-padding-large w3-section" style="display:none">
+<span id="appmlbtn_queryClose" onclick="this.parentNode.style.display='none';" class="w3-button w3-large w3-right">&times;</span>
+<h2>Filter</h2>
+<div id="appml_filter">
+    <div class="w3-row w3-section">
+      <div class="w3-col m3">
+        <label>ProductName:</label>
+      </div>
+      <div class="w3-col m2">
+        <input id="appml_datatype_ProductName" type='hidden'>
+        <select id="appml_operator_ProductName" class="w3-select w3-border">
+          <option value="0">=</option>
+          <option value="1">&lt;&gt;</option>
+          <option value="2">&lt;</option>
+          <option value="3">&gt;</option>
+          <option value="4">&lt;=</option>
+          <option value="5">&gt;=</option>
+          <option value="6">%</option>
+        </select>
+      </div>
+      <div class="w3-col m7">
+        <input id="appml_query_ProductName" class="w3-input w3-border">
+      </div>
+    </div>
+    <div class="w3-row w3-section">
+      <div class="w3-col m3">
+        <label>Supplier ID:</label>
+      </div>
+      <div class="w3-col m2">
+        <input id="appml_datatype_Suppliers.SupplierID" type='hidden'>
+        <select id="appml_operator_Suppliers.SupplierID" class="w3-select w3-border">
+          <option value="10">=</option>
+          <option value="11">&lt;&gt;</option>
+        </select>
+      </div>
+      <div class="w3-col m7">
+        <div appml-data="appmlb2e4.json?model=model_dropdown_suppliers">
+          <select id="appml_query_Suppliers.SupplierID" class="w3-select w3-border">
+            <option value=""></option>
+            <option appml-repeat="records" value="{{SupplierID}}">{{SupplierName}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row w3-section">
+      <div class="w3-col m3">
+        <label>Category ID:</label>
+      </div>
+      <div class="w3-col m2">
+        <input id="appml_datatype_Categories.CategoryID" type='hidden'>
+        <select id="appml_operator_Categories.CategoryID" class="w3-select w3-border">
+          <option value="10">=</option>
+          <option value="11">&lt;&gt;</option>
+        </select>
+      </div>
+      <div class="w3-col m7">
+        <div appml-data="appml2f42.json?model=model_dropdown_categories">
+          <select id="appml_query_Categories.CategoryID" class="w3-select w3-border">
+            <option value=""></option>
+            <option appml-repeat="records" value="{{CategoryID}}">{{CategoryName}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+</div>
+<button id="appmlbtn_queryOK" type="button" class="w3-btn w3-green">OK</button>
+</div>

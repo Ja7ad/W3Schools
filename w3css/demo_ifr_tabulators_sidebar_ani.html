@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_tabulators_sidebar_ani.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<style>
+.city {display:none;}
+</style>
+<body style="overflow:hidden !important;">
+
+<div class="w3-sidebar w3-bar-block w3-card w3-black" style="width:130px;">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink testbtn" onclick="openCity(event, 'London')">Fade</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris')">Left</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'London2')">Right</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')">Top</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris2')">Bottom</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo2')">Zoom</a>
+</div>
+
+<div style="margin-left:130px">
+
+  <div id="London" class="w3-container city w3-animate-opacity">
+    <h2>Fade in</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+
+  <div id="Paris" class="w3-container city w3-animate-left">
+    <h2>Slide in from left</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+  </div>
+
+  <div id="Tokyo" class="w3-container city w3-animate-top">
+    <h2>Slide in from top</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+  </div>
+
+  <div id="London2" class="w3-container city w3-animate-right">
+    <h2>Slide in from right</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+
+  <div id="Paris2" class="w3-container city w3-animate-bottom">
+    <h2>Slide in from bottom</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+  </div>
+
+  <div id="Tokyo2" class="w3-container city w3-animate-zoom">
+    <h2>Zoom in</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+  </div>
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].classList.remove("w3-red");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.classList.add("w3-red");
+}
+</script>
+
+<script>
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_tabulators_sidebar_ani.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+</html>

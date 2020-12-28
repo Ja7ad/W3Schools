@@ -1,0 +1,2621 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/charsets/ref_html_entities_4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 03:14:44 GMT -->
+<head>
+<title>HTML 4 Entities</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+<style>
+.w3-table-all td:first-child {
+font-size:22px; padding-top:0; padding-bottom:0;}
+</style>
+</head>
+<body>
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
+
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
+  </div>
+
+  <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+    THE WORLD'S LARGEST WEB DEVELOPER SITE
+  </div>
+
+</div>
+
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Tutorial'>JAVA</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+
+
+
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='../../shop.w3schools.com/index.html'>SHOP</a>
+
+      <a class="w3-bar-item w3-button w3-right" href='../cert/default.html' title='Certificates'>CERTIFICATES</a>
+
+      <!--
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      -->
+      
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right w3-hide-medium" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML and CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='../howto/default.html'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Learn Sass</a>          
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="../appml/default.html">Learn AppML</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Learn W3.JS</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
+          <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Learn PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Learn Raspberry Pi</a>          
+          <h3>Web Building</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+          <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google Maps Reference</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Reference</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="../appml/appml_reference.html">AppML Reference</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Reference</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Reference</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Reference</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Reference</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Reference</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Character Sets</h3>
+          <a class="w3-bar-item w3-button" href='default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='ref_html_symbols.html'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Exercises</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Exercises</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Quizzes</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Quiz</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Quiz</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Quiz</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Certificate</a>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+
+    <div id='nav_login' class='w3-bar-block w3-card-2' style="display:none">
+      <span onclick='w3_close_nav("login")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class="loginmodaldiv" style="padding:48px 16px 1px 16px;text-align:center;">
+        <h2>LOG IN</h2>
+        <div style="font-size:15px"><a href="../../mypage.w3schools.com/mypage/index.html">Why Log In?</a></div>
+        <div class="loginmodalform">
+          <form id="loginform" name="loginform" autocomplete="off" method="post">
+            <div><label>Username</label></div>
+            <div><input type="email" name="n" placeholder="Enter your e-mail address" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="p" placeholder="Enter Your Password" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div id="loginerrordiv" style="display:none" class="w3-text-red"></div>
+            <div class="login_submit_container"><button id="login_submit_button" type="submit" onclick="login_user(event)">LOG IN</button></div>
+            <div style="overflow:auto;margin-top:10px;font-size:15px;">
+            <div class="login_newusertext">New User? <a href="../../mypage.w3schools.com/mypage/login8236.html?logintyp=1" target="_blank">Sign Up For Free!</a></div>
+            <div class="login_forgotpasswordtext"><a href="../../mypage.w3schools.com/mypage/forgot_password.html">Forgot password?</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML</span> Charsets</h2>
+<a target="_top" href="default.html">HTML Charsets</a>
+<a target="_top" href="ref_html_ascii.html">HTML ASCII</a>
+<a target="_top" href="ref_html_ansi.html">HTML WIN-1252</a>
+<a target="_top" href="ref_html_8859.html">HTML ISO-8859</a>
+<a target="_top" href="ref_html_symbols.html">HTML Symbols</a>
+<a target="_top" href="ref_html_utf8.html">HTML UTF-8</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> UTF-8</h2>
+<a target="_top" href="ref_utf_basic_latin.html">Latin Basic</a>
+<a target="_top" href="ref_utf_latin1_supplement.html">Latin Supplement</a>
+<a target="_top" href="ref_utf_latin_extended_a.html">Latin Extended A</a>
+<a target="_top" href="ref_utf_latin_extended_b.html">Latin Extended B</a>
+<a target="_top" href="ref_utf_modifiers.html">Modifier Letters</a>
+<a target="_top" href="ref_utf_diacritical.html">Diacritical Marks</a>
+<a target="_top" href="ref_utf_greek.html">Greek and Coptic</a>
+<a target="_top" href="ref_utf_cyrillic.html">Cyrillic Basic</a>
+<a target="_top" href="ref_utf_cyrillic_supplement.html">Cyrillic Supplement</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Symbols</h2>
+<a target="_top" href="ref_utf_punctuation.html">General Punctuation</a>
+<a target="_top" href="ref_utf_currency.html">Currency Symbols</a>
+<a target="_top" href="ref_utf_letterlike.html">Letterlike Symbols</a>
+<a target="_top" href="ref_utf_arrows.html">Arrows</a>
+<a target="_top" href="ref_utf_math.html">Math Operators</a>
+<a target="_top" href="ref_utf_box.html">Box Drawings</a>
+<a target="_top" href="ref_utf_block.html">Block Elements</a>
+<a target="_top" href="ref_utf_geometric.html">Geometric Shapes</a>
+<a target="_top" href="ref_utf_symbols.html">Misc Symbols</a>
+<a target="_top" href="ref_utf_dingbats.html">Dingbats</a>
+<a target="_top" href="ref_emoji.html">Emoji</a>
+<a target="_top" href="ref_emoji_smileys.html">Emoji Smileys</a>
+<a target="_top" href="ref_emoji_skin_tones.html">Emoji Skin Tones</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Entities</h2>
+<a target="_top" href="ref_html_entities_4.html">HTML4 Entities</a>
+<a target="_top" href="ref_html_entities_a.html">HTML5 Entities A</a>
+<a target="_top" href="ref_html_entities_b.html">HTML5 Entities B</a>
+<a target="_top" href="ref_html_entities_c.html">HTML5 Entities C</a>
+<a target="_top" href="ref_html_entities_d.html">HTML5 Entities D</a>
+<a target="_top" href="ref_html_entities_e.html">HTML5 Entities E</a>
+<a target="_top" href="ref_html_entities_f.html">HTML5 Entities F</a>
+<a target="_top" href="ref_html_entities_g.html">HTML5 Entities G</a>
+<a target="_top" href="ref_html_entities_h.html">HTML5 Entities H</a>
+<a target="_top" href="ref_html_entities_i.html">HTML5 Entities I</a>
+<a target="_top" href="ref_html_entities_j.html">HTML5 Entities J</a>
+<a target="_top" href="ref_html_entities_k.html">HTML5 Entities K</a>
+<a target="_top" href="ref_html_entities_l.html">HTML5 Entities L</a>
+<a target="_top" href="ref_html_entities_m.html">HTML5 Entities M</a>
+<a target="_top" href="ref_html_entities_n.html">HTML5 Entities N</a>
+<a target="_top" href="ref_html_entities_o.html">HTML5 Entities O</a>
+<a target="_top" href="ref_html_entities_p.html">HTML5 Entities P</a>
+<a target="_top" href="ref_html_entities_q.html">HTML5 Entities Q</a>
+<a target="_top" href="ref_html_entities_r.html">HTML5 Entities R</a>
+<a target="_top" href="ref_html_entities_s.html">HTML5 Entities S</a>
+<a target="_top" href="ref_html_entities_t.html">HTML5 Entities T</a>
+<a target="_top" href="ref_html_entities_u.html">HTML5 Entities U</a>
+<a target="_top" href="ref_html_entities_v.html">HTML5 Entities V</a>
+<a target="_top" href="ref_html_entities_w.html">HTML5 Entities W</a>
+<a target="_top" href="ref_html_entities_x.html">HTML5 Entities X</a>
+<a target="_top" href="ref_html_entities_y.html">HTML5 Entities Y</a>
+<a target="_top" href="ref_html_entities_z.html">HTML5 Entities Z</a>
+
+
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+       
+      </div>
+<h1>HTML 4  <span class="color_h1">Entity Names</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="ref_emoji_skin_tones.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="ref_html_entities_a.html">Next &#10095;</a>
+</div>
+<hr>
+<h2>Complete HTML 4 Entity Reference</h2>
+<p>All entities in the table below, will display correctly in all browsers, both 
+in HTML4 and in HTML5 pages.</p>
+<p>For a complete HTML5 entity reference, please go to the next chapter.</p>
+
+<div class="w3-responsive">
+<table class="w3-table-all charset-tryit">
+<tr>
+<th style="width:7%">Char</th>
+<th style="width:12%">Entity</th>
+<th style="width:10%">Dec</th>
+<th style="width:10%">Hex</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&amp;amp;</td>
+<td>&amp;#38;</td>
+<td>&amp;#x26;</td>
+<td>ampersand</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&amp;lt;</td>
+<td>&amp;#60;</td>
+<td>&amp;#x3C;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&amp;gt;</td>
+<td>&amp;#62;</td>
+<td>&amp;#x3E;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&amp;nbsp;</td>
+<td>&amp;#160;</td>
+<td>&amp;#xA0;</td>
+<td>no-break space = non-breaking space</td>
+</tr>
+<tr>
+<td>&#xA1;</td>
+<td>&amp;iexcl;</td>
+<td>&amp;#161;</td>
+<td>&amp;#xA1;</td>
+<td>inverted exclamation mark</td>
+</tr>
+<tr>
+<td>&#xA2;</td>
+<td>&amp;cent;</td>
+<td>&amp;#162;</td>
+<td>&amp;#xA2;</td>
+<td>cent sign</td>
+</tr>
+<tr>
+<td>&#xA3;</td>
+<td>&amp;pound;</td>
+<td>&amp;#163;</td>
+<td>&amp;#xA3;</td>
+<td>pound sign</td>
+</tr>
+<tr>
+<td>&#xA4;</td>
+<td>&amp;curren;</td>
+<td>&amp;#164;</td>
+<td>&amp;#xA4;</td>
+<td>currency sign</td>
+</tr>
+<tr>
+<td>&#xA5;</td>
+<td>&amp;yen;</td>
+<td>&amp;#165;</td>
+<td>&amp;#xA5;</td>
+<td>yen sign = yuan sign</td>
+</tr>
+<tr>
+<td>&#xA6;</td>
+<td>&amp;brvbar;</td>
+<td>&amp;#166;</td>
+<td>&amp;#xA6;</td>
+<td>broken bar = broken vertical bar</td>
+</tr>
+<tr>
+<td>&#xA7;</td>
+<td>&amp;sect;</td>
+<td>&amp;#167;</td>
+<td>&amp;#xA7;</td>
+<td>section sign</td>
+</tr>
+<tr>
+<td>&#xA8;</td>
+<td>&amp;uml;</td>
+<td>&amp;#168;</td>
+<td>&amp;#xA8;</td>
+<td>diaeresis = spacing diaeresis</td>
+</tr>
+<tr>
+<td>&#xA9;</td>
+<td>&amp;copy;</td>
+<td>&amp;#169;</td>
+<td>&amp;#xA9;</td>
+<td>copyright sign</td>
+</tr>
+<tr>
+<td>&#xAA;</td>
+<td>&amp;ordf;</td>
+<td>&amp;#170;</td>
+<td>&amp;#xAA;</td>
+<td>feminine ordinal indicator</td>
+</tr>
+<tr>
+<td>&#xAB;</td>
+<td>&amp;laquo;</td>
+<td>&amp;#171;</td>
+<td>&amp;#xAB;</td>
+<td>left-pointing double angle quotation mark = left pointing guillemet</td>
+</tr>
+<tr>
+<td>&#xAC;</td>
+<td>&amp;not;</td>
+<td>&amp;#172;</td>
+<td>&amp;#xAC;</td>
+<td>not sign</td>
+</tr>
+<tr>
+<td>&#xAD;</td>
+<td>&amp;shy;</td>
+<td>&amp;#173;</td>
+<td>&amp;#xAD;</td>
+<td>soft hyphen = discretionary hyphen</td>
+</tr>
+<tr>
+<td>&#xAE;</td>
+<td>&amp;reg;</td>
+<td>&amp;#174;</td>
+<td>&amp;#xAE;</td>
+<td>registered sign = registered trade mark sign</td>
+</tr>
+<tr>
+<td>&#xAF;</td>
+<td>&amp;macr;</td>
+<td>&amp;#175;</td>
+<td>&amp;#xAF;</td>
+<td>macron = spacing macron = overline = APL overbar</td>
+</tr>
+<tr>
+<td>&#xB0;</td>
+<td>&amp;deg;</td>
+<td>&amp;#176;</td>
+<td>&amp;#xB0;</td>
+<td>degree sign</td>
+</tr>
+<tr>
+<td>&#xB1;</td>
+<td>&amp;plusmn;</td>
+<td>&amp;#177;</td>
+<td>&amp;#xB1;</td>
+<td>plus-minus sign = plus-or-minus sign</td>
+</tr>
+<tr>
+<td>&#xB2;</td>
+<td>&amp;sup2;</td>
+<td>&amp;#178;</td>
+<td>&amp;#xB2;</td>
+<td>superscript two = superscript digit two = squared</td>
+</tr>
+<tr>
+<td>&#xB3;</td>
+<td>&amp;sup3;</td>
+<td>&amp;#179;</td>
+<td>&amp;#xB3;</td>
+<td>superscript three = superscript digit three = cubed</td>
+</tr>
+<tr>
+<td>&#xB4;</td>
+<td>&amp;acute;</td>
+<td>&amp;#180;</td>
+<td>&amp;#xB4;</td>
+<td>acute accent = spacing acute</td>
+</tr>
+<tr>
+<td>&#xB5;</td>
+<td>&amp;micro;</td>
+<td>&amp;#181;</td>
+<td>&amp;#xB5;</td>
+<td>micro sign</td>
+</tr>
+<tr>
+<td>&#xB6;</td>
+<td>&amp;para;</td>
+<td>&amp;#182;</td>
+<td>&amp;#xB6;</td>
+<td>pilcrow sign = paragraph sign</td>
+</tr>
+<tr>
+<td>&#xB7;</td>
+<td>&amp;middot;</td>
+<td>&amp;#183;</td>
+<td>&amp;#xB7;</td>
+<td>middle dot = Georgian comma = Greek middle dot</td>
+</tr>
+<tr>
+<td>&#xB8;</td>
+<td>&amp;cedil;</td>
+<td>&amp;#184;</td>
+<td>&amp;#xB8;</td>
+<td>cedilla = spacing cedilla</td>
+</tr>
+<tr>
+<td>&#xB9;</td>
+<td>&amp;sup1;</td>
+<td>&amp;#185;</td>
+<td>&amp;#xB9;</td>
+<td>superscript one = superscript digit one</td>
+</tr>
+<tr>
+<td>&#xBA;</td>
+<td>&amp;ordm;</td>
+<td>&amp;#186;</td>
+<td>&amp;#xBA;</td>
+<td>masculine ordinal indicator</td>
+</tr>
+<tr>
+<td>&#xBB;</td>
+<td>&amp;raquo;</td>
+<td>&amp;#187;</td>
+<td>&amp;#xBB;</td>
+<td>right-pointing double angle quotation mark = right pointing guillemet</td>
+</tr>
+<tr>
+<td>&#xBC;</td>
+<td>&amp;frac14;</td>
+<td>&amp;#188;</td>
+<td>&amp;#xBC;</td>
+<td>vulgar fraction one quarter = fraction one quarter</td>
+</tr>
+<tr>
+<td>&#xBD;</td>
+<td>&amp;frac12;</td>
+<td>&amp;#189;</td>
+<td>&amp;#xBD;</td>
+<td>vulgar fraction one half = fraction one half</td>
+</tr>
+<tr>
+<td>&#xBE;</td>
+<td>&amp;frac34;</td>
+<td>&amp;#190;</td>
+<td>&amp;#xBE;</td>
+<td>vulgar fraction three quarters = fraction three quarters</td>
+</tr>
+<tr>
+<td>&#xBF;</td>
+<td>&amp;iquest;</td>
+<td>&amp;#191;</td>
+<td>&amp;#xBF;</td>
+<td>inverted question mark = turned question mark</td>
+</tr>
+<tr>
+<td>&#xC0;</td>
+<td>&amp;Agrave;</td>
+<td>&amp;#192;</td>
+<td>&amp;#xC0;</td>
+<td>latin capital letter A with grave = latin capital letter A grave</td>
+</tr>
+<tr>
+<td>&#xC1;</td>
+<td>&amp;Aacute;</td>
+<td>&amp;#193;</td>
+<td>&amp;#xC1;</td>
+<td>latin capital letter A with acute</td>
+</tr>
+<tr>
+<td>&#xC2;</td>
+<td>&amp;Acirc;</td>
+<td>&amp;#194;</td>
+<td>&amp;#xC2;</td>
+<td>latin capital letter A with circumflex</td>
+</tr>
+<tr>
+<td>&#xC3;</td>
+<td>&amp;Atilde;</td>
+<td>&amp;#195;</td>
+<td>&amp;#xC3;</td>
+<td>latin capital letter A with tilde</td>
+</tr>
+<tr>
+<td>&#xC4;</td>
+<td>&amp;Auml;</td>
+<td>&amp;#196;</td>
+<td>&amp;#xC4;</td>
+<td>latin capital letter A with diaeresis</td>
+</tr>
+<tr>
+<td>&#xC5;</td>
+<td>&amp;Aring;</td>
+<td>&amp;#197;</td>
+<td>&amp;#xC5;</td>
+<td>latin capital letter A with ring above = latin capital letter A ring</td>
+</tr>
+<tr>
+<td>&#xC6;</td>
+<td>&amp;AElig;</td>
+<td>&amp;#198;</td>
+<td>&amp;#xC6;</td>
+<td>latin capital letter AE = latin capital ligature AE</td>
+</tr>
+<tr>
+<td>&#xC7;</td>
+<td>&amp;Ccedil;</td>
+<td>&amp;#199;</td>
+<td>&amp;#xC7;</td>
+<td>latin capital letter C with cedilla</td>
+</tr>
+<tr>
+<td>&#xC8;</td>
+<td>&amp;Egrave;</td>
+<td>&amp;#200;</td>
+<td>&amp;#xC8;</td>
+<td>latin capital letter E with grave</td>
+</tr>
+<tr>
+<td>&#xC9;</td>
+<td>&amp;Eacute;</td>
+<td>&amp;#201;</td>
+<td>&amp;#xC9;</td>
+<td>latin capital letter E with acute</td>
+</tr>
+<tr>
+<td>&#xCA;</td>
+<td>&amp;Ecirc;</td>
+<td>&amp;#202;</td>
+<td>&amp;#xCA;</td>
+<td>latin capital letter E with circumflex</td>
+</tr>
+<tr>
+<td>&#xCB;</td>
+<td>&amp;Euml;</td>
+<td>&amp;#203;</td>
+<td>&amp;#xCB;</td>
+<td>latin capital letter E with diaeresis</td>
+</tr>
+<tr>
+<td>&#xCC;</td>
+<td>&amp;Igrave;</td>
+<td>&amp;#204;</td>
+<td>&amp;#xCC;</td>
+<td>latin capital letter I with grave</td>
+</tr>
+<tr>
+<td>&#xCD;</td>
+<td>&amp;Iacute;</td>
+<td>&amp;#205;</td>
+<td>&amp;#xCD;</td>
+<td>latin capital letter I with acute</td>
+</tr>
+<tr>
+<td>&#xCE;</td>
+<td>&amp;Icirc;</td>
+<td>&amp;#206;</td>
+<td>&amp;#xCE;</td>
+<td>latin capital letter I with circumflex</td>
+</tr>
+<tr>
+<td>&#xCF;</td>
+<td>&amp;Iuml;</td>
+<td>&amp;#207;</td>
+<td>&amp;#xCF;</td>
+<td>latin capital letter I with diaeresis</td>
+</tr>
+<tr>
+<td>&#xD0;</td>
+<td>&amp;ETH;</td>
+<td>&amp;#208;</td>
+<td>&amp;#xD0;</td>
+<td>latin capital letter ETH</td>
+</tr>
+<tr>
+<td>&#xD1;</td>
+<td>&amp;Ntilde;</td>
+<td>&amp;#209;</td>
+<td>&amp;#xD1;</td>
+<td>latin capital letter N with tilde</td>
+</tr>
+<tr>
+<td>&#xD2;</td>
+<td>&amp;Ograve;</td>
+<td>&amp;#210;</td>
+<td>&amp;#xD2;</td>
+<td>latin capital letter O with grave</td>
+</tr>
+<tr>
+<td>&#xD3;</td>
+<td>&amp;Oacute;</td>
+<td>&amp;#211;</td>
+<td>&amp;#xD3;</td>
+<td>latin capital letter O with acute</td>
+</tr>
+<tr>
+<td>&#xD4;</td>
+<td>&amp;Ocirc;</td>
+<td>&amp;#212;</td>
+<td>&amp;#xD4;</td>
+<td>latin capital letter O with circumflex</td>
+</tr>
+<tr>
+<td>&#xD5;</td>
+<td>&amp;Otilde;</td>
+<td>&amp;#213;</td>
+<td>&amp;#xD5;</td>
+<td>latin capital letter O with tilde</td>
+</tr>
+<tr>
+<td>&#xD6;</td>
+<td>&amp;Ouml;</td>
+<td>&amp;#214;</td>
+<td>&amp;#xD6;</td>
+<td>latin capital letter O with diaeresis</td>
+</tr>
+<tr>
+<td>&#xD7;</td>
+<td>&amp;times;</td>
+<td>&amp;#215;</td>
+<td>&amp;#xD7;</td>
+<td>multiplication sign</td>
+</tr>
+<tr>
+<td>&#xD8;</td>
+<td>&amp;Oslash;</td>
+<td>&amp;#216;</td>
+<td>&amp;#xD8;</td>
+<td>latin capital letter O with stroke = latin capital letter O slash</td>
+</tr>
+<tr>
+<td>&#xD9;</td>
+<td>&amp;Ugrave;</td>
+<td>&amp;#217;</td>
+<td>&amp;#xD9;</td>
+<td>latin capital letter U with grave</td>
+</tr>
+<tr>
+<td>&#xDA;</td>
+<td>&amp;Uacute;</td>
+<td>&amp;#218;</td>
+<td>&amp;#xDA;</td>
+<td>latin capital letter U with acute</td>
+</tr>
+<tr>
+<td>&#xDB;</td>
+<td>&amp;Ucirc;</td>
+<td>&amp;#219;</td>
+<td>&amp;#xDB;</td>
+<td>latin capital letter U with circumflex</td>
+</tr>
+<tr>
+<td>&#xDC;</td>
+<td>&amp;Uuml;</td>
+<td>&amp;#220;</td>
+<td>&amp;#xDC;</td>
+<td>latin capital letter U with diaeresis</td>
+</tr>
+<tr>
+<td>&#xDD;</td>
+<td>&amp;Yacute;</td>
+<td>&amp;#221;</td>
+<td>&amp;#xDD;</td>
+<td>latin capital letter Y with acute</td>
+</tr>
+<tr>
+<td>&#xDE;</td>
+<td>&amp;THORN;</td>
+<td>&amp;#222;</td>
+<td>&amp;#xDE;</td>
+<td>latin capital letter THORN</td>
+</tr>
+<tr>
+<td>&#xDF;</td>
+<td>&amp;szlig;</td>
+<td>&amp;#223;</td>
+<td>&amp;#xDF;</td>
+<td>latin small letter sharp s = ess-zed</td>
+</tr>
+<tr>
+<td>&#xE0;</td>
+<td>&amp;agrave;</td>
+<td>&amp;#224;</td>
+<td>&amp;#xE0;</td>
+<td>latin small letter a with grave = latin small letter a grave</td>
+</tr>
+<tr>
+<td>&#xE1;</td>
+<td>&amp;aacute;</td>
+<td>&amp;#225;</td>
+<td>&amp;#xE1;</td>
+<td>latin small letter a with acute</td>
+</tr>
+<tr>
+<td>&#xE2;</td>
+<td>&amp;acirc;</td>
+<td>&amp;#226;</td>
+<td>&amp;#xE2;</td>
+<td>latin small letter a with circumflex</td>
+</tr>
+<tr>
+<td>&#xE3;</td>
+<td>&amp;atilde;</td>
+<td>&amp;#227;</td>
+<td>&amp;#xE3;</td>
+<td>latin small letter a with tilde</td>
+</tr>
+<tr>
+<td>&#xE4;</td>
+<td>&amp;auml;</td>
+<td>&amp;#228;</td>
+<td>&amp;#xE4;</td>
+<td>latin small letter a with diaeresis</td>
+</tr>
+<tr>
+<td>&#xE5;</td>
+<td>&amp;aring;</td>
+<td>&amp;#229;</td>
+<td>&amp;#xE5;</td>
+<td>latin small letter a with ring above = latin small letter a ring</td>
+</tr>
+<tr>
+<td>&#xE6;</td>
+<td>&amp;aelig;</td>
+<td>&amp;#230;</td>
+<td>&amp;#xE6;</td>
+<td>latin small letter ae = latin small ligature ae</td>
+</tr>
+<tr>
+<td>&#xE7;</td>
+<td>&amp;ccedil;</td>
+<td>&amp;#231;</td>
+<td>&amp;#xE7;</td>
+<td>latin small letter c with cedilla</td>
+</tr>
+<tr>
+<td>&#xE8;</td>
+<td>&amp;egrave;</td>
+<td>&amp;#232;</td>
+<td>&amp;#xE8;</td>
+<td>latin small letter e with grave</td>
+</tr>
+<tr>
+<td>&#xE9;</td>
+<td>&amp;eacute;</td>
+<td>&amp;#233;</td>
+<td>&amp;#xE9;</td>
+<td>latin small letter e with acute</td>
+</tr>
+<tr>
+<td>&#xEA;</td>
+<td>&amp;ecirc;</td>
+<td>&amp;#234;</td>
+<td>&amp;#xEA;</td>
+<td>latin small letter e with circumflex</td>
+</tr>
+<tr>
+<td>&#xEB;</td>
+<td>&amp;euml;</td>
+<td>&amp;#235;</td>
+<td>&amp;#xEB;</td>
+<td>latin small letter e with diaeresis</td>
+</tr>
+<tr>
+<td>&#xEC;</td>
+<td>&amp;igrave;</td>
+<td>&amp;#236;</td>
+<td>&amp;#xEC;</td>
+<td>latin small letter i with grave</td>
+</tr>
+<tr>
+<td>&#xED;</td>
+<td>&amp;iacute;</td>
+<td>&amp;#237;</td>
+<td>&amp;#xED;</td>
+<td>latin small letter i with acute</td>
+</tr>
+<tr>
+<td>&#xEE;</td>
+<td>&amp;icirc;</td>
+<td>&amp;#238;</td>
+<td>&amp;#xEE;</td>
+<td>latin small letter i with circumflex</td>
+</tr>
+<tr>
+<td>&#xEF;</td>
+<td>&amp;iuml;</td>
+<td>&amp;#239;</td>
+<td>&amp;#xEF;</td>
+<td>latin small letter i with diaeresis</td>
+</tr>
+<tr>
+<td>&#xF0;</td>
+<td>&amp;eth;</td>
+<td>&amp;#240;</td>
+<td>&amp;#xF0;</td>
+<td>latin small letter eth</td>
+</tr>
+<tr>
+<td>&#xF1;</td>
+<td>&amp;ntilde;</td>
+<td>&amp;#241;</td>
+<td>&amp;#xF1;</td>
+<td>latin small letter n with tilde</td>
+</tr>
+<tr>
+<td>&#xF2;</td>
+<td>&amp;ograve;</td>
+<td>&amp;#242;</td>
+<td>&amp;#xF2;</td>
+<td>latin small letter o with grave</td>
+</tr>
+<tr>
+<td>&#xF3;</td>
+<td>&amp;oacute;</td>
+<td>&amp;#243;</td>
+<td>&amp;#xF3;</td>
+<td>latin small letter o with acute</td>
+</tr>
+<tr>
+<td>&#xF4;</td>
+<td>&amp;ocirc;</td>
+<td>&amp;#244;</td>
+<td>&amp;#xF4;</td>
+<td>latin small letter o with circumflex</td>
+</tr>
+<tr>
+<td>&#xF5;</td>
+<td>&amp;otilde;</td>
+<td>&amp;#245;</td>
+<td>&amp;#xF5;</td>
+<td>latin small letter o with tilde</td>
+</tr>
+<tr>
+<td>&#xF6;</td>
+<td>&amp;ouml;</td>
+<td>&amp;#246;</td>
+<td>&amp;#xF6;</td>
+<td>latin small letter o with diaeresis</td>
+</tr>
+<tr>
+<td>&#xF7;</td>
+<td>&amp;divide;</td>
+<td>&amp;#247;</td>
+<td>&amp;#xF7;</td>
+<td>division sign</td>
+</tr>
+<tr>
+<td>&#xF8;</td>
+<td>&amp;oslash;</td>
+<td>&amp;#248;</td>
+<td>&amp;#xF8;</td>
+<td>latin small letter o with stroke = latin small letter o slash</td>
+</tr>
+<tr>
+<td>&#xF9;</td>
+<td>&amp;ugrave;</td>
+<td>&amp;#249;</td>
+<td>&amp;#xF9;</td>
+<td>latin small letter u with grave</td>
+</tr>
+<tr>
+<td>&#xFA;</td>
+<td>&amp;uacute;</td>
+<td>&amp;#250;</td>
+<td>&amp;#xFA;</td>
+<td>latin small letter u with acute</td>
+</tr>
+<tr>
+<td>&#xFB;</td>
+<td>&amp;ucirc;</td>
+<td>&amp;#251;</td>
+<td>&amp;#xFB;</td>
+<td>latin small letter u with circumflex</td>
+</tr>
+<tr>
+<td>&#xFC;</td>
+<td>&amp;uuml;</td>
+<td>&amp;#252;</td>
+<td>&amp;#xFC;</td>
+<td>latin small letter u with diaeresis</td>
+</tr>
+<tr>
+<td>&#xFD;</td>
+<td>&amp;yacute;</td>
+<td>&amp;#253;</td>
+<td>&amp;#xFD;</td>
+<td>latin small letter y with acute</td>
+</tr>
+<tr>
+<td>&#xFE;</td>
+<td>&amp;thorn;</td>
+<td>&amp;#254;</td>
+<td>&amp;#xFE;</td>
+<td>latin small letter thorn</td>
+</tr>
+<tr>
+<td>&#xFF;</td>
+<td>&amp;yuml;</td>
+<td>&amp;#255;</td>
+<td>&amp;#xFF;</td>
+<td>latin small letter y with diaeresis</td>
+</tr>
+<tr>
+<td>&#x192;</td>
+<td>&amp;fnof;</td>
+<td>&amp;#402;</td>
+<td>&amp;#x192;</td>
+<td>latin small f with hook = function = florin</td>
+</tr>
+<tr>
+<td>&#x391;</td>
+<td>&amp;Alpha;</td>
+<td>&amp;#913;</td>
+<td>&amp;#x391;</td>
+<td>greek capital letter alpha</td>
+</tr>
+<tr>
+<td>&#x392;</td>
+<td>&amp;Beta;</td>
+<td>&amp;#914;</td>
+<td>&amp;#x392;</td>
+<td>greek capital letter beta</td>
+</tr>
+<tr>
+<td>&#x393;</td>
+<td>&amp;Gamma;</td>
+<td>&amp;#915;</td>
+<td>&amp;#x393;</td>
+<td>greek capital letter gamma</td>
+</tr>
+<tr>
+<td>&#x394;</td>
+<td>&amp;Delta;</td>
+<td>&amp;#916;</td>
+<td>&amp;#x394;</td>
+<td>greek capital letter delta</td>
+</tr>
+<tr>
+<td>&#x395;</td>
+<td>&amp;Epsilon;</td>
+<td>&amp;#917;</td>
+<td>&amp;#x395;</td>
+<td>greek capital letter epsilon</td>
+</tr>
+<tr>
+<td>&#x396;</td>
+<td>&amp;Zeta;</td>
+<td>&amp;#918;</td>
+<td>&amp;#x396;</td>
+<td>greek capital letter zeta</td>
+</tr>
+<tr>
+<td>&#x397;</td>
+<td>&amp;Eta;</td>
+<td>&amp;#919;</td>
+<td>&amp;#x397;</td>
+<td>greek capital letter eta</td>
+</tr>
+<tr>
+<td>&#x398;</td>
+<td>&amp;Theta;</td>
+<td>&amp;#920;</td>
+<td>&amp;#x398;</td>
+<td>greek capital letter theta</td>
+</tr>
+<tr>
+<td>&#x399;</td>
+<td>&amp;Iota;</td>
+<td>&amp;#921;</td>
+<td>&amp;#x399;</td>
+<td>greek capital letter iota</td>
+</tr>
+<tr>
+<td>&#x39A;</td>
+<td>&amp;Kappa;</td>
+<td>&amp;#922;</td>
+<td>&amp;#x39A;</td>
+<td>greek capital letter kappa</td>
+</tr>
+<tr>
+<td>&#x39B;</td>
+<td>&amp;Lambda;</td>
+<td>&amp;#923;</td>
+<td>&amp;#x39B;</td>
+<td>greek capital letter lambda</td>
+</tr>
+<tr>
+<td>&#x39C;</td>
+<td>&amp;Mu;</td>
+<td>&amp;#924;</td>
+<td>&amp;#x39C;</td>
+<td>greek capital letter mu</td>
+</tr>
+<tr>
+<td>&#x39D;</td>
+<td>&amp;Nu;</td>
+<td>&amp;#925;</td>
+<td>&amp;#x39D;</td>
+<td>greek capital letter nu</td>
+</tr>
+<tr>
+<td>&#x39E;</td>
+<td>&amp;Xi;</td>
+<td>&amp;#926;</td>
+<td>&amp;#x39E;</td>
+<td>greek capital letter xi</td>
+</tr>
+<tr>
+<td>&#x39F;</td>
+<td>&amp;Omicron;</td>
+<td>&amp;#927;</td>
+<td>&amp;#x39F;</td>
+<td>greek capital letter omicron</td>
+</tr>
+<tr>
+<td>&#x3A0;</td>
+<td>&amp;Pi;</td>
+<td>&amp;#928;</td>
+<td>&amp;#x3A0;</td>
+<td>greek capital letter pi</td>
+</tr>
+<tr>
+<td>&#x3A1;</td>
+<td>&amp;Rho;</td>
+<td>&amp;#929;</td>
+<td>&amp;#x3A1;</td>
+<td>greek capital letter rho</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(not used)</td>
+</tr>
+<tr>
+<td>&#x3A3;</td>
+<td>&amp;Sigma;</td>
+<td>&amp;#931;</td>
+<td>&amp;#x3A3;</td>
+<td>greek capital letter sigma</td>
+</tr>
+<tr>
+<td>&#x3A4;</td>
+<td>&amp;Tau;</td>
+<td>&amp;#932;</td>
+<td>&amp;#x3A4;</td>
+<td>greek capital letter tau</td>
+</tr>
+<tr>
+<td>&#x3A5;</td>
+<td>&amp;Upsilon;</td>
+<td>&amp;#933;</td>
+<td>&amp;#x3A5;</td>
+<td>greek capital letter upsilon</td>
+</tr>
+<tr>
+<td>&#x3A6;</td>
+<td>&amp;Phi;</td>
+<td>&amp;#934;</td>
+<td>&amp;#x3A6;</td>
+<td>greek capital letter phi</td>
+</tr>
+<tr>
+<td>&#x3A7;</td>
+<td>&amp;Chi;</td>
+<td>&amp;#935;</td>
+<td>&amp;#x3A7;</td>
+<td>greek capital letter chi</td>
+</tr>
+<tr>
+<td>&#x3A8;</td>
+<td>&amp;Psi;</td>
+<td>&amp;#936;</td>
+<td>&amp;#x3A8;</td>
+<td>greek capital letter psi</td>
+</tr>
+<tr>
+<td>&#x3A9;</td>
+<td>&amp;Omega;</td>
+<td>&amp;#937;</td>
+<td>&amp;#x3A9;</td>
+<td>greek capital letter omega</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(not used)</td>
+</tr>
+<tr>
+<td>&#x3B1;</td>
+<td>&amp;alpha;</td>
+<td>&amp;#945;</td>
+<td>&amp;#x3B1;</td>
+<td>greek smal letter alpha</td>
+</tr>
+<tr>
+<td>&#x3B2;</td>
+<td>&amp;beta;</td>
+<td>&amp;#946;</td>
+<td>&amp;#x3B2;</td>
+<td>greek smal letter beta</td>
+</tr>
+<tr>
+<td>&#x3B3;</td>
+<td>&amp;gamma;</td>
+<td>&amp;#947;</td>
+<td>&amp;#x3B3;</td>
+<td>greek smal letter gamma</td>
+</tr>
+<tr>
+<td>&#x3B4;</td>
+<td>&amp;delta;</td>
+<td>&amp;#948;</td>
+<td>&amp;#x3B4;</td>
+<td>greek smal letter delta</td>
+</tr>
+<tr>
+<td>&#x3B5;</td>
+<td>&amp;epsilon;</td>
+<td>&amp;#949;</td>
+<td>&amp;#x3B5;</td>
+<td>greek smal letter epsilon</td>
+</tr>
+<tr>
+<td>&#x3B6;</td>
+<td>&amp;zeta;</td>
+<td>&amp;#950;</td>
+<td>&amp;#x3B6;</td>
+<td>greek smal letter zeta</td>
+</tr>
+<tr>
+<td>&#x3B7;</td>
+<td>&amp;eta;</td>
+<td>&amp;#951;</td>
+<td>&amp;#x3B7;</td>
+<td>greek smal letter eta</td>
+</tr>
+<tr>
+<td>&#x3B8;</td>
+<td>&amp;theta;</td>
+<td>&amp;#952;</td>
+<td>&amp;#x3B8;</td>
+<td>greek smal letter theta</td>
+</tr>
+<tr>
+<td>&#x3B9;</td>
+<td>&amp;iota;</td>
+<td>&amp;#953;</td>
+<td>&amp;#x3B9;</td>
+<td>greek smal letter iota</td>
+</tr>
+<tr>
+<td>&#x3BA;</td>
+<td>&amp;kappa;</td>
+<td>&amp;#954;</td>
+<td>&amp;#x3BA;</td>
+<td>greek smal letter kappa</td>
+</tr>
+<tr>
+<td>&#x3BB;</td>
+<td>&amp;lambda;</td>
+<td>&amp;#955;</td>
+<td>&amp;#x3BB;</td>
+<td>greek smal letter lambda</td>
+</tr>
+<tr>
+<td>&#x3BC;</td>
+<td>&amp;mu;</td>
+<td>&amp;#956;</td>
+<td>&amp;#x3BC;</td>
+<td>greek smal letter mu</td>
+</tr>
+<tr>
+<td>&#x3BD;</td>
+<td>&amp;nu;</td>
+<td>&amp;#957;</td>
+<td>&amp;#x3BD;</td>
+<td>greek smal letter nu</td>
+</tr>
+<tr>
+<td>&#x3BE;</td>
+<td>&amp;xi;</td>
+<td>&amp;#958;</td>
+<td>&amp;#x3BE;</td>
+<td>greek smal letter xi</td>
+</tr>
+<tr>
+<td>&#x3BF;</td>
+<td>&amp;omicron;</td>
+<td>&amp;#959;</td>
+<td>&amp;#x3BF;</td>
+<td>greek smal letter omicron</td>
+</tr>
+<tr>
+<td>&#x3C0;</td>
+<td>&amp;pi;</td>
+<td>&amp;#960;</td>
+<td>&amp;#x3C0;</td>
+<td>greek smal letter pi</td>
+</tr>
+<tr>
+<td>&#x3C1;</td>
+<td>&amp;rho;</td>
+<td>&amp;#961;</td>
+<td>&amp;#x3C1;</td>
+<td>greek smal letter rho</td>
+</tr>
+<tr>
+<td>&#x3C2;</td>
+<td>&amp;sigmaf;</td>
+<td>&amp;#962;</td>
+<td>&amp;#x3C2;</td>
+<td>greek smal letter final sigma</td>
+</tr>
+<tr>
+<td>&#x3C3;</td>
+<td>&amp;sigma;</td>
+<td>&amp;#963;</td>
+<td>&amp;#x3C3;</td>
+<td>greek smal letter sigma</td>
+</tr>
+<tr>
+<td>&#x3C4;</td>
+<td>&amp;tau;</td>
+<td>&amp;#964;</td>
+<td>&amp;#x3C4;</td>
+<td>greek smal letter tau</td>
+</tr>
+<tr>
+<td>&#x3C5;</td>
+<td>&amp;upsilon;</td>
+<td>&amp;#965;</td>
+<td>&amp;#x3C5;</td>
+<td>greek smal letter upsilon</td>
+</tr>
+<tr>
+<td>&#x3C6;</td>
+<td>&amp;phi;</td>
+<td>&amp;#966;</td>
+<td>&amp;#x3C6;</td>
+<td>greek smal letter phi</td>
+</tr>
+<tr>
+<td>&#x3C7;</td>
+<td>&amp;chi;</td>
+<td>&amp;#967;</td>
+<td>&amp;#x3C7;</td>
+<td>greek smal letter chi</td>
+</tr>
+<tr>
+<td>&#x3C8;</td>
+<td>&amp;psi;</td>
+<td>&amp;#968;</td>
+<td>&amp;#x3C8;</td>
+<td>greek smal letter psi</td>
+</tr>
+<tr>
+<td>&#x3C9;</td>
+<td>&amp;omega;</td>
+<td>&amp;#969;</td>
+<td>&amp;#x3C9;</td>
+<td>greek smal letter omega</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(not used)</td>
+</tr>
+<tr>
+<td>&#x3D1;</td>
+<td>&amp;thetasym;</td>
+<td>&amp;#977;</td>
+<td>&amp;#x3D1;</td>
+<td>greek smal letter theta symbol</td>
+</tr>
+<tr>
+<td>&#x3D2;</td>
+<td>&amp;upsih;</td>
+<td>&amp;#978;</td>
+<td>&amp;#x3D2;</td>
+<td>Greek upsilon with hook symbol</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(not used)</td>
+</tr>
+<tr>
+<td>&#x3D6;</td>
+<td>&amp;piv;</td>
+<td>&amp;#982;</td>
+<td>&amp;#x3D6;</td>
+<td>Greek pi symbol</td>
+</tr>
+</table>
+</div>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+
+</div>
+<hr>
+
+<h2>Special Symbols</h2>
+<div class="w3-responsive">
+<table class="w3-table-all charset-tryit">
+<tr>
+<th style="width:7%">Char</th>
+<th style="width:12%">Entity</th>
+<th style="width:10%">Dec</th>
+<th style="width:10%">Hex</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>&#x2022;</td>
+<td>&amp;bull;</td>
+<td>&amp;#8226;</td>
+<td>&amp;#x2022;</td>
+<td>bullet = black small circle</td>
+</tr>
+<tr>
+<td>&#x2026;</td>
+<td>&amp;hellip;</td>
+<td>&amp;#8230;</td>
+<td>&amp;#x2026;</td>
+<td>horizontal ellipsis = three dot leader</td>
+</tr>
+<tr>
+<td>&#x2032;</td>
+<td>&amp;prime;</td>
+<td>&amp;#8242;</td>
+<td>&amp;#x2032;</td>
+<td>prime = minutes = feet</td>
+</tr>
+<tr>
+<td>&#x2033;</td>
+<td>&amp;Prime;</td>
+<td>&amp;#8243;</td>
+<td>&amp;#x2033;</td>
+<td>double prime = seconds = inches</td>
+</tr>
+<tr>
+<td>&#x203E;</td>
+<td>&amp;oline;</td>
+<td>&amp;#8254;</td>
+<td>&amp;#x203E;</td>
+<td>overline = spacing overscore</td>
+</tr>
+<tr>
+<td>&#x2044;</td>
+<td>&amp;frasl;</td>
+<td>&amp;#8260;</td>
+<td>&amp;#x2044;</td>
+<td>fraction slash</td>
+</tr>
+<tr>
+<td>&#x2118;</td>
+<td>&amp;weierp;</td>
+<td>&amp;#8472;</td>
+<td>&amp;#x2118;</td>
+<td>script capital P = power set = Weierstrass p</td>
+</tr>
+<tr>
+<td>&#x2111;</td>
+<td>&amp;image;</td>
+<td>&amp;#8465;</td>
+<td>&amp;#x2111;</td>
+<td>blackletter capital I = imaginary part</td>
+</tr>
+<tr>
+<td>&#x211C;</td>
+<td>&amp;real;</td>
+<td>&amp;#8476;</td>
+<td>&amp;#x211C;</td>
+<td>blackletter capital R = real part symbol</td>
+</tr>
+<tr>
+<td>&#x2122;</td>
+<td>&amp;trade;</td>
+<td>&amp;#8482;</td>
+<td>&amp;#x2122;</td>
+<td>trade mark sign</td>
+</tr>
+<tr>
+<td>&#x2135;</td>
+<td>&amp;alefsym;</td>
+<td>&amp;#8501;</td>
+<td>&amp;#x2135;</td>
+<td>alef symbol = first transfinite cardinal</td>
+</tr>
+<tr>
+<td>&#x2190;</td>
+<td>&amp;larr;</td>
+<td>&amp;#8592;</td>
+<td>&amp;#x2190;</td>
+<td>leftwards arrow</td>
+</tr>
+<tr>
+<td>&#x2191;</td>
+<td>&amp;uarr;</td>
+<td>&amp;#8593;</td>
+<td>&amp;#x2191;</td>
+<td>upwards arrow</td>
+</tr>
+<tr>
+<td>&#x2192;</td>
+<td>&amp;rarr;</td>
+<td>&amp;#8594;</td>
+<td>&amp;#x2192;</td>
+<td>rightwards arrow</td>
+</tr>
+<tr>
+<td>&#x2193;</td>
+<td>&amp;darr;</td>
+<td>&amp;#8595;</td>
+<td>&amp;#x2193;</td>
+<td>downwards arrow</td>
+</tr>
+<tr>
+<td>&#x2194;</td>
+<td>&amp;harr;</td>
+<td>&amp;#8596;</td>
+<td>&amp;#x2194;</td>
+<td>left right arrow</td>
+</tr>
+<tr>
+<td>&#x21B5;</td>
+<td>&amp;crarr;</td>
+<td>&amp;#8629;</td>
+<td>&amp;#x21B5;</td>
+<td>downwards arrow with corner leftwards = carriage return</td>
+</tr>
+<tr>
+<td>&#x21D0;</td>
+<td>&amp;lArr;</td>
+<td>&amp;#8656;</td>
+<td>&amp;#x21D0;</td>
+<td>leftwards double arrow</td>
+</tr>
+<tr>
+<td>&#x21D1;</td>
+<td>&amp;uArr;</td>
+<td>&amp;#8657;</td>
+<td>&amp;#x21D1;</td>
+<td>upwards double arrow</td>
+</tr>
+<tr>
+<td>&#x21D2;</td>
+<td>&amp;rArr;</td>
+<td>&amp;#8658;</td>
+<td>&amp;#x21D2;</td>
+<td>rightwards double arrow</td>
+</tr>
+<tr>
+<td>&#x21D3;</td>
+<td>&amp;dArr;</td>
+<td>&amp;#8659;</td>
+<td>&amp;#x21D3;</td>
+<td>downwards double arrow</td>
+</tr>
+<tr>
+<td>&#x21D4;</td>
+<td>&amp;hArr;</td>
+<td>&amp;#8660;</td>
+<td>&amp;#x21D4;</td>
+<td>left right double arrow</td>
+</tr>
+<tr>
+<td>&#x2200;</td>
+<td>&amp;forall;</td>
+<td>&amp;#8704;</td>
+<td>&amp;#x2200;</td>
+<td>for all</td>
+</tr>
+<tr>
+<td>&#x2202;</td>
+<td>&amp;part;</td>
+<td>&amp;#8706;</td>
+<td>&amp;#x2202;</td>
+<td>partial differential</td>
+</tr>
+<tr>
+<td>&#x2203;</td>
+<td>&amp;exist;</td>
+<td>&amp;#8707;</td>
+<td>&amp;#x2203;</td>
+<td>there exists</td>
+</tr>
+<tr>
+<td>&#x2205;</td>
+<td>&amp;empty;</td>
+<td>&amp;#8709;</td>
+<td>&amp;#x2205;</td>
+<td>empty set = null set = diameter</td>
+</tr>
+<tr>
+<td>&#x2207;</td>
+<td>&amp;nabla;</td>
+<td>&amp;#8711;</td>
+<td>&amp;#x2207;</td>
+<td>nabla = backward difference</td>
+</tr>
+<tr>
+<td>&#x2208;</td>
+<td>&amp;isin;</td>
+<td>&amp;#8712;</td>
+<td>&amp;#x2208;</td>
+<td>element of</td>
+</tr>
+<tr>
+<td>&#x2209;</td>
+<td>&amp;notin;</td>
+<td>&amp;#8713;</td>
+<td>&amp;#x2209;</td>
+<td>not an element of</td>
+</tr>
+<tr>
+<td>&#x220B;</td>
+<td>&amp;ni;</td>
+<td>&amp;#8715;</td>
+<td>&amp;#x220B;</td>
+<td>contains as member</td>
+</tr>
+<tr>
+<td>&#x220F;</td>
+<td>&amp;prod;</td>
+<td>&amp;#8719;</td>
+<td>&amp;#x220F;</td>
+<td>n-ary product = product sign</td>
+</tr>
+<tr>
+<td>&#x2211;</td>
+<td>&amp;sum;</td>
+<td>&amp;#8721;</td>
+<td>&amp;#x2211;</td>
+<td>n-ary sumation</td>
+</tr>
+<tr>
+<td>&#x2212;</td>
+<td>&amp;minus;</td>
+<td>&amp;#8722;</td>
+<td>&amp;#x2212;</td>
+<td>minus sign</td>
+</tr>
+<tr>
+<td>&#x2217;</td>
+<td>&amp;lowast;</td>
+<td>&amp;#8727;</td>
+<td>&amp;#x2217;</td>
+<td>asterisk operator</td>
+</tr>
+<tr>
+<td>&#x221A;</td>
+<td>&amp;radic;</td>
+<td>&amp;#8730;</td>
+<td>&amp;#x221A;</td>
+<td>square root = radical sign</td>
+</tr>
+<tr>
+<td>&#x221D;</td>
+<td>&amp;prop;</td>
+<td>&amp;#8733;</td>
+<td>&amp;#x221D;</td>
+<td>proportional to</td>
+</tr>
+<tr>
+<td>&#x221E;</td>
+<td>&amp;infin;</td>
+<td>&amp;#8734;</td>
+<td>&amp;#x221E;</td>
+<td>infinity</td>
+</tr>
+<tr>
+<td>&#x2220;</td>
+<td>&amp;ang;</td>
+<td>&amp;#8736;</td>
+<td>&amp;#x2220;</td>
+<td>angle</td>
+</tr>
+<tr>
+<td>&#x2227;</td>
+<td>&amp;and;</td>
+<td>&amp;#8743;</td>
+<td>&amp;#x2227;</td>
+<td>logical and = wedge</td>
+</tr>
+<tr>
+<td>&#x2228;</td>
+<td>&amp;or;</td>
+<td>&amp;#8744;</td>
+<td>&amp;#x2228;</td>
+<td>logical or = vee</td>
+</tr>
+<tr>
+<td>&#x2229;</td>
+<td>&amp;cap;</td>
+<td>&amp;#8745;</td>
+<td>&amp;#x2229;</td>
+<td>intersection = cap</td>
+</tr>
+<tr>
+<td>&#x222A;</td>
+<td>&amp;cup;</td>
+<td>&amp;#8746;</td>
+<td>&amp;#x222A;</td>
+<td>union = cup</td>
+</tr>
+<tr>
+<td>&#x222B;</td>
+<td>&amp;int;</td>
+<td>&amp;#8747;</td>
+<td>&amp;#x222B;</td>
+<td>integral</td>
+</tr>
+<tr>
+<td>&#x2234;</td>
+<td>&amp;there4;</td>
+<td>&amp;#8756;</td>
+<td>&amp;#x2234;</td>
+<td>therefore</td>
+</tr>
+<tr>
+<td>&#x223C;</td>
+<td>&amp;sim;</td>
+<td>&amp;#8764;</td>
+<td>&amp;#x223C;</td>
+<td>tilde operator = varies with = similar to</td>
+</tr>
+<tr>
+<td>&#x2245;</td>
+<td>&amp;cong;</td>
+<td>&amp;#8773;</td>
+<td>&amp;#x2245;</td>
+<td>approximately equal to</td>
+</tr>
+<tr>
+<td>&#x2248;</td>
+<td>&amp;asymp;</td>
+<td>&amp;#8776;</td>
+<td>&amp;#x2248;</td>
+<td>almost equal to = asymptotic to</td>
+</tr>
+<tr>
+<td>&#x2260;</td>
+<td>&amp;ne;</td>
+<td>&amp;#8800;</td>
+<td>&amp;#x2260;</td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td>&#x2261;</td>
+<td>&amp;equiv;</td>
+<td>&amp;#8801;</td>
+<td>&amp;#x2261;</td>
+<td>identical to</td>
+</tr>
+<tr>
+<td>&#x2264;</td>
+<td>&amp;le;</td>
+<td>&amp;#8804;</td>
+<td>&amp;#x2264;</td>
+<td>less-than or equal to</td>
+</tr>
+<tr>
+<td>&#x2265;</td>
+<td>&amp;ge;</td>
+<td>&amp;#8805;</td>
+<td>&amp;#x2265;</td>
+<td>greater-than or equal to</td>
+</tr>
+<tr>
+<td>&#x2282;</td>
+<td>&amp;sub;</td>
+<td>&amp;#8834;</td>
+<td>&amp;#x2282;</td>
+<td>subset of</td>
+</tr>
+<tr>
+<td>&#x2283;</td>
+<td>&amp;sup;</td>
+<td>&amp;#8835;</td>
+<td>&amp;#x2283;</td>
+<td>superset of</td>
+</tr>
+<tr>
+<td>&#x2284;</td>
+<td>&amp;nsub;</td>
+<td>&amp;#8836;</td>
+<td>&amp;#x2284;</td>
+<td>not a subset of</td>
+</tr>
+<tr>
+<td>&#x2286;</td>
+<td>&amp;sube;</td>
+<td>&amp;#8838;</td>
+<td>&amp;#x2286;</td>
+<td>subset of or equal to</td>
+</tr>
+<tr>
+<td>&#x2287;</td>
+<td>&amp;supe;</td>
+<td>&amp;#8839;</td>
+<td>&amp;#x2287;</td>
+<td>superset of or equal to</td>
+</tr>
+<tr>
+<td>&#x2295;</td>
+<td>&amp;oplus;</td>
+<td>&amp;#8853;</td>
+<td>&amp;#x2295;</td>
+<td>circled plus = direct sum</td>
+</tr>
+<tr>
+<td>&#x2297;</td>
+<td>&amp;otimes;</td>
+<td>&amp;#8855;</td>
+<td>&amp;#x2297;</td>
+<td>circled times = vector product</td>
+</tr>
+<tr>
+<td>&#x22A5;</td>
+<td>&amp;perp;</td>
+<td>&amp;#8869;</td>
+<td>&amp;#x22A5;</td>
+<td>up tack = orthogonal to = perpendicular</td>
+</tr>
+<tr>
+<td>&#x22C5;</td>
+<td>&amp;sdot;</td>
+<td>&amp;#8901;</td>
+<td>&amp;#x22C5;</td>
+<td>dot operator</td>
+</tr>
+<tr>
+<td>&#x2308;</td>
+<td>&amp;lceil;</td>
+<td>&amp;#8968;</td>
+<td>&amp;#x2308;</td>
+<td>left ceiling = APL upstile</td>
+</tr>
+<tr>
+<td>&#x2309;</td>
+<td>&amp;rceil;</td>
+<td>&amp;#8969;</td>
+<td>&amp;#x2309;</td>
+<td>right ceiling</td>
+</tr>
+<tr>
+<td>&#x230A;</td>
+<td>&amp;lfloor;</td>
+<td>&amp;#8970;</td>
+<td>&amp;#x230A;</td>
+<td>left floor = APL downstile</td>
+</tr>
+<tr>
+<td>&#x230B;</td>
+<td>&amp;rfloor;</td>
+<td>&amp;#8971;</td>
+<td>&amp;#x230B;</td>
+<td>right floor</td>
+</tr>
+<tr>
+<td>&#x2329;</td>
+<td>&amp;lang;</td>
+<td>&amp;#9001;</td>
+<td>&amp;#x2329;</td>
+<td>left-pointing angle bracket = bra</td>
+</tr>
+<tr>
+<td>&#x232A;</td>
+<td>&amp;rang;</td>
+<td>&amp;#9002;</td>
+<td>&amp;#x232A;</td>
+<td>right-pointing angle bracket = ket</td>
+</tr>
+<tr>
+<td>&#x25CA;</td>
+<td>&amp;loz;</td>
+<td>&amp;#9674;</td>
+<td>&amp;#x25CA;</td>
+<td>lozenge</td>
+</tr>
+<tr>
+<td>&#x2660;</td>
+<td>&amp;spades;</td>
+<td>&amp;#9824;</td>
+<td>&amp;#x2660;</td>
+<td>black spade suit</td>
+</tr>
+<tr>
+<td>&#x2663;</td>
+<td>&amp;clubs;</td>
+<td>&amp;#9827;</td>
+<td>&amp;#x2663;</td>
+<td>black club suit = shamrock</td>
+</tr>
+<tr>
+<td>&#x2665;</td>
+<td>&amp;hearts;</td>
+<td>&amp;#9829;</td>
+<td>&amp;#x2665;</td>
+<td>black heart suit = valentine</td>
+</tr>
+<tr>
+<td>&#x2666;</td>
+<td>&amp;diams;</td>
+<td>&amp;#9830;</td>
+<td>&amp;#x2666;</td>
+<td>black diamond suit</td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="ref_emoji_skin_tones.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="ref_html_entities_a.html">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+  <div id="skyscraper">
+  
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
+  
+  </div>
+</div>
+
+<div class="sidesection">
+<h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+  <h4>LIKE US</h4>
+  <div class="w3-text-grey sharethis">
+    <a href="../../www.facebook.com/w3schoolscom/index.html" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+    <a href="../../www.instagram.com/w3schools.com_official/index.html" target="_blank" title="Instagram"><span class="fa fa-instagram fa-2x"></span></a>
+    <a href="../../www.linkedin.com/company/w3schools.com/index.html" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
+<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="../images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Tabs</a><br>
+    <a href="../howto/howto_css_dropdown.html">Dropdowns</a><br>
+    <a href="../howto/howto_js_accordion.html">Accordions</a><br>
+    <a href="../howto/howto_js_sidenav.html">Side Navigation</a><br>
+    <a href="../howto/howto_js_topnav.html">Top Navigation</a><br>
+    <a href="../howto/howto_css_modals.html">Modal Boxes</a><br>
+    <a href="../howto/howto_js_progressbar.html">Progress Bars</a><br>
+    <a href="../howto/howto_css_parallax.html">Parallax</a><br>
+    <a href="../howto/howto_css_login_form.html">Login Form</a><br>
+    <a href="../howto/howto_html_include.html">HTML Includes</a><br>
+    <a href="../graphics/google_maps_intro.html">Google Maps</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Range Sliders</a><br>
+    <a href="../howto/howto_css_tooltip.html">Tooltips</a><br>
+    <a href="../howto/howto_js_slideshow.html">Slideshow</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Filter List</a><br>
+    <a href="../howto/howto_js_sort_list.html">Sort List</a><br>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h5><a href="../cert/default.html" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border">
+  <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
+  <a href="../cert/default.html" class="w3-button w3-light-grey w3-block" style="text-decoration:none">And more</a>
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", fix_stickyad);
+  window.addEventListener("resize", fix_stickyad);
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+</div>
+<!--
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+</div>
+-->
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../w3schools.invisionzone.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../shop.w3schools.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+</div>
+
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">      
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Tutorials</h4>
+<a href="../html/default.html">HTML Tutorial</a><br>
+<a href="../css/default.html">CSS Tutorial</a><br>
+<a href="../js/default.html">JavaScript Tutorial</a><br>
+<a href="../howto/default.html">How To Tutorial</a><br>
+<a href="../sql/default.html">SQL Tutorial</a><br>
+<a href="../python/default.html">Python Tutorial</a><br>
+<a href="../w3css/default.html">W3.CSS Tutorial</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Tutorial</a><br>
+<a href="../php/default.html">PHP Tutorial</a><br>
+<a href="../java/default.html">Java Tutorial</a><br>
+<a href="../cpp/default.html">C++ Tutorial</a><br>
+<a href="../jquery/default.html">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top References</h4>
+<a href="../tags/default.html">HTML Reference</a><br>
+<a href="../cssref/default.html">CSS Reference</a><br>
+<a href="../jsref/default.html">JavaScript Reference</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Reference</a><br>
+<a href="../python/python_reference.html">Python Reference</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Reference</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Reference</a><br>
+<a href="../php/php_ref_overview.html">PHP Reference</a><br>
+<a href="../colors/colors_names.html">HTML Colors</a><br>
+<a href="../java/java_ref_keywords.html">Java Reference</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Reference</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Examples</h4>
+<a href="../html/html_examples.html">HTML Examples</a><br>
+<a href="../css/css_examples.html">CSS Examples</a><br>
+<a href="../js/js_examples.html">JavaScript Examples</a><br>
+<a href="../howto/default.html">How To Examples</a><br>
+<a href="../sql/sql_examples.html">SQL Examples</a><br>
+<a href="../python/python_examples.html">Python Examples</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Examples</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Examples</a><br>
+<a href="../php/php_examples.html">PHP Examples</a><br>
+<a href="../java/java_examples.html">Java Examples</a><br>
+<a href="../xml/xml_examples.html">XML Examples</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="../cert/default.html">HTML Certificate</a><br>
+<a href="../cert/default.html">CSS Certificate</a><br>
+<a href="../cert/default.html">JavaScript Certificate</a><br>
+<a href="../cert/default.html">SQL Certificate</a><br>
+<a href="../cert/default.html">Python Certificate</a><br>
+<a href="../cert/default.html">PHP Certificate</a><br>
+<a href="../cert/default.html">Bootstrap Certificate</a><br>
+<a href="../cert/default.html">XML Certificate</a><br>
+<a href="../cert/default.html">jQuery Certificate</a><br>
+<a href="../cert/default.html" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
+<a href="../about/about_privacy.html">cookie and privacy policy</a>.<br><br>
+<a href="../about/about_copyright.html">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="../w3css/default.html">W3Schools is Powered by W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+
+<script>
+
+loadUser();
+function loadUser() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  if (foldername == "quiztest") {
+    cc = window.location.href;
+    pos = cc.indexOf("qtest=");
+    typ = cc.substr(pos + 6);
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+       console.log(x);
+        activateElse();
+      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+        console.log(x);
+        activateMYPAGE(x, y);
+      } else {
+        activateElse();
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+}
+function finishedPage() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "O") {
+        console.log(x);
+        registerPoint(x);
+      } else {
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+}
+function activateElse() {
+  var a = document.getElementById("mypagediv");
+  var b = document.getElementById("w3loginbtn");
+  if (a) a.style.display = "none";
+  if (b) b.style.display = "inline";
+}
+var mp_pagesread = 0, mp_totalpages = 0;
+function activateMYPAGE(cc, obj) {
+  var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (a) a.style.display = "none";
+  if (b) {
+    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+      jsonobj = JSON.parse(obj.substr(1));
+      mp_pagesread = jsonobj.b;
+      mp_totalpages = jsonobj.a;
+      x = Math.round((mp_pagesread/mp_totalpages) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+    }
+    if (cc == "Q") {
+      color1 = "rgba(44, 156, 202, 0.1)";
+      color2 = "rgba(44, 156, 202, 1)";
+    }
+    b.style.display = "block";
+    txt += "<a href='../../mypage.w3schools.com/mypage/index.html'>";
+    txt2 = txt;
+    txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+    txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+    if (cc != "F") {
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+      txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt2 += '</svg>';
+    }
+    if (cc == "J") {
+      checkIfMypage2IsInView();
+      window.addEventListener("scroll", checkIfMypage2IsInView);
+    }
+    if (cc == "Q") {
+      if (degrees == 359.99) {
+        txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+    }
+    txt += '</a>';
+    txt2 += '</a>';
+    b.innerHTML = "&nbsp;" + txt;
+    c.innerHTML = "&nbsp;" + txt2;
+    if (cc != "L") {
+      document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    }
+  }
+  ga('send', 'event', 'user', 'login');
+}
+function checkIfMypage2IsInView() {
+  var a = document.getElementById("mypagediv2");
+  if (isinviewport(a) || isaboveviewport(a)) {
+    finishedPage();
+    window.removeEventListener("scroll", checkIfMypage2IsInView);
+  }
+}
+function isinviewport(x) {
+  var rect = x.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+function isaboveviewport(x) {
+  var rect = x.getBoundingClientRect();
+  if (rect.top < 0) return true;
+  return false;
+}
+function registerPoint(cc) {
+  var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (c) {
+    mp_pagesread++;
+    x = Math.round((mp_pagesread/mp_totalpages) * 100);
+    degrees = x * 3.6;
+    if (degrees > 359) degrees = 359.99;
+    txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+    if (degrees == 359.99) {completed = 1;}
+    if (completed == 1) {
+      txt += "<span id='usergetsstar'>&#x2605;</span>";
+    }
+    c.innerHTML += txt;
+    document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+  }
+}
+
+
+</script>
+<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+<script src="tryit_script.js"></script>
+<script>
+charsetTryit(4, 2, 1, 3);
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/charsets/ref_html_entities_4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 03:14:44 GMT -->
+</html>

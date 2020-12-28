@@ -1,0 +1,47 @@
+<div id="appml_filtercontainer" class="w3-container w3-light-grey w3-section w3-padding-large" style="display:none;">
+<span id="appmlbtn_queryClose" onclick="this.parentNode.style.display='none';" class="w3-button w3-large w3-right">&times;</span>
+<h2>Filter</h2>
+<div id="appml_filter">
+<div appml-repeat="filteritems">
+<div class="w3-row w3-section">
+  <div class="w3-col m4">
+    <label>{{label||item}}:</label>
+  </div>
+  <div class="w3-col m2">
+    <input id="appml_datatype_{{item}}" type='hidden'>
+    <select id="appml_operator_{{item}}" class="w3-select w3-border">
+      <option value="0">=</option>
+      <option value="1">&lt;&gt;</option>
+      <option value="2">&lt;</option>
+      <option value="3">&gt;</option>
+      <option value="4">&lt;=</option>
+      <option value="5">&gt;=</option>
+      <option value="6">%</option>
+    </select>
+  </div>
+  <div class="w3-col m6">
+    <input id="appml_query_{{item}}" class="w3-input w3-border">
+  </div>
+</div>
+</div>
+</div>
+<div id="appml_orderby">
+<h2>Order By</h2>
+<div class="w3-row w3-section">
+  <div class="w3-col m5">
+    <select id='appml_orderselect' class="w3-select w3-border">
+      <option value=''></option>
+      <option appml-repeat="sortitems" value="{{item}}">{{label || item}}</option>
+    </select>
+  </div>
+  <div class="w3-col m7">
+    <span class="w3-margin-left">
+    ASC <input type='radio' id="appml_orderdirection_asc" name='appml_orderdirection' value='asc' class="w3-radio">
+    DESC <input type='radio' id="appml_orderdirection_desc"  name='appml_orderdirection' value='desc' class="w3-radio">
+    </span>
+  </div>
+</div>
+</div>
+<br>
+<button id="appmlbtn_queryOK" type="button" class="w3-button w3-green">OK</button>
+</div>

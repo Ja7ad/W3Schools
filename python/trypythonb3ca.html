@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ml_numpy_uniform by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:32:19 GMT -->
+<head>
+<title>Python Tryit Editor v1.0</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="../images/w3schools_logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<link rel="stylesheet" href="../lib/codemirror.css">
+<script src="../lib/codemirror.js"></script>
+<script src="../lib/codemirror_python.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder + "tryit";
+  })());
+});
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               autoStartAuction: false
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["try_it_leaderboard"]);
+
+   });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();    
+}
+var fileID = "";
+var loadSave = false;
+function getSavedFile() {
+    loadSave = true;
+    var htmlCode;
+    var paramObj = {};
+    paramObj.fileid = "";
+    fileID = paramObj.fileid;
+    var paramA = JSON.stringify(paramObj);
+    var httpA = new XMLHttpRequest();
+    httpA.open("POST.html", globalURL, true);
+    httpA.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    httpA.onreadystatechange = function() {
+        if(httpA.readyState == 4 && httpA.status == 200) {
+            document.getElementById("textareaCode").value = httpA.responseText;
+            window.editor.getDoc().setValue(httpA.responseText);
+            loadSave = false;
+        }
+    }
+    httpA.send(paramA);   
+}
+</script>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color:#000000;
+  margin:0px;
+  font-size:100%;
+}
+.trytopnav {
+  height:40px;
+  overflow:hidden;
+  min-width:380px;
+  position:absolute;
+  width:100%;
+  top:99px;
+  background-color:#f1f1f1;
+}
+.trytopnav a,.trytopnav button {
+  color:#999999;
+}
+.w3-bar .w3-bar-item:hover {
+  color:#757575 !important;
+}
+a.w3schoolslink {
+  padding:0 !important;
+  display:inline !important;
+}
+a.w3schoolslink:hover,a.w3schoolslink:active {
+  text-decoration:underline !important;
+  background-color:transparent !important;
+}
+#dragbar{
+  position:absolute;
+  cursor: col-resize;
+  z-index:3;
+  padding:5px;
+}
+#shield {
+  display:none;
+  top:0;
+  left:0;
+  width:100%;
+  position:absolute;
+  height:100%;
+  z-index:4;
+}
+#framesize span {
+  font-family:Consolas, monospace;
+}
+#container {
+  background-color:#f1f1f1;
+  width:100%;
+  overflow:auto;
+  position:absolute;
+  top:138px;
+  bottom:0;
+  height:auto;
+}
+#textareacontainer, #iframecontainer {
+  float:left;
+  height:100%;
+  width:50%;
+}
+#textarea, #iframe {
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:1px;
+}
+#textarea {
+  padding-left:10px;
+  padding-right:5px;  
+}
+#iframe {
+  padding-left:5px;
+  padding-right:10px;
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace;    
+}
+#textareawrapper {
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#iframewrapper {
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace;  
+}
+#textareaCode {
+  background-color: #ffffff;
+  font-family: consolas,"courier new",monospace;
+  font-size:15px;
+  height:100%;
+  width:100%;
+  padding:8px;
+  resize: none;
+  border:none;
+  line-height:normal;    
+}
+.CodeMirror.cm-s-default {
+  line-height:normal;
+  padding: 4px;
+  height:100%;
+  width:100%;
+}
+#iframeResult, #iframeSource {
+  background-color: #000000;
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace!important;  
+  height:100%;
+  width:100%;  
+  padding:8px;
+}
+#iframeResult * {
+  font-family: consolas,"courier new",monospace!important;  
+}
+#stackV {background-color:#999999;}
+#stackV:hover {background-color:#BBBBBB !important;}
+#stackV.horizontal {background-color:transparent;}
+#stackV.horizontal:hover {background-color:#BBBBBB !important;}
+#stackH.horizontal {background-color:#999999;}
+#stackH.horizontal:hover {background-color:#999999 !important;}
+#textareacontainer.horizontal,#iframecontainer.horizontal{
+  height:50%;
+  float:none;
+  width:100%;
+}
+#textarea.horizontal{
+  height:100%;
+  padding-left:10px;
+  padding-right:10px;
+}
+#iframe.horizontal{
+  height:100%;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;  
+}
+#container.horizontal{
+  min-height:200px;
+  margin-left:0;
+}
+#tryitLeaderboard {
+  background-color:#ffffff;
+  overflow:hidden;
+  text-align:center;
+  margin-top:5px;
+  height:90px;
+}
+.w3-dropdown-content {width:350px}
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+}
+body.darktheme #textareaCode {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+}
+body.darktheme .trytopnav a,body.darktheme .trytopnav button {
+  color:#dddddd;
+}
+
+  
+@media screen and (max-width: 727px) {
+  .trytopnav {top:70px;}
+  #container {top:108px;}
+
+}
+@media screen and (max-width: 467px) {
+  .trytopnav {top:60px;}
+  #container {top:98px;}
+  .w3-dropdown-content {width:100%}
+}
+@media only screen and (max-device-width: 768px) {
+  #iframewrapper {overflow: auto;}
+  #container     {min-width:320px;}
+  .stack         {display:none;}
+  #tryhome       {display:block;}
+}
+
+@font-face {
+font-family: 'fontawesome';
+src:url('../lib/fonts/fontawesome8deb.eot?14663396');
+src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
+    url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
+    url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
+    url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+font-weight:normal;
+font-style:normal;
+}
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transform:translate(0,0);
+}
+.fa-2x {
+  font-size:2em;
+}
+.fa-home:before {content: '\e800'; }
+.fa-save:before {content: '\e804'; }
+.fa-rotate:before {content: '\e813'; }
+.fa-adjust:before { content: '\e80b'; }
+.fa-menu:before { content: '\f0c9'; }
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+#saveLoader {
+    margin:20px;
+}
+#runloadercontainer{
+  display:none;
+  position:absolute;
+  background-color:#000;
+  z-index:9;
+}
+#runloader{
+  margin:auto;
+  border: 10px solid #333;
+  border-top: 10px solid #4CAF50;
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  animation: spin 2s linear infinite;
+  position:relative;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#iframewrapper {
+	
+}
+
+</style>
+<!--[if lt IE 8]>
+<style>
+#textareacontainer, #iframecontainer {width:48%;}
+#container {height:500px;}
+#textarea, #iframe {width:90%;height:450px;}
+#textareaCode, #iframeResult {height:450px;}
+.stack {display:none;}
+</style>
+<![endif]-->
+</head>
+<body>
+
+<div id='tryitLeaderboard'>
+<!-- TryitLeaderboard -->
+
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+ 
+</div>
+
+<div class="trytopnav">
+<div class="w3-bar" style="overflow:auto">
+  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
+  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
+  <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
+  <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
+</div>
+
+</div>
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent w3-hover-dark-grey" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+  <div class="w3-bar-block">
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+  </div>
+  <footer class="w3-container w3-small w3-light-gray">
+  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
+  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2020</a></p>
+  </footer>
+</div>
+<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">import numpy
+
+x = numpy.random.uniform(0.0, 5.0, 250)
+
+print(x)
+</textarea>
+        <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+          <input type="hidden" name="code" id="code" />
+        </form>
+       </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="runloadercontainer"><div id="runloader"></div></div>
+      <div id="iframewrapper">
+        <div id="iframeResult" style="white-space:nowrap;overflow:auto;"><pre>
+<script>
+var x = [];
+x.push("[1.31139138 3.68254343 4.72910475 0.25497053 4.46715005 4.69063926 \n" +
+" 4.64923705 3.45047106 2.41635247 2.72443332 2.20898575 4.75086617 \n" +
+" 0.40901702 1.74418731 0.61052823 4.31924024 0.81246772 3.65634772 \n" +
+" 4.4368116  0.28534843 1.52660889 0.10930926 3.17271227 1.53939643 \n" +
+" 2.57415792 1.85451652 3.25557744 0.45683691 3.55724599 1.20144077 \n" +
+" 4.3503184  2.08016568 4.2806164  1.11560441 0.9837929  4.51541708 \n" +
+" 4.30668544 1.26976371 2.91607325 3.64874234 4.1319259  0.43391824 \n" +
+" 1.60413992 1.13268393 2.5471422  4.17372757 2.39691211 1.09590849 \n" +
+" 0.78324923 3.28075845 3.67161525 1.90254799 4.44315953 2.45033939 \n" +
+" 3.63806989 4.09826973 3.24514784 4.86310592 3.62200117 0.85001856 \n" +
+" 3.50022126 2.36443496 2.87611833 0.60288709 3.58445855 4.60662207 \n" +
+" 4.58906218 1.36240638 4.72090746 2.03314772 2.70775933 4.45980053 \n" +
+" 2.39425003 0.45391295 3.86857402 3.84125436 3.85906983 3.64325778 \n" +
+" 4.85526522 2.29786611 0.08203303 2.13789532 1.96102399 2.18950022 \n" +
+" 1.48765372 1.81315182 4.66093633 1.45881744 4.82293412 2.55849424 \n" +
+" 4.78892817 0.15698028 4.73209065 4.33109559 4.38915542 0.21859371 \n" +
+" 1.79201347 0.78620987 0.85987841 3.44912414 3.5526567  3.73588221 \n" +
+" 2.7203951  3.36016902 2.62962832 1.58537506 4.44309042 1.90639388 \n" +
+" 4.27884349 1.2822825  0.12100824 1.35407357 3.16081019 1.88758927 \n" +
+" 3.12187993 2.38354404 4.33684267 4.8608494  0.01053712 1.13334692 \n" +
+" 1.09513219 0.73156304 4.00165639 0.53747497 1.64921499 4.64347933 \n" +
+" 0.97870812 4.86628269 4.86455284 0.93495425 0.37820159 3.82521254 \n" +
+" 0.18608466 2.74196215 4.91077966 3.11112852 2.60927451 4.06674067 \n" +
+" 3.44957268 1.15060278 3.40424508 3.97212824 4.1625332  0.83988759 \n" +
+" 3.62917845 2.00386269 1.3421589  3.02633995 4.23743393 4.26563947 \n" +
+" 1.29885407 4.32064455 0.32446988 3.66345188 4.20062797 3.2582097 \n" +
+" 4.37327245 2.68963454 0.3114567  1.33135248 4.15748255 2.88971477 \n" +
+" 2.00938395 0.56740139 2.66392737 4.13470747 2.68392016 3.78864162 \n" +
+" 2.4688611  4.86621184 4.2673624  1.63592588 4.52378971 2.74945213 \n" +
+" 2.09048184 4.47103629 0.08483193 4.69907362 4.53365294 1.56938497 \n" +
+" 4.50072788 3.68473039 4.79427073 4.80067463 3.94440361 1.66701378 \n" +
+" 4.98922345 3.74875516 3.22297622 2.0932426  4.83154332 0.30134755 \n" +
+" 4.69531394 4.32967023 4.14506186 0.02475297 3.51075946 4.71530412 \n" +
+" 0.93762777 0.80102813 0.09615941 2.26998717 4.23700946 2.11438189 \n" +
+" 0.52114366 1.18932841 0.38480121 1.04118676 4.31354798 1.97096473 \n" +
+" 2.98589467 0.80951513 2.68179859 0.94436684 3.44401835 2.60507932 \n" +
+" 3.0062746  4.55014803 0.08452494 0.78698432 0.85046967 1.46185572 \n" +
+" 2.01362126 3.35885638 0.22329417 4.17987916 2.3781314  2.16506978 \n" +
+" 2.62520736 3.57674984 1.68385993 2.3392743  1.45140455 1.0849837 \n" +
+" 3.40502325 4.92823781 1.67021066 1.74225867 2.84510479 4.0927335 \n" +
+" 2.52568528 0.39791545 0.76186615 3.7455257  0.22157656 0.10812358 \n" +
+" 4.77228033 1.50739238 2.44913012 2.76617713]");
+
+x.push("[4.70107872 0.24787675 0.2195555  3.06204253 4.77830208 4.3809458 \n" +
+" 4.57322999 4.36807984 1.67478644 3.68797008 3.99521373 3.20963264 \n" +
+" 0.94637018 1.51078597 0.13048172 4.37043882 4.91572869 4.9944569 \n" +
+" 2.32662378 3.00030176 3.67345324 1.86468628 3.27187565 3.75195031 \n" +
+" 4.67731372 4.97360003 4.51354256 4.16388364 2.07021774 0.62298694 \n" +
+" 2.47066525 4.0448314  3.42833033 1.33428236 1.73459005 3.21883822 \n" +
+" 3.74238411 0.70161377 4.10076553 2.71635406 4.25199618 1.71047347 \n" +
+" 0.56080893 1.52101476 3.268613   0.44348611 4.75300544 1.93018848 \n" +
+" 4.02334818 4.2936394  3.86262357 4.65161361 3.18855835 1.7270845 \n" +
+" 3.00572657 4.33593454 0.72605499 2.18322726 0.45156024 1.19257312 \n" +
+" 4.06588255 3.55786778 1.7739621  3.46521942 3.31536931 1.91225274 \n" +
+" 3.03644112 4.40795135 3.41339553 1.58513041 3.04306268 4.17387258 \n" +
+" 3.87451494 1.48655976 0.81035771 2.79862049 1.93737551 2.77350631 \n" +
+" 0.02961769 0.76614433 0.30462889 1.96064363 3.61984286 0.18390026 \n" +
+" 2.12864059 1.24368084 3.12624663 0.87324141 2.49182244 0.73894522 \n" +
+" 3.28624627 0.54325432 1.14019016 0.19408833 0.27587769 2.76731562 \n" +
+" 4.24239649 1.62670982 3.48601752 2.34165538 4.33079158 3.32373447 \n" +
+" 3.95982219 2.59970366 0.55374039 1.53498152 1.84149167 1.7103894 \n" +
+" 0.07011496 2.95268057 3.19355581 3.44488969 4.62279333 3.96444207 \n" +
+" 4.08320222 2.45938531 4.40211166 3.08226174 2.7413684  0.65249907 \n" +
+" 3.88554841 0.54426484 3.1453845  1.11706224 2.71756474 3.54715157 \n" +
+" 0.26560431 1.80808047 0.80432088 3.69086109 0.9538585  2.37378315 \n" +
+" 0.13003854 0.176845   0.15389107 3.69736303 0.64101966 4.06556222 \n" +
+" 1.8471563  2.71152545 0.8789574  1.9509209  3.85439304 3.00958342 \n" +
+" 0.82933679 2.68746095 2.63675    3.31097973 2.64676176 1.24868746 \n" +
+" 3.57576447 2.29019517 4.57538641 1.09943657 0.35057439 0.32663094 \n" +
+" 3.41203514 3.07271481 1.78668303 4.9319088  4.44909133 2.0572905 \n" +
+" 2.7863201  1.82312893 3.50405799 2.06544361 4.22933649 0.59760683 \n" +
+" 3.4048237  0.56655243 3.26653888 2.4388069  3.62042053 0.28400035 \n" +
+" 1.23169562 1.74053627 1.86822616 3.40158413 1.51949388 3.96485747 \n" +
+" 1.91560046 2.03155272 1.07299191 4.44833549 4.49162578 1.68513371 \n" +
+" 3.7402374  2.42013058 1.2598136  4.5316802  1.50186405 1.23001043 \n" +
+" 4.14823233 2.89923774 1.61491513 4.694959   2.62637724 4.15848057 \n" +
+" 2.29320707 0.19248169 2.92876948 0.66504363 2.96658345 2.61105925 \n" +
+" 2.10844525 1.9866828  4.33847884 2.1361846  3.51735449 0.3373951 \n" +
+" 2.51504308 4.52648976 0.11202356 3.20143812 3.46439049 2.42704263 \n" +
+" 4.49869534 2.28628955 4.64371298 1.09661546 2.69151894 3.93238154 \n" +
+" 2.56424271 2.14934753 0.84539193 4.32824987 2.04898603 1.41383722 \n" +
+" 3.0403419  1.51738193 4.93516012 4.49610783 1.63867322 1.40193809 \n" +
+" 0.74791302 2.89177327 2.71531315 1.96517301 1.83925883 4.90219347 \n" +
+" 4.23705842 1.77975734 3.25498864 4.15504765 0.02360116 4.88180179 \n" +
+" 2.65075243 3.26660281 2.65401096 1.13530684]");
+
+x.push("[0.17946572 2.32219161 0.18934418 1.82162521 1.59162147 0.54635267 \n" +
+" 2.44499023 2.34568246 0.57350099 4.55370988 1.06062319 1.27923664 \n" +
+" 0.385706   0.87962984 0.68588784 4.4162117  0.24180221 0.2093519 \n" +
+" 2.95518983 4.58848847 0.97791905 0.02621364 2.63128696 3.50801208 \n" +
+" 4.5377773  1.32584789 2.92509257 1.30882817 2.96282421 4.82504129 \n" +
+" 4.82823323 0.14981561 1.71283778 1.46287599 2.04795432 4.86712256 \n" +
+" 2.57991716 2.02938383 1.40714847 3.08935754 4.88406483 3.90742459 \n" +
+" 3.66097583 3.71369692 2.93289684 4.83191128 2.77667798 4.93069696 \n" +
+" 1.62304667 0.87760554 2.70527059 1.44847975 1.09857957 4.59412576 \n" +
+" 1.95394356 2.00140027 4.94018383 2.03265004 0.35025816 4.20108624 \n" +
+" 4.66743431 0.11120526 3.35859297 2.03318906 1.29014243 1.9655744 \n" +
+" 1.40202471 2.7598193  2.69650886 3.13747564 1.7780115  0.33804047 \n" +
+" 4.95974949 1.28741501 3.24814622 3.04697963 1.01406724 2.48639059 \n" +
+" 2.49032162 0.0823857  0.62740879 0.99449206 1.39554869 3.87099639 \n" +
+" 2.37139558 0.23952776 1.00843479 4.55360346 4.94720853 0.84871001 \n" +
+" 1.6398664  0.97468032 0.90700492 1.17272503 4.27084102 1.38948562 \n" +
+" 2.34181502 4.75568963 3.52776339 1.93441554 4.87709235 3.74530643 \n" +
+" 3.9975462  2.82720806 3.74524148 0.01975848 4.33253149 3.54387409 \n" +
+" 4.48281077 4.28892963 4.94326465 3.26352283 0.34243638 3.01846409 \n" +
+" 1.7587625  0.24776364 4.47579695 3.4040576  2.7463264  0.18288662 \n" +
+" 3.74013185 4.84744046 0.2339886  4.95259157 0.83779691 2.6556716 \n" +
+" 1.47302649 0.01861863 0.61084778 4.19358525 2.73145098 3.29335442 \n" +
+" 1.4507033  4.09868195 3.01892235 4.75958955 2.94028417 2.83680078 \n" +
+" 0.95605695 4.28062833 0.0388657  2.55384113 3.27518035 0.09401306 \n" +
+" 3.49635162 3.4425639  2.49294885 3.84333305 2.98660606 0.04491348 \n" +
+" 3.56437768 3.92588322 2.57606741 3.82999141 0.17751132 3.49126215 \n" +
+" 2.34229898 1.65846507 1.31955771 2.55094569 3.80440622 4.2313968 \n" +
+" 2.15136105 3.81496107 1.00921623 0.0498501  4.01822449 2.38020749 \n" +
+" 3.92743216 3.40007576 0.17719759 1.80779101 3.70382939 0.51672768 \n" +
+" 2.57786934 1.01109495 0.21992335 2.68410475 4.94191733 4.99364591 \n" +
+" 0.26092025 1.20219249 2.01377648 3.6080657  2.47450976 4.26451446 \n" +
+" 4.58835036 3.78577692 1.14126629 3.89625688 1.22922731 0.42438031 \n" +
+" 2.2622816  1.4510637  4.37661456 1.10899445 4.28833687 3.94039913 \n" +
+" 0.59618106 2.91973711 1.6511646  1.91974711 0.5274802  4.29063391 \n" +
+" 2.04030104 1.00498261 4.2899824  2.20825705 1.89396499 3.69340518 \n" +
+" 3.62867045 2.20934233 1.81181686 1.73302459 2.16947781 1.68942217 \n" +
+" 1.00544988 0.5599015  4.78472944 1.49927966 2.27891342 0.97507184 \n" +
+" 2.36096282 0.25083606 3.68638314 0.21005797 0.26854432 0.49555296 \n" +
+" 2.3667063  0.93851272 2.20363126 4.16682109 3.34394461 3.08082574 \n" +
+" 4.09514521 3.01205365 1.40616774 3.33079878 0.47628818 2.34098687 \n" +
+" 1.39445805 2.15242036 3.67514924 3.8718004  1.8595215  3.82621163 \n" +
+" 4.49271774 3.41728958 3.9089966  2.8857063 ]");
+
+x.push("[4.14619735 1.9552595  4.81022049 1.0968941  4.11274364 0.21639106 \n" +
+" 2.46779085 3.63434948 3.36301571 0.49473579 0.84308846 4.86567504 \n" +
+" 2.64851019 0.80986244 3.57851433 1.89214394 0.84532696 0.83982164 \n" +
+" 4.50273987 3.72569777 2.71395596 2.80718614 0.13682429 1.50192508 \n" +
+" 4.24345368 2.86685435 3.91837419 2.63038818 3.39149488 0.06864272 \n" +
+" 2.52768163 2.60785676 4.65715641 0.67466319 2.23679372 3.80532419 \n" +
+" 1.38909838 2.3781367  1.81770276 2.54898401 3.47726349 0.08312499 \n" +
+" 4.17156455 0.02445146 0.58956393 0.28822263 2.65365878 3.33637814 \n" +
+" 2.1780257  1.06303769 3.2860173  4.89156038 3.71513111 1.3576868 \n" +
+" 2.02281717 1.22769807 1.47824985 4.00783433 2.18767303 4.86374514 \n" +
+" 2.03177648 0.07894736 0.63471153 4.22039654 3.14316448 0.8936408 \n" +
+" 2.77963225 3.27212563 3.71620874 0.43802949 0.0781136  3.84756592 \n" +
+" 0.06873103 3.60761195 2.42185599 2.7738046  1.30947283 1.68520784 \n" +
+" 0.1997738  1.94162999 4.8836188  4.54735355 1.93515215 3.09240874 \n" +
+" 4.20973564 4.5814245  2.83309024 0.48367579 4.04874981 1.09302006 \n" +
+" 1.92708589 2.02647728 3.8844002  0.88228264 3.16869994 3.00826512 \n" +
+" 2.62970373 2.93514296 2.65581593 0.97874955 3.01782751 1.96513311 \n" +
+" 1.38169088 1.42786296 3.74122295 1.39782504 4.98859005 1.04194425 \n" +
+" 3.31394805 3.62021192 1.44196379 1.11706674 1.30513855 1.8090919 \n" +
+" 0.07418898 4.33164226 2.43087729 2.38001734 1.13339749 4.51971628 \n" +
+" 1.9228575  2.22840913 1.0618156  1.06420671 2.53761478 4.50371547 \n" +
+" 0.53253118 1.18415222 0.15649756 1.11444282 2.57544174 0.21320602 \n" +
+" 2.52493498 1.97020628 1.90997023 2.7076085  1.91884148 1.91370305 \n" +
+" 4.86681321 3.94264716 1.62843708 0.17171088 0.60260953 0.52008987 \n" +
+" 4.8147667  4.56974787 0.87203621 0.74379435 3.91028704 2.62782365 \n" +
+" 2.42712218 0.17308461 1.20803628 0.51563858 0.57255411 1.48897993 \n" +
+" 4.8861758  3.193811   0.71705053 3.68563021 3.23519528 0.05587595 \n" +
+" 0.2790102  3.62916886 2.74773308 0.83845609 2.73226692 0.26144253 \n" +
+" 0.5239676  1.67265185 3.70556753 2.0760212  1.90163154 1.73475818 \n" +
+" 0.61383056 3.32353115 2.7472151  0.50900875 2.80524775 3.1337009 \n" +
+" 2.26534016 2.760253   1.77648448 1.7902465  2.9682087  3.74168884 \n" +
+" 4.80854565 3.421855   0.43805139 3.83452936 2.0671818  4.30440785 \n" +
+" 4.88547747 3.56821188 1.86153968 4.81653238 3.59297684 2.08701563 \n" +
+" 2.37683626 4.67529513 2.29862762 3.32591517 1.9741528  1.28495873 \n" +
+" 0.85840353 2.11965041 4.86973673 1.14542779 2.14859491 4.07413461 \n" +
+" 1.10030647 4.70417509 0.54430517 3.56567735 0.65737196 2.32202992 \n" +
+" 3.69455169 0.30046087 3.14794355 0.1529399  2.56057869 1.62831389 \n" +
+" 0.59513738 2.88118293 3.48538776 1.51646823 4.56633362 4.36426006 \n" +
+" 0.8081832  2.25090906 0.89153983 3.62916629 4.3764022  1.94851477 \n" +
+" 3.61773111 4.25951901 0.3726178  2.00640265 4.1203295  1.95783702 \n" +
+" 0.31408415 1.44097649 3.46703699 2.28421742 4.19566549 4.96378613 \n" +
+" 0.45498472 3.41349449 3.11805307 0.10641257]");
+
+x.push("[4.16457941 2.53336934 0.76094645 2.19728824 0.26461522 2.47763846 \n" +
+" 1.01861707 1.81286031 3.31170377 1.82227842 0.9851678  3.39704211 \n" +
+" 2.80936846 3.5178459  2.43532755 2.16588249 0.51356737 2.13931298 \n" +
+" 3.29456667 3.9949609  3.55884565 3.25152112 4.10826858 4.59093062 \n" +
+" 1.10645521 2.00119659 1.35298074 3.19715447 3.9095812  4.49572829 \n" +
+" 0.19396857 1.98504038 3.4434233  1.4264503  2.5929941  1.93930881 \n" +
+" 1.40465862 0.68521082 3.13884087 0.19739132 3.7006942  3.03040889 \n" +
+" 0.44557704 4.93506348 0.01016715 4.49707411 0.0250856  1.6161289 \n" +
+" 4.0614196  0.07539926 0.14178923 3.53735644 2.92626772 4.24309409 \n" +
+" 2.93614483 4.19271678 2.11085992 0.89565608 2.91128253 2.03085369 \n" +
+" 0.25994798 1.52378501 4.62784889 0.88462656 4.34725502 1.90010131 \n" +
+" 2.70673256 4.7833187  3.90638155 2.21866015 3.22971977 4.23391232 \n" +
+" 1.34365916 4.09616657 1.90472694 2.40922049 0.17677846 4.69405223 \n" +
+" 3.37608853 4.21936793 2.32993106 3.2160566  4.29338672 3.8085986 \n" +
+" 0.03532943 0.1336674  3.29150384 3.487193   4.83582545 0.77023456 \n" +
+" 2.9306055  3.45004702 0.95169535 1.59869558 1.99953255 4.45373969 \n" +
+" 0.46106712 0.77225608 2.5982888  2.41894188 4.7730061  2.49255828 \n" +
+" 2.67640541 4.81062781 0.18381472 3.8635721  0.72421463 3.29070047 \n" +
+" 3.21078948 1.97673306 2.23160857 2.14947338 1.57228967 4.03231597 \n" +
+" 1.93193546 4.83317115 4.57366509 2.72148306 2.76236854 2.45620923 \n" +
+" 3.27250864 3.27347015 0.20148648 2.74118186 3.00158603 3.50135538 \n" +
+" 2.75769371 3.21769774 3.76810699 2.05289646 1.41288639 4.97371182 \n" +
+" 1.87598207 0.17278485 4.27510981 0.31476547 0.00893708 1.04915326 \n" +
+" 1.54613005 1.91131455 4.12173165 0.64393556 1.49024513 0.35966727 \n" +
+" 2.38830249 3.59406423 0.67916137 1.18438456 4.4451865  3.99320972 \n" +
+" 1.53586504 4.86559434 4.867244   4.92217506 3.78949487 1.66934268 \n" +
+" 4.0403024  3.61716084 4.0901871  1.48687033 1.10239527 0.37455416 \n" +
+" 2.89031213 3.02845543 2.85232673 2.7275596  4.02031037 2.69293241 \n" +
+" 2.73244605 3.24139436 4.93317182 3.33097023 1.06817254 0.72802594 \n" +
+" 0.47194159 4.71601616 0.91228598 0.53578222 4.6864055  1.82696259 \n" +
+" 2.97684839 4.51509617 2.32623158 4.65218818 0.92864795 2.92965377 \n" +
+" 1.05175105 4.92930102 1.34231746 3.58343988 2.06728736 2.39001083 \n" +
+" 1.68120088 3.73902319 0.96690738 2.60878368 4.20396981 1.49623894 \n" +
+" 2.87431876 4.36249686 0.9025258  3.76298156 3.55854602 4.56100202 \n" +
+" 4.01188567 3.83115035 4.11706811 2.06614667 1.41638643 2.89719905 \n" +
+" 2.06946139 1.52044048 3.54159028 3.95656091 0.42960599 1.09079623 \n" +
+" 2.46292254 4.95074464 3.87291033 2.1211344  3.80070747 0.00888656 \n" +
+" 4.16287847 2.94661859 3.1512899  2.96793599 2.61313196 3.34480097 \n" +
+" 4.8391801  0.74660596 3.55424576 4.63494792 2.34374201 4.51295525 \n" +
+" 4.60275672 2.97788828 3.30910678 1.37742008 0.09007784 4.0066061 \n" +
+" 3.85646881 0.55971376 0.07674231 1.0299027  3.77871601 3.86643305 \n" +
+" 3.06371385 4.01894688 2.00470197 2.14495597]");
+
+x.push("[2.93595651 1.35434926 1.04805505 2.21736371 0.20936287 3.69828037 \n" +
+" 3.79876892 4.82730824 1.19608742 4.18080709 4.19895408 2.90322693 \n" +
+" 2.77529152 1.13026078 2.60065338 3.03672819 4.13425976 3.78502396 \n" +
+" 1.37068485 3.78677516 2.51869494 3.58420283 2.33836617 0.7821119 \n" +
+" 3.65859762 0.64302333 2.07915423 1.91043744 0.90001924 3.76407162 \n" +
+" 4.6478565  1.63714423 0.49688934 2.03741586 0.54833635 4.17767667 \n" +
+" 1.45603918 2.17543852 4.99879488 2.87473321 0.18514208 1.67593539 \n" +
+" 1.19832728 2.15904186 2.78186874 1.08710455 1.13393376 4.70046568 \n" +
+" 1.54643743 4.20838924 1.80515113 4.45461389 4.37238294 4.44511427 \n" +
+" 1.63196508 4.70113249 2.71269616 1.30088391 3.69356354 3.99261269 \n" +
+" 3.77108146 1.35448215 0.49789227 2.90009268 2.88034175 2.57937743 \n" +
+" 2.23770321 3.38986942 3.15825471 4.94945791 4.86331773 2.48356324 \n" +
+" 1.86751694 1.45166627 3.96957055 0.02233339 1.45693907 3.43997803 \n" +
+" 0.92982922 2.44729279 4.93148461 3.53700887 3.38014208 3.2135693 \n" +
+" 0.11732283 1.77332743 4.91847309 0.21522919 2.44409977 1.77966874 \n" +
+" 2.65432402 2.14802489 3.1234348  2.80286902 2.12082707 0.18627445 \n" +
+" 4.17772739 2.28790582 0.86779848 1.16661447 0.94772698 0.53613088 \n" +
+" 2.41661705 0.43357921 2.94498956 2.96620602 2.85125052 4.13462868 \n" +
+" 0.11551597 0.15468212 0.02408747 2.43434838 2.71772029 2.89859268 \n" +
+" 2.55681312 2.05487259 3.69621649 3.10917968 4.78541956 0.93818543 \n" +
+" 3.66966396 3.04550292 2.56523406 4.43223267 0.87952505 1.4715953 \n" +
+" 0.54442921 1.55499861 2.19612417 0.98673822 4.03791613 1.84297231 \n" +
+" 1.69457804 0.93047721 1.01440561 2.06166902 1.42012738 4.87183511 \n" +
+" 3.84570131 0.63124168 0.29797545 1.97022999 3.93858262 0.20227654 \n" +
+" 0.81122048 4.23017734 1.09308943 4.81068372 2.57661148 0.90529347 \n" +
+" 2.23226411 4.85512842 1.16102384 0.69800789 3.38932347 4.16867628 \n" +
+" 3.98918871 2.13103124 3.13028161 2.76042359 3.3175897  4.3059281 \n" +
+" 2.44081957 2.89397415 1.49667275 2.40913653 2.74353038 1.39126584 \n" +
+" 3.23025803 2.81370007 0.86599351 1.52461314 1.29817283 2.21833614 \n" +
+" 3.10132947 3.60107761 0.92632675 4.46360694 0.4582644  0.13373934 \n" +
+" 4.62120836 0.41016315 4.57470543 4.34538119 4.01629508 1.73674409 \n" +
+" 3.80429029 1.94399962 4.45246523 1.93459595 0.09130912 2.92598672 \n" +
+" 2.03773235 1.22782205 2.06553118 3.20942327 0.35735468 1.11434522 \n" +
+" 4.06798293 3.47486614 0.26209526 2.20045589 2.20968219 4.51098971 \n" +
+" 3.3529348  1.93722193 2.95139906 2.43164301 4.81708842 2.68174271 \n" +
+" 4.11893498 2.03759902 1.1985032  2.16971279 2.44859738 4.11755287 \n" +
+" 1.3636303  3.02360511 1.36760129 4.0727925  2.19055523 2.24003499 \n" +
+" 2.95926128 3.80247403 1.08325115 0.90156728 0.30503141 4.73259805 \n" +
+" 0.37335384 2.49957583 2.16314905 2.95282945 4.37060193 4.89454159 \n" +
+" 3.27723717 4.70187563 2.12627678 4.37387476 4.76930619 0.86039023 \n" +
+" 3.28337268 3.05210072 2.01394341 0.64332561 3.16116969 4.5288628 \n" +
+" 0.11477737 1.88911249 1.5091191  3.74405013]");
+
+document.write(x[Math.floor(Math.random() * 5)]);
+</script>
+</pre>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="err_form" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-display-container">
+      <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
+      <div class="w3-container w3-green">
+        <h2>Report a Problem:</h2>
+      </div>
+<form class="w3-container"> 
+<p><label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
+</p>
+<p>
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
+</p>
+<p>
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
+</p>
+<button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
+</form>
+
+  </div>
+</div>
+<script>
+
+function submitTryit(n) {
+  if (window.editor) {
+    window.editor.save();
+  }
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  ifr.setAttribute("name", "iframeResult");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  document.getElementById("iframeResult").addEventListener("load", hideSpinner);
+  if (loadSave == true ) {
+    ifr.setAttribute("src", "../code/opentext.html");
+  } else if (loadSave == false) {
+    displaySpinner();
+    var t=text;
+    t=t.replace(/=/gi,"w3equalsign");
+    t=t.replace(/\+/gi,"w3plussign");    
+    var pos=t.search(/script/i)
+    while (pos>0) {
+      t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+	    pos=t.search(/script/i);
+    }
+    document.getElementById("code").value=t;
+    document.getElementById("codeForm").action = "https://try.w3schools.com/try_python.php?x=" + Math.random();
+    document.getElementById('codeForm').method = "post";
+    document.getElementById('codeForm').acceptCharset = "utf-8";
+    document.getElementById('codeForm').target = "iframeResult";
+    document.getElementById("codeForm").submit();
+  } else {
+    var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+    ifrw.document.open();
+    ifrw.document.write(text);  
+    ifrw.document.close();
+    //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+    //(and back to false to prevent the content from being editable)
+    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+    if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+      ifrw.document.body.contentEditable = true;
+      ifrw.document.body.contentEditable = false;
+    }
+  }
+}
+
+function hideSpinner() {
+  document.getElementById("runloadercontainer").style.display = "none";
+}
+function displaySpinner() {
+  var i, c, w, h, r, top;
+  i = document.getElementById("iframeResult");
+  w = w3_getStyleValue(i, "width");
+  h = w3_getStyleValue(i, "height");
+  c = document.getElementById("runloadercontainer");
+  c.style.width = w;
+  c.style.height = h;
+  c.style.display = "block";
+  w = Number(w.replace("px", "")) / 5;
+  r = document.getElementById("runloader");
+  r.style.width = w + "px";
+  r.style.height = w + "px";
+  h = w3_getStyleValue(r, "height");
+  h = Number(h.replace("px", "")) / 2;
+  top = w3_getStyleValue(c, "height");
+  top = Number(top.replace("px", "")) / 2;
+  top = top - h
+  r.style.top = top + "px";
+}
+
+
+var currentStack=true;
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+function restack(horizontal) {
+    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    tc = document.getElementById("textareacontainer");
+    ic = document.getElementById("iframecontainer");
+    t = document.getElementById("textarea");
+    i = document.getElementById("iframe");
+    c = document.getElementById("container");    
+    sv = document.getElementById("stackV");
+    sh = document.getElementById("stackH");
+    tc.className = tc.className.replace("horizontal", "");
+    ic.className = ic.className.replace("horizontal", "");        
+    t.className = t.className.replace("horizontal", "");        
+    i.className = i.className.replace("horizontal", "");        
+    c.className = c.className.replace("horizontal", "");                        
+    if (sv) {sv.className = sv.className.replace("horizontal", "")};
+    if (sv) {sh.className = sh.className.replace("horizontal", "")};
+    stack = "";
+    if (horizontal) {
+        tc.className = tc.className + " horizontal";
+        ic.className = ic.className + " horizontal";        
+        t.className = t.className + " horizontal";        
+        i.className = i.className + " horizontal";                
+        c.className = c.className + " horizontal";                
+        if (sv) {sv.className = sv.className + " horizontal"};
+        if (sv) {sh.className = sh.className + " horizontal"};
+        stack = " horizontal";
+        document.getElementById("textareacontainer").style.height = "50%";
+        document.getElementById("iframecontainer").style.height = "50%";
+        document.getElementById("textareacontainer").style.width = "100%";
+        document.getElementById("iframecontainer").style.width = "100%";
+        currentStack=false;
+    } else {
+        document.getElementById("textareacontainer").style.height = "100%";
+        document.getElementById("iframecontainer").style.height = "100%";
+        document.getElementById("textareacontainer").style.width = "50%";
+        document.getElementById("iframecontainer").style.width = "50%";
+        currentStack=true;        
+    }
+    fixDragBtn();
+    showFrameSize();
+}
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
+function showFrameSize() {
+  var t;
+  var width, height;
+  width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+  height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+  document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+}
+var dragging = false;
+var stack;
+function fixDragBtn() {
+  var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+  var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+  if (stack != " horizontal") {
+    document.getElementById("dragbar").style.width = "5px";    
+    textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+    leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+    buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+    textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+    dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+    document.getElementById("dragbar").style.top = containertop + "px";
+    document.getElementById("dragbar").style.left = dragleft + "px";
+    document.getElementById("dragbar").style.height = textareaheight;
+    document.getElementById("dragbar").style.cursor = "col-resize";
+    
+  } else {
+    document.getElementById("dragbar").style.height = "5px";
+    if (window.getComputedStyle) {
+        textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+        textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+        leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+        buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+    } else {
+        dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+    }
+    textareawidth = Number(textareawidth.replace("px", ""));
+    leftpadding = Number(leftpadding .replace("px", ""));
+    buttonwidth = Number(buttonwidth .replace("px", ""));
+    dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+    document.getElementById("dragbar").style.top = dragleft + "px";
+    document.getElementById("dragbar").style.left = "5px";
+    document.getElementById("dragbar").style.width = textareaheight;
+    document.getElementById("dragbar").style.cursor = "row-resize";        
+  }
+}
+function dragstart(e) {
+  e.preventDefault();
+  dragging = true;
+  var main = document.getElementById("iframecontainer");
+}
+function dragmove(e) {
+  if (dragging) 
+  {
+    document.getElementById("shield").style.display = "block";        
+    if (stack != " horizontal") {
+      var percentage = (e.pageX / window.innerWidth) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.width = percentage + "%";
+        document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+        fixDragBtn();
+      }
+    } else {
+      var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+      var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.height = percentage + "%";
+        document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+        fixDragBtn();
+      }
+    }
+    showFrameSize();    
+  }
+}
+function dragend() {
+  document.getElementById("shield").style.display = "none";
+  dragging = false;
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
+  }
+}
+if (window.addEventListener) {              
+  document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+  document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+  window.addEventListener("mousemove", function(e) {dragmove(e);});
+  window.addEventListener("touchmove", function(e) {dragmove(e);});
+  window.addEventListener("mouseup", dragend);
+  window.addEventListener("touchend", dragend);
+  window.addEventListener("load", fixDragBtn);
+  window.addEventListener("load", showFrameSize);
+}
+
+
+function colorcoding() {
+  var ua = navigator.userAgent;
+  //Opera Mini refreshes the page when trying to edit the textarea.
+  if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    mode: "text/x-python",
+    lineWrapping: true,
+    smartIndent: false
+  });
+//  window.editor.on("change", function () {window.editor.save();});
+}
+colorcoding();
+
+function w3_getStyleValue(elmnt,style) {
+    if (window.getComputedStyle) {
+        return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+    } else {
+        return elmnt.currentStyle[style];
+    }
+}
+
+
+var addr = document.location.href;
+function displayError() {
+  document.getElementById("err_url").value = addr;
+  document.getElementById("err_form").style.display = "block";
+  document.getElementById("err_email").focus();
+  hideSent();
+}
+function hideError() {
+  document.getElementById("err_form").style.display = "none";
+}
+function hideSent() {
+  document.getElementById("err_sent").style.display = "none";
+}
+function sendErr() {
+  var xmlhttp;
+  var err_url = document.getElementById("err_url").value;
+  var err_email = document.getElementById("err_email").value;
+  var err_desc = document.getElementById("err_desc").value;
+  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+  } else {// code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.open("POST.html", "../err_sup.html", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+  document.getElementById("err_desc").value = "";
+  hideError();
+  document.getElementById("err_sent").style.display = "block";
+}
+function openMenu() {
+    var x = document.getElementById("navbarDropMenu");
+    var y = document.getElementById("menuOverlay");
+    var z = document.getElementById("menuButton");
+    if (z.className.indexOf("w3-text-gray") == -1) {
+        z.className += " w3-text-gray";
+    } else { 
+        z.className = z.className.replace(" w3-text-gray", "");
+    }
+    if (z.className.indexOf("w3-gray") == -1) {
+        z.className += " w3-gray";
+    } else { 
+        z.className = z.className.replace(" w3-gray", "");
+    }
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+    if (y.className.indexOf("w3-show") == -1) {
+        y.className += " w3-show";
+    } else { 
+        y.className = y.className.replace(" w3-show", "");
+    }
+
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == document.getElementById("menuOverlay")) {
+        openMenu();
+    } 
+}
+
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ml_numpy_uniform by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:32:19 GMT -->
+</html>

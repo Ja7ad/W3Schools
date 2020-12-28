@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_shrink_header_scroll.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:10 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  background-color: #f1f1f1;
+  padding: 50px 10px;
+  color: black;
+  text-align: center;
+  font-size: 90px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+</style>
+</head>
+<body>
+
+<div id="header">Header</div>
+
+<div style="margin-top:200px;padding:15px 15px 2500px;font-size:30px">
+  <p><b>This example demonstrates how to shrink a header when the user starts to scroll the page.</b></p>
+  <p>Scroll down this frame to see the effect!</p>
+  <p>Scroll to the top to remove the effect.</p>
+  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+  } else {
+    document.getElementById("header").style.fontSize = "90px";
+  }
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_shrink_header_scroll.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:10 GMT -->
+</html>

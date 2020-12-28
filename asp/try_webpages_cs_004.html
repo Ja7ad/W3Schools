@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_004.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:35 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../showrazor.css">
+</head>
+
+<body>
+<span class="marked">@{&nbsp;<br>
+var db = Database.Open(&quot;SmallBakery&quot;) ;&nbsp;<br>
+var query = &quot;SELECT * FROM Product ORDER BY Name&quot;;&nbsp;<br>
+var data = db.Query(query);&nbsp;<br>
+var grid = new WebGrid(data);&nbsp;<br>
+}</span><br>
+&lt;html&gt;&nbsp;<br>
+&lt;head&gt;&nbsp;<br>
+&lt;title&gt;Displaying Data Using the WebGrid Helper&lt;/title&gt;&nbsp;<br>
+&lt;/head&gt;&nbsp;<br>
+&lt;body&gt;&nbsp;<br>
+&lt;h1&gt;Small Bakery Products&lt;/h1&gt;&nbsp;<br>
+&lt;div id=&quot;grid&quot;&gt;&nbsp;<br>
+<span class="marked">@grid.GetHtml()</span><br>
+&lt;/div&gt;&nbsp;<br>
+&lt;/body&gt;&nbsp;<br>
+&lt;/html&gt;
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_004.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:35 GMT -->
+</html>

@@ -1,0 +1,11 @@
+<form>
+<h1>Hello</h1>
+<p>Enter your name:</p>
+<input type="text" oninput="myChangeHandler(this)" />
+</form>
+
+<script>
+function myChangeHandler(x) {
+  document.getElementsByTagName("h1")[0].innerHTML = "Hello " + x.value;
+}
+</script>

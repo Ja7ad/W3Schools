@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_validation_empty_input.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:09 GMT -->
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript validation for empty input field</h2>
+<p>Try to submit the form without entering any text.</p>
+
+<form name="myForm" action="https://www.w3schools.com/action_page.php" onsubmit="return validateForm()" method="post" required>
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_validation_empty_input.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:09 GMT -->
+</html>

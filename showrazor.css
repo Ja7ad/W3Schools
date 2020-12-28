@@ -1,0 +1,12 @@
+﻿body
+{
+color:#000000;
+background-color:#ffffff;
+margin:4px;
+font-family:consolas,"courier new",monospace;font-size:14px;
+}
+span.marked
+{
+color:red;
+}
+

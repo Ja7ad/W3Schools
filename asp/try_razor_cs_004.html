@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_004.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">@{<br>var totalMessage = &quot;&quot;;<br>if(IsPost)<br>
+&nbsp;&nbsp;&nbsp;
+{<br>&nbsp;&nbsp;&nbsp; var num1 = Request[&quot;text1&quot;];<br>
+&nbsp;&nbsp;&nbsp;
+var num2 = Request[&quot;text2&quot;];<br>&nbsp;&nbsp;&nbsp; var total = num1.AsInt() + num2.AsInt();<br>&nbsp;&nbsp;&nbsp; totalMessage = 
+&quot;Total = &quot; + total;<br>}<br>}</span><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body 
+style=&quot;background-color: beige; font-family: Verdana, Arial;&quot;&gt;<br>&lt;form 
+action=&quot;&quot; method=&quot;post&quot;&gt;<br>&lt;p&gt;&lt;label for=&quot;text1&quot;&gt;First Number:&lt;/label&gt;&lt;br&gt;<br>
+&lt;input type=&quot;text&quot; name=&quot;text1&quot;&gt;&lt;/p&gt;<br>&lt;p&gt;&lt;label for=&quot;text2&quot;&gt;Second 
+Number:&lt;/label&gt;&lt;br&gt;<br>&lt;input type=&quot;text&quot; name=&quot;text2&quot;&gt;&lt;/p&gt;<br>&lt;p&gt;&lt;input 
+type=&quot;submit&quot; value=&quot; Add &quot;&gt;&lt;/p&gt;<br>&lt;/form&gt;<br>&lt;p&gt;<span class="marked">@totalMessage</span>&lt;/p&gt;<br>
+&lt;/body&gt;<br>&lt;/html&gt;<br>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_004.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+</html>

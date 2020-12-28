@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/asp/demo_query_4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:46 GMT -->
+<body>
+
+
+Choose Country <select id="country">
+<option>Austria</option>
+<option>Canada</option>
+<option>Denmark</option>
+<option>France</option>
+</select>
+<button onclick="replaceCountry(country.selectedIndex)">Show customers</button>
+<div id="output">
+</div>
+
+
+<script>
+var c0 = '<table width="100%" cellspacing="0" cellpadding="2" border="1"><tr><th>Companyname</th><th>Contactname</th><th>Country</th></tr><tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr></table>'
+var c1 = '<table width="100%" cellspacing="0" cellpadding="2" border="1"><tr><th>Companyname</th><th>Contactname</th><th>Country</th></tr><tr><td>Laughing Bacchus Wine Cellars</td><td>Yoshi Tannamuri</td><td>Canada</td></tr></table>'
+var c2 = '<table width="100%" cellspacing="0" cellpadding="2" border="1"><tr><th>Companyname</th><th>Contactname</th><th>Country</th></tr><tr><td>Simons bistro</td><td>Jytte Petersen</td><td>Denmark</td></tr><tr><td>Vaffeljernet</td><td>Palle Ibsen</td><td>Denmark</td></tr></table>'
+var c3 = '<table width="100%" cellspacing="0" cellpadding="2" border="1"><tr><th>Companyname</th><th>Contactname</th><th>Country</th> </tr><tr><td>Paris spécialités</td><td>Marie Bertrand</td><td>France</td></tr></table>'
+
+var content = "";
+function replaceCountry(x) {
+switch (x) {
+  case 0:
+    content = c0;
+    break;
+  case 1:
+    content = c1;
+    break;
+  case 2:
+    content = c2;
+    break;
+  case 3:
+    content = c3;
+}
+output.innerHTML = content;
+}
+
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/asp/demo_query_4.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:46 GMT -->
+</html>

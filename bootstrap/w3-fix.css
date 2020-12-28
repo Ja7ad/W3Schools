@@ -1,0 +1,39 @@
+﻿div.top {
+    padding-top:20px;
+}
+div.top img{
+    margin-bottom:15px;
+}
+div.topnav {
+ margin:0;
+ padding:0;
+}
+a{
+    text-decoration:underline;
+}
+
+.w3-bar a, .w3-button, .w3-btn{
+    text-decoration:none !important;
+}
+a:focus {
+  color:inherit;
+}
+.w3schools-logo:link, .w3-logo:visited {
+    text-decoration:none;
+}
+.img-responsive {
+    display:inline;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height:1.5;
+}
+.w3-panel.w3-note p {
+    padding-top:16px;padding-bottom:8px;
+}
+.w3-bar a#topnavbtn_tutorials,
+.w3-bar a#topnavbtn_references,
+.w3-bar a#topnavbtn_examples,
+a.topnav-localicons,
+a.topnav-icons {
+ color: #fff !important;
+}

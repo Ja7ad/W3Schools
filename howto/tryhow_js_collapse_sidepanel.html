@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_collapse_sidepanel.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:06 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>  
+<h2>Collapsed Sidepanel</h2>
+<p>Click on the hamburger menu/bar icon to open the sidepanel.</p>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+   
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_collapse_sidepanel.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:06 GMT -->
+</html> 

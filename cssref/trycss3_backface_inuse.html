@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_backface_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:06 GMT -->
+<head>
+<style>
+div#div1 {
+  -webkit-backface-visibility: visible;  /* Chrome, Safari, Opera */
+  backface-visibility: visible;
+}
+
+div#div1 {
+  width:100px;
+  height:100px;
+  background:red;
+  position:relative;
+  border:1px solid #000000;
+  -webkit-animation:mymove 3s infinite;  /* Chrome, Safari, Opera */
+  animation:mymove 3s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  from {-webkit-transform: rotateY(0deg);}
+  to {-webkit-transform: rotateY(360deg);}
+}
+
+@keyframes mymove {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+</style>
+<script>
+function checkBackface() {
+  if (document.getElementById("bf").checked == true) {
+    document.getElementById('div1').style.backfaceVisibility = "hidden";
+    document.getElementById('div1').style.webkitBackfaceVisibility = "hidden";
+  } else {
+    document.getElementById('div1').style.backfaceVisibility = "visible";
+    document.getElementById('div1').style.webkitBackfaceVisibility = "visible";
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="div1">HELLO</div>
+<p>Check/uncheck the checkbox to change the backface-visibility of the animated DIV element:</p>
+<p>Hide the backside:<input id="bf" type="checkbox" onchange="checkBackface()"></p>
+<p><strong>Note:</strong> The backface-visibility property is not supported in Internet Explorer 9 and earlier versions.</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_backface_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:06 GMT -->
+</html>

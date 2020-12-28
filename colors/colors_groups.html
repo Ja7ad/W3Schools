@@ -1,0 +1,2388 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/colors/colors_groups.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 23:03:41 GMT -->
+<head>
+<title>HTML Color Groups</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+</head>
+<body>
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
+
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
+  </div>
+
+  <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+    THE WORLD'S LARGEST WEB DEVELOPER SITE
+  </div>
+
+</div>
+
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Tutorial'>JAVA</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+
+
+
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='../../shop.w3schools.com/index.html'>SHOP</a>
+
+      <a class="w3-bar-item w3-button w3-right" href='../cert/default.html' title='Certificates'>CERTIFICATES</a>
+
+      <!--
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      -->
+      
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right w3-hide-medium" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML and CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='../howto/default.html'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Learn Sass</a>          
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="../appml/default.html">Learn AppML</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Learn W3.JS</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
+          <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Learn PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Learn Raspberry Pi</a>          
+          <h3>Web Building</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+          <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='default.html'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google Maps Reference</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Reference</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="../appml/appml_reference.html">AppML Reference</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Reference</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Reference</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Reference</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Reference</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Reference</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Character Sets</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Exercises</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Exercises</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Quizzes</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Quiz</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Quiz</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Quiz</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Certificate</a>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+
+    <div id='nav_login' class='w3-bar-block w3-card-2' style="display:none">
+      <span onclick='w3_close_nav("login")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class="loginmodaldiv" style="padding:48px 16px 1px 16px;text-align:center;">
+        <h2>LOG IN</h2>
+        <div style="font-size:15px"><a href="../../mypage.w3schools.com/mypage/index.html">Why Log In?</a></div>
+        <div class="loginmodalform">
+          <form id="loginform" name="loginform" autocomplete="off" method="post">
+            <div><label>Username</label></div>
+            <div><input type="email" name="n" placeholder="Enter your e-mail address" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="p" placeholder="Enter Your Password" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div id="loginerrordiv" style="display:none" class="w3-text-red"></div>
+            <div class="login_submit_container"><button id="login_submit_button" type="submit" onclick="login_user(event)">LOG IN</button></div>
+            <div style="overflow:auto;margin-top:10px;font-size:15px;">
+            <div class="login_newusertext">New User? <a href="../../mypage.w3schools.com/mypage/login8236.html?logintyp=1" target="_blank">Sign Up For Free!</a></div>
+            <div class="login_forgotpasswordtext"><a href="../../mypage.w3schools.com/mypage/forgot_password.html">Forgot password?</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">Colors</span> Tutorial</h2>
+<a target="_top" href="default.html">Colors HOME</a>
+<a target="_top" href="colors_names.html">Color Names</a>
+<a target="_top" href="colors_hex.html">Color Values</a>
+<a target="_top" href="colors_groups.html">Color Groups</a>
+<a target="_top" href="colors_shades.html">Color Shades</a>
+<a target="_top" href="colors_picker.html">Color Picker</a>
+<a target="_top" href="colors_mixer.html">Color Mixer</a>
+<a target="_top" href="colors_converter.html">Color Converter</a>
+<a target="_top" href="colors_rgb.html">Color RGB</a>
+<a target="_top" href="colors_hexadecimal.html">Color HEX</a>
+<a target="_top" href="colors_hsl.html">Color HSL</a>
+<a target="_top" href="colors_hwb.html">Color HWB</a>
+<a target="_top" href="colors_cmyk.html">Color CMYK</a>
+<a target="_top" href="colors_ncol.html">Color NCol</a>
+<a target="_top" href="colors_gradient.html">Color Gradient</a>
+<a target="_top" href="colors_theory.html">Color Theory</a>
+<a target="_top" href="colors_wheels.html">Color Wheels</a>
+<a target="_top" href="colors_currentcolor.html">Color currentcolor</a>
+<a target="_top" href="colors_hues.html">Color Hues</a>
+<a target="_top" href="colors_schemes.html">Color Schemes</a>
+<a target="_top" href="colors_palettes.html">Color Palettes</a>
+<a target="_top" href="colors_brands.html">Color Brands</a>
+<a target="_top" href="colors_w3css.html">Color W3.CSS</a>
+<a target="_top" href="colors_metro.html">Color Metro UI</a>
+<a target="_top" href="colors_win8.html">Color Win8</a>
+<a target="_top" href="colors_flatui.html">Color Flat UI</a>
+<a target="_top" href="colors_psychology.html">Color Psychology</a>
+<br>
+<h2 class="left"><span class="left_h2">Color</span> Schemes</h2>
+<a target="_top" href="colors_monochromatic.html">Colors Monochromatic</a>
+<a target="_top" href="colors_analogous.html">Colors Analogous</a>
+<a target="_top" href="colors_complementary.html">Colors Complementary</a>
+<a target="_top" href="colors_triadic.html">Colors Triadic</a>
+<a target="_top" href="colors_compound.html">Colors Compound</a>
+<br>
+<h2 class="left"><span class="left_h2">Color</span> Trends</h2>
+<a target="_top" href="colors_trends.html">Colors of the Year</a>
+<a target="_top" href="colors_2021.html">Colors 2021</a>
+<a target="_top" href="colors_2020.html">Colors 2020</a>
+<a target="_top" href="colors_2019.html">Colors 2019</a>
+<a target="_top" href="colors_2018.html">Colors 2018</a>
+<a target="_top" href="colors_2017.html">Colors 2017</a>
+<a target="_top" href="colors_2016.html">Colors 2016</a>
+<br>
+<h2 class="left"><span class="left_h2">Color</span> Standards</h2>
+<a target="_top" href="colors_fs595.html">Colors USA</a>
+<a target="_top" href="colors_british.html">Colors UK</a>
+<a target="_top" href="colors_australia.html">Colors Australia</a>
+<a target="_top" href="colors_ral.html">Colors RAL</a>
+<a target="_top" href="colors_nbs.html">Colors NBS</a>
+<a target="_top" href="colors_ncs.html">Colors NCS</a>
+<a target="_top" href="colors_x11.html">Colors X11</a>
+<a target="_top" href="colors_crayola.html">Colors Crayola</a>
+<a target="_top" href="colors_resene.html">Colors Resene</a>
+<a target="_top" href="colors_xkcd.html">Colors XKCD</a>
+
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+       
+      </div>
+<h1>HTML Color Groups</h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="colors_hex.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="colors_shades.html">Next &#10095;</a>
+</div>
+<hr>
+<h2>Color Names Sorted by Color Groups</h2>
+<p>All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors):</p>
+<p><a href="colors_names.html">Click here to see the 140 colors sorted by Name</a></p>
+<p><a href="colors_hex.html">Click here to see the 140 colors sorted by HEX Value</a></p>
+<div class="w3-w3-responsive">
+<table class="w3-table-all notranslate">
+
+<tr>
+<td colspan="5"><h2>Pink Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit23a8.html?color=Pink">Pink</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit57d0.html?hex=FFC0CB">#FFC0CB</a></td>
+<td bgcolor="#FFC0CB">&nbsp;</td>
+<td><a href="colors_pickercf10.html?colorhex=FFC0CB">Shades</a></td>
+<td><a href="colors_mixer39da.html?colorbottom=FFC0CB&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9dc0.html?color=LightPink">LightPink</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit8b32.html?hex=FFB6C1">#FFB6C1</a></td>
+<td bgcolor="#FFB6C1">&nbsp;</td>
+<td><a href="colors_picker0f26.html?colorhex=FFB6C1">Shades</a></td>
+<td><a href="colors_mixercbe3.html?colorbottom=FFB6C1&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6519.html?color=HotPink">HotPink</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita3f6.html?hex=FF69B4">#FF69B4</a></td>
+<td bgcolor="#FF69B4">&nbsp;</td>
+<td><a href="colors_picker5c97.html?colorhex=FF69B4">Shades</a></td>
+<td><a href="colors_mixer0847.html?colorbottom=FF69B4&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit5bdc.html?color=DeepPink">DeepPink</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitb6f1.html?hex=FF1493">#FF1493</a></td>
+<td bgcolor="#FF1493">&nbsp;</td>
+<td><a href="colors_picker1bc3.html?colorhex=FF1493">Shades</a></td>
+<td><a href="colors_mixer9a48.html?colorbottom=FF1493&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit8d92.html?color=PaleVioletRed">PaleVioletRed</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit5df3.html?hex=DB7093">#DB7093</a></td>
+<td bgcolor="#DB7093">&nbsp;</td>
+<td><a href="colors_picker7402.html?colorhex=DB7093">Shades</a></td>
+<td><a href="colors_mixer9714.html?colorbottom=DB7093&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit56cc.html?color=MediumVioletRed">MediumVioletRed</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit8109.html?hex=C71585">#C71585</a></td>
+<td bgcolor="#C71585">&nbsp;</td>
+<td><a href="colors_picker5561.html?colorhex=C71585">Shades</a></td>
+<td><a href="colors_mixer084b.html?colorbottom=C71585&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Purple Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit614b.html?color=Lavender">Lavender</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3b5b.html?hex=E6E6FA">#E6E6FA</a></td>
+<td bgcolor="#E6E6FA">&nbsp;</td>
+<td><a href="colors_pickerfff0.html?colorhex=E6E6FA">Shades</a></td>
+<td><a href="colors_mixer7365.html?colorbottom=E6E6FA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0ed1.html?color=Thistle">Thistle</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitee27.html?hex=D8BFD8">#D8BFD8</a></td>
+<td bgcolor="#D8BFD8">&nbsp;</td>
+<td><a href="colors_pickerd97d.html?colorhex=D8BFD8">Shades</a></td>
+<td><a href="colors_mixerc1db.html?colorbottom=D8BFD8&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3e04.html?color=Plum">Plum</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitbc13.html?hex=DDA0DD">#DDA0DD</a></td>
+<td bgcolor="#DDA0DD">&nbsp;</td>
+<td><a href="colors_picker6055.html?colorhex=DDA0DD">Shades</a></td>
+<td><a href="colors_mixer998a.html?colorbottom=DDA0DD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitd42b.html?color=Orchid">Orchid</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4cb3.html?hex=DA70D6">#DA70D6</a></td>
+<td bgcolor="#DA70D6">&nbsp;</td>
+<td><a href="colors_picker69fd.html?colorhex=DA70D6">Shades</a></td>
+<td><a href="colors_mixer0e6d.html?colorbottom=DA70D6&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcd0f.html?color=Violet">Violet</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit787f.html?hex=EE82EE">#EE82EE</a></td>
+<td bgcolor="#EE82EE">&nbsp;</td>
+<td><a href="colors_pickereb68.html?colorhex=EE82EE">Shades</a></td>
+<td><a href="colors_mixerb054.html?colorbottom=EE82EE&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit131f.html?color=Fuchsia">Fuchsia</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit79c1.html?hex=FF00FF">#FF00FF</a></td>
+<td bgcolor="#FF00FF">&nbsp;</td>
+<td><a href="colors_picker153f.html?colorhex=FF00FF">Shades</a></td>
+<td><a href="colors_mixer187d.html?colorbottom=FF00FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6760.html?color=Magenta">Magenta</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit79c1.html?hex=FF00FF">#FF00FF</a></td>
+<td bgcolor="#FF00FF">&nbsp;</td>
+<td><a href="colors_picker153f.html?colorhex=FF00FF">Shades</a></td>
+<td><a href="colors_mixer187d.html?colorbottom=FF00FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0b44.html?color=MediumOrchid">MediumOrchid</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit1558.html?hex=BA55D3">#BA55D3</a></td>
+<td bgcolor="#BA55D3">&nbsp;</td>
+<td><a href="colors_picker3ca0.html?colorhex=BA55D3">Shades</a></td>
+<td><a href="colors_mixer378e.html?colorbottom=BA55D3&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit92a7.html?color=DarkOrchid">DarkOrchid</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita8bd.html?hex=9932CC">#9932CC</a></td>
+<td bgcolor="#9932CC">&nbsp;</td>
+<td><a href="colors_picker8b10.html?colorhex=9932CC">Shades</a></td>
+<td><a href="colors_mixer421d.html?colorbottom=9932CC&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9f71.html?color=DarkViolet">DarkViolet</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryite79e.html?hex=9400D3">#9400D3</a></td>
+<td bgcolor="#9400D3">&nbsp;</td>
+<td><a href="colors_pickera913.html?colorhex=9400D3">Shades</a></td>
+<td><a href="colors_mixere420.html?colorbottom=9400D3&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0164.html?color=BlueViolet">BlueViolet</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit142e.html?hex=8A2BE2">#8A2BE2</a></td>
+<td bgcolor="#8A2BE2">&nbsp;</td>
+<td><a href="colors_picker11e1.html?colorhex=8A2BE2">Shades</a></td>
+<td><a href="colors_mixer0d49.html?colorbottom=8A2BE2&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3002.html?color=DarkMagenta">DarkMagenta</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitdf8d.html?hex=8B008B">#8B008B</a></td>
+<td bgcolor="#8B008B">&nbsp;</td>
+<td><a href="colors_picker4007.html?colorhex=8B008B">Shades</a></td>
+<td><a href="colors_mixer0d1b.html?colorbottom=8B008B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3686.html?color=Purple">Purple</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryited53.html?hex=800080">#800080</a></td>
+<td bgcolor="#800080">&nbsp;</td>
+<td><a href="colors_picker055b.html?colorhex=800080">Shades</a></td>
+<td><a href="colors_mixer3b12.html?colorbottom=800080&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcc1f.html?color=MediumPurple">MediumPurple</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit01a6.html?hex=9370DB">#9370DB</a></td>
+<td bgcolor="#9370DB">&nbsp;</td>
+<td><a href="colors_picker62c4.html?colorhex=9370DB">Shades</a></td>
+<td><a href="colors_mixer137d.html?colorbottom=9370DB&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit77de.html?color=MediumSlateBlue">MediumSlateBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitedf9.html?hex=7B68EE">#7B68EE</a></td>
+<td bgcolor="#7B68EE">&nbsp;</td>
+<td><a href="colors_pickerc3c9.html?colorhex=7B68EE">Shades</a></td>
+<td><a href="colors_mixerea91.html?colorbottom=7B68EE&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitc2f9.html?color=SlateBlue">SlateBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit461f.html?hex=6A5ACD">#6A5ACD</a></td>
+<td bgcolor="#6A5ACD">&nbsp;</td>
+<td><a href="colors_pickerf091.html?colorhex=6A5ACD">Shades</a></td>
+<td><a href="colors_mixerf9ce.html?colorbottom=6A5ACD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite095.html?color=DarkSlateBlue">DarkSlateBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit89c2.html?hex=483D8B">#483D8B</a></td>
+<td bgcolor="#483D8B">&nbsp;</td>
+<td><a href="colors_pickerd825.html?colorhex=483D8B">Shades</a></td>
+<td><a href="colors_mixercba0.html?colorbottom=483D8B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6459.html?color=RebeccaPurple">RebeccaPurple</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitf036.html?hex=663399">#663399</a></td>
+<td bgcolor="#663399">&nbsp;</td>
+<td><a href="colors_pickerb5e1.html?colorhex=663399">Shades</a></td>
+<td><a href="colors_mixerde28.html?colorbottom=663399&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4aeb.html?color=Indigo">Indigo  </a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd63a.html?hex=4B0082">#4B0082</a></td>
+<td bgcolor="#4B0082">&nbsp;</td>
+<td><a href="colors_picker6a56.html?colorhex=4B0082">Shades</a></td>
+<td><a href="colors_mixer4fbe.html?colorbottom=4B0082&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Red Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4f91.html?color=LightSalmon">LightSalmon</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit6c75.html?hex=FFA07A">#FFA07A</a></td>
+<td bgcolor="#FFA07A">&nbsp;</td>
+<td><a href="colors_pickere8e2.html?colorhex=FFA07A">Shades</a></td>
+<td><a href="colors_mixer4751.html?colorbottom=FFA07A&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitf8f1.html?color=Salmon">Salmon</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitbf2b.html?hex=FA8072">#FA8072</a></td>
+<td bgcolor="#FA8072">&nbsp;</td>
+<td><a href="colors_picker1cfd.html?colorhex=FA8072">Shades</a></td>
+<td><a href="colors_mixer55f8.html?colorbottom=FA8072&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit475d.html?color=DarkSalmon">DarkSalmon</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitaee8.html?hex=E9967A">#E9967A</a></td>
+<td bgcolor="#E9967A">&nbsp;</td>
+<td><a href="colors_picker99b7.html?colorhex=E9967A">Shades</a></td>
+<td><a href="colors_mixer25f2.html?colorbottom=E9967A&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4a13.html?color=LightCoral">LightCoral</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitcb87.html?hex=F08080">#F08080</a></td>
+<td bgcolor="#F08080">&nbsp;</td>
+<td><a href="colors_picker405c.html?colorhex=F08080">Shades</a></td>
+<td><a href="colors_mixerfe78.html?colorbottom=F08080&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7452.html?color=IndianRed">IndianRed </a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit7c88.html?hex=CD5C5C">#CD5C5C</a></td>
+<td bgcolor="#CD5C5C">&nbsp;</td>
+<td><a href="colors_pickera35a.html?colorhex=CD5C5C">Shades</a></td>
+<td><a href="colors_mixere1c2.html?colorbottom=CD5C5C&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitf655.html?color=Crimson">Crimson</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitcc94.html?hex=DC143C">#DC143C</a></td>
+<td bgcolor="#DC143C">&nbsp;</td>
+<td><a href="colors_pickerc716.html?colorhex=DC143C">Shades</a></td>
+<td><a href="colors_mixer3226.html?colorbottom=DC143C&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitc572.html?color=Red">Red</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita3d5.html?hex=FF0000">#FF0000</a></td>
+<td bgcolor="#FF0000">&nbsp;</td>
+<td><a href="colors_picker68ae.html?colorhex=FF0000">Shades</a></td>
+<td><a href="colors_mixerc68d.html?colorbottom=FF0000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4d6d.html?color=FireBrick">FireBrick</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitde99.html?hex=B22222">#B22222</a></td>
+<td bgcolor="#B22222">&nbsp;</td>
+<td><a href="colors_picker2e09.html?colorhex=B22222">Shades</a></td>
+<td><a href="colors_mixer86af.html?colorbottom=B22222&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit446d.html?color=DarkRed">DarkRed</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4e89.html?hex=8B0000">#8B0000</a></td>
+<td bgcolor="#8B0000">&nbsp;</td>
+<td><a href="colors_picker9724.html?colorhex=8B0000">Shades</a></td>
+<td><a href="colors_mixer72d9.html?colorbottom=8B0000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Orange Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6d9c.html?color=Orange">Orange</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd4b4.html?hex=FFA500">#FFA500</a></td>
+<td bgcolor="#FFA500">&nbsp;</td>
+<td><a href="colors_pickerda2c.html?colorhex=FFA500">Shades</a></td>
+<td><a href="colors_mixer8900.html?colorbottom=FFA500&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2834.html?color=DarkOrange">DarkOrange</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit550f.html?hex=FF8C00">#FF8C00</a></td>
+<td bgcolor="#FF8C00">&nbsp;</td>
+<td><a href="colors_pickerb37f.html?colorhex=FF8C00">Shades</a></td>
+<td><a href="colors_mixer859b.html?colorbottom=FF8C00&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit1abd.html?color=Coral">Coral</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitdd7e.html?hex=FF7F50">#FF7F50</a></td>
+<td bgcolor="#FF7F50">&nbsp;</td>
+<td><a href="colors_picker37bb.html?colorhex=FF7F50">Shades</a></td>
+<td><a href="colors_mixerb40b.html?colorbottom=FF7F50&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitf828.html?color=Tomato">Tomato</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit1bff.html?hex=FF6347">#FF6347</a></td>
+<td bgcolor="#FF6347">&nbsp;</td>
+<td><a href="colors_picker5087.html?colorhex=FF6347">Shades</a></td>
+<td><a href="colors_mixeraddd.html?colorbottom=FF6347&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2c78.html?color=OrangeRed">OrangeRed</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit8bb3.html?hex=FF4500">#FF4500</a></td>
+<td bgcolor="#FF4500">&nbsp;</td>
+<td><a href="colors_picker566d.html?colorhex=FF4500">Shades</a></td>
+<td><a href="colors_mixer671f.html?colorbottom=FF4500&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Yellow Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit65e2.html?color=Gold">Gold</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit6cb4.html?hex=FFD700">#FFD700</a></td>
+<td bgcolor="#FFD700">&nbsp;</td>
+<td><a href="colors_picker4392.html?colorhex=FFD700">Shades</a></td>
+<td><a href="colors_mixerf333.html?colorbottom=FFD700&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit78e7.html?color=Yellow">Yellow</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit1854.html?hex=FFFF00">#FFFF00</a></td>
+<td bgcolor="#FFFF00">&nbsp;</td>
+<td><a href="colors_picker432c.html?colorhex=FFFF00">Shades</a></td>
+<td><a href="colors_mixeraa26.html?colorbottom=FFFF00&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit19ea.html?color=LightYellow">LightYellow</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit7c46.html?hex=FFFFE0">#FFFFE0</a></td>
+<td bgcolor="#FFFFE0">&nbsp;</td>
+<td><a href="colors_picker6115.html?colorhex=FFFFE0">Shades</a></td>
+<td><a href="colors_mixerd432.html?colorbottom=FFFFE0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit67e1.html?color=LemonChiffon">LemonChiffon</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitae5c.html?hex=FFFACD">#FFFACD</a></td>
+<td bgcolor="#FFFACD">&nbsp;</td>
+<td><a href="colors_pickere81b.html?colorhex=FFFACD">Shades</a></td>
+<td><a href="colors_mixer979d.html?colorbottom=FFFACD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2425.html?color=LightGoldenRodYellow">LightGoldenRodYellow</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitb60b.html?hex=FAFAD2">#FAFAD2</a></td>
+<td bgcolor="#FAFAD2">&nbsp;</td>
+<td><a href="colors_picker812b.html?colorhex=FAFAD2">Shades</a></td>
+<td><a href="colors_mixer281c.html?colorbottom=FAFAD2&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6472.html?color=PapayaWhip">PapayaWhip</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit299d.html?hex=FFEFD5">#FFEFD5</a></td>
+<td bgcolor="#FFEFD5">&nbsp;</td>
+<td><a href="colors_picker96d8.html?colorhex=FFEFD5">Shades</a></td>
+<td><a href="colors_mixer3505.html?colorbottom=FFEFD5&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit1c01.html?color=Moccasin">Moccasin</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit58b6.html?hex=FFE4B5">#FFE4B5</a></td>
+<td bgcolor="#FFE4B5">&nbsp;</td>
+<td><a href="colors_picker62e7.html?colorhex=FFE4B5">Shades</a></td>
+<td><a href="colors_mixer0176.html?colorbottom=FFE4B5&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita92a.html?color=PeachPuff">PeachPuff</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitcc48.html?hex=FFDAB9">#FFDAB9</a></td>
+<td bgcolor="#FFDAB9">&nbsp;</td>
+<td><a href="colors_pickerf997.html?colorhex=FFDAB9">Shades</a></td>
+<td><a href="colors_mixerfe7a.html?colorbottom=FFDAB9&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitea8a.html?color=PaleGoldenRod">PaleGoldenRod</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit5e80.html?hex=EEE8AA">#EEE8AA</a></td>
+<td bgcolor="#EEE8AA">&nbsp;</td>
+<td><a href="colors_pickerb87d.html?colorhex=EEE8AA">Shades</a></td>
+<td><a href="colors_mixer79a9.html?colorbottom=EEE8AA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb203.html?color=Khaki">Khaki</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit7f99.html?hex=F0E68C">#F0E68C</a></td>
+<td bgcolor="#F0E68C">&nbsp;</td>
+<td><a href="colors_pickerbbff.html?colorhex=F0E68C">Shades</a></td>
+<td><a href="colors_mixerba89.html?colorbottom=F0E68C&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3b93.html?color=DarkKhaki">DarkKhaki</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita3ae.html?hex=BDB76B">#BDB76B</a></td>
+<td bgcolor="#BDB76B">&nbsp;</td>
+<td><a href="colors_pickerb453.html?colorhex=BDB76B">Shades</a></td>
+<td><a href="colors_mixer6f26.html?colorbottom=BDB76B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Green Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitf74e.html?color=GreenYellow">GreenYellow</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitec67.html?hex=ADFF2F">#ADFF2F</a></td>
+<td bgcolor="#ADFF2F">&nbsp;</td>
+<td><a href="colors_picker8edb.html?colorhex=ADFF2F">Shades</a></td>
+<td><a href="colors_mixer0b23.html?colorbottom=ADFF2F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitba99.html?color=Chartreuse">Chartreuse</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit8599.html?hex=7FFF00">#7FFF00</a></td>
+<td bgcolor="#7FFF00">&nbsp;</td>
+<td><a href="colors_picker78b4.html?colorhex=7FFF00">Shades</a></td>
+<td><a href="colors_mixere527.html?colorbottom=7FFF00&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitbd21.html?color=LawnGreen">LawnGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit7945.html?hex=7CFC00">#7CFC00</a></td>
+<td bgcolor="#7CFC00">&nbsp;</td>
+<td><a href="colors_pickerb859.html?colorhex=7CFC00">Shades</a></td>
+<td><a href="colors_mixerfaa8.html?colorbottom=7CFC00&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita003.html?color=Lime">Lime</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4a38.html?hex=00FF00">#00FF00</a></td>
+<td bgcolor="#00FF00">&nbsp;</td>
+<td><a href="colors_picker5731.html?colorhex=00FF00">Shades</a></td>
+<td><a href="colors_mixer372e.html?colorbottom=00FF00&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitac68.html?color=LimeGreen">LimeGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4b6d.html?hex=32CD32">#32CD32</a></td>
+<td bgcolor="#32CD32">&nbsp;</td>
+<td><a href="colors_picker719f.html?colorhex=32CD32">Shades</a></td>
+<td><a href="colors_mixer8a84.html?colorbottom=32CD32&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit911f.html?color=PaleGreen">PaleGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit73a1.html?hex=98FB98">#98FB98</a></td>
+<td bgcolor="#98FB98">&nbsp;</td>
+<td><a href="colors_picker7ed5.html?colorhex=98FB98">Shades</a></td>
+<td><a href="colors_mixerdd4e.html?colorbottom=98FB98&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7baa.html?color=LightGreen">LightGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4fbf.html?hex=90EE90">#90EE90</a></td>
+<td bgcolor="#90EE90">&nbsp;</td>
+<td><a href="colors_pickere136.html?colorhex=90EE90">Shades</a></td>
+<td><a href="colors_mixerc2c4.html?colorbottom=90EE90&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3fc8.html?color=MediumSpringGreen">MediumSpringGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit5c9a.html?hex=00FA9A">#00FA9A</a></td>
+<td bgcolor="#00FA9A">&nbsp;</td>
+<td><a href="colors_picker236b.html?colorhex=00FA9A">Shades</a></td>
+<td><a href="colors_mixera99f.html?colorbottom=00FA9A&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcfd2.html?color=SpringGreen">SpringGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3dd1.html?hex=00FF7F">#00FF7F</a></td>
+<td bgcolor="#00FF7F">&nbsp;</td>
+<td><a href="colors_picker3e7d.html?colorhex=00FF7F">Shades</a></td>
+<td><a href="colors_mixer3ce9.html?colorbottom=00FF7F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4be9.html?color=MediumSeaGreen">MediumSeaGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit54ae.html?hex=3CB371">#3CB371</a></td>
+<td bgcolor="#3CB371">&nbsp;</td>
+<td><a href="colors_picker22aa.html?colorhex=3CB371">Shades</a></td>
+<td><a href="colors_mixer0ddf.html?colorbottom=3CB371&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit32c8.html?color=SeaGreen">SeaGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit0e87.html?hex=2E8B57">#2E8B57</a></td>
+<td bgcolor="#2E8B57">&nbsp;</td>
+<td><a href="colors_pickerfafb.html?colorhex=2E8B57">Shades</a></td>
+<td><a href="colors_mixer5161.html?colorbottom=2E8B57&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb432.html?color=ForestGreen">ForestGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit38df.html?hex=228B22">#228B22</a></td>
+<td bgcolor="#228B22">&nbsp;</td>
+<td><a href="colors_picker19c3.html?colorhex=228B22">Shades</a></td>
+<td><a href="colors_mixerb171.html?colorbottom=228B22&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitac4a.html?color=Green">Green</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitebf4.html?hex=008000">#008000</a></td>
+<td bgcolor="#008000">&nbsp;</td>
+<td><a href="colors_picker2e12.html?colorhex=008000">Shades</a></td>
+<td><a href="colors_mixer8881.html?colorbottom=008000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb007.html?color=DarkGreen">DarkGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryite6c8.html?hex=006400">#006400</a></td>
+<td bgcolor="#006400">&nbsp;</td>
+<td><a href="colors_picker04b0.html?colorhex=006400">Shades</a></td>
+<td><a href="colors_mixeraa0a.html?colorbottom=006400&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3891.html?color=YellowGreen">YellowGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3928.html?hex=9ACD32">#9ACD32</a></td>
+<td bgcolor="#9ACD32">&nbsp;</td>
+<td><a href="colors_picker862b.html?colorhex=9ACD32">Shades</a></td>
+<td><a href="colors_mixerfd3e.html?colorbottom=9ACD32&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3d47.html?color=OliveDrab">OliveDrab</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitf197.html?hex=6B8E23">#6B8E23</a></td>
+<td bgcolor="#6B8E23">&nbsp;</td>
+<td><a href="colors_picker0d20.html?colorhex=6B8E23">Shades</a></td>
+<td><a href="colors_mixer78a4.html?colorbottom=6B8E23&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7a8b.html?color=DarkOliveGreen">DarkOliveGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd16b.html?hex=556B2F">#556B2F</a></td>
+<td bgcolor="#556B2F">&nbsp;</td>
+<td><a href="colors_picker6b58.html?colorhex=556B2F">Shades</a></td>
+<td><a href="colors_mixercd4c.html?colorbottom=556B2F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit5f52.html?color=MediumAquaMarine">MediumAquaMarine</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitfd5c.html?hex=66CDAA">#66CDAA</a></td>
+<td bgcolor="#66CDAA">&nbsp;</td>
+<td><a href="colors_pickerc042.html?colorhex=66CDAA">Shades</a></td>
+<td><a href="colors_mixer816d.html?colorbottom=66CDAA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2775.html?color=DarkSeaGreen">DarkSeaGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4da2.html?hex=8FBC8F">#8FBC8F</a></td>
+<td bgcolor="#8FBC8F">&nbsp;</td>
+<td><a href="colors_picker1759.html?colorhex=8FBC8F">Shades</a></td>
+<td><a href="colors_mixerdd25.html?colorbottom=8FBC8F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0bab.html?color=LightSeaGreen">LightSeaGreen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryite1c2.html?hex=20B2AA">#20B2AA</a></td>
+<td bgcolor="#20B2AA">&nbsp;</td>
+<td><a href="colors_picker5867.html?colorhex=20B2AA">Shades</a></td>
+<td><a href="colors_mixer0989.html?colorbottom=20B2AA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite35a.html?color=DarkCyan">DarkCyan</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit33bf.html?hex=008B8B">#008B8B</a></td>
+<td bgcolor="#008B8B">&nbsp;</td>
+<td><a href="colors_pickerf9c3.html?colorhex=008B8B">Shades</a></td>
+<td><a href="colors_mixer3717.html?colorbottom=008B8B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0c3b.html?color=Teal">Teal</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit08b1.html?hex=008080">#008080</a></td>
+<td bgcolor="#008080">&nbsp;</td>
+<td><a href="colors_picker22df.html?colorhex=008080">Shades</a></td>
+<td><a href="colors_mixere830.html?colorbottom=008080&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Cyan Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitfb2e.html?color=Aqua">Aqua</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit0085.html?hex=00FFFF">#00FFFF</a></td>
+<td bgcolor="#00FFFF">&nbsp;</td>
+<td><a href="colors_picker6b93.html?colorhex=00FFFF">Shades</a></td>
+<td><a href="colors_mixer081f.html?colorbottom=00FFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit05f0.html?color=Cyan">Cyan</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit0085.html?hex=00FFFF">#00FFFF</a></td>
+<td bgcolor="#00FFFF">&nbsp;</td>
+<td><a href="colors_picker6b93.html?colorhex=00FFFF">Shades</a></td>
+<td><a href="colors_mixer081f.html?colorbottom=00FFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit091f.html?color=LightCyan">LightCyan</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitdbd9.html?hex=E0FFFF">#E0FFFF</a></td>
+<td bgcolor="#E0FFFF">&nbsp;</td>
+<td><a href="colors_picker7565.html?colorhex=E0FFFF">Shades</a></td>
+<td><a href="colors_mixerfbae.html?colorbottom=E0FFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9c97.html?color=PaleTurquoise">PaleTurquoise</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit16b5.html?hex=AFEEEE">#AFEEEE</a></td>
+<td bgcolor="#AFEEEE">&nbsp;</td>
+<td><a href="colors_pickerac44.html?colorhex=AFEEEE">Shades</a></td>
+<td><a href="colors_mixeradcb.html?colorbottom=AFEEEE&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcd4f.html?color=Aquamarine">Aquamarine</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit2c39.html?hex=7FFFD4">#7FFFD4</a></td>
+<td bgcolor="#7FFFD4">&nbsp;</td>
+<td><a href="colors_pickereefd.html?colorhex=7FFFD4">Shades</a></td>
+<td><a href="colors_mixer0cf8.html?colorbottom=7FFFD4&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit16ab.html?color=Turquoise">Turquoise</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit92ce.html?hex=40E0D0">#40E0D0</a></td>
+<td bgcolor="#40E0D0">&nbsp;</td>
+<td><a href="colors_pickeref10.html?colorhex=40E0D0">Shades</a></td>
+<td><a href="colors_mixer432c.html?colorbottom=40E0D0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryited84.html?color=MediumTurquoise">MediumTurquoise</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit48dc.html?hex=48D1CC">#48D1CC</a></td>
+<td bgcolor="#48D1CC">&nbsp;</td>
+<td><a href="colors_picker3882.html?colorhex=48D1CC">Shades</a></td>
+<td><a href="colors_mixer9586.html?colorbottom=48D1CC&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit13b6.html?color=DarkTurquoise">DarkTurquoise</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit870a.html?hex=00CED1">#00CED1</a></td>
+<td bgcolor="#00CED1">&nbsp;</td>
+<td><a href="colors_picker1f50.html?colorhex=00CED1">Shades</a></td>
+<td><a href="colors_mixerc332.html?colorbottom=00CED1&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Blue Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite9e3.html?color=CadetBlue">CadetBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitb677.html?hex=5F9EA0">#5F9EA0</a></td>
+<td bgcolor="#5F9EA0">&nbsp;</td>
+<td><a href="colors_picker15c9.html?colorhex=5F9EA0">Shades</a></td>
+<td><a href="colors_mixer06bd.html?colorbottom=5F9EA0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitca63.html?color=SteelBlue">SteelBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitb731.html?hex=4682B4">#4682B4</a></td>
+<td bgcolor="#4682B4">&nbsp;</td>
+<td><a href="colors_pickerca5e.html?colorhex=4682B4">Shades</a></td>
+<td><a href="colors_mixer2564.html?colorbottom=4682B4&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite284.html?color=LightSteelBlue">LightSteelBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit42c2.html?hex=B0C4DE">#B0C4DE</a></td>
+<td bgcolor="#B0C4DE">&nbsp;</td>
+<td><a href="colors_pickerc7b5.html?colorhex=B0C4DE">Shades</a></td>
+<td><a href="colors_mixer8ef6.html?colorbottom=B0C4DE&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit36f8.html?color=LightBlue">LightBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit9b8f.html?hex=ADD8E6">#ADD8E6</a></td>
+<td bgcolor="#ADD8E6">&nbsp;</td>
+<td><a href="colors_pickerb653.html?colorhex=ADD8E6">Shades</a></td>
+<td><a href="colors_mixerb77a.html?colorbottom=ADD8E6&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9bdb.html?color=PowderBlue">PowderBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit21a0.html?hex=B0E0E6">#B0E0E6</a></td>
+<td bgcolor="#B0E0E6">&nbsp;</td>
+<td><a href="colors_pickerb6c2.html?colorhex=B0E0E6">Shades</a></td>
+<td><a href="colors_mixer19ea.html?colorbottom=B0E0E6&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2026.html?color=LightSkyBlue">LightSkyBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita41a.html?hex=87CEFA">#87CEFA</a></td>
+<td bgcolor="#87CEFA">&nbsp;</td>
+<td><a href="colors_pickeref61.html?colorhex=87CEFA">Shades</a></td>
+<td><a href="colors_mixerb088.html?colorbottom=87CEFA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9e43.html?color=SkyBlue">SkyBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit94e0.html?hex=87CEEB">#87CEEB</a></td>
+<td bgcolor="#87CEEB">&nbsp;</td>
+<td><a href="colors_picker635f.html?colorhex=87CEEB">Shades</a></td>
+<td><a href="colors_mixerc598.html?colorbottom=87CEEB&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit1e36.html?color=CornflowerBlue">CornflowerBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitec5e.html?hex=6495ED">#6495ED</a></td>
+<td bgcolor="#6495ED">&nbsp;</td>
+<td><a href="colors_picker2a27.html?colorhex=6495ED">Shades</a></td>
+<td><a href="colors_mixer183c.html?colorbottom=6495ED&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9c8a.html?color=DeepSkyBlue">DeepSkyBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitad19.html?hex=00BFFF">#00BFFF</a></td>
+<td bgcolor="#00BFFF">&nbsp;</td>
+<td><a href="colors_picker839b.html?colorhex=00BFFF">Shades</a></td>
+<td><a href="colors_mixer948c.html?colorbottom=00BFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit56b1.html?color=DodgerBlue">DodgerBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita88f.html?hex=1E90FF">#1E90FF</a></td>
+<td bgcolor="#1E90FF">&nbsp;</td>
+<td><a href="colors_pickere1ae.html?colorhex=1E90FF">Shades</a></td>
+<td><a href="colors_mixerad26.html?colorbottom=1E90FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7693.html?color=RoyalBlue">RoyalBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3250.html?hex=4169E1">#4169E1</a></td>
+<td bgcolor="#4169E1">&nbsp;</td>
+<td><a href="colors_pickerc41b.html?colorhex=4169E1">Shades</a></td>
+<td><a href="colors_mixerba3e.html?colorbottom=4169E1&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb0c7.html?color=Blue">Blue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitac71.html?hex=0000FF">#0000FF</a></td>
+<td bgcolor="#0000FF">&nbsp;</td>
+<td><a href="colors_picker5621.html?colorhex=0000FF">Shades</a></td>
+<td><a href="colors_mixer8165.html?colorbottom=0000FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit455d.html?color=MediumBlue">MediumBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3b21.html?hex=0000CD">#0000CD</a></td>
+<td bgcolor="#0000CD">&nbsp;</td>
+<td><a href="colors_picker1121.html?colorhex=0000CD">Shades</a></td>
+<td><a href="colors_mixerfc15.html?colorbottom=0000CD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitbce4.html?color=DarkBlue">DarkBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd8bf.html?hex=00008B">#00008B</a></td>
+<td bgcolor="#00008B">&nbsp;</td>
+<td><a href="colors_picker9256.html?colorhex=00008B">Shades</a></td>
+<td><a href="colors_mixerefde.html?colorbottom=00008B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2eab.html?color=Navy">Navy</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitaea7.html?hex=000080">#000080</a></td>
+<td bgcolor="#000080">&nbsp;</td>
+<td><a href="colors_pickeraaf7.html?colorhex=000080">Shades</a></td>
+<td><a href="colors_mixer819f.html?colorbottom=000080&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit624c.html?color=MidnightBlue">MidnightBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitaec2.html?hex=191970">#191970</a></td>
+<td bgcolor="#191970">&nbsp;</td>
+<td><a href="colors_picker4a3b.html?colorhex=191970">Shades</a></td>
+<td><a href="colors_mixer805f.html?colorbottom=191970&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Brown Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit2253.html?color=Cornsilk">Cornsilk</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit51bc.html?hex=FFF8DC">#FFF8DC</a></td>
+<td bgcolor="#FFF8DC">&nbsp;</td>
+<td><a href="colors_pickerf16b.html?colorhex=FFF8DC">Shades</a></td>
+<td><a href="colors_mixer5f08.html?colorbottom=FFF8DC&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcabe.html?color=BlanchedAlmond">BlanchedAlmond</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryite04b.html?hex=FFEBCD">#FFEBCD</a></td>
+<td bgcolor="#FFEBCD">&nbsp;</td>
+<td><a href="colors_picker8298.html?colorhex=FFEBCD">Shades</a></td>
+<td><a href="colors_mixerbc97.html?colorbottom=FFEBCD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit806e.html?color=Bisque">Bisque</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit884a.html?hex=FFE4C4">#FFE4C4</a></td>
+<td bgcolor="#FFE4C4">&nbsp;</td>
+<td><a href="colors_picker8fb5.html?colorhex=FFE4C4">Shades</a></td>
+<td><a href="colors_mixer0d12.html?colorbottom=FFE4C4&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb761.html?color=NavajoWhite">NavajoWhite</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3289.html?hex=FFDEAD">#FFDEAD</a></td>
+<td bgcolor="#FFDEAD">&nbsp;</td>
+<td><a href="colors_pickere780.html?colorhex=FFDEAD">Shades</a></td>
+<td><a href="colors_mixer1e9e.html?colorbottom=FFDEAD&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitd697.html?color=Wheat">Wheat</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit9351.html?hex=F5DEB3">#F5DEB3</a></td>
+<td bgcolor="#F5DEB3">&nbsp;</td>
+<td><a href="colors_picker18be.html?colorhex=F5DEB3">Shades</a></td>
+<td><a href="colors_mixer8999.html?colorbottom=F5DEB3&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit17c8.html?color=BurlyWood">BurlyWood</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit413b.html?hex=DEB887">#DEB887</a></td>
+<td bgcolor="#DEB887">&nbsp;</td>
+<td><a href="colors_picker06b8.html?colorhex=DEB887">Shades</a></td>
+<td><a href="colors_mixer12ea.html?colorbottom=DEB887&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit4a9d.html?color=Tan">Tan</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryita370.html?hex=D2B48C">#D2B48C</a></td>
+<td bgcolor="#D2B48C">&nbsp;</td>
+<td><a href="colors_pickerf922.html?colorhex=D2B48C">Shades</a></td>
+<td><a href="colors_mixerfa6c.html?colorbottom=D2B48C&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9286.html?color=RosyBrown">RosyBrown</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd584.html?hex=BC8F8F">#BC8F8F</a></td>
+<td bgcolor="#BC8F8F">&nbsp;</td>
+<td><a href="colors_picker4954.html?colorhex=BC8F8F">Shades</a></td>
+<td><a href="colors_mixer3f92.html?colorbottom=BC8F8F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitbeb1.html?color=SandyBrown">SandyBrown</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4c6c.html?hex=F4A460">#F4A460</a></td>
+<td bgcolor="#F4A460">&nbsp;</td>
+<td><a href="colors_picker8956.html?colorhex=F4A460">Shades</a></td>
+<td><a href="colors_mixer6a99.html?colorbottom=F4A460&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitbe3c.html?color=GoldenRod">GoldenRod</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit9739.html?hex=DAA520">#DAA520</a></td>
+<td bgcolor="#DAA520">&nbsp;</td>
+<td><a href="colors_picker09e2.html?colorhex=DAA520">Shades</a></td>
+<td><a href="colors_mixer017c.html?colorbottom=DAA520&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite1d0.html?color=DarkGoldenRod">DarkGoldenRod</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit0a85.html?hex=B8860B">#B8860B</a></td>
+<td bgcolor="#B8860B">&nbsp;</td>
+<td><a href="colors_picker19f9.html?colorhex=B8860B">Shades</a></td>
+<td><a href="colors_mixerdd33.html?colorbottom=B8860B&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitd369.html?color=Peru">Peru</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd522.html?hex=CD853F">#CD853F</a></td>
+<td bgcolor="#CD853F">&nbsp;</td>
+<td><a href="colors_pickere428.html?colorhex=CD853F">Shades</a></td>
+<td><a href="colors_mixer2d5d.html?colorbottom=CD853F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit264b.html?color=Chocolate">Chocolate</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit6c31.html?hex=D2691E">#D2691E</a></td>
+<td bgcolor="#D2691E">&nbsp;</td>
+<td><a href="colors_pickerbfe4.html?colorhex=D2691E">Shades</a></td>
+<td><a href="colors_mixer5e88.html?colorbottom=D2691E&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7e9a.html?color=Olive">Olive</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitda4d.html?hex=808000">#808000</a></td>
+<td bgcolor="#808000">&nbsp;</td>
+<td><a href="colors_pickerfe88.html?colorhex=808000">Shades</a></td>
+<td><a href="colors_mixer69ab.html?colorbottom=808000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit1660.html?color=SaddleBrown">SaddleBrown</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitafc5.html?hex=8B4513">#8B4513</a></td>
+<td bgcolor="#8B4513">&nbsp;</td>
+<td><a href="colors_pickeraf61.html?colorhex=8B4513">Shades</a></td>
+<td><a href="colors_mixerdb1f.html?colorbottom=8B4513&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit8359.html?color=Sienna">Sienna</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4dca.html?hex=A0522D">#A0522D</a></td>
+<td bgcolor="#A0522D">&nbsp;</td>
+<td><a href="colors_picker6cf9.html?colorhex=A0522D">Shades</a></td>
+<td><a href="colors_mixerf449.html?colorbottom=A0522D&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita43e.html?color=Brown">Brown</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitf153.html?hex=A52A2A">#A52A2A</a></td>
+<td bgcolor="#A52A2A">&nbsp;</td>
+<td><a href="colors_pickerbdb3.html?colorhex=A52A2A">Shades</a></td>
+<td><a href="colors_mixerbf41.html?colorbottom=A52A2A&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7ae0.html?color=Maroon">Maroon</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit2d49.html?hex=800000">#800000</a></td>
+<td bgcolor="#800000">&nbsp;</td>
+<td><a href="colors_picker272f.html?colorhex=800000">Shades</a></td>
+<td><a href="colors_mixer79ec.html?colorbottom=800000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>White Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitaff2.html?color=White">White</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit90ee.html?hex=FFFFFF">#FFFFFF</a></td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td><a href="colors_pickerf92e.html?colorhex=FFFFFF">Shades</a></td>
+<td><a href="colors_mixer6334.html?colorbottom=FFFFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitf71c.html?color=Snow">Snow</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit116f.html?hex=FFFAFA">#FFFAFA</a></td>
+<td bgcolor="#FFFAFA">&nbsp;</td>
+<td><a href="colors_picker29fe.html?colorhex=FFFAFA">Shades</a></td>
+<td><a href="colors_mixere232.html?colorbottom=FFFAFA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit8954.html?color=HoneyDew">HoneyDew</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit68e3.html?hex=F0FFF0">#F0FFF0</a></td>
+<td bgcolor="#F0FFF0">&nbsp;</td>
+<td><a href="colors_picker9338.html?colorhex=F0FFF0">Shades</a></td>
+<td><a href="colors_mixer8736.html?colorbottom=F0FFF0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita672.html?color=MintCream">MintCream</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitaff4.html?hex=F5FFFA">#F5FFFA</a></td>
+<td bgcolor="#F5FFFA">&nbsp;</td>
+<td><a href="colors_pickerab02.html?colorhex=F5FFFA">Shades</a></td>
+<td><a href="colors_mixer3f5e.html?colorbottom=F5FFFA&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit0eeb.html?color=Azure">Azure</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4286.html?hex=F0FFFF">#F0FFFF</a></td>
+<td bgcolor="#F0FFFF">&nbsp;</td>
+<td><a href="colors_picker5d15.html?colorhex=F0FFFF">Shades</a></td>
+<td><a href="colors_mixer5685.html?colorbottom=F0FFFF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitd3ac.html?color=AliceBlue">AliceBlue</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit5ec4.html?hex=F0F8FF">#F0F8FF</a></td>
+<td bgcolor="#F0F8FF">&nbsp;</td>
+<td><a href="colors_pickerf89b.html?colorhex=F0F8FF">Shades</a></td>
+<td><a href="colors_mixer7faf.html?colorbottom=F0F8FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit6717.html?color=GhostWhite">GhostWhite</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit274d.html?hex=F8F8FF">#F8F8FF</a></td>
+<td bgcolor="#F8F8FF">&nbsp;</td>
+<td><a href="colors_pickerbbcc.html?colorhex=F8F8FF">Shades</a></td>
+<td><a href="colors_mixer4976.html?colorbottom=F8F8FF&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryite7bb.html?color=WhiteSmoke">WhiteSmoke</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit1b28.html?hex=F5F5F5">#F5F5F5</a></td>
+<td bgcolor="#F5F5F5">&nbsp;</td>
+<td><a href="colors_pickerfca0.html?colorhex=F5F5F5">Shades</a></td>
+<td><a href="colors_mixer9121.html?colorbottom=F5F5F5&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit04c7.html?color=SeaShell">SeaShell</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit94c8.html?hex=FFF5EE">#FFF5EE</a></td>
+<td bgcolor="#FFF5EE">&nbsp;</td>
+<td><a href="colors_picker1247.html?colorhex=FFF5EE">Shades</a></td>
+<td><a href="colors_mixer991a.html?colorbottom=FFF5EE&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitd9dc.html?color=Beige">Beige</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit422a.html?hex=F5F5DC">#F5F5DC</a></td>
+<td bgcolor="#F5F5DC">&nbsp;</td>
+<td><a href="colors_pickere553.html?colorhex=F5F5DC">Shades</a></td>
+<td><a href="colors_mixer0e47.html?colorbottom=F5F5DC&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit50c6.html?color=OldLace">OldLace</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit6a15.html?hex=FDF5E6">#FDF5E6</a></td>
+<td bgcolor="#FDF5E6">&nbsp;</td>
+<td><a href="colors_pickerd9dd.html?colorhex=FDF5E6">Shades</a></td>
+<td><a href="colors_mixerdec9.html?colorbottom=FDF5E6&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit380f.html?color=FloralWhite">FloralWhite</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit880c.html?hex=FFFAF0">#FFFAF0</a></td>
+<td bgcolor="#FFFAF0">&nbsp;</td>
+<td><a href="colors_pickerb8eb.html?colorhex=FFFAF0">Shades</a></td>
+<td><a href="colors_mixer718b.html?colorbottom=FFFAF0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit7145.html?color=Ivory">Ivory</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd65b.html?hex=FFFFF0">#FFFFF0</a></td>
+<td bgcolor="#FFFFF0">&nbsp;</td>
+<td><a href="colors_pickerf9ba.html?colorhex=FFFFF0">Shades</a></td>
+<td><a href="colors_mixer260f.html?colorbottom=FFFFF0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita0cf.html?color=AntiqueWhite">AntiqueWhite</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitd241.html?hex=FAEBD7">#FAEBD7</a></td>
+<td bgcolor="#FAEBD7">&nbsp;</td>
+<td><a href="colors_picker9d29.html?colorhex=FAEBD7">Shades</a></td>
+<td><a href="colors_mixere30e.html?colorbottom=FAEBD7&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitac11.html?color=Linen">Linen</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit010b.html?hex=FAF0E6">#FAF0E6</a></td>
+<td bgcolor="#FAF0E6">&nbsp;</td>
+<td><a href="colors_picker76f8.html?colorhex=FAF0E6">Shades</a></td>
+<td><a href="colors_mixer69e6.html?colorbottom=FAF0E6&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit428c.html?color=LavenderBlush">LavenderBlush</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit5040.html?hex=FFF0F5">#FFF0F5</a></td>
+<td bgcolor="#FFF0F5">&nbsp;</td>
+<td><a href="colors_picker6e63.html?colorhex=FFF0F5">Shades</a></td>
+<td><a href="colors_mixer21ce.html?colorbottom=FFF0F5&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit9792.html?color=MistyRose">MistyRose</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit0ba1.html?hex=FFE4E1">#FFE4E1</a></td>
+<td bgcolor="#FFE4E1">&nbsp;</td>
+<td><a href="colors_pickerfe2d.html?colorhex=FFE4E1">Shades</a></td>
+<td><a href="colors_mixerd050.html?colorbottom=FFE4E1&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td colspan="5"><h2>Grey Colors</h2></td>
+</tr>
+<tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+<th style="width:11%">Shades</th>
+<th>Mix</th>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitc26d.html?color=Gainsboro">Gainsboro</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4587.html?hex=DCDCDC">#DCDCDC</a></td>
+<td bgcolor="#DCDCDC">&nbsp;</td>
+<td><a href="colors_picker49d7.html?colorhex=DCDCDC">Shades</a></td>
+<td><a href="colors_mixerc5db.html?colorbottom=DCDCDC&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit5c53.html?color=LightGray">LightGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitca5b.html?hex=D3D3D3">#D3D3D3</a></td>
+<td bgcolor="#D3D3D3">&nbsp;</td>
+<td><a href="colors_pickerbdff.html?colorhex=D3D3D3">Shades</a></td>
+<td><a href="colors_mixercb63.html?colorbottom=D3D3D3&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3649.html?color=Silver">Silver</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3efb.html?hex=C0C0C0">#C0C0C0</a></td>
+<td bgcolor="#C0C0C0">&nbsp;</td>
+<td><a href="colors_picker801a.html?colorhex=C0C0C0">Shades</a></td>
+<td><a href="colors_mixera327.html?colorbottom=C0C0C0&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit15e6.html?color=DarkGray">DarkGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4df4.html?hex=A9A9A9">#A9A9A9</a></td>
+<td bgcolor="#A9A9A9">&nbsp;</td>
+<td><a href="colors_pickerb7c2.html?colorhex=A9A9A9">Shades</a></td>
+<td><a href="colors_mixer1b88.html?colorbottom=A9A9A9&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit77bd.html?color=DimGray">DimGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit7d66.html?hex=696969">#696969</a></td>
+<td bgcolor="#696969">&nbsp;</td>
+<td><a href="colors_picker4cf4.html?colorhex=696969">Shades</a></td>
+<td><a href="colors_mixer605f.html?colorbottom=696969&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitcd81.html?color=Gray">Gray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit3858.html?hex=808080">#808080</a></td>
+<td bgcolor="#808080">&nbsp;</td>
+<td><a href="colors_picker0a57.html?colorhex=808080">Shades</a></td>
+<td><a href="colors_mixer225b.html?colorbottom=808080&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryita588.html?color=LightSlateGray">LightSlateGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitfb65.html?hex=778899">#778899</a></td>
+<td bgcolor="#778899">&nbsp;</td>
+<td><a href="colors_pickerb01b.html?colorhex=778899">Shades</a></td>
+<td><a href="colors_mixer00a7.html?colorbottom=778899&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit3e58.html?color=SlateGray">SlateGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitc6d4.html?hex=708090">#708090</a></td>
+<td bgcolor="#708090">&nbsp;</td>
+<td><a href="colors_pickerc190.html?colorhex=708090">Shades</a></td>
+<td><a href="colors_mixer33fd.html?colorbottom=708090&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryit818e.html?color=DarkSlateGray">DarkSlateGray</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryitcf01.html?hex=2F4F4F">#2F4F4F</a></td>
+<td bgcolor="#2F4F4F">&nbsp;</td>
+<td><a href="colors_pickerab90.html?colorhex=2F4F4F">Shades</a></td>
+<td><a href="colors_mixercf80.html?colorbottom=2F4F4F&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+<tr>
+<td><a target="_blank" href="color_tryitb6ae.html?color=Black">Black</a>&nbsp;</td>
+<td><a target="_blank" href="color_tryit4ea7.html?hex=000000">#000000</a></td>
+<td bgcolor="#000000">&nbsp;</td>
+<td><a href="colors_picker588f.html?colorhex=000000">Shades</a></td>
+<td><a href="colors_mixercbdb.html?colorbottom=000000&amp;colortop=FFFFFF">Mix</a></td>
+</tr>
+
+
+</table>
+</div>
+
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="colors_hex.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="colors_shades.html">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+  <div id="skyscraper">
+  
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
+  
+  </div>
+</div>
+
+<div class="sidesection">
+<h4><a href="colors_picker.html">COLOR PICKER</a></h4>
+<a href="colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+  <h4>LIKE US</h4>
+  <div class="w3-text-grey sharethis">
+    <a href="../../www.facebook.com/w3schoolscom/index.html" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+    <a href="../../www.instagram.com/w3schools.com_official/index.html" target="_blank" title="Instagram"><span class="fa fa-instagram fa-2x"></span></a>
+    <a href="../../www.linkedin.com/company/w3schools.com/index.html" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
+<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="../images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Tabs</a><br>
+    <a href="../howto/howto_css_dropdown.html">Dropdowns</a><br>
+    <a href="../howto/howto_js_accordion.html">Accordions</a><br>
+    <a href="../howto/howto_js_sidenav.html">Side Navigation</a><br>
+    <a href="../howto/howto_js_topnav.html">Top Navigation</a><br>
+    <a href="../howto/howto_css_modals.html">Modal Boxes</a><br>
+    <a href="../howto/howto_js_progressbar.html">Progress Bars</a><br>
+    <a href="../howto/howto_css_parallax.html">Parallax</a><br>
+    <a href="../howto/howto_css_login_form.html">Login Form</a><br>
+    <a href="../howto/howto_html_include.html">HTML Includes</a><br>
+    <a href="../graphics/google_maps_intro.html">Google Maps</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Range Sliders</a><br>
+    <a href="../howto/howto_css_tooltip.html">Tooltips</a><br>
+    <a href="../howto/howto_js_slideshow.html">Slideshow</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Filter List</a><br>
+    <a href="../howto/howto_js_sort_list.html">Sort List</a><br>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h5><a href="../cert/default.html" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border">
+  <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
+  <a href="../cert/default.html" class="w3-button w3-light-grey w3-block" style="text-decoration:none">And more</a>
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", fix_stickyad);
+  window.addEventListener("resize", fix_stickyad);
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+</div>
+<!--
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+</div>
+-->
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../w3schools.invisionzone.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../shop.w3schools.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+</div>
+
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">      
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Tutorials</h4>
+<a href="../html/default.html">HTML Tutorial</a><br>
+<a href="../css/default.html">CSS Tutorial</a><br>
+<a href="../js/default.html">JavaScript Tutorial</a><br>
+<a href="../howto/default.html">How To Tutorial</a><br>
+<a href="../sql/default.html">SQL Tutorial</a><br>
+<a href="../python/default.html">Python Tutorial</a><br>
+<a href="../w3css/default.html">W3.CSS Tutorial</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Tutorial</a><br>
+<a href="../php/default.html">PHP Tutorial</a><br>
+<a href="../java/default.html">Java Tutorial</a><br>
+<a href="../cpp/default.html">C++ Tutorial</a><br>
+<a href="../jquery/default.html">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top References</h4>
+<a href="../tags/default.html">HTML Reference</a><br>
+<a href="../cssref/default.html">CSS Reference</a><br>
+<a href="../jsref/default.html">JavaScript Reference</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Reference</a><br>
+<a href="../python/python_reference.html">Python Reference</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Reference</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Reference</a><br>
+<a href="../php/php_ref_overview.html">PHP Reference</a><br>
+<a href="colors_names.html">HTML Colors</a><br>
+<a href="../java/java_ref_keywords.html">Java Reference</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Reference</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Examples</h4>
+<a href="../html/html_examples.html">HTML Examples</a><br>
+<a href="../css/css_examples.html">CSS Examples</a><br>
+<a href="../js/js_examples.html">JavaScript Examples</a><br>
+<a href="../howto/default.html">How To Examples</a><br>
+<a href="../sql/sql_examples.html">SQL Examples</a><br>
+<a href="../python/python_examples.html">Python Examples</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Examples</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Examples</a><br>
+<a href="../php/php_examples.html">PHP Examples</a><br>
+<a href="../java/java_examples.html">Java Examples</a><br>
+<a href="../xml/xml_examples.html">XML Examples</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="../cert/default.html">HTML Certificate</a><br>
+<a href="../cert/default.html">CSS Certificate</a><br>
+<a href="../cert/default.html">JavaScript Certificate</a><br>
+<a href="../cert/default.html">SQL Certificate</a><br>
+<a href="../cert/default.html">Python Certificate</a><br>
+<a href="../cert/default.html">PHP Certificate</a><br>
+<a href="../cert/default.html">Bootstrap Certificate</a><br>
+<a href="../cert/default.html">XML Certificate</a><br>
+<a href="../cert/default.html">jQuery Certificate</a><br>
+<a href="../cert/default.html" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
+<a href="../about/about_privacy.html">cookie and privacy policy</a>.<br><br>
+<a href="../about/about_copyright.html">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="../w3css/default.html">W3Schools is Powered by W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+
+<script>
+
+loadUser();
+function loadUser() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  if (foldername == "quiztest") {
+    cc = window.location.href;
+    pos = cc.indexOf("qtest=");
+    typ = cc.substr(pos + 6);
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+       console.log(x);
+        activateElse();
+      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+        console.log(x);
+        activateMYPAGE(x, y);
+      } else {
+        activateElse();
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+}
+function finishedPage() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "O") {
+        console.log(x);
+        registerPoint(x);
+      } else {
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+}
+function activateElse() {
+  var a = document.getElementById("mypagediv");
+  var b = document.getElementById("w3loginbtn");
+  if (a) a.style.display = "none";
+  if (b) b.style.display = "inline";
+}
+var mp_pagesread = 0, mp_totalpages = 0;
+function activateMYPAGE(cc, obj) {
+  var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (a) a.style.display = "none";
+  if (b) {
+    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+      jsonobj = JSON.parse(obj.substr(1));
+      mp_pagesread = jsonobj.b;
+      mp_totalpages = jsonobj.a;
+      x = Math.round((mp_pagesread/mp_totalpages) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+    }
+    if (cc == "Q") {
+      color1 = "rgba(44, 156, 202, 0.1)";
+      color2 = "rgba(44, 156, 202, 1)";
+    }
+    b.style.display = "block";
+    txt += "<a href='../../mypage.w3schools.com/mypage/index.html'>";
+    txt2 = txt;
+    txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+    txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+    if (cc != "F") {
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+      txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt2 += '</svg>';
+    }
+    if (cc == "J") {
+      checkIfMypage2IsInView();
+      window.addEventListener("scroll", checkIfMypage2IsInView);
+    }
+    if (cc == "Q") {
+      if (degrees == 359.99) {
+        txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+    }
+    txt += '</a>';
+    txt2 += '</a>';
+    b.innerHTML = "&nbsp;" + txt;
+    c.innerHTML = "&nbsp;" + txt2;
+    if (cc != "L") {
+      document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    }
+  }
+  ga('send', 'event', 'user', 'login');
+}
+function checkIfMypage2IsInView() {
+  var a = document.getElementById("mypagediv2");
+  if (isinviewport(a) || isaboveviewport(a)) {
+    finishedPage();
+    window.removeEventListener("scroll", checkIfMypage2IsInView);
+  }
+}
+function isinviewport(x) {
+  var rect = x.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+function isaboveviewport(x) {
+  var rect = x.getBoundingClientRect();
+  if (rect.top < 0) return true;
+  return false;
+}
+function registerPoint(cc) {
+  var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (c) {
+    mp_pagesread++;
+    x = Math.round((mp_pagesread/mp_totalpages) * 100);
+    degrees = x * 3.6;
+    if (degrees > 359) degrees = 359.99;
+    txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+    if (degrees == 359.99) {completed = 1;}
+    if (completed == 1) {
+      txt += "<span id='usergetsstar'>&#x2605;</span>";
+    }
+    c.innerHTML += txt;
+    document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+  }
+}
+
+
+</script>
+<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
+
+<!-- Mirrored from www.w3schools.com/colors/colors_groups.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 23:03:41 GMT -->
+</html>

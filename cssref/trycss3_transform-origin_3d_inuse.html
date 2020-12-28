@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform-origin_3d_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+<head>
+<style>
+#div1 {
+position: relative;
+height: 200px;
+width: 200px;
+margin: 50px;
+padding:10px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+transform: rotateY(70deg);
+transform-origin:50% 50% 100px;
+}
+</style>
+<script>
+function changeRot(value)
+{
+document.getElementById('div2').style.transform="rotateY(" + value + "deg)";
+document.getElementById('div2').style.webkitTransform="rotateY(" + value + "deg)";
+document.getElementById('div2').style.MozTransform="rotateY(" + value + "deg)";
+document.getElementById('div2').style.OTransform="rotateY(" + value + "deg)";
+document.getElementById('persp').innerHTML=value + "deg";
+}
+
+function changeOrg()
+{
+var x=document.getElementById('ox').value;
+var y=document.getElementById('oy').value;
+var z=document.getElementById('oz').value;
+document.getElementById('div2').style.transformOrigin=x + '% ' + y + '% ' + z + 'px';
+document.getElementById('div2').style.webkitTransformOrigin=x + '% ' + y + '% ' + z + 'px';
+document.getElementById('div2').style.MozTransformOrigin=x + '% ' + y + '% ' + z + 'px';
+document.getElementById('div2').style.OTransformOrigin=x + '% ' + y + '% ' + z + 'px';
+document.getElementById('origin').innerHTML=x + "% " + y + "% " + z + "px";      
+}
+</script>
+</head>
+
+<body>
+
+<p><b>Note:</b> Internet Explorer 9 and earlier do not support 3D-transforms.</p>
+<p>Rotate the red div element, try changing its X-, Y-, and Z-axis:</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+Rotate:<br>
+<input type="range" min="-360" max="360" value="70" onchange="changeRot(this.value)" /><br>
+-webkit-transform: rotateY:(<span id="persp">70deg</span>);
+<br>
+X-axis:<input type="range" min="-100" max="200" value="50" onchange="changeOrg()" id="ox" /><br>
+Y-axis:<input type="range" min="-100" max="200" value="50" onchange="changeOrg()" id="oy" /><br>
+Z-axis:<input type="range" min="-100" max="200" value="100" onchange="changeOrg()" id="oz" /><br>
+-webkit-transform-origin: <span id="origin">50% 50% 100px</span>;
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform-origin_3d_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+</html>

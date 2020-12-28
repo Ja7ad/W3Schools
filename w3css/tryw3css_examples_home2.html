@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/tryw3css_examples_home2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:49 GMT -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<link rel="stylesheet" href="../lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+
+<div class="w3-bar w3-black w3-center">
+  <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
+  <i class="fa fa-bars w3-xlarge"></i></a>
+  <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
+  <i class="fa fa-file w3-xlarge"></i></a>
+  <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
+  <i class="fa fa-camera w3-xlarge"></i></a>
+</div>
+
+<div id="nav01" class="w3-bar-block">
+  <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">&times;</a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="../images/w3schools.png" style="width:80%;"></a>
+  <a class="w3-bar-item w3-button" href="#">Learn HTML</a>
+  <a class="w3-bar-item w3-button" href="#">Learn W3.CSS</a>
+  <a class="w3-bar-item w3-button" href="#">Learn JavaScript</a>
+  <a class="w3-bar-item w3-button" href="#">Learn SQL</a>
+  <a class="w3-bar-item w3-button" href="#">Learn PHP</a>
+</div>
+
+<div id="nav02">
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.html"><img src="img_demo_black.png" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.html"><img src="img_demo_summer.jpg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.html"><img src="img_demo_blog.jpg" style="width:100%;"></a>
+</div>
+
+<div id="nav03">
+  <div class="w3-container w3-border-bottom">
+    <h1 class="w3-text-theme">W3.CSS</h1>
+  </div>
+  <ul class="w3-ul w3-large">  
+   <li class="w3-padding-16">Smaller and faster</li>
+   <li class="w3-padding-16">Easier to use</li>
+   <li class="w3-padding-16">Easier to learn</li>
+   <li class="w3-padding-16">CSS only</li>
+   <li class="w3-padding-16">Speeds up apps</li>
+   <li class="w3-padding-16">CSS equality for all</li>
+   <li class="w3-padding-16">PC Laptop Tablet Mobile</li>
+  </ul>
+</div>
+</div>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px;"> 
+
+<div class="w3-top w3-theme w3-large w3-hide-large">
+  <i class="fa fa-bars w3-button w3-teal w3-xlarge" onclick="w3_open()"></i>
+</div>
+
+<header class="w3-container w3-theme w3-padding-64 w3-center">
+  <h1 class="w3-xxxlarge w3-padding-16">W3Schools.com</h1>
+</header>
+
+<div class="w3-container w3-padding-large w3-section w3-light-grey">
+  <h1 class="w3-jumbo">CSS</h1>
+  <p class="w3-xlarge">The Language for Styling Web Pages</p>
+  <a class="w3-button w3-theme w3-hover-white" href="../css/default.html">LEARN CSS</a>
+  <a class="w3-button w3-theme w3-hover-white" href="../cssref/default.html">CSS REFERENCE</a>
+  <p class="w3-large">
+  <p><div class="w3-code cssHigh notranslate">
+  body {<br>
+  &nbsp;&nbsp;&nbsp; background-color: #d0e4fe;<br>}<br>h1 {<br>
+  &nbsp;&nbsp;&nbsp; color: orange;<br>
+  &nbsp;&nbsp;&nbsp; text-align: center;<br>}<br>p {<br>
+  &nbsp;&nbsp;&nbsp; font-family: &quot;Times New Roman&quot;;<br>
+  &nbsp;&nbsp;&nbsp; font-size: 20px;<br>}
+  </div>
+  <a class="w3-button w3-theme w3-hover-white" href="../css/tryit438d.html?filename=trycss_default" target="_blank">Try it Yourself</a>
+</div>
+
+<div class="w3-container w3-padding-large w3-section w3-light-grey">
+  <h1 class="w3-jumbo">JavaScript</h1>
+  <p class="w3-xlarge">The Language for Programming Web Pages</p>
+  <a href="../js/default.html" class="w3-button w3-theme w3-hover-white">LEARN JS</a>
+  <a href="../jsref/default.html" class="w3-button w3-theme w3-hover-white">JS REFERENCE</a>
+
+  <p><div class="w3-code jsHigh notranslate">
+   // Click the button to change the color of this paragraph<br><br>function myFunction() {<br>
+  &nbsp;&nbsp;&nbsp; var x;<br>
+  &nbsp;&nbsp;&nbsp; x = document.getElementById(&quot;demo&quot;);<br>
+  &nbsp;&nbsp;&nbsp; x.style.fontSize = &quot;25px&quot;; <br>
+  &nbsp;&nbsp;&nbsp; x.style.color = &quot;red&quot;; <br>}
+  </div>
+  <a class="w3-button w3-theme w3-hover-white" href="../js/tryit8004.html?filename=tryjs_default" target="_blank">Try it Yourself</a>
+</div>
+
+<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
+  <p><nav>
+  <a href="../../w3schools.invisionzone.com/index.html" target="_blank">FORUM</a> |
+  <a href="../about/default.html" target="_top">ABOUT</a>
+  </nav></p>
+</footer>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+openNav("nav01");
+function openNav(id) {
+  document.getElementById("nav01").style.display = "none";
+  document.getElementById("nav02").style.display = "none";
+  document.getElementById("nav03").style.display = "none";
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+<script src="../lib/w3codecolor.js"></script>
+
+<script>
+w3CodeColor();
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/tryw3css_examples_home2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:52 GMT -->
+</html> 

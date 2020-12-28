@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:12 GMT -->
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:12 GMT -->
+</html>

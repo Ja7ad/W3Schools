@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_vb_013.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+
+<span class="marked">@Code<br>Dim weekday=DateTime.Now.DayOfWeek<br>Dim day=weekday.ToString()<br>Dim message=&quot;&quot;<br>End Code<br></span>
+&lt;html&gt;<br>&lt;body&gt;<br>
+<span class="marked">@Select Case day<br>Case &quot;Monday&quot;<br>&nbsp;&nbsp;&nbsp; message=&quot;This is 
+the first weekday.&quot;<br>Case &quot;Thursday&quot;<br>&nbsp;&nbsp;&nbsp; message=&quot;Only one day before 
+weekend.&quot;<br>Case &quot;Friday&quot;<br>&nbsp;&nbsp;&nbsp; message=&quot;Tomorrow is weekend!&quot;<br>Case Else<br>
+&nbsp;&nbsp;&nbsp; message=&quot;Today is &quot; &amp; day<br>End Select<br></span>&lt;p&gt;<span class="marked">@message</span>&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br>
+
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_vb_013.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+</html>

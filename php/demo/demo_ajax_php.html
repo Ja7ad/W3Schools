@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/php/demo/demo_ajax_php.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:27 GMT -->
+<head>
+<script>
+function showHint(str) {
+  if (str.length == 0) { 
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    }
+    xmlhttp.open("GET.html", "gethint03d2.html?q="+str, true);
+    xmlhttp.send();
+  }
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form action="#">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+</form> 
+<p>Suggestions: <span id="txtHint"></span></p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/php/demo/demo_ajax_php.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:28 GMT -->
+</html>

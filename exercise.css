@@ -1,0 +1,216 @@
+html {
+	height:100%;
+	width:100%;
+	}
+body {
+	height:100%;
+	width:100%;
+	margin:0 auto;
+	font-size:100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+h1 {
+	font-family:Verdana;
+	font-weight:normal;
+	font-size:38px;
+	margin-top:5px;
+	margin-bottom:10px;
+}
+table,tr,td {
+	border-collapse:collapse;
+	padding:0;margin:0;
+	font-size:17px;
+}
+#ads {
+    background-color: #ffffff;
+    height: 95px;
+    width:100%;
+    margin-top:0px;
+}
+#editSection td {
+    background-color:#f1f1f1;
+    height:100%;
+    padding:20px;
+    padding-top:10px;
+}
+#correctSection {
+    display:none;
+}
+#correctSection td {
+    background-color:#f1f1f1;
+    xcolor:#ffffff;
+    height:100%;
+    padding:20px;
+    padding-top:10px;
+}
+.header {
+	width:auto;
+	float:left;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+.headerBtnDiv {
+	text-align:right;
+	float:right;
+	width:auto;
+	margin-right:1%;
+}
+#textareaCode,#textareaCode2 {
+	font-family: consolas,"courier new",monospace;
+	font-size:14px;
+	height:96.2%;
+	width:98%;
+	border:1px solid #d3d3d3; border-radius:4px;
+	padding:0.5%;
+	resize: none;
+	min-height:250px;
+}
+#textareaCode2 {
+	xborder:1px solid #ffffff; 
+}
+#iframeResult, #iframeResult2 {
+	background-color: #ffffff;
+    height:97.4%;
+    width:99%;
+    border:1px solid #d3d3d3;
+    border-radius:4px;
+    min-height:250px;
+}
+#iframeResult2 {
+    xborder:1px solid #ffffff;
+}
+.submit {
+    font-size:15px;
+    border-radius:4px;
+    background-color:#555555;
+    color:#ffffff;
+    border:1px solid #555555;
+    padding:4px 15px;
+    cursor:pointer;    
+}
+.submit:hover {
+    background-color:#777777;
+}
+#showCorrectBtn,#hideCorrectBtn {
+    font-size:15px;
+    border-radius:4px;
+    background-color:#5cb85c;
+    color:#ffffff;
+    border:1px solid #5cb85c;
+    padding:4px 15px;
+    float:right;
+    white-space:nowrap;
+    cursor:pointer;
+}
+#hideCorrectBtn {
+    background-color:#555555;
+    border:1px solid #555555;
+}
+#showCorrectBtn:hover {
+    background-color:#4A934A;
+}
+#hideCorrectBtn:hover {
+    background-color:#777777;
+}
+.codeContainer {
+    height:100%;
+    width:49%;
+    float:left;
+    font-size:17px;
+}
+.resultContainer {
+    height:100%;
+    width:49%;
+    float:right;
+    font-size:17px;
+}
+.codeContainer > div:first-child, .resultContainer > div:first-child {
+    height:5%;
+    max-height:30px;
+}
+.codeContainer > div:last-child, .resultContainer > div:last-child {
+    height:95%;
+}
+table {
+	width:100%;height:100%;min-height:500px;min-width:540px;
+}
+.codeContainer {
+    position:relative;
+}
+.resultContainer {
+    position:relative;
+}
+.codeContainer > div:last-child, .resultContainer > div:last-child {
+    position:absolute;top:36px;bottom:14px;height:auto;width:100%;
+}
+#textareaCode,#textareaCode2 {
+	height:99.2%;
+	min-height:100px;
+}
+#iframeResult, #iframeResult2 {
+    height:100%;
+    min-height:100px;
+}
+.footerText {
+    background-color:#f1f1f1;
+	font-family:verdana;
+	font-size:0.9em;
+	width:auto;
+	text-align:right;
+	padding-bottom:7px;
+	padding-right:2%;
+    z-index:0;	
+}
+.footerText a {
+	color:#000000;
+}
+.footerText a:hover {
+	text-decoration:none;
+}
+.hintBtn {
+    border:none;
+    background-color:#f0ad4e;
+    padding:5px 10px;
+    color:#ffffff;
+    font-size:16px;
+    border-radius:4px;
+    margin-bottom:12px;
+    cursor:pointer;
+    position:absolute;
+}
+.hintBtn:hover {
+    background-color:#ec971f;
+}
+#hint {
+	visibility:hidden;
+}
+#tryitLeaderboard {
+    overflow:hidden;
+    text-align:center;
+    margin-top:5px;
+}
+@media screen and (max-width: 768px) {
+    #tryitLeaderboard {
+        margin-top:0;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    table {
+        min-width:320px;
+    }
+  @media screen and (orientation:portrait) {
+    #textareaCode {
+        font-size:18px;
+    }
+    .codeContainer, .resultContainer {
+		height:47%;
+		min-height:400px;
+		width:100%;
+		float:none;
+		margin-bottom:20px;
+    }
+    #showCorrectBtn, #hideCorrectBtn {
+	    margin-right:3%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_perspective_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:27 GMT -->
+<head>
+<style>
+#div1 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 50px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#div2 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  transform: rotateX(45deg);
+}
+</style>
+<script>
+function changePersp(value) {
+  document.getElementById('div1').style.perspective=value + "px";
+  document.getElementById('persp').innerHTML=value;
+}
+</script>
+</head>
+
+<body onload="changePersp(200);">
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+Change perspective:<br>
+<input type="range" min="45" max="2000" value="200" onchange="changePersp(this.value)" /><br>
+perspective: <span id="persp"></span>; 
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_perspective_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:27 GMT -->
+</html>

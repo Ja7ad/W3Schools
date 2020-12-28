@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/appml/aspx_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:30 GMT -->
+<head>
+<meta charset="utf-8">
+<title>Suppliers</title>
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<script src="2.0.3/appml.js"></script>
+</head>
+<body>
+<div class="w3-container w3-content">
+<h1>Suppliers</h1>
+<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" style="display:none;"
+appml-data="appml.aspx?model=model_suppliersform" appml-controller="myFormController">
+  <div appml-include-html="inc_formcommands.html"></div>
+  <p>
+    <label>SupplierID:</label>
+    <input id="SupplierID" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>SupplierName:</label>
+    <input id="SupplierName" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>ContactName:</label>
+    <input id="ContactName" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Address:</label>
+    <input id="Address" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>PostalCode:</label>
+    <input id="PostalCode" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>City:</label>
+    <input id="City" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Country:</label>
+    <input id="Country" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Phone:</label>
+    <input id="Phone" class="w3-input w3-border">
+  </p>
+</div>
+
+<div appml-data="appml.aspx?model=model_supplierslist">
+  <div appml-include-html="inc_listcommands.html"></div>
+  <div appml-include-html="inc_filter.html"></div>
+  <table class="w3-table-all">
+  <tr>
+  <th></th>
+  <th>Supplier</th>
+  <th>City</th>
+  <th>Country</th>
+  <th></th>
+  </tr>
+  <tr appml-repeat="records">
+  <td style="cursor:pointer" onclick="appml('Form01').run({{SupplierID}})">&#9998;</td>
+  <td>{{SupplierName}}</td>
+  <td>{{City}}</td>
+  <td>{{Country}}</td>
+  <td><a href='#' onclick="openProducts('{{SupplierID}}');return false;">Products</a></td>
+  </tr>
+  </table>
+</div>
+
+<div id="ProductsSection" class="w3-container w3-light-grey" appml-data="appml.aspx?model=model_productslist" appml-controller="myProductsController" style="display:none;padding:50px;margin-top:30px;">
+  <span onclick="document.getElementById('ProductsSection').style.display='none';" class="w3-button w3-xlarge w3-right">&times;</span>
+  <h2>{{records[0]['SupplierName']}}</h2>
+  <table class="w3-table-all">
+  <tr>
+    <th>Product</th>
+    <th>Category</th>
+    <th>Supplier</th>
+  </tr>
+  <tr appml-repeat="records">
+    <td>{{ProductName}}</td>
+    <td>{{CategoryName}}</td>
+    <td>{{SupplierName}}</td>
+  </tr>
+  </table>
+</div>
+
+</div>
+
+<script>
+function openProducts(id) {
+    appml("ProductsSection").clearQuery();
+    appml("ProductsSection").setQuery("Products.SupplierID", id);   
+    appml("ProductsSection").run();
+}
+function myFormController($appml) {
+    if ($appml.message == "ready") {return -1;}
+    if ($appml.message == "loaded") {
+        document.getElementById("Form01").style.display = "";
+    }
+}
+function myProductsController($appml) {
+    if ($appml.message == "ready") {return -1;}
+    if ($appml.message == "loaded") {
+        document.getElementById("ProductsSection").style.display = "";
+    }
+}
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/appml/aspx_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:30 GMT -->
+</html>

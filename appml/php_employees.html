@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/appml/php_employees.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:38 GMT -->
+<head>
+<meta charset="utf-8">
+<title>Employees</title>
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<script src="2.0.3/appml.js"></script>
+</head>
+<body>
+<div class="w3-container w3-content">
+<h1>Employees</h1>
+<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="appml.php?model=model_employeesform" appml-controller="myFormController" style="display:none;">
+  <div appml-include-html="inc_formcommands.html"></div>
+  <p>
+    <label>Last Name:</label>
+    <input id="LastName" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>First Name:</label>
+    <input id="FirstName" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Date of Birth:</label>
+    <input id="BirthDate" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Photo:</label>
+    <input id="Photo" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Notes:</label>
+    <input id="Notes" class="w3-input w3-border">
+  </p>
+</div>
+
+<div appml-data="appml2831.json?model=model_employeeslist">
+  <div appml-include-html="inc_listcommands.html"></div>
+  <div appml-include-html="inc_filter.html"></div>
+  <table class="w3-table-all">
+  <tr>
+    <th></th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Date of Birth</th>
+  </tr>
+  <tr appml-repeat="records">
+    <td style="cursor:pointer" onclick="appml('Form01').run({{EmployeeID}})">&#9998;</td>
+    <td>{{LastName}}</td>
+    <td>{{FirstName}}</td>
+    <td>{{BirthDate}}</td>
+  </tr>
+  </table>
+</div>
+</div>
+
+<script>
+function myFormController($appml) {
+    if ($appml.message == "ready") {return -1;}
+    if ($appml.message == "loaded") {
+        document.getElementById("Form01").style.display = "";
+    }
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/appml/php_employees.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:42 GMT -->
+</html>

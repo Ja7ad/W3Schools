@@ -1,0 +1,10 @@
+REDIRECT demo_adrotator.asp 
+*
+w3s.gif
+https://www.w3schools.com
+Free Tutorials from W3Schools
+50
+xmlspy.gif
+https://www.altova.com
+XML Editor from Altova
+50

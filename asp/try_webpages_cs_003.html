@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_003.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:35 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">@{<br>
+var db = Database.Open(&quot;SmallBakery&quot;);&nbsp;<br>
+var query = &quot;SELECT * FROM Product&quot;;&nbsp;<br>
+}</span><br>
+&lt;html&gt;&nbsp;<br>
+&lt;body&gt;&nbsp;<br>
+&lt;h1&gt;Small Bakery Products&lt;/h1&gt;&nbsp;<br>
+&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;&nbsp;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Id&lt;/th&gt;&nbsp;<br>
+&lt;th&gt;Product&lt;/th&gt;&nbsp;<br>
+&lt;th&gt;Description&lt;/th&gt;&nbsp;<br>
+&lt;th&gt;Price&lt;/th&gt;&nbsp;<br>
+&lt;/tr&gt;<br>
+<span class="marked">@foreach(var row in db.Query(query))<br>
+{</span><br>
+&lt;tr&gt;&nbsp;<br>
+&lt;td&gt;<span class="marked">@row.Id</span>&lt;/td&gt;&nbsp;<br>
+&lt;td&gt;<span class="marked">@row.Name</span>&lt;/td&gt;&nbsp;<br>
+&lt;td&gt;<span class="marked">@row.Description</span>&lt;/td&gt;&nbsp;<br>
+&lt;td style=&quot;text-align:right&quot;&gt;<span class="marked">@row.Price</span>&lt;/td&gt;&nbsp;<br>
+&lt;/tr&gt;&nbsp;<br>
+<span class="marked">}</span><br>
+&lt;/table&gt;&nbsp;<br>
+&lt;/body&gt;&nbsp;<br>
+&lt;/html&gt;
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_003.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:35 GMT -->
+</html>

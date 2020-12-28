@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_temp_store_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:25 GMT -->
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.row {
+    margin-bottom:6px;
+}
+
+.col-xs-4 {
+    border-left:6px solid white;
+    border-right:6px solid white;
+}
+
+.col-xs-12, .col-xs-3,  .col-xs-2,.col-xs-4, .col-xs-8{
+    background-color:#f1f1f1;
+    text-align:center;
+    padding-top:3px;
+}
+
+    .container-fluid:hover .col-xs-12 span.header:after {
+    content:'Navbar';
+}
+
+    .container-fluid:hover .col-xs-12 span.jumbotron:after {
+    content:'Jumbotron';
+}
+
+    .container-fluid:hover .col-xs-12 span.footer:after {
+    content:'Footer';
+}
+
+    .container-fluid:hover .col-xs-4 span:after {
+    content:'4 col';
+}
+  @media screen and (max-width: 350px) {
+    .container-fluid:hover .col-xs-4 span:after {
+    content:'4';
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12" style="height:58px;"><span class="jumbotron"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12" style="padding-top:1px;height:22px;"><span class="header"></span></div>
+  </div>
+
+  <div class="row">
+   <div class="container">
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="container">
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+      <div class="col-xs-4" style="height:50px;"><span></span></div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom:-6px !important;">
+    <div class="col-xs-12" style="height:28px;"><span class="footer"></span></div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_temp_store_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:25 GMT -->
+</html>

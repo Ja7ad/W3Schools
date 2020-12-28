@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/jsref/tryjsref_style_widows.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:45:25 GMT -->
+<head>
+<script>
+function ChangeWidows()
+{
+document.getElementById("p1").style.widows=document.getElementById("widows").value;
+}
+</script>
+<style>
+.othercontent
+{
+width:400px;
+border-top:19cm solid #c3c3c3;
+}
+
+@page
+{
+/* set size of printed page */
+size:21cm 27cm;
+margin-top:2cm;
+}
+
+@media print
+{
+.widows
+  {
+  widows:2;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="othercontent">
+<input id="widows" value="2"/>
+<button onclick="ChangeWidows();">Change widows</button>
+
+<p style="font-size:120%" id="p1">
+Change widows and see the print preview.<br>
+Line 2<br>
+Line 3<br>
+Line 4<br>
+Line 5<br>
+Line 6<br>
+Line 7<br>
+Line 8<br>
+</p>
+
+<div class="othercontent">
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/jsref/tryjsref_style_widows.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:45:25 GMT -->
+</html>

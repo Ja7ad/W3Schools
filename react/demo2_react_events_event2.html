@@ -1,0 +1,14 @@
+<script>
+class Football {
+  shoot(a) {
+    alert(a.type);
+    /*
+    The 'this' keyword refers to the component object
+    */
+  }
+}
+
+per = new Football()
+</script>
+
+<button onclick="per.shoot(event)">Take the shot!</button>

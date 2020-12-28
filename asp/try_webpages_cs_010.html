@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_010.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">
+@{<br>
+var imagePath=&quot;&quot;; <br>
+if( Request[&quot;Choice&quot;] != null)<br>
+&nbsp;&nbsp; {imagePath=&quot;images/&quot; + Request[&quot;Choice&quot;];} <br>
+} <br>
+</span>&lt;!DOCTYPE html&gt; <br>
+&lt;html&gt; <br>
+&lt;body&gt; <br>
+&lt;h1&gt;Display Images&lt;/h1&gt; <br>
+&lt;form method=&quot;post&quot; action=&quot;&quot;&gt; <br>
+I want to see: <br>
+&lt;select name=&quot;Choice&quot;&gt; <br>
+&nbsp;&nbsp;
+&lt;option value=&quot;Pic1.jpg&quot;&gt;Photo 1&lt;/option&gt; <br>
+&nbsp;&nbsp;
+&lt;option value=&quot;Pic2.jpg&quot;&gt;Photo 2&lt;/option&gt; <br>
+&nbsp;&nbsp;
+&lt;option value=&quot;Pic3.jpg&quot;&gt;Photo 3&lt;/option&gt; <br>
+&lt;/select&gt; <br>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt; <br>
+<span class="marked">
+@if(imagePath != &quot;&quot;)<br>
+{<br></span>&lt;p&gt;<br>&lt;img src=&quot;<span class="marked">@imagePath</span>&quot; alt=&quot;Sample&quot;&gt;<br>
+&lt;/p&gt;<span class="marked"><br>}</span>&nbsp; <br>
+&lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</body>
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_010.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+</html>

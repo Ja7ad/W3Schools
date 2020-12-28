@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from www.w3schools.com/tags/demo_iframe_sandbox_origin.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:20:06 GMT -->
+<body>
+<p>A list of books (from an XML file retrived using JavaScript):</p>
+<script>
+if (window.XMLHttpRequest)
+  {
+  xhttp=new XMLHttpRequest();
+  }
+else // for IE 5/6
+  {
+  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhttp.open("GET.html","books.xml",false);
+xhttp.send();
+xmlDoc=xhttp.responseXML;
+x=xmlDoc.getElementsByTagName('title');
+for (i=0;i<x.length;i++)
+{
+document.write(x[i].childNodes[0].nodeValue);
+document.write("<br>");
+}
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/tags/demo_iframe_sandbox_origin.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:20:08 GMT -->
+</html>

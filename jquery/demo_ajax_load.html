@@ -1,0 +1,1 @@
+AJAX is the art of exchanging data with a server, and update parts of a web page - without reloading the whole page.

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_009.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html>
+&lt;!DOCTYPE html&gt;<br>&lt;html&gt;&nbsp;<br>
+&lt;body&gt;&nbsp;<br>
+<span class="marked">@{<br>
+if (IsPost)<br>
+{&nbsp;<br>
+string companyname = Request[&quot;CompanyName&quot;];&nbsp;<br>
+string contactname = Request[&quot;ContactName&quot;];&nbsp;<br>
+</span>&lt;p&gt;You entered: &lt;br&gt;&nbsp;<br>
+Company Name: <span class="marked">@companyname</span> &lt;br&gt;&nbsp;<br>
+Contact Name: <span class="marked">@contactname</span> &lt;/p&gt;&nbsp;<br>
+<span class="marked">}<br>
+else<br>
+{<br>
+</span>&lt;form method=&quot;post&quot; action=&quot;&quot;&gt;<br>
+Company Name:&lt;br&gt;&nbsp;<br>
+&lt;input type=&quot;text&quot; name=&quot;CompanyName&quot; value=&quot;&quot;&gt;&lt;br&gt;<br>
+Contact Name:&lt;br&gt;&lt;br&gt;<br>
+&lt;input type=&quot;text&quot; name=&quot;ContactName&quot; value=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;submit&quot;&gt;<br>
+&lt;/form&gt;&nbsp;<br>
+<span class="marked">}<br>
+}</span><!DOCTYPE html>
+<html><body></body><br>
+<!DOCTYPE html>
+<html>&lt;/body&gt;&nbsp;<br>
+&lt;/html&gt;
+<!DOCTYPE html>
+<html>
+<body>
+</body>
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_009.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+</html>

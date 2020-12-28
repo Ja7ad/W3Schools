@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+    
+<!-- Mirrored from www.w3schools.com/jsref/playcanvas.asp?filename=playcanvas_font&preval=icon by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:19:37 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Playit</title>
+    <link rel="stylesheet" type="text/css" href="../tryit.css" />
+    <script>
+    <!--
+    function playit_onload()
+    {
+    var preval=""
+    preval=document.getElementById("preselectedValue").value
+    if (preval!="")
+        {
+        change_position(preval)
+        var x=document.getElementsByTagName("input")
+        var l=x.length
+        for (i=0;i<l;i++)
+            {
+            if (x[i].value==preval)
+                {
+                x[i].checked=true
+                }
+            }
+            document.getElementById("playitcontainer").style.display="block";
+            }
+    }
+    
+    function click_position(obj)
+    {
+    change_position(obj.value)
+    }
+    
+    function change_position(val)
+    {
+    var y="var c = document.getElementById('myCanvas');<br>  var ctx = c.getContext('2d');<br>  ctx.###CONTEXTPROP###;<br>  ctx.fillText('Hello World', 10, 30);<br>"    
+    var fnutt=""
+    var para1="="
+    var para2=""
+    
+            var x="font" + para1 + "<span id='enlargecontextprop'>" + fnutt + val + fnutt + "</span>" + para2
+        
+    var z=y.replace("###CONTEXTPROP###",x)
+    document.getElementById("styleDIV").innerHTML=z
+    var ctx=document.getElementById("myCanvas").getContext('2d');
+    
+    document.getElementById("myCanvas").width=430;
+    
+    ctx.clearRect(0,0,430,280);
+    
+        var x="font" + para1 + fnutt + val + fnutt + para2;
+    
+    var z=y.replace("###CONTEXTPROP###",x)
+    var x=z.replace(/<br>/gi,"")
+    eval(x)
+    }
+    
+    //-->
+    </script>
+    <style type="text/css"> body
+    {
+    font-family:verdana;
+    font-size:12px;
+    }
+    
+    #playitcontainer
+    {
+    width:974px;
+    background-color:#e5eecc;
+    border:1px solid #98bf21;
+    margin:auto;
+    display:none;
+    }
+    
+    #enlargecontextprop
+    {
+    font-weight:bold;
+    font-size:14px;
+    color:#000000;
+    }
+    
+    #myCanvas
+    {
+    margin-left:10px;
+    margin-top:3px;
+    background-color:#ffffff;
+    border:1px solid #c3c3c3;
+    }
+    
+    #styleDIV
+    {
+    font-family:courier new;
+    margin-left:10px;
+    background-color:#f1f1f1;
+    border:1px solid #c3c3c3;
+    width:424px;
+    padding:3px;
+    padding-top:7px;
+    padding-bottom:7px;    
+    color:#222222;
+    }
+    
+    div.demoHeader
+    {
+    font-size:14px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom:2px;
+    color:#617f10;
+    }
+    
+    div.playitFooter
+    {
+    font-size:13px;
+    color:#617f10;
+    padding:10px;
+    }
+    
+    #footer
+    {
+    margin:15px;
+    }
+    
+    </style>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-3855518-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+    </script>
+
+    <script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+    })();
+    </script>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() {
+    googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1383036313516-0').addService(googletag.pubads());
+    googletag.pubads().setTargeting("content","playcanvas");
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    });
+    </script>
+    </head>
+    <body>
+    <div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+    <div style="width:974px;height:94px;position:relative;margin:0px;margin-left:auto;margin-right:auto;margin-top:5px;margin-bottom:5px;padding:0px;overflow:hidden;">
+        <!-- TryitLeaderboard -->
+        <div id='div-gpt-ad-1383036313516-0' style='width:970px; height:90px;'>
+            <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1383036313516-0'); });
+            </script>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    </div>
+
+    
+    <div id="playitcontainer">
+    
+        <div style="width:450px;float:left;">
+                <div class="demoHeader">Property:</div>
+                <div style="font-size:14px;margin:10px;font-weight:bold;">font:</div>                
+                
+                <form style="margin:15px;" action="javascript:return false;">
+                    <input type="hidden" id="preselectedValue" value="icon" />
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="caption" /><label for="value_1">caption</label></div>
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="icon" /><label for="value_2">icon</label></div>
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="menu" /><label for="value_3">menu</label></div>
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="message-box" /><label for="value_4">message-box</label></div>
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_5" value="small-caption" /><label for="value_5">small-caption</label></div>
+                    
+                    <div><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_6" value="status-bar" /><label for="value_6">status-bar</label></div>
+                                
+                </form>
+                <div id="footer"></div>
+        </div>
+        <div style="width:450px;float:left;">
+            <div class="demoHeader">Canvas:</div>
+    
+            <div id="demoParent">
+
+                <canvas id="myCanvas" width="430" height="280">
+                your browser does not support the canvas tag </canvas>
+                <script>
+                var c = document.getElementById('myCanvas');
+  var ctx = c.getContext('2d');
+  ctx.font = 'caption';
+  ctx.fillText('Hello World', 10, 30);
+                </script>
+                
+            </div>
+            <div class="demoHeader">Code:</div>
+            <div id="styleDIV">
+            var c = document.getElementById('myCanvas');<br>  var ctx = c.getContext('2d');<br>  ctx.font <span id='enlargecontextprop'>= 'caption'</span>;<br>  ctx.fillText('Hello World', 10, 30);<br>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    
+        <div class="playitFooter" style="float:left;">Click the property values         above to see the result</div>
+        <div class="playitFooter" style="text-align:right;">
+            <a style="color:#617f10" href="../index.html">
+            W3Schools.com</a> - Play it
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <script>playit_onload()</script>    
+    </body>
+
+
+<!-- Mirrored from www.w3schools.com/jsref/playcanvas.asp?filename=playcanvas_font&preval=icon by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:19:37 GMT -->
+</html>

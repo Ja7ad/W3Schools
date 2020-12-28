@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages>
+  <link>
+    <title>HTML a tag</title>
+    <url>https://www.w3schools.com/tags/tag_a.asp</url>
+  </link>
+  <link>
+    <title>HTML br tag</title>
+    <url>https://www.w3schools.com/tags/tag_br.asp</url>
+  </link>
+  <link>
+    <title>CSS background Property</title>
+    <url>https://www.w3schools.com/cssref/css3_pr_background.asp</url>
+  </link>
+  <link>
+    <title>CSS border Property</title>
+    <url>https://www.w3schools.com/cssref/pr_border.asp</url>
+  </link>
+  <link>
+    <title>JavaScript Date Object</title>
+    <url>https://www.w3schools.com/jsref/jsref_obj_date.asp</url>
+  </link>
+  <link>
+    <title>JavaScript Array Object</title>
+    <url>https://www.w3schools.com/jsref/jsref_obj_array.asp</url>
+  </link>
+</pages>

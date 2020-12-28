@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+ 
+<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_fillrectw by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:06 GMT -->
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+ <title>Playit</title>
+ <link rel="stylesheet" type="text/css" href="../trystyle.css" />
+ <script>
+ <!--
+ function playit_onload()
+ {
+ var preval=""
+ preval=document.getElementById("preselectedValue").value
+ if (preval!="")
+  {
+  change_position(preval)
+  var x=document.getElementsByTagName("input")
+  var l=x.length
+  for (i=0;i<l;i++)
+   {
+   if (x[i].value==preval)
+    {
+    x[i].checked=true
+    }
+   }
+   document.getElementById("container").style.display="block";
+   }
+ }
+ 
+ function click_position(obj)
+ {
+ change_position(obj.value)
+ }
+ 
+ function change_position(val)
+ {
+ var y="var c=document.getElementById('myCanvas');<br>  var ctx=c.getContext('2d');<br>  ctx.###CONTEXTPROP###;<br>" 
+ var fnutt=""
+ var para1="("
+ var para2=")"
+ 
+   var x="fillRect" + para1 + "<span id='enlargecontextprop'>" + fnutt + val + fnutt + "</span>" + para2
+  
+ var z=y.replace("###CONTEXTPROP###",x)
+ document.getElementById("styleDIV").innerHTML=z
+ var ctx=document.getElementById("myCanvas").getContext('2d');
+ 
+ document.getElementById("myCanvas").width=430;
+ 
+ ctx.clearRect(0,0,430,280);
+ 
+  var x="fillRect" + para1 + fnutt + val + fnutt + para2;
+ 
+ var z=y.replace("###CONTEXTPROP###",x)
+ var x=z.replace(/<br>/gi,"")
+ eval(x)
+ }
+ 
+ //-->
+ </script>
+ <style> 
+
+body {
+ font-family:verdana;
+ font-size:14px;
+}
+.container {
+ width:100%;
+ max-width:974px;
+ min-width:0;
+ background-color:#f1f1f1;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin:auto;
+    left:0;
+    right:0;
+    height:auto;
+    bottom:auto;
+ 
+}
+.codecontainer {
+    width:50%;
+    float:left;
+}
+.codecontainer .radio {
+ line-height:2;
+}
+.resultcontainer {
+    width:48%;
+    float:left;
+}
+.playit {
+    background-color:#ffffff;
+    padding:15px;
+    margin:15px;
+    margin-top:0;
+    font-family:Consolas,'Courier New', Courier, monospace;
+    font-size:16px;
+}
+#enlargecontextprop {
+ font-weight:bold;
+ color:#000000;
+}
+#demoDIV {
+ margin-left:10px;
+ margin-top:3px;
+ margin-right:15px;
+ background-color:#ffffff;
+ border:1px solid #c3c3c3;
+ height:280px;
+ 
+}
+     
+#styleDIV {
+ font-family:consolas,Courier new;
+ font-size:14px;
+ margin-left:10px;
+ margin-right:15px;
+ background-color:#ffffff;
+ padding:10px;
+ color:#222222;
+ text-align:left;
+ }
+div.demoHeader {
+ font-size:24px;
+ margin-top:15px;
+ margin-left:15px;
+ margin-bottom:15px;
+ color:#555555;
+}
+div.playitFooter {
+ font-size:14px;
+ color:#555555;
+ padding:15px;
+}
+#pfooter {
+ margin:15px;
+}
+@media screen and (max-width: 728px) {
+    .codecontainer {
+        width:100%;
+        text-align:center;
+    }
+    .resultcontainer {
+        width:100%;
+        text-align:center;
+    }
+    .playitFooter {
+     display:none;
+    }
+    .container {
+     top:60px;
+    }
+}
+ 
+ </style>
+ <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ 
+ ga('create', 'UA-3855518-1', 'auto');
+ ga('require', 'displayfeatures');
+ ga('send', 'pageview');
+ </script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               autoStartAuction: false,
+               gdpr: {
+                     mainGeo: "us",
+                     reconsiderationAppealIntervalSeconds: 0
+                     }
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["try_it_leaderboard"]);
+
+   });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+         
+    }
+}
+</script>
+ </head>
+ <body>
+<div id='tryitLeaderboard' style="background-color:#ffffff">
+<!-- TryitLeaderboard -->
+
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+ 
+</div>
+
+
+ <div id="container" class="container">
+ 
+  <div class="codecontainer">
+    <div class="demoHeader">Property:</div>
+    <form class="playit" action="javascript:return false;">
+                fillRect:<br><br>
+    <input type="hidden" id="preselectedValue" value="" />
+    
+        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="20,20,10,100" checked='checked' /><label for="value_1">20,20,10,100</label></div>
+    
+        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="20,20,50,100" /><label for="value_2">20,20,50,100</label></div>
+    
+        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="20,20,100,100" /><label for="value_3">20,20,100,100</label></div>
+    
+        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="20,20,150,100" /><label for="value_4">20,20,150,100</label></div>
+    
+        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_5" value="20,20,200,100" /><label for="value_5">20,20,200,100</label></div>
+       
+    </form>
+    <div id="pfooter"></div>
+  </div>
+  <div class="resultcontainer">
+   <div class="demoHeader">Canvas:</div>
+ 
+   <div id="demoParent">
+              <div id="demoDIV">
+    <canvas id="myCanvas" width="430" height="280">
+    your browser does not support the canvas tag </canvas>
+    <script>
+    var c=document.getElementById('myCanvas');
+  var ctx=c.getContext('2d');
+  ctx.fillRect(20,20,10,100);
+    </script>
+              </div>    
+   </div>
+   <div class="demoHeader">Code:</div>
+<div id="styleDIV">
+var c=document.getElementById('myCanvas');<br>  var ctx=c.getContext('2d');<br>  ctx.fillRect(<span id='enlargecontextprop'>20,20,10,100)</span>;<br>
+</div>
+  </div>
+  <div style="clear:both;"></div>
+ 
+  <div class="playitFooter" style="float:left;">Click the property values   above to see the result</div>
+  <div class="playitFooter" style="text-align:right;">
+   <a style="color:#555555" href="../index.html">
+   W3Schools.com</a> - Play it
+  </div>
+  <div style="clear:both;"></div>
+ </div>
+ 
+ <script>playit_onload()</script> 
+ </body>
+
+
+<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_fillrectw by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:06 GMT -->
+</html>

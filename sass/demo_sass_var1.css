@@ -1,0 +1,10 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
+#container {
+  width: 680px;
+  border: 1px blue double;
+}

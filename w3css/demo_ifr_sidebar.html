@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:30 GMT -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@media screen and (max-width: 455px) {
+    .h3 {
+        font-size:16px;
+    }
+}
+</style>
+<body style="background:#e6e6e6;color:black;">
+
+<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width:200px" id="mySidebar">
+  <div class="w3-bar w3-dark-grey">
+  <span class="w3-bar-item w3-padding-16">Content</span>
+  <button onclick="w3_close()"
+  class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">&times;</button>
+  </div>
+  <div class="w3-bar-block">
+  <a class="w3-bar-item w3-button w3-green" href="javascript:void(0)">Home</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">About</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Contact</a>
+  <div class="w3-dropdown-hover">
+    <a class="w3-button" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+    </div>
+  </div>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Support</a>
+  </div>
+</div>
+
+<div id="main" style="margin-left:200px">
+
+<div class="w3-container w3-display-container">
+  <span title="open Sidebar" style="display:none" id="openNav" class="w3-button w3-transparent w3-display-topleft w3-xlarge" onclick="w3_open()">&#9776;</span>
+  <h3 class="h3" style="position:fixed;top:36px;">My Page</h3>
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "180px";
+  document.getElementById("mySidebar").style.width = "180px";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+      
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:30 GMT -->
+</html> 

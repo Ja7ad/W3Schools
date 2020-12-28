@@ -1,0 +1,10 @@
+<span onclick="document.getElementById('Form01').style.display='none'" class="w3-button w3-xlarge w3-right">&times;</span>
+<div class="w3-bar">
+  <button onclick="appml('Form01').newRecord();" class="w3-button w3-black">New</button>
+  <button onclick="appml('Form01').saveRecord();" class="w3-button w3-green">Save</button>
+  <button onclick="appml('Form01').deleteRecord();" class="w3-button w3-black">Delete</button>    
+</div>
+<div id="appmlmessage" class="w3-container w3-pale-yellow w3-padding" style="display:none;">
+  <span onclick="this.parentNode.style.display='none';" class="w3-button w3-xlarge w3-right">&times;</span>
+  <div id="message"></div>
+</div>

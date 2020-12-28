@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/appml/aspx_customers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:07 GMT -->
+<head>
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<script src="2.0.3/appml.js"></script>
+</head>
+<body>
+<div class="w3-container w3-content">
+<h1>Customers</h1>
+<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="appml.aspx?model=model_customersform" appml-controller="myFormController" style="display:none;">
+  <div appml-include-html="inc_formcommands.html"></div>
+  <p>
+    <label>CustomerName:</label>
+    <input id="customername" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>ContactName:</label>
+    <input id="contactname" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Address:</label>
+    <input id="address" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>City:</label>
+    <input id="city" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>PostalCode:</label>
+    <input id="postalcode" class="w3-input w3-border">
+  </p>
+  <p>
+    <label>Country:</label>
+    <input id="country" class="w3-input w3-border">
+  </p>
+</div>
+
+<div appml-data="appml.aspx?model=model_customerslist">
+  <div appml-include-html="inc_listcommands.html"></div>
+  <div appml-include-html="inc_filter.html"></div>
+  <table class="w3-table-all">
+    <tr>
+    <th></th>
+    <th>Customer</th>
+    <th>City</th>
+    <th>Country</th>
+    </tr>
+    <tr appml-repeat="records">
+    <td style="cursor:pointer;width:40px;" onclick="appml('Form01').run({{CustomerID}});">&#9998;</td>
+    <td>{{CustomerName}}</td>
+    <td>{{City}}</td>
+    <td>{{Country}}</td>
+    </tr>
+  </table>
+</div>
+</div>
+
+<script>
+function myFormController($appml) {
+    if ($appml.message == "ready") {return -1; }
+    if ($appml.message == "loaded") {
+        document.getElementById("Form01").style.display = "";
+    }
+}
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/appml/aspx_customers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:21:11 GMT -->
+</html>

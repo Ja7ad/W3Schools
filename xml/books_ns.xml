@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+<book xmlns:c="https://www.w3schools.com/children/" category="children">
+<c:title c:lang="en">Harry Potter</c:title>
+<c:author>J K. Rowling</c:author>
+<c:year>2005</c:year>
+<c:price>29.99</c:price>
+</book>
+<book xmlns:x="https://www.w3schools.com/xml/" category="web">
+<x:title x:lang="en">Learning XML</x:title>
+<x:author>Erik T. Ray</x:author>
+<x:year>2003</x:year>
+<x:price>39.95</x:price>
+</book>
+</bookstore>

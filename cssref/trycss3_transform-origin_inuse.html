@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform-origin_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+<head>
+<style>
+#div1
+{
+position: relative;
+height: 200px;
+width: 200px;
+margin: 50px;
+padding:10px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+transform: rotate(45deg);
+transform-origin:20% 40%;
+-ms-transform: rotate(45deg); /* IE 9 */
+-ms-transform-origin:20% 40%; /* IE 9 */
+}
+</style>
+<script>
+function changeRot(value)
+{
+document.getElementById('div2').style.transform="rotate(" + value + "deg)";
+document.getElementById('div2').style.msTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.webkitTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.MozTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.OTransform="rotate(" + value + "deg)";
+document.getElementById('persp').innerHTML=value + "deg";
+}
+
+function changeOrg()
+{
+var x=document.getElementById('ox').value;
+var y=document.getElementById('oy').value;
+document.getElementById('div2').style.transformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.msTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.webkitTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.MozTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.OTransformOrigin=x + '% ' + y + '%';
+document.getElementById('origin').innerHTML=x + "% " + y + "%";      
+}
+</script>
+</head>
+
+<body>
+
+<p>Rotate the red div element, try changing its X-axis and Y-axis:</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+Rotate:
+<input type="range" min="-360" max="360" value="45" onchange="changeRot(this.value)" />
+transform: rotateY:(<span id="persp">45deg</span>);
+<br><br>
+X-axis:<input type="range" min="-100" max="200" value="20" onchange="changeOrg()" id="ox" /><br>
+Y-axis:<input type="range" min="-100" max="200" value="40" onchange="changeOrg()" id="oy" />
+transform-origin: <span id="origin">20% 40%</span>;
+ 
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform-origin_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+</html>

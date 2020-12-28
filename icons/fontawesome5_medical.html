@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/icons/fontawesome5_medical.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:01 GMT -->
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.w3-table-all .fas, .w3-table-all .far, .w3-table-all .fab, .w3-table-all .glyphicon, .w3-table-all .material-icons { 
+    font-size: 24px;
+}
+.w3-table-all td:nth-child(3){ 
+    font-family:consolas,'Courier New', Courier, monospace;
+}
+label {
+  font-weight:normal;
+}
+#icontable_0 {
+  text-align: right;
+}
+.fa-home:before {content: '\f015';}
+.fa-globe:before {content:'\f0ac';}
+.fa-search:before {content:'\f002'; }
+.fa-facebook-square:before {content:'\f082';}
+.fa-google-plus-square:before {content:'\f0d4';}
+.fa-twitter-square:before {content:'\f081';}
+.fa-caret-down:before {content:'\f0d7';}
+.fa-caret-up:before {content:'\f0d8';}
+
+.fa-facebook-square,.fa-twitter-square,.fa-google-plus-square {padding:0;}
+
+</style>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+parent.resizeIframe();
+})
+</script>
+</head>
+<body>
+<table id="icontable_0" class="w3-table-all notranslate">
+
+    <tr>
+      <td><span class='fas fa-allergies'></span></td>
+      <td>fas fa-allergies</td>
+      <td>&amp;#xf461;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita3a9.html?icon=fas_fa-allergies&amp;unicon=f461">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-ambulance'></span></td>
+      <td>fas fa-ambulance</td>
+      <td>&amp;#xf0f9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitb689.html?icon=fas_fa-ambulance&amp;unicon=f0f9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-band-aid'></span></td>
+      <td>fas fa-band-aid</td>
+      <td>&amp;#xf462;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4891-2.html?icon=fas_fa-band-aid&amp;unicon=f462">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-biohazard'></span></td>
+      <td>fas fa-biohazard</td>
+      <td>&amp;#xf780;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit459b.html?icon=fas_fa-biohazard&amp;unicon=f780">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-bone'></span></td>
+      <td>fas fa-bone</td>
+      <td>&amp;#xf5d7;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6421.html?icon=fas_fa-bone&amp;unicon=f5d7">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-bong'></span></td>
+      <td>fas fa-bong</td>
+      <td>&amp;#xf55c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitda51.html?icon=fas_fa-bong&amp;unicon=f55c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-book-medical'></span></td>
+      <td>fas fa-book-medical</td>
+      <td>&amp;#xf7e6;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4eed.html?icon=fas_fa-book-medical&amp;unicon=f7e6">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-brain'></span></td>
+      <td>fas fa-brain</td>
+      <td>&amp;#xf5dc;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite04a.html?icon=fas_fa-brain&amp;unicon=f5dc">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-briefcase-medical'></span></td>
+      <td>fas fa-briefcase-medical</td>
+      <td>&amp;#xf469;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5e3e.html?icon=fas_fa-briefcase-medical&amp;unicon=f469">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-burn'></span></td>
+      <td>fas fa-burn</td>
+      <td>&amp;#xf46a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitcad0.html?icon=fas_fa-burn&amp;unicon=f46a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-cannabis'></span></td>
+      <td>fas fa-cannabis</td>
+      <td>&amp;#xf55f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitdd8e.html?icon=fas_fa-cannabis&amp;unicon=f55f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-capsules'></span></td>
+      <td>fas fa-capsules</td>
+      <td>&amp;#xf46b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitcd29.html?icon=fas_fa-capsules&amp;unicon=f46b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-clinic-medical'></span></td>
+      <td>fas fa-clinic-medical</td>
+      <td>&amp;#xf7f2;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit0d1d.html?icon=fas_fa-clinic-medical&amp;unicon=f7f2">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-comment-medical'></span></td>
+      <td>fas fa-comment-medical</td>
+      <td>&amp;#xf7f5;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit1dfa.html?icon=fas_fa-comment-medical&amp;unicon=f7f5">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-crutch'></span></td>
+      <td>fas fa-crutch</td>
+      <td>&amp;#xf7f7;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2b4b.html?icon=fas_fa-crutch&amp;unicon=f7f7">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-diagnoses'></span></td>
+      <td>fas fa-diagnoses</td>
+      <td>&amp;#xf470;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitaa2e.html?icon=fas_fa-diagnoses&amp;unicon=f470">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-dna'></span></td>
+      <td>fas fa-dna</td>
+      <td>&amp;#xf471;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitdb7c.html?icon=fas_fa-dna&amp;unicon=f471">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-file-medical'></span></td>
+      <td>fas fa-file-medical</td>
+      <td>&amp;#xf477;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit736d.html?icon=fas_fa-file-medical&amp;unicon=f477">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-file-medical-alt'></span></td>
+      <td>fas fa-file-medical-alt</td>
+      <td>&amp;#xf478;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5b2e.html?icon=fas_fa-file-medical-alt&amp;unicon=f478">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-file-prescription'></span></td>
+      <td>fas fa-file-prescription</td>
+      <td>&amp;#xf572;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita898.html?icon=fas_fa-file-prescription&amp;unicon=f572">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-first-aid'></span></td>
+      <td>fas fa-first-aid</td>
+      <td>&amp;#xf479;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit52ed.html?icon=fas_fa-first-aid&amp;unicon=f479">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-hand-holding-medical'></span></td>
+      <td>fas fa-hand-holding-medical</td>
+      <td>&amp;#xf95c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitec29.html?icon=fas_fa-hand-holding-medical&amp;unicon=f95c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-head-side-cough'></span></td>
+      <td>fas fa-head-side-cough</td>
+      <td>&amp;#xf961;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita332.html?icon=fas_fa-head-side-cough&amp;unicon=f961">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-head-side-cough-slash'></span></td>
+      <td>fas fa-head-side-cough-slash</td>
+      <td>&amp;#xf962;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitaf4b.html?icon=fas_fa-head-side-cough-slash&amp;unicon=f962">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-head-side-mask'></span></td>
+      <td>fas fa-head-side-mask</td>
+      <td>&amp;#xf963;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita433.html?icon=fas_fa-head-side-mask&amp;unicon=f963">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-head-side-virus'></span></td>
+      <td>fas fa-head-side-virus</td>
+      <td>&amp;#xf964;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf95a-2.html?icon=fas_fa-head-side-virus&amp;unicon=f964">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-heart'></span></td>
+      <td>fas fa-heart</td>
+      <td>&amp;#xf004;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf0f8.html?icon=fas_fa-heart&amp;unicon=f004">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-heart'></span></td>
+      <td>far fa-heart</td>
+      <td>&amp;#xf004;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit36d0-2.html?icon=far_fa-heart&amp;unicon=f004">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-heartbeat'></span></td>
+      <td>fas fa-heartbeat</td>
+      <td>&amp;#xf21e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit044a.html?icon=fas_fa-heartbeat&amp;unicon=f21e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-hospital'></span></td>
+      <td>fas fa-hospital</td>
+      <td>&amp;#xf0f8;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit3f19.html?icon=fas_fa-hospital&amp;unicon=f0f8">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-hospital'></span></td>
+      <td>far fa-hospital</td>
+      <td>&amp;#xf0f8;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit531d.html?icon=far_fa-hospital&amp;unicon=f0f8">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-hospital-alt'></span></td>
+      <td>fas fa-hospital-alt</td>
+      <td>&amp;#xf47d;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd171.html?icon=fas_fa-hospital-alt&amp;unicon=f47d">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-hospital-symbol'></span></td>
+      <td>fas fa-hospital-symbol</td>
+      <td>&amp;#xf47e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit12f9.html?icon=fas_fa-hospital-symbol&amp;unicon=f47e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-id-card-alt'></span></td>
+      <td>fas fa-id-card-alt</td>
+      <td>&amp;#xf47f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit28db.html?icon=fas_fa-id-card-alt&amp;unicon=f47f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-joint'></span></td>
+      <td>fas fa-joint</td>
+      <td>&amp;#xf595;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit52a2.html?icon=fas_fa-joint&amp;unicon=f595">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-laptop-medical'></span></td>
+      <td>fas fa-laptop-medical</td>
+      <td>&amp;#xf812;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit64f5.html?icon=fas_fa-laptop-medical&amp;unicon=f812">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-lungs-virus'></span></td>
+      <td>fas fa-lungs-virus</td>
+      <td>&amp;#xf967;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit57fd.html?icon=fas_fa-lungs-virus&amp;unicon=f967">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-microscope'></span></td>
+      <td>fas fa-microscope</td>
+      <td>&amp;#xf610;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit46ef.html?icon=fas_fa-microscope&amp;unicon=f610">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-mortar-pestle'></span></td>
+      <td>fas fa-mortar-pestle</td>
+      <td>&amp;#xf5a7;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit154b.html?icon=fas_fa-mortar-pestle&amp;unicon=f5a7">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-notes-medical'></span></td>
+      <td>fas fa-notes-medical</td>
+      <td>&amp;#xf481;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5646.html?icon=fas_fa-notes-medical&amp;unicon=f481">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-pager'></span></td>
+      <td>fas fa-pager</td>
+      <td>&amp;#xf815;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit14ec.html?icon=fas_fa-pager&amp;unicon=f815">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-pills'></span></td>
+      <td>fas fa-pills</td>
+      <td>&amp;#xf484;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5ecc-2.html?icon=fas_fa-pills&amp;unicon=f484">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-plus'></span></td>
+      <td>fas fa-plus</td>
+      <td>&amp;#xf067;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9d16.html?icon=fas_fa-plus&amp;unicon=f067">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-poop'></span></td>
+      <td>fas fa-poop</td>
+      <td>&amp;#xf619;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite5e0.html?icon=fas_fa-poop&amp;unicon=f619">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-prescription'></span></td>
+      <td>fas fa-prescription</td>
+      <td>&amp;#xf5b1;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd270.html?icon=fas_fa-prescription&amp;unicon=f5b1">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-prescription-bottle'></span></td>
+      <td>fas fa-prescription-bottle</td>
+      <td>&amp;#xf485;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit549a.html?icon=fas_fa-prescription-bottle&amp;unicon=f485">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-prescription-bottle-alt'></span></td>
+      <td>fas fa-prescription-bottle-alt</td>
+      <td>&amp;#xf486;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2d7f.html?icon=fas_fa-prescription-bottle-alt&amp;unicon=f486">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-procedures'></span></td>
+      <td>fas fa-procedures</td>
+      <td>&amp;#xf487;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd208.html?icon=fas_fa-procedures&amp;unicon=f487">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-pump-medical'></span></td>
+      <td>fas fa-pump-medical</td>
+      <td>&amp;#xf96a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9ee2.html?icon=fas_fa-pump-medical&amp;unicon=f96a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-radiation'></span></td>
+      <td>fas fa-radiation</td>
+      <td>&amp;#xf7b9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit1d5f.html?icon=fas_fa-radiation&amp;unicon=f7b9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-radiation-alt'></span></td>
+      <td>fas fa-radiation-alt</td>
+      <td>&amp;#xf7ba;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit733d.html?icon=fas_fa-radiation-alt&amp;unicon=f7ba">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-shield-virus'></span></td>
+      <td>fas fa-shield-virus</td>
+      <td>&amp;#xf96c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit1538.html?icon=fas_fa-shield-virus&amp;unicon=f96c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-smoking'></span></td>
+      <td>fas fa-smoking</td>
+      <td>&amp;#xf48d;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit0c8b.html?icon=fas_fa-smoking&amp;unicon=f48d">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-smoking-ban'></span></td>
+      <td>fas fa-smoking-ban</td>
+      <td>&amp;#xf54d;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit90c7.html?icon=fas_fa-smoking-ban&amp;unicon=f54d">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-star-of-life'></span></td>
+      <td>fas fa-star-of-life</td>
+      <td>&amp;#xf621;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6fba.html?icon=fas_fa-star-of-life&amp;unicon=f621">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-stethoscope'></span></td>
+      <td>fas fa-stethoscope</td>
+      <td>&amp;#xf0f1;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7d72.html?icon=fas_fa-stethoscope&amp;unicon=f0f1">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-syringe'></span></td>
+      <td>fas fa-syringe</td>
+      <td>&amp;#xf48e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4d71.html?icon=fas_fa-syringe&amp;unicon=f48e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-tablets'></span></td>
+      <td>fas fa-tablets</td>
+      <td>&amp;#xf490;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitba48-2.html?icon=fas_fa-tablets&amp;unicon=f490">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-teeth'></span></td>
+      <td>fas fa-teeth</td>
+      <td>&amp;#xf62e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit28fb.html?icon=fas_fa-teeth&amp;unicon=f62e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-teeth-open'></span></td>
+      <td>fas fa-teeth-open</td>
+      <td>&amp;#xf62f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitedad.html?icon=fas_fa-teeth-open&amp;unicon=f62f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer'></span></td>
+      <td>fas fa-thermometer</td>
+      <td>&amp;#xf491;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite46c.html?icon=fas_fa-thermometer&amp;unicon=f491">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-tooth'></span></td>
+      <td>fas fa-tooth</td>
+      <td>&amp;#xf5c9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitaf4a.html?icon=fas_fa-tooth&amp;unicon=f5c9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user-md'></span></td>
+      <td>fas fa-user-md</td>
+      <td>&amp;#xf0f0;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5402.html?icon=fas_fa-user-md&amp;unicon=f0f0">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user-nurse'></span></td>
+      <td>fas fa-user-nurse</td>
+      <td>&amp;#xf82f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd40f.html?icon=fas_fa-user-nurse&amp;unicon=f82f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-vial'></span></td>
+      <td>fas fa-vial</td>
+      <td>&amp;#xf492;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita48e.html?icon=fas_fa-vial&amp;unicon=f492">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-vials'></span></td>
+      <td>fas fa-vials</td>
+      <td>&amp;#xf493;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite365.html?icon=fas_fa-vials&amp;unicon=f493">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-virus'></span></td>
+      <td>fas fa-virus</td>
+      <td>&amp;#xf974;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit44cf.html?icon=fas_fa-virus&amp;unicon=f974">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-virus-slash'></span></td>
+      <td>fas fa-virus-slash</td>
+      <td>&amp;#xf975;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit69e4.html?icon=fas_fa-virus-slash&amp;unicon=f975">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-viruses'></span></td>
+      <td>fas fa-viruses</td>
+      <td>&amp;#xf976;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite393.html?icon=fas_fa-viruses&amp;unicon=f976">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-weight'></span></td>
+      <td>fas fa-weight</td>
+      <td>&amp;#xf496;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit22a1.html?icon=fas_fa-weight&amp;unicon=f496">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-x-ray'></span></td>
+      <td>fas fa-x-ray</td>
+      <td>&amp;#xf497;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4d93.html?icon=fas_fa-x-ray&amp;unicon=f497">Try it</a></td>
+    </tr>
+  
+
+</table>
+</body>
+
+<!-- Mirrored from www.w3schools.com/icons/fontawesome5_medical.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:01 GMT -->
+</html>

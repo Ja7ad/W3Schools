@@ -1,0 +1,1932 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/css/css_examples.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 21:34:23 GMT -->
+<head>
+<title>CSS Examples</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+</head><body>
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
+
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
+  </div>
+
+  <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+    THE WORLD'S LARGEST WEB DEVELOPER SITE
+  </div>
+
+</div>
+
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='default.html' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Tutorial'>JAVA</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+
+
+
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='../../shop.w3schools.com/index.html'>SHOP</a>
+
+      <a class="w3-bar-item w3-button w3-right" href='../cert/default.html' title='Certificates'>CERTIFICATES</a>
+
+      <!--
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      -->
+      
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right w3-hide-medium" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML and CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='../howto/default.html'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Learn Sass</a>          
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="../appml/default.html">Learn AppML</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Learn W3.JS</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
+          <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Learn PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Learn Raspberry Pi</a>          
+          <h3>Web Building</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+          <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google Maps Reference</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Reference</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="../appml/appml_reference.html">AppML Reference</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Reference</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Reference</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Reference</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Reference</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Reference</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Character Sets</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Exercises</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="css_exercises.html">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Exercises</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Quizzes</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='css_quiz.html' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Quiz</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Quiz</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Quiz</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Certificate</a>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+
+    <div id='nav_login' class='w3-bar-block w3-card-2' style="display:none">
+      <span onclick='w3_close_nav("login")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class="loginmodaldiv" style="padding:48px 16px 1px 16px;text-align:center;">
+        <h2>LOG IN</h2>
+        <div style="font-size:15px"><a href="../../mypage.w3schools.com/mypage/index.html">Why Log In?</a></div>
+        <div class="loginmodalform">
+          <form id="loginform" name="loginform" autocomplete="off" method="post">
+            <div><label>Username</label></div>
+            <div><input type="email" name="n" placeholder="Enter your e-mail address" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="p" placeholder="Enter Your Password" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div id="loginerrordiv" style="display:none" class="w3-text-red"></div>
+            <div class="login_submit_container"><button id="login_submit_button" type="submit" onclick="login_user(event)">LOG IN</button></div>
+            <div style="overflow:auto;margin-top:10px;font-size:15px;">
+            <div class="login_newusertext">New User? <a href="../../mypage.w3schools.com/mypage/login8236.html?logintyp=1" target="_blank">Sign Up For Free!</a></div>
+            <div class="login_forgotpasswordtext"><a href="../../mypage.w3schools.com/mypage/forgot_password.html">Forgot password?</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+<a target="_top" href="default.html">CSS HOME</a>
+<a target="_top" href="css_intro.html">CSS Introduction</a>
+<a target="_top" href="css_syntax.html">CSS Syntax</a>
+<a target="_top" href="css_selectors.html">CSS Selectors</a>
+<a target="_top" href="css_howto.html">CSS How To</a>
+<a target="_top" href="css_comments.html">CSS Comments</a>
+<a target="_top" href="css_colors.html">CSS Colors</a>
+<div class="tut_overview">
+  <a target="_top" href="css_colors.html">Colors</a>
+  <a target="_top" href="css_colors_rgb.html">RGB</a>
+  <a target="_top" href="css_colors_hex.html">HEX</a>
+  <a target="_top" href="css_colors_hsl.html">HSL</a>
+</div>
+<a target="_top" href="css_background.html">CSS Backgrounds</a>
+<div class="tut_overview">
+  <a target="_top" href="css_background.html">Background Color</a>
+  <a target="_top" href="css_background_image.html">Background Image</a>
+  <a target="_top" href="css_background_repeat.html">Background Repeat</a>
+  <a target="_top" href="css_background_attachment.html">Background Attachment</a>
+  <a target="_top" href="css_background_shorthand.html">Background Shorthand</a>
+</div>
+<a target="_top" href="css_border.html">CSS Borders</a>
+<div class="tut_overview">
+  <a target="_top" href="css_border.html">Borders</a>
+  <a target="_top" href="css_border_width.html">Border Width</a>
+  <a target="_top" href="css_border_color.html">Border Color</a>
+  <a target="_top" href="css_border_sides.html">Border Sides</a>
+  <a target="_top" href="css_border_shorthand.html">Border Shorthand</a>
+  <a target="_top" href="css_border_rounded.html">Rounded Borders</a>
+</div>
+<a target="_top" href="css_margin.html">CSS Margins</a>
+<div class="tut_overview">
+<a target="_top" href="css_margin.html">Margins</a>
+<a target="_top" href="css_margin_collapse.html">Margin Collapse</a>
+</div>
+<a target="_top" href="css_padding.html">CSS Padding</a>
+<a target="_top" href="css_dimension.html">CSS Height/Width</a>
+<a target="_top" href="css_boxmodel.html">CSS Box Model</a>
+<a target="_top" href="css_outline.html">CSS Outline</a>
+<div class="tut_overview">
+<a target="_top" href="css_outline.html">Outline</a>
+<a target="_top" href="css_outline_width.html">Outline Width</a>
+<a target="_top" href="css_outline_color.html">Outline Color</a>
+<a target="_top" href="css_outline_shorthand.html">Outline Shorthand</a>
+<a target="_top" href="css_outline_offset.html">Outline Offset</a>
+</div>
+<a target="_top" href="css_text.html">CSS Text</a>
+<div class="tut_overview">
+<a target="_top" href="css_text.html">Text Color</a>
+<a target="_top" href="css_text_align.html">Text Alignment</a>
+<a target="_top" href="css_text_decoration.html">Text Decoration</a>
+<a target="_top" href="css_text_transformation.html">Text Transformation</a>
+<a target="_top" href="css_text_spacing.html">Text Spacing</a>
+<a target="_top" href="css_text_shadow.html">Text Shadow</a>
+</div>
+<a target="_top" href="css_font.html">CSS Fonts</a>
+<div class="tut_overview">
+<a target="_top" href="css_font.html">Font Family</a>
+<a target="_top" href="css_font_websafe.html">Font Web Safe</a>
+<a target="_top" href="css_font_fallbacks.html">Font Fallbacks</a>
+<a target="_top" href="css_font_style.html">Font Style</a>
+<a target="_top" href="css_font_size.html">Font Size</a>
+<a target="_top" href="css_font_google.html">Font Google</a>
+<a target="_top" href="css_font_pairings.html">Font Pairings</a>
+<a target="_top" href="css_font_shorthand.html">Font Shorthand</a>
+</div>
+<a target="_top" href="css_icons.html">CSS Icons</a>
+<a target="_top" href="css_link.html">CSS Links</a>
+<a target="_top" href="css_list.html">CSS Lists</a>
+<a target="_top" href="css_table.html">CSS Tables</a>
+<div class="tut_overview">
+<a target="_top" href="css_table.html">Table Borders</a>
+<a target="_top" href="css_table_size.html">Table Size</a>
+<a target="_top" href="css_table_align.html">Table Alignment</a>
+<a target="_top" href="css_table_style.html">Table Style</a>
+<a target="_top" href="css_table_responsive.html">Table Responsive</a>
+</div>
+<a target="_top" href="css_display_visibility.html">CSS Display</a>
+<a target="_top" href="css_max-width.html">CSS Max-width</a>
+<a target="_top" href="css_positioning.html">CSS Position</a>
+<a target="_top" href="css_overflow.html">CSS Overflow</a>
+<a target="_top" href="css_float.html">CSS Float</a>
+<div class="tut_overview">
+<a target="_top" href="css_float.html">Float</a>
+<a target="_top" href="css_float_clear.html">Clear</a>
+<a target="_top" href="css_float_examples.html">Float Examples</a>
+</div>
+<a target="_top" href="css_inline-block.html">CSS Inline-block</a>
+<a target="_top" href="css_align.html">CSS Align</a>
+<a target="_top" href="css_combinators.html">CSS Combinators</a>
+<a target="_top" href="css_pseudo_classes.html">CSS Pseudo-class</a>
+<a target="_top" href="css_pseudo_elements.html">CSS Pseudo-element</a>
+<a target="_top" href="css_image_transparency.html">CSS Opacity</a>
+<a target="_top" href="css_navbar.html">CSS Navigation Bar</a>
+<div class="tut_overview">
+<a target="_top" href="css_navbar.html">Navbar</a>
+<a target="_top" href="css_navbar_vertical.html">Vertical Navbar</a>
+<a target="_top" href="css_navbar_horizontal.html">Horizontal Navbar</a>
+</div>
+<a target="_top" href="css_dropdowns.html">CSS Dropdowns</a>
+<a target="_top" href="css_image_gallery.html">CSS Image Gallery</a>
+<a target="_top" href="css_image_sprites.html">CSS Image Sprites</a>
+<a target="_top" href="css_attribute_selectors.html">CSS Attr Selectors</a>
+<a target="_top" href="css_form.html">CSS Forms</a>
+<a target="_top" href="css_counters.html">CSS Counters</a>
+<a target="_top" href="css_website_layout.html">CSS Website Layout</a>
+<a target="_top" href="css_units.html">CSS Units</a>
+<a target="_top" href="css_specificity.html">CSS Specificity</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS Advanced</span></h2>
+<a target="_top" href="css3_borders.html">CSS Rounded Corners</a>
+<a target="_top" href="css3_border_images.html">CSS Border Images</a>
+<a target="_top" href="css3_backgrounds.html">CSS Backgrounds</a>
+<a target="_top" href="css3_colors.html">CSS Colors</a>
+<a target="_top" href="css3_gradients.html">CSS Gradients</a>
+<div class="tut_overview">
+<a target="_top" href="css3_gradients.html">Linear Gradients</a>
+<a target="_top" href="css3_gradients_radial.html">Radial Gradients</a>
+</div>
+<a target="_top" href="css3_shadows.html">CSS Shadows</a>
+<div class="tut_overview">
+<a target="_top" href="css3_shadows.html">Shadow Effects</a>
+<a target="_top" href="css3_shadows_box.html">Box Shadow</a>
+</div>
+<a target="_top" href="css3_text_effects.html">CSS Text Effects</a>
+<a target="_top" href="css3_fonts.html">CSS Web Fonts</a>
+<a target="_top" href="css3_2dtransforms.html">CSS 2D Transforms</a>
+<a target="_top" href="css3_3dtransforms.html">CSS 3D Transforms</a>
+<a target="_top" href="css3_transitions.html">CSS Transitions</a>
+<a target="_top" href="css3_animations.html">CSS Animations</a>
+<a target="_top" href="css_tooltip.html">CSS Tooltips</a>
+<a target="_top" href="css3_images.html">CSS Style Images</a>
+<a target="_top" href="css3_object-fit.html">CSS object-fit</a>
+<a target="_top" href="css3_buttons.html">CSS Buttons</a>
+<a target="_top" href="css3_pagination.html">CSS Pagination</a>
+<a target="_top" href="css3_multiple_columns.html">CSS Multiple Columns</a>
+<a target="_top" href="css3_user_interface.html">CSS User Interface</a>
+<a target="_top" href="css3_variables.html">CSS Variables</a>
+<div class="tut_overview">
+<a target="_top" href="css3_variables.html">The var() Function</a>
+<a target="_top" href="css3_variables_overriding.html">Overriding Variables</a>
+<a target="_top" href="css3_variables_javascript.html">Variables and JavaScript</a>
+<a target="_top" href="css3_variables_mediaqueries.html">Variables in Media Queries</a>
+</div>
+<a target="_top" href="css3_box-sizing.html">CSS Box Sizing</a>
+<a target="_top" href="css3_mediaqueries.html">CSS Media Queries</a>
+<a target="_top" href="css3_mediaqueries_ex.html">CSS MQ Examples</a>
+<a target="_top" href="css3_flexbox.html">CSS Flexbox</a>
+<div class="tut_overview">
+<a target="_top" href="css3_flexbox.html">CSS Flexbox</a>
+<a target="_top" href="css3_flexbox_container.html">CSS Flex Container</a>
+<a target="_top" href="css3_flexbox_items.html">CSS Flex Items</a>
+<a target="_top" href="css3_flexbox_responsive.html">CSS Flex Responsive</a>
+</div>
+
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Responsive</h2>
+<a target="_top" href="css_rwd_intro.html">RWD Intro</a>
+<a target="_top" href="css_rwd_viewport.html">RWD Viewport</a>
+<a target="_top" href="css_rwd_grid.html">RWD Grid View</a>
+<a target="_top" href="css_rwd_mediaqueries.html">RWD Media Queries</a>
+<a target="_top" href="css_rwd_images.html">RWD Images</a>
+<a target="_top" href="css_rwd_videos.html">RWD Videos</a>
+<a target="_top" href="css_rwd_frameworks.html">RWD Frameworks</a>
+<a target="_top" href="css_rwd_templates.html">RWD Templates</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Grid</h2>
+<a target="_top" href="css_grid.html">Grid Intro</a>
+<a target="_top" href="css_grid_container.html">Grid Container</a>
+<a target="_top" href="css_grid_item.html">Grid Item</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Examples</h2>
+<a target="_top" href="css_templates.html">CSS Templates</a>
+<a target="_top" href="css_examples.html">CSS Examples</a>
+<a target="_top" href="css_quiz.html">CSS Quiz</a>
+<a target="_top" href="css_exercises.html">CSS Exercises</a>
+<a target="_top" href="css_exam.html">CSS Certificate</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> References</h2>
+<a target="_top" href="../cssref/default.html">CSS Reference</a>
+<a target="_top" href="../cssref/css_selectors.html">CSS Selectors</a>
+<a target="_top" href="../cssref/css_functions.html">CSS Functions</a>
+<a target="_top" href="../cssref/css_ref_aural.html">CSS Reference Aural</a>
+<a target="_top" href="../cssref/css_websafe_fonts.html">CSS Web Safe Fonts</a>
+<a target="_top" href="../cssref/css_animatable.html">CSS Animatable</a>
+<a target="_top" href="../cssref/css_units.html">CSS Units</a>
+<a target="_top" href="../cssref/css_pxtoemconversion.html">CSS PX-EM Converter</a>
+<a target="_top" href="../cssref/css_colors.html">CSS Colors</a>
+<a target="_top" href="../cssref/css_colors_legal.html">CSS Color Values</a>
+<a target="_top" href="../cssref/css_default_values.html">CSS Default Values</a>
+<a target="_top" href="../cssref/css3_browsersupport.html">CSS Browser Support</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+       
+      </div>
+<h1>CSS <span class="color_h1">Examples</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_templates.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_quiz.html">Next &#10095;</a>
+</div>
+<hr>
+
+<h3>CSS Syntax</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit059a.html?filename=trycss_syntax1">CSS syntax</a>
+</div>
+<p><a href="css_syntax.html" class="w3-btn">CSS syntax explained</a></p>
+<hr>
+
+<h3>CSS Selectors</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit6cd1.html?filename=trycss_syntax_element">The element selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit758e.html?filename=trycss_syntax_id">The id selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit561a.html?filename=trycss_syntax_class">The class selector (for all elements)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit979d.html?filename=trycss_syntax_element_class">The class selector (for only &lt;p&gt; elements)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdea6.html?filename=trycss_syntax_element_class2">An HTML element that refer to two classes</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1946.html?filename=trycss_syntax_universal">The universal selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7b98.html?filename=trycss_grouping">Grouping selectors</a>
+</div>
+<p><a href="css_selectors.html" class="w3-btn">CSS selectors explained</a></p>
+<hr>
+
+<h3>CSS How To / Where To</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit4784.html?filename=trycss_howto_external">External CSS</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc6df.html?filename=trycss_howto_internal">Internal CSS</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3df2.html?filename=trycss_howto_inline">Inline CSS</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryiteae8.html?filename=trycss_howto_multiple">Multiple style sheets</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7be4.html?filename=trycss_howto_cascade">Cascading order</a>
+</div>
+<p><a href="css_howto.html" class="w3-btn">CSS how to explained</a></p>
+<hr>
+
+<h3>CSS Comments</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit1660.html?filename=trycss_comments">Single-line comment</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9eae.html?filename=trycss_comments3">Multi-line comment</a>
+</div>
+<p><a href="css_comments.html" class="w3-btn">CSS comments explained</a></p>
+<hr>
+
+
+<h3>CSS Colors</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc44b.html?filename=trycss_color_background">Set the background color of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7b93.html?filename=trycss_color_text">Set the text color</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb847.html?filename=trycss_color_border">Set the border color</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit12c9.html?filename=trycss_color_values">Set different color values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit103e.html?filename=trycss_color_rgb2">Set RGB values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7ec5.html?filename=trycss_color_hex_gray">Set HEX values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7af3.html?filename=trycss_color_hsl2">Set HSL values</a>
+</div>
+<p><a href="css_colors.html" class="w3-btn">CSS colors explained</a></p>
+<hr>
+
+<h3>CSS Backgrounds</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit3c26.html?filename=trycss_background-color_body">Set the background color of a page</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3e53.html?filename=trycss_background-color_elements">Set the background color of different elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitba26.html?filename=trycss_background-image">Set an image as the background of a page</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5773.html?filename=trycss_background-image_gradient2">How to repeat a background image only horizontally</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6009.html?filename=trycss_background-image_position">How to position a background image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3d6b.html?filename=trycss_background-image_attachment">A fixed background image (this image will not scroll with the rest of the page)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitaf20.html?filename=trycss_background_shorthand">All the background properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitac88.html?filename=trycss_background_shorthand2">Advanced background example</a>
+</div>
+<p><a href="css_background.html" class="w3-btn">Background properties explained</a></p>
+<hr>
+
+<h3>CSS Borders</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitd1e6.html?filename=trycss_border-width">Set the width of the four borders</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc992.html?filename=trycss_border-top-width">Set the width of the top border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8400.html?filename=trycss_border-bottom-width">Set the width of the bottom border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit23e2.html?filename=trycss_border-left-width">Set the width of the left border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit953c.html?filename=trycss_border-right-width">Set the width of the right border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitaf4a.html?filename=trycss_border-style">Set the style of the four borders</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitac0d.html?filename=trycss_border-top-style">Set the style of the top border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit785f.html?filename=trycss_border-bottom-style">Set the style of the bottom border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita499.html?filename=trycss_border-left-style">Set the style of the left border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfea9.html?filename=trycss_border-right-style">Set the style of the right border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitad55.html?filename=trycss_border-color">Set the color of the four borders</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite53c.html?filename=trycss_border-top-color">Set the color of the top border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb7f0.html?filename=trycss_border-bottom-color">Set the color of the bottom border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5b68.html?filename=trycss_border-left-color">Set the color of the left border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit313f.html?filename=trycss_border-right-color">Set the color of the right border</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2a57.html?filename=trycss_border">All the border properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1aee.html?filename=trycss_border_round">Add rounded borders to an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4a2c.html?filename=trycss_border-style2">Set different borders on each side</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9f9d.html?filename=trycss_border-top">All the top border properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitae57.html?filename=trycss_border-bottom">All the bottom border properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf929.html?filename=trycss_border-left">All the left border properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita259.html?filename=trycss_border-right">All the right border properties in one declaration</a>
+</div>
+<p><a href="css_border.html" class="w3-btn">Border properties explained</a></p>
+<hr>
+
+<h3>CSS Margins</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit89c4.html?filename=trycss_margin_sides">Specify different margins for each side of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitba8f.html?filename=trycss_margin_shorthand_4val">Use shorthand margin property with four values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite83a.html?filename=trycss_margin_shorthand_3val">Use shorthand margin property with three values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3254.html?filename=trycss_margin_shorthand_2val">Use shorthand margin property with two values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdcf7.html?filename=trycss_margin_shorthand_1val">Use shorthand margin property with one value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc5dd.html?filename=trycss_margin_auto">Set margin to auto to center the element within its container</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2d48.html?filename=trycss_margin-left_inherit">Let the left margin be inherited from the parent element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit174a.html?filename=trycss_margin_collapse">Margin collapse</a>
+</div>
+<p><a href="css_margin.html" class="w3-btn">Margin properties explained</a></p>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+
+</div>
+<hr>
+
+<h3>CSS Padding</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitb587.html?filename=trycss_padding_sides">Specify different padding for each side of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc489.html?filename=trycss_padding_shorthand_4val">Use shorthand padding property with four values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita7ca.html?filename=trycss_padding_shorthand_3val">Use shorthand padding property with three values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0e86.html?filename=trycss_padding_shorthand_2val">Use shorthand padding property with two values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9b4c.html?filename=trycss_padding_shorthand_1val">Use shorthand padding property with one value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc855.html?filename=trycss_padding_width">Padding and element width (without box-sizing)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2534.html?filename=trycss_padding_width2">Padding and element width (with box-sizing)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite883.html?filename=trycss_padding-left">Set padding-left of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita159.html?filename=trycss_padding-right">Set padding-right of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6b9f.html?filename=trycss_padding-top">Set padding-top of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3989.html?filename=trycss_padding-bottom">Set padding-bottom of an element</a>
+</div>
+<p><a href="css_padding.html" class="w3-btn">Padding properties explained</a></p>
+<hr>
+
+<h3>CSS Height/Width</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit53bb.html?filename=trycss_dim_height_width">Set the height and width of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7350.html?filename=trycss_dim_max_width">Set max-width of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3394.html?filename=trycss_dim_height">Set the height and width of different elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit892a.html?filename=trycss_dim_height_percent">Set the height and width of an image using percent</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit470c.html?filename=trycss_dim_max-width">Set min-width and max-width of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit68b0.html?filename=trycss_dim_max-height">Set min-height and max-height of an element</a>
+</div>
+<p><a href="css_dimension.html" class="w3-btn">Dimension properties explained</a></p>
+<hr>
+
+<h3>CSS Box Model</h3>
+<div class="w3-bar-block"><a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryita7e3.html?filename=trycss_boxmodel">Demonstrating the box model</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb31c.html?filename=trycss_boxmodel_width">Specify an element with a total width of 250px</a>
+</div>
+<p><a href="css_boxmodel.html" class="w3-btn">Box model explained</a></p>
+<hr>
+
+<h3>CSS Outline</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc2f5.html?filename=trycss_outline_intro">Draw a line around an element (outline)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitda6b.html?filename=trycss_outline-style">Set the style of an outline</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd231.html?filename=trycss_outline-color">Set the color of an outline</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfdca.html?filename=trycss_outline-color_invert">Use outline-color: invert on an outline</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8da9.html?filename=trycss_outline-width">Set the width of an outline</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit681b.html?filename=trycss_outline">Use the shorthand outline property</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb968.html?filename=trycss_outline-offset">Add space between an outline and the edge/border of an element</a>
+</div>
+<p><a href="css_outline.html" class="w3-btn">Outline properties explained</a></p>
+<hr>
+
+<h3>CSS Text</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryita86c.html?filename=trycss_color">Set the text color of different elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6191.html?filename=trycss_text-align">Align the text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd447.html?filename=trycss_text-decoration_link">Remove the line under links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6cff.html?filename=trycss_text-decoration">Decorate the text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitea05.html?filename=trycss_text-transform">Control the letters in a text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6d5c.html?filename=trycss_text-indent">Indent text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3123.html?filename=trycss_letter-spacing">Specify the space between characters</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit44c1.html?filename=trycss_line-height">Specify the space between lines</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6f15.html?filename=trycss_text_direction">Set the text direction of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6926.html?filename=trycss_text_word-spacing">Increase the white space between words</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9f9b.html?filename=trycss_text-shadow">Specify a text shadow for an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit96c9.html?filename=trycss_text_white-space">Disable text wrapping inside an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0c65.html?filename=trycss_vertical-align">Vertical alignment of an image inside text</a>
+</div>
+<p><a href="css_text.html" class="w3-btn">Text properties explained</a></p>
+<hr>
+
+<h3>CSS Fonts</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit4238.html?filename=trycss_font-family">Set the font of a text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit17d0.html?filename=trycss_font-size">Set the size of the font</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitbc1d.html?filename=trycss_font-size_px">Set the size of the font in px</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2806.html?filename=trycss_font-size_em">Set the size of the font in em</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitff7e.html?filename=trycss_font-size_percent_em">Set the size of the font in percent and em</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit74fb.html?filename=trycss_font-style">Set the style of the font</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit193f.html?filename=trycss_font-variant">Set the variant of the font</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf616.html?filename=trycss_font-weight">Set the boldness of the font</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit46ae.html?filename=trycss_font">All the font properties in one declaration</a>
+</div>
+<p><a href="css_font.html" class="w3-btn">Font properties explained</a></p>
+<hr>
+
+<h3>CSS Icons</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit62fd.html?filename=trycss_icons_fa">Font Awesome icons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1e02.html?filename=trycss_icons_bs">Bootstrap icons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4b54.html?filename=trycss_icons_google">Google icons</a>
+</div>
+<p><a href="css_icons.html" class="w3-btn">Icons explained</a></p>
+<hr>
+
+<h3>CSS Links</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit9cfd.html?filename=trycss_link">Add different colors to visited/unvisited links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit56a1.html?filename=trycss_link_decoration">Use of text-decoration on links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitafeb.html?filename=trycss_link_background">Specify a background color for links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb066.html?filename=trycss_link2">Add other styles to hyperlinks</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8646.html?filename=trycss_cursor">Different types of cursors</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit051c.html?filename=trycss_link_advanced">Advanced - Create link boxes</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf6ca.html?filename=trycss_link_advanced2">Advanced - Create link boxes with borders</a>
+</div>
+<p><a href="css_link.html" class="w3-btn">Link properties explained</a></p>
+<hr>
+
+<h3>CSS Lists</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit3139.html?filename=trycss_list-style-type_all">All the different list item markers in lists</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf2b7.html?filename=trycss_list-style-image">Set an image as the list-item marker</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfa9c.html?filename=trycss_list-style-position">Position the list-item marker</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit10fb.html?filename=trycss_list-style_none">Remove default list settings</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc76e.html?filename=trycss_list-style">All list properties in one declaration</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf009.html?filename=trycss_list-style_colors">Style lists with colors</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit896a.html?filename=trycss_list-style-border">Full-width bordered list</a>
+</div>
+<p><a href="css_list.html" class="w3-btn">List properties explained</a></p>
+<hr>
+
+<h3>CSS Tables</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit7d2f.html?filename=trycss_table_border">Specify a black border for table, th, and td elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0bfc.html?filename=trycss_table_border-collapse">Use of border-collapse</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite0cd.html?filename=trycss_table_border2">Single border around the table</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfa95.html?filename=trycss_table_width">Specify the width and height of a table</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitefd0.html?filename=trycss_table_align">Set the horizontal alignment of content (text-align)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb6fe.html?filename=trycss_table_vertical-align">Set the vertical alignment of content (vertical-align)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite0b2.html?filename=trycss_table_padding">Specify the padding for th and td elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit55d6.html?filename=trycss_table_border_divider">Horizontal dividers</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit147b.html?filename=trycss_table_hover">Hoverable table</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit68c5.html?filename=trycss_table_striped">Striped tables</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf3ff.html?filename=trycss_table_color">Specify the color of the table borders</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7a2e.html?filename=trycss_table_caption-side">Set the position of the table caption</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4335.html?filename=trycss_table_responsive">Responsive Table</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfbac.html?filename=trycss_table_fancy">Create a fancy table</a>
+</div>
+<p><a href="css_table.html" class="w3-btn">Table properties explained</a></p>
+<hr>
+
+<h3>CSS Display</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitfccc.html?filename=trycss_visibility_hidden">How to hide an element (visibility:hidden)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3fbf.html?filename=trycss_display_none">How to not display an element (display:none)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" href="tryit85b6.html?filename=trycss_display_inline" target="_blank">How to display a block-level element as an inline element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc72e.html?filename=trycss_display_block">How to display an inline element as a block-level element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf471.html?filename=trycss_display_js">How to to use CSS together with JavaScript to show hidden content</a>
+</div>
+<p><a href="css_display_visibility.html" class="w3-btn">Display properties explained</a></p>
+<hr>
+
+<h3>CSS Positioning</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit8c3e.html?filename=trycss_position_fixed">Position an element relative to the browser window</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdd82.html?filename=trycss_position_relative">Position an element relative to its normal position</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3149.html?filename=trycss_position_absolute">Position an element with an absolute value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit974d.html?filename=trycss_position_sticky">Sticky positioning</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit089e.html?filename=trycss_zindex">Overlapping elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1049.html?filename=trycss_clip">Set the shape of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita6c7.html?filename=trycss_position_top">Set the top edge of an image using a pixel value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit660b.html?filename=trycss_position_bottom">Set the bottom edge of an image using a pixel value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5d11.html?filename=trycss_position_left">Set the left edge of an image using a pixel value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb1ac.html?filename=trycss_position_right">Set the right edge of an image using a pixel value</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5822.html?filename=trycss_image_text_top_left">Position image text (top left corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitef9a.html?filename=trycss_image_text_top_right">Position image text (top right corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd915.html?filename=trycss_image_text_bottom_left">Position image text (bottom left corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite5c6.html?filename=trycss_image_text_bottom_right">Position image text (bottom right corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcf58.html?filename=trycss_image_text_center">Position image text (centered)</a>
+</div>
+<p><a href="css_positioning.html" class="w3-btn">Positioning properties explained</a></p>
+<hr>
+
+<h3>CSS Overflow</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit14e2.html?filename=trycss_overflow_visible">Using overflow: visible - The overflow is not clipped. It renders outside the element's box.</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitbe4e.html?filename=trycss_overflow_hidden">Using overflow: hidden - The overflow is clipped, and the rest of the content is hidden.</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitea6b.html?filename=trycss_overflow_scroll">Using overflow: scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content.</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfd80.html?filename=trycss_overflow_auto">Using overflow: auto - If overflow is clipped, a scrollbar should be added to see the rest of the content.</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8949.html?filename=trycss_overflow_xy">Using overflow-x and overflow-y.</a>
+</div>
+<p><a href="css_overflow.html" class="w3-btn">Overflow properties explained</a></p>
+<hr>
+
+<h3>CSS Floating</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit3410.html?filename=trycss_float">A simple use of the float property</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdc63.html?filename=trycss_float2">An image with border and margins that floats to the right in a paragraph</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit34c1.html?filename=trycss_float3">An image with a caption that floats to the right</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfb5c.html?filename=trycss_float4">Let the first letter of a paragraph float to the left</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitab25.html?filename=trycss_float_clear">Turning off float (using the clear property)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5f01.html?filename=trycss_layout_clearfix2">Turning off float (using the "clearfix" hack)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5650.html?filename=trycss_float_boxes">Create floating boxes</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0d67.html?filename=trycss_float_images_side">Create side-by-side images</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit920e.html?filename=trycss_float_boxes_flex">Create equal-height boxes (with flexbox)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdd3c.html?filename=trycss_float5">Creating a horizontal menu</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit39f9.html?filename=trycss_layout_cols">Create a web layout example</a>
+</div>
+<p><a href="css_float.html" class="w3-btn">Float properties explained</a></p>
+<hr>
+
+<h3>CSS Inline-block</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitdaa5.html?filename=trycss_inline-block_span1">Show the differences between inline, inline-block and block</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8827.html?filename=trycss_inline-block_nav">Using inline-block to create navigation links</a>
+</div>
+<p><a href="css_inline-block.html" class="w3-btn">Inline-block explained</a></p>
+<hr>
+
+
+<h3>CSS Aligning Elements</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit5e0e.html?filename=trycss_align_container">Center aligning with margin</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2577.html?filename=trycss_align_text">Center aligning text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7ff6.html?filename=trycss_align_image">Center an image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc326.html?filename=trycss_align_pos">Left/Right aligning with position</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit795e.html?filename=trycss_align_pos_crossbrowser">Left/Right aligning with position - Crossbrowser solution</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitae98.html?filename=trycss_align_float">Left/Right aligning with float</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdee4.html?filename=trycss_align_float_crossbrowser">Left/Right aligning with float - Crossbrowser solution</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2411.html?filename=trycss_align_padding">Center vertically with padding</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7833.html?filename=trycss_align_padding2">Center vertically and horizontally</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9664.html?filename=trycss_align_line-height">Center vertically with line-height</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita36d.html?filename=trycss_align_transform">Center vertically and horizontally with position</a>
+</div>
+<p><a href="css_align.html" class="w3-btn">Align properties explained</a></p>
+<hr>
+
+<h3>CSS Combinators</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit393d.html?filename=trycss_sel_element_element">Descendant selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6031.html?filename=trycss_sel_element_gt">Child selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7cec.html?filename=trycss_sel_element_pluss">Adjacent Sibling selector</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcf87.html?filename=trycss_sel_element_tilde">General Sibling selector</a>
+</div>
+<p><a href="css_combinators.html" class="w3-btn">Combinator selectors explained</a></p>
+<hr>
+
+<h3>CSS Pseudo-classes</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit9cfd.html?filename=trycss_link">Add different colors to a hyperlink</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb066.html?filename=trycss_link2">Add other styles to hyperlinks</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitde22.html?filename=trycss_link_focus">Use of :focus</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit00a0.html?filename=trycss_first-child1">:first-child - match the first p element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3ae1.html?filename=trycss_first-child2">:first-child - match the first i element in all p elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdf75.html?filename=trycss_first-child3">:first-child - Match all i elements in all first child p elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0a95.html?filename=trycss_lang">Use of :lang</a>
+</div>
+<p><a href="css_pseudo_classes.html" class="w3-btn">Pseudo-classes explained</a></p>
+<hr>
+
+<h3>CSS Pseudo-elements</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit4276.html?filename=trycss_firstletter">Make the first letter special in a text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit63b5.html?filename=trycss_firstline">Make the first line special in a text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit82af.html?filename=trycss_firstline_letter">Make the first letter and first line special</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8e8b.html?filename=trycss_before">Use :before to insert some content before an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcb70.html?filename=trycss_after">Use :after to insert some content after an element</a>
+</div>
+<p><a href="css_pseudo_elements.html" class="w3-btn">Pseudo-elements explained</a></p>
+<hr>
+
+<h3>CSS Generated Content</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit471f.html?filename=trycss_gen_content">Insert the URL in parenthesis after each link with the content property</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf8c5.html?filename=trycss_gen_counter-reset">Numbering sections and sub-sections with "Section 1", "1.1", "1.2", etc.</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb74f.html?filename=trycss_gen_quotes">Specify the quotation marks with the quotes property</a>
+</div>
+<p><a href="css_counters.html" class="w3-btn">CSS Counters explained</a></p>
+<hr>
+
+<h3>CSS Opacity</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit8775.html?filename=trycss_image_opacity">Creating transparent images</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfbfe.html?filename=trycss_image_transparency">Creating transparent images - mouseover effect</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit97ad.html?filename=trycss_image_transparency2">Reversed mouseover effect for transparent images</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5d9d.html?filename=trycss_opacity_box">Transparent box/div</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitceb8.html?filename=trycss_opacity_box2">Transparent box/div with RGBA values</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0893.html?filename=trycss_transparency">Creating a transparent box with text on a background image</a>
+</div>
+<p><a href="css_image_transparency.html" class="w3-btn">Image opacity explained</a></p>
+<hr>
+
+<h3>CSS Navigation Bars</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitad31.html?filename=trycss_navbar_vertical_active">Fully styled vertical navigation bar</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9494.html?filename=trycss_navbar_horizontal_float_advanced">Fully styled horizontal navigation bar</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitbe1d.html?filename=trycss_navbar_vertical_fixed">Full-height fixed vertical navigation bar</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3e7f.html?filename=trycss_navbar_horizontal_black_fixed">Fixed horizontal navigation bar</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb668.html?filename=trycss_navbar_sticky">Sticky navigation bar (does not work in IE or Edge 15 and earlier)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf95e.html?filename=trycss_navbar_horizontal_responsive">Responsive top navigation</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryiteca8.html?filename=trycss_navbar_vertical_responsive">Responsive side navigation</a>
+</div>
+<p><a href="css_navbar.html" class="w3-btn">Navigation bars explained</a></p>
+<hr>
+
+<h3>CSS Dropdowns</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc51f.html?filename=trycss_dropdown_text">Dropdown text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitda1d.html?filename=trycss_dropdown_button">Dropdown menu</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit901d.html?filename=trycss_dropdown_right">Right-aligned dropdown menu</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf7f1.html?filename=trycss_dropdown_image">Dropdown image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc02c.html?filename=trycss_dropdown_navbar">Dropdown navigation bar</a>
+</div>
+<p><a href="css_dropdowns.html" class="w3-btn">Dropdowns explained</a></p>
+<hr>
+
+<h3>CSS Image Gallery</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit46de.html?filename=trycss_image_gallery">Image gallery</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8e89.html?filename=trycss_image_gallery_responsive">Responsive Image gallery</a>
+</div>
+<p><a href="css_image_gallery.html" class="w3-btn">Image gallery explained</a></p>
+<hr>
+
+<h3>CSS Image Sprites</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit0e1d.html?filename=trycss_sprites_img">An image sprite</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9e9c.html?filename=trycss_sprites_nav">An image sprite - a navigation list</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7636.html?filename=trycss_sprites_hover_nav">An image sprite with hover effect</a>
+</div>
+<p><a href="css_image_sprites.html" class="w3-btn">Image sprites explained</a></p>
+<hr>
+
+<h3>CSS Attribute Selectors</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc29e.html?filename=trycss_sel_attribute">Selects all &lt;a&gt; elements with a target attribute</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit428c.html?filename=trycss_sel_attribute_value">Selects all &lt;a&gt; elements with a target="_blank" attribute</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfa06.html?filename=trycss_sel_attribute_value2">Selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower"</a><a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4284.html?filename=trycss_sel_attribute_hyphen">Selects all elements with a class attribute value that begins with "top" (must be whole word)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1d8c.html?filename=trycss_sel_attribute_start">Selects all elements with a class attribute value that begins with "top" (must not be whole word)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc5c9.html?filename=trycss_sel_attribute_end">Selects all elements with a class attribute value that ends with "test"</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita277.html?filename=trycss_sel_attribute_contain">Selects all elements with a class attribute value that contains "te"</a>
+</div>
+<p><a href="css_attribute_selectors.html" class="w3-btn">Attribute selectors explained</a></p>
+<hr>
+
+<h3>CSS Forms</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc596.html?filename=trycss_form_width">Full-width input field</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2395.html?filename=trycss_form_padding">Padded input field</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8b1e.html?filename=trycss_form_border">Bordered input field</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit44ee.html?filename=trycss_form_border2">Bottom bordered input field</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit037d.html?filename=trycss_form_color">Colored input fields</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita78e.html?filename=trycss_form_focus">Focused input fields</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit558e.html?filename=trycss_form_focus2">Focused input fields 2</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2882.html?filename=trycss_form_icon">Input with icon/image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7a32.html?filename=trycss_form_search_anim">Animated search input</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3daf.html?filename=trycss_form_textarea">Styling textareas</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9afc.html?filename=trycss_form_select">Styling select menus</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4082.html?filename=trycss_form_button">Styling input buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4694.html?filename=trycss_form_responsive">Responsive form</a>
+</div>
+<p><a href="css_form.html" class="w3-btn">Forms explained</a></p>
+<hr>
+
+<h3>CSS Counters</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit5a5e.html?filename=trycss_counters1">Create a counter</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcfd4.html?filename=trycss_counters2">Nested counters 1</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitbd19.html?filename=trycss_counters3">Nested counters 2</a>
+</div>
+<p><a href="css_counters.html" class="w3-btn">Counters explained</a></p>
+<hr>
+
+<h3>CSS Website Layout</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitaa9a.html?filename=trycss_website_layout_footer">Simple, responsive website layout</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitba6d.html?filename=trycss_website_layout_blog">A website example</a>
+</div>
+<p><a href="css_website_layout.html" class="w3-btn">Website Layout explained</a></p>
+<hr>
+
+<h3>CSS Rounded Corners</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit075a.html?filename=trycss3_border-radius">Add rounded corners to elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf239.html?filename=trycss3_border-radius2">Round each corner separately</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7ea4.html?filename=trycss3_border-radius3">Create elliptical corners</a>
+</div>
+<p><a href="css3_borders.html" class="w3-btn">CSS rounded corners explained</a></p>
+<hr>
+
+<h3>CSS Border Images</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" href="tryit20e1.html?filename=trycss3_border-image" target="_blank">Create an image border around an element, using the round keyword</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" href="tryit3ba7.html?filename=trycss3_border-image2" target="_blank">Create an image border around an element, using the stretch keyword</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7e73.html?filename=trycss3_border-image3">Image border - Different slice values</a>
+</div>
+<p><a href="css3_border_images.html" class="w3-btn">CSS border images explained</a></p>
+<hr>
+
+<h3>CSS Backgrounds</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit6afd.html?filename=trycss3_background_multiple">Add multiple background images for an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit75b9.html?filename=trycss3_background-size">Specify the size of a background image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdc3e.html?filename=trycss3_background-size_contain">Scale a background image using &quot;contain&quot; and &quot;cover&quot;</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit59c5.html?filename=trycss3_background_multiple3">Define sizes of multiple background images</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3954.html?filename=trycss3_background_full">Full-size background image (completely fill the content area)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit54da.html?filename=trycss3_background-origin">Use background-origin to specify where the background image is positioned</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdcf8.html?filename=trycss3_background-clip">Use background-clip to specify the painting area of the background</a>
+</div>
+<p><a href="css3_backgrounds.html" class="w3-btn">CSS backgrounds explained</a></p>
+<hr>
+
+<h3>CSS Gradients</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitfcd7.html?filename=trycss3_gradient-linear">Linear Gradient - top to bottom</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita722.html?filename=trycss3_gradient-linear_ltr">Linear Gradient - left to right</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6f4c.html?filename=trycss3_gradient-linear_diagonal">Linear Gradient - diagonal</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit364c.html?filename=trycss3_gradient-linear_angles">Linear Gradient - with a specified angle</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6176.html?filename=trycss3_gradient-linear_cs">Linear Gradient - with multiple color stops</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5bb5.html?filename=trycss3_gradient-linear_rainbow">Linear Gradient - color of a rainbow + text</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9997.html?filename=trycss3_gradient-linear_trans">Linear Gradient - with transparency</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1921.html?filename=trycss3_gradient-linear_repeating">Linear Gradient - a repeating linear gradient</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit89ad.html?filename=trycss3_gradient-radial">Radial Gradient - evenly spaced color stops</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf401.html?filename=trycss3_gradient-radial2">Radial Gradient - differently spaced color stops</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd354.html?filename=trycss3_gradient-radial_shape">Radial Gradient - set shape</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5255.html?filename=trycss3_gradient-radial_size">Radial Gradient - different size keywords</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit129c.html?filename=trycss3_gradient-radial_repeating">Radial Gradient - a repeating radial gradient</a>
+</div>
+<p><a href="css3_gradients.html" class="w3-btn">CSS gradients explained</a></p>
+<hr>
+
+<h3>CSS Shadow Effects</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitba9e.html?filename=trycss3_text-shadow1">Simple shadow effect</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita531.html?filename=trycss3_text-shadow2">Add a color to the shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6461.html?filename=trycss3_text-shadow3">Add a blur effect to the shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3575.html?filename=trycss3_text-shadow4">White text with black shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf322.html?filename=trycss3_text-shadow5">A red neon glow shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdcf0.html?filename=trycss3_text-shadow6">A red and blue neon glow shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcbd9.html?filename=trycss3_text-shadow7">White text with black, blue, and darkblue shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1d94.html?filename=trycss3_box-shadow">Add a simple box-shadow to an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite7d0.html?filename=trycss3_box-shadow2">Add color to box-shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfdfc.html?filename=trycss3_box-shadow3">Add color and blur effect to box-shadow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0392.html?filename=trycss3_box-shadow4">Create paper-like cards (text)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd7ee.html?filename=trycss3_box-shadow5">Create paper-like cards (polaroid images)</a>
+</div>
+<p><a href="css3_shadows.html" class="w3-btn">CSS shadow effects explained</a></p>
+<hr>
+
+<h3>CSS Text Effects</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit1199.html?filename=trycss3_text-overflow">Specify how hidden, overflowed content should be signaled to the user</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitae55.html?filename=trycss3_text-overflow_hover">How to display the overflowed content when hover over the element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9c61.html?filename=trycss3_word-wrap">Allow long words to be able to be broken and wrap onto the next line</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9fc1.html?filename=trycss3_word-break">Specify line breaking rules</a>
+</div>
+<p><a href="css3_text_effects.html" class="w3-btn">CSS text explained</a></p>
+<hr>
+
+<h3>CSS Web Fonts</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit374e.html?filename=trycss3_font-face_rule">Use your "own" fonts in @font-face rule</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2c15.html?filename=trycss3_font-face_rule_bold">Use your "own" fonts in @font-face rule (bold)</a>
+</div>
+<p><a href="css3_fonts.html" class="w3-btn">CSS web fonts explained</a></p>
+<hr>
+
+<h3>CSS 2D Transforms</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit139f.html?filename=trycss3_transform_translate">translate() - move an element from its current position</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit811b.html?filename=trycss3_transform_rotate">rotate() - rotate an element clockwise</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita6c0.html?filename=trycss3_transform_rotate2">rotate() - rotate an element counter-clockwise</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf3be.html?filename=trycss3_transform_scale">scale() - increase an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit213e.html?filename=trycss3_transform_scale2">scale() - decrease an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf112.html?filename=trycss3_transform_skewx">skewX() - skews an element along the X-axis</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf273.html?filename=trycss3_transform_skewy">skewY() - skews an element along the Y-axis</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit92d3.html?filename=trycss3_transform_skew">skew() - skews an element along the X and Y-axis</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit514d.html?filename=trycss3_transform_matrix1">matrix() - rotate, scale, move, and skew an element</a>
+</div>
+<p><a href="css3_2dtransforms.html" class="w3-btn">CSS 2D transforms explained</a></p>
+<hr>
+
+<h3>CSS 3D Transforms</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitcb4d.html?filename=trycss3_transform_rotatex">rotateX() - rotate an element around its X-axis at a given degree</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit705a.html?filename=trycss3_transform_rotatey">rotateY() - rotate an element around its Y-axis at a given degree</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitddbc.html?filename=trycss3_transform_rotatez">rotateZ() - rotate an element around its Z-axis at a given degree</a>
+</div>
+<p><a href="css3_3dtransforms.html" class="w3-btn">CSS 3D transforms explained</a></p>
+<hr>
+
+<h3>CSS Transitions</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit57d2.html?filename=trycss3_transition1">Transition - change width of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite10e.html?filename=trycss3_transition2">Transition - change width and height of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc563.html?filename=trycss3_transition_speed">Specify different speed curves for a transition</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite7e7.html?filename=trycss3_transition_delay">Specify a delay for a transition effect</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6cb6.html?filename=trycss3_transition_transform">Add a transformation to a transition effect</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb3a7.html?filename=trycss3_transition5">Specify all transition properties in one shorthand property</a>
+</div>
+<p><a href="css3_transitions.html" class="w3-btn">CSS transitions explained</a></p>
+<hr>
+
+<h3>CSS Animations</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit4135.html?filename=trycss3_animation1">Bind an animation to an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc224.html?filename=trycss3_animation2">Animation - change background-color of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit21fd.html?filename=trycss3_animation3">Animation - change background-color and position of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit227f.html?filename=trycss3_animation_delay">Delay an animation</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc10d.html?filename=trycss3_animation_count">Run animation 3 times before it stops</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5499.html?filename=trycss3_animation_count2">Run animation for ever</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryited33.html?filename=trycss3_animation_direction">Run animation in reverse direction</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita186.html?filename=trycss3_animation_direction2">Run animation in alternate cycles</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3ecb.html?filename=trycss3_animation_speed">Speed curves for animations</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcfe0.html?filename=trycss3_animation5">Animation shorthand property</a>
+</div>
+<p><a href="css3_animations.html" class="w3-btn">CSS animations explained</a></p>
+<hr>
+
+<h3>CSS Tooltips</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit3e3f.html?filename=trycss_tooltip_right">Right tooltip</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1835.html?filename=trycss_tooltip_left">Left tooltip</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit31b6.html?filename=trycss_tooltip_top">Top tooltip</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf139.html?filename=trycss_tooltip_bottom">Bottom tooltip</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitac1a.html?filename=trycss_tooltip_arrow_bottom">Tooltip with arrow</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite1b9.html?filename=trycss_tooltip_transition">Animated tooltip</a>
+</div>
+<p><a href="css_tooltip.html" class="w3-btn">Tooltips explained</a></p>
+<hr>
+
+<h3>CSS Style Images</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitf6c8.html?filename=trycss_ex_images_round">Rounded image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf55b.html?filename=trycss_ex_images_circle">Circled image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitaae8.html?filename=trycss_ex_images_thumbnail">Thumbnail image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit159e.html?filename=trycss_ex_images_thumbnail_link">Thumbnail image as link</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1d86.html?filename=trycss_ex_images_responsive">Responsive image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5822.html?filename=trycss_image_text_top_left">Image text (top left corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitef9a.html?filename=trycss_image_text_top_right">Image text (top right corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd915.html?filename=trycss_image_text_bottom_left">Image text (bottom left corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite5c6.html?filename=trycss_image_text_bottom_right">Image text (bottom right corner)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitcf58.html?filename=trycss_image_text_center">Image text (centered)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7970.html?filename=trycss_ex_images_card">Polaroid images</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4287.html?filename=trycss3_filter_grayscale">Grayscale image filter</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit627d.html?filename=trycss_image_modal_js">Advanced - Image Modal with CSS and JavaScript</a>
+</div>
+<p><a href="css3_images.html" class="w3-btn">CSS Images explained</a></p>
+<hr>
+
+<h3>CSS Object-fit</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit69e0.html?filename=trycss3_object-fit2">Cut off the sides of an image, preveserving the aspect ratio, and fill in the space</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit59cc.html?filename=trycss3_object-fit_all">An example of all object-fit property values</a>
+</div>
+<p><a href="css3_object-fit.html" class="w3-btn">Object-fit explained</a></p>
+<hr>
+
+<h3>CSS Buttons</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit3924.html?filename=trycss_buttons_basic">Basic CSS buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7746.html?filename=trycss_buttons_color">Button colors</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit44aa.html?filename=trycss_buttons_font">Button sizes</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita56f.html?filename=trycss_buttons_round">Rounded buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9efb.html?filename=trycss_buttons_border">Colored button borders</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0f62.html?filename=trycss_buttons_hover">Hoverable buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6836.html?filename=trycss_buttons_shadow">Shadow buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit07dd.html?filename=trycss_buttons_disabled">Disabled buttons</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4745.html?filename=trycss_buttons_width">Button width</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit09f5.html?filename=trycss_buttons_group">Button groups</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1bc3.html?filename=trycss_buttons_group_border">Bordered button group</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf961.html?filename=trycss_buttons_animate1">Animated Button (Hover Effect)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit893c.html?filename=trycss_buttons_animate2">Animated Button (Ripple Effect)</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6d31.html?filename=trycss_buttons_animate3">Animated Button (Pressed Effect)</a>
+</div>
+<p><a href="css3_buttons.html" class="w3-btn">CSS buttons explained</a></p>
+<hr>
+
+<h3>CSS Pagination</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitce0a.html?filename=trycss_ex_pagination">Simple pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit14d9.html?filename=trycss_ex_pagination_active">Active and hoverable pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitbcda.html?filename=trycss_ex_pagination_active_round">Rounded active and hoverable pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6e56.html?filename=trycss_ex_pagination_transition">Hoverable transition effect</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8fab.html?filename=trycss_ex_pagination_border">Bordered pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit44d1.html?filename=trycss_ex_pagination_border_round">Rounded bordered pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitce60.html?filename=trycss_ex_pagination_margin">Pagination with space between links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc41e.html?filename=trycss_ex_pagination_size">Pagination size</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitce60.html?filename=trycss_ex_pagination_margin">Pagination with space between links</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit89fe.html?filename=trycss_ex_pagination_center">Centered pagination</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3872.html?filename=trycss_breadcrumbs">Breadcrumbs</a>
+</div>
+<p><a href="css3_pagination.html" class="w3-btn">CSS pagination explained</a></p>
+<hr>
+
+<h3>CSS Multiple Columns</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit11d3.html?filename=trycss3_column-count">Create multiple columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfdca-2.html?filename=trycss3_column-gap">Specify the gap between columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit57c9.html?filename=trycss3_column-rule-style">Specify the style of the rule between columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitec78.html?filename=trycss3_column-rule-width">Specify the width of the rule between columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6bad.html?filename=trycss3_column-rule-color">Specify the color of the rule between columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc562.html?filename=trycss3_column-rule">Specify the width, style and color of the rule between columns</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita623.html?filename=trycss3_column-span">Specify how many columns an element should span across</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8220.html?filename=trycss3_column-width">Specify a suggested, optimal width for the columns</a>
+</div>
+<p><a href="css3_multiple_columns.html" class="w3-btn">CSS multiple columns explained</a></p>
+<hr>
+
+<h3>CSS User Interface</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitecea.html?filename=trycss3_resize_width">Let a user resize the width of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit99a9.html?filename=trycss3_resize_height">Let a user resize the height of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd038.html?filename=trycss3_resize">Let a user resize both the width and height of an element</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita110.html?filename=trycss3_outline-offset">Add space between an outline and the border of an element</a>
+</div>
+<p><a href="css3_user_interface.html" class="w3-btn">CSS user interface explained</a></p>
+<hr>
+
+<h3>CSS Variables</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitc106.html?filename=trycss3_var">Using the var() function</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit32b7.html?filename=trycss3_var2">Using the var() function to insert several custom property values</a>
+</div>
+<p><a href="css3_variables.html" class="w3-btn">CSS variables explained</a></p>
+<hr>
+
+<h3>CSS Box Sizing</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryitaba6.html?filename=trycss3_box-sizing_old">Width of elements without box-sizing</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfbe1.html?filename=trycss3_box-sizing_new">Width of elements with box-sizing</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit7877.html?filename=trycss3_box-sizing_all">Form elements + box-sizing</a>
+</div>
+<p><a href="css3_box-sizing.html" class="w3-btn">CSS box sizing explained</a></p>
+<hr>
+
+<h3>CSS Flexbox</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit87f9.html?filename=trycss3_flexbox_flexline">Flexbox with three flex items</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4339.html?filename=trycss3_flexbox_flexline_rtl">Flexbox with three flex items - rtl direction</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5a9c.html?filename=trycss3_flexbox_direction_row-reverse">flex-direction - row-reverse</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4735.html?filename=trycss3_flexbox_direction_column">flex-direction - column</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryite672.html?filename=trycss3_flexbox_direction_column-reverse">flex-direction - column-reverse</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit3e4a.html?filename=trycss3_flexbox_justify_flex-end">justify-content - flex-end</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9f91.html?filename=trycss3_flexbox_justify_center">justify-content - center</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit30a0.html?filename=trycss3_flexbox_justify_space-between">justify-content - space-between</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9239.html?filename=trycss3_flexbox_justify_space-around">justify-content - space-around</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5421.html?filename=trycss3_flexbox_align_stretch">align-items - stretch</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit45d3.html?filename=trycss3_flexbox_align_flex-start">align-items - flex-start</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfc32.html?filename=trycss3_flexbox_align_flex-end">align-items - flex-end</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitfe2f.html?filename=trycss3_flexbox_align_center">align-items - center</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2cbd.html?filename=trycss3_flexbox_align_baseline">align-items - baseline</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit803f.html?filename=trycss3_flexbox_nowrap">flex-wrap - nowrap</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit889c.html?filename=trycss3_flexbox_wrap">flex-wrap - wrap</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit6ab3.html?filename=trycss3_flexbox_wrap-reverse">flex-wrap - wrap-reverse</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit74bb.html?filename=trycss3_flexbox_align-content">align-content - center</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0143.html?filename=trycss3_flexbox_order">Order the flex items</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitd3f1.html?filename=trycss3_flexbox_margin">Margin-right:auto;</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitebb8.html?filename=trycss3_flexbox_margin2">Margin:auto; = perfect centering</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit85f3.html?filename=trycss3_flexbox_align-self">align-self on flex items</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2c69.html?filename=trycss3_flexbox_flex_number">Specify the length of the flex item, relative to the rest of the flex items</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9261.html?filename=trycss3_flexbox_image_gallery">Create a responsive image gallery with flexbox</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitded1.html?filename=trycss3_flexbox_website2">Create a responsive website with flexbox</a>
+</div>
+<p><a href="css3_flexbox.html" class="w3-btn">CSS flexbox explained</a></p>
+<hr>
+
+<h3>CSS Media Queries</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit79dd.html?filename=trycss3_media_queries1">Change the background-color to lightgreen if the viewport is 480px wide or wider</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4530.html?filename=trycss3_media_queries2">Show a menu that will float to the left of the page if the viewport is 480px wide or wider</a>
+</div>
+<p><a href="css3_mediaqueries.html" class="w3-btn">CSS media queries explained</a></p>
+<hr>
+
+<h3>CSS Media Queries - More Examples</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit5d2a.html?filename=trycss_mediaqueries_ex1">Set different background colors depending on screen width</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit8738.html?filename=trycss_mediaqueries_navbar">Responsive navigation menu</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitf4d1.html?filename=trycss_mediaqueries_ex2">Responsive columns using float</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit03e4.html?filename=trycss_mediaqueries_flex">Responsive columns using flexbox</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5f09.html?filename=trycss_mediaqueries_hide">Hide elements with media queries</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitb961.html?filename=trycss_mediaqueries_fontsize">Responsive font size</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4eeb.html?filename=trycss_mediaqueries_img_gallery">Responsive image gallery</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit1a6b.html?filename=trycss_mediaqueries_website">Responsive website</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc3b4.html?filename=tryresponsive_mediaquery_orientation">Change layout of a page depending on the orientation of the browser</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5a84.html?filename=trycss_mediaqueries_minmax">Min width to max width</a>
+</div>
+<p><a href="css3_mediaqueries_ex.html" class="w3-btn">CSS media queries examples explained</a></p>
+<hr>
+
+<h3>CSS Responsive Webdesign</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit43e4.html?filename=tryresponsive_styles">Responsive grid view</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit214a.html?filename=tryresponsive_col-s">Add breakpoints for desktops, laptops and phones</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitdb83.html?filename=tryresponsive_mediaquery_breakpoints">Typical breakpoints</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit0370.html?filename=tryresponsive_image">Responsive image</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitc1ed.html?filename=tryresponsive_video">Responsive video</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit5657.html?filename=tryresponsive_w3css">Responsive framework: W3.CSS</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita5e1.html?filename=tryresponsive_bootstrap">Responsive framework: Bootstrap</a>
+</div>
+<p><a href="css_rwd_intro.html" class="w3-btn">CSS responsive webdesign explained</a></p>
+<hr>
+
+<h3>CSS Grid</h3>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item w3-light-grey" target="_blank" href="tryit2c32.html?filename=trycss_grid_layout_named">Grid layout</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit9470.html?filename=trycss_grid">Grid elements</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryita0c0.html?filename=trycss_grid_grid-column-gap">Grid column gaps</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit4037.html?filename=trycss_grid_lines">Grid lines</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryitef21.html?filename=trycss_grid_container">Grid container</a>
+<a class="w3-button w3-bar-item w3-light-grey w3-border-top" target="_blank" href="tryit2d70.html?filename=trycss_grid_item">Grid items</a>
+</div>
+<p><a href="css_grid.html" class="w3-btn">CSS grid explained</a></p>
+
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_templates.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_quiz.html">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+  <div id="skyscraper">
+  
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
+  
+  </div>
+</div>
+
+<div class="sidesection">
+<h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+  <h4>LIKE US</h4>
+  <div class="w3-text-grey sharethis">
+    <a href="../../www.facebook.com/w3schoolscom/index.html" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+    <a href="../../www.instagram.com/w3schools.com_official/index.html" target="_blank" title="Instagram"><span class="fa fa-instagram fa-2x"></span></a>
+    <a href="../../www.linkedin.com/company/w3schools.com/index.html" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
+<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="../images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Tabs</a><br>
+    <a href="../howto/howto_css_dropdown.html">Dropdowns</a><br>
+    <a href="../howto/howto_js_accordion.html">Accordions</a><br>
+    <a href="../howto/howto_js_sidenav.html">Side Navigation</a><br>
+    <a href="../howto/howto_js_topnav.html">Top Navigation</a><br>
+    <a href="../howto/howto_css_modals.html">Modal Boxes</a><br>
+    <a href="../howto/howto_js_progressbar.html">Progress Bars</a><br>
+    <a href="../howto/howto_css_parallax.html">Parallax</a><br>
+    <a href="../howto/howto_css_login_form.html">Login Form</a><br>
+    <a href="../howto/howto_html_include.html">HTML Includes</a><br>
+    <a href="../graphics/google_maps_intro.html">Google Maps</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Range Sliders</a><br>
+    <a href="../howto/howto_css_tooltip.html">Tooltips</a><br>
+    <a href="../howto/howto_js_slideshow.html">Slideshow</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Filter List</a><br>
+    <a href="../howto/howto_js_sort_list.html">Sort List</a><br>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h5><a href="../cert/default.html" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border">
+  <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
+  <a href="../cert/default.html" class="w3-button w3-light-grey w3-block" style="text-decoration:none">And more</a>
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", fix_stickyad);
+  window.addEventListener("resize", fix_stickyad);
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+</div>
+<!--
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+</div>
+-->
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../w3schools.invisionzone.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../shop.w3schools.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+</div>
+
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">      
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Tutorials</h4>
+<a href="../html/default.html">HTML Tutorial</a><br>
+<a href="default.html">CSS Tutorial</a><br>
+<a href="../js/default.html">JavaScript Tutorial</a><br>
+<a href="../howto/default.html">How To Tutorial</a><br>
+<a href="../sql/default.html">SQL Tutorial</a><br>
+<a href="../python/default.html">Python Tutorial</a><br>
+<a href="../w3css/default.html">W3.CSS Tutorial</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Tutorial</a><br>
+<a href="../php/default.html">PHP Tutorial</a><br>
+<a href="../java/default.html">Java Tutorial</a><br>
+<a href="../cpp/default.html">C++ Tutorial</a><br>
+<a href="../jquery/default.html">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top References</h4>
+<a href="../tags/default.html">HTML Reference</a><br>
+<a href="../cssref/default.html">CSS Reference</a><br>
+<a href="../jsref/default.html">JavaScript Reference</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Reference</a><br>
+<a href="../python/python_reference.html">Python Reference</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Reference</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Reference</a><br>
+<a href="../php/php_ref_overview.html">PHP Reference</a><br>
+<a href="../colors/colors_names.html">HTML Colors</a><br>
+<a href="../java/java_ref_keywords.html">Java Reference</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Reference</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Examples</h4>
+<a href="../html/html_examples.html">HTML Examples</a><br>
+<a href="css_examples.html">CSS Examples</a><br>
+<a href="../js/js_examples.html">JavaScript Examples</a><br>
+<a href="../howto/default.html">How To Examples</a><br>
+<a href="../sql/sql_examples.html">SQL Examples</a><br>
+<a href="../python/python_examples.html">Python Examples</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Examples</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Examples</a><br>
+<a href="../php/php_examples.html">PHP Examples</a><br>
+<a href="../java/java_examples.html">Java Examples</a><br>
+<a href="../xml/xml_examples.html">XML Examples</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="../cert/default.html">HTML Certificate</a><br>
+<a href="../cert/default.html">CSS Certificate</a><br>
+<a href="../cert/default.html">JavaScript Certificate</a><br>
+<a href="../cert/default.html">SQL Certificate</a><br>
+<a href="../cert/default.html">Python Certificate</a><br>
+<a href="../cert/default.html">PHP Certificate</a><br>
+<a href="../cert/default.html">Bootstrap Certificate</a><br>
+<a href="../cert/default.html">XML Certificate</a><br>
+<a href="../cert/default.html">jQuery Certificate</a><br>
+<a href="../cert/default.html" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
+<a href="../about/about_privacy.html">cookie and privacy policy</a>.<br><br>
+<a href="../about/about_copyright.html">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="../w3css/default.html">W3Schools is Powered by W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+
+<script>
+
+loadUser();
+function loadUser() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  if (foldername == "quiztest") {
+    cc = window.location.href;
+    pos = cc.indexOf("qtest=");
+    typ = cc.substr(pos + 6);
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+       console.log(x);
+        activateElse();
+      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+        console.log(x);
+        activateMYPAGE(x, y);
+      } else {
+        activateElse();
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+}
+function finishedPage() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "O") {
+        console.log(x);
+        registerPoint(x);
+      } else {
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+}
+function activateElse() {
+  var a = document.getElementById("mypagediv");
+  var b = document.getElementById("w3loginbtn");
+  if (a) a.style.display = "none";
+  if (b) b.style.display = "inline";
+}
+var mp_pagesread = 0, mp_totalpages = 0;
+function activateMYPAGE(cc, obj) {
+  var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (a) a.style.display = "none";
+  if (b) {
+    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+      jsonobj = JSON.parse(obj.substr(1));
+      mp_pagesread = jsonobj.b;
+      mp_totalpages = jsonobj.a;
+      x = Math.round((mp_pagesread/mp_totalpages) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+    }
+    if (cc == "Q") {
+      color1 = "rgba(44, 156, 202, 0.1)";
+      color2 = "rgba(44, 156, 202, 1)";
+    }
+    b.style.display = "block";
+    txt += "<a href='../../mypage.w3schools.com/mypage/index.html'>";
+    txt2 = txt;
+    txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+    txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+    if (cc != "F") {
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+      txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt2 += '</svg>';
+    }
+    if (cc == "J") {
+      checkIfMypage2IsInView();
+      window.addEventListener("scroll", checkIfMypage2IsInView);
+    }
+    if (cc == "Q") {
+      if (degrees == 359.99) {
+        txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+    }
+    txt += '</a>';
+    txt2 += '</a>';
+    b.innerHTML = "&nbsp;" + txt;
+    c.innerHTML = "&nbsp;" + txt2;
+    if (cc != "L") {
+      document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    }
+  }
+  ga('send', 'event', 'user', 'login');
+}
+function checkIfMypage2IsInView() {
+  var a = document.getElementById("mypagediv2");
+  if (isinviewport(a) || isaboveviewport(a)) {
+    finishedPage();
+    window.removeEventListener("scroll", checkIfMypage2IsInView);
+  }
+}
+function isinviewport(x) {
+  var rect = x.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+function isaboveviewport(x) {
+  var rect = x.getBoundingClientRect();
+  if (rect.top < 0) return true;
+  return false;
+}
+function registerPoint(cc) {
+  var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (c) {
+    mp_pagesread++;
+    x = Math.round((mp_pagesread/mp_totalpages) * 100);
+    degrees = x * 3.6;
+    if (degrees > 359) degrees = 359.99;
+    txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+    if (degrees == 359.99) {completed = 1;}
+    if (completed == 1) {
+      txt += "<span id='usergetsstar'>&#x2605;</span>";
+    }
+    c.innerHTML += txt;
+    document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+  }
+}
+
+
+</script>
+<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
+
+<!-- Mirrored from www.w3schools.com/css/css_examples.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 21:42:22 GMT -->
+</html>

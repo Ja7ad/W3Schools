@@ -1,0 +1,12 @@
+{"user" : 0, "records" : [{"artist" : "Bob Dylan","title" : "Empire Burlesque","country" : "USA"},{"artist" : "Bonnie Tyler","title" : "Hide your heart","country" : "UK"},{"artist" : "Dolly Parton","title" : "Greatest Hits","country" : "USA"},{"artist" : "Gary Moore","title" : "Still got the blues","country" : "UK"},{"artist" : "Eros Ramazzotti","title" : "Eros","country" : "EU"},{"artist" : "Bee Gees","title" : "One night only","country" : "UK"},{"artist" : "Dr.Hook","title" : "Sylvias Mother","country" : "UK"}], "dateFormat" : "yyyy-mm-dd", 
+  "data" : {
+    "type" : "xmlfile",
+    "filename" : "cd_catalog.xml",
+    "record" : "CD",
+    "items" : [
+        {"name" : "artist", "nodename" : "ARTIST"},
+        {"name" : "title", "nodename" : "TITLE"},
+        {"name" : "country", "nodename" : "COUNTRY"}
+    ]
+  }
+}

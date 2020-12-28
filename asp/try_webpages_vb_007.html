@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_vb_007.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">
+@Code <br>
+Dim db = Database.Open(&quot;SmallBakery&quot;) <br>
+Dim dbdata = db.Query(&quot;SELECT Name, Price FROM Product&quot;) <br>
+Dim myChart = new Chart(600,400) <br>
+myChart.AddTitle(&quot;Product Sales&quot;) <br>
+myChart.AddSeries(&quot;Employees&quot;,&quot;column&quot;,,,,,dbdata,&quot;Name&quot;,dbdata,&quot;Price&quot;) <br>
+myChart.Write()<br>
+End Code<br>
+</span>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_vb_007.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+</html>

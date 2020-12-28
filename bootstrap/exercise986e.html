@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise.asp?filename=exercise_listgroups3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:24 GMT -->
+<head>
+<title>Exercise v1.3</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../lib/codemirror.css">
+<script src="../lib/codemirror.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               autoStartAuction: false
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["try_it_leaderboard"]);
+
+   });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (1280) && afterResize >= (1280)) || (xbeforeResize >= (1280) && afterResize < (1280)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+         
+    }
+}
+</script>
+<script type="text/javascript">
+function submitTryit(n) {
+  if (window.editor) {window.editor.save();}
+  var text = document.getElementById("textareaCode" + n).value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult" + n);
+  ifr.setAttribute("name", "iframeResult" + n);  
+  document.getElementById("iframewrapper" + n).innerHTML = "";
+  document.getElementById("iframewrapper" + n).appendChild(ifr);
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+  //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+  //(and back to false to prevent the content from being editable)
+  //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+  if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+    ifrw.document.body.contentEditable = true;
+    ifrw.document.body.contentEditable = false;
+  }
+}
+function showCorrectAnswer() {
+	document.getElementById("editSection").style.display = "none";
+  document.getElementById("correctSection").style.display = "table-row";
+	document.getElementById("showCorrectBtn").style.display = "none";
+	document.getElementById("hideCorrectBtn").style.display = "inline";
+	submitTryit("2", 0);
+  if (window.editor2) {
+    window.editor2.refresh();
+  }	
+}
+function hideCorrectAnswer() {
+	document.getElementById("editSection").style.display = "table-row";
+  document.getElementById("correctSection").style.display = "none";
+	document.getElementById("hideCorrectBtn").style.display = "none";
+	document.getElementById("showCorrectBtn").style.display = "inline";
+}
+</script>
+<link rel="stylesheet" href="../exercise.css">
+<style>
+.hintBtn {
+    border:none;
+    background-color:#f0ad4e;
+    padding:5px 10px;
+    color:#ffffff;
+    border-radius:0;
+    font-size:16px;
+    margin-bottom:12px;
+    cursor:pointer;
+    position:absolute;
+}
+.hintBtn:hover {
+    background-color:#ec971f;
+}
+#hint {
+	visibility:hidden;
+}
+#iframewrapper,#iframewrapper2 {
+  width:100%;
+  height:100%;
+  border-radius:0;
+  -webkit-overflow-scrolling: touch;
+}
+.CodeMirror.cm-s-default {
+  line-height:normal;
+  padding: 1px;
+  height:100%;
+  width:100%;
+  border:1px solid #d3d3d3;
+  border-radius:4px;
+}
+
+</style>
+<!--[if IE]>
+<style>
+#textareaCode, #iframeResult, #textareaCode2, #iframeResult2 {height:400px;}
+td {vertical-align:top;}
+</style>
+<![endif]-->
+<script>
+var x, hint;
+window.onload = function() {
+    hint = document.getElementById("hint");
+    if (!hint) return false;
+    x = document.createElement("BUTTON");
+    x.setAttribute("type", "button");
+    x.setAttribute("class", "hintBtn");    
+    x.setAttribute("title", "Click to get a hint");
+    x.setAttribute("onclick", "needHint()");            
+    var t = document.createTextNode("Hint");
+    x.appendChild(t);
+    hint.parentNode.insertBefore(x, hint);
+}
+function needHint() {
+    x.style.display = "none";
+    hint.style.visibility = "visible";
+}
+</script>
+</head>
+<body>
+<table>
+  <tr>
+  <td style="padding-bottom:5px;">
+<div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
+<!-- TryitLeaderboard -->
+
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+ 
+</div>
+    <div style="padding-left:20px;">
+  	  <h1>Exercise:</h1>
+      <p>Disable the first item in the list.</p>
+<p id="hint">Hint: Use the .disabled class.</p>
+
+    </div>
+  </td>	
+  </tr>
+  <tr id="editSection">
+  <td>
+  <div class="codeContainer">
+    <div>
+      <div class="header">Edit This Code:</div>
+      <div class="headerBtnDiv"><button class="submit" type="button" onclick="submitTryit('', 1);snhb.startAuction(['try_it_leaderboard']);" style="border-radius:0">See Result &raquo;</button></div>
+    </div>
+    <div>
+      <textarea autocomplete="off" id="textareaCode" wrap="logical"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="list-group">
+    <a href="#" class="list-group-item">First item</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise.asp?filename=exercise_listgroups3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:24 GMT -->
+</html>
+</textarea>
+      <form autocomplete="off" style="display:none;">
+        <input type="hidden" name="code" id="code" />
+        <input type="hidden" id="bt" name="bt" />
+      </form>
+    </div>
+  </div>
+  <div class="resultContainer">
+    <div>
+      <div class="header">Result:</div>
+      <div class="headerBtnDiv">
+          <button id="showCorrectBtn" type="button" onclick="showCorrectAnswer()" style="border-radius:0">Show Answer</button>
+      </div>
+    </div>
+    <div>
+      <div id="iframewrapper"></div>
+    </div>
+  </div>
+  </td>    
+  </tr>
+  <tr id="correctSection">
+  <td>
+  <div class="codeContainer">
+    <div>
+      <div class="header">Correct Code:</div>
+    </div>
+    <div>
+      <textarea autocomplete="off" id="textareaCode2" wrap="logical" readonly="readonly"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="list-group">
+    <a href="#" class="list-group-item disabled">First item</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+  </div>
+</div>
+
+</body>
+</html>
+</textarea>
+      <form autocomplete="off" style="display:none;">
+        <input type="hidden" name="code" id="code2" />
+        <input type="hidden" id="bt2" name="bt" />
+      </form>
+    </div>
+  </div>
+  <div class="resultContainer">
+    <div>
+      <div class="header">Correct Result:</div>
+      <div class="headerBtnDiv">
+          <button id="hideCorrectBtn" type="button" onclick="hideCorrectAnswer()" style="border-radius:0">Hide Answer</button>
+      </div>
+    </div>
+    <div>
+      <div id="iframewrapper2"></div>
+    </div>
+  </div>
+  </td>    
+  </tr>
+  <tr>
+  <td>
+  <div class="footerText">Exercise - &copy; <a href="../index.html">w3schools.com</a></div>
+  </td>
+  </tr>
+  
+</table>
+<script>
+submitTryit('', 0)
+function colorcoding() {  
+  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    mode: "text/html",
+    htmlMode: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
+  });
+  window.editor2 = CodeMirror.fromTextArea(document.getElementById("textareaCode2"), {
+    mode: "text/html",
+    htmlMode: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
+  });
+//  window.editor.on("change", function () {window.editor.save();});
+}
+colorcoding();
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_css_phone_tablet_laptop.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:12 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background: #f1f1f1;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 606px;
+  height: 200px;
+}
+
+
+/* smartphone */
+.smartphone {
+  float: left;
+  width: 80px;
+  height: 120px;
+  margin: 40px 0 0 0;
+  border: 5px black solid;
+  border-top-width: 15px;
+  border-bottom-width: 20px;
+  border-radius: 10px;
+}
+
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 3px;
+  margin: -9px auto;
+  background: white;
+  border-radius: 4px;
+}
+
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 4px auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.smartphone .content {
+  width: 60px;
+  height: 100px;
+  margin: 15px 0 0 0;
+  padding: 10px;
+  background: white;
+}
+
+/* tablet */
+.tablet {
+  float: left;
+  width: 120px;
+  height: 160px;
+  margin: 0 80px;
+  border: 5px black solid;
+  border-top-width: 15px;
+  border-bottom-width: 20px;
+  border-radius: 10px;
+}
+
+.tablet:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 3px;
+  margin: -9px auto;
+  background: white;
+  border-radius: 4px;
+}
+
+.tablet:after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 4px auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.tablet .content {
+  width: 120px;
+  height: 160px;
+  margin: 15px 0 0 0;
+  background: white;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* laptop */
+.laptop {
+  float: left;
+  width: 200px;
+  height: 120px;
+  margin: 56px 0 0 0;
+  border: 5px black solid;
+  border-radius: 2px;
+}
+
+.laptop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  margin: 126px 0 0 80px;
+  background: white;
+  z-index: 1;
+}
+
+.laptop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 240px;
+  height: 8px;
+  margin: 6px 0 0 -20px;
+  background: black;
+  border-radius: 2px;
+}
+
+.laptop .content {
+  width: 180px;
+  height: 100px;
+  margin: 0px 0 0 0;
+  padding: 10px;
+  background: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="center">
+  <div class="smartphone">
+    <div class="content">
+    <p style="font-size:10px">Some content...</p>
+    </div>
+  </div>
+
+  <div class="tablet">
+    <div class="content">
+    <p style="font-size:10px;padding-left:10px">Some content...</p>
+    </div>
+  </div>
+
+  <div class="laptop">
+    <div class="content">
+     <p style="font-size:10px">Some content...</p>
+   </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_css_phone_tablet_laptop.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:12 GMT -->
+</html>

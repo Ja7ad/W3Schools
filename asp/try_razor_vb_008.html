@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_vb_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">@Code<br>Dim members as String()={&quot;Jani&quot;,&quot;Hege&quot;,&quot;Kai&quot;,&quot;Jim&quot;}<br>
+i=Array.IndexOf(members,&quot;Kai&quot;)+1<br>len=members.Length<br>x=members(2-1)<br>End 
+Code<br></span>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h3&gt;Members&lt;/h3&gt;<br>
+<span class="marked">@For Each person In members<br>&nbsp;&nbsp;&nbsp; @&lt;p&gt;@person&lt;/p&gt;<br>
+Next person</span><br>&lt;p&gt;The number of names in Members are <span class="marked">@len</span>&lt;/p&gt;<br>
+&lt;p&gt;The person at position 2 is <span class="marked">@x</span>&lt;/p&gt;<br>&lt;p&gt;Kai is 
+now in position <span class="marked">@i</span>&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_vb_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+</html>

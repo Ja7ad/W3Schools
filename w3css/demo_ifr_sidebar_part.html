@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar_part.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<body class="w3-white">
+
+<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left" style="display:none;z-index:2" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+</div>
+
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h2>My Page</h2>
+  </div>
+</div>
+
+<div class="w3-container">
+  <p>Click on the &#9776; symbol to open the sidebar (overlays some of the page content).</p>
+</div>
+   
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+     
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar_part.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+</html> 

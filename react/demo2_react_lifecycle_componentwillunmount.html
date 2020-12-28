@@ -1,0 +1,9 @@
+<h1>Hello World!</h1>
+<button type="button" onclick="delheader()">Delete Header</button>
+
+<script>
+function delheader() {
+  alert("The component named Header is about to be unmounted.");
+  document.getElementsByTagName("h1")[0].innerHTML = "";
+}
+</script>

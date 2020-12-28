@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_001.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../showrazor.css" />
+</head>
+
+<body>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;!-- Single statement block --&gt;<br>
+<span class="marked">@{ var myMessage =    &quot;Hello World&quot;; }</span><br><br>
+&lt;!-- Inline expression or variable --&gt;<br>
+&lt;p&gt;The value of myMessage is: <span class="marked">@myMessage</span>&lt;/p&gt; <br><br>
+&lt;!--    Multi-statement block --&gt;<br>
+<span class="marked">@{<br>
+var greeting = &quot;Welcome to our site!&quot;;<br>
+var weekDay = DateTime.Now.DayOfWeek;<br>
+var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;<br>
+}<br><br></span>&lt;p&gt;The greeting is: <span class="marked">@greetingMessage</span>&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_001.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:32 GMT -->
+</html>

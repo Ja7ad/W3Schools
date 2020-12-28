@@ -1,0 +1,18 @@
+body {
+    font:14px Verdana, sans-serif;
+}
+h1 {
+    color:#996600;
+}
+table {
+    width:100%;
+    border-collapse:collapse;}
+
+th,td {
+    border:1px solid grey;
+    padding:5px;
+    text-align:left;
+}
+table tr:nth-child(odd)	{
+    background-color:#f1f1f1;
+}

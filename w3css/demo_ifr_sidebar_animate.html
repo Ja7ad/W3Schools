@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar_animate.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<body class="w3-light-grey">
+
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+</div>
+
+<button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+<div class="w3-container">
+  <h2>Page content..</h2>
+  <p>Click on the "hamburger" icon to slide in the side navigation.</p>
+</div>
+     
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+     
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/demo_ifr_sidebar_animate.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:09:31 GMT -->
+</html> 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_temp_webpage_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:25 GMT -->
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  @media screen and (max-width: 242px) {
+  .container-fluid {
+    height:245px;
+    width:280px;
+}
+}
+.row {
+    margin-bottom:6px;
+}
+
+.col-xs-12, .col-xs-2, .col-xs-8{
+    background-color:#f1f1f1;
+    text-align:center;
+    padding-top:3px;
+}
+
+    .col-xs-12.footer {
+    padding-top:8px;
+}
+
+    .container-fluid:hover .col-xs-12 span.header:after {
+    content:'Navbar';
+}
+
+    .container-fluid:hover .col-xs-12 span.footer:after {
+    content:'Footer';
+}
+
+    .container-fluid:hover .col-xs-2 span:after {
+    content:'2 col';
+}
+
+    .container-fluid:hover .col-xs-8 span:after {
+    content:'8 col';
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12" style="height:25px;"><span class="header"></span></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2" style="height:165px;"><span></span></div>
+    <div class="col-xs-8" style="height:165px;border-left:6px solid white;border-right:6px solid white;"><span></span></div>
+    <div class="col-xs-2" style="height:165px;"><span></span></div>
+  </div>
+  <div class="row" style="margin-bottom:-6px !important;">
+    <div class="col-xs-12 footer" style="height:38px;"><span class="footer"></span></div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_temp_webpage_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:25 GMT -->
+</html>

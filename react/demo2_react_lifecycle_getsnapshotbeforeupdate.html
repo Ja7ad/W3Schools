@@ -1,0 +1,11 @@
+<h1>My Favorite Color is <span id="color">red</span></h1>
+<div id="div1"></div>
+<div id="div2"></div>
+
+<script>
+window.setTimeout(function () {
+  document.getElementById("color").innerHTML = "yellow";
+  document.getElementById("div1").innerHTML = "Before the update, the favorite was red";
+  document.getElementById("div2").innerHTML = "The updated favorite is yellow";
+}, 1000);
+</script>

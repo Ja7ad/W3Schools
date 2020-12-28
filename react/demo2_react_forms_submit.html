@@ -1,0 +1,17 @@
+<form onsubmit="mySubmitHandler(event)">
+<h1>Hello</h1>
+<p>Enter your name:</p>
+<input type="text" oninput="myChangeHandler(this)" />
+<input type="submit">
+</form>
+
+<script>
+function myChangeHandler(x) {
+  document.getElementsByTagName("h1")[0].innerHTML = "Hello " + x.value;
+}
+
+function mySubmitHandler(e) {
+  e.preventDefault();
+  alert("You are submitting " + document.getElementsByTagName("input")[0].value);
+}
+</script>

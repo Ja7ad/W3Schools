@@ -1,0 +1,15 @@
+
+<HTML>
+
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_lastmodified by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:36 GMT -->
+<HEAD>
+<style>
+html,body {
+    font: 15px Consolas,'Courier New',Verdana, Arial, Helvetica;
+}
+</style>
+</HEAD>
+&lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>Set fs = Server.CreateObject("Scripting.FileSystemObject")<br>Set rs = fs.GetFile(Server.MapPath("demo_lastmodified.asp"))<br>modified = rs.DateLastModified<br>%&gt;</FONT><br>This file was last modified on: <FONT COLOR=#ff0000>&lt;%response.write(modified)<br>Set rs = Nothing<br>Set fs = Nothing<br>%&gt;</FONT><br><br>&lt;/body><br>&lt;/html><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_lastmodified by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:11:36 GMT -->
+</HTML>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+<head>
+<style> 
+#div1
+{
+width:120px;
+height:100px;
+background-color:yellow;
+border:1px solid black;
+transform:rotate(7deg);
+-ms-transform:rotate(7deg); /* IE 9 */
+}
+</style>
+
+<script>
+function rotate(value)
+{
+document.getElementById('div1').style.webkitTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.msTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.MozTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.OTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.transform="rotate(" + value + "deg)";
+document.getElementById('span1').innerHTML=value + "deg";
+}
+</script>
+
+</head>
+<body>
+
+<h1>The transform Property</h1>
+
+<p>Rotate the yellow div element:</p>
+
+<div id="div1">HELLO</div>
+
+Rotate: <br>
+<input type="range" min="-360" max="360" value="7" onchange="rotate(this.value)" /><br>
+transform: rotate(<span id="span1">7deg</span>);
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss3_transform_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:43:29 GMT -->
+</html>

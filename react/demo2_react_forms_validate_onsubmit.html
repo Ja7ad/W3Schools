@@ -1,0 +1,25 @@
+<form onsubmit="mySubmitHandler(event)">
+<h1>Hello</h1>
+<p>Enter your name:</p>
+<input type="text" name="i1" oninput="myChangeHandler(this)" />
+<p>Enter your age:</p>
+<input type="text" name="i2" oninput="myChangeHandler(this)" />
+<br/>
+<br/>
+<input type='submit' />
+</form>
+
+<script>
+
+function myChangeHandler(x) {
+  document.getElementsByTagName("h1")[0].innerHTML = "Hello " + document.getElementsByTagName("input")[0].value + " " + document.getElementsByTagName("input")[1].value;
+}
+
+
+function mySubmitHandler(e) {
+  e.preventDefault();
+  if (!Number(document.getElementsByTagName("input")[1].value)) {
+    alert("Your age must be a number");
+  }
+}
+</script>

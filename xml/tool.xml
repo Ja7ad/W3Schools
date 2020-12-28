@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <tool>
+   <field id="prodName">
+     <value>HAMMER HG2606</value>
+   </field>
+   <field id="prodNo">
+     <value>32456240</value>
+   </field>
+   <field id="price">
+     <value>$30.00</value>
+   </field>
+ </tool>

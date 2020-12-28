@@ -1,0 +1,2556 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/whatis/whatis_w3css.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 01:24:00 GMT -->
+<head>
+<title>What is W3.CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<style>
+.picture {display:none}
+.w3-btn {
+box-shadow: none;
+}
+.cursor {
+  cursor:pointer
+}
+.w3-tangerine {
+font-family: 'Tangerine', serif;
+font-size: 64px;
+}
+.w3-lobster {
+font-family: 'Lobster', serif;
+font-size: 48px;
+}
+.mySlides {display:none}
+.testbtn {background-color:#f1f1f1;color:black}
+
+.w3-section .w3-btn {margin-bottom:5px;}
+.noselection {
+-webkit-touch-callout: none; 
+-webkit-user-select: none; 
+-khtml-user-select: none;   
+-moz-user-select: none;    
+-ms-user-select: none;      
+user-select: none;        
+}
+
+.w3-large .w3-left, .w3-large .w3-right, .demodots {cursor:pointer}
+.demodots {height:13px;width:13px;padding:0;background-color:transparent}
+.w3-text-grey {color:#9d9d9d !important;}
+@media screen and (max-width: 650px) {
+  .modimgresp {
+      width:40% !important;
+  }
+}
+@media screen and (max-width: 601px) {
+  .margtest {
+      margin-bottom:10px;
+  }
+  .margtest2 {
+      margin-bottom:30px;
+  }
+  .intronav li a {
+    display:block;
+}
+}
+.animTest{font-size:40px;padding:64px 0;color:red;margin:0 50px}
+@media screen and (max-width: 401px) {
+.animTest{font-size:25px;padding:32px 0 16px 0}
+}
+</style>
+</head>
+<body>
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
+
+  <div id="loginactioncontainer" class='w3-right'>
+    <div id="mypagediv"></div>
+    <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
+  </div>
+
+  <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+    THE WORLD'S LARGEST WEB DEVELOPER SITE
+  </div>
+
+</div>
+
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Tutorial'>JAVA</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+
+
+
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='../../shop.w3schools.com/index.html'>SHOP</a>
+
+      <a class="w3-bar-item w3-button w3-right" href='../cert/default.html' title='Certificates'>CERTIFICATES</a>
+
+      <!--
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      -->
+      
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right w3-hide-medium" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML and CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='../howto/default.html'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Learn Sass</a>          
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="../appml/default.html">Learn AppML</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Learn W3.JS</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
+          <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Learn PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Learn Raspberry Pi</a>          
+          <h3>Web Building</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="default.html">Web Development</a>
+          <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google Maps Reference</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Reference</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="../appml/appml_reference.html">AppML Reference</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Reference</a>
+          <h3>Programming</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Reference</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Server Side</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Reference</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Reference</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Reference</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Character Sets</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Exercises</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Exercises</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Quizzes</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Quiz</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Quiz</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Quiz</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Quiz</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Certificate</a>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+
+    <div id='nav_login' class='w3-bar-block w3-card-2' style="display:none">
+      <span onclick='w3_close_nav("login")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class="loginmodaldiv" style="padding:48px 16px 1px 16px;text-align:center;">
+        <h2>LOG IN</h2>
+        <div style="font-size:15px"><a href="../../mypage.w3schools.com/mypage/index.html">Why Log In?</a></div>
+        <div class="loginmodalform">
+          <form id="loginform" name="loginform" autocomplete="off" method="post">
+            <div><label>Username</label></div>
+            <div><input type="email" name="n" placeholder="Enter your e-mail address" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="p" placeholder="Enter Your Password" onfocus="login_inputGetsFocus(this)"></div>
+            <br>
+            <div id="loginerrordiv" style="display:none" class="w3-text-red"></div>
+            <div class="login_submit_container"><button id="login_submit_button" type="submit" onclick="login_user(event)">LOG IN</button></div>
+            <div style="overflow:auto;margin-top:10px;font-size:15px;">
+            <div class="login_newusertext">New User? <a href="../../mypage.w3schools.com/mypage/login8236.html?logintyp=1" target="_blank">Sign Up For Free!</a></div>
+            <div class="login_forgotpasswordtext"><a href="../../mypage.w3schools.com/mypage/forgot_password.html">Forgot password?</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left">Web Development</h2>
+<a target="_top" href="default.html">What is Roadmap</a>
+<a target="_top" href="whatis_http.html">What is HTTP</a>
+<a target="_top" href="whatis_html.html">What is HTML</a>
+<a target="_top" href="whatis_css.html">What is CSS</a>
+<a target="_top" href="whatis_responsive.html">What is Responsive</a>
+<a target="_top" href="whatis_js.html">What is JavaScript</a>
+<a target="_top" href="whatis_es5.html">What is ES5</a>
+<a target="_top" href="whatis_htmldom.html">What is HTML DOM</a>
+<a target="_top" href="whatis_google_maps.html">What is Google Maps</a>
+<a target="_top" href="whatis_google_fonts.html">What is Google Fonts</a>
+<a target="_top" href="whatis_google_charts.html">What is Google Charts</a>
+<a target="_top" href="whatis_xml.html">What is XML</a>
+<a target="_top" href="whatis_ajax.html">What is AJAX</a>
+<a target="_top" href="whatis_json.html">What is JSON</a>
+<a target="_top" href="whatis_icons.html">What is CSS Icons</a>
+<a target="_top" href="whatis_bootstrap.html">What is Bootstrap</a>
+<a target="_top" href="whatis_w3css.html">What is W3.CSS</a>
+<a target="_top" href="whatis_cli.html">What is CLI</a>
+<a target="_top" href="whatis_npm.html">What is npm</a>
+<a target="_top" href="whatis_github.html">What is GitHub</a>
+<a target="_top" href="whatis_jquery.html">What is jQuery</a>
+<a target="_top" href="whatis_angularjs.html">What is AngularJS</a>
+<a target="_top" href="whatis_react.html">What is React</a>
+<a target="_top" href="whatis_vue.html">What is Vue.js</a>
+<a target="_top" href="whatis_w3js.html">What is W3.JS</a>
+<a target="_top" href="whatis_fullstack.html">What is Fullstack</a>
+<a target="_top" href="whatis_fullstack_js.html">What is Fullstack JS</a>
+<a target="_top" href="whatis_sql.html">What is SQL</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+       
+      </div>
+<h1>What is W3.CSS?</h1>
+
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn w3-green" href="whatis_bootstrap.html">&#10094; Previous</a>
+<a class="w3-right w3-btn w3-green" href="whatis_cli.html">Next &#10095;</a>
+</div>
+
+<hr>
+<div class="w3-cell-row w3-card-2">
+<div class="w3-cell w3-hide-small w3-green w3-center w3-xxlarge" style="padding:16px;width:150px">W3<br>CSS
+</div>
+<div class="w3-cell w3-container w3-light-gray w3-border-left w3-cell-top" style="padding:0px 16px 8px 16px;">
+<h2>Modern Responsive CSS</h2>
+<p>Equality for all browsers: Chrome. Firefox Edge. IE. Safari. Opera.</p>
+<p>Equality for all devices: Desktop. Laptop. Tablet. Mobile.</p>
+<p>Standard CSS only (No jQuery or JavaScript library).</p>
+</div>
+</div>
+
+<hr>
+<h2>W3.CSS Quickstart</h2>
+<p>W3.CSS is a modern CSS framework with built-in responsiveness.
+It supports responsive mobile first design by default,
+and it is smaller and faster than similar CSS frameworks.</p>
+<p>W3.CSS can also speed up and simplify web development because it is 
+easier to learn, and easier to use than other CSS frameworks.</p>
+<hr>
+<img src="img_temp_band.jpg" alt="Responsive Page" style="width:100%">
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class=&quot;w3-center w3-padding-64 w3-light-grey&quot;&gt;<br>&nbsp;&nbsp;&lt;h1&gt;My W3.CSS Page&lt;/h1&gt;<br>
+&nbsp; &lt;p&gt;Resize this page to see the responsive effect!&lt;/p&gt; <br>&lt;/div&gt;<br><br>&lt;div 
+ class=&quot;w3-row-padding&quot;&gt;<br>&nbsp; &lt;div class=&quot;w3-third&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h2&gt;London&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;London is the capital city of England.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;It is the most populous city in the United Kingdom,<br>&nbsp;&nbsp;&nbsp; with a 
+ metropolitan area of over 13 million inhabitants.&lt;/p&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div 
+ class=&quot;w3-third&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h2&gt;Paris&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;Paris is 
+ the capital of France.&lt;/p&gt; <br>&nbsp;&nbsp;&nbsp; &lt;p&gt;The Paris area is one of the largest 
+ population centers in Europe,<br>&nbsp;&nbsp;&nbsp; with more than 12 million 
+ inhabitants.&lt;/p&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div class=&quot;w3-third&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+ &lt;h2&gt;Tokyo&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;It 
+ is the center of the Greater Tokyo Area,<br>&nbsp;&nbsp;&nbsp; and the most populous 
+ metropolitan area in the world.&lt;/p&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitc5be.html?filename=trywhatis_w3css&amp;stacked=h"
+target="_blank">Try W3.CSS &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit5191.html?filename=trywhatis_bootstrap&amp;stacked=h"
+target="_blank">Try Bootstrap &raquo;</a>
+</div>
+<div class="w3-panel w3-note">
+  <p style="margin-bottom:8px">Click on the &quot;Try it Yourself&quot; button to see how it works.</p>
+</div>
+
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+
+</div>
+<hr>
+
+<h2>W3.CSS Containers</h2>
+
+<p>The <b>w3-container</b> class is one of the most important W3.CSS classes.</p>
+<p>It provides correct margins, padding, alignments, and more, to most HTML elements.</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="w3-container&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;h1&gt;This is a paragraph&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&lt;/div&gt;
+</div>
+<a target="_blank" href="tryitb33a.html?filename=trywhatis_w3css_container" class="w3-btn w3-margin-bottom">
+Try W3.CSS &raquo;</a>
+<a target="_blank" href="tryitbe85.html?filename=trywhatis_bootstrap_container" class="w3-btn w3-margin-bottom">
+Try Bootstrap &raquo;</a>
+</div>
+
+<hr>
+<h2>W3.CSS Colors</h2>
+<p>The <b>w3-color</b> classes are inspired by modern colors:</p>
+
+<div class="w3-container w3-indigo">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-blue">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-red">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-amber">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-blue-grey">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-green">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-teal">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-container w3-aqua">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+
+<div class="w3-container w3-black">
+<p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class=&quot;w3-container w3-indigo&quot;&gt;<br>&nbsp; &lt;p&gt;London is the most populous 
+  city in the United Kingdom.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class=&quot;w3-container w3-blue&quot;&gt;<br>&nbsp; 
+  &lt;p&gt;London is the most populous city in the United Kingdom.&lt;/p&gt;<br>&lt;/div&gt;<br>
+  <br>&lt;div class=&quot;w3-container w3-red&quot;&gt;<br>&nbsp; &lt;p&gt;London is the most populous 
+  city in the United Kingdom.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class=&quot;w3-container 
+  w3-amber&quot;&gt;<br>&nbsp; &lt;p&gt;London is the most populous city in the United 
+  Kingdom.&lt;/p&gt;<br>&lt;/div&gt;
+</div>
+<a target="_blank" href="tryit4673.html?filename=trywhatis_w3css_colors" class="w3-btn w3-margin-bottom">
+Try W3.CSS &raquo;</a>
+<a target="_blank" href="tryit71b0.html?filename=trywhatis_bootstrap_colors" class="w3-btn w3-margin-bottom">
+Try Bootstrap &raquo;</a>
+</div>
+
+<hr>
+<h2>W3.CSS Allerts, Notes and Quotes</h2>
+<p>The <b>w3-panel</b>
+class can display all kinds of <b>allerts</b> and <b>notes</b> and <b>quotes</b>:</p>
+
+<div class="w3-panel w3-red w3-display-container">
+  <h3>Danger!</h3>
+  <p>Red often indicates a dangerous or negative situation.</p>
+</div>
+
+<div class="w3-panel w3-yellow w3-display-container">
+  <h3>Warning!</h3>
+  <p>Yellow often indicates a warning that might need attention.</p>
+</div>
+
+<div class="w3-panel w3-green w3-display-container">
+  <h3>Success!</h3>
+  <p>Green often indicates something successful or positive.</p>
+</div>
+
+<div class="w3-panel w3-blue w3-display-container">
+  <h3>Info!</h3>
+  <p>Blue often indicates a neutral informative change or action.</p>
+</div>
+
+<div class="w3-panel w3-pale-red w3-border">
+  <h3>Danger!</h3>
+  <p>Red often indicates a dangerous or negative situation.</p>
+</div>
+
+<div class="w3-panel w3-pale-yellow w3-border">
+  <h3>Warning!</h3>
+  <p>Yellow or orange often indicates a warning that might need attention.</p>
+</div>
+
+<div class="w3-panel w3-pale-green w3-border">
+  <h3>Success!</h3>
+  <p>Green often indicates something successful or positive.</p>
+</div>
+
+<div class="w3-panel w3-pale-blue w3-border">
+  <h3>Info!</h3>
+  <p>Blue often indicates a neutral informative change or action.</p>
+</div>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class=&quot;w3-panel w3-red&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h3&gt;Danger!&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;Red often indicates a dangerous or negative situation.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class=&quot;w3-panel 
+  w3-yellow&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h3&gt;Warning!&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;Yellow or orange often indicates a warning that might need attention.&lt;/p&gt;<br>
+  &lt;/div&gt; </div>
+<a target="_blank" href="tryit7ecf.html?filename=trywhatis_w3css_alerts" class="w3-btn w3-margin-bottom">Try W3.CSS &raquo;</a>
+<a target="_blank" href="tryit8417.html?filename=trywhatis_bootstrap_alerts" class="w3-btn w3-margin-bottom">Try Bootstrap &raquo;</a>
+</div>
+<div class="w3-panel w3-light-grey w3-border w3-round-xlarge">
+<p>London is the most populous city in the United Kingdom,
+with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-panel w3-pale-red w3-leftbar w3-border-red">
+<p>London is the most populous city in the United Kingdom,
+with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-panel w3-pale-green w3-bottombar w3-border-green w3-border">
+<p>London is the most populous city in the United Kingdom,
+with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+<div class="w3-panel w3-leftbar w3-sand">
+<p><i class="w3-xlarge w3-serif">"Make it as simple as possible, but not simpler."</i></p>
+<p>Albert Einstein</p>
+</div>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class=&quot;w3-panel w3-light-grey w3-border w3-round-xlarge&quot;&gt;<br>&lt;p&gt;London is 
+  the most populous city in the United Kingdom, with a metropolitan area of over 
+  9 million inhabitants.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class=&quot;w3-panel w3-pale-red 
+  w3-leftbar w3-border-red&quot;&gt;<br>&lt;p&gt;London is the most populous city in the 
+  United Kingdom, with a metropolitan area of over 9 million inhabitants.&lt;/p&gt;<br>
+  &lt;/div&gt;</div>
+<a target="_blank" href="tryit2625.html?filename=trywhatis_w3css_panels" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<hr>
+
+<h2>W3.CSS Cards</h2>
+<p>The <b>w3-card</b> classes are suitible for both images and notes:</p>
+
+<div class="w3-row-padding" style="margin:0 -16px">
+
+<div class="w3-half">
+<div class="w3-card-2">
+  <div class="w3-container w3-center">  
+  <h2>Amazing</h2>
+  </div>
+  <img src="img_snowtops.jpg" alt="Alps" style="width:100%">
+  <div class="w3-container w3-center">  
+  <p>French Alps</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card">
+  <div class="w3-container w3-blue">
+  <h1>A Car</h1>
+  </div>
+  <div class="w3-container w3-white">
+  <p>A car is a wheeled, self-powered motor vehicle used for transportation.
+  Most definitions of the term specify that cars are designed to run primarily on roads,
+  to have seating for one to eight people, and to typically have four wheels.
+  <br><br>(Wikipedia)</p>
+  </div>
+</div>
+</div>
+
+</div>
+<br>
+<div class="w3-card-4" style="width:50%;max-width:300px;">
+  <img src="img_avatar3.png" alt="Avatar" style="width:100%">
+  <div class="w3-container">
+    <h4><b>John</b></h4> 
+    <p>Architect and Engineer</p> 
+  </div>
+</div>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class=&quot;w3-card-4&quot; style=&quot;max-width:300px;&quot;&gt;<br>&nbsp; &lt;img 
+  src=&quot;img_avatar3.png&quot; alt=&quot;Avatar&quot; style=&quot;width:100%&quot;&gt;<br>&nbsp; &lt;div 
+  class=&quot;w3-container&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h4&gt;&lt;b&gt;John&lt;/b&gt;&lt;/h4&gt; <br>&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;Architect and Engineer&lt;/p&gt; <br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
+<a target="_blank" href="tryit0331.html?filename=trywhatis_w3css_cards" class="w3-btn w3-margin-bottom">Try W3.CSS &raquo;</a>
+<a target="_blank" href="tryitf9f3.html?filename=trywhatis_bootstrap_cards" class="w3-btn w3-margin-bottom">Try Bootstrap &raquo;</a>
+</div>
+
+
+<hr>
+<h2>W3.CSS Tables</h2>
+<p>The <b>w3-table</b>
+classes can handle all kinds of tables:</p>
+
+<table class="w3-table w3-bordered w3-striped w3-border w3-table-responsive">
+<thead class="w3-dark-grey">
+<tr>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Jill</td>
+  <td>Smith</td>
+  <td>50</td>
+</tr>
+<tr>
+  <td>Eve</td>
+  <td>Jackson</td>
+  <td>94</td>
+</tr>
+<tr>
+  <td>Adam</td>
+  <td>Johnson</td>
+  <td>67</td>
+</tr>
+<tr>
+  <td>Anja</td>
+  <td>Bore</td>
+  <td>100</td>
+</tr>
+</tbody>
+</table>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;table class=&quot;w3-table w3-bordered w3-striped w3-border&quot;&gt;<br>&lt;thead 
+  class=&quot;w3-dark-grey&quot;&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;First Name&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;th&gt;Last Name&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Points&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>
+  &lt;/thead&gt;<br>&lt;tbody&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;td&gt;Jill&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;Smith&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;td&gt;50&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;Eve&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; 
+  &lt;td&gt;Jackson&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;94&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&lt;/tbody&gt;<br>
+  &lt;/table&gt;<br></div>
+<a target="_blank" href="tryit913b.html?filename=trywhatis_w3css_tables" class="w3-btn w3-margin-bottom">Try W3.CSS &raquo;</a>
+<a target="_blank" href="tryitfe18.html?filename=trywhatis_bootstrap_table" class="w3-btn w3-margin-bottom">Try Bootstrap &raquo;</a>
+</div>
+
+<hr>
+
+<h2>W3.CSS Lists</h2>
+<p>The <strong><a href="../w3css/w3css_lists.html">w3-ul</a></strong>
+class can handle all kinds of lists:</p>
+
+<ul class="w3-ul w3-card-4">
+  <li class="w3-padding-16 w3-hover-light-grey">
+    <span onclick="this.parentElement.style.display='none'" 
+    class="w3-button w3-white w3-xlarge w3-right w3-hover-red">&times;</span>
+    <img src="../w3css/img_avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <span class="w3-large">Mike</span><br>
+    <span>Web Designer</span>
+  </li>
+  <li class="w3-padding-16 w3-hover-light-grey">
+    <span onclick="this.parentElement.style.display='none'" 
+    class="w3-button w3-white w3-xlarge w3-right w3-hover-red">&times;</span>
+    <img src="../w3css/img_avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <span class="w3-large">Jill</span><br>
+    <span>Support</span>
+  </li>  
+  <li class="w3-padding-16 w3-hover-light-grey">
+    <span onclick="this.parentElement.style.display='none'" 
+    class="w3-button w3-white w3-xlarge w3-right w3-hover-red">&times;</span>
+    <img src="../w3css/img_avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <span class="w3-large">Jane</span><br>
+    <span>Accountant</span>
+  </li> 
+  <li class="w3-padding-16 w3-hover-light-grey">
+    <span onclick="this.parentElement.style.display='none'" 
+    class="w3-button w3-white w3-xlarge w3-right w3-hover-red">&times;</span>
+    <img src="../w3css/img_avatar3.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+    <span class="w3-large">Jack</span><br>
+    <span>Advisor</span>
+  </li> 
+</ul>
+<hr>
+
+<h2>W3.CSS Buttons</h2>
+<p>The <a href="../w3css/w3css_buttons.html"><strong>w3-button</strong> and <strong>w3-btn</strong></a>
+class provides buttons of all sizes and types.</p>
+<div class="w3-section">
+<button class="w3-button w3-ripple w3-red w3-padding">Button</button>
+<button class="w3-button w3-ripple w3-blue w3-padding">Button</button>
+<button class="w3-button w3-ripple w3-green w3-padding">Button</button>
+<button class="w3-button w3-ripple w3-teal w3-padding">Button</button>
+<button class="w3-button w3-ripple w3-black w3-padding">Button</button>
+<button class="w3-button w3-ripple w3-light-grey w3-padding">Button</button>
+<button class="w3-button w3-black w3-disabled w3-padding">Disabled</button>
+</div>
+<div class="w3-section">
+<button class="w3-btn w3-white w3-border">Button</button>
+<button class="w3-btn w3-light-grey w3-round">Button</button>
+<button class="w3-btn w3-white w3-border w3-border-blue w3-round">Button</button>
+<button class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Button</button>
+<button class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">Button</button>
+<button class="w3-btn w3-black w3-padding-large w3-hover-red">Button</button>
+</div>
+
+<p>Wide buttons:</p>
+
+<div class="w3-section">
+<button class="w3-button w3-block w3-border">Button</button>
+</div>
+
+<div class="w3-section">
+<button class="w3-button w3-block w3-teal">Button</button>
+</div>
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" style="width:33.3%">One</button>
+  <button class="w3-bar-item w3-button" style="width:33.3%">Two</button>
+  <button class="w3-bar-item w3-button" style="width:33.4%">Three</button>
+</div>
+
+
+<p>Circular or square buttons:</p>
+<p>
+<a class="w3-button w3-xlarge w3-circle w3-ripple w3-black">+</a>
+<a class="w3-button w3-xlarge w3-circle w3-ripple w3-teal">+</a>
+<a class="w3-button w3-xlarge w3-circle w3-ripple w3-red w3-card-4">+</a>
+</p>
+<p>
+<a class="w3-button w3-xlarge w3-ripple w3-black">+</a>
+<a class="w3-button w3-xlarge w3-ripple w3-teal">+</a>
+<a class="w3-button w3-xlarge w3-ripple w3-red w3-card-4">+</a>
+</p>
+
+<hr>
+<h2>W3.CSS Tags, Labels, Badges, and Signs</h2>
+<p>The <a href="../w3css/w3css_tags.html"><strong>w3-tag</strong></a> and the
+<a href="../w3css/w3css_badges.html"><strong>w3-badge</strong></a>
+classes are capable of displaying all kinds of tags, labels, badges and signs:</p>
+<p><span class="w3-badge w3-dark-grey">2</span>
+<span class="w3-badge w3-teal">8</span>
+<span class="w3-badge w3-red">A</span>
+<span class="w3-badge w3-orange w3-text-white">B</span></p>
+
+<p><span class="w3-tag w3-dark-grey">New</span>
+<span class="w3-tag w3-orange w3-text-white">Warning</span>
+<span class="w3-tag w3-red">Danger</span>
+<span class="w3-tag w3-blue">Info</span>
+</p>
+
+<div class="w3-row">
+<div class="w3-half">
+<div class="w3-tag w3-round w3-green" style="padding:3px 3px">
+<div class="w3-tag w3-round w3-green" style="border:1px solid white">Falcon Ridge Parkway</div>
+</div>
+<p>
+<div class="w3-tag w3-jumbo w3-red">S</div>
+<div class="w3-tag w3-jumbo">A</div>
+<div class="w3-tag w3-jumbo w3-yellow">L</div>
+<div class="w3-tag w3-jumbo">E</div>
+</p>
+</div>
+<div class="w3-half">
+<div class="w3-tag w3-xlarge w3-padding-large w3-round-large w3-red w3-center">DO NOT<br>
+BREATHE<br>UNDER WATER</div>
+</div>
+</div>
+<hr>
+
+
+<h2>W3.CSS Responsive</h2>
+<p>The <a href="../w3css/w3css_responsive.html"><strong>Responsive Grid</strong></a>
+classes provide responsiveness for all device types: PC, laptop, tablet, and mobile.</p>
+<!-- First row -->
+<div class="w3-row-padding" style="margin:0 -16px 20px">
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s6 w3-green w3-center">
+    <p>1/2</p>
+  </div>
+  <div class="w3-col s6 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/2</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s4 w3-green w3-center">
+    <p>1/3</p>
+  </div>
+  <div class="w3-col s4 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/3</p>
+  </div>
+  <div class="w3-col s4 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/3</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s4 w3-dark-grey w3-center">
+    <p>1/3</p>
+  </div>
+  <div class="w3-col s8 w3-green w3-center w3-text-light-grey">
+    <p>2/3</p>
+  </div>
+</div>
+
+</div>
+
+<!-- Second row -->
+<div class="w3-row-padding" style="margin:0 -16px 20px">
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s3 w3-green w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/4</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s6 w3-green w3-center">
+    <p>1/2</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/4</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s8 w3-green w3-center">
+    <p>2/3</p>
+  </div>
+  <div class="w3-col s4 w3-dark-grey w3-center w3-text-light-grey">
+    <p>1/3</p>
+  </div>
+</div>
+
+</div>
+
+<!-- Third row -->
+<div class="w3-row-padding" style="margin:0 -16px 20px">
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s12 w3-green w3-center w3-text-light-grey">
+    <p>1/1</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s6 w3-green w3-center">
+    <p>1/2</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-col s6 w3-green w3-center">
+    <p>1/2</p>
+  </div>
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+</div>
+
+</div>
+
+<!-- Fourth row -->
+<div class="w3-row-padding" style="margin:0 -16px 20px">
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col w3-center w3-dark-grey w3-text-light-grey" style="width:50px">
+    <p>50px</p>
+  </div>
+  <div class="w3-rest w3-green w3-center w3-text-light-grey">
+    <p>rest</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col s3 w3-dark-grey w3-center">
+    <p>1/4</p>
+  </div>
+  <div class="w3-rest w3-green w3-center w3-text-light-grey">
+    <p>rest</p>
+  </div>
+</div>
+
+<div class="w3-col m4 margtest">
+  <div class="w3-col w3-center w3-dark-grey w3-text-light-grey w3-left" style="width:100px">
+    <p>100px</p>
+  </div>
+  <div class="w3-col w3-center w3-dark-grey w3-text-light-grey w3-right" style="width:45px">
+    <p>45px</p>
+  </div>
+  <div class="w3-rest w3-green w3-center w3-text-light-grey">
+    <p>rest</p>
+  </div>
+</div>
+
+</div>
+
+<!-- Grid Layout examples -->
+<div class="w3-row-padding" style="margin:0 -16px 20px">
+
+<div class="w3-col m4 margtest2">
+
+<div class="w3-col s6">
+  <div class="w3-col s12 w3-orange" style="width:92%;height:125px;margin-right:10px"></div>
+</div>
+
+<div class="w3-col s6">
+  <div class="w3-col s12 w3-green" style="height:75px;margin-bottom:10px"></div>
+  <div class="w3-col s6 w3-green" style="height:40px;"></div>
+  <div class="w3-col s6 w3-dark-grey" style="height:40px"></div>
+</div>
+
+</div>
+
+<div class="w3-col m4 margtest2">
+
+<div class="w3-col s3">
+  <div class="w3-col s12 w3-orange" style="width:85%;height:126px;margin-right:20px"></div>
+</div>
+
+<div class="w3-col s6">
+  <div class="w3-col s12 w3-green" style="height:50px;margin-bottom:10px"></div>
+  <div class="w3-col s6 w3-green" style="height:31px;"></div>
+  <div class="w3-col s6 w3-dark-grey" style="height:31px;margin-bottom:10px"></div>
+
+  <div class="w3-col s4 w3-green" style="height:25px;"></div>
+  <div class="w3-col s4 w3-dark-grey" style="height:25px"></div>
+  <div class="w3-col s4 w3-green" style="height:25px"></div>
+</div>
+
+<div class="w3-col s3">
+  <div class="w3-col s12 w3-orange" style="width:85%;height:126px;margin-left:10px"></div>
+</div>
+
+</div>
+
+<div class="w3-col m4 margtest2">
+
+<div class="w3-col s12">
+  <div class="w3-col s12 w3-orange" style="height:36px;margin-bottom:10px"></div>
+</div>
+
+<div class="w3-col s12">
+  <div class="w3-col s12 w3-green" style="height:26.5px;margin-bottom:10px"></div>
+  <div class="w3-col s8 w3-green" style="height:18px;"></div>
+  <div class="w3-col s4 w3-dark-grey" style="height:18px;margin-bottom:10px"></div>
+
+  <div class="w3-col s3 w3-green" style="height:15px;"></div>
+  <div class="w3-col s3 w3-dark-grey" style="height:15px"></div>
+  <div class="w3-col s3 w3-green" style="height:15px"></div>
+  <div class="w3-col s3 w3-dark-grey" style="height:15px"></div>
+</div>
+
+</div>
+
+</div>
+
+<p>W3.CSS also supports a
+<a href="../w3css/w3css_grid.html" style="font-weight: 700">12 column mobile-first fluid grid</a> 
+with small, medium, and large classes.</p>
+<hr>
+
+<h2>W3.CSS Display</h2>
+<p>The <a href="../w3css/w3css_display.html"><strong>w3-display</strong></a> classes
+allow you to display HTML elements in specific positions:</p>
+<div class="w3-row-padding" style="margin:0 -16px">
+
+  <div class="w3-half">
+    <div class="w3-display-container w3-green" style="height:250px;">
+    <div class="w3-display-topleft w3-padding">Top Left</div>
+  <div class="w3-display-topright w3-padding">Top Right</div>
+  <div class="w3-display-bottomleft w3-padding">Bottom Left</div>
+  <div class="w3-display-bottomright w3-padding">Bottom Right</div>
+  <div class="w3-display-left w3-padding">Left</div>
+  <div class="w3-display-right w3-padding">Right</div>
+  <div class="w3-display-middle w3-padding">Middle</div>
+  <div class="w3-display-topmiddle w3-hide-small w3-padding">Top Middle</div>
+  <div class="w3-display-bottommiddle w3-hide-small w3-padding">Bottom Middle</div>
+    </div>
+  </div>
+  <div class="w3-half">
+<p class="w3-margin-top w3-hide-medium w3-hide-large">
+    <div class="w3-display-container w3-green">
+      <img src="../w3css/img_lights.jpg" alt="Pants" style="width:100%;height:250px">
+  <div class="w3-display-topleft w3-padding">Top Left</div>
+  <div class="w3-display-topright w3-padding">Top Right</div>
+  <div class="w3-display-bottomleft w3-padding">Bottom Left</div>
+  <div class="w3-display-bottomright w3-padding">Bottom Right</div>
+  <div class="w3-display-left w3-padding">Left</div>
+  <div class="w3-display-right w3-padding">Right</div>
+  <div class="w3-display-middle w3-padding">Middle</div>
+  <div class="w3-display-topmiddle w3-hide-small w3-padding">Top Middle</div>
+  <div class="w3-display-bottommiddle w3-hide-small w3-padding">Bottom Middle</div>
+    </div>
+  </div>
+
+</div>
+<hr>
+
+<h2>W3.CSS Modals</h2>
+<p>The <a href="../w3css/w3css_modal.html"><strong>w3-modal</strong></a>
+class provides modal dialog in pure HTML:</p>
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-dark-grey w3-hover-black w3-padding-16">Click to Open Modal</button>
+
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top w3-display-container">
+    <header class="w3-container w3-teal"> 
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-large w3-teal w3-display-topright">&times;</span>
+      <h2>Header</h2>
+    </header>
+    <div class="w3-container">
+      <p>Some text. Some text. Some text.</p>
+      <p>Some text. Some text. Some text.</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Footer</p>
+    </footer>
+  </div>
+</div>
+<br><br>
+<p>Modal Image:</p>
+<img class="w3-hover-opacity modimgresp" src="../w3css/img_nature.jpg" alt="Nature" onclick="document.getElementById('img01').style.display='block'"
+style="width:22%;cursor:pointer">
+
+<div id="img01" class="w3-modal" onclick="document.getElementById('img01').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xxlarge w3-display-topright" style="top:43px;">&times;</span>
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+    <img src="../w3css/img_nature_wide.jpg" alt="Nature" style="width:100%">
+  </div>
+</div>
+
+<hr>
+
+<h2>W3.CSS Progress Bars</h2>
+<p>Read more at <a href="../w3css/w3css_progressbar.html"><strong>W3.CSS Progress Bars</strong></a>
+
+<div class="w3-dark-grey">
+  <div class="w3-container w3-green w3-center w3-padding" style="width:25%">25%</div>
+</div><br>
+
+<div class="w3-light-grey">
+  <div class="w3-container w3-red w3-center w3-padding" style="width:50%">50%</div>
+</div><br>
+
+<div class="w3-light-grey">
+  <div id="myBar" class="w3-container w3-padding w3-green" style="width:5%">0</div>
+</div><br>
+
+<button class="w3-button w3-dark-grey" onclick="move()">Click Me</button> 
+
+<hr>
+
+<h2>W3.CSS Dropdowns</h2>
+<p>The <a href="../w3css/w3css_dropdowns.html"><strong>w3-dropdown</strong></a>
+classes provide dropdowns:</p>
+<div class="w3-row">
+<div class="w3-col s6">
+<div class="w3-dropdown-hover">
+  <button class="w3-button w3-dark-grey">Hover Me!</button>
+  <div class="w3-dropdown-content w3-bar-block w3-border">
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+  </div>
+
+</div>
+</div>
+<div class="w3-col s6">
+<div class="w3-dropdown-click">
+  <button onclick="myDropFunc()" class="w3-button w3-dark-grey">Click Me!</button>
+  <div id="Demodrop" class="w3-dropdown-content w3-bar-block w3-card-4">
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+  </div>
+</div>
+</div>
+</div>
+
+<hr>
+<h2>W3.CSS Accordions</h2>
+<p>Read more at <a href="../w3css/w3css_accordions.html"><strong>W3.CSS Accordions</strong></a></p>
+
+<button onclick="myAccFunc('Demo1')" class="w3-hover-dark-grey w3-light-grey w3-button w3-block w3-left-align">Open Section 1</button>
+<div id="Demo1" class="w3-hide">
+    <div class="w3-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <button onclick="myAccFunc('Demo2')" class="w3-hover-dark-grey w3-light-grey w3-button w3-block w3-left-align">Open Section 2</button>
+  <div id="Demo2" class="w3-hide w3-bar-block">
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+  </div>
+  <button onclick="myAccFunc('Demo3')" class="w3-hover-dark-grey w3-light-grey w3-button w3-block w3-left-align">Open Section 3</button>
+  <div id="Demo3" class="w3-hide w3-black">
+    <div class="w3-container">
+      <p>Accordion with Images:</p>
+      <img src="../w3css/img_snowtops.jpg" style="width:30%;" class="w3-animate-zoom">
+      <p>French Alps</p>
+    </div>
+  </div>
+<hr>
+
+<h2>W3.CSS Tabs</h2>
+<p><a href="../w3css/w3css_tabulators.html"><strong>Tabs</strong></a> are perfect for single page web applications, or for web pages capable of displaying different subjects.</p>
+<div class="w3-border">
+<div class="w3-bar w3-light-grey intronav">
+<a href="javascript:void(0)" class="w3-bar-item w3-button testbtn" onclick="openCity(event, 'London')">London</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button testbtn" onclick="openCity(event, 'Paris')">Paris</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button testbtn" onclick="openCity(event, 'Tokyo')">Tokyo</a>
+</div>
+
+<div id="London" class="w3-container city w3-animate-opacity w3-red">
+<h2>London</h2>
+<p>London is the capital of England.</p>
+<p>It is the most populous city in the United Kingdom,
+with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+
+<div id="Paris" class="w3-container city w3-animate-opacity w3-red">
+<h2>Paris</h2>
+<p>Paris is the capital of France.</p> 
+<p>The Paris area is one of the largest population centers in Europe,
+with more than 12 million inhabitants.</p>
+</div>
+
+<div id="Tokyo" class="w3-container city w3-animate-opacity w3-red">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+<p>It is the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+</div>
+<br>
+
+<p>Tabbed Image Gallery (Click on one of the pictures):</p>
+
+<div class="w3-row-padding w3-margin-top" style="margin:0 -16px">
+  <div class="w3-col s3 w3-container">
+  <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+    <img src="../w3css/img_nature.jpg" alt="Nature" style="width:100%">
+  </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+      <img src="../w3css/img_snowtops.jpg" alt="Fjords" style="width:100%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains');">
+      <img src="../w3css/img_mountains.jpg" alt="Mountains" style="width:100%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+      <img src="../w3css/img_lights.jpg" alt="Lights" style="width:100%">
+    </a>
+  </div>
+</div>
+<br>
+<div id="Nature" class="picture w3-display-container">
+  <img src="../w3css/img_nature_wide.jpg" alt="Nature" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-xlarge w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Nature</div>
+</div>
+
+<div id="Snow" class="picture w3-display-container">
+  <img src="../w3css/img_snow_wide.jpg" alt="Snow" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-xlarge w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Snow</div>
+</div>
+
+<div id="Mountains" class="picture w3-display-container">
+  <img src="../w3css/img_mountains_wide.jpg" alt="Mountains" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-xlarge w3-transparent">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Mountains</div>
+</div>
+
+<div id="Lights" class="picture w3-display-container">
+  <img src="../w3css/img_lights_wide.jpg" alt="Lights" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-xlarge w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Northern Lights</div>
+</div>
+
+<script>
+function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("picture");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+</script>
+
+<hr>
+
+<h2>W3.CSS Navigation</h2>
+<p>The <a href="../w3css/w3css_navigation.html"><strong>w3-bar</strong></a> class can be used to create a navigation bar:</p>
+
+<div class="w3-bar w3-black">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button">Home</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button">Link 1</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button">Link 2</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+
+<p>Navigation bar with input:</></p>
+<div class="w3-bar w3-light-grey w3-border">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-green w3-mobile">Home</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Link 1</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Link 2</a>
+  <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-black w3-mobile">Go</a>
+</div>
+
+<p>Navigation bar with dropdown:</p>
+<div class="w3-bar w3-light-grey">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Home</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Link 1</a>
+  <div class="w3-dropdown-hover w3-mobile">
+    <button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a class="w3-bar-item w3-button" href="javascript:void(0)" class="w3-text-black">Link 1</a>
+      <a class="w3-bar-item w3-button" href="javascript:void(0)" class="w3-text-black">Link 2</a>
+      <a class="w3-bar-item w3-button" href="javascript:void(0)" class="w3-text-black">Link 3</a>
+    </div>
+  </div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-mobile"><i class="fa fa-search"></i></a>
+</div>
+<div class="w3-hide-small">
+<p>Customized bars:</p>
+
+
+<div class="w3-bar w3-dark-grey">
+  <a class="w3-bar-item w3-button w3-mobile w3-green" style="width:33%" href="javascript:void(0)">Home</a>
+  <a class="w3-bar-item w3-button w3-mobile" style="width:34%" href="javascript:void(0)">Link 1</a>
+  <a class="w3-bar-item w3-button w3-mobile" style="width:33%" href="javascript:void(0)">Link 2</a>
+</div>
+
+<br>
+
+<div class="w3-bar w3-black intronav">
+  <a class="w3-bar-item w3-button w3-hover-black w3-padding-16 w3-text-grey w3-hover-text-white" href="javascript:void(0)">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black w3-padding-16 w3-bottombar w3-border-red" href="javascript:void(0)">Link 1</a>
+  <a class="w3-bar-item w3-button w3-hover-black w3-padding-16 w3-text-grey w3-hover-text-white" href="javascript:void(0)">Link 2</a>
+  <a class="w3-bar-item w3-button w3-hover-black w3-padding-16 w3-text-grey w3-hover-text-white" href="javascript:void(0)">Link 3</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-padding-16 w3-hover-black w3-text-grey w3-hover-text-white"><i class="fa fa-search"></i></a>
+</div>
+</div>
+<hr>
+
+<p>The <a href="../w3css/w3css_sidebar.html"><strong>w3-sidebar</strong></a> class creates a side navigation:</p>
+
+<iframe src="../w3css/demo_ifr_sidebar.html" style="height:350px;width:100%;border:none;" class="w3-border" id="I2" name="I2"></iframe>
+<hr>
+
+<h2>W3.CSS Pagination</h2>
+<p>W3.CSS provides simple ways for <a href="../w3css/w3css_pagination.html"><strong>page pagination</strong></a>.</p>
+
+<div class="w3-bar">
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">&laquo;</a>
+  <a class="w3-bar-item w3-button w3-black" href="javascript:void(0)">1</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">2</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">3</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">4</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">5</a>
+  <a class="w3-bar-item w3-button" href="javascript:void(0)">&raquo;</a>
+</div>
+<br>
+<div class="w3-bar w3-border w3-round">
+  <a href="javascript:void(0)" class="w3-button">&#10094; Previous</a>
+  <a href="javascript:void(0)" class="w3-button w3-right">Next &#10095;</a>
+</div>
+<br>  
+<div class="w3-center">
+<div class="w3-bar">
+  <a href="javascript:void(0)" class="w3-button w3-border">&#10094;</a>
+  <a href="javascript:void(0)" class="w3-button w3-border">&#10095;</a>
+</div>
+</div>
+
+<hr>
+
+<h2>Slideshows</h2>
+<p>W3.CSS provide <a href="../w3css/w3css_slideshow.html"><strong>slideshows</strong></a> for cycling through images or other content:</p>
+
+<div class="w3-content w3-display-container noselection" style="max-width:1000px">
+<div class="w3-display-container mySlides">
+  <img src="../w3css/img_nature_wide.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-padding w3-text-white w3-small">
+    1 / 3
+  </div>
+  <div class="w3-display-topright w3-text-white w3-padding w3-hide-small">
+    Beautiful Nature
+  </div>
+</div>
+<div class="w3-display-container mySlides">
+  <img  src="../w3css/img_snow_wide.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-text-white w3-padding w3-small">
+    2 / 3
+  </div>
+  <div class="w3-display-topright w3-text-white w3-padding w3-hide-small">
+    French Alps
+  </div>
+</div>
+<div class="w3-display-container mySlides">
+  <img  src="../w3css/img_mountains_wide.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-text-white w3-padding w3-small">
+    3 / 3
+  </div>
+  <div class="w3-display-topright w3-text-black w3-padding w3-hide-small">
+    Mountains
+  </div>
+</div>
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki w3-large" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki w3-large" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demodots w3-border w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demodots w3-border w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demodots w3-border w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<hr>
+
+<h2>Lightbox</h2>
+<p>Combine <a href="../w3css/w3css_modal.html">Modals</a> and <a href="../w3css/w3css_slideshow.html">Slideshows</a> to create a lightbox (modal image gallery):</p>
+<div id="myModalLight" class="w3-modal w3-black">
+ <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright cursor" title="Close Lightbox" onclick="closeModalLight()">&times;</span>
+ <div class="w3-modal-content">
+
+  <div class="w3-content" style="max-width:1200px">
+   <img class="mySlidesLight" src="../w3css/img_nature_wide.jpg" style="width:100%">
+   <img class="mySlidesLight" src="../w3css/img_snow_wide.jpg" style="width:100%">
+   <img class="mySlidesLight" src="../w3css/img_mountains_wide.jpg" style="width:100%">
+   <div class="w3-row w3-black w3-center">
+    <div class="w3-container w3-display-container">
+     <p id="captionLight"></p>
+     <span class="w3-display-middle w3-hover-text-grey w3-large cursor noselection" style="left:2%" onclick="plusDivsLight(-1)" title="Previous image">&#10094;</span>
+     <span class="w3-display-middle w3-hover-text-grey w3-large cursor noselection" style="left:98%" onclick="plusDivsLight(1)" title="Next image">&#10095;</span>
+    </div>
+
+    <div class="w3-col s4">
+     <img class="demoLight w3-opacity w3-hover-opacity-off cursor" src="../w3css/img_nature_wide.jpg" style="width:100%" onclick="currentDivLight(1)" alt="Nature and sunrise">
+    </div>
+    <div class="w3-col s4">
+     <img class="demoLight w3-opacity w3-hover-opacity-off cursor" src="../w3css/img_snow_wide.jpg" style="width:100%" onclick="currentDivLight(2)" alt="French Alps">
+    </div>
+    <div class="w3-col s4">
+     <img class="demoLight w3-opacity w3-hover-opacity-off cursor" src="../w3css/img_mountains_wide.jpg" style="width:100%" onclick="currentDivLight(3)" alt="Mountains and fjords">
+    </div>
+   </div> <!-- End row -->
+  </div> <!-- End w3-content -->
+  
+ </div> <!-- End modal content -->
+</div> <!-- End modal -->
+
+
+<div class="w3-row-padding" style="margin:16px -16px 0 -16px">
+  <div class="w3-col s4">
+    <img src="../w3css/img_nature_wide.jpg" style="width:100%;cursor:pointer"
+    onclick="openModalLight();currentDivLight(1)" class="w3-hover-shadow cursor">
+  </div>
+  <div class="w3-col s4">
+    <img src="../w3css/img_snow_wide.jpg" style="width:100%;cursor:pointer"
+    onclick="openModalLight();currentDivLight(2)" class="w3-hover-shadow cursor">
+  </div>
+  <div class="w3-col s4">
+    <img src="../w3css/img_mountains_wide.jpg" style="width:100%;cursor:pointer"
+    onclick="openModalLight();currentDivLight(3)" class="w3-hover-shadow cursor">
+  </div>
+</div>
+<hr>
+
+<h2>W3.CSS Animations</h2>
+<p>The <strong><a href="../w3css/w3css_animate.html">w3-animate</a></strong>
+classes provide an easy way to slide and fade in elements:</p>
+<br>
+<div class="w3-center">
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Top')">Top</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Bottom')">Bottom</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Left')">Left</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Right')">Right</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Fade')">Fade In</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Zoom')">Zoom</button>
+<button class="w3-button w3-margin-bottom w3-green" style="width:90px" onclick="startAnim('Spin')">Spin</button>
+</div>
+<div class="w3-center">
+<div id="Top" class="animTest w3-animate-top">Animation is Fun!</div>
+<div id="Bottom" class="animTest w3-animate-bottom">Animation is Fun!</div>
+<div id="Left" class="animTest w3-animate-left">Animation is Fun!</div>
+<div id="Right" class="animTest w3-animate-right">Animation is Fun!</div>
+<div id="Fade" class="animTest w3-animate-opacity">Animation is Fun!</div>
+<div id="Zoom" class="animTest w3-animate-zoom">Animation is Fun!</div>
+<div id="Spin" class="animTest w3-spin">Animation is Fun!</div>
+<div id="Normal" class="animTest ">Animation is Fun!</div>
+</div>
+<hr>
+
+<h2>W3.CSS Images</h2>
+<p>Styling <a href="../w3css/w3css_images.html">images</a> in W3CSS is easy:</p>
+
+<div class="w3-row-padding" style="margin-left:-16px;margin-right:-16px;">
+<div class="w3-col m3 s4">
+<img src="../w3css/img_lights.jpg" class="w3-round testsm" alt="Northern Lights" style="width:85%">
+</div>
+<div class="w3-col m3 s4">
+<img src="../w3css/img_forest.jpg" class="w3-circle testsm" alt="Forest" style="width:85%">
+</div>
+<div class="w3-col m3 s4">
+<img src="../w3css/img_mountains.jpg" class="testsm w3-hover-opacity w3-border" alt="Mountains" style="padding:4px;width:85%">
+</div>
+<div class="w3-col m3 w3-hide-small">
+<div class="w3-display-container">
+  <img src="../w3css/img_nature.jpg" alt="Nature" style="width:85%" class="w3-card-4 testsm">
+  <div class="w3-display-bottomleft w3-text-white w3-container w3-padding" style="width:85%">Nature</div>
+</div>
+</div>
+
+</div>
+<div style="clear:both;margin-bottom:28px;"></div>
+
+<hr>
+
+<h2>W3.CSS Effects</h2>
+<p>Add special <a href="../w3css/w3css_effects.html">effects</a> to any element:</p>
+<div class="w3-row-padding w3-center" style="margin:0 -16px">
+
+<div class="w3-col m3 w3-hide-small">
+<img src="../w3css/img_workshop.jpg" style="width:100%">
+<div class="w3-red w3-container">
+<p>Normal</p>
+</div>
+</div>
+
+<div class="w3-col m3 s4 w3-opacity">
+<img src="../w3css/img_workshop.jpg" style="width:100%;">
+<div class="w3-red w3-container">
+ <p>Opacity</p>
+</div>
+</div>
+
+<div class="w3-col m3 s4 w3-grayscale">
+<img src="../w3css/img_workshop.jpg" style="width:100%;">
+<div class="w3-red w3-container">
+<p>Grayscale</p>
+</div>
+</div>
+
+<div class="w3-col m3 s4 w3-sepia">
+<img src="../w3css/img_workshop.jpg" style="width:100%;">
+<div class="w3-red w3-container">
+<p>Sepia<p>
+</div>
+</div>
+
+</div>
+<hr>
+
+<h2>W3.CSS Input Forms</h2>
+<p>The <strong><a href="../w3css/w3css_input.html">w3-input</a></strong>
+classes are for input forms:</p>
+
+<input class="w3-input w3-border w3-light-grey" type="text" placeholder="Name">
+<br>
+<input class="w3-input w3-border w3-border-blue" type="text" placeholder="Country">
+<br>
+<div class="w3-row-padding w3-margin-bottom" style="margin:0 -16px">
+<div class="w3-third">
+<input class="w3-input" type="text" placeholder="One">
+</div>
+<div class="w3-third">
+<input class="w3-input" type="text" placeholder="Two">
+</div>
+<div class="w3-third">
+<input class="w3-input" type="text" placeholder="Three">
+</div>
+</div>
+
+<input class="w3-input w3-border w3-animate-input" type="text" style="width:30%;" placeholder="Click on me!">   
+
+<div class="w3-row-padding w3-margin-top" style="margin:0 -16px">
+
+<div class="w3-half">
+<div class="w3-card-4">
+<div class="w3-container w3-blue">
+  <h2>Input Form</h2>
+</div>    
+<form class="w3-container">
+<p>
+<input class="w3-input" type="text" style="width:90%" required>
+<label>Name</label></p>
+<p>      
+<input class="w3-input" type="email" style="width:90%" required>
+<label>Email</label></p>
+<p>
+<textarea class="w3-input" style="width:90%;resize: vertical;" cols="20" name="S3" rows="1"></textarea>
+<label>Subject</label></p>
+<br>
+<p>
+<input id="milk" class="w3-check" type="checkbox" checked="checked">
+<label>Milk</label></p>
+<p>
+<input id="sugar" class="w3-check" type="checkbox">
+<label>Sugar</label></p>
+<p>
+<input id="lemon" class="w3-check" type="checkbox" disabled>
+<label>Lemon (Disabled)</label></p>
+</form>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card-4">
+<div class="w3-container w3-red">
+  <h2>Input Form</h2>
+</div>    
+<form class="w3-container">
+<p>
+<input class="w3-input" type="text" style="width:90%" required>
+<label>Name</label></p>
+<p>      
+<input class="w3-input" type="email" style="width:90%" required>
+<label>Email</label></p>
+<p>
+<textarea class="w3-input" style="width:90%;resize: vertical;" cols="20" name="S4" rows="1"></textarea>
+<label>Subject</label></p>
+<br>
+<p>
+<input class="w3-radio" type="radio" name="gender" value="male" checked="true">
+<label>Male</label></p>
+<p>
+<input class="w3-radio" type="radio" name="gender" value="female">
+<label>Female</label></p>
+<p>
+<input class="w3-radio" type="radio" name="gender" value="" disabled>
+<label>Don't know (Disabled)</label></p></form>
+</div>
+</div>
+</div>
+<hr>
+
+<h2>W3.CSS Filters</h2>
+<p>Use <a href="../w3css/w3css_filters.html">W3.CSS Filters</a> to search for a specific element inside a list, table, dropdown, etc:</p>
+<input class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction2()">
+
+<table class="w3-table w3-striped w3-bordered w3-border w3-margin-top" id="myTable">
+  <tr>
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+</table>
+
+<script>
+function myFunction2() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName('tr');
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName('td')[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = '';
+      } else {
+        tr[i].style.display = 'none';
+      }
+    }
+  }
+}
+</script>
+<hr>
+
+<h2>W3.CSS Fonts</h2>
+<p>With W3.CSS it is extremely easy to add <a href="../w3css/w3css_defaults.html"><strong>fonts</strong></a> to a web page:</p>
+
+<div class="w3-tangerine">
+  Making the web beautiful!
+</div>
+
+<div class="w3-lobster">
+  Making the web!
+</div>
+<hr>
+
+<h2>W3.CSS Tooltips</h2>
+<p>The <strong><a href="../w3css/w3css_tooltips.html">w3-tooltip</a></strong>
+class can display all kinds of tooltips:</p>
+
+<p class="w3-tooltip">Hover over this text!
+<span class="w3-text w3-tag">Tooltip content</span></p>
+<p class="w3-tooltip">Hover over this text!
+<span class="w3-text w3-tag w3-theme w3-animate-opacity w3-round-large">Tooltip content</span></p>
+<hr>
+
+<h2>Color Themes</h2>
+<p>Color themes can easily be added to any web application:</p>
+
+<div class="w3-row-padding" style="margin:0 -16px">
+<div class="w3-half">
+<div class="w3-card">
+  <div class="w3-container w3-indigo">
+    <h3>Theme Indigo</h3>
+  </div>
+  <div class="w3-container w3-text-indigo"><h4>Movies 2014</h4></div>
+  <ul class="w3-ul">
+    <li>
+      <h4>Frozen</h4>
+      <p>The response to the animations was ridiculous</p>
+    </li>
+    <li>
+      <h4>The Fault in Our Stars</h4>
+      <p>Touching, gripping and genuinely well made</p>
+    </li>
+    <li>
+      <h4>The Avengers</h4>
+      <p>A huge success for Marvel and Disney</p>
+    </li>
+  </ul>
+
+  <div class="w3-container w3-indigo w3-xlarge">&laquo;<span class="w3-right">&raquo;</span></div>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card">
+  <div class="w3-container w3-teal">
+    <h3>Theme Teal</h3>
+  </div>
+  <div class="w3-container w3-text-teal"><h4>Movies 2014</h4></div>
+  <ul class="w3-ul">
+    <li>
+      <h4>Frozen</h4>
+      <p>The response to the animations was ridiculous</p>
+    </li>
+    <li>
+      <h4>The Fault in Our Stars</h4>
+      <p>Touching, gripping and genuinely well made</p>
+    </li>
+    <li>
+      <h4>The Avengers</h4>
+      <p>A huge success for Marvel and Disney</p>
+    </li>
+  </ul>
+  <div class="w3-container w3-teal w3-xlarge">&laquo;<span class="w3-right">&raquo;</span></div></div>
+</div>
+</div>
+
+<div class="w3-panel w3-note">
+<p>Color themes are a perfect match for mobile applications.</p>
+</div>
+
+<hr>
+<h2>Full W3.CSS Tutorial</h2>
+<p>This has been a short description of W3.CSS.</p>
+<p>For a full W3.CSS tutorial go to <a href="../w3css/default.html" >W3Schools W3.CSS Tutorial</a>.</p>
+<p>For a full W3.CSS reference go to <a href="../w3css/w3css_references.html" >W3Schools W3.CSS Reference</a>.</p>
+
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn w3-green" href="whatis_bootstrap.html">&#10094; Previous</a>
+<a class="w3-right w3-btn w3-green" href="whatis_cli.html">Next &#10095;</a>
+</div>
+
+<script>
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+showDivs(1);
+
+// Lightbox (Modal and Slideshow)
+
+function openModalLight() {
+  document.getElementById('myModalLight').style.display = "block";
+}
+
+function closeModalLight() {
+  document.getElementById('myModalLight').style.display = "none";
+}
+
+
+var slideIndexLight = 1;
+showDivsLight(slideIndexLight);
+
+function plusDivsLight(n) {
+  showDivsLight(slideIndexLight += n);
+}
+
+
+function currentDivLight(n) {
+  showDivsLight(slideIndexLight = n);
+}
+
+function showDivsLight(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidesLight");
+  var dots = document.getElementsByClassName("demoLight");
+  var captionText = document.getElementById("captionLight");
+  if (n > x.length) {slideIndexLight = 1}
+  if (n < 1) {slideIndexLight = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndexLight-1].style.display = "block";
+  dots[slideIndexLight-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndexLight-1].alt;
+}
+
+
+// Dropdown
+function myDropFunc() {
+    var x = document.getElementById("Demodrop");
+    if (x.classList) { 
+        x.classList.toggle("w3-show");
+    } else {
+        // Fallback for IE9
+        if (x.className.indexOf("w3-show") == -1) 
+        x.className += " w3-show";
+        else 
+            x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+     activebtn[i].className = activebtn[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.classList) { 
+        x.classList.toggle("w3-show");
+        x.previousElementSibling.classList.toggle("w3-dark-grey");
+    } else {
+        // Fallback for IE9 and earlier
+        if (x.className.indexOf("w3-show") == -1) 
+        x.className += " w3-show";
+        else 
+            x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+startAnim("Normal")
+function startAnim(animName) {
+    var i;
+    var x = document.getElementsByClassName("animTest");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(animName).style.display = "block";  
+}
+</script>
+
+<script>
+// Click on a tab on load
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+</script>
+
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+  <div id="skyscraper">
+  
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
+  
+  </div>
+</div>
+
+<div class="sidesection">
+<h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+  <h4>LIKE US</h4>
+  <div class="w3-text-grey sharethis">
+    <a href="../../www.facebook.com/w3schoolscom/index.html" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>
+    <a href="../../www.instagram.com/w3schools.com_official/index.html" target="_blank" title="Instagram"><span class="fa fa-instagram fa-2x"></span></a>
+    <a href="../../www.linkedin.com/company/w3schools.com/index.html" target="_blank" title="LinkedIn"><span class="fa fa-linkedin-square fa-2x"></span></a>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
+<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="../images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Tabs</a><br>
+    <a href="../howto/howto_css_dropdown.html">Dropdowns</a><br>
+    <a href="../howto/howto_js_accordion.html">Accordions</a><br>
+    <a href="../howto/howto_js_sidenav.html">Side Navigation</a><br>
+    <a href="../howto/howto_js_topnav.html">Top Navigation</a><br>
+    <a href="../howto/howto_css_modals.html">Modal Boxes</a><br>
+    <a href="../howto/howto_js_progressbar.html">Progress Bars</a><br>
+    <a href="../howto/howto_css_parallax.html">Parallax</a><br>
+    <a href="../howto/howto_css_login_form.html">Login Form</a><br>
+    <a href="../howto/howto_html_include.html">HTML Includes</a><br>
+    <a href="../graphics/google_maps_intro.html">Google Maps</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Range Sliders</a><br>
+    <a href="../howto/howto_css_tooltip.html">Tooltips</a><br>
+    <a href="../howto/howto_js_slideshow.html">Slideshow</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Filter List</a><br>
+    <a href="../howto/howto_js_sort_list.html">Sort List</a><br>
+  </div>
+</div>
+
+
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h5><a href="../cert/default.html" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border">
+  <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
+  <a href="../cert/default.html" class="w3-button w3-light-grey w3-block" style="text-decoration:none">And more</a>
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", fix_stickyad);
+  window.addEventListener("resize", fix_stickyad);
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+</div>
+<!--
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+</div>
+-->
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../w3schools.invisionzone.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../../shop.w3schools.com/index.html" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+</div>
+
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">      
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Tutorials</h4>
+<a href="../html/default.html">HTML Tutorial</a><br>
+<a href="../css/default.html">CSS Tutorial</a><br>
+<a href="../js/default.html">JavaScript Tutorial</a><br>
+<a href="../howto/default.html">How To Tutorial</a><br>
+<a href="../sql/default.html">SQL Tutorial</a><br>
+<a href="../python/default.html">Python Tutorial</a><br>
+<a href="../w3css/default.html">W3.CSS Tutorial</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Tutorial</a><br>
+<a href="../php/default.html">PHP Tutorial</a><br>
+<a href="../java/default.html">Java Tutorial</a><br>
+<a href="../cpp/default.html">C++ Tutorial</a><br>
+<a href="../jquery/default.html">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top References</h4>
+<a href="../tags/default.html">HTML Reference</a><br>
+<a href="../cssref/default.html">CSS Reference</a><br>
+<a href="../jsref/default.html">JavaScript Reference</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Reference</a><br>
+<a href="../python/python_reference.html">Python Reference</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Reference</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Reference</a><br>
+<a href="../php/php_ref_overview.html">PHP Reference</a><br>
+<a href="../colors/colors_names.html">HTML Colors</a><br>
+<a href="../java/java_ref_keywords.html">Java Reference</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Reference</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top Examples</h4>
+<a href="../html/html_examples.html">HTML Examples</a><br>
+<a href="../css/css_examples.html">CSS Examples</a><br>
+<a href="../js/js_examples.html">JavaScript Examples</a><br>
+<a href="../howto/default.html">How To Examples</a><br>
+<a href="../sql/sql_examples.html">SQL Examples</a><br>
+<a href="../python/python_examples.html">Python Examples</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Examples</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Examples</a><br>
+<a href="../php/php_examples.html">PHP Examples</a><br>
+<a href="../java/java_examples.html">Java Examples</a><br>
+<a href="../xml/xml_examples.html">XML Examples</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="../cert/default.html">HTML Certificate</a><br>
+<a href="../cert/default.html">CSS Certificate</a><br>
+<a href="../cert/default.html">JavaScript Certificate</a><br>
+<a href="../cert/default.html">SQL Certificate</a><br>
+<a href="../cert/default.html">Python Certificate</a><br>
+<a href="../cert/default.html">PHP Certificate</a><br>
+<a href="../cert/default.html">Bootstrap Certificate</a><br>
+<a href="../cert/default.html">XML Certificate</a><br>
+<a href="../cert/default.html">jQuery Certificate</a><br>
+<a href="../cert/default.html" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
+<a href="../about/about_privacy.html">cookie and privacy policy</a>.<br><br>
+<a href="../about/about_copyright.html">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="../w3css/default.html">W3Schools is Powered by W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+
+<script>
+
+loadUser();
+function loadUser() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  if (foldername == "quiztest") {
+    cc = window.location.href;
+    pos = cc.indexOf("qtest=");
+    typ = cc.substr(pos + 6);
+  }
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "A" || x == "B" || x == "C" || x == "D" || x == "E") {
+       console.log(x);
+        activateElse();
+      } else if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K"  || x == "L" || x == "M" || x == "Q") {
+        console.log(x);
+        activateMYPAGE(x, y);
+      } else {
+        activateElse();
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
+}
+function finishedPage() {
+  var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  filename = pathname.substr(pos + 1);
+  typ = foldername;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      y = this.responseText;
+      x = y.substr(0, 1);
+      if (x == "O") {
+        console.log(x);
+        registerPoint(x);
+      } else {
+        console.log("Z");
+      }
+    }
+  };
+  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.withCredentials = true;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
+}
+function activateElse() {
+  var a = document.getElementById("mypagediv");
+  var b = document.getElementById("w3loginbtn");
+  if (a) a.style.display = "none";
+  if (b) b.style.display = "inline";
+}
+var mp_pagesread = 0, mp_totalpages = 0;
+function activateMYPAGE(cc, obj) {
+  var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (a) a.style.display = "none";
+  if (b) {
+    if (cc == "I" || cc == "J" || cc == "O" || cc == "Q") {
+      jsonobj = JSON.parse(obj.substr(1));
+      mp_pagesread = jsonobj.b;
+      mp_totalpages = jsonobj.a;
+      x = Math.round((mp_pagesread/mp_totalpages) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+    }
+    if (cc == "Q") {
+      color1 = "rgba(44, 156, 202, 0.1)";
+      color2 = "rgba(44, 156, 202, 1)";
+    }
+    b.style.display = "block";
+    txt += "<a href='../../mypage.w3schools.com/mypage/index.html'>";
+    txt2 = txt;
+    txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+    txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+    if (cc != "F") {
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+      txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt2 += '</svg>';
+    }
+    if (cc == "J") {
+      checkIfMypage2IsInView();
+      window.addEventListener("scroll", checkIfMypage2IsInView);
+    }
+    if (cc == "Q") {
+      if (degrees == 359.99) {
+        txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+    }
+    txt += '</a>';
+    txt2 += '</a>';
+    b.innerHTML = "&nbsp;" + txt;
+    c.innerHTML = "&nbsp;" + txt2;
+    if (cc != "L") {
+      document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    }
+  }
+  ga('send', 'event', 'user', 'login');
+}
+function checkIfMypage2IsInView() {
+  var a = document.getElementById("mypagediv2");
+  if (isinviewport(a) || isaboveviewport(a)) {
+    finishedPage();
+    window.removeEventListener("scroll", checkIfMypage2IsInView);
+  }
+}
+function isinviewport(x) {
+  var rect = x.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+function isaboveviewport(x) {
+  var rect = x.getBoundingClientRect();
+  if (rect.top < 0) return true;
+  return false;
+}
+function registerPoint(cc) {
+  var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+  var a = document.getElementById("w3loginbtn");
+  var b = document.getElementById("mypagediv");
+  var c = document.getElementById("mypagediv2");
+  if (c) {
+    mp_pagesread++;
+    x = Math.round((mp_pagesread/mp_totalpages) * 100);
+    degrees = x * 3.6;
+    if (degrees > 359) degrees = 359.99;
+    txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+    if (degrees == 359.99) {completed = 1;}
+    if (completed == 1) {
+      txt += "<span id='usergetsstar'>&#x2605;</span>";
+    }
+    c.innerHTML += txt;
+    document.getElementById("mypage_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+    document.getElementById("mypage2_circle1").setAttribute("d", loginDrawCircle(26, 35, 24, 0, 359.99));
+    document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
+  }
+}
+
+
+</script>
+<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
+
+<!-- Mirrored from www.w3schools.com/whatis/whatis_w3css.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 01:24:12 GMT -->
+</html>

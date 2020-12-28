@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_affix_navbar.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:24 GMT -->
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.navbar-nav a[href]').click(function (e) { e.preventDefault(); });
+  });
+  </script>
+  <style>
+  .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+    padding-top: 70px;
+  }
+  @media (max-width: 1024px) {
+  .navbar li {
+    float:left !important }
+    .navbar-nav {
+    margin: 0 !important;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+  <h1>Bootstrap Affix Example</h1>
+  <h3>Fixed (sticky) navbar on scroll</h3>
+  <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
+  <p><strong>The navbar sticks to the top of the page after you have scrolled a specified amount of pixels.</strong></p>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border-radius:0">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3</a></li>
+  </ul>
+</nav>
+
+<div class="container-fluid" style="height:1000px">
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+  <h1>Some text to enable scrolling</h1>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/trybs_affix_navbar.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:24 GMT -->
+</html>

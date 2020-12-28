@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_006.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:40 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">
+@{ <br>
+var db = Database.Open("SmallBakery"); <br> 
+var dbdata = db.Query("SELECT Name, Price FROM Product"); <br>
+var myChart = new Chart(width: 600, height: 400) <br>
+&nbsp;&nbsp;.AddTitle(&quot;Product Sales&quot;) <br>
+&nbsp;&nbsp;.DataBindTable(dataSource: dbdata, xField: "Name") <br>
+&nbsp;&nbsp;.Write();<br>
+}<br>
+</span>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_006.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:40 GMT -->
+</html>

@@ -1,0 +1,3 @@
+<h1>Fetch API</h1>
+<p>The Fetch API interface allows web browser to make HTTP requests to web servers.</p>
+<p>If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way.</p>

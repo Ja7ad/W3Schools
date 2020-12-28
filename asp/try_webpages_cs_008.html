@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:42 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../showrazor.css" />
+</head>
+
+<body>
+
+<span class="marked">
+@using System.Data;<br>
+<br>
+@{<br>
+var dataSet = new DataSet();<br>
+dataSet.ReadXmlSchema(Server.MapPath("data.xsd"));<br>
+dataSet.ReadXml(Server.MapPath("data.xml"));<br>
+var dataView = new DataView(dataSet.Tables[0]);<br>
+var myChart = new Chart(width: 600, height: 400)<br>
+&nbsp;&nbsp;
+.AddTitle("Sales Per Employee")<br>
+&nbsp;&nbsp;
+.AddSeries("Default", chartType: "Pie",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+xValue: dataView, xField: "Name",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+yValues: dataView, yFields: "Sales")<br>
+&nbsp;&nbsp;
+.Write();<br>
+}</span>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_webpages_cs_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:42 GMT -->
+</html>

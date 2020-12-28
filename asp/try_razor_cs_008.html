@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../showrazor.css" />
+</head>
+
+<body>
+<span class="marked">@{<br>string[] members = {&quot;Jani&quot;, &quot;Hege&quot;, &quot;Kai&quot;, &quot;Jim&quot;};<br>
+int i = Array.IndexOf(members, &quot;Kai&quot;)+1;<br>int len = members.Length;<br>string 
+x = members[2-1];<br>}<br></span>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h3&gt;Members&lt;/h3&gt;<br>
+<span class="marked">@foreach (var person in members)<br>{<br>&lt;p&gt;@person&lt;/p&gt;<br>}</span><br>&lt;p&gt;The number of names in Members are <span class="marked">@len</span>&lt;/p&gt;<br>
+&lt;p&gt;The person at position 2 is <span class="marked">@x</span>&lt;/p&gt;<br>&lt;p&gt;Kai is 
+now in position <span class="marked">@i</span>&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br>
+</body>
+
+
+<!-- Mirrored from www.w3schools.com/asp/try_razor_cs_008.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:12:44 GMT -->
+</html>

@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/icons/fontawesome5_status.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:01 GMT -->
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../lib/w3schools23.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               debugOutputEnabled: false,
+               PBJSDebugOutputEnabled: false,
+               auctionResultOutputEnabled: false,
+               allOutputEnabled: false,
+               autoStartAuction: false,
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+
+  });
+</script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.w3-table-all .fas, .w3-table-all .far, .w3-table-all .fab, .w3-table-all .glyphicon, .w3-table-all .material-icons { 
+    font-size: 24px;
+}
+.w3-table-all td:nth-child(3){ 
+    font-family:consolas,'Courier New', Courier, monospace;
+}
+label {
+  font-weight:normal;
+}
+#icontable_0 {
+  text-align: right;
+}
+.fa-home:before {content: '\f015';}
+.fa-globe:before {content:'\f0ac';}
+.fa-search:before {content:'\f002'; }
+.fa-facebook-square:before {content:'\f082';}
+.fa-google-plus-square:before {content:'\f0d4';}
+.fa-twitter-square:before {content:'\f081';}
+.fa-caret-down:before {content:'\f0d7';}
+.fa-caret-up:before {content:'\f0d8';}
+
+.fa-facebook-square,.fa-twitter-square,.fa-google-plus-square {padding:0;}
+
+</style>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+parent.resizeIframe();
+})
+</script>
+</head>
+<body>
+<table id="icontable_0" class="w3-table-all notranslate">
+
+    <tr>
+      <td><span class='fas fa-ban'></span></td>
+      <td>fas fa-ban</td>
+      <td>&amp;#xf05e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5632.html?icon=fas_fa-ban&amp;unicon=f05e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-battery-empty'></span></td>
+      <td>fas fa-battery-empty</td>
+      <td>&amp;#xf244;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit8dc2.html?icon=fas_fa-battery-empty&amp;unicon=f244">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-battery-full'></span></td>
+      <td>fas fa-battery-full</td>
+      <td>&amp;#xf240;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit706b.html?icon=fas_fa-battery-full&amp;unicon=f240">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-battery-half'></span></td>
+      <td>fas fa-battery-half</td>
+      <td>&amp;#xf242;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6e37.html?icon=fas_fa-battery-half&amp;unicon=f242">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-battery-quarter'></span></td>
+      <td>fas fa-battery-quarter</td>
+      <td>&amp;#xf243;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit051f.html?icon=fas_fa-battery-quarter&amp;unicon=f243">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-battery-three-quarters'></span></td>
+      <td>fas fa-battery-three-quarters</td>
+      <td>&amp;#xf241;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd66f.html?icon=fas_fa-battery-three-quarters&amp;unicon=f241">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-bell'></span></td>
+      <td>fas fa-bell</td>
+      <td>&amp;#xf0f3;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit45b1.html?icon=fas_fa-bell&amp;unicon=f0f3">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-bell'></span></td>
+      <td>far fa-bell</td>
+      <td>&amp;#xf0f3;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitaf90.html?icon=far_fa-bell&amp;unicon=f0f3">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-bell-slash'></span></td>
+      <td>fas fa-bell-slash</td>
+      <td>&amp;#xf1f6;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6fb7.html?icon=fas_fa-bell-slash&amp;unicon=f1f6">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-bell-slash'></span></td>
+      <td>far fa-bell-slash</td>
+      <td>&amp;#xf1f6;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite698.html?icon=far_fa-bell-slash&amp;unicon=f1f6">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar'></span></td>
+      <td>fas fa-calendar</td>
+      <td>&amp;#xf133;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7aae.html?icon=fas_fa-calendar&amp;unicon=f133">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar'></span></td>
+      <td>far fa-calendar</td>
+      <td>&amp;#xf133;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd316.html?icon=far_fa-calendar&amp;unicon=f133">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar-alt'></span></td>
+      <td>fas fa-calendar-alt</td>
+      <td>&amp;#xf073;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit11c0.html?icon=fas_fa-calendar-alt&amp;unicon=f073">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar-alt'></span></td>
+      <td>far fa-calendar-alt</td>
+      <td>&amp;#xf073;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite716.html?icon=far_fa-calendar-alt&amp;unicon=f073">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar-check'></span></td>
+      <td>fas fa-calendar-check</td>
+      <td>&amp;#xf274;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf3f0.html?icon=fas_fa-calendar-check&amp;unicon=f274">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar-check'></span></td>
+      <td>far fa-calendar-check</td>
+      <td>&amp;#xf274;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2a90.html?icon=far_fa-calendar-check&amp;unicon=f274">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar-minus'></span></td>
+      <td>fas fa-calendar-minus</td>
+      <td>&amp;#xf272;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2b14.html?icon=fas_fa-calendar-minus&amp;unicon=f272">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar-minus'></span></td>
+      <td>far fa-calendar-minus</td>
+      <td>&amp;#xf272;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9cd7.html?icon=far_fa-calendar-minus&amp;unicon=f272">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar-plus'></span></td>
+      <td>fas fa-calendar-plus</td>
+      <td>&amp;#xf271;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit84bd.html?icon=fas_fa-calendar-plus&amp;unicon=f271">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar-plus'></span></td>
+      <td>far fa-calendar-plus</td>
+      <td>&amp;#xf271;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7a67.html?icon=far_fa-calendar-plus&amp;unicon=f271">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-calendar-times'></span></td>
+      <td>fas fa-calendar-times</td>
+      <td>&amp;#xf273;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7985.html?icon=fas_fa-calendar-times&amp;unicon=f273">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-calendar-times'></span></td>
+      <td>far fa-calendar-times</td>
+      <td>&amp;#xf273;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitea8d.html?icon=far_fa-calendar-times&amp;unicon=f273">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-cart-arrow-down'></span></td>
+      <td>fas fa-cart-arrow-down</td>
+      <td>&amp;#xf218;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitdfee.html?icon=fas_fa-cart-arrow-down&amp;unicon=f218">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-cart-plus'></span></td>
+      <td>fas fa-cart-plus</td>
+      <td>&amp;#xf217;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit63a4.html?icon=fas_fa-cart-plus&amp;unicon=f217">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-comment'></span></td>
+      <td>fas fa-comment</td>
+      <td>&amp;#xf075;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9834.html?icon=fas_fa-comment&amp;unicon=f075">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-comment'></span></td>
+      <td>far fa-comment</td>
+      <td>&amp;#xf075;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd1fe.html?icon=far_fa-comment&amp;unicon=f075">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-comment-alt'></span></td>
+      <td>fas fa-comment-alt</td>
+      <td>&amp;#xf27a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6f1d.html?icon=fas_fa-comment-alt&amp;unicon=f27a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-comment-alt'></span></td>
+      <td>far fa-comment-alt</td>
+      <td>&amp;#xf27a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7ae8.html?icon=far_fa-comment-alt&amp;unicon=f27a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-comment-slash'></span></td>
+      <td>fas fa-comment-slash</td>
+      <td>&amp;#xf4b3;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit17ae.html?icon=fas_fa-comment-slash&amp;unicon=f4b3">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-compass'></span></td>
+      <td>fas fa-compass</td>
+      <td>&amp;#xf14e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit458d.html?icon=fas_fa-compass&amp;unicon=f14e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-compass'></span></td>
+      <td>far fa-compass</td>
+      <td>&amp;#xf14e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit8af2.html?icon=far_fa-compass&amp;unicon=f14e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-door-closed'></span></td>
+      <td>fas fa-door-closed</td>
+      <td>&amp;#xf52a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4cf7.html?icon=fas_fa-door-closed&amp;unicon=f52a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-door-open'></span></td>
+      <td>fas fa-door-open</td>
+      <td>&amp;#xf52b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd621.html?icon=fas_fa-door-open&amp;unicon=f52b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-exclamation'></span></td>
+      <td>fas fa-exclamation</td>
+      <td>&amp;#xf12a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf976-2.html?icon=fas_fa-exclamation&amp;unicon=f12a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-exclamation-circle'></span></td>
+      <td>fas fa-exclamation-circle</td>
+      <td>&amp;#xf06a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit3844.html?icon=fas_fa-exclamation-circle&amp;unicon=f06a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-exclamation-triangle'></span></td>
+      <td>fas fa-exclamation-triangle</td>
+      <td>&amp;#xf071;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit144a.html?icon=fas_fa-exclamation-triangle&amp;unicon=f071">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-eye'></span></td>
+      <td>fas fa-eye</td>
+      <td>&amp;#xf06e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit27c5.html?icon=fas_fa-eye&amp;unicon=f06e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-eye'></span></td>
+      <td>far fa-eye</td>
+      <td>&amp;#xf06e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf08c.html?icon=far_fa-eye&amp;unicon=f06e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-eye-slash'></span></td>
+      <td>fas fa-eye-slash</td>
+      <td>&amp;#xf070;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitaea7.html?icon=fas_fa-eye-slash&amp;unicon=f070">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-eye-slash'></span></td>
+      <td>far fa-eye-slash</td>
+      <td>&amp;#xf070;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite73d.html?icon=far_fa-eye-slash&amp;unicon=f070">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-file'></span></td>
+      <td>fas fa-file</td>
+      <td>&amp;#xf15b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4b38.html?icon=fas_fa-file&amp;unicon=f15b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-file'></span></td>
+      <td>far fa-file</td>
+      <td>&amp;#xf15b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit1b94.html?icon=far_fa-file&amp;unicon=f15b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-file-alt'></span></td>
+      <td>fas fa-file-alt</td>
+      <td>&amp;#xf15c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6f99.html?icon=fas_fa-file-alt&amp;unicon=f15c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-file-alt'></span></td>
+      <td>far fa-file-alt</td>
+      <td>&amp;#xf15c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf207.html?icon=far_fa-file-alt&amp;unicon=f15c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-folder'></span></td>
+      <td>fas fa-folder</td>
+      <td>&amp;#xf07b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5acf.html?icon=fas_fa-folder&amp;unicon=f07b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-folder'></span></td>
+      <td>far fa-folder</td>
+      <td>&amp;#xf07b;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd017.html?icon=far_fa-folder&amp;unicon=f07b">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-folder-open'></span></td>
+      <td>fas fa-folder-open</td>
+      <td>&amp;#xf07c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit47b2.html?icon=fas_fa-folder-open&amp;unicon=f07c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-folder-open'></span></td>
+      <td>far fa-folder-open</td>
+      <td>&amp;#xf07c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryiteccc.html?icon=far_fa-folder-open&amp;unicon=f07c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-gas-pump'></span></td>
+      <td>fas fa-gas-pump</td>
+      <td>&amp;#xf52f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit897e.html?icon=fas_fa-gas-pump&amp;unicon=f52f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-info'></span></td>
+      <td>fas fa-info</td>
+      <td>&amp;#xf129;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit13ab.html?icon=fas_fa-info&amp;unicon=f129">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-info-circle'></span></td>
+      <td>fas fa-info-circle</td>
+      <td>&amp;#xf05a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9fdd.html?icon=fas_fa-info-circle&amp;unicon=f05a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-lightbulb'></span></td>
+      <td>fas fa-lightbulb</td>
+      <td>&amp;#xf0eb;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5b88.html?icon=fas_fa-lightbulb&amp;unicon=f0eb">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-lightbulb'></span></td>
+      <td>far fa-lightbulb</td>
+      <td>&amp;#xf0eb;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit54d6.html?icon=far_fa-lightbulb&amp;unicon=f0eb">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-lock'></span></td>
+      <td>fas fa-lock</td>
+      <td>&amp;#xf023;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit00ed.html?icon=fas_fa-lock&amp;unicon=f023">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-lock-open'></span></td>
+      <td>fas fa-lock-open</td>
+      <td>&amp;#xf3c1;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit3734.html?icon=fas_fa-lock-open&amp;unicon=f3c1">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-map-marker'></span></td>
+      <td>fas fa-map-marker</td>
+      <td>&amp;#xf041;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit8fdb.html?icon=fas_fa-map-marker&amp;unicon=f041">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-map-marker-alt'></span></td>
+      <td>fas fa-map-marker-alt</td>
+      <td>&amp;#xf3c5;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitca4f.html?icon=fas_fa-map-marker-alt&amp;unicon=f3c5">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-microphone'></span></td>
+      <td>fas fa-microphone</td>
+      <td>&amp;#xf130;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf641.html?icon=fas_fa-microphone&amp;unicon=f130">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-microphone-alt'></span></td>
+      <td>fas fa-microphone-alt</td>
+      <td>&amp;#xf3c9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite77c.html?icon=fas_fa-microphone-alt&amp;unicon=f3c9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-microphone-alt-slash'></span></td>
+      <td>fas fa-microphone-alt-slash</td>
+      <td>&amp;#xf539;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita762.html?icon=fas_fa-microphone-alt-slash&amp;unicon=f539">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-microphone-slash'></span></td>
+      <td>fas fa-microphone-slash</td>
+      <td>&amp;#xf131;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitb53b.html?icon=fas_fa-microphone-slash&amp;unicon=f131">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-minus'></span></td>
+      <td>fas fa-minus</td>
+      <td>&amp;#xf068;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5f0d.html?icon=fas_fa-minus&amp;unicon=f068">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-minus-circle'></span></td>
+      <td>fas fa-minus-circle</td>
+      <td>&amp;#xf056;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf15a.html?icon=fas_fa-minus-circle&amp;unicon=f056">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-minus-square'></span></td>
+      <td>fas fa-minus-square</td>
+      <td>&amp;#xf146;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitff00.html?icon=fas_fa-minus-square&amp;unicon=f146">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-minus-square'></span></td>
+      <td>far fa-minus-square</td>
+      <td>&amp;#xf146;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf28c.html?icon=far_fa-minus-square&amp;unicon=f146">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-parking'></span></td>
+      <td>fas fa-parking</td>
+      <td>&amp;#xf540;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf7d5.html?icon=fas_fa-parking&amp;unicon=f540">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-phone'></span></td>
+      <td>fas fa-phone</td>
+      <td>&amp;#xf095;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2382.html?icon=fas_fa-phone&amp;unicon=f095">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-phone-slash'></span></td>
+      <td>fas fa-phone-slash</td>
+      <td>&amp;#xf3dd;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7c70.html?icon=fas_fa-phone-slash&amp;unicon=f3dd">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-plus'></span></td>
+      <td>fas fa-plus</td>
+      <td>&amp;#xf067;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9d16.html?icon=fas_fa-plus&amp;unicon=f067">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-plus-circle'></span></td>
+      <td>fas fa-plus-circle</td>
+      <td>&amp;#xf055;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit34d4.html?icon=fas_fa-plus-circle&amp;unicon=f055">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-plus-square'></span></td>
+      <td>fas fa-plus-square</td>
+      <td>&amp;#xf0fe;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit86af-2.html?icon=fas_fa-plus-square&amp;unicon=f0fe">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-plus-square'></span></td>
+      <td>far fa-plus-square</td>
+      <td>&amp;#xf0fe;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitd20b.html?icon=far_fa-plus-square&amp;unicon=f0fe">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-print'></span></td>
+      <td>fas fa-print</td>
+      <td>&amp;#xf02f;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9aaf.html?icon=fas_fa-print&amp;unicon=f02f">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-question'></span></td>
+      <td>fas fa-question</td>
+      <td>&amp;#xf128;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita935.html?icon=fas_fa-question&amp;unicon=f128">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-question-circle'></span></td>
+      <td>fas fa-question-circle</td>
+      <td>&amp;#xf059;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitdbde.html?icon=fas_fa-question-circle&amp;unicon=f059">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-question-circle'></span></td>
+      <td>far fa-question-circle</td>
+      <td>&amp;#xf059;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita848.html?icon=far_fa-question-circle&amp;unicon=f059">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-shield-alt'></span></td>
+      <td>fas fa-shield-alt</td>
+      <td>&amp;#xf3ed;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit395b.html?icon=fas_fa-shield-alt&amp;unicon=f3ed">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-shopping-cart'></span></td>
+      <td>fas fa-shopping-cart</td>
+      <td>&amp;#xf07a;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitde44.html?icon=fas_fa-shopping-cart&amp;unicon=f07a">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-sign-in-alt'></span></td>
+      <td>fas fa-sign-in-alt</td>
+      <td>&amp;#xf2f6;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitb6b7.html?icon=fas_fa-sign-in-alt&amp;unicon=f2f6">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-stream'></span></td>
+      <td>fas fa-stream</td>
+      <td>&amp;#xf550;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit5704.html?icon=fas_fa-stream&amp;unicon=f550">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer-empty'></span></td>
+      <td>fas fa-thermometer-empty</td>
+      <td>&amp;#xf2cb;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitcd16.html?icon=fas_fa-thermometer-empty&amp;unicon=f2cb">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer-full'></span></td>
+      <td>fas fa-thermometer-full</td>
+      <td>&amp;#xf2c7;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit516c.html?icon=fas_fa-thermometer-full&amp;unicon=f2c7">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer-half'></span></td>
+      <td>fas fa-thermometer-half</td>
+      <td>&amp;#xf2c9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit8985.html?icon=fas_fa-thermometer-half&amp;unicon=f2c9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer-quarter'></span></td>
+      <td>fas fa-thermometer-quarter</td>
+      <td>&amp;#xf2ca;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitede4.html?icon=fas_fa-thermometer-quarter&amp;unicon=f2ca">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thermometer-three-quarters'></span></td>
+      <td>fas fa-thermometer-three-quarters</td>
+      <td>&amp;#xf2c8;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit4de9.html?icon=fas_fa-thermometer-three-quarters&amp;unicon=f2c8">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thumbs-down'></span></td>
+      <td>fas fa-thumbs-down</td>
+      <td>&amp;#xf165;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit9540.html?icon=fas_fa-thumbs-down&amp;unicon=f165">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-thumbs-down'></span></td>
+      <td>far fa-thumbs-down</td>
+      <td>&amp;#xf165;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit81a8.html?icon=far_fa-thumbs-down&amp;unicon=f165">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-thumbs-up'></span></td>
+      <td>fas fa-thumbs-up</td>
+      <td>&amp;#xf164;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitad48.html?icon=fas_fa-thumbs-up&amp;unicon=f164">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-thumbs-up'></span></td>
+      <td>far fa-thumbs-up</td>
+      <td>&amp;#xf164;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7eb0.html?icon=far_fa-thumbs-up&amp;unicon=f164">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-tint'></span></td>
+      <td>fas fa-tint</td>
+      <td>&amp;#xf043;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit2c7c.html?icon=fas_fa-tint&amp;unicon=f043">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-tint-slash'></span></td>
+      <td>fas fa-tint-slash</td>
+      <td>&amp;#xf5c7;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit35ac-2.html?icon=fas_fa-tint-slash&amp;unicon=f5c7">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-toggle-off'></span></td>
+      <td>fas fa-toggle-off</td>
+      <td>&amp;#xf204;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit858a.html?icon=fas_fa-toggle-off&amp;unicon=f204">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-toggle-on'></span></td>
+      <td>fas fa-toggle-on</td>
+      <td>&amp;#xf205;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit8335.html?icon=fas_fa-toggle-on&amp;unicon=f205">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-unlock'></span></td>
+      <td>fas fa-unlock</td>
+      <td>&amp;#xf09c;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit78c5.html?icon=fas_fa-unlock&amp;unicon=f09c">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-unlock-alt'></span></td>
+      <td>fas fa-unlock-alt</td>
+      <td>&amp;#xf13e;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitc0aa.html?icon=fas_fa-unlock-alt&amp;unicon=f13e">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user'></span></td>
+      <td>fas fa-user</td>
+      <td>&amp;#xf007;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit57e2.html?icon=fas_fa-user&amp;unicon=f007">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='far fa-user'></span></td>
+      <td>far fa-user</td>
+      <td>&amp;#xf007;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitbb16.html?icon=far_fa-user&amp;unicon=f007">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user-alt'></span></td>
+      <td>fas fa-user-alt</td>
+      <td>&amp;#xf406;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryite42c.html?icon=fas_fa-user-alt&amp;unicon=f406">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user-alt-slash'></span></td>
+      <td>fas fa-user-alt-slash</td>
+      <td>&amp;#xf4fa;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit1fe8.html?icon=fas_fa-user-alt-slash&amp;unicon=f4fa">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-user-slash'></span></td>
+      <td>fas fa-user-slash</td>
+      <td>&amp;#xf506;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryita538.html?icon=fas_fa-user-slash&amp;unicon=f506">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-video'></span></td>
+      <td>fas fa-video</td>
+      <td>&amp;#xf03d;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit7853.html?icon=fas_fa-video&amp;unicon=f03d">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-video-slash'></span></td>
+      <td>fas fa-video-slash</td>
+      <td>&amp;#xf4e2;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit3e8c.html?icon=fas_fa-video-slash&amp;unicon=f4e2">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-volume-down'></span></td>
+      <td>fas fa-volume-down</td>
+      <td>&amp;#xf027;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit6e8e.html?icon=fas_fa-volume-down&amp;unicon=f027">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-volume-mute'></span></td>
+      <td>fas fa-volume-mute</td>
+      <td>&amp;#xf6a9;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitab7f.html?icon=fas_fa-volume-mute&amp;unicon=f6a9">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-volume-off'></span></td>
+      <td>fas fa-volume-off</td>
+      <td>&amp;#xf026;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit46b0.html?icon=fas_fa-volume-off&amp;unicon=f026">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-volume-up'></span></td>
+      <td>fas fa-volume-up</td>
+      <td>&amp;#xf028;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryitf97f.html?icon=fas_fa-volume-up&amp;unicon=f028">Try it</a></td>
+    </tr>
+  
+    <tr>
+      <td><span class='fas fa-wifi'></span></td>
+      <td>fas fa-wifi</td>
+      <td>&amp;#xf1eb;</td>
+      <td><a target="_blank" class="w3-btn btnsmall" href="tryit34a2.html?icon=fas_fa-wifi&amp;unicon=f1eb">Try it</a></td>
+    </tr>
+  
+
+</table>
+</body>
+
+<!-- Mirrored from www.w3schools.com/icons/fontawesome5_status.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 04:10:01 GMT -->
+</html>
