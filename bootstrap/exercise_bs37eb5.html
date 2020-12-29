@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'bs3_tables';excounts[0] = '6';exheadings[0] = 'Tables';exnames[1] = 'bs3_images';excounts[1] = '4';exheadings[1] = 'Images';exnames[2] = 'bs3_alerts';excounts[2] = '3';exheadings[2] = 'Alerts';exnames[3] = 'bs3_buttons';excounts[3] = '8';exheadings[3] = 'Buttons';exnames[4] = 'bs3_glyphicons';excounts[4] = '2';exheadings[4] = 'Glyphicons';exnames[5] = 'bs3_badges';excounts[5] = '3';exheadings[5] = 'Badges';exActiveNo = 5;exnames[6] = 'bs3_progressbars';excounts[6] = '4';exheadings[6] = 'Progress Bar';exnames[7] = 'bs3_pagination';excounts[7] = '5';exheadings[7] = 'Pagination';exnames[8] = 'bs3_panels';excounts[8] = '4';exheadings[8] = 'Panels';exnames[9] = 'bs3_dropdowns';excounts[9] = '5';exheadings[9] = 'Dropdowns';exnames[10] = 'bs3_tabs';excounts[10] = '6';exheadings[10] = 'Tabs';exnames[11] = 'bs3_navbars';excounts[11] = '4';exheadings[11] = 'Navbars';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_badges2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:38 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_badges2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 04:59:39 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -27,46 +27,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
@@ -90,7 +58,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -108,10 +76,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
 }
@@ -1473,9 +1439,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1532,15 +1498,15 @@ function userAddOnePoint(n) {
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+  <button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
+  <button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
@@ -1725,7 +1691,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    
+    snhb.startAuction(['try_it_leaderboard']);
   }
 }
 
@@ -2190,5 +2156,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_badges2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Dec 2020 05:09:38 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_badges2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 04:59:39 GMT -->
 </html>
