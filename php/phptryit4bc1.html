@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_filter_list by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 04:16:15 GMT -->
+<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_filter_list by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 02:19:00 GMT -->
 <head>
 <title>PHP Tryit Editor v1.2</title>
 <meta name="viewport" content="width=device-width">
@@ -34,15 +34,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder + "tryit";
-  })());
-});
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -50,8 +49,34 @@ snhb.options = {
                autoStartAuction: false
                };
 
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+googletag.pubads().disableInitialLoad();               
+googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+
 </script>
-<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
 #snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
 #snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
@@ -72,7 +97,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["try_it_leaderboard"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
    });
 </script>
@@ -90,8 +115,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+              
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -331,7 +358,7 @@ font-family: 'fontawesome';
 src:url('../lib/fonts/fontawesome8deb.eot?14663396');
 src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
     url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
-    url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
+    url('../lib/fonts/fontawesome8deb.html?14663396') format('truetype'),
     url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
 font-weight:normal;
 font-style:normal;
@@ -403,9 +430,9 @@ font-style:normal;
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="snhb-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
+  </div>
  
 </div>
 
@@ -415,7 +442,7 @@ font-style:normal;
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');">Run &raquo;</button>
   <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -431,7 +458,7 @@ font-style:normal;
   </div>
   <footer class="w3-container w3-small w3-light-gray">
   <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2020</a></p>
+  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2021</a></p>
   </footer>
 </div>
 <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
@@ -448,7 +475,7 @@ print_r(filter_list());
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_filter_list by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 04:16:15 GMT -->
+<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_filter_list by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 02:19:00 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

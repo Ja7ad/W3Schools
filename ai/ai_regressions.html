@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 01:25:17 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:53 GMT -->
 <head>
 <title>AI Regressions</title>
 <meta charset="utf-8">
@@ -49,7 +49,7 @@ snhb.options = {
                };
 
 </script>
-<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
 #snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
 #snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
@@ -363,7 +363,7 @@ function w3_getStyleValue(elmnt,style) {
          <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
          <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
@@ -450,8 +450,6 @@ function w3_getStyleValue(elmnt,style) {
 <ul>
 <li>Labels</li>
 <li>Features</li>
-<li>Slope</li>
-<li>Intercept</li>
 <li>Models</li>
 <li>Linear Regressions</li>
 </ul>
@@ -460,36 +458,43 @@ function w3_getStyleValue(elmnt,style) {
 <h2>Labels</h2>
 <p>In Machine Learning, the <b>label</b> is the thing we want to predict.</p>
 <p>The label is the <b>y</b> in a linear graph:</p>
-<p class="w3-xlarge"><b>y</b> = x</p>
+<p class="w3-xlarge"><b>y</b> = ax + b</p>
 <hr>
 <h2>Features</h2>
 <p>The <b>features</b> are the input variables.</p>
 <p>The features are the <b>x</b> values in a linear graph:</p>
-<p class="w3-xlarge">y = <b>x</b></p>
-
-<img alt="y = x" width="80%" src="img_graph_x_y.png">
+<p class="w3-xlarge">y = a<b>x</b> + b</p>
 
 <hr>
-<h2>Slope</h2>
-<p>The <b>slope</b> is the angle of the graph.</p>
-<p>The slope is the <b>a</b> value in a linear graph:</p>
-<p class="w3-xlarge">y = <b>a</b>x</p>
-<img alt="y = x" width="80%" src="img_graph_x_12.png">
-
+<h2>Machine Learning</h2>
+<p><b>Macine Learning</b> systems are systems that can learn how to use input
+to produce <b>Predictions</b> on both known and uknown data.</p>
 <hr>
-<h2>Intercept</h2>
-<p>The <b>Intercept</b> is the start value of the graph.</p>
-<p>The intercept is the <b>b</b> value in a linear graph:</p>
-<p class="w3-xlarge">y = ax + <b>b</b></p>
-<img alt="y = x" width="80%" src="img_graph_x_12_2.png">
-<hr>
-<h2>Models</h2>
+<h2>Machine Learning Models</h2>
 <p>A <b>Model</b> defines the relationship between the label (y) and the features (x).
-<p>There are two phases in the life of a model:</p>
+<p>There are three phases in the life of a model:</p>
 <ul>
+<li>Data Collection</li>
 <li>Training</li>
-<li>Interference<link>
+<li>Inference<link>
 </ul>
+<hr>
+<h2>Data Collection</h2>
+<p>Machine Learning can teach a computer to solve many questions like:
+<ul>
+<li>Is this cancer?</li>
+<li>Is this a banana?</li>
+</ul>
+<p>Before Macine Learning can start, you need to collect some data.</p>
+<p>If you want to predict house prices, you need to collect some information about house prices.</p>
+<hr>
+<h2>ML Training</h2>
+<p>The goal of training is to crate a model that can answer our question.
+Like what is the expected price for a house?</p>
+<hr>
+<h2>ML Inference</h2>
+<p>Inference is when the trained model is used to infer (predict) values
+using live data. Like putting the model into production.</p>
 <hr>
 <h2>Linear Regressions</h2>
 <p>A <b>Regression</b> is a method used to determine the relationship between one variable (usually called Y)
@@ -606,7 +611,7 @@ between a result (y) and other variables (x).</p>
   <div class="w3-border">
   <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
   <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
-  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_javascript.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
   <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
   <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
   <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
@@ -801,7 +806,7 @@ W3Schools is optimized for learning and training. Examples might be simplified t
 Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
 While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
 <a href="../about/about_privacy.html">cookie and privacy policy</a>.<br><br>
-<a href="../about/about_copyright.html">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="../about/about_copyright.html">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
 <a href="../w3css/default.html">W3Schools is Powered by W3.CSS</a>.<br><br>
 <a href="../index.html">
 <img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
@@ -990,5 +995,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2020 01:25:22 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:55 GMT -->
 </html>
