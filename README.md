@@ -4,8 +4,8 @@ If you like w3schools tutorials , you can access any time in your local to w3sch
 
 ## ⁉️ How to run docker image ?
 
-1. First pull image to your docker images : docker pull ja7adr/w3schools
-2. Create container from image : docker run -p 80:80 --name w3schools w3schools:latest
+1. First pull image to your docker images : `docker pull ja7adr/w3schools`
+2. Create container from image : `docker run -p 80:80 --name w3schools w3schools:latest`
 3. Open Browser for access to w3schools from http://127.0.0.1 or http://localhost
 
 ## ⁉️ How to used zipped edition ?
