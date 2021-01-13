@@ -1,4 +1,4 @@
-# W3Schools Offline ⚡️  Weekly Update v02021.01.01.13
+# W3Schools Offline ⚡️  Weekly Update v02021.01.13
 
 ![W3schools](https://www.w3schools.com/images/w3schoolscom_gray.gif)
 
