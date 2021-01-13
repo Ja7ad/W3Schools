@@ -1,5 +1,7 @@
 # W3Schools Offline ⚡️  Weekly Update v02021.01.03
 
+![W3schools](https://www.w3schools.com/images/w3schoolscom_gray.gif)
+
 If you like w3schools tutorials , you can access any time in your local to w3schools.
 
 ## ⁉️ How to run docker image ?
