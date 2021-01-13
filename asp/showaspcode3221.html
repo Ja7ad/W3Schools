@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_list by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 03:14:32 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_list by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:44:33 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 <FONT COLOR=#ff0000>&lt;%option explicit%&gt;</FONT><br>&lt;!DOCTYPE html><br>&lt;html><br>&lt;head>&lt;title>ADO - List Database Records&lt;/title>&lt;/head><br>&lt;body><br><FONT COLOR=#ff0000>&lt;%<br>dim conn,rs,x<br>set conn=Server.CreateObject("ADODB.Connection") <br>conn.provider="Microsoft.Jet.OLEDB.4.0"<br>conn.open(server.mappath("/db/database.mdb"))<br>set rs=Server.CreateObject("ADODB.Recordset")<br>rs.open "SELECT * FROM tblGuestBook",conn<br>%&gt;</FONT><br>&lt;h2>List Database Table&lt;/h2><br>&lt;p>Click on a button to modify a record.&lt;/p><br><br>&lt;table border="1" width="100%"><br>&lt;tr bgcolor="#b0c4de"><br><FONT COLOR=#ff0000>&lt;%<br>for each x in rs.Fields<br>&nbsp;&nbsp;&nbsp;&nbsp;    response.write("&lt;th>" & ucase(x.name) & "&lt;/th>")<br>next<br>%&gt;</FONT><br>&lt;/tr><br><FONT COLOR=#ff0000>&lt;%do until rs.EOF%&gt;</FONT><br>&lt;tr bgcolor="#f0f0f0"><br>&lt;form method="post" action="demo_db_edit.asp" target="_blank"><br><FONT COLOR=#ff0000>&lt;%<br>for each x in rs.Fields<br>&nbsp;&nbsp;&nbsp;&nbsp;    if x.name="no" then%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;td>&lt;input type="submit" name="no" value="<FONT COLOR=#ff0000>&lt;%=x.value%&gt;</FONT>">&lt;/td><br>&nbsp;&nbsp;&nbsp;&nbsp;    <FONT COLOR=#ff0000>&lt;%else%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;td><FONT COLOR=#ff0000>&lt;%Response.Write(x.value)%&gt;</FONT>&nbsp;&lt;/td><br>&nbsp;&nbsp;&nbsp;&nbsp;    <FONT COLOR=#ff0000>&lt;%end if<br>next<br>%&gt;</FONT><br>&lt;/form><br><FONT COLOR=#ff0000>&lt;%rs.MoveNext%&gt;</FONT><br>&lt;/tr><br><FONT COLOR=#ff0000>&lt;%<br>loop<br>rs.close<br>set rs=nothing<br>conn.close<br>set conn=nothing<br>%&gt;</FONT><br>&lt;/table><br><br>&lt;p>&lt;a href="showaspcode.asp?source=demo_db_list">View source on how to list a database table in an HTML table&lt;/a>&lt;/p><br>&lt;p>&lt;b>Note:&lt;/b> If you click on a button in the &quot;no&quot; column a new page will open. On the new page you may look at the source on how to create input fields based on the fields from one record in the database table.&lt;/p><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_list by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 03:14:32 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_list by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:44:33 GMT -->
 </HTML>

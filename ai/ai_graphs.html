@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:42 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:25 GMT -->
 <head>
 <title>Scatter Plots and Graphs</title>
 <meta charset="utf-8">
@@ -234,7 +234,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
           <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
           <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
-          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Learn Data Science</a>
           <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
@@ -363,7 +363,7 @@ function w3_getStyleValue(elmnt,style) {
          <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
          <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
@@ -423,6 +423,8 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="ai_sciences.html">AI Sciences</a>
 <a target="_top" href="ai_graphs.html">AI Graphs</a>
 <a target="_top" href="ai_regressions.html">AI Regressions</a>
+<a target="_top" href="ai_machine_learning.html">AI Machine Learning</a>
+
 
       <br><br>
     </div>
@@ -448,8 +450,7 @@ function w3_getStyleValue(elmnt,style) {
 <div class="w3-panel w3-info">
 <h2>Plots and Graphs</h2>
 <ul>
-<li>Plots</li>
-<li>Linear Plots</li>
+<li>Data</li>
 <li>Scatter Plots</li>
 <li>Graphs</li>
 <li>Linear Graphs</li>
@@ -457,32 +458,38 @@ function w3_getStyleValue(elmnt,style) {
 <li>Intercept</li>
 </ul>
 </div>
-<h2>Plots</h2>
-
-<p>A <b>Plot</b> can show the relationship between two values.</p>
-<p>In general, a Plot displays value pairs from <b>a table</b>:</p>
-<table class="w3-table-all" style="width:80%">
-<tr><td>X</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-<tr><td>Y</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-</table>
-<hr>
-<h2>Linear Plots</h2>
-<p><b>Linear</b> means straight.</p>
-<p>In a linear plot, the plots form a straight line.</p>
-
-<img alt="Graph" src="img_plot_linear.jpg" width="80%">
-<hr>
-
-<h2>Scatter Plots</h2>
-<p>A <b>Scatter Plot</b> has points scattered over an area representing the 
-relationship between two values.</p> 
+<h2>Collecting Data</h2>
+<p>Collecting data is the most important part of any Machine Intelligence projects.</p>
+<p>The most common data to collect are numbers and measurements.</p>
+<p>Often data are stored in arrays representing the relationship between values.</p>
 <p>This table contains house prices versus size:</p>
 <table class="w3-table-all" style="width:80%">
 <tr><td>Price</td><td>7</td><td>8</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td><td>10</td><td>11</td><td>14</td><td>15</td></tr>
 <tr><td>Size</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td><td>110</td><td>120</td><td>130</td><td>140</td><td>150</td></tr>
 </table>
+<hr>
+<h2>Scatter Plots</h2>
+<p>A <b>Scatter Plot</b> has points scattered over an area representing the 
+relationship between two values.</p> 
 <img alt="Prices" width="80%" src="img_plot_houseprices.png">
-<p>The prices are on the y-axis, the square meters are on the x-axis.</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Name the Axis<br>
+plt.title('House Prices vs Size')<br>
+plt.xlabel('Square Meters')<br>
+plt.ylabel('Price in Millions')<br><br>
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
+# Scatter Plot Data<br>
+plt.scatter(x, y)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython6da2.html?filename=demo_scatter_plot">Try it Yourself &raquo;</a>
+</div>
+
 <hr>
 
 <h2>Graphs</h2>
@@ -492,34 +499,99 @@ relationship between two values.</p>
 <tr><td>Size</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td><td>110</td><td>120</td><td>130</td><td>140</td><td>150</td></tr>
 </table>
 
-<img alt="Graph" src="img_graph_houseprices.png" width="80%">
+<img alt="Graph" src="img_graph_houseprices.jpg" width="80%">
 
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Name the Axis<br>
+plt.title('House Prices vs Size')<br>
+plt.xlabel('Square Meters')<br>
+plt.ylabel('Price in Millions')<br><br>
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
+# Plot a Graph<br>
+plt.plot(x, y)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython05f4.html?filename=demo_graph">Try it Yourself &raquo;</a>
+</div>
 
 <hr>
 <h2>Linear Graphs</h2>
 <p><b>Linear</b> means straight. A <b>linear graph</b> is a strait line.</p>
 <p>In general, a linear graph displays function values.</p>
-<p class="w3-xlarge">y = x:</p>
 
 <img alt="Graph" src="img_graph_linear.jpg" width="80%">
 
-<p>Sometimes a linear graph can connect the points of plotted values:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Name Axis<br>
+plt.title('y = x')<br>
+plt.xlabel('x - axis')<br> 
+plt.ylabel('y - axis') <br>
+<br>
+# Set Axis Range<br>
+plt.xlim(0, 10)<br>
+plt.ylim(0, 10)<br>
+<br>
+# Set x and y values<br>
+x = np.array([0,1,2,3,4,5,6,7,8,9,10])<br>
+y = x<br>
+<br>
+# Plot the Graph<br>
+plt.plot(x, y)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypythoncbc1.html?filename=demo_graph_linear">Try it Yourself &raquo;</a>
+</div>
 
-<img alt="Graph" src="img_graph_linear_plots.jpg" width="80%">
 <hr>
 <h2>Slope</h2>
 <p>The <b>slope</b> is the angle of the graph.</p>
 <p>The slope is the <b>a</b> value in a linear graph:</p>
 <p class="w3-xlarge">y = <b>a</b>x</p>
+<p>In this example the slope is 1.2:</p>
 <img alt="y = x" width="80%" src="img_graph_x_12.png">
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Set x and y values<br>
+x = np.array([0,1,2,3,4,5,6,7,8,9,10])<br>
+slope = 1.2<br>
+<br>
+# Plot the Graph<br>
+plt.plot(x, slope * x)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython7cc1.html?filename=demo_graph_linear_slope">Try it Yourself &raquo;</a>
+</div>
+
 <hr>
 <h2>Intercept</h2>
 <p>The <b>Intercept</b> is the start value of the graph.</p>
 <p>The intercept is the <b>b</b> value in a linear graph:</p>
 <p class="w3-xlarge">y = ax + <b>b</b></p>
+<p>In this example the slope is 1.2 and the intercept is 2:</p>
 <img alt="y = x" width="80%" src="img_graph_x_12_2.png">
-
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Set x and y values<br>
+x = np.array([0,1,2,3,4,5,6,7,8,9,10])<br>
+slope = 1.2<br>
+intercept = 2<br>
 <br>
+# Plot the Graph<br>
+plt.plot(x, slope * x + intercept)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypythonb422.html?filename=demo_graph_linear_intercept">Try it Yourself &raquo;</a>
+</div>
+
+
 <br>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="ai_sciences.html">&#10094; Previous</a>
@@ -556,14 +628,22 @@ relationship between two values.</p>
   </div>
 </div>
 
-
-<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
-<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
-<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
-  <img src="../images/tshirt.jpg" style="max-width:100%;">
+<div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
+<p>Get Your<br>Certification Today!</p>
+<a href="../cert/default.html" target="_blank">
+<img src="../images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
 </a>
+<a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
+href="../cert/default.html" target="_blank">View Options</a>
 </div>
 
+<!--
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<a href="https://shop.w3schools.com/" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="/images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+-->
 
 <div class="sidesection" id="moreAboutSubject">
 </div>
@@ -620,7 +700,7 @@ relationship between two values.</p>
   <div class="w3-border">
   <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
   <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
-  <a href="../cert/cert_javascript.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
   <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
   <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
   <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
@@ -1004,5 +1084,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:53 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:37 GMT -->
 </html>

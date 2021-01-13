@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/xml/ref_xsl_el_output.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 01:53:10 GMT -->
+<!-- Mirrored from www.w3schools.com/xml/ref_xsl_el_output.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 09:30:43 GMT -->
 <head>
 <title>xsl:output</title>
 <meta charset="utf-8">
@@ -28,14 +28,15 @@ ga('send', 'pageview');
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -46,85 +47,6 @@ snhb.options = {
                allOutputEnabled: false,
                autoStartAuction: false,
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-  googletag.pubads().disableInitialLoad();               
-  googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Vertical Tablet ad
-    addSize([512, 0], [468, 60]). 
-    // Horizontal Tablet
-    addSize([812, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [468, 60]).
-    // Normal Desktop
-    addSize([1182, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1457, 0], [[728, 90], [970, 90]]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
-    defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  var skyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
-  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
-    defineSizeMapping(skyMapping).addService(googletag.pubads());
-  var stickyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], []). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
-  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
-    defineSizeMapping(stickyMapping).addService(googletag.pubads());
-  var mcontMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
-    // Vertical Tablet ad
-    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
-    // Horizontal Tablet
-    addSize([782, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
-    // Normal Desktop
-    addSize([1167, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
-  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
-    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var bmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], [[300, 250], [336, 280]]). 
-    // Large Desktop
-    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
-    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
-    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var rbmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], []). 
-    // Large Desktop
-    addSize([1007, 0], [[300, 250], [336, 280]]).build();
-  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
-    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
@@ -148,7 +70,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
 
   });
 </script>
@@ -310,7 +232,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
           <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
           <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
-          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Learn Data Science</a>
           <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
@@ -439,7 +361,7 @@ function w3_getStyleValue(elmnt,style) {
          <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
          <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
@@ -647,10 +569,10 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-        
-        <div id='div-gpt-ad-1422003450156-2'>
-          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
-        </div>
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
        
       </div>
 
@@ -822,13 +744,9 @@ encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;<br>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="div-gpt-ad-1422003450156-5">
-      <script>
-      googletag.cmd.push(function() {
-      googletag.display('div-gpt-ad-1422003450156-5');
-      });
-      </script> 
-    </div>
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
   
   </div>
 </div>
@@ -848,14 +766,22 @@ encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;<br>
   </div>
 </div>
 
-
-<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
-<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
-<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
-  <img src="../images/tshirt.jpg" style="max-width:100%;">
+<div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
+<p>Get Your<br>Certification Today!</p>
+<a href="../cert/default.html" target="_blank">
+<img src="../images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
 </a>
+<a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
+href="../cert/default.html" target="_blank">View Options</a>
 </div>
 
+<!--
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<a href="https://shop.w3schools.com/" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="/images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+-->
 
 <div class="sidesection" id="moreAboutSubject">
 </div>
@@ -912,7 +838,7 @@ encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;<br>
   <div class="w3-border">
   <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
   <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
-  <a href="../cert/cert_javascript.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
   <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
   <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
   <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
@@ -924,13 +850,24 @@ encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;<br>
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-        <script>
-        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-        document.write("<div id='div-gpt-ad-1472547360578-0'>");
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
-        document.write("</div>");
-        }
-        </script>
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
       
     </div>
   </div>
@@ -948,17 +885,14 @@ encoding=&quot;UTF-8&quot; indent=&quot;yes&quot;/&gt;<br>
 <hr>
 
 <div style="overflow:auto">
-  <!-- BottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
-    </script>
-  </div>
-  <!-- RightBottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
-    </script>
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -1288,5 +1222,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/xml/ref_xsl_el_output.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 01:53:10 GMT -->
+<!-- Mirrored from www.w3schools.com/xml/ref_xsl_el_output.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 09:30:43 GMT -->
 </html>

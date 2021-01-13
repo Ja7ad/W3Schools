@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:53 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:38 GMT -->
 <head>
 <title>AI Regressions</title>
 <meta charset="utf-8">
@@ -234,7 +234,7 @@ function w3_getStyleValue(elmnt,style) {
           <a class="w3-bar-item w3-button" href='../cs/default.html'>Learn C#</a>
           <a class="w3-bar-item w3-button" href='../r/default.html'>Learn R</a>
           <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Learn Machine Learning</a>
-          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Data Science</a>
+          <a class="w3-bar-item w3-button" href='../datascience/default.html'>Learn Data Science</a>
           <a class="w3-bar-item w3-button" href='../python/pandas_tutorial.html'>Learn Pandas</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
@@ -363,7 +363,7 @@ function w3_getStyleValue(elmnt,style) {
          <h3><a style="padding-left:0!important;text-decoration:none;" href="../cert/default.html">Certificates</a></h3>
          <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
          <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
@@ -423,6 +423,8 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="ai_sciences.html">AI Sciences</a>
 <a target="_top" href="ai_graphs.html">AI Graphs</a>
 <a target="_top" href="ai_regressions.html">AI Regressions</a>
+<a target="_top" href="ai_machine_learning.html">AI Machine Learning</a>
+
 
       <br><br>
     </div>
@@ -442,79 +444,122 @@ function w3_getStyleValue(elmnt,style) {
 <h1>Artificial Intelligence</h1>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="ai_graphs.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="default.html">Next &#10095;</a>
+<a class="w3-right w3-btn" href="ai_machine_learning.html">Next &#10095;</a>
 </div>
 
 <div class="w3-panel w3-info">
-<h2>Machine Learning (ML)</h2>
+<h2>Linear Regressions</h2>
+<p>A <b>Regression</b> is a method used to determine the relationship between one variable (usually called y)
+and other variables (usually called x).</p>
+<p>In statistics, a <b>Linear Regression</b> is an approach to modeling a linear relationship
+between y and x.</p>
+</div>
+
+<h2>Scatter Plot</h2>
+<p>This is the <b>scatter plot</b> (from the previous chapter):</p>
+<img alt="Prices" width="80%" src="img_plot_houseprices.png">
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Name the Axis<br>
+plt.title('House Prices vs Size')<br>
+plt.xlabel('Square Meters')<br>
+plt.ylabel('Price in Millions')<br><br>
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
+# Scatter Plot Data<br>
+plt.scatter(x, y)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython6da2.html?filename=demo_scatter_plot">Try it Yourself &raquo;</a>
+</div>
+<hr>
+<h2>Predicting Values</h2>
+<p>From the scattered data above, how can we predict future prices?</p>
 <ul>
-<li>Labels</li>
-<li>Features</li>
-<li>Models</li>
-<li>Linear Regressions</li>
+<li>Use hand drawn linear graph</li>
+<li>Model a linear relationship</li>
+<li>Model a linear regression</li>
+</ul>
+<hr>
+<h2>Linear Graphs</h2>
+<p>This is a linear graph predicting prices based on the lowest and the highest price:</p>
+<img alt="Prices" width="80%" src="img_plot_houseprices1.jpg">
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
+# Plot Data<br>
+plt.scatter(x, y)<br>
+plt.plot([50, 160],[7, 15])<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython3617.html?filename=demo_graph_regression1">Try it Yourself &raquo;</a>
+</div>
+
+
+<hr>
+<h2>Linear Relationships</h2>
+<p>This <b>Model</b> predicts prices using a linear relationship between price and size:</p>
+<img alt="Prices" width="80%" src="img_plot_houseprices2.jpg">
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br>
+slope = np.mean(y) / np.mean(x)<br><br>
+# Plot Data<br>
+plt.scatter(x, y)<br>
+plt.plot(x, slope * x)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython5165.html?filename=demo_graph_regression2">Try it Yourself &raquo;</a>
+</div>
+<p>In the example above, the slope is a calulated average and the intercept = 0.</p>
+
+<div class="w3-info">
+<h2>From Previous Chapter</h2>
+<p>A linear relationship is written as <b>y = ax + b</b></p>
+<p>Where:</p>
+<ul>
+<li><b>y</b> is the price we want to predict</li>
+<li><b>a</b> is the slope of the line</li>
+<li><b>x</b> are the input values</li>
+<li><b>b</b> is the intercept</li>
 </ul>
 </div>
 <hr>
-<h2>Labels</h2>
-<p>In Machine Learning, the <b>label</b> is the thing we want to predict.</p>
-<p>The label is the <b>y</b> in a linear graph:</p>
-<p class="w3-xlarge"><b>y</b> = ax + b</p>
-<hr>
-<h2>Features</h2>
-<p>The <b>features</b> are the input variables.</p>
-<p>The features are the <b>x</b> values in a linear graph:</p>
-<p class="w3-xlarge">y = a<b>x</b> + b</p>
-
-<hr>
-<h2>Machine Learning</h2>
-<p><b>Macine Learning</b> systems are systems that can learn how to use input
-to produce <b>Predictions</b> on both known and uknown data.</p>
-<hr>
-<h2>Machine Learning Models</h2>
-<p>A <b>Model</b> defines the relationship between the label (y) and the features (x).
-<p>There are three phases in the life of a model:</p>
-<ul>
-<li>Data Collection</li>
-<li>Training</li>
-<li>Inference<link>
-</ul>
-<hr>
-<h2>Data Collection</h2>
-<p>Machine Learning can teach a computer to solve many questions like:
-<ul>
-<li>Is this cancer?</li>
-<li>Is this a banana?</li>
-</ul>
-<p>Before Macine Learning can start, you need to collect some data.</p>
-<p>If you want to predict house prices, you need to collect some information about house prices.</p>
-<hr>
-<h2>ML Training</h2>
-<p>The goal of training is to crate a model that can answer our question.
-Like what is the expected price for a house?</p>
-<hr>
-<h2>ML Inference</h2>
-<p>Inference is when the trained model is used to infer (predict) values
-using live data. Like putting the model into production.</p>
-<hr>
-<h2>Linear Regressions</h2>
-<p>A <b>Regression</b> is a method used to determine the relationship between one variable (usually called Y)
-and other variables.</p>
-<p>In statistics, <b>a Linear Regression</b> is a linear approach to modeling the relationship
-between a result (y) and other variables (x).</p>
-<p>This is a <b>scatter plot</b> (from the previous chapter):</p>
-<img alt="Prices" width="80%" src="img_plot_houseprices.png">
-<p>This is a <b>linear graph</b> connecting the lowest and the highest price:</p>
-<img alt="Prices" width="80%" src="img_plot_houseprices2.png">
-
-<p>This is a <b>linear regression</b> model trying to predict future prices:</p>
-<img alt="Prices" width="80%" src="img_plot_houseprices3.png">
-
-
-<br>
+<h2>Using a Linear Regression Function</h2>
+<p>This <b>Model</b> predicts prices using a linear regression function:</p>
+<img alt="Prices" width="80%" src="img_plot_houseprices3.jpg">
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+# Name the Axis<br>
+plt.title('House Prices vs Size')<br>
+plt.xlabel('Square Meters')<br>
+plt.ylabel('Price in Millions')<br><br>
+# Set x and y values<br>
+x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
+y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
+# Call Linear Regression Function<br>
+slope, intercept, r, p, std_err = stats.linregress(x, y)<br><br>
+# Plot Data<br>
+plt.scatter(x, y)<br>
+plt.plot(x, slope * x + intercept)<br>
+plt.show()
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypythonec86.html?filename=demo_graph_regression3">Try it Yourself &raquo;</a>
+</div>
+<p>In the example above the slope and intercept is calculated by a function called linregress.</p>
 <br>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="ai_graphs.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="default.html">Next &#10095;</a>
+<a class="w3-right w3-btn" href="ai_machine_learning.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -547,14 +592,22 @@ between a result (y) and other variables (x).</p>
   </div>
 </div>
 
-
-<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
-<!--<h4><a class="w3-button w3-green w3-block" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a></h4>-->
-<a href="../../shop.w3schools.com/index.html" target="_blank" title="Buy W3Schools Merchandize">
-  <img src="../images/tshirt.jpg" style="max-width:100%;">
+<div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
+<p>Get Your<br>Certification Today!</p>
+<a href="../cert/default.html" target="_blank">
+<img src="../images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
 </a>
+<a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
+href="../cert/default.html" target="_blank">View Options</a>
 </div>
 
+<!--
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<a href="https://shop.w3schools.com/" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="/images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+-->
 
 <div class="sidesection" id="moreAboutSubject">
 </div>
@@ -611,7 +664,7 @@ between a result (y) and other variables (x).</p>
   <div class="w3-border">
   <a href="../cert/cert_html_new.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
   <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
-  <a href="../cert/cert_javascript.asp" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
   <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
   <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
   <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
@@ -995,5 +1048,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 23:10:55 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_regressions.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:49 GMT -->
 </html>
