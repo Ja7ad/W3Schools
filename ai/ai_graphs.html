@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:25 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 09:07:06 GMT -->
 <head>
-<title>Scatter Plots and Graphs</title>
+<title>Linear Graphs</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -421,7 +421,9 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="ai_examples.html">AI Examples</a>
 <a target="_top" href="ai_job_replacement.html">AI Job Replacement</a>
 <a target="_top" href="ai_sciences.html">AI Sciences</a>
-<a target="_top" href="ai_graphs.html">AI Graphs</a>
+<a target="_top" href="ai_data.html">AI Collecting Data</a>
+<a target="_top" href="ai_scatter_plots.html">AI Scatter Plots</a>
+<a target="_top" href="ai_graphs.html">AI Linear Graphs</a>
 <a target="_top" href="ai_regressions.html">AI Regressions</a>
 <a target="_top" href="ai_machine_learning.html">AI Machine Learning</a>
 
@@ -443,82 +445,19 @@ function w3_getStyleValue(elmnt,style) {
       </div>
 <h1>Artificial Intelligence</h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="ai_sciences.html">&#10094; Previous</a>
+<a class="w3-left w3-btn" href="ai_scatter_plots.html">&#10094; Previous</a>
 <a class="w3-right w3-btn" href="ai_regressions.html">Next &#10095;</a>
 </div>
 
 <div class="w3-panel w3-info">
-<h2>Plots and Graphs</h2>
+<h2>Linear Graphs</h2>
 <ul>
-<li>Data</li>
-<li>Scatter Plots</li>
-<li>Graphs</li>
-<li>Linear Graphs</li>
+<li>Linear</li>
 <li>Slope</li>
 <li>Intercept</li>
 </ul>
 </div>
-<h2>Collecting Data</h2>
-<p>Collecting data is the most important part of any Machine Intelligence projects.</p>
-<p>The most common data to collect are numbers and measurements.</p>
-<p>Often data are stored in arrays representing the relationship between values.</p>
-<p>This table contains house prices versus size:</p>
-<table class="w3-table-all" style="width:80%">
-<tr><td>Price</td><td>7</td><td>8</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td><td>10</td><td>11</td><td>14</td><td>15</td></tr>
-<tr><td>Size</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td><td>110</td><td>120</td><td>130</td><td>140</td><td>150</td></tr>
-</table>
-<hr>
-<h2>Scatter Plots</h2>
-<p>A <b>Scatter Plot</b> has points scattered over an area representing the 
-relationship between two values.</p> 
-<img alt="Prices" width="80%" src="img_plot_houseprices.png">
 
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate pythonHigh">
-# Name the Axis<br>
-plt.title('House Prices vs Size')<br>
-plt.xlabel('Square Meters')<br>
-plt.ylabel('Price in Millions')<br><br>
-# Set x and y values<br>
-x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
-y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
-# Scatter Plot Data<br>
-plt.scatter(x, y)<br>
-plt.show()
-</div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython6da2.html?filename=demo_scatter_plot">Try it Yourself &raquo;</a>
-</div>
-
-<hr>
-
-<h2>Graphs</h2>
-<p>A <b>Graph</b> can also be used to show the same values:</p>
-<table class="w3-table-all" style="width:80%">
-<tr><td>Price</td><td>7</td><td>8</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td><td>10</td><td>11</td><td>14</td><td>15</td></tr>
-<tr><td>Size</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td><td>110</td><td>120</td><td>130</td><td>140</td><td>150</td></tr>
-</table>
-
-<img alt="Graph" src="img_graph_houseprices.jpg" width="80%">
-
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate pythonHigh">
-# Name the Axis<br>
-plt.title('House Prices vs Size')<br>
-plt.xlabel('Square Meters')<br>
-plt.ylabel('Price in Millions')<br><br>
-# Set x and y values<br>
-x = np.array([50,60,70,80,90,100,110,120,130,140,150,160])<br>
-y = np.array([7,8,8,9,9,9,9,10,11,14,14,15])<br><br>
-# Plot a Graph<br>
-plt.plot(x, y)<br>
-plt.show()
-</div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython05f4.html?filename=demo_graph">Try it Yourself &raquo;</a>
-</div>
-
-<hr>
 <h2>Linear Graphs</h2>
 <p><b>Linear</b> means straight. A <b>linear graph</b> is a strait line.</p>
 <p>In general, a linear graph displays function values.</p>
@@ -553,7 +492,7 @@ plt.show()
 <p>The <b>slope</b> is the angle of the graph.</p>
 <p>The slope is the <b>a</b> value in a linear graph:</p>
 <p class="w3-xlarge">y = <b>a</b>x</p>
-<p>In this example the slope is 1.2:</p>
+<p>In this example the <b>slope is 1.2</b>:</p>
 <img alt="y = x" width="80%" src="img_graph_x_12.png">
 <div class="w3-example">
 <h3>Example</h3>
@@ -574,7 +513,7 @@ plt.show()
 <p>The <b>Intercept</b> is the start value of the graph.</p>
 <p>The intercept is the <b>b</b> value in a linear graph:</p>
 <p class="w3-xlarge">y = ax + <b>b</b></p>
-<p>In this example the slope is 1.2 and the intercept is 2:</p>
+<p>In this example the slope is 1.2 and the <b>intercept is 2</b>:</p>
 <img alt="y = x" width="80%" src="img_graph_x_12_2.png">
 <div class="w3-example">
 <h3>Example</h3>
@@ -594,7 +533,7 @@ plt.show()
 
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="ai_sciences.html">&#10094; Previous</a>
+<a class="w3-left w3-btn" href="ai_scatter_plots.html">&#10094; Previous</a>
 <a class="w3-right w3-btn" href="ai_regressions.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
@@ -629,12 +568,12 @@ plt.show()
 </div>
 
 <div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
-<p>Get Your<br>Certification Today!</p>
+<p>Get your<br>certification today!</p>
 <a href="../cert/default.html" target="_blank">
 <img src="../images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
 </a>
 <a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
-href="../cert/default.html" target="_blank">View Options</a>
+href="../cert/default.html" target="_blank">View options</a>
 </div>
 
 <!--
@@ -1084,5 +1023,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:02:37 GMT -->
+<!-- Mirrored from www.w3schools.com/ai/ai_graphs.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 09:07:07 GMT -->
 </html>

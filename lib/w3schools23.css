@@ -507,9 +507,11 @@ transform:translate(0, 0);
 .fa-bootstrap:before { content: '\e81c'; }
 .fa-html5:before { content: '\f13b'; }
 .fa-css3:before { content: '\f13c'; }
+.fa-java:before { content: '\e821'; }
 .fa-code:before { content: '\f121'; }
 .fa-graduation-cap:before { content: '\f19d'; }
 .fa-envelope:before { content: '\e805'; }
+.fa-logo:before { content: '\e822'; }
 span.marked, span.deprecated {
  color:#e80000;
  background-color:transparent;

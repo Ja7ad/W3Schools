@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/datascience/ds_analyze_data.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:03:04 GMT -->
+<!-- Mirrored from www.w3schools.com/datascience/ds_analyze_data.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 09:07:26 GMT -->
 <head>
 <title>Data Science Data Preparation and Analyze Data</title>
 <meta charset="utf-8">
@@ -468,9 +468,8 @@ function w3_getStyleValue(elmnt,style) {
 and make it clean and valuable.</p>
 <hr>
 
-<h2>Extract Data</h2>
+<h2>Extract and Read Data With Pandas</h2>
 <p>Before data can be analyzed, it must be imported/extracted.</p>
-<p>Pandas is a library in Python used for data analysis and data manipulation.</p>
 <p>In the example below, we show you how to import data using Pandas in Python.</p>
 <p>We  use the <code class="w3-codespan">read_csv()</code> function to import a CSV file with the health data:</p>
 <div class="w3-example">
@@ -490,6 +489,15 @@ and make it clean and valuable.</p>
   values. This is because we are using the file type .csv (comma separated 
   values)</li>
 </ul>
+<p><strong>Tip:</strong> If you have a large CSV file, you can use the <code class="w3-codespan">
+head()</code> function to only show the top 5rows:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+  import pandas as pd<br><br>health_data = pd.read_csv(&quot;data.csv&quot;, header=0, sep=",")<br>
+  <br>print(health_data.head())</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython_multi_csv6573.html?filename=demo_analyze_data_head&amp;multi=demo_data_raw_multi">Try it Yourself &raquo;</a>
+</div>
 <hr>
 
 <h2>Data Cleaning</h2>
@@ -735,12 +743,12 @@ to summarize data: </p>
 </div>
 
 <div class="sidesection" style="border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda">
-<p>Get Your<br>Certification Today!</p>
+<p>Get your<br>certification today!</p>
 <a href="../cert/default.html" target="_blank">
 <img src="../images/w3certified_logo_250.png" style="margin:0 12px 20px 10px;max-width:80%">
 </a>
 <a class="w3-btn w3-margin-bottom" style="text-decoration:none;border-radius:5px;"
-href="../cert/default.html" target="_blank">View Options</a>
+href="../cert/default.html" target="_blank">View options</a>
 </div>
 
 <!--
@@ -1190,5 +1198,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/datascience/ds_analyze_data.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 08:03:04 GMT -->
+<!-- Mirrored from www.w3schools.com/datascience/ds_analyze_data.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 09:07:30 GMT -->
 </html>

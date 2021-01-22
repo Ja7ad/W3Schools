@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '2';exheadings[0] = 'Syntax';exnames[1] = 'variables';excounts[1] = '5';exheadings[1] = 'Variables';exnames[2] = 'data_types';excounts[2] = '3';exheadings[2] = 'Data Types';exnames[3] = 'operators';excounts[3] = '4';exheadings[3] = 'Operators';exnames[4] = 'strings';excounts[4] = '6';exheadings[4] = 'Strings';exnames[5] = 'math';excounts[5] = '3';exheadings[5] = 'Math';exnames[6] = 'booleans';excounts[6] = '2';exheadings[6] = 'Booleans';exnames[7] = 'conditions';excounts[7] = '5';exheadings[7] = 'If...Else';exnames[8] = 'switch';excounts[8] = '2';exheadings[8] = 'Switch';exnames[9] = 'while_loop';excounts[9] = '6';exheadings[9] = 'Loops';exnames[10] = 'arrays';excounts[10] = '6';exheadings[10] = 'Arrays';exActiveNo = 10;exnames[11] = 'methods';excounts[11] = '5';exheadings[11] = 'Methods';exnames[12] = 'classes';excounts[12] = '8';exheadings[12] = 'Classes/Objects';exnames[13] = 'try_catch';excounts[13] = '2';exheadings[13] = 'Exceptions';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/java/exercise.asp?filename=exercise_arrays2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:20:35 GMT -->
+<!-- Mirrored from www.w3schools.com/java/exercise.asp?filename=exercise_arrays2 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:39:30 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -27,46 +27,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
@@ -90,7 +58,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -108,10 +76,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
 }
@@ -1473,9 +1439,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1522,15 +1488,15 @@ System.out.println(cars[1]);
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+  <button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
+  <button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
@@ -1715,7 +1681,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    
+    snhb.startAuction(['try_it_leaderboard']);
   }
 }
 
@@ -2172,5 +2138,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/java/exercise.asp?filename=exercise_arrays2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:20:35 GMT -->
+<!-- Mirrored from www.w3schools.com/java/exercise.asp?filename=exercise_arrays2 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:39:30 GMT -->
 </html>

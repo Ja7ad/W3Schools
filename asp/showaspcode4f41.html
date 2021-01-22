@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_add by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:44:33 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_add by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 12:04:42 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;head><br>&lt;title>ADO - Add DataBase Record&lt;/title><br>&lt;/head><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>set conn=Server.CreateObject("ADODB.Connection") <br>conn.Provider="Microsoft.Jet.OLEDB.4.0"<br>conn.Open(Server.mappath("/db/database.mdb"))<br>set rs = Server.CreateObject("ADODB.Recordset")<br>rs.Open "select * from tblGuestBook", conn<br>%&gt;</FONT><br><br>&lt;h2>Adding a Record&lt;/h2><br>&lt;form method="post" action="demo_db_new.asp" target="_blank"><br>&lt;table bgcolor="#b0c4de"><br><FONT COLOR=#ff0000>&lt;%<br>for each x in rs.Fields<br>&nbsp;&nbsp;&nbsp;&nbsp;    if x.name &lt;> "no" and x.name &lt;> "dateadded" then%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;tr><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;td><FONT COLOR=#ff0000>&lt;%=x.name%&gt;</FONT>&lt;/td><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;td>&lt;input name="<FONT COLOR=#ff0000>&lt;%=x.name%&gt;</FONT>" value="N/A" size="20">&lt;/td><br>&nbsp;&nbsp;&nbsp;&nbsp;    <FONT COLOR=#ff0000>&lt;%<br>&nbsp;&nbsp;&nbsp;&nbsp;    end if<br>next<br>rs.close<br>conn.close<br>%&gt;</FONT><br>&lt;/tr>&lt;/table><br>&lt;br><br>&lt;input type="submit" name="action" value="Add Record"><br>&lt;/form><br><br>&lt;p>&lt;a href="showaspcode.asp?source=demo_db_add">View source on how to create input fields based on the fields in the database table&lt;/a>.&lt;/p><br>&lt;p>&lt;b>Note:&lt;/b> If you click on &quot;Add Record&quot; a new page will open. On the new page you may look at the source on how to add a record to a database table.&lt;/p><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_add by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:44:33 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_db_add by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 12:04:42 GMT -->
 </HTML>

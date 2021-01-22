@@ -1,4 +1,4 @@
-# W3Schools Offline ⚡️  Weekly Update v2021.01.13
+# W3Schools Offline ⚡️  Weekly Update v2021.01.22
 
 ![Repo Size](https://img.shields.io/github/repo-size/ja7adr/W3Schools) ![Docker Image Size](https://img.shields.io/docker/image-size/ja7adr/w3schools?style=flat-square)
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_exec by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:45:00 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_exec by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 12:05:22 GMT -->
 <head>
 <title>Python Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -30,46 +30,21 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder + "tryit";
+  })());
+});
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
@@ -93,7 +68,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -111,10 +86,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -422,9 +395,9 @@ font-style:normal;
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 
@@ -434,7 +407,7 @@ font-style:normal;
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');">Run &raquo;</button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
   <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -816,5 +789,5 @@ window.onclick = function(event) {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_exec by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 10:45:00 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_exec by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 12:05:22 GMT -->
 </html>
