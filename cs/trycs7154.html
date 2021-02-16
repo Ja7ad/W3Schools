@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cs/trycs.asp?filename=demo_math_sqrt by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 10:54:52 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/trycs.asp?filename=demo_math_sqrt by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 17:50:37 GMT -->
 <head>
 <title>C# Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -11,8 +11,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<link rel="stylesheet" href="../w3css/4/w3.css">
-<link rel="stylesheet" href="../lib/codemirror.css">
+<link rel="stylesheet" href="../w3css/4/w3.css"><link rel="stylesheet" href="../lib/codemirror.css">
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_clike.js"></script>
 <script>
@@ -30,15 +29,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder + "tryit";
-  })());
-});
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -46,19 +44,45 @@ snhb.options = {
                autoStartAuction: false
                };
 
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+googletag.pubads().disableInitialLoad();               
+googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
-#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
 </style>
 <script type="text/javascript">
 __cmp("setLogo", "../images/img_logo_small.png");
@@ -68,7 +92,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["try_it_leaderboard"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
    });
 </script>
@@ -86,8 +110,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+              
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -136,7 +162,7 @@ body {
   position:absolute;
   width:100%;
   top:99px;
-  background-color:#f1f1f1;
+  background-color:#F1F1F1;
 }
 .trytopnav a,.trytopnav button {
   color:#999999;
@@ -171,7 +197,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   font-family:Consolas, monospace;
 }
 #container {
-  background-color:#f1f1f1;
+  background-color:#F1F1F1;
   width:100%;
   overflow:auto;
   position:absolute;
@@ -395,9 +421,9 @@ font-style:normal;
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="snhb-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
+  </div>
  
 </div>
 
@@ -407,7 +433,7 @@ font-style:normal;
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodeCs', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodeCs', 'click');">Run &raquo;</button>
   <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -799,5 +825,5 @@ window.onclick = function(event) {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/cs/trycs.asp?filename=demo_math_sqrt by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 10:54:52 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/trycs.asp?filename=demo_math_sqrt by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 17:50:37 GMT -->
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/html/html5_audio.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 06:37:29 GMT -->
+<!-- Mirrored from www.w3schools.com/html/html5_audio.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 13:41:23 GMT -->
 <head>
 <title>HTML Audio</title>
 <meta charset="utf-8">
@@ -51,16 +51,16 @@ snhb.options = {
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
-#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
 </style>
 <script type="text/javascript">
 __cmp("setLogo", "../images/img_logo_small.png");
@@ -74,6 +74,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 
   });
 </script>
+<script src="../lib/my-learning.js"></script>
 <script type='text/javascript'>
 var stickyadstatus = "";
 function fix_stickyad() {
@@ -138,6 +139,7 @@ function w3_getStyleValue(elmnt,style) {
 <div class='w3-container top'>
   <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
 
+<!--  <a href='//www.w3schools.com' class='fa fa-logo xw3-text-green' style="font-size:50px;margin-top:-30px" title='Home'></a> -->
   <div id="loginactioncontainer" class='w3-right'>
     <div id="mypagediv"></div>
     <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
@@ -406,6 +408,9 @@ function w3_getStyleValue(elmnt,style) {
   </div>
 </div>
 
+<script>
+
+</script>
 
 
 <div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -571,6 +576,41 @@ files which the browser may choose from. The browser will use the first recogniz
 <p>The text between the <code class="w3-codespan">&lt;audio&gt;</code> and <code class="w3-codespan">&lt;/audio&gt;</code> tags will only be displayed 
 in browsers that do not 
 support the <code class="w3-codespan">&lt;audio&gt;</code> element.</p>
+<hr>
+
+<h2>HTML &lt;audio&gt; Autoplay</h2>
+<p>To start an audio file automatically, use the <code class="w3-codespan">autoplay</code> attribute:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+ &lt;audio controls autoplay&gt;<br>
+&nbsp; &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;<br>
+&nbsp; &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;<br>
+ Your browser does not support the audio element.<br>
+ &lt;/audio&gt;
+</div>
+<a target="_blank" href="tryit40cc.html?filename=tryhtml5_audio_autoplay" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<div class="w3-panel w3-note">
+<p><strong>Note:</strong> Chromium browsers do not 
+allow autoplay in most cases. However, muted autoplay is always allowed.</p>
+</div>
+
+<p>Add <code class="w3-codespan">muted</code> after <code class="w3-codespan">
+autoplay</code> to let your audio file start playing automatically (but muted):</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+ &lt;audio controls autoplay muted&gt;<br>
+&nbsp; &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;<br>
+&nbsp; &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;<br>
+ Your browser does not support the audio element.<br>
+ &lt;/audio&gt;
+</div>
+<a target="_blank" href="tryita639.html?filename=tryhtml5_audio_autoplay_mute" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 <hr>
 
 <h2>Browser Support</h2>
@@ -1035,7 +1075,8 @@ function loadUser() {
       }
     }
   };
-  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.open("POST.html", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
@@ -1060,7 +1101,8 @@ function finishedPage() {
       }
     }
   };
-  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.open("POST.html", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
@@ -1181,5 +1223,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/html/html5_audio.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 06:37:30 GMT -->
+<!-- Mirrored from www.w3schools.com/html/html5_audio.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 13:41:28 GMT -->
 </html>

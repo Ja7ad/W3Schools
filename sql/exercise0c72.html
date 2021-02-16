@@ -2,15 +2,14 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'select';excounts[0] = '3';exheadings[0] = 'Select';exnames[1] = 'where';excounts[1] = '5';exheadings[1] = 'Where';exnames[2] = 'orderby';excounts[2] = '3';exheadings[2] = 'Order By';exActiveNo = 2;exnames[3] = 'insert';excounts[3] = '1';exheadings[3] = 'Insert';exnames[4] = 'null';excounts[4] = '2';exheadings[4] = 'Null';exnames[5] = 'update';excounts[5] = '3';exheadings[5] = 'Update';exnames[6] = 'delete';excounts[6] = '2';exheadings[6] = 'Delete';exnames[7] = 'functions';excounts[7] = '5';exheadings[7] = 'Functions';exnames[8] = 'like';excounts[8] = '5';exheadings[8] = 'Like';exnames[9] = 'wildcards';excounts[9] = '4';exheadings[9] = 'Wildcards';exnames[10] = 'in';excounts[10] = '2';exheadings[10] = 'In';exnames[11] = 'between';excounts[11] = '3';exheadings[11] = 'Between';exnames[12] = 'alias';excounts[12] = '2';exheadings[12] = 'Alias';exnames[13] = 'join';excounts[13] = '3';exheadings[13] = 'Join';exnames[14] = 'groupby';excounts[14] = '2';exheadings[14] = 'Group By';exnames[15] = 'database';excounts[15] = '7';exheadings[15] = 'Database';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/exercise.asp?filename=exercise_orderby3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:23:48 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/exercise.asp?filename=exercise_orderby3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:46 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
-<link rel="stylesheet" href="../w3css/3/w3.css">
-<link rel="stylesheet" href="../lib/codemirror.css">
+<link rel="stylesheet" href="../w3css/3/w3.css"><link rel="stylesheet" href="../lib/codemirror.css">
 <script src="../lib/codemirror.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,6 +21,7 @@
   ga('require', 'GTM-WJ88MZ5');
   ga('send', 'pageview');
 </script>
+<script src="../lib/my-learning.js"></script>
 
 <script type='text/javascript'>
 var k42 = false;
@@ -39,16 +39,16 @@ snhb.options = {
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
-#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
 </style>
 <script type="text/javascript">
 __cmp("setLogo", "../images/img_logo_small.png");
@@ -91,6 +91,8 @@ if (exsection == "JS") {
     storageBlip = "sql_";
 } else if (exsection == "PYTHON") {
     storageBlip = "python_";
+} else if (exsection == "PANDAS") {
+    storageBlip = "pandas_";
 } else if (exsection == "HTML_2") {
     storageBlip = "html_2_";
 } else if (exsection == "JSREF") {
@@ -99,6 +101,8 @@ if (exsection == "JS") {
     storageBlip = "java_";
 } else if (exsection == "CPP") {
     storageBlip = "cpp_";
+} else if (exsection == "R") {
+    storageBlip = "r_";
 } else if (exsection == "CS") {
     storageBlip = "cs_";
 } else if (exsection == "BS3") {
@@ -169,7 +173,8 @@ function setAnswerObj(nam, val, all) {
         }
       }
     };
-    xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/set_exercise_obj.html", true);
+    xhttp.open("POST.html", MyLearning.getUrl('api.exercise.html'), true);
+//  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
     xhttp.withCredentials = true;
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("n=" + nam + "&v=" + val + "&a=" + all);
@@ -1230,6 +1235,9 @@ var userLoggedOn = false;
 var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
+  //getFromLocalStorage();
+  //w3LoadExercise();
+  //return false;
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
@@ -1274,8 +1282,8 @@ function constructAnswerObj() {
       w3LoadExercise();
     }
   };
-//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj.php", true);
-  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/get_exercise_obj2.html", true);
+  xhttp.open("POST.html", MyLearning.getUrl('api.exercise.get'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj2.php", true);  
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("t=" + storageBlip);
@@ -1777,7 +1785,7 @@ function showanswer() {
   if (editable == true) {
     document.getElementById("showcorrectanswercontainer").innerHTML = correcttxt;
   } else {
-    if (exsection == "HTML_2") {
+    if (exsection == "HTML_2"  || exsection == "R") {
       correcttxt = correcttxt.replace(/&lt;/g, "<");
       correcttxt = correcttxt.replace(/&gt;/g, ">");
       txt = txt.replace(/&lt;/g, "<");
@@ -2140,5 +2148,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/exercise.asp?filename=exercise_orderby3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:23:48 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/exercise.asp?filename=exercise_orderby3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:46 GMT -->
 </html>

@@ -3,7 +3,7 @@
 <html lang="en-US">
 
  
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:45:10 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:42:24 GMT -->
 <head>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,23 +40,13 @@
  function change_position(val)
  {
  
+   document.getElementById("myDIV").className = "my" + val;
    var x=document.getElementById("demoParent");
    var y=document.getElementById("demoDIV").cloneNode(true);
    var cc;
    x.removeChild(document.getElementById("demoDIV"));
    x.appendChild(y);
    
-  var s="demoDIV";
-  
-   s="myDIV ";
-   s=s.trim();
-  
-  document.getElementById(s).style.animationIterationCount=val;
-  
-   document.getElementById(s).style.WebkitAnimationIterationCount=val;
-  
-   document.getElementById(s).style.MozAnimationIterationCount=val;
-  
  var x="animation-iteration-count:<span id='enlargecssprop'>" + val + "</span>";
  var y="#myDIV {<br>  ###CSSPROP###;<br>}<br>";
  var z=y.replace("###CSSPROP###",x);
@@ -352,5 +342,5 @@ function browserResize() {
  </body>
 
 
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 11:45:10 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:42:24 GMT -->
 </html>

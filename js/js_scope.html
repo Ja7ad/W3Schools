@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/js_scope.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 07:13:59 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_scope.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 14:17:53 GMT -->
 <head>
 <title>JavaScript Scope</title>
 <meta charset="utf-8">
@@ -28,15 +28,14 @@ ga('send', 'pageview');
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -48,19 +47,98 @@ snhb.options = {
                autoStartAuction: false,
                };
 
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+  googletag.pubads().disableInitialLoad();               
+  googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Vertical Tablet ad
+    addSize([512, 0], [468, 60]). 
+    // Horizontal Tablet
+    addSize([812, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [468, 60]).
+    // Normal Desktop
+    addSize([1182, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1457, 0], [[728, 90], [970, 90]]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
+    defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  var skyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
+  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
+    defineSizeMapping(skyMapping).addService(googletag.pubads());
+  var stickyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], []). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
+  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
+    defineSizeMapping(stickyMapping).addService(googletag.pubads());
+  var mcontMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
+    // Vertical Tablet ad
+    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
+    // Horizontal Tablet
+    addSize([782, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
+    // Normal Desktop
+    addSize([1167, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
+  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
+    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var bmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], [[300, 250], [336, 280]]). 
+    // Large Desktop
+    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
+    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
+    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var rbmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], []). 
+    // Large Desktop
+    addSize([1007, 0], [[300, 250], [336, 280]]).build();
+  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
+    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
-#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
 </style>
 <script type="text/javascript">
 __cmp("setLogo", "../images/img_logo_small.png");
@@ -70,10 +148,11 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
   });
 </script>
+<script src="../lib/my-learning.js"></script>
 <script type='text/javascript'>
 var stickyadstatus = "";
 function fix_stickyad() {
@@ -136,6 +215,7 @@ function w3_getStyleValue(elmnt,style) {
 <div class='w3-container top'>
   <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
 
+<!--  <a href='//www.w3schools.com' class='fa fa-logo xw3-text-green' style="font-size:50px;margin-top:-30px" title='Home'></a> -->
   <div id="loginactioncontainer" class='w3-right'>
     <div id="mypagediv"></div>
     <button id="w3loginbtn" style="display:none;border:none;cursor:pointer" class="login w3-right" onclick='w3_open_nav("login")'>LOG IN</button>
@@ -404,6 +484,9 @@ function w3_getStyleValue(elmnt,style) {
   </div>
 </div>
 
+<script>
+
+</script>
 
 
 <div class='w3-sidebar w3-collapse' id='sidenav'>
@@ -419,6 +502,8 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_syntax.html">JS Syntax</a>
 <a target="_top" href="js_comments.html">JS Comments</a>
 <a target="_top" href="js_variables.html">JS Variables</a>
+<a target="_top" href="js_let.html">JS Let</a>
+<a target="_top" href="js_const.html">JS Const</a>
 <a target="_top" href="js_operators.html">JS Operators</a>
 <a target="_top" href="js_arithmetic.html">JS Arithmetic</a>
 <a target="_top" href="js_assignment.html">JS Assignment</a>
@@ -445,6 +530,8 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_if_else.html">JS Conditions</a>
 <a target="_top" href="js_switch.html">JS Switch</a>
 <a target="_top" href="js_loop_for.html">JS Loop For</a>
+<a target="_top" href="js_loop_forin.html">JS Loop For In</a>
+<a target="_top" href="js_loop_forof.html">JS Loop For Of</a>
 <a target="_top" href="js_loop_while.html">JS Loop While</a>
 <a target="_top" href="js_break.html">JS Break</a>
 <a target="_top" href="js_type_conversion.html">JS Type Conversion</a>
@@ -455,22 +542,25 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_hoisting.html">JS Hoisting</a>
 <a target="_top" href="js_strict.html">JS Strict Mode</a>
 <a target="_top" href="js_this.html">JS this Keyword</a>
-<a target="_top" href="js_let.html">JS Let</a>
-<a target="_top" href="js_const.html">JS Const</a>
 <a target="_top" href="js_arrow_function.html">JS Arrow Function</a>
 <a target="_top" href="js_classes.html">JS Classes</a>
+<a target="_top" href="js_json.html">JS JSON</a>
 <a target="_top" href="js_debugging.html">JS Debugging</a>
 <a target="_top" href="js_conventions.html">JS Style Guide</a>
 <a target="_top" href="js_best_practices.html">JS Best Practices</a>
 <a target="_top" href="js_mistakes.html">JS Mistakes</a>
 <a target="_top" href="js_performance.html">JS Performance</a>
 <a target="_top" href="js_reserved.html">JS Reserved Words</a>
+<br>
+<h2 class="left">JS Versions</h2>
+
 <a target="_top" href="js_versions.html">JS Versions</a>
 <a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
 <a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
 <a target="_top" href="js_2016.html">JS 2016</a>
 <a target="_top" href="js_2017.html">JS 2017</a>
-<a target="_top" href="js_json.html">JS JSON</a>
+<a target="_top" href="js_2018.html">JS 2018</a>
+<a target="_top" href="js_history.html">JS History</a>
 <br>
 <h2 class="left">JS Forms</h2>
 <a target="_top" href="js_validation.html">JS Forms</a>
@@ -594,10 +684,10 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-
-        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-main_leaderboard-0"></div>
-        <!-- adspace leaderboard -->
+        
+        <div id='div-gpt-ad-1422003450156-2'>
+          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
+        </div>
        
       </div>
 <h1>JavaScript <span class="color_h1">Scope</span></h1>
@@ -670,8 +760,11 @@ different parts of the code.</p>
 <!-- MidContent -->
 <!-- <p class="adtext">Advertisement</p> -->
 
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
+  <div id='div-gpt-ad-1493883843099-0' style="display: inline-block">
+    <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1493883843099-0'); });
+    </script>
+  </div>
 
 </div>
 <hr>
@@ -746,9 +839,13 @@ window (or tab).</p>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
-    <div id="snhb-wide_skyscraper-0"></div>
-    <!-- adspace wide-->
+    <div id="div-gpt-ad-1422003450156-5">
+      <script>
+      googletag.cmd.push(function() {
+      googletag.display('div-gpt-ad-1422003450156-5');
+      });
+      </script> 
+    </div>
   
   </div>
 </div>
@@ -852,24 +949,13 @@ href="../cert/default.html" target="_blank">View options</a>
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
-      <div id="snhb-sidebar_sticky-0"></div>
-      <script>
-          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-            // adspace sticky
-            if (document.getElementById("snhb-mid_content-0")) {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
-            }
-            else {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
-            }
-          }
-          else {
-              if (document.getElementById("snhb-mid_content-0")) {
-                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
-              }
-          }
-      </script>  
+        <script>
+        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+        document.write("<div id='div-gpt-ad-1472547360578-0'>");
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
+        document.write("</div>");
+        }
+        </script>
       
     </div>
   </div>
@@ -887,14 +973,17 @@ href="../cert/default.html" target="_blank">View options</a>
 <hr>
 
 <div style="overflow:auto">
-  <div class="bottomad">
-    <!-- BottomMediumRectangle -->
-    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-    <!-- adspace bmr -->
-    <!-- RightBottomMediumRectangle -->
-    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  <!-- BottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
+    </script>
+  </div>
+  <!-- RightBottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
+    </script>
   </div>
 </div>
 
@@ -1078,7 +1167,8 @@ function loadUser() {
       }
     }
   };
-  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.open("POST.html", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0");
@@ -1103,7 +1193,8 @@ function finishedPage() {
       }
     }
   };
-  xhttp.open("POST.html", "../../mypage.w3schools.com/mypage/beta.html", true);
+  xhttp.open("POST.html", MyLearning.getUrl('api.meta'), true);
+//xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
   xhttp.withCredentials = true;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1");
@@ -1224,5 +1315,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/js_scope.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Jan 2021 07:14:02 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_scope.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 14:17:53 GMT -->
 </html>

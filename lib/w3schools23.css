@@ -706,7 +706,8 @@ hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
 .w3-note, .w3-warning {
   border-left: none;
 }
-.w3-panel {
+/*.w3-panel {*/
+.w3-note, .w3-warning {
   margin-top: 24px;
   margin-bottom: 24px;
   margin-left:-32px;
@@ -752,7 +753,8 @@ hr {
   font-size:105%;
   background-color:rgba(222,222,222,0.3);
 }
-.w3-example p,.w3-panel p {
+/*.w3-example p,.w3-panel p {*/
+.w3-example p,.w3-info p,.w3-note p,.w3-warning p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -796,7 +798,8 @@ h2 {
   padding: 8px 16px 16px 16px;
   margin: 24px -16px;
 }
-.w3-panel,.w3-info {
+/*.w3-panel,.w3-info {*/
+.w3-note,.w3-info,.w3-warning {
   margin-left:-16px;
   margin-right:-16px;
   padding-left:8px!important;

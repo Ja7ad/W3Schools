@@ -1,4 +1,4 @@
-﻿* {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
     min-width:903px;
 }
 .container {
-    background-color:#f1f1f1;
+    background-color:#F1F1F1;
     width:100%;
     overflow:auto;
     position:absolute;
@@ -66,7 +66,7 @@ body {
     color:#000000;
 }
 .seeResult:active,.stacked:active {
-    background-color:#f1f1f1;
+    background-color:#F1F1F1;
 }
 .textareawrapper {
     width:100%;
