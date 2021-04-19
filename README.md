@@ -1,4 +1,4 @@
-# W3Schools Offline ⚡️  Update v2021.02.16
+# W3Schools Offline ⚡️  Update v20214.19
 
 ![Repo Size](https://img.shields.io/github/repo-size/ja7adr/W3Schools) ![Docker Image Size](https://img.shields.io/docker/image-size/ja7adr/w3schools?style=flat-square)
 
@@ -18,5 +18,5 @@ If you like w3schools tutorials , you can access any time in your local to w3sch
 
 ## ⁉️ How to used zipped edition (50 MB Size) ?
 
-1. Download Latest Release : ![Release](https://github.com/Ja7adR/W3Schools/releases)
+1. Download Latest Release : [Release](https://github.com/Ja7adR/W3Schools/releases)
 2. Just run file `index.html`
