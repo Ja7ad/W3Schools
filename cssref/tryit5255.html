@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cssref/tryit.asp?filename=trycss3_gradient-radial_size by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:57:20 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/tryit.asp?filename=trycss3_gradient-radial_size by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 20:11:32 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -528,7 +528,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/cssref/tryit.asp?filename=trycss3_gradient-radial_size by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:57:20 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/tryit.asp?filename=trycss3_gradient-radial_size by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 20:11:32 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -545,25 +545,14 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 </div>
 <div id="err_form" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-display-container">
-      <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
-      <div class="w3-container w3-green">
-        <h2>Report a Problem:</h2>
-      </div>
-<form class="w3-container"> 
-<p><label for="err_email">Your E-mail:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
-</p>
-<p>
-<label for="err_email">Page address:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
-</p>
-<p>
-<label for="err_email">Description:</label>
-<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
-</p>
-<button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
-</form>
-
+    <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
+    <div class="w3-container w3-green">
+      <h2>Report a Problem:</h2>
+    </div>
+    <div class="w3-container"> 
+      <p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+      <p>help@w3schools.com</p>
+    </div>
   </div>
 </div>
 <style>
@@ -1010,11 +999,8 @@ function hideAndResetModal() {
     document.getElementById('saveLoader').style.display = "block";
 }
 
-var addr = document.location.href;
 function displayError() {
-  document.getElementById("err_url").value = addr;
   document.getElementById("err_form").style.display = "block";
-  document.getElementById("err_email").focus();
   hideSent();
 }
 function hideError() {
@@ -1022,23 +1008,6 @@ function hideError() {
 }
 function hideSent() {
   document.getElementById("err_sent").style.display = "none";
-}
-function sendErr() {
-  var xmlhttp;
-  var err_url = document.getElementById("err_url").value;
-  var err_email = document.getElementById("err_email").value;
-  var err_desc = document.getElementById("err_desc").value;
-  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {// code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.open("POST.html", "../err_sup.html", true);
-  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
-  document.getElementById("err_desc").value = "";
-  hideError();
-  document.getElementById("err_sent").style.display = "block";
 }
 function openMenu() {
     var x = document.getElementById("navbarDropMenu");

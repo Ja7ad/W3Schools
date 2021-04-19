@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_matplotlib_line_short by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:33:36 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_matplotlib_line_short by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:32:47 GMT -->
 <head>
 <title>Python Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -29,46 +29,21 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder + "tryit";
+  })());
+});
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
@@ -92,7 +67,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -110,10 +85,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -421,9 +394,9 @@ font-style:normal;
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 
@@ -433,7 +406,7 @@ font-style:normal;
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');">Run &raquo;</button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
   <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -487,29 +460,6 @@ sys.stdout.flush()
 </div>
       </div>
     </div>
-  </div>
-</div>
-<div id="err_form" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-display-container">
-      <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
-      <div class="w3-container w3-green">
-        <h2>Report a Problem:</h2>
-      </div>
-<form class="w3-container"> 
-<p><label for="err_email">Your E-mail:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
-</p>
-<p>
-<label for="err_email">Page address:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
-</p>
-<p>
-<label for="err_email">Description:</label>
-<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
-</p>
-<button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
-</form>
-
   </div>
 </div>
 <script>
@@ -761,37 +711,6 @@ function w3_getStyleValue(elmnt,style) {
     }
 }
 
-
-var addr = document.location.href;
-function displayError() {
-  document.getElementById("err_url").value = addr;
-  document.getElementById("err_form").style.display = "block";
-  document.getElementById("err_email").focus();
-  hideSent();
-}
-function hideError() {
-  document.getElementById("err_form").style.display = "none";
-}
-function hideSent() {
-  document.getElementById("err_sent").style.display = "none";
-}
-function sendErr() {
-  var xmlhttp;
-  var err_url = document.getElementById("err_url").value;
-  var err_email = document.getElementById("err_email").value;
-  var err_desc = document.getElementById("err_desc").value;
-  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {// code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.open("POST.html", "../err_sup.html", true);
-  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
-  document.getElementById("err_desc").value = "";
-  hideError();
-  document.getElementById("err_sent").style.display = "block";
-}
 function openMenu() {
     var x = document.getElementById("navbarDropMenu");
     var y = document.getElementById("menuOverlay");
@@ -829,5 +748,5 @@ window.onclick = function(event) {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_matplotlib_line_short by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:33:36 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_matplotlib_line_short by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:32:47 GMT -->
 </html>

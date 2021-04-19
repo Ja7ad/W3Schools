@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:04:15 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:51:37 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -420,7 +420,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
         <p>If you have a Google account, you can save this code to your Google Drive.</p>
         <p>Google will ask you to confirm Google Drive access.</p>
         <p><label class="w3-text-black"><b>Save file as:</b></label>
-        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryhow_css_menu_hor_scroll">
+        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryhow_js_progressbar_label_js">
         <button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white w3-margin-top"  title="Save file to Google Drive" onclick="handleAuthClick(event,'save')"><img style="margin-right:5px" alt="Save file to Google Drive" title="Save file to Google Drive" src="../images/driveicon.png">Save file</button>
       </div>
       <div class="w3-panel w3-large loader" id="driveSavedPanel" style="display:none">
@@ -481,54 +481,57 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
       <div id="textareawrapper">
         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-div.scrollmenu {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
 }
 
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
   text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-div.scrollmenu a:hover {
-  background-color: #777;
+  line-height: 30px;
+  color: white;
 }
 </style>
-</head>
 <body>
 
-<div class="scrollmenu">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#support">Support</a>
-  <a href="#blog">Blog</a>
-  <a href="#tools">Tools</a>  
-  <a href="#base">Base</a>
-  <a href="#custom">Custom</a>
-  <a href="#more">More</a>
-  <a href="#logo">Logo</a>
-  <a href="#friends">Friends</a>
-  <a href="#partners">Partners</a>
-  <a href="#people">People</a>
-  <a href="#work">Work</a>
+<h1>JavaScript Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar">10%</div>
 </div>
 
-<h2>Horizontal Scrollable Menu</h2>
-<p>Resize the browser window to see the effect.</p>
+<br>
+<button onclick="move()">Click Me</button> 
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+</script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:04:15 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:51:37 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -545,25 +548,14 @@ div.scrollmenu a:hover {
 </div>
 <div id="err_form" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-display-container">
-      <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
-      <div class="w3-container w3-green">
-        <h2>Report a Problem:</h2>
-      </div>
-<form class="w3-container"> 
-<p><label for="err_email">Your E-mail:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
-</p>
-<p>
-<label for="err_email">Page address:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
-</p>
-<p>
-<label for="err_email">Description:</label>
-<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
-</p>
-<button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
-</form>
-
+    <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
+    <div class="w3-container w3-green">
+      <h2>Report a Problem:</h2>
+    </div>
+    <div class="w3-container"> 
+      <p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+      <p>help@w3schools.com</p>
+    </div>
   </div>
 </div>
 <style>
@@ -1010,11 +1002,8 @@ function hideAndResetModal() {
     document.getElementById('saveLoader').style.display = "block";
 }
 
-var addr = document.location.href;
 function displayError() {
-  document.getElementById("err_url").value = addr;
   document.getElementById("err_form").style.display = "block";
-  document.getElementById("err_email").focus();
   hideSent();
 }
 function hideError() {
@@ -1022,23 +1011,6 @@ function hideError() {
 }
 function hideSent() {
   document.getElementById("err_sent").style.display = "none";
-}
-function sendErr() {
-  var xmlhttp;
-  var err_url = document.getElementById("err_url").value;
-  var err_email = document.getElementById("err_email").value;
-  var err_desc = document.getElementById("err_desc").value;
-  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {// code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.open("POST.html", "../err_sup.html", true);
-  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
-  document.getElementById("err_desc").value = "";
-  hideError();
-  document.getElementById("err_sent").style.display = "block";
 }
 function openMenu() {
     var x = document.getElementById("navbarDropMenu");

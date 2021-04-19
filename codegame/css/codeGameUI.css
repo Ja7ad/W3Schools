@@ -1,0 +1,1720 @@
+﻿:root {
+
+/* Colors: */
+--maincolour: #141428;
+--shadowcolour: rgba(20,20,40,0.2);
+--hovercolour: rgba(20,20,40,0.1);
+--white: #FFFFFF;
+--successcolour: #DBCB48;
+--backgroundcolour: #C8E6F0;
+/*--backgroundcolour: #FFFFFF;*/
+--highlightcolour: #DBCB48;
+--invalidcolour: #C80A3C;
+--interactionbuttontake: #F07800;
+--interactionbuttonturnright: #009A68;
+--interactionbuttonturnleft: #E1460F;
+--interactionbuttonforward: #0B7EF2;
+--interactionbuttonloop: #E7E9EB;
+
+/* Font/text values */
+--codeGame-font-family-source-sans-pro: Source Sans Pro;
+--codeGame-font-family-freckle-face: Freckle Face;
+--codeGame-font-style-normal: normal;
+--codeGame-font-weight-600: 600px;
+--codeGame-font-weight-normal: normal;
+--codeGame-font-size-16: 16px;
+--codeGame-font-size-18: 18px;
+--codeGame-font-size-32: 32px;
+--codeGame-font-size-48: 48px;
+--codeGame-character-spacing-0: 0px;
+--codeGame-character-spacing-3-2: 3.2px;
+--codeGame-character-spacing-1-44: 1.44px;
+--codeGame-line-spacing-18: 18px;
+--codeGame-line-spacing-24: 24px;
+--codeGame-line-spacing-26: 26px;
+--codeGame-line-spacing-35: 35px;
+--codeGame-line-spacing-50: 50px;
+--codeGame-line-spacing-65: 65px;
+--codeGame-text-transform-uppercase: uppercase;
+
+/* Sizes */
+--button-size-56: 56px;
+--button-size-40: 40px;
+--button-size-30: 30px;
+--button-padding-8: 8px;
+}
+
+.mainTitle {
+    display:none;
+}
+@media(max-width:1024px)
+{
+/*GAMMELT:    
+    .codeGame-control {
+        display: none;
+    }
+   .codeGame-render::after {
+       content: "Resolution not supported. Width of 1024px or more is required.";
+   } 
+   .codeGame-render div {
+       display: none;
+   }
+   .codeGame-render canvas {
+       display: none;
+   }
+*/
+/*START NYTT:*/
+.codeGame-bar
+    {
+        display: none;
+    }
+.codeGame button
+    {
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        padding: 12px;
+        margin-right: 12px;
+        width: var(--button-size-40);
+        height: var(--button-size-40);
+        padding: 6px 12px;
+        margin-right: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--maincolour);
+        border-radius: 8px;
+        background-color: transparent;
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+    }
+    .codeGame div.button
+    {
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        padding: 6px 12px;
+        margin-right: 12px;
+        width: var(--button-size-40);
+        height: var(--button-size-40);
+        padding: 12px;
+        margin-right: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--maincolour);
+        border-radius: 8px;
+        background-color: transparent;
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+    }
+    .maintitle {
+        font-family: var(--codeGame-font-family-freckle-face);
+        font-style: var(--codeGame-font-style-normal);
+        font-weight: var(--codeGame-font-weight-normal);
+        font-size: var(--codeGame-font-size-48);
+        line-height: var(--codeGame-line-spacing-50);
+        letter-spacing: var(--codeGame-character-spacing-0);
+        color: var(--maincolour);
+        text-shadow: 1px 1px 0px var(--white);
+    }
+    .subtitle {
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-style: var(--codeGame-font-style-normal);
+        font-weight: var(--codeGame-font-weight-normal);
+        font-size: var(--codeGame-font-size-18);
+        line-height: var(--codeGame-line-spacing-26);
+        letter-spacing: var(--codeGame-character-spacing-0);
+        color: var(--codeGame-color-050a3c);
+    }
+    .codeGame-main {
+        display: block;
+        height: calc(100vh - 200px - 106px);
+        height: 250px;
+        /*grid-template-columns: 50% 50%;
+        max-height: 700px;
+        max-width: 1500px;
+        min-width: 1025px;
+        min-height: 500px;*/
+        margin-top: 50px;
+        background-color:var(--backgroundcolour);
+    }
+    /*.codeGame-bar {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }*/
+    .codeGame-render {
+        height:250px;
+        display:block;
+        margin: 0 5vw 0 5vw;
+    }
+    .codeGame-messagebox-container
+    {
+        display: flex;
+        flex-direction: column;;
+    }
+    .codeGame-messagebox {
+        flex: 1;
+        align-self: center;
+    }
+    .codeGame-messagebox-section
+    {
+        /*width: 400px;*/
+        margin:0 20px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--maincolour);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .codeGame-messagebox .success {
+        background-color: var(--successcolour);
+	}
+    .codeGame-messagebox .failed {
+        background-color: #c83737;
+    }
+    .codeGame-messagebox-header
+    {
+        position: relative;
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--maincolour);
+	}
+    .codeGame-messagebox-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font: normal normal normal 16px/24px Source Sans Pro;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+		text-transform: uppercase;
+		text-align: center;
+        color: var(--maincolour);
+    }
+    .codeGame-messagebox-header div.circle
+    {
+        background-image: url("../assets/circle-blue.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+	.codeGame-messagebox-cover
+	{
+		flex:1;
+	}
+	.codeGame-messagebox-cover img {
+		width: 75%;
+		padding: 10px 10px 0px 10px;
+	}
+    .codeGame-messagebox-content
+    {
+		flex:3;
+		/*margin-bottom: 50px;*/
+        min-height: fit-content;
+		text-align: center;
+	}
+	.codeGame-messagebox-content h1
+	{
+        padding: 0;
+        margin: 0;
+        letter-spacing: var(--codeGame-character-spacing-0);
+        letter-spacing: 0px;
+	}
+    .codeGame-messagebox-actions
+    {
+        flex:4;
+        display: flex;
+		flex-direction: column;
+        align-items: center;
+		min-height: fit-content;
+		padding-bottom: 20px;
+	}
+	.codeGame-messagebox-actions button.nextLevel {
+        margin: 0;
+        font: normal normal 600 18px/24px Source Sans Pro;
+        letter-spacing: 1.44px;
+        background: var(--white) 0% 0% no-repeat padding-box;
+		white-space: nowrap;
+        width: auto;
+		padding: 10px 30px 10px 30px;
+		border: 2px solid #050A3C;
+		border-radius: 4px;
+		height: 48px;
+        transition: 0.2s;
+	}
+	.codeGame-messagebox-actions button.nextLevel:hover {
+        transform: scale(1.142);
+    }
+	.codeGame-messagebox-actions button.retryLevel {
+        font: normal normal 600 18px/24px Source Sans Pro;
+    	background-color: transparent;
+		border: none;
+		max-width: 100px;
+		height: 48px;
+        width: 100%;
+        margin-top: 16px;
+		color: var(--maincolour);
+        text-align: left;
+	}
+	.codeGame-messagebox-actions button.retryLevel p
+	{
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	}
+	.codeGame-messagebox-actions button.retryLevel p>span{
+		margin-left: 10px;
+	}
+	.codeGame-messagebox-actions button.retryLevel p>img {
+        margin: 0;
+        transition: 0.2s;
+	}
+	.codeGame-messagebox-actions button.retryLevel:hover p>img {
+		transform: rotate(45deg);
+		transform-origin: 50% 50%;
+	}
+    .codeGame-levelselector
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: fit-content;
+    }
+    .codeGame-levelselector-section
+    {
+        flex: 1;
+        background-color: var(--maincolour);
+        margin-top: 20px;
+        width: fit-content;
+        width: -moz-fit-content;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        z-index: 9;
+    }
+    .codeGame-levelselector-scrollcontainer
+    {
+        flex:1;
+        min-height: 40vh;
+        max-height: 40vh;
+        width: 100%;
+        padding: 0 50px 50px 50px;
+        overflow-y: scroll;
+        overflow-x: hide;
+        /* scrollbar settings for firefox (non-webkit) */
+        scrollbar-width: auto;
+        scrollbar-color: var(--white) var(--maincolour);
+    }
+    ::-webkit-scrollbar {
+        display: inherit;
+        width: 10px;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar {
+      display: inherit;
+      width: 10px;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar-track {
+      background: var(--maincolour);
+      border-left: 1px solid white;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar-thumb {
+      background-color: white;
+    }
+    .codeGame-levelselector-scrollcontainer h3
+    {
+        margin-top: 0;
+        padding-top: 40px;
+        color: white;
+        font: normal normal normal 18px/26px Source Sans Pro;
+    }
+    .codeGame-levelselector-header
+    {
+        position: relative;
+        width: 100%;
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--white);
+    }
+    .codeGame-levelselector-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-size: 10pt;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+		text-transform: uppercase;
+		text-align: center;
+        color: var(--white);
+    }
+    .codeGame-levelselector-header div.circle
+    {
+        background-image: url("../assets/circle.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+    .codeGame-levelselector-content
+    {
+        display: grid;
+        position: relative;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap :16px;
+        width: fit-content;
+        width: -moz-fit-content;
+        font: normal normal 600 32px/24px Source Sans Pro;
+    }
+    .codegame-levelselector-content div {
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        border-radius: 8px;
+        text-align: center;
+    }
+    .codegame-levelselector-content div:hover {
+        background-color: var(--backgroundcolour);
+        }
+    .codegame-levelselector-content div>span {
+        pointer-events: none;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: var(--button-size-56);
+    }
+    .codegame-levelselector-content div.current {
+        background-color: var(--successcolour);
+    }
+    .codegame-levelselector-content div>img {
+        display: none;
+    }
+    .codegame-levelselector-content div>img.completed {
+        pointer-events: none;
+        display: inline;
+        position: absolute;
+        background-color: var(--successcolour);
+        border: 2px solid var(--maincolour);
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 15px;
+        margin-top: -5px;
+    }
+    .codeGame-levelselector-footer
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid var(--white);
+    }
+    .codeGame-control {
+        display:block;
+        height:500px;
+        width:100%;
+        text-align: center;
+        /*display:flex;
+        flex-direction: column;*/
+        align-items: center;
+    }
+    .codeGame-control-sidebar
+    {
+        /*max-width: 80%;*/
+    }
+    .codeGame-control-container {
+        flex: 1;
+    }
+    .codeGame-control-upper {
+        align-items: center;
+    }
+    #codeGame-levelTitle {
+        position:absolute;
+        top:60px;
+        width:100%;
+    }
+    .mainheader {display:none;}
+    #codeGame-mainTitle {
+        display:block;
+        position:absolute;
+        top:0;
+        width:100%;
+        font-size: 24px;
+        line-height: 25px;
+    }
+    #codeGame-subTitle {
+        position:absolute;
+        top:80px;
+        width:100%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .bottomtext {
+        position:absolute;
+        top: 500px;
+    }
+    .codeGame-control-upper h1.maintitle
+    {
+        padding: 0;
+        text-align: center;
+    }
+    .codeGame-control-upper h4.level
+    {
+        padding: 0;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+        color: var(--maincolour);
+        text-align: center;
+        font: normal normal 600 16px/26px Source Sans Pro;
+        letter-spacing: 3.2px;
+        color: #141428;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    .codeGame-control-upper h3.subtitle
+    {
+        padding: 14px 0;
+        text-align: center;
+    }
+    .codeGame-control-lower {
+        margin-top: 8px;
+        flex: 1;
+        display:flex;
+        flex-direction: column;
+        /*min-width: calc(( 56 + 12 ) * 7px + (20 * 2px ) + 2px );*/
+    }
+    .codeGame-control-code-container
+    {
+        display: flex;
+        flex-direction: column;
+        background: var(--maincolour) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .codeGame-control-code-header
+    {
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--white);
+    }
+    .codeGame-control-code-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-size: 10pt;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+    }
+    .codeGame-control-code-header div.circle
+    {
+        background-image: url("../assets/circle.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+    .codeGame-control-code-header div.trashnote {
+        display: none;
+        background-color: white;
+        position: absolute;
+        right: -5px;
+        top: 30px;
+        padding: 0 10px 0 10px;
+        font: normal normal 600 14px/24px Source Sans Pro;
+        letter-spacing: 0px;
+    }
+    .codeGame-control-code-header div.trash
+    {
+        background-image: url("../assets/delete.svg");
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 3px;
+        right: 25px;
+        cursor: pointer;
+        transform: scale(0.9);
+    } 
+    .codeGame-control-code-header div.trash:hover
+    {
+        background-image: url("../assets/deleteHover.svg");
+    }
+    .codeGame-control-code-header div.trash:hover + div.trashnote
+    {
+        display: block;
+    }
+    .codeGame-control-code-sequence
+    {
+        flex:4;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        border-bottom: 1px solid white;
+        min-height: fit-content;
+    }
+    .codeGame-control-code-sequence div.button
+    {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .codeGame-control-code-sequence div.button.highlight {
+        border: 3px solid var(--highlightcolour);
+    }
+    .codeGame-control-code-actions
+    {
+        flex:4;
+        display: flex;
+        flex-direction: row;
+        min-height: fit-content;
+        background-color: transparent;
+    }
+    .codeGame-control-code-actions.drop{
+        background-color: var(--invalidcolour);
+    }
+    .codeGame-control-buttons
+    {
+        flex:1;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        margin: 20px;
+    }
+    .codeGame-control-execute
+    {
+        flex:3;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: flex-end;
+        margin: 24px 24px 24px 0;
+        margin: 20px 20px 20px 0;
+    }
+    .codeGame-control-levelselector {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .codeGame-loop {
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        background-color: white;
+        height: calc(var(--button-size-56)+var(--button-padding-8)*2);
+        min-width: 192px;
+        width: fit-content;
+        margin: 0 12px 0 0;
+        padding-left: 50px;
+        padding-right: 14px;
+        background-image: url("../assets/loop.svg") ;
+        background-position: left center;
+        background-position-x: 10px;
+        background-repeat: no-repeat;
+        background-size: 30px;
+    }
+    .codeGame-loop:hover {
+        transform: scaleX(1.02) scaleY(1.05);
+    }
+    .codeGame-loop.selected {
+        background-color: var(--backgroundcolour);
+    }
+    .codeGame-loopContent {
+        flex: 9;
+        display:flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: fit-content;
+    }
+    .codeGame-loopContent div.button {
+        padding: 0;
+        margin: 8px 12px 8px 0;
+    }
+    .codeGame-loopContent div.button:hover {
+        transform: none !important;
+    }
+    .codeGame-loopContent div.button.highlight {
+        border: 3px solid var(--highlightcolour);
+    }
+    .codeGame-loopContent div.button.placeholder {
+        border-color: black !important;
+        /*
+        background-image: url("../assets/arrow-placeholder-black.svg") !important;
+        background-position: center !important;
+        background-size: 50% !important;
+        */
+        pointer-events:none;
+    }
+    .codeGame-loopControl {
+        flex: 1;
+        margin-left: 12px;
+        padding-right: 6px;
+        padding-left: 6px;
+        display: flex;
+        flex-direction: row;
+    }
+    .codeGame-loopCounter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3px 0 3px 0;
+    }
+    .codeGame-loopCounter input {
+        border: none;
+        background-color: transparent;
+        width: 36px;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: center;
+        -moz-appearance: textfield;
+    }
+    .codeGame-loopCounter input::-webkit-outer-spin-button,
+    .codeGame-loopCounter input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .codeGame-loopCounter button {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 20px;
+        border-radius: 4px !important;
+    }
+    .codeGame-loopCounter button.up {
+        background-image: url("../assets/triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .codeGame-loopCounter button.down {
+        background-image: url("../assets/triangle-inverted.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+/*END NYTT*/
+}
+@media(min-width:1024px)
+{
+    .codeGame button
+    {
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        padding: 12px;
+        margin-right: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--maincolour);
+        border-radius: 8px;
+        background-color: transparent;
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+    }
+    .codeGame div.button
+    {
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        padding: 12px;
+        margin-right: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--maincolour);
+        border-radius: 8px;
+        background-color: transparent;
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+    }
+    .maintitle {
+        font-family: var(--codeGame-font-family-freckle-face);
+        font-style: var(--codeGame-font-style-normal);
+        font-weight: var(--codeGame-font-weight-normal);
+        font-size: var(--codeGame-font-size-48);
+        line-height: var(--codeGame-line-spacing-50);
+        letter-spacing: var(--codeGame-character-spacing-0);
+        color: var(--maincolour);
+        text-shadow: 1px 1px 0px var(--white);
+    }
+    .subtitle {
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-style: var(--codeGame-font-style-normal);
+        font-weight: var(--codeGame-font-weight-normal);
+        font-size: var(--codeGame-font-size-18);
+        line-height: var(--codeGame-line-spacing-26);
+        letter-spacing: var(--codeGame-character-spacing-0);
+        color: var(--codeGame-color-050a3c);
+    }
+    .codeGame-main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: calc(100vh - 200px - 106px);
+        max-height: 700px;
+        max-width: 1500px;
+        min-width: 1025px;
+        min-height: 500px;
+        margin:auto;
+        margin-top: 10px;
+        background-color:var(--backgroundcolour);
+    }
+    /*.codeGame-bar {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }*/
+    .codeGame-render {
+        margin: 0 5vw 0 5vw;
+    }
+    .codeGame-messagebox-container
+    {
+        display: flex;
+        flex-direction: column;;
+    }
+    .codeGame-messagebox {
+        flex: 1;
+        align-self: center;
+    }
+    .codeGame-messagebox-section
+    {
+        width: 400px;
+        margin-top:80px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--maincolour);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .codeGame-messagebox .success {
+        background-color: var(--successcolour);
+	}
+    .codeGame-messagebox .failed {
+        background-color: #c83737;
+    }
+    .codeGame-messagebox-header
+    {
+        position: relative;
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--maincolour);
+	}
+    .codeGame-messagebox-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font: normal normal normal 16px/24px Source Sans Pro;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+		text-transform: uppercase;
+		text-align: center;
+        color: var(--maincolour);
+    }
+    .codeGame-messagebox-header div.circle
+    {
+        background-image: url("../assets/circle-blue.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+	.codeGame-messagebox-cover
+	{
+		flex:1;
+	}
+	.codeGame-messagebox-cover img {
+		width: 100%;
+		padding: 10px 10px 0px 10px;
+	}
+    .codeGame-messagebox-content
+    {
+		flex:3;
+		margin-bottom: 50px;
+        min-height: fit-content;
+		text-align: center;
+	}
+	.codeGame-messagebox-content h1
+	{
+        padding: 0;
+        margin: 0;
+        letter-spacing: var(--codeGame-character-spacing-0);
+        letter-spacing: 0px;
+	}
+    .codeGame-messagebox-actions
+    {
+        flex:4;
+        display: flex;
+		flex-direction: column;
+        align-items: center;
+		min-height: fit-content;
+		padding-bottom: 50px;
+	}
+	.codeGame-messagebox-actions button.nextLevel {
+        margin: 0;
+        font: normal normal 600 18px/24px Source Sans Pro;
+        letter-spacing: 1.44px;
+        background: var(--white) 0% 0% no-repeat padding-box;
+		white-space: nowrap;
+        width: auto;
+		padding: 10px 30px 10px 30px;
+		border: 2px solid #050A3C;
+		border-radius: 4px;
+		height: 48px;
+        transition: 0.2s;
+	}
+	.codeGame-messagebox-actions button.nextLevel:hover {
+        transform: scale(1.142);
+    }
+	.codeGame-messagebox-actions button.retryLevel {
+        font: normal normal 600 18px/24px Source Sans Pro;
+    	background-color: transparent;
+		border: none;
+		max-width: 100px;
+		height: 48px;
+        width: 100%;
+        margin-top: 16px;
+		color: var(--maincolour);
+        text-align: left;
+	}
+	.codeGame-messagebox-actions button.retryLevel p
+	{
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	}
+	.codeGame-messagebox-actions button.retryLevel p>span{
+		margin-left: 10px;
+	}
+	.codeGame-messagebox-actions button.retryLevel p>img {
+        margin: 0;
+        transition: 0.2s;
+	}
+	.codeGame-messagebox-actions button.retryLevel:hover p>img {
+		transform: rotate(45deg);
+		transform-origin: 50% 50%;
+	}
+    .codeGame-levelselector
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: fit-content;
+    }
+    .codeGame-levelselector-section
+    {
+        flex: 1;
+        background-color: var(--maincolour);
+        margin-top: 20px;
+        width: fit-content;
+        width: -moz-fit-content;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .codeGame-levelselector-scrollcontainer
+    {
+        flex:1;
+        min-height: 40vh;
+        max-height: 40vh;
+        width: 100%;
+        padding: 0 50px 50px 50px;
+        overflow-y: scroll;
+        overflow-x: hide;
+        /* scrollbar settings for firefox (non-webkit) */
+        scrollbar-width: auto;
+        scrollbar-color: var(--white) var(--maincolour);
+    }
+    ::-webkit-scrollbar {
+        display: inherit;
+        width: 10px;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar {
+      display: inherit;
+      width: 10px;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar-track {
+      background: var(--maincolour);
+      border-left: 1px solid white;
+    }
+    .codeGame-levelselector-scrollcontainer::-webkit-scrollbar-thumb {
+      background-color: white;
+    }
+    .codeGame-levelselector-scrollcontainer h3
+    {
+        margin-top: 0;
+        padding-top: 40px;
+        color: white;
+        font: normal normal normal 18px/26px Source Sans Pro;
+    }
+    .codeGame-levelselector-header
+    {
+        position: relative;
+        width: 100%;
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--white);
+    }
+    .codeGame-levelselector-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-size: 10pt;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+		text-transform: uppercase;
+		text-align: center;
+        color: var(--white);
+    }
+    .codeGame-levelselector-header div.circle
+    {
+        background-image: url("../assets/circle.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+    .codeGame-levelselector-content
+    {
+        display: grid;
+        position: relative;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap :16px;
+        width: fit-content;
+        width: -moz-fit-content;
+        font: normal normal 600 32px/24px Source Sans Pro;
+    }
+    .codegame-levelselector-content div {
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+        width: var(--button-size-56);
+        height: var(--button-size-56);
+        border-radius: 8px;
+        text-align: center;
+    }
+    .codegame-levelselector-content div:hover {
+        background-color: var(--backgroundcolour);
+        }
+    .codegame-levelselector-content div>span {
+        pointer-events: none;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: var(--button-size-56);
+    }
+    .codegame-levelselector-content div.current {
+        background-color: var(--successcolour);
+    }
+    .codegame-levelselector-content div>img {
+        display: none;
+    }
+    .codegame-levelselector-content div>img.completed {
+        pointer-events: none;
+        display: inline;
+        position: absolute;
+        background-color: var(--successcolour);
+        border: 2px solid var(--maincolour);
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 15px;
+        margin-top: -5px;
+    }
+    .codeGame-levelselector-footer
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid var(--white);
+    }
+    .codeGame-control {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .codeGame-control-sidebar
+    {
+        max-width: 80%;
+    }
+    .codeGame-control-container {
+        flex: 1;
+    }
+    .codeGame-control-upper {
+        align-items: center;
+    }
+    .codeGame-control-upper h1.maintitle
+    {
+        padding: 0;
+        text-align: center;
+    }
+    .codeGame-control-upper h4.level
+    {
+        padding: 0;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+        color: var(--maincolour);
+        text-align: center;
+        font: normal normal 600 16px/26px Source Sans Pro;
+        letter-spacing: 3.2px;
+        color: #141428;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    .codeGame-control-upper h3.subtitle
+    {
+        padding: 32px 0 0 0;
+        text-align: center;
+    }
+    .codeGame-control-lower {
+        margin-top: 48px;
+        flex: 1;
+        display:flex;
+        flex-direction: column;
+        min-width: calc(( 56 + 12 ) * 7px + (20 * 2px ) + 2px );
+    }
+    .codeGame-control-code-container
+    {
+        display: flex;
+        flex-direction: column;
+        background: var(--maincolour) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    .codeGame-control-code-header
+    {
+        flex: 1;
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--white);
+    }
+    .codeGame-control-code-header pre
+    {
+        margin: 0;
+        padding: 0;
+        font-family: var(--codeGame-font-family-source-sans-pro);
+        font-size: 10pt;
+        letter-spacing: var(--codeGame-character-spacing-3-2);
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+    }
+    .codeGame-control-code-header div.circle
+    {
+        background-image: url("../assets/circle.svg");
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 7px;
+        right: 8px;
+    }
+    .codeGame-control-code-header div.trashnote {
+        display: none;
+        background-color: white;
+        position: absolute;
+        right: -5px;
+        top: 30px;
+        padding: 0 10px 0 10px;
+        font: normal normal 600 14px/24px Source Sans Pro;
+        letter-spacing: 0px;
+    }
+    .codeGame-control-code-header div.trash
+    {
+        background-image: url("../assets/delete.svg");
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 3px;
+        right: 25px;
+        cursor: pointer;
+        transform: scale(0.9);
+    } 
+    .codeGame-control-code-header div.trash:hover
+    {
+        background-image: url("../assets/deleteHover.svg");
+    }
+    .codeGame-control-code-header div.trash:hover + div.trashnote
+    {
+        display: block;
+    }
+    .codeGame-control-code-sequence
+    {
+        flex:4;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        border-bottom: 1px solid white;
+        min-height: fit-content;
+    }
+    .codeGame-control-code-sequence div.button
+    {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .codeGame-control-code-sequence div.button.highlight {
+        border: 3px solid var(--highlightcolour);
+    }
+    .codeGame-control-code-actions
+    {
+        flex:4;
+        display: flex;
+        flex-direction: row;
+        min-height: fit-content;
+        background-color: transparent;
+    }
+    .codeGame-control-code-actions.drop{
+        background-color: var(--invalidcolour);
+    }
+    .codeGame-control-buttons
+    {
+        flex:1;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        margin: 20px;
+    }
+    .codeGame-control-execute
+    {
+        flex:3;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: flex-end;
+        margin: 24px 24px 24px 0;
+    }
+    .codeGame-control-levelselector {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .codeGame-loop {
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        background-color: white;
+        height: calc(var(--button-size-56)+var(--button-padding-8)*2);
+        min-width: 192px;
+        width: fit-content;
+        margin: 0 12px 0 0;
+        padding-left: 50px;
+        padding-right: 14px;
+        background-image: url("../assets/loop.svg") ;
+        background-position: left center;
+        background-position-x: 10px;
+        background-repeat: no-repeat;
+        background-size: 30px;
+    }
+    .codeGame-loop:hover {
+        transform: scaleX(1.02) scaleY(1.05);
+    }
+    .codeGame-loop.selected {
+        background-color: var(--backgroundcolour);
+    }
+    .codeGame-loopContent {
+        flex: 9;
+        display:flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: fit-content;
+    }
+    .codeGame-loopContent div.button {
+        padding: 0;
+        margin: 8px 12px 8px 0;
+    }
+    .codeGame-loopContent div.button:hover {
+        transform: none !important;
+    }
+    .codeGame-loopContent div.button.highlight {
+        border: 3px solid var(--highlightcolour);
+    }
+    .codeGame-loopContent div.button.placeholder {
+        border-color: black !important;
+        /*
+        background-image: url("../assets/arrow-placeholder-black.svg") !important;
+        background-position: center !important;
+        background-size: 50% !important;
+        */
+        pointer-events:none;
+    }
+    .codeGame-loopControl {
+        flex: 1;
+        margin-left: 12px;
+        padding-right: 6px;
+        padding-left: 6px;
+        display: flex;
+        flex-direction: row;
+    }
+    .codeGame-loopCounter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3px 0 3px 0;
+    }
+    .codeGame-loopCounter input {
+        border: none;
+        background-color: transparent;
+        width: 36px;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: center;
+        -moz-appearance: textfield;
+    }
+    .codeGame-loopCounter input::-webkit-outer-spin-button,
+    .codeGame-loopCounter input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .codeGame-loopCounter button {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 20px;
+        border-radius: 4px !important;
+    }
+    .codeGame-loopCounter button.up {
+        background-image: url("../assets/triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .codeGame-loopCounter button.down {
+        background-image: url("../assets/triangle-inverted.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+body {
+    background-color: var(--backgroundcolour);
+    touch-action: manipulation; /* disable double tap to zoom behavior */
+}
+
+.codeGame div.button.placeholder
+{
+    border: 1px dashed var(--backgroundcolour);
+    cursor: default;
+    /*
+    background-image: url("../assets/arrow-placeholder.svg") ;
+    */
+}
+.codeGame button.speaker
+{
+    background-image: url("../assets/speaker.svg");
+}
+.codeGame button.speaker:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.muted
+{
+    background-image: url("../assets/muted.svg");
+}
+.codeGame button.muted:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.minus
+{
+    background-image: url("../assets/minus.svg") ;
+}
+.codeGame button.minus:hover {
+    background-color: var(--hovercolour);
+}
+
+.codeGame button.restart
+{
+    background-image: url("../assets/restart.svg") ;
+}
+.codeGame button.restart:hover {
+    background-color: var(--hovercolour);
+}
+
+.codeGame button.plus
+{
+    background-image: url("../assets/plus.svg") ;
+}
+.codeGame button.plus:hover {
+    background-color: var(--hovercolour);
+}
+
+.codeGame button.next
+{
+    background-image: url("../assets/next.svg") ;
+}
+.codeGame button.next:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.center
+{
+    background-image: url("../assets/center.svg") ;
+}
+.codeGame button.center:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.vibrate
+{
+    background-image: url("../assets/vibrate.html") ;
+}
+.codeGame button.vibrate:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.previous
+{
+    background-image: url("../assets/previous.svg") ;
+}
+.codeGame button.previous:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame div.button.loop
+{
+    background-color: var(--interactionbuttonloop);
+    background-image: url("../assets/loop.svg") ;
+}
+.codeGame div.button.loop:hover { transform: scale(1.1); }
+.codeGame div.button.forward
+{
+    background-color: var(--interactionbuttonforward);
+    background-image: url("../assets/arrow-forward.svg") ;
+}
+.codeGame div.button.forward:hover { transform: scale(1.1); }
+.codeGame div.button.left
+{
+    background-color: var(--interactionbuttonturnleft);
+    background-image: url("../assets/arrow-turnleft.svg") ;
+}
+.codeGame div.button.left:hover { transform: scale(1.1); }
+.codeGame div.button.right
+{
+    background-color: var(--interactionbuttonturnright);
+    background-image: url("../assets/arrow-turnright.svg") ;
+
+}
+.codeGame div.button.right:hover { transform: scale(1.1); }
+.codeGame div.button.use
+{
+    background-color: var(--interactionbuttontake);
+    background-image: url("../assets/paw.svg") ;
+}
+.codeGame div.button.use:hover { transform: scale(1.1); }
+.codeGame button.levelselector
+{
+    background-color: transparent;
+    background-origin: initial;
+    background-position: left center;
+    background-repeat: no-repeat;
+    letter-spacing: var(--codeGame-character-spacing-1-44);
+    font: normal normal 600 18px/24px Source Sans Pro;
+}
+.codeGame button.levelselector:hover {
+    background-color: var(--hovercolour);
+}
+.codeGame button.levelselector.open
+{
+    align-self: center;
+    background-image: url("../assets/levelselect.svg") ; 
+    background-position-x: 32px;
+    border: none;
+    width: 192px;
+    color: var(--maincolour);
+    border-radius: 4px;
+    white-space: nowrap;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 56px;
+    padding-right: 32px;
+}
+.codeGame button.levelselector.close
+{
+    background-color: transparent;
+    background-image: url("../assets/close.svg") ; 
+    background-origin: initial;
+    background-position: left center;
+    background-position-x: 32px;
+    background-repeat: no-repeat;
+    width: 146px;
+    height: 48px;
+    color: var(--white);
+    border-radius: 4px;
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 48px 0 60px;
+}
+.codeGame button.levelselector.close:hover {
+    background-color: #FFFFFF26;
+}
+
+.codeGame button.execute
+{
+    background-color: transparent;
+    background-image: url("../assets/play.svg") ; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    font: normal normal 600 18px/24px Source Sans Pro;
+    letter-spacing: var(--codeGame-character-spacing-1-44);
+    border: 2px solid var(--white);
+    width: 100%;
+    color: var(--white);
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.codeGame button.execute:hover
+{
+    background-color: #FFFFFF26;
+}
+.codeGame button.execute:focus
+{
+    border: 4px solid var(--white);
+}
+.codeGame.invalid {
+    background-color: var(--invalidcolour);
+}
+@media(min-width:768px)
+{
+    .codeGame button.execute
+    {
+        background-position: center;
+    }
+}
+/* Ipad and Macbook Pro Mode */
+/*
+@media(max-width:1440px)
+{
+    .maintitle {
+        font-size: var(--codeGame-font-size-32);
+        line-height: var(--codeGame-line-spacing-35);
+    }
+    .subtitle {
+        font-size: var(--codeGame-font-size-16);
+        line-height: var(--codeGame-line-spacing-18);
+    }
+    .codeGame-main {
+        height: calc(100vh - 200px - 106px);
+        margin-top: 58px;
+        max-height: 700px;
+        max-width: 1500px;
+        min-width:1025px;
+        background-color:var(--backgroundcolour);
+    }
+    .codeGame-control-upper h3.subtitle
+    {
+        padding: 16px 0 0 0;
+    }
+    .codeGame-control-lower {
+        margin-top: 32px;
+        min-width: calc(( 40 + 8 ) * 7px + (10 * 2px ) + 2px );
+    }
+    .codeGame div.button
+    {
+        width: var(--button-size-40);
+        height: var(--button-size-40);
+        padding: 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+    }
+    .codeGame button
+    {
+        width: var(--button-size-40);
+        height: var(--button-size-40);
+        padding: 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+    }
+    .codeGame-loop {
+        border-radius: 8px;
+        height: calc( var(--button-size-40) + var(--button-padding-8) * 2 );
+        min-width: 130px;
+        width: fit-content;
+        margin: 0 8px 0 0;
+        padding-left: 40px;
+        padding-right: 8px;
+        background-position-x: 10px;
+        background-size: 24px;
+    }
+    .codeGame-loopCounter input {
+        width: 32px;
+        font-size: 8pt;
+    }
+    .codeGame-loopContent div.button {
+        margin: 8px 8px 8px 0;
+    }
+    .codeGame-loopCounter button {
+        margin: 0;
+        height: 5px;
+        border-radius: 4px !important;
+    }
+    .codeGame-loopControl {
+        padding: 0px;
+        margin-left: 8px;
+    }
+    .codeGame-loopContent div.button.placeholder {
+        background-size: 100% !important;
+    }
+    .codeGame-loopCounter button {
+        padding: 0;
+        margin: 0;
+        width: 32px;
+        height: 20px;
+        border-radius: 4px !important;
+    }
+    .codeGame-loopCounter button.up {
+        background-origin: content-box;
+        background-image: url("../assets/triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .codeGame-loopCounter button.down {
+        background-origin: content-box;
+    }
+    .codeGame-control-execute
+    {
+        margin: 20px 12px 12px 0;
+    }
+    .codegame-levelselector-content div
+    {
+        width: var(--button-size-40);
+        height: var(--button-size-40);
+        border-radius: 8px;
+    }
+    .codegame-levelselector-content div>span {
+        line-height: var(--button-size-40);
+    }
+    .codegame-levelselector-content div>img.completed {
+        border: 2px solid var(--maincolour);
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 15px;
+        margin-top: -5px;
+    }
+    .codeGame-levelselector-scrollcontainer
+    {
+        max-height: 300px;
+    }
+}
+*/
+@media(max-width:600px)
+{
+    .codeGame button
+    {
+        width: var(--button-size-30);
+        height: var(--button-size-30);
+        padding: 0 12px;
+        margin-right: 8px;
+    }
+    .codeGame div.button
+    {
+        width: var(--button-size-30);
+        height: var(--button-size-30);
+        padding: 0 12px;
+        margin-right: 8px;
+    }
+    .codeGame-loopCounter .up,.codeGame-loopCounter .down
+    {
+        width: var(--button-size-30);
+        height: 1px;
+        padding: 7px;
+        margin-right: 8px;
+    }
+    .codeGame-loopCounter input {
+        position:absolute;
+        right: 0;
+        top: 12px;
+    }
+    .codeGame div.button.forward,
+    .codeGame div.button.left,
+    .codeGame div.button.right,
+    .codeGame div.button.use,
+    .codeGame div.button.loop
+     {
+        background-size: 18px;
+    }
+    .codeGame-loop {
+        position: relative;
+        height: calc(var(--button-size-30)+var(--button-padding-8)*2);
+        min-width: 192px;
+        width: fit-content;
+        margin: 0 12px 0 0;
+        padding-left: 50px;
+        padding-right: 14px;
+        background-size: 20px;
+    }
+    .codeGame-loopControl {
+        margin-left: 2px;
+    }
+}
+@media(min-width:700px)
+{
+    .codeGame button.execute
+    {
+        background-position: 0px 0px;
+        padding: 0;
+        margin: 0;
+        height: 48px;
+        max-width: 180px;
+        line-height: 48px;
+        vertical-align: center;
+        background-origin: initial;
+        background-position-x: 32px;
+        background-position-y: 14px;
+        padding-left: 32px;
+        visibility: visible;
+        letter-spacing: var(--codeGame-character-spacing-1-44);
+        font: normal normal 600 18px/24px Source Sans Pro;
+    }
+    .codeGame button.execute:focus{
+        background-position-x: 30px;
+        background-position-y: 12px;
+    }
+    .codeGame button.execute::before
+    {
+        content: "Play code";
+    }
+}
+@media(max-width:700px)
+{
+    
+    .codeGame button.execute::before
+    {
+        content: "Play";
+    }
+}
+
+@media(max-width:500px)
+{
+    .codeGame button.execute
+    {
+        background: none;
+    }
+}

@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_op_add by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:06 GMT -->
+<head>
+<title>MySQL Tryit Editor v1.0</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../w3css/3/w3.css">
+<link rel="stylesheet" href="../lib/codemirror.css">
+<script src="../lib/codemirror.js"></script>
+<script src="../lib/codemirror_sql.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder + "tryit";
+  })());
+});
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               autoStartAuction: false
+               };
+
+</script>
+<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script>
+  snhb.queue.push(function(){
+
+    snhb.startAuction(["try_it_leaderboard"]);
+
+   });
+</script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+         
+    }
+}
+</script>
+<style>
+#tryitLeaderboard {
+    margin-top:5px;
+    margin-bottom:5px;    
+    text-align:center;
+    height:90px;
+}
+
+#resultSQL {
+    font-size:14px;
+    font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;
+    background-color:#F1F1F1;
+    height:auto;
+    width:auto;
+}
+#iframeResultSQL {
+    display:none;
+    background-color: #ffffff;
+    height:95%;
+    min-height:400px;
+    top:25px;
+    width:100%;
+    border:1px solid #d3d3d3;
+    border:none;
+}
+#divResultSQL {
+    background-color: #ffffff;
+    border:1px solid #d3d3d3;
+    border:none;
+    overflow:auto;
+}
+#textareaCodeSQL {
+    font-size:15px;
+    font-family:Consolas,"courier new";
+    height:140px;
+    width:100%;
+    border:1px solid #d3d3d3;
+    resize: none;
+}
+.CodeMirror.cm-s-default {
+  height:140px;
+}
+#footerSQL {
+    height:20px;
+    font-family:verdana;
+}
+#dbInfo {
+    height:auto;
+    color:#222222;
+    font-family:verdana;
+    font-size:12px;
+    text-align:center;
+    max-width:300px;
+    margin:auto;
+}
+.chromesupport,.iesupport,.safarisupport,.firefoxsupport,.operasupport {
+	width:20px; height:20px; float:left; margin-left:15px;background-repeat:no-repeat;
+}
+.iesupport		{background-image:url('../images/incompatible_ie2020.gif');}
+.chromesupport	{background-image:url('../images/compatible_chrome2020.gif');}
+.firefoxsupport	{background-image:url('../images/incompatible_firefox2020.gif');}
+.safarisupport	{background-image:url('../images/compatible_safari2020.gif');}
+.operasupport	{background-image:url('../images/compatible_opera2020.gif');}
+</style>
+</head>
+<body>
+
+<div id='tryitLeaderboard' style="background-color:#ffffff">
+<!-- TryitLeaderboard -->
+
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+ 
+</div>
+
+<div class="w3-container">
+  <div class="w3-row">
+    <div class="w3-col l10">
+      <div style="padding:15px;padding-bottom:40px;margin-bottom:40px;background-color:#F1F1F1;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+      <form method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
+        <h3>SQL Statement:</h3>
+        <textarea id="textareaCodeSQL" wrap="logical">
+SELECT 30 + 20;
+
+        </textarea>
+        <p>Edit the SQL Statement, and click "Run SQL" to see the result.</p>
+        <input type="hidden" name="code" id="code" />
+        <input type="hidden" id="bt" name="bt" />
+      </form>
+      <button class="w3-green w3-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeMySQL', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run SQL &raquo;</button>
+      <h3>Result:</h3>
+      <div id="resultSQL">
+        <iframe id="iframeResultSQL" frameborder="0" name="view"></iframe>
+        <div id="divResultSQL">
+          <div style="margin:10px;margin-bottom:30px;">Click <b>"Run SQL"</b> to execute the SQL statement above.</div>
+        </div>
+      </div>	
+      </div>      
+        <h3 style="text-align:center;font-size:16px;">
+    The Try-MySQL Editor
+<!--
+    <span id="buttonshowdesc" class="w3-badge w3-black" style="cursor:pointer;" onclick="document.getElementById('descriptionDIV').style.display = 'block';document.getElementById('buttonhidedesc').style.display = '';this.style.display = 'none';">?</span>
+    <span id="buttonhidedesc" class="w3-badge w3-black" style="display:none;cursor:pointer;" onclick="document.getElementById('descriptionDIV').style.display = 'none';document.getElementById('buttonshowdesc').style.display = '';this.style.display = 'none';">&times;</span>    
+-->
+    <br>
+    at <a style="color:#555555;" href="../index.html">w3schools.com</a>
+  </h3>
+  <div id="descriptionDIV" style="text-align:center;display:none;">
+    <div id="nostatementsupport" style="display:none;">
+      <p>This SQL-Statement is not supported in the WebSQL Database.</p>
+      <p>The example still works, because it uses a modified version of SQL.</p>
+    </div>
+    <div id="nobrowsersupport" style="display:none;">
+      <p>Your browser does not support WebSQL.</p>
+      <p>Your are now using a light-version of the Try-SQL Editor, with a read-only Database.</p>
+      <p>If you switch to a browser with WebSQL support, you can try any SQL statement, and play with the Database as much as you like. The Database can also be restored at any time.</p>
+    </div>
+    <div id="yesbrowsersupport">
+      <p>Our Try-SQL Editor uses WebSQL to demonstrate SQL.</p>			
+      <p>A Database-object is created in your browser, for testing purposes.</p>
+      <p>You can try any SQL statement, and play with the Database as much as you like. The Database can be restored at any time, simply by clicking the "Restore Database" button.</p>
+    </div>
+    <div id="websqlexplain">
+      <h3 style="font-size:16px;">W3C WebSQL</h3>
+      <p>WebSQL stores a Database locally, on the user's computer. Each user gets their own Database object.</p>
+      <h3 style="font-size:16px;">WebSQL Browser Support</h3>
+      <div style="width:180px;margin:auto;margin-bottom:10px;">
+        <div class="chromesupport"> </div>
+        <div class="iesupport"> </div>
+        <div class="safarisupport"> </div>
+        <div class="firefoxsupport"> </div>
+        <div class="operasupport"> </div>
+        <div style="clear:both;"></div>
+      </div>
+      <p>WebSQL is supported in Chrome, Safari, and Opera.</p>
+      <div id="yesbrowsersupport2">			
+        <p>If you use another browser you will still be able to use our Try SQL Editor, but a different version, using a server-based ASP application, with a read-only Access Database, where users are not allowed to make any changes to the data.</p>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <div class="w3-col l2 w3-padding">
+
+      <div id="dbInfo">
+        <div style="font-size:16px;">MySQL Database:
+        </div>
+        <div>
+          <div id="yourDB" style="margin-top:10px;margin-bottom:20px;"></div>
+          <div id="yourRC" style="margin-top:10px;margin-bottom:20px;"></div>
+          <div id="yourIX" style="margin-top:10px;margin-bottom:20px;"></div>
+          <button title="Restore the database back to its original content" id="restoreDBBtn" class="w3-btn w3-dark-gray" type="button" onclick="w3schoolsWebSQL1.w3ClearDatabase()" style="display:none;">Restore Database</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<input type="hidden" id="sSupport" value="" />
+<script type="text/javascript">
+function colorcoding() {  
+  var ua = navigator.userAgent;
+  //Opera Mini refreshes the page when trying to edit the textarea.
+  if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCodeSQL"), {
+    mode: "text/x-mysql",
+    htmlMode: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
+  });
+//  window.editor.on("change", function () {window.editor.save();});
+}
+colorcoding();
+
+
+
+//var w3schoolsWebSQLOK = !!window.openDatabase;
+//var statementSupport = document.getElementById("sSupport").value;
+//if (w3schoolsWebSQLOK === true && statementSupport === "") {
+//	w3schoolsWebSQL1 = new w3WebSQLInit();
+//} else {
+	var ifr = document.getElementById("iframeResultSQL");
+	var idoc = (ifr.contentWindow || ifr.contentDocument);
+	if (idoc.document) idoc=idoc.document;
+	idoc.write("<div style='margin:10px;font-family:verdana;font-size:12px;'>Click <b>'Run SQL'</b> to execute the SQL statement above.</div>");
+//}
+
+function showDescription() {
+	document.getElementById("descriptionDIV").style.display = "block";
+}
+
+function hideDescription() {
+	document.getElementById("descriptionDIV").style.display = "none";
+}
+
+function w3schoolsSQLSubmit() {
+	var txt;
+  if (window.editor) {
+    window.editor.save();
+  }
+//	if (w3schoolsWebSQLOK === true && statementSupport === "") {
+//		w3schoolsWebSQL1.runSQL();
+//	} else {
+		var t=document.getElementById("textareaCodeSQL").value;
+		t=t.replace(/=/gi,"w3equalsign");
+		w3schoolsNoWebSQLSubmit();
+//	}
+}
+
+function w3schoolsWriteDBInfo() {
+	var txt;
+//	if (w3schoolsWebSQLOK === true && statementSupport === "") {
+//		document.getElementById("iframeResultSQL").style.display="none";
+//		document.getElementById("divResultSQL").style.display="block";
+//		document.getElementById("restoreDBBtn").style.display="inline";
+//		document.getElementById("nobrowsersupport").style.display="none";
+//		document.getElementById("nostatementsupport").style.display="none";		
+//		document.getElementById("yesbrowsersupport").style.display="block";
+//		w3schoolsWebSQL1.myDatabase();
+//	} else {
+//		if (w3schoolsWebSQLOK === true && statementSupport === "-1") {
+//			document.getElementById("nostatementsupport").style.display="block";
+//			document.getElementById("nobrowsersupport").style.display="none";
+//			document.getElementById("yesbrowsersupport").style.display="none";
+//			document.getElementById("yesbrowsersupport2").style.display="none";
+//			document.getElementById("websqlexplain").style.display="none";			
+//			document.getElementById("descriptionDIV").style.display = "block";
+//		} else {
+			document.getElementById("nobrowsersupport").style.display="block";
+			document.getElementById("nostatementsupport").style.display="none";
+			document.getElementById("yesbrowsersupport").style.display="none";
+			document.getElementById("yesbrowsersupport2").style.display="none";
+//		}
+		document.getElementById("divResultSQL").style.display="none";
+		document.getElementById("iframeResultSQL").style.display="inline";
+		txt = '';
+		txt = txt + '<table width="100%" class="notranslate">';
+		txt = txt + '<tr><th style="text-align:left;">Tablenames</th><th style="text-align:right;">Records</th></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Customers\')">Customers</td>';
+		txt = txt + '<td style="text-align:right;">91</td>';
+		txt = txt + '</tr><tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Categories\')">Categories</td>';
+		txt = txt + '<td style="text-align:right;">8</td>';
+		txt = txt + '</tr><tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Employees\')">Employees</td>';
+		txt = txt + '<td style="text-align:right;">9</td></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'OrderDetails\')">OrderDetails</td>';
+		txt = txt + '<td style="text-align:right;">2155</td></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Orders\')">Orders</td>';
+		txt = txt + '<td style="text-align:right;">830</td></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Products\')">Products</td>';
+		txt = txt + '<td style="text-align:right;">77</td></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Shippers\')">Shippers</td>';
+		txt = txt + '<td style="text-align:right;">3</td></tr>';
+		txt = txt + '<tr><td style="text-align:left;cursor:pointer;text-decoration:underline;" onclick="w3schoolsNoWebSQLSelectStar(\'Suppliers\')">Suppliers</td>';
+		txt = txt + '<td style="text-align:right;">29</td></tr>';
+		txt = txt + '</table>';
+		document.getElementById("yourDB").innerHTML = txt;
+//	}
+}
+
+function w3schoolsNoWebSQLSelectStar(x) {
+	var sql = "SELECT * FROM " + x + ";";
+	document.getElementById("textareaCodeSQL").value = sql;
+  window.editor.getDoc().setValue(sql);
+	w3schoolsNoWebSQLSubmit();
+}
+
+function w3schoolsNoWebSQLSubmit() {
+	var t = document.getElementById("textareaCodeSQL").value;
+	document.getElementById("code").value = t;
+		
+	document.getElementById("tryitform").action="https://tryit.w3schools.com/trymysql_view.php?x=" + Math.random();
+	validateForm();
+	document.getElementById("tryitform").submit();
+}
+
+function validateForm() {
+	var code=document.getElementById("code").value;
+	if (code.length>5000) {
+		document.getElementById("code").value="<h1>Error</h1>";
+	}
+}
+
+w3schoolsWriteDBInfo();
+
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_op_add by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:06 GMT -->
+</html>

@@ -15,7 +15,7 @@
 }
 </style>
 
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:04:48 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:52:20 GMT -->
 <body>
 
 <p>
@@ -27,10 +27,12 @@
 </div>
 
 <script>
+var id = null;
 function myMove() {
   var elem = document.getElementById("myAnimation");   
   var pos = 0;
-  var id = setInterval(frame, 10);
+  clearInterval(id);
+  id = setInterval(frame, 10);
   function frame() {
     if (pos == 350) {
       clearInterval(id);
@@ -45,5 +47,5 @@ function myMove() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:04:48 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_animate_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:52:20 GMT -->
 </html>

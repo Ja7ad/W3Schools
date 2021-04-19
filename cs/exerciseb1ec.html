@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '1';exheadings[0] = 'Syntax';exnames[1] = 'comments';excounts[1] = '1';exheadings[1] = 'Comments';exnames[2] = 'variables';excounts[2] = '5';exheadings[2] = 'Variables';exnames[3] = 'data_types';excounts[3] = '4';exheadings[3] = 'Data Types';exnames[4] = 'user_input';excounts[4] = '2';exheadings[4] = 'User Input';exnames[5] = 'operators';excounts[5] = '4';exheadings[5] = 'Operators';exnames[6] = 'math';excounts[6] = '3';exheadings[6] = 'Math';exnames[7] = 'strings';excounts[7] = '6';exheadings[7] = 'Strings';exActiveNo = 7;exnames[8] = 'booleans';excounts[8] = '2';exheadings[8] = 'Booleans';exnames[9] = 'conditions';excounts[9] = '5';exheadings[9] = 'If...Else';exnames[10] = 'switch';excounts[10] = '2';exheadings[10] = 'Switch';exnames[11] = 'while_loop';excounts[11] = '5';exheadings[11] = 'Loops';exnames[12] = 'arrays';excounts[12] = '5';exheadings[12] = 'Arrays';exnames[13] = 'methods';excounts[13] = '4';exheadings[13] = 'Methods';exnames[14] = 'classes';excounts[14] = '7';exheadings[14] = 'Classes/Objects';exnames[15] = 'exceptions';excounts[15] = '2';exheadings[15] = 'Exceptions';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_strings1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:36:40 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_strings1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:36:53 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -89,10 +89,14 @@ if (exsection == "JS") {
     storageBlip = "js_";
 } else if (exsection == "SQL") {
     storageBlip = "sql_";
+} else if (exsection == "MySQL") {
+    storageBlip = "mysql_";
 } else if (exsection == "PYTHON") {
     storageBlip = "python_";
 } else if (exsection == "PANDAS") {
     storageBlip = "pandas_";
+} else if (exsection == "NUMPY") {
+    storageBlip = "numpy_";
 } else if (exsection == "HTML_2") {
     storageBlip = "html_2_";
 } else if (exsection == "JSREF") {
@@ -107,12 +111,16 @@ if (exsection == "JS") {
     storageBlip = "cs_";
 } else if (exsection == "BS3") {
     storageBlip = "bs3_";
+} else if (exsection == "BS4") {
+    storageBlip = "bs4_";
 } else if (exsection == "JQ") {
     storageBlip = "jq_";
 } else if (exsection == "PHP") {
     storageBlip = "php_";
 } else if (exsection == "CSS") {
     storageBlip = "css_";
+} else if (exsection == "GIT") {
+    storageBlip = "git_";
 } else {
     storageBlip = "";
 }
@@ -1235,9 +1243,7 @@ var userLoggedOn = false;
 var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
-  //getFromLocalStorage();
-  //w3LoadExercise();
-  //return false;
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
@@ -1708,7 +1714,16 @@ function checkassignmentcode() {
         correct = correct.replace(/&lt;/g, "<");
         correct = correct.replace(/&gt;/g, ">");
       }
+      if (exsection == "BS4") {
+        correct = document.getElementById("correctcode" + cc).innerHTML;
+        correct = correct.replace(/&lt;/g, "<");
+        correct = correct.replace(/&gt;/g, ">");
+      }
       if (exsection == "SQL") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (exsection == "MySQL") {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
       }
@@ -1955,7 +1970,8 @@ function drawUserProgress() {
       txt += "}";
       txt += "</style>";
       txt += "</div>";
-    txt += '  <a href="../../mypage.w3schools.com/mypage/index.html">';
+    txt += "<a href='../../profile.w3schools.com/log-inca4e.html?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+//  txt += '  <a href="https://mypage.w3schools.com/mypage/default.php">';
     txt += '    <img src="/images/mypagelogo32x32.png" alt="MYPAGE" style="position:absolute;top:19px;left:114px">';
     txt += '    <svg style="position:absolute;top:0;left:104px;height:70px;width:70px">';
     txt += '      <path id="mypage_circle1" fill="none" stroke="rgba(153, 102, 255, 0.1)" stroke-width="4"></path>';
@@ -2144,5 +2160,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_strings1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:36:40 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_strings1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:36:53 GMT -->
 </html>

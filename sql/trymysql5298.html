@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:42 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:02 GMT -->
 <head>
 <title>MySQL Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -361,6 +361,8 @@ function w3schoolsNoWebSQLSelectStar(x) {
 function w3schoolsNoWebSQLSubmit() {
 	var t = document.getElementById("textareaCodeSQL").value;
 	document.getElementById("code").value = t;
+	
+	t=escape(t);document.getElementById("bt").value="1";
 		
 	document.getElementById("tryitform").action="https://tryit.w3schools.com/trymysql_view.php?x=" + Math.random();
 	validateForm();
@@ -379,5 +381,5 @@ w3schoolsWriteDBInfo();
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:42 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:02 GMT -->
 </html>

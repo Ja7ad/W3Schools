@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'bs3_tables';excounts[0] = '6';exheadings[0] = 'Tables';exnames[1] = 'bs3_images';excounts[1] = '4';exheadings[1] = 'Images';exnames[2] = 'bs3_alerts';excounts[2] = '3';exheadings[2] = 'Alerts';exnames[3] = 'bs3_buttons';excounts[3] = '8';exheadings[3] = 'Buttons';exnames[4] = 'bs3_glyphicons';excounts[4] = '2';exheadings[4] = 'Glyphicons';exnames[5] = 'bs3_badges';excounts[5] = '3';exheadings[5] = 'Badges';exnames[6] = 'bs3_progressbars';excounts[6] = '4';exheadings[6] = 'Progress Bar';exnames[7] = 'bs3_pagination';excounts[7] = '5';exheadings[7] = 'Pagination';exnames[8] = 'bs3_panels';excounts[8] = '4';exheadings[8] = 'Panels';exnames[9] = 'bs3_dropdowns';excounts[9] = '5';exheadings[9] = 'Dropdowns';exnames[10] = 'bs3_tabs';excounts[10] = '6';exheadings[10] = 'Tabs';exActiveNo = 10;exnames[11] = 'bs3_navbars';excounts[11] = '4';exheadings[11] = 'Navbars';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_tabs2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:53:17 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_tabs2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 20:05:57 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -89,10 +89,14 @@ if (exsection == "JS") {
     storageBlip = "js_";
 } else if (exsection == "SQL") {
     storageBlip = "sql_";
+} else if (exsection == "MySQL") {
+    storageBlip = "mysql_";
 } else if (exsection == "PYTHON") {
     storageBlip = "python_";
 } else if (exsection == "PANDAS") {
     storageBlip = "pandas_";
+} else if (exsection == "NUMPY") {
+    storageBlip = "numpy_";
 } else if (exsection == "HTML_2") {
     storageBlip = "html_2_";
 } else if (exsection == "JSREF") {
@@ -107,12 +111,16 @@ if (exsection == "JS") {
     storageBlip = "cs_";
 } else if (exsection == "BS3") {
     storageBlip = "bs3_";
+} else if (exsection == "BS4") {
+    storageBlip = "bs4_";
 } else if (exsection == "JQ") {
     storageBlip = "jq_";
 } else if (exsection == "PHP") {
     storageBlip = "php_";
 } else if (exsection == "CSS") {
     storageBlip = "css_";
+} else if (exsection == "GIT") {
+    storageBlip = "git_";
 } else {
     storageBlip = "";
 }
@@ -1235,9 +1243,7 @@ var userLoggedOn = false;
 var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
-  //getFromLocalStorage();
-  //w3LoadExercise();
-  //return false;
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
@@ -1745,7 +1751,16 @@ function checkassignmentcode() {
         correct = correct.replace(/&lt;/g, "<");
         correct = correct.replace(/&gt;/g, ">");
       }
+      if (exsection == "BS4") {
+        correct = document.getElementById("correctcode" + cc).innerHTML;
+        correct = correct.replace(/&lt;/g, "<");
+        correct = correct.replace(/&gt;/g, ">");
+      }
       if (exsection == "SQL") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (exsection == "MySQL") {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
       }
@@ -1992,7 +2007,8 @@ function drawUserProgress() {
       txt += "}";
       txt += "</style>";
       txt += "</div>";
-    txt += '  <a href="../../mypage.w3schools.com/mypage/index.html">';
+    txt += "<a href='../../profile.w3schools.com/log-inca4e.html?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+//  txt += '  <a href="https://mypage.w3schools.com/mypage/default.php">';
     txt += '    <img src="/images/mypagelogo32x32.png" alt="MYPAGE" style="position:absolute;top:19px;left:114px">';
     txt += '    <svg style="position:absolute;top:0;left:104px;height:70px;width:70px">';
     txt += '      <path id="mypage_circle1" fill="none" stroke="rgba(153, 102, 255, 0.1)" stroke-width="4"></path>';
@@ -2192,5 +2208,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_tabs2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:53:17 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/exercise_bs3.asp?filename=exercise_bs3_tabs2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 20:05:57 GMT -->
 </html>

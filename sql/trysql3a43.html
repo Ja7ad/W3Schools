@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_op_exists by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:43 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_op_exists by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:02 GMT -->
 <head>
 <title>SQL Tryit Editor v1.6</title>
 <meta name="viewport" content="width=device-width">
@@ -181,8 +181,9 @@ function browserResize() {
       <form method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
         <h3>SQL Statement:</h3>
         <textarea id="textareaCodeSQL" wrap="logical">
-SELECT * FROM Products
-WHERE EXISTS (SELECT Price FROM Products WHERE Price > 50);
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price < 20);
 
         </textarea>
         <p>Edit the SQL Statement, and click "Run SQL" to see the result.</p>
@@ -408,5 +409,5 @@ w3schoolsWriteDBInfo();
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_op_exists by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:19:43 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_op_exists by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:02 GMT -->
 </html>

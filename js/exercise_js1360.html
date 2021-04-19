@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'js_variables';excounts[0] = '5';exheadings[0] = 'Variables';exActiveNo = 0;exnames[1] = 'js_operators';excounts[1] = '5';exheadings[1] = 'Operators';exnames[2] = 'js_datatypes';excounts[2] = '1';exheadings[2] = 'Data Types';exnames[3] = 'js_functions';excounts[3] = '4';exheadings[3] = 'Functions';exnames[4] = 'js_objects';excounts[4] = '3';exheadings[4] = 'Objects';exnames[5] = 'js_events';excounts[5] = '3';exheadings[5] = 'Events';exnames[6] = 'js_strings';excounts[6] = '3';exheadings[6] = 'Strings';exnames[7] = 'js_string_methods';excounts[7] = '5';exheadings[7] = 'String Methods';exnames[8] = 'js_arrays';excounts[8] = '3';exheadings[8] = 'Arrays';exnames[9] = 'js_array_methods';excounts[9] = '3';exheadings[9] = 'Array Methods';exnames[10] = 'js_array_sort';excounts[10] = '1';exheadings[10] = 'Array Sort';exnames[11] = 'js_dates';excounts[11] = '4';exheadings[11] = 'Dates';exnames[12] = 'js_math';excounts[12] = '4';exheadings[12] = 'Math';exnames[13] = 'js_comparisons';excounts[13] = '4';exheadings[13] = 'Comparisons';exnames[14] = 'js_conditions';excounts[14] = '2';exheadings[14] = 'Conditions';exnames[15] = 'js_switch';excounts[15] = '2';exheadings[15] = 'Switch';exnames[16] = 'js_loops';excounts[16] = '2';exheadings[16] = 'For Loops';exnames[17] = 'js_loop_while';excounts[17] = '2';exheadings[17] = 'While Loops';exnames[18] = 'js_break';excounts[18] = '2';exheadings[18] = 'Break Loops';exnames[19] = 'js_dom_html';excounts[19] = '9';exheadings[19] = 'HTML DOM';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:07:49 GMT -->
+<!-- Mirrored from www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:56:41 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -89,10 +89,14 @@ if (exsection == "JS") {
     storageBlip = "js_";
 } else if (exsection == "SQL") {
     storageBlip = "sql_";
+} else if (exsection == "MySQL") {
+    storageBlip = "mysql_";
 } else if (exsection == "PYTHON") {
     storageBlip = "python_";
 } else if (exsection == "PANDAS") {
     storageBlip = "pandas_";
+} else if (exsection == "NUMPY") {
+    storageBlip = "numpy_";
 } else if (exsection == "HTML_2") {
     storageBlip = "html_2_";
 } else if (exsection == "JSREF") {
@@ -107,12 +111,16 @@ if (exsection == "JS") {
     storageBlip = "cs_";
 } else if (exsection == "BS3") {
     storageBlip = "bs3_";
+} else if (exsection == "BS4") {
+    storageBlip = "bs4_";
 } else if (exsection == "JQ") {
     storageBlip = "jq_";
 } else if (exsection == "PHP") {
     storageBlip = "php_";
 } else if (exsection == "CSS") {
     storageBlip = "css_";
+} else if (exsection == "GIT") {
+    storageBlip = "git_";
 } else {
     storageBlip = "";
 }
@@ -1235,9 +1243,7 @@ var userLoggedOn = false;
 var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
-  //getFromLocalStorage();
-  //w3LoadExercise();
-  //return false;
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
@@ -1713,7 +1719,16 @@ function checkassignmentcode() {
         correct = correct.replace(/&lt;/g, "<");
         correct = correct.replace(/&gt;/g, ">");
       }
+      if (exsection == "BS4") {
+        correct = document.getElementById("correctcode" + cc).innerHTML;
+        correct = correct.replace(/&lt;/g, "<");
+        correct = correct.replace(/&gt;/g, ">");
+      }
       if (exsection == "SQL") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (exsection == "MySQL") {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
       }
@@ -1960,7 +1975,8 @@ function drawUserProgress() {
       txt += "}";
       txt += "</style>";
       txt += "</div>";
-    txt += '  <a href="../../mypage.w3schools.com/mypage/index.html">';
+    txt += "<a href='../../profile.w3schools.com/log-inca4e.html?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+//  txt += '  <a href="https://mypage.w3schools.com/mypage/default.php">';
     txt += '    <img src="/images/mypagelogo32x32.png" alt="MYPAGE" style="position:absolute;top:19px;left:114px">';
     txt += '    <svg style="position:absolute;top:0;left:104px;height:70px;width:70px">';
     txt += '      <path id="mypage_circle1" fill="none" stroke="rgba(153, 102, 255, 0.1)" stroke-width="4"></path>';
@@ -2160,5 +2176,5 @@ function colorcoding() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 18:07:49 GMT -->
+<!-- Mirrored from www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:56:41 GMT -->
 </html>

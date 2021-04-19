@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_select_any&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 17:50:38 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_select_any&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:32:09 GMT -->
 <head>
 <title>SQL Tryit Editor v1.6</title>
 <meta name="viewport" content="width=device-width">
@@ -389,6 +389,8 @@ function w3schoolsNoWebSQLSubmit() {
 	var t = document.getElementById("textareaCodeSQL").value;
 	document.getElementById("code").value = t;
 	
+	t=escape(t);document.getElementById("bt").value="1";
+	
 	  document.getElementById("tryitform").action="https://tryit.w3schools.com/trysql_view.asp?x=" + Math.random();
   
 	validateForm();
@@ -407,5 +409,5 @@ w3schoolsWriteDBInfo();
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_select_any&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 17:50:38 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_select_any&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 18:32:09 GMT -->
 </html>

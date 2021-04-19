@@ -1,0 +1,174 @@
+<html lang="en-US" style="height: 100%;">
+<!-- Mirrored from www.w3schools.com/codegame/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:46:13 GMT -->
+<head>
+<title>W3Schools Code Game</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="CodeGame,Code Game,Code,Game,coding for kids,coding for beginners,learn to code,programming,development,training,learning">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<style>
+  html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+</style>  
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
+  ga('send', 'pageview');
+</script>
+<link rel="stylesheet" href="css/codeGameUI.css">
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- begin cmp -->
+<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "../about/about_privacy.html");
+</script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<!-- end cmp -->
+<body style="margin:0;">
+<div style="background-color:#fff;height:80px;">
+  <style>
+    .mainheader {
+    position:absolute;
+    width:100%;
+    text-align:center;
+    font-family: var(--codeGame-font-family-freckle-face);
+    font-style: var(--codeGame-font-style-normal);
+    font-weight: var(--codeGame-font-weight-normal);
+    font-size: var(--codeGame-font-size-32);
+    line-height: var(--codeGame-line-spacing-50);
+    letter-spacing: var(--codeGame-character-spacing-0);
+    color: var(--maincolour);
+    text-shadow: 1px 1px 0px var(--white);
+}
+  </style>
+  <h1 class="mainheader">Code Game: Help the Lynx collect pine cones!</h1>
+  <a href="../index.html" style="z-index:9;position:absolute;">
+    <img src="images/w3logo.png" style="width:50px;margin:16px;">
+  </a>
+
+</div>
+<!-- CODEGAME START -->
+<div class="codeGame-main" id="codeGame-main">
+  <div class="codeGame-render" id="codeGame-render">
+  </div>
+  <div class="codeGame-control">
+    <div id="codeGame-messagebox" class="codeGame-control-sidebar codeGame-messagebox-container" style="display: none;">
+      <div class="codeGame-messagebox">
+        <div id="codeGame-messagebox-section" class="codeGame-messagebox-section success">
+            <div class="codeGame-messagebox-header">
+                <pre id="codeGame-messagebox-title">Success</pre>
+                <div class="circle"></div>
+                <div style="right: 40px;" class="circle"></div>
+            </div>
+            <div class="codeGame-messagebox-cover">
+              <img src="assets/pinecones.svg"/>
+            </div>
+            <div class="codeGame-messagebox-content">
+              <h1 id="codeGame-messagebox-text" class="maintitle">Wooo!<br>Great job</h1>
+            </div>
+            <div class="codeGame codeGame-messagebox-actions">
+              <button id="codeGame-nextLevel" class="nextLevel">Play next level</button>
+              <button id="codeGame-retryLevel" class="retryLevel"><p><img src="assets/restart.svg"/><span>Retry</span></p></button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="codeGame-levelselector" class="codeGame-control-sidebar codeGame-levelselector" style="display: none;">
+        <div class="codeGame-levelselector-section">
+            <div class="codeGame-levelselector-header">
+                <pre id="codeGame-levelselector-title">Levels</pre>
+                <div class="circle"></div>
+                <div style="right: 28px;" class="circle"></div>
+            </div>
+            <div id="codeGame-levelselector-scrollcontainer" class="codeGame-levelselector-scrollcontainer">
+            </div>
+            <div class="codeGame-levelselector-footer">
+              <div class="codeGame">
+                <button id="codeGame-levelselector-close" class="levelselector close">Close</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="codeGame-gamebox" class="codeGame-control-sidebar codeGame-control-container" style="display: block;">
+      <div class="codeGame-control-upper">
+          <h4 id="codeGame-levelTitle" class="level">LEVEL 1</h4>
+          <h1 id="codeGame-mainTitle" class="maintitle">Help the Lynx collect<br>pine cones!</h1>
+          <h3 id="codeGame-subTitle" class="subtitle">Please wait...</h3>
+      </div>
+      <div id="codeGame-control-lower" class="codeGame-control-lower">
+        <div class="codeGame-control-code-container">
+          <div style="position: relative" class="codeGame-control-code-header">
+            <pre>Code Panel</pre>
+            <div id="codeGame-button-clear" class="trash"></div>
+            <div class="trashnote">Clear code</div>
+            <div class="circle"></div>
+          </div>
+          <div id="codeGame-control-code-sequence" class="codeGame codeGame-control-code-sequence">
+          </div>
+          <div id="codeGame-control-actions" class="codeGame-control-code-actions">
+            <div class="codeGame codeGame-control-buttons">
+              <div style="display: none;" id="codeGame-button-forward" class="button forward"></div>
+              <div style="display: none;" id="codeGame-button-left" class="button left"></div>
+              <div style="display: none;" id="codeGame-button-right" class="button right"></div>
+              <div style="display: none;" id="codeGame-button-use" class="button use"></div>
+              <div style="display: none;" id="codeGame-button-loop" class="button loop"></div>
+            </div>
+            <div class="codeGame codeGame-control-execute">
+              <button id="codeGame-button-runsequence" class="execute"></button>
+            </div>
+          </div>
+        </div>
+      <div class="codeGame codeGame-control-levelselector">
+        <button id="codeGame-levelselector-open" class="levelselector open">Select level</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="bundle.js"></script>
+<!-- CODEGAME END -->
+<style>
+.bottomtext {
+  text-align:center;
+  position:relative;
+  padding:0 20px;
+  font: normal normal normal 12px Source Sans Pro;
+  margin-top:240px;
+}
+.bottomtext a:link, .bottomtext a:visited {
+  color:#000!important;
+}
+</style>
+<p class="bottomtext">
+  W3Schools is optimized for learning, testing, and training.
+  Examples might be simplified to improve reading and basic understanding.
+  Tutorials, references, and examples are constantly reviewed to avoid errors,
+  but we cannot warrant full correctness of all content.
+  While using this site, you agree to have read and accepted our
+  <a href="../about/about_copyright.html">terms of use</a>,
+  <a href="../about/about_privacy.html">cookie and privacy policy</a>.<br>
+  <a href="../about/about_copyright.html">Copyright 1999-2021</a> by Refsnes Data.
+  All Rights Reserved.<br><br>
+</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/codegame/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:46:18 GMT -->
+</html>
