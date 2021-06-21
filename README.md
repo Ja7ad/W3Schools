@@ -11,8 +11,7 @@ W3schools tutorials are available at any time within your local computer.
 1. First pull image to your docker images : `docker pull ja7adr/w3schools`
 2. Create container from image : 
 
-- `docker run -d -p 80:80 --name w3schools w3schools:latest`
-or
+- `docker run -d -p 80:80 --name w3schools w3schools:latest
 - `docker run -d -p 127.0.0.1:80:80 --name w3schools w3schools:latest`
 
 3. Open Browser for access to w3schools from http://127.0.0.1 or http://localhost
