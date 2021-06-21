@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cpp/trycpp.asp?filename=demo_continue_while by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:36:52 GMT -->
+<!-- Mirrored from www.w3schools.com/cpp/trycpp.asp?filename=demo_continue_while by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:44:37 GMT -->
 <head>
 <title>C++ Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -11,14 +11,17 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<link rel="stylesheet" href="../w3css/4/w3.css"><link rel="stylesheet" href="../lib/codemirror.css">
-<script src="../lib/codemirror.js"></script>
+<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="../lib/w3schools27.css">
+<link rel="stylesheet" href="../lib/codemirror_multi.css">
+<script src="../lib/codemirror_multi.js"></script>
 <script src="../lib/codemirror_clike.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-3855518-1', 'auto');
   ga('require', 'displayfeatures');
   ga('require', 'GTM-WJ88MZ5');
@@ -29,15 +32,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder + "tryit";
-  })());
-});
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -45,29 +47,58 @@ snhb.options = {
                autoStartAuction: false
                };
 
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+googletag.pubads().disableInitialLoad();               
+googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+
 </script>
-<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<!-- begin cmp -->
+<script src="http://cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
-#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
-</style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #04AA6D!important;border-color: #04AA6D!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #04AA6D!important;color: #04AA6D!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #04AA6D!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#04AA6D!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-logo .sn-inner-logo img { max-height: 60px; margin: auto!important;}
+#snigel-cmp-framework h1 { margin: 10px 0!important;}
+#adconsent-usp-link {border: 1px solid #04AA6D!important;color: #04AA6D!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
-<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<!-- end cmp -->
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["try_it_leaderboard"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
    });
 </script>
@@ -85,8 +116,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+              
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -135,7 +168,10 @@ body {
   position:absolute;
   width:100%;
   top:99px;
-  background-color:#F1F1F1;
+  background-color:#E7E9EB;
+}
+.topnav-icons {
+  margin-right:8px;
 }
 .trytopnav a,.trytopnav button {
   color:#999999;
@@ -363,7 +399,7 @@ font-style:normal;
 #runloader{
   margin:auto;
   border: 10px solid #333;
-  border-top: 10px solid #4CAF50;
+  border-top: 10px solid #04AA6D;
   border-radius: 50%;
   max-width: 150px;
   max-height: 150px;
@@ -394,9 +430,9 @@ font-style:normal;
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="snhb-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
+  </div>
  
 </div>
 
@@ -406,7 +442,7 @@ font-style:normal;
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <button class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" style="font-size:28px;margin-top:-2px;width:58px;" title="Change Theme"></button>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCodeCpp', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <button style="font-size:16px" class="w3-button w3-bar-item ws-green w3-hover-white" onclick="submitTryit(1);ga('send', 'event', 'runCodeCpp', 'click');">Run &raquo;</button>
   <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -420,9 +456,9 @@ font-style:normal;
   <div class="w3-bar-block">
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
   </div>
-  <footer class="w3-container w3-small w3-light-gray">
-  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2021</a></p>
+  <footer class="w3-container w3-small ws-grey">
+  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
+  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2021</a></p>
   </footer>
 </div>
 <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
@@ -755,5 +791,5 @@ window.onclick = function(event) {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/cpp/trycpp.asp?filename=demo_continue_while by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:36:52 GMT -->
+<!-- Mirrored from www.w3schools.com/cpp/trycpp.asp?filename=demo_continue_while by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:44:37 GMT -->
 </html>

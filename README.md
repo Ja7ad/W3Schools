@@ -1,18 +1,19 @@
-# W3Schools Offline ⚡️  Update v2021.04.19
+# W3Schools Offline ⚡️  Update v2021.06.21
 
 ![Repo Size](https://img.shields.io/github/repo-size/ja7adr/W3Schools) ![Docker Image Size](https://img.shields.io/docker/image-size/ja7adr/w3schools?style=flat-square)
 
 ![W3schools](https://www.w3schools.com/images/w3schoolscom_gray.gif)
 
-If you like w3schools tutorials , you can access any time in your local to w3schools.
+W3schools tutorials are available at any time within your local computer.
 
 ## ⁉️ How to run docker image ?
 
 1. First pull image to your docker images : `docker pull ja7adr/w3schools`
 2. Create container from image : 
 
-- `docker run -d -p 80:80 --name w3schools w3schools:latest` ==> this run on ip 0.0.0.0
-- `docker run -d -p 127.0.0.1:80:80 --name w3schools w3schools:latest` ==> this run on ip 127.0.0.1
+- `docker run -d -p 80:80 --name w3schools w3schools:latest`
+or
+- `docker run -d -p 127.0.0.1:80:80 --name w3schools w3schools:latest`
 
 3. Open Browser for access to w3schools from http://127.0.0.1 or http://localhost
 

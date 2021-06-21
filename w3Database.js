@@ -71,7 +71,7 @@ function w3WebSQLInit() {
                         if (len > 0) {
                             txt = "";
                             txt = txt + "<div style='padding:10px;'><div style='margin-bottom:10px;'>Number of Records: " + len + "</div>";
-                            txt = txt + "<table class='w3-table-all notranslate'><tr>";
+                            txt = txt + "<table class='ws-table-all notranslate'><tr>";
                             for (m in results.rows.item(0)) {
                                 columns.push(m);
                             }
@@ -128,7 +128,7 @@ function w3WebSQLInit() {
                 document.getElementById("yourIX").innerHTML = "";                
                 function w3DBInfo() {
                     var txt = "", i;
-                    txt = txt + "<table width='100%' xclass='w3-table-all notranslate'><tr>";
+                    txt = txt + "<table width='100%' xclass='ws-table-all notranslate'><tr>";
                     txt = txt + "<th style='text-align:left;'>Tablename</th>";  
                     txt = txt + "<th style='text-align:right;'>Records</th>";                          
                     txt = txt + "</tr>";
@@ -143,7 +143,7 @@ function w3WebSQLInit() {
                 function w3DBViewInfo() {
                     var txt = "", i;
                     txt = txt + "<h4>Views:</h4>";
-                    txt = txt + "<table width='100%' xclass='w3-table-all notranslate'><tr>";
+                    txt = txt + "<table width='100%' xclass='ws-table-all notranslate'><tr>";
                     txt = txt + "<th style='text-align:left;'>Name of View</th>";  
                     txt = txt + "<th style='text-align:right;'>Records</th>";                          
                     txt = txt + "</tr>";
@@ -158,7 +158,7 @@ function w3WebSQLInit() {
                 function w3DBIndexInfo() {
                     var txt = "", i;
                     txt = txt + "<h4>Indexes:</h4>";
-                    txt = txt + "<table width='100%' xclass='w3-table-all notranslate'><tr>";
+                    txt = txt + "<table width='100%' xclass='ws-table-all notranslate'><tr>";
                     txt = txt + "<th style='text-align:left;'>Name of Index</th>";  
                     txt = txt + "</tr>";
                     for (i = 0; i < indexnames.length; i++) {

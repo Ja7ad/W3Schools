@@ -2,12 +2,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_func_mysql_position by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:03 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_func_mysql_position by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:44:45 GMT -->
 <head>
 <title>MySQL Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../w3css/3/w3.css">
+<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="../lib/w3schools27.css">
 <link rel="stylesheet" href="../lib/codemirror.css">
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_sql.js"></script>
@@ -15,7 +17,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-3855518-1', 'auto');
   ga('require', 'displayfeatures');
@@ -44,24 +46,27 @@ snhb.options = {
                };
 
 </script>
-<script src="../../cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<!-- begin cmp -->
+<script src="http://cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
 <style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
-#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}
-</style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #04AA6D!important;border-color: #04AA6D!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #04AA6D!important;color: #04AA6D!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #04AA6D!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#04AA6D!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #04AA6D!important; }
+#snigel-cmp-framework .sn-logo .sn-inner-logo img { max-height: 60px; margin: auto!important;}
+#snigel-cmp-framework h1 { margin: 10px 0!important;}
+#adconsent-usp-link {border: 1px solid #04AA6D!important;color: #04AA6D!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
-<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
+<!-- end cmp -->
 <script>
   snhb.queue.push(function(){
 
@@ -100,7 +105,7 @@ function browserResize() {
 #resultSQL {
     font-size:14px;
     font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;
-    background-color:#F1F1F1;
+    background-color:#E7E9EB;
     height:auto;
     width:auto;
 }
@@ -168,7 +173,7 @@ function browserResize() {
 <div class="w3-container">
   <div class="w3-row">
     <div class="w3-col l10">
-      <div style="padding:15px;padding-bottom:40px;margin-bottom:40px;background-color:#F1F1F1;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+      <div style="padding:15px;padding-bottom:40px;margin-bottom:40px;background-color:#E7E9EB;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
       <form method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
         <h3>SQL Statement:</h3>
         <textarea id="textareaCodeSQL" wrap="logical">
@@ -179,7 +184,7 @@ SELECT POSITION("3" IN "W3Schools.com") AS MatchPosition;
         <input type="hidden" name="code" id="code" />
         <input type="hidden" id="bt" name="bt" />
       </form>
-      <button class="w3-green w3-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeMySQL', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run SQL &raquo;</button>
+      <button class="ws-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeMySQL', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run SQL &raquo;</button>
       <h3>Result:</h3>
       <div id="resultSQL">
         <iframe id="iframeResultSQL" frameborder="0" name="view"></iframe>
@@ -361,6 +366,8 @@ function w3schoolsNoWebSQLSelectStar(x) {
 function w3schoolsNoWebSQLSubmit() {
 	var t = document.getElementById("textareaCodeSQL").value;
 	document.getElementById("code").value = t;
+	
+	t=escape(t);document.getElementById("bt").value="1";
 		
 	document.getElementById("tryitform").action="https://tryit.w3schools.com/trymysql_view.php?x=" + Math.random();
 	validateForm();
@@ -379,5 +386,5 @@ w3schoolsWriteDBInfo();
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_func_mysql_position by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 19:15:03 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trymysql.asp?filename=trysql_func_mysql_position by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:44:45 GMT -->
 </html>

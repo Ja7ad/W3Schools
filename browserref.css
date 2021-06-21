@@ -3,9 +3,9 @@
 border-collapse:collapse;width:100%;
 }
 
-table.browserref tr:nth-child(even)	{background-color:#F1F1F1;}
+table.browserref tr:nth-child(even)	{background-color:#E7E9EB;}
 table.browserref tr:nth-child(odd)  {background-color:#ffffff;}
-table.browserref tr.fixzebra        {background-color:#F1F1F1;}
+table.browserref tr.fixzebra        {background-color:#E7E9EB;}
 
 table.browserref th{
 height:44px;background-repeat:no-repeat;background-position:center center;border:1px solid #d4d4d4;background-color:#ffffff;font-weight:normal;color:#555555;padding:11px 5px 11px 5px;vertical-align:middle;

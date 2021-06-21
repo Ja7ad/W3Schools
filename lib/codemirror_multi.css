@@ -117,27 +117,64 @@
 .cm-link {text-decoration: underline;}
 .cm-strikethrough {text-decoration: line-through;}
 
-.cm-s-default .cm-keyword {color: #708;}
-.cm-s-default .cm-atom {color: #219;}
-.cm-s-default .cm-number {color: #164;}
-.cm-s-default .cm-def {color: #00f;}
-.cm-s-default .cm-variable,
-.cm-s-default .cm-punctuation,
-.cm-s-default .cm-property,
+.cm-s-default .cm-keyword {color: mediumblue/*#708*/;}
+.cm-s-default .cm-atom {color: mediumblue/*#219*/;}
+.cm-s-default .cm-number {color: mediumblue/*#164*/;}
+.cm-s-default .cm-def {color: black/*#00f*/;}
+.cm-s-default .cm-variable {color:black;}
+.cm-s-default .cm-punctuation {}
+.cm-s-default .cm-property {color:red;}
 .cm-s-default .cm-operator {}
-.cm-s-default .cm-variable-2 {color: #05a;}
-.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #085;}
-.cm-s-default .cm-comment {color: #a50;}
-.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-variable-2 {color:black/*#05a*/;}
+.cm-s-default .cm-variable-3 {color: #085;}
+.cm-s-default .cm-comment {color: green/*#a50*/;}
+.cm-s-default .cm-string {color: mediumblue/*#a11*/;}
 .cm-s-default .cm-string-2 {color: #f50;}
 .cm-s-default .cm-meta {color: #555;}
-.cm-s-default .cm-qualifier {color: #555;}
-.cm-s-default .cm-builtin {color: #30a;}
-.cm-s-default .cm-bracket {color: #997;}
-.cm-s-default .cm-tag {color: #170;}
-.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-qualifier {color: brown/*#555*/;}
+.cm-s-default .cm-builtin {color: brown/*#30a*/;}
+.cm-s-default .cm-tag {color: brown/*#170*/;}
+.cm-s-default .cm-bracket {color: mediumblue/*#997*/;}
+.cm-s-default .cm-attribute {color: red/*#00c*/;}
 .cm-s-default .cm-hr {color: #999;}
 .cm-s-default .cm-link {color: #00c;}
+
+/*DARK THEME*/
+body.darktheme .cm-s-default .cm-keyword {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-m-javascript.cm-keyword {color: #c5a5c5/*purple*/;}
+body.darktheme .cm-s-default .cm-atom {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-number {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-m-javascript.cm-number {color: #80b6ff/*blue*/;}
+body.darktheme .cm-s-default .cm-m-sql.cm-number {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-def {color: white;}
+body.darktheme .cm-s-default .cm-variable {color:#88c999/*green*/;}
+body.darktheme .cm-s-default .cm-m-javascript.cm-variable {color:white;}
+body.darktheme .cm-s-default .cm-m-python.cm-variable {color:white;}
+body.darktheme .cm-s-default .cm-m-css.cm-variable {color:#88c999/*green*/;}
+body.darktheme .cm-s-default .cm-punctuation {}
+body.darktheme .cm-s-default .cm-property {color:#c5a5c5/*purple*/;}
+body.darktheme .cm-s-default .cm-m-javascript.cm-property {color:white/*#80b6ff*//*blue*/;}
+body.darktheme .cm-s-default .cm-operator {}
+body.darktheme .cm-s-default .cm-variable-2 {color:white;}
+body.darktheme .cm-s-default .cm-variable-3 {color: #085;}/**/
+body.darktheme .cm-s-default .cm-comment {color: #999;}
+body.darktheme .cm-s-default .cm-string {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-m-javascript.cm-string {color: #88c999/*green*/;}
+body.darktheme .cm-s-default .cm-m-sql.cm-string {color: #ff9999/*red*/;}
+body.darktheme .cm-s-default .cm-string-2 {color: #f50;}
+body.darktheme .cm-s-default .cm-meta {color: #999;}
+body.darktheme .cm-s-default .cm-qualifier {color: #ff9999/*red*/;}
+body.darktheme .cm-s-default .cm-builtin {color: #ff9999/*red*/;}
+body.darktheme .cm-s-default .cm-tag {color: #ff9999/*red*/;}
+body.darktheme .cm-s-default .cm-bracket {color: #88ccbb/*green2*/;}
+body.darktheme .cm-s-default .cm-attribute {color: #c5a5c5/*purple*/;}
+body.darktheme .cm-s-default .cm-hr {color: #999;}
+body.darktheme .cm-s-default .cm-link {color: #00c;}
+body.darktheme .CodeMirror-cursor {
+  border-left: 1px solid white;
+}
+
+
 
 .cm-s-default .cm-error {color: #f00;}
 .cm-invalidchar {color: #f00;}
@@ -160,6 +197,11 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
   position: relative;
   overflow: hidden;
   background: white;
+}
+
+body.darktheme .CodeMirror {
+  background-color:rgb(40, 44, 52);
+  color:rgb(255, 255, 255);
 }
 
 .CodeMirror-scroll {

@@ -1,4 +1,4 @@
-* {
+﻿* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
     min-width:903px;
 }
 .container {
-    background-color:#F1F1F1;
+    background-color:#E7E9EB;
     width:100%;
     overflow:auto;
     position:absolute;

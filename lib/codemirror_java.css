@@ -182,7 +182,7 @@ body.darktheme .cm-s-default .cm-m-javascript.cm-property {color:white/*#80b6ff*
 body.darktheme .cm-s-default .cm-operator {}
 body.darktheme .cm-s-default .cm-variable-2 {color:white;}
 body.darktheme .cm-s-default .cm-variable-3 {color: #085;}/**/
-body.darktheme .cm-s-default .cm-comment {color: #999;}
+body.darktheme .cm-s-default .cm-comment {color: #88c999/*green*/;}
 body.darktheme .cm-s-default .cm-string {color: #88c999/*green*/;}
 body.darktheme .cm-s-default .cm-m-javascript.cm-string {color: #88c999/*green*/;}
 body.darktheme .cm-s-default .cm-m-sql.cm-string {color: #ff9999/*red*/;}
