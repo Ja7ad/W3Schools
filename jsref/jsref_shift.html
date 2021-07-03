@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_shift.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 22:23:32 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_shift.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:15:51 GMT -->
 <head>
-<title>JavaScript Array shift() Method</title>
+<title>Array shift() Method</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips">
@@ -267,6 +267,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/index.html">Learn C#</a>
    <a class="w3-bar-item w3-button" href="../r/default.html">Learn R</a>
    <a class="w3-bar-item w3-button" href="../kotlin/index.html">Learn Kotlin</a>
+   <a class="w3-bar-item w3-button" href="../go/index.html">Learn Go</a>
   </div> 
  <div class="w3-col l3 m6">
    <h3 class="w3-margin-top">Server Side</h3>
@@ -387,10 +388,10 @@ function w3_getStyleValue(elmnt,style) {
  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xxxlarge w3-display-topright w3-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
  <div class="w3-row-padding w3-bar-block">
  <div class="w3-container" style="padding-left:13px">
-   <h2 style="color:#FFF4A3;"><b>Exercises</b></h2>
+   <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Exercises</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
    <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
    <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
@@ -409,10 +410,11 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
    <a class="w3-bar-item w3-button" href="../r/r_exercises.html">R Exercises</a>
    <a class="w3-bar-item w3-button" href="../kotlin/kotlin_exercises.html">Kotlin Exercises</a>
+   <a class="w3-bar-item w3-button" href="../go/go_exercises.html">Go Exercises</a>
    <a class="w3-bar-item w3-button" href="../git/git_exercises.html">Git Exercises</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Quizzes</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="../quiztest/default.html">Quizzes</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_quiz.html" target="_top">HTML Quiz</a>
    <a class="w3-bar-item w3-button" href="../css/css_quiz.html" target="_top">CSS Quiz</a>
    <a class="w3-bar-item w3-button" href="../js/js_quiz.html" target="_top">JavaScript Quiz</a>
@@ -435,7 +437,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../accessibility/accessibility_quiz.html">Accessibility Quiz</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Courses</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="https://courses.w3schools.com/" target="_blank">Courses</a></h3>
 <!-- cert
    <a class="w3-bar-item w3-button" href="/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
    <a class="w3-bar-item w3-button" href="/cert/cert_css.asp" target="_top">CSS Certificate</a>
@@ -1618,7 +1620,7 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript Array <span class="color_h1">shift()</span> Method</h1>
+<h1>JavaScript Array.shift()</h1>
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_reverse.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" title="JavaScript Array Reference" href="jsref_obj_array.html"><span class="w3-hide-small">JavaScript Array </span>Reference</a>
@@ -1630,26 +1632,24 @@ function w3_getStyleValue(elmnt,style) {
 <h3>Example</h3>
 <p>Remove the first item of an array:</p>
 <div class="w3-code notranslate jsHigh">
-var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
 fruits.shift();</div>
-<!--<p>The result of <em>fruits</em> will be:</p>
-<div class="w3-code notranslate">
-Orange,Apple,Mango
-</div>-->
 <a target="_blank" href="tryit9391.html?filename=tryjsref_shift" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
+<p>There are more examples at the bottom of this tutorial.</p>
 <hr>
 
 <h2>Definition and Usage</h2>
-<p>The <code class="w3-codespan">shift()</code> method removes the first item of an array.</p>
-<p><b>Note:</b> This method changes the length of the array.</p>
-<p><b>Note:</b> The return value of the shift method is the removed item.</p>
-<p><b>Tip:</b> To remove the last item of an array, use the <a href="jsref_pop.html">pop()</a> method.</p>
-<p><strong>Note:</strong> this method will change the original array.</p>
+<p>The <code class="w3-codespan">Array.shift()</code> method removes the first item of an array.</p>
+<p><code class="w3-codespan">Array.shift()</code> returns the element it removes.</p>
+<div class="w3-note">
+<p><code class="w3-codespan">Array.shift()</code> changes the original array.</p>
+</div>
+<p><b>Tip:</b> To remove the last item of an array, use <a href="jsref_pop.html"><code class="w3-codespan">Array.pop()</code></a>.</p>
 <hr>
 
 <h2>Browser Support</h2>
-<p>The numbers in the table specify the first browser version that fully supports the method.</p>
+<p><code class="w3-codespan">Array.shift()</code> is supported in all browsers.</p>
 <table class="browserref notranslate">
   <tr>
     <th style="width:20%;font-size:16px;text-align:left;">Method</th>
@@ -1685,24 +1685,37 @@ Orange,Apple,Mango
 <table class="ws-table-all">
 <tr>
   <th style="width:23%">Return Value:</th>
-  <td>Any type*, representing the removed array item. *An array item can be a string, a number, an array, a boolean, or any other object types that are allowed in an array.</td>
-  <td><a target="_blank" href="tryit4242.html?filename=tryjsref_shift_return" class="w3-btn btnsmall">Try it &raquo;</a>
-</td>
+  <td>The removed array item. The item can be a string, a number, an array, an object, or any other type allowed in an array.</td>
 </tr>
 <tr>
  <th style="width:23%">JavaScript Version:</th>
  <td>ECMAScript 1</td>
- <td></td>
 </tr>
 </table>
-<hr>
 
+<hr>
+<h2>More Examples</h2>
+<div class="w3-example">
+<h3>Example</h3>
+<p><code class="w3-codespan">Array.shift()</code> returns the removed array element:</p>
+<div class="w3-code notranslate jsHigh">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+fruits.shift();&nbsp;&nbsp;&nbsp;// Returns "Banana"  
+</div>
+<a target="_blank" href="tryit4242.html?filename=tryjsref_shift_return" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<hr>
 <h2>Related Pages</h2>
-<p>JavaScript Tutorial: <a href="../js/js_arrays.html">JavaScript Arrays</a></p>
-<p>JavaScript Tutorial: <a href="../js/js_array_methods.html">JavaScript Array Methods</a></p>
-<p>JavaScript Reference: <a href="jsref_push.html">JavaScript push() Method</a></p>
-<p>JavaScript Reference: <a href="jsref_pop.html">JavaScript pop() Method</a></p>
-<p>JavaScript Reference: <a href="jsref_unshift.html">JavaScript unshift() Method</a></p>
+<p><a href="../js/js_arrays.html">Array Tutorial</a></p>
+<p><a href="../js/js_array_const.html">Array Const</a></p>
+<p><a href="../js/js_array_methods.html">Array Methods</a></p>
+<p><a href="../js/js_array_sort.html">Sorting Arrays</a></p>
+<p><a href="../js/js_array_iteration.html">Array Iterations</a></p>
+
+<p><a href="jsref_push.html">Array.push()</a></p>
+<p><a href="jsref_pop.html">Array.pop()</a></p>
+<p><a href="jsref_unshift.html">Array.unshift()</a></p>
 <hr>
 
 <div class="w3-clear w3-center nextprev">
@@ -1921,9 +1934,9 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 
 <hr>
-<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px;">Report Error</a>
 </div>
 <!--
 <div class="w3-col l3 m3 s12">
@@ -1931,13 +1944,13 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 -->
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Forum</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">About</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Shop</a>
 </div>
 
 </div>
@@ -2280,5 +2293,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_shift.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 22:23:34 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_shift.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:15:51 GMT -->
 </html>

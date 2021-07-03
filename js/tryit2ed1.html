@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:14:22 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:33:38 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -488,33 +488,34 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
       <div id="textareawrapper">
         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
 <html>
-<head>
+
+<body onload="startTime()">
+
+<h2>JavaScript Clock</h2>
+
+<div id="txt"></div>
+
 <script>
 function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 1000);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
 }
+
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
 </script>
-</head>
-
-<body onload="startTime()">
-
-<div id="txt"></div>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:14:22 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:33:38 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

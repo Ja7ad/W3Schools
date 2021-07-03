@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 17:02:15 GMT -->
+<!-- Mirrored from www.w3schools.com/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 17:04:38 GMT -->
 <head>
 <title>W3Schools Online Web Tutorials</title>
 <meta charset="utf-8">
@@ -223,11 +223,10 @@ h1 {
 }
 
 .exercise-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 17px;
-  font-size: 19px;
-  width: 100%;
+  padding: 70px 50px;
+  font-size: 35px;
+  width:87%;
+  opacity:0.97;
 }
 
 #w3loginbtn {
@@ -580,6 +579,7 @@ __cmp("setPrivacyPolicy", "about/about_privacy.html");
    <a class="w3-bar-item w3-button" href="cs/index.html">Learn C#</a>
    <a class="w3-bar-item w3-button" href="r/default.html">Learn R</a>
    <a class="w3-bar-item w3-button" href="kotlin/index.html">Learn Kotlin</a>
+   <a class="w3-bar-item w3-button" href="go/index.html">Learn Go</a>
   </div> 
  <div class="w3-col l3 m6">
    <h3 class="w3-margin-top">Server Side</h3>
@@ -700,10 +700,10 @@ __cmp("setPrivacyPolicy", "about/about_privacy.html");
  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xxxlarge w3-display-topright w3-hover-white" style="padding-right:30px;padding-left:30px;">&times;</span><br>
  <div class="w3-row-padding w3-bar-block">
  <div class="w3-container" style="padding-left:13px">
-   <h2 style="color:#FFF4A3;"><b>Exercises</b></h2>
+   <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Exercises</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:155px;font-size:21px" href="exercises/index.html">Exercises</a></h3>
    <a class="w3-bar-item w3-button" href="html/html_exercises.html">HTML Exercises</a>
    <a class="w3-bar-item w3-button" href="css/css_exercises.html">CSS Exercises</a>
    <a class="w3-bar-item w3-button" href="js/js_exercises.html">JavaScript Exercises</a>
@@ -722,10 +722,11 @@ __cmp("setPrivacyPolicy", "about/about_privacy.html");
    <a class="w3-bar-item w3-button" href="cs/cs_exercises.html">C# Exercises</a>
    <a class="w3-bar-item w3-button" href="r/r_exercises.html">R Exercises</a>
    <a class="w3-bar-item w3-button" href="kotlin/kotlin_exercises.html">Kotlin Exercises</a>
+   <a class="w3-bar-item w3-button" href="go/go_exercises.html">Go Exercises</a>
    <a class="w3-bar-item w3-button" href="git/git_exercises.html">Git Exercises</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Quizzes</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="quiztest/default.html">Quizzes</a></h3>
    <a class="w3-bar-item w3-button" href="html/html_quiz.html" target="_top">HTML Quiz</a>
    <a class="w3-bar-item w3-button" href="css/css_quiz.html" target="_top">CSS Quiz</a>
    <a class="w3-bar-item w3-button" href="js/js_quiz.html" target="_top">JavaScript Quiz</a>
@@ -748,7 +749,7 @@ __cmp("setPrivacyPolicy", "about/about_privacy.html");
    <a class="w3-bar-item w3-button" href="accessibility/accessibility_quiz.html">Accessibility Quiz</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Courses</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="https://courses.w3schools.com/" target="_blank">Courses</a></h3>
    <a class="w3-bar-item w3-button" href="https://courses.w3schools.com/courses/html" target="_blank">HTML Course</a>
    <a class="w3-bar-item w3-button" href="https://courses.w3schools.com/courses/css" target="_blank">CSS Course</a>
    <a class="w3-bar-item w3-button" href="https://courses.w3schools.com/courses/javascript" target="_blank">JavaScript Course</a>
@@ -1183,9 +1184,9 @@ function myFunction() {<br>
 
 
     <div class="w3-col l3 m6 s12 w3-center" style="padding:2% 3%;">
-      <a href="howto/default.html" title="How To Coding Snippets">
+      <a href="go/index.html" title="Go Tutorial">
         <div class="w3-card-2 w3-round ws-light-pink" style="padding:24px">
-          <h2 style="font-size:30px;font-weight:500">How To's</h2>
+          <h2 style="font-size:30px;font-weight:500">Go</h2>
         </div>
       </a>
     </div>
@@ -1245,67 +1246,27 @@ function myFunction() {<br>
  </div>
 </div>
 
-<div class="w3-center w3-padding-64 ws-black" style="padding-bottom:80px!important">
-  <h2 style="font-size:45px;font-weight:700">Exercises</h2>
-  <h4>Test yourself with exercises</h4>
-  <div class="w3-row-padding w3-content">
-    <div class="w3-third" >
-      <p><a class="w3-button exercise-button w3-round" href="html/html_exercises.html">HTML Exercises</a></p>
+<style>
+.hover-yellow:hover {
+  background-color:#fff080!important;
+  color:black!important;
+}
+#bgcodeimg {
+  background: #282A35 url("about/w3codes.png") no-repeat fixed center;
+}
+
+</style>
+
+<div id="bgcodeimg" class="w3-center w3-padding-64" style="padding-bottom:80px!important;background-color:#232434;color:white">
+  <h2 style="font-size:45px;font-weight:700">Exercises and Quizzes</h2>
+  <h4>Test your skills!</h4>
+  <br>
+  <div class="w3-row-padding w3-content" style="max-width:1352px">
+    <div class="w3-half" >
+      <p><a class="w3-button exercise-button w3-round ws-green" href="exercises/index.html">Exercises</a></p>
     </div>
-    <div class="w3-third">
-      <p><a class="w3-button exercise-button w3-round" href="css/css_exercises.html">CSS Exercises</a></p>
-    </div>
-    <div class="w3-third w3-hide-large w3-hide-small">
-      <p><a class="w3-button exercise-button w3-round" href="js/js_exercises.html">JS Exercises</a></p>
-    </div>
-    <div class="w3-third w3-hide-medium">
-      <p><a class="w3-button exercise-button w3-round"  href="js/js_exercises.html">JavaScript Exercises</a></p>
-    </div>
-    <div class="w3-third w3-hide-medium w3-hide-large">
-      <p><a class="w3-button exercise-button w3-round" href="sql/sql_exercises.html">SQL Exercises</a></p>
-    </div>
-    <div class="w3-third w3-hide-medium w3-hide-large">
-      <p><a class="w3-button exercise-button w3-round" href="python/python_exercises.html">Python Exercises</a></p>
-    </div>
-  </div>
-  <div class="w3-row-padding w3-content w3-hide-medium w3-hide-small">
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round" href="sql/sql_exercises.html">SQL</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round" href="python/python_exercises.html">Python</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round" href="php/php_exercises.html">PHP</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round" href="jquery/jquery_exercises.html">jQuery</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round"  href="java/java_exercises.html">Java</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round" href="cpp/cpp_exercises.html">C++</a></p>
-    </div>
-    <div class="w3-col" style="width:14.28%">
-      <p><a class="w3-button exercise-button w3-round"  href="cs/cs_exercises.html">C#</a></p>
-    </div>
-  </div>
-  <div class="w3-row-padding w3-content w3-hide-small w3-hide-large">
-    <div class="w3-col" style="width:20%">
-      <p><a class="w3-button exercise-button w3-round" href="sql/sql_exercises.html">SQL</a></p>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <p><a class="w3-button exercise-button w3-round" href="python/python_exercises.html">Python</a></p>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <p><a class="w3-button exercise-button w3-round" href="php/php_exercises.html">PHP</a></p>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <p><a class="w3-button exercise-button w3-round" href="jquery/jquery_exercises.html">jQuery</a></p>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <p><a class="w3-button exercise-button w3-round" href="java/java_exercises.html">Java</a></p>
+    <div class="w3-half">
+      <p><a class="w3-button exercise-button w3-round ws-yellow hover-yellow" href="quiztest/default.html">Quizzes</a></p>
     </div>
   </div>
 </div>
@@ -1353,10 +1314,10 @@ function myFunction() {<br>
  <div class="w3-container w3-padding-32">
    <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="https://courses.w3schools.com/" target="_blank" style="font-size:17px;margin-top:-9px">COURSES</a>
    <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="quiztest/default.html" style="font-size:17px;margin-top:-9px;margin-left:12px">QUIZZES</a>
-   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="html/html_exercises.html" style="font-size:17px;margin-top:-9px;margin-left:12px">EXERCISES</a>
+   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="exercises/index.html" style="font-size:17px;margin-top:-9px;margin-left:12px">EXERCISES</a>
    <a class="w3-button w3-white w3-hide-large w3-round" href="https://courses.w3schools.com/" target="_blank" style="font-size:16px;margin-bottom:16px">COURSES</a>
    <a class="w3-button w3-white w3-hide-large w3-round" href="quiztest/default.html" style="font-size:16px;margin-bottom:16px;">QUIZZES</a>
-   <a class="w3-button w3-white w3-hide-large w3-round" href="html/html_exercises.html" style="font-size:16px;margin-bottom:16px;">EXERCISES</a>
+   <a class="w3-button w3-white w3-hide-large w3-round" href="exercises/index.html" style="font-size:16px;margin-bottom:16px;">EXERCISES</a>
    <nav class="w3-right w3-hide-medium w3-hide-small w3-wide">
     <a href="http://w3schools.invisionzone.com/" target="_blank" class="w3-hover-text-green" style="text-decoration:none">FORUM</a> |
     <a href="about/default.html" target="_top" class="w3-hover-text-green" style="text-decoration:none">ABOUT</a>
@@ -1655,5 +1616,5 @@ function setThemeMode() {
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 17:02:15 GMT -->
+<!-- Mirrored from www.w3schools.com/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 17:04:41 GMT -->
 </html>

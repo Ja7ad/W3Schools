@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_every3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_every3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,39 +490,37 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
-<p>Click the button to check if all the answer values in the array is the same.</p>
+<h2>JavaScript Arrays</h2>
 
-<button onclick="myFunction()">Try it</button>
+<p>Check if all the answers in the array is the same.</p>
 
 <p id="demo"></p>
 
 <script>
-var survey = [
+const survey = [
   { name: "Steve",   answer: "Yes"},
   { name: "Jessica", answer: "Yes"},
   { name: "Peter",   answer: "Yes"},
   { name: "Elaine",  answer: "No"}
 ];
 
+document.getElementById("demo").innerHTML = survey.every(isSameAnswer);
+
 function isSameAnswer(el,index,arr) {
-  // Do not test the first array element, as you have nothing to compare to
+  // Return true for the first array element
   if (index === 0){
     return true;
   }
   else {
-  //do each array element value match the value of the previous array element
+  // For each array element match the value of the previous element
     return (el.answer === arr[index - 1].answer);
   }
-}
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = survey.every(isSameAnswer);
 }
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_every3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_every3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

@@ -18,7 +18,7 @@ border:1px solid #d4d4d4;text-align:center;padding:8px;vertical-align:top;
 table.browserref th:first-child,table.browserref td:first-child{padding-left:16px}
 
 table.browserref .bsIE       {background-image:url('images/compatible_ie.gif');}
-table.browserref .bsEdge     {background-image:url('images/compatible_edge.gif');}
+table.browserref .bsEdge     {background-image:url('images/compatible_edge.png');}
 table.browserref .bsFirefox  {background-image:url('images/compatible_firefox.png')}
 table.browserref .bsChrome   {background-image:url('images/compatible_chrome.gif');}
 table.browserref .bsSafari   {background-image:url('images/compatible_safari.gif');}

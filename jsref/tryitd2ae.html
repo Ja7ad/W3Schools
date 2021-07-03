@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_copywithin by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_copywithin by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,26 +490,22 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
-<p>Click the button to copy the first two array elements to the last two array elements.</p>
+<h2>JavaScript Arrays</h2>
 
-<button onclick="myFunction()">Try it</button>
+<p>The copyWithin() method copies array elements to another position in an array, overwriting existing values.</p>
 
 <p id="demo"></p>
 
-<p><strong>Note:</strong> The copyWithin() method is not supported in IE 11 (and earlier versions).</p>
-
 <script>
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits;
-
-function myFunction() {  
-  document.getElementById("demo").innerHTML = fruits.copyWithin(2,0);
-}
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.copyWithin(2,0);
 </script>
+
+<p>The copyWithin() method is not supported in Internet Explorer.</p>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_copywithin by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_copywithin by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

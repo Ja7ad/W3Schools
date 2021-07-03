@@ -3,7 +3,7 @@
 <html lang="en-US">
 
  
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=reverse by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:55:33 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=reverse by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:11 GMT -->
 <head>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,13 +40,23 @@
  function change_position(val)
  {
  
-   document.getElementById("myDIV").className = "my" + val;
    var x=document.getElementById("demoParent");
    var y=document.getElementById("demoDIV").cloneNode(true);
    var cc;
    x.removeChild(document.getElementById("demoDIV"));
    x.appendChild(y);
    
+  var s="demoDIV";
+  
+   s="myDIV ";
+   s=s.trim();
+  
+  document.getElementById(s).style.animationDirection=val;
+  
+   document.getElementById(s).style.WebkitAnimationDirection=val;
+  
+   document.getElementById(s).style.MozAnimationDirection=val;
+  
  var x="animation-direction:<span id='enlargecssprop'>" + val + "</span>";
  var y="#myDIV {<br>  ###CSSPROP###;<br>}<br>";
  var z=y.replace("###CSSPROP###",x);
@@ -341,5 +351,5 @@ function browserResize() {
  </body>
 
 
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=reverse by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:55:33 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=reverse by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:11 GMT -->
 </html>

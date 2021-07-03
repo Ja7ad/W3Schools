@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/func_string_strtoupper.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 20:40:54 GMT -->
+<!-- Mirrored from www.w3schools.com/php/func_string_strtoupper.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:42:53 GMT -->
 <head>
 <title>PHP strtoupper() Function</title>
 <meta charset="utf-8">
@@ -34,14 +34,15 @@ ga('send', 'pageview');
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -52,85 +53,6 @@ snhb.options = {
                allOutputEnabled: false,
                autoStartAuction: false,
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-  googletag.pubads().disableInitialLoad();               
-  googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Vertical Tablet ad
-    addSize([512, 0], [468, 60]). 
-    // Horizontal Tablet
-    addSize([812, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [468, 60]).
-    // Normal Desktop
-    addSize([1182, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1457, 0], [[728, 90], [970, 90]]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
-    defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  var skyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
-  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
-    defineSizeMapping(skyMapping).addService(googletag.pubads());
-  var stickyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], []). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
-  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
-    defineSizeMapping(stickyMapping).addService(googletag.pubads());
-  var mcontMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
-    // Vertical Tablet ad
-    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
-    // Horizontal Tablet
-    addSize([782, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
-    // Normal Desktop
-    addSize([1167, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
-  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
-    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var bmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], [[300, 250], [336, 280]]). 
-    // Large Desktop
-    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
-    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
-    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var rbmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], []). 
-    // Large Desktop
-    addSize([1007, 0], [[300, 250], [336, 280]]).build();
-  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
-    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <!-- begin cmp -->
@@ -157,7 +79,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
 
   });
 </script>
@@ -343,6 +265,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/index.html">Learn C#</a>
    <a class="w3-bar-item w3-button" href="../r/default.html">Learn R</a>
    <a class="w3-bar-item w3-button" href="../kotlin/index.html">Learn Kotlin</a>
+   <a class="w3-bar-item w3-button" href="../go/index.html">Learn Go</a>
   </div> 
  <div class="w3-col l3 m6">
    <h3 class="w3-margin-top">Server Side</h3>
@@ -463,10 +386,10 @@ function w3_getStyleValue(elmnt,style) {
  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xxxlarge w3-display-topright w3-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
  <div class="w3-row-padding w3-bar-block">
  <div class="w3-container" style="padding-left:13px">
-   <h2 style="color:#FFF4A3;"><b>Exercises</b></h2>
+   <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Exercises</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
    <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
    <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
@@ -485,10 +408,11 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
    <a class="w3-bar-item w3-button" href="../r/r_exercises.html">R Exercises</a>
    <a class="w3-bar-item w3-button" href="../kotlin/kotlin_exercises.html">Kotlin Exercises</a>
+   <a class="w3-bar-item w3-button" href="../go/go_exercises.html">Go Exercises</a>
    <a class="w3-bar-item w3-button" href="../git/git_exercises.html">Git Exercises</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Quizzes</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="../quiztest/default.html">Quizzes</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_quiz.html" target="_top">HTML Quiz</a>
    <a class="w3-bar-item w3-button" href="../css/css_quiz.html" target="_top">CSS Quiz</a>
    <a class="w3-bar-item w3-button" href="../js/js_quiz.html" target="_top">JavaScript Quiz</a>
@@ -511,7 +435,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../accessibility/accessibility_quiz.html">Accessibility Quiz</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Courses</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="https://courses.w3schools.com/" target="_blank">Courses</a></h3>
 <!-- cert
    <a class="w3-bar-item w3-button" href="/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
    <a class="w3-bar-item w3-button" href="/cert/cert_css.asp" target="_top">CSS Certificate</a>
@@ -1548,10 +1472,10 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-        
-        <div id='div-gpt-ad-1422003450156-2'>
-          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
-        </div>
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
        
       </div>
 
@@ -1618,13 +1542,9 @@ strtoupper(<em>string</em>)
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="div-gpt-ad-1422003450156-5">
-      <script>
-      googletag.cmd.push(function() {
-      googletag.display('div-gpt-ad-1422003450156-5');
-      });
-      </script> 
-    </div>
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
   
   </div>
 </div>
@@ -1777,13 +1697,24 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-        <script>
-        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-        document.write("<div id='div-gpt-ad-1472547360578-0'>");
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
-        document.write("</div>");
-        }
-        </script>
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
       
     </div>
   </div>
@@ -1801,24 +1732,21 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 <hr>
 
 <div style="overflow:auto">
-  <!-- BottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
-    </script>
-  </div>
-  <!-- RightBottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
-    </script>
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
 <hr>
-<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px;">Report Error</a>
 </div>
 <!--
 <div class="w3-col l3 m3 s12">
@@ -1826,13 +1754,13 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 -->
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Forum</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">About</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Shop</a>
 </div>
 
 </div>
@@ -2175,5 +2103,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/func_string_strtoupper.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 20:40:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/func_string_strtoupper.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:42:53 GMT -->
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_mistakes_loose_3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:33 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_mistakes_loose_3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:41:55 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,18 +490,23 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
+<h2>Common JavaScript Mistakes</h2>
+
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p>This will work:</p>
+
 <p id="demo"></p>
 
 <script>
-var x = 10;
+let x = 10;
 switch(x) {
-  case 10: alert("Hello");
+  case 10: document.getElementById("demo").innerHTML = "Hello";
 }
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_mistakes_loose_3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:33 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_mistakes_loose_3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:41:55 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

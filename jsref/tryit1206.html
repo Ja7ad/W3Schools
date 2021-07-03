@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,22 +490,27 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
-<p>List all array items, with keys and values:</p>
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.forEach() method calls a function for each element in an array.</p>
 
 <p id="demo"></p>
 
 <script>
-var fruits = ["apple", "orange", "cherry"];
+let text = "";
+const fruits = ["apple", "orange", "cherry"];
 fruits.forEach(myFunction);
 
+document.getElementById("demo").innerHTML = text;
+ 
 function myFunction(item, index) {
-  document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+  text += index + ":" + item + "<br>"; 
 }
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

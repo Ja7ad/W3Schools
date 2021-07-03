@@ -32,7 +32,7 @@ function updateParts(rContent, rTitle) {
   w3.displayObject("mainContent", remote[0]);
   if (rContent) {
     url=window.location.href.split('?')[0];
-    url=url.split("../index.html");
+    url=url.split("/");
     url=url[url.length - 1];
     
     if (url.includes("remote")) {

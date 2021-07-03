@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/tags/ref_pxtoemconversion.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 17:52:55 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/ref_pxtoemconversion.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 17:08:50 GMT -->
 <head>
 <title>PX to EM Conversion</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -154,7 +154,7 @@ color:white;
 
 .conv {
 border:1px solid #999999;
-border-radius:0;
+border-radius:5px;
 padding: 10px 16px;
 font-size: 18px;
 vertical-align: middle;
@@ -165,7 +165,6 @@ line-height: 1.33;
   border-color:black;
 }
 .conv2 {
-
 font-size: 25px;
 background-color:#E7E9EB;
 line-height: 1.33;
@@ -174,7 +173,7 @@ margin-left:15px;
 }
 
 .btn-lg {
-border-radius:0;
+border-radius:5px;
 margin-top:25px;
 display:block;
 padding: 11px 25px 11px 25px;
@@ -320,6 +319,7 @@ float:right;margin-top:25px;
    <a class="w3-bar-item w3-button" href="../cs/index.html">Learn C#</a>
    <a class="w3-bar-item w3-button" href="../r/default.html">Learn R</a>
    <a class="w3-bar-item w3-button" href="../kotlin/index.html">Learn Kotlin</a>
+   <a class="w3-bar-item w3-button" href="../go/index.html">Learn Go</a>
   </div> 
  <div class="w3-col l3 m6">
    <h3 class="w3-margin-top">Server Side</h3>
@@ -440,10 +440,10 @@ float:right;margin-top:25px;
  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xxxlarge w3-display-topright w3-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
  <div class="w3-row-padding w3-bar-block">
  <div class="w3-container" style="padding-left:13px">
-   <h2 style="color:#FFF4A3;"><b>Exercises</b></h2>
+   <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Exercises</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
    <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
    <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
@@ -462,10 +462,11 @@ float:right;margin-top:25px;
    <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
    <a class="w3-bar-item w3-button" href="../r/r_exercises.html">R Exercises</a>
    <a class="w3-bar-item w3-button" href="../kotlin/kotlin_exercises.html">Kotlin Exercises</a>
+   <a class="w3-bar-item w3-button" href="../go/go_exercises.html">Go Exercises</a>
    <a class="w3-bar-item w3-button" href="../git/git_exercises.html">Git Exercises</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Quizzes</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="../quiztest/default.html">Quizzes</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_quiz.html" target="_top">HTML Quiz</a>
    <a class="w3-bar-item w3-button" href="../css/css_quiz.html" target="_top">CSS Quiz</a>
    <a class="w3-bar-item w3-button" href="../js/js_quiz.html" target="_top">JavaScript Quiz</a>
@@ -488,7 +489,7 @@ float:right;margin-top:25px;
    <a class="w3-bar-item w3-button" href="../accessibility/accessibility_quiz.html">Accessibility Quiz</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Courses</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="https://courses.w3schools.com/" target="_blank">Courses</a></h3>
 <!-- cert
    <a class="w3-bar-item w3-button" href="/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
    <a class="w3-bar-item w3-button" href="/cert/cert_css.asp" target="_top">CSS Certificate</a>
@@ -732,7 +733,7 @@ float:right;margin-top:25px;
 <input onfocus="wrong2()" onblur="works2()" class="conv" type="text" size="8" id="myInput2" value=""> <span style="font-size:23px">em</span>
 </p>
 <p class="clearfix"></p>
- <button class="btn btn-lg ws-green w3-round" onclick="myFunction()"><span class="glyphicon glyphicon-transfer"> </span> Convert</button>
+ <button class="btn btn-lg ws-green w3-round ws-hover-green" onclick="myFunction()"><span class="glyphicon glyphicon-transfer"> </span> Convert</button>
 <hr>
 <p>Result: <span style="font-size:24px" id="result1"></span></p>
 <br>
@@ -1043,9 +1044,9 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 
 <hr>
-<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px;">Report Error</a>
 </div>
 <!--
 <div class="w3-col l3 m3 s12">
@@ -1053,13 +1054,13 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 -->
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Forum</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">About</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Shop</a>
 </div>
 
 </div>
@@ -1401,5 +1402,5 @@ function registerPoint(cc) {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]--></body>
 
-<!-- Mirrored from www.w3schools.com/tags/ref_pxtoemconversion.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 17:52:55 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/ref_pxtoemconversion.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 17:08:51 GMT -->
 </html>

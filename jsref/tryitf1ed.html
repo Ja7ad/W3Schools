@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,32 +490,29 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
-<p>Click the button to get a new array with the full name of each person in the array.</p>
-<button onclick="myFunction()">Try it</button>
+<h2>JavaScript Arrays</h2>
 
-<p>New array: <span id="demo"></span></p>
+<p>Compute a new array with the full name of each person in the old array:</p>
+
+<p id="demo"></p>
 
 <script>
-var persons = [
+const persons = [
   {firstname : "Malcom", lastname: "Reynolds"},
   {firstname : "Kaylee", lastname: "Frye"},
   {firstname : "Jayne", lastname: "Cobb"}
 ];
 
+document.getElementById("demo").innerHTML = persons.map(getFullName);
 
 function getFullName(item) {
-  var fullname = [item.firstname,item.lastname].join(" ");
-  return fullname;
-}
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = persons.map(getFullName);
+  return [item.firstname,item.lastname].join(" ");
 }
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

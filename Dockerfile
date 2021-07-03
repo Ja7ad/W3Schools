@@ -3,7 +3,7 @@ FROM nginx:alpine
 # Labels
 LABEL maintainer="Ja7adr <ja7adr@gmail.com>"
 LABEL description="W3schools full offline in docker"
-LABEL version="20210621"
+LABEL version="20210703"
 
 # Copy data to nginx www
 COPY . /usr/share/nginx/html

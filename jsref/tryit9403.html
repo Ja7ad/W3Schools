@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_keys by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_keys by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,29 +490,30 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
-<h1>Array keys()</h1>
+<h2>JavaScript Arrays</h2>
 
-<p>Create an Iteration Object from the fruit array.</p>
-
-<p>The Iteration object will contain the keys of the array:</p>
+<p>The Array.keys() method returns an Array Iterator object with the keys of an 
+array.</p>
 
 <p id="demo"></p>
 
-<p><strong>Note:</strong> The keys method is not supported in IE 11 (and earlier versions).</p>
-
 <script>
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var fk = fruits.keys();
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
 
-for (x of fk) {
-  document.getElementById("demo").innerHTML += x + "<br>";
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
 }
 
+document.getElementById("demo").innerHTML = text;
 </script>
+
+<p>Array.keys() is not supported in Internet Explorer.</p>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_keys by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_keys by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:50:54 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

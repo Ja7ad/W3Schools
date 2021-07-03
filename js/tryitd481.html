@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:34 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:42:00 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,6 +490,8 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
+<h2>JavaScript Validation</h2>
+
 <p>Enter a number and click OK:</p>
 
 <input id="id1" type="number" min="100" max="300" required>
@@ -501,7 +503,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 
 <script>
 function myFunction() {
-  var inpObj = document.getElementById("id1");
+  const inpObj = document.getElementById("id1");
   if (!inpObj.checkValidity()) {
     document.getElementById("demo").innerHTML = inpObj.validationMessage;
   } else {
@@ -512,7 +514,7 @@ function myFunction() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:34 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:42:00 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

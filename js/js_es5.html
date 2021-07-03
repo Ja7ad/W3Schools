@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/js_es5.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 19:28:23 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_es5.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:14:50 GMT -->
 <head>
 <title>JavaScript ES5</title>
 <meta charset="utf-8">
@@ -143,6 +143,12 @@ function w3_getStyleValue(elmnt,style) {
 }
 </script>
 <link rel="stylesheet" type="text/css" href="../browserref.css">
+<style>
+#main a[id] {
+  position: relative;
+  top: -50px;
+}
+</style>
 </head>
 <body>
 
@@ -267,6 +273,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/index.html">Learn C#</a>
    <a class="w3-bar-item w3-button" href="../r/default.html">Learn R</a>
    <a class="w3-bar-item w3-button" href="../kotlin/index.html">Learn Kotlin</a>
+   <a class="w3-bar-item w3-button" href="../go/index.html">Learn Go</a>
   </div> 
  <div class="w3-col l3 m6">
    <h3 class="w3-margin-top">Server Side</h3>
@@ -387,10 +394,10 @@ function w3_getStyleValue(elmnt,style) {
  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xxxlarge w3-display-topright w3-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
  <div class="w3-row-padding w3-bar-block">
  <div class="w3-container" style="padding-left:13px">
-   <h2 style="color:#FFF4A3;"><b>Exercises</b></h2>
+   <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Exercises</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
    <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
    <a class="w3-bar-item w3-button" href="js_exercises.html">JavaScript Exercises</a>
@@ -409,10 +416,11 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Exercises</a>
    <a class="w3-bar-item w3-button" href="../r/r_exercises.html">R Exercises</a>
    <a class="w3-bar-item w3-button" href="../kotlin/kotlin_exercises.html">Kotlin Exercises</a>
+   <a class="w3-bar-item w3-button" href="../go/go_exercises.html">Go Exercises</a>
    <a class="w3-bar-item w3-button" href="../git/git_exercises.html">Git Exercises</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Quizzes</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="../quiztest/default.html">Quizzes</a></h3>
    <a class="w3-bar-item w3-button" href="../html/html_quiz.html" target="_top">HTML Quiz</a>
    <a class="w3-bar-item w3-button" href="../css/css_quiz.html" target="_top">CSS Quiz</a>
    <a class="w3-bar-item w3-button" href="js_quiz.html" target="_top">JavaScript Quiz</a>
@@ -435,7 +443,7 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../accessibility/accessibility_quiz.html">Accessibility Quiz</a>
   </div>
   <div class="w3-col l4 m12">
-   <h3 class="w3-margin-top">Courses</h3>
+   <h3 class="w3-margin-top"><a class="ws-btn ws-yellow w3-hover-text-white" style="width:135px;font-size:21px" href="https://courses.w3schools.com/" target="_blank">Courses</a></h3>
 <!-- cert
    <a class="w3-bar-item w3-button" href="/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
    <a class="w3-bar-item w3-button" href="/cert/cert_css.asp" target="_top">CSS Certificate</a>
@@ -516,6 +524,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_events.html">JS Events</a>
 <a target="_top" href="js_strings.html">JS Strings</a>
 <a target="_top" href="js_string_methods.html">JS String Methods</a>
+<a target="_top" href="js_string_search.html">JS String Search</a>
 <a target="_top" href="js_numbers.html">JS Numbers</a>
 <a target="_top" href="js_number_methods.html">JS Number Methods</a>
 <a target="_top" href="js_arrays.html">JS Arrays</a>
@@ -538,6 +547,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_loop_forof.html">JS Loop For Of</a>
 <a target="_top" href="js_loop_while.html">JS Loop While</a>
 <a target="_top" href="js_break.html">JS Break</a>
+<a target="_top" href="js_typeof.html">JS Typeof</a>
 <a target="_top" href="js_type_conversion.html">JS Type Conversion</a>
 <a target="_top" href="js_bitwise.html">JS Bitwise</a>
 <a target="_top" href="js_regexp.html">JS RegExp</a>
@@ -556,21 +566,6 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_performance.html">JS Performance</a>
 <a target="_top" href="js_reserved.html">JS Reserved Words</a>
 <br>
-<h2 class="left">JS Versions</h2>
-
-<a target="_top" href="js_versions.html">JS Versions</a>
-<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
-<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
-<a target="_top" href="js_2016.html">JS 2016</a>
-<a target="_top" href="js_2017.html">JS 2017</a>
-<a target="_top" href="js_2018.html">JS 2018</a>
-<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
-<a target="_top" href="js_history.html">JS History</a>
-<br>
-<h2 class="left">JS Forms</h2>
-<a target="_top" href="js_validation.html">JS Forms</a>
-<a target="_top" href="js_validation_api.html">Forms API</a>
-<br>
 <h2 class="left">JS Objects</h2>
 <a target="_top" href="js_object_definition.html">Object Definitions</a>
 <a target="_top" href="js_object_properties.html">Object Properties</a>
@@ -579,7 +574,9 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_object_accessors.html">Object Accessors</a>
 <a target="_top" href="js_object_constructors.html">Object Constructors</a>
 <a target="_top" href="js_object_prototypes.html">Object Prototypes</a>
-<a target="_top" href="js_object_es5.html">Object ECMAScript 5</a>
+<a target="_top" href="js_object_es5.html">Object Reference</a>
+<a target="_top" href="js_object_maps.html">Object Map()</a>
+<a target="_top" href="js_object_sets.html">Object Set()</a>
 <br>
 <h2 class="left">JS Functions</h2>
 <a target="_top" href="js_function_definition.html">Function Definitions</a>
@@ -600,12 +597,23 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_promise.html">JS Promises</a>
 <a target="_top" href="js_async.html">JS Async/Await</a>
 <br>
+<h2 class="left">JS Versions</h2>
+<a target="_top" href="js_versions.html">JS Versions</a>
+<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
+<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
+<a target="_top" href="js_2016.html">JS 2016</a>
+<a target="_top" href="js_2017.html">JS 2017</a>
+<a target="_top" href="js_2018.html">JS 2018</a>
+<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
+<a target="_top" href="js_history.html">JS History</a>
+<br>
 <h2 class="left">JS HTML DOM</h2>
 <a target="_top" href="js_htmldom.html">DOM Intro</a>
 <a target="_top" href="js_htmldom_methods.html">DOM Methods</a>
 <a target="_top" href="js_htmldom_document.html">DOM Document</a>
 <a target="_top" href="js_htmldom_elements.html">DOM Elements</a>
 <a target="_top" href="js_htmldom_html.html">DOM HTML</a>
+<a target="_top" href="js_validation.html">DOM Forms</a>
 <a target="_top" href="js_htmldom_css.html">DOM CSS</a>
 <a target="_top" href="js_htmldom_animate.html">DOM Animations</a>
 <a target="_top" href="js_htmldom_events.html">DOM Events</a>
@@ -624,6 +632,15 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_popup.html">JS Popup Alert</a>
 <a target="_top" href="js_timing.html">JS Timing</a>
 <a target="_top" href="js_cookies.html">JS Cookies</a>
+<br>
+<h2 class="left">JS Web APIs</h2>
+<a target="_top" href="js_api_intro.html">Web API Intro</a>
+<a target="_top" href="js_validation_api.html">Web Forms API</a>
+<a target="_top" href="js_api_history.html">Web History API</a>
+<a target="_top" href="js_api_web_storage.html">Web Storage API</a>
+<a target="_top" href="js_api_web_workers.html">Web Worker API</a>
+<a target="_top" href="js_api_fetch.html">Web Fetch API</a>
+<a target="_top" href="js_api_geolocation.html">Web Geolocation API</a>
 <br>
 <h2 class="left">JS AJAX</h2>
 <a target="_top" href="js_ajax_intro.html">AJAX Intro</a>
@@ -650,14 +667,6 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_json_php.html">JSON PHP</a>
 <a target="_top" href="js_json_html.html">JSON HTML</a>
 <a target="_top" href="js_json_jsonp.html">JSON JSONP</a>
-<br>
-<h2 class="left">JS Web APIs</h2>
-<a target="_top" href="js_api_intro.html">Web API Intro</a>
-<a target="_top" href="js_api_history.html">Web History API</a>
-<a target="_top" href="js_api_web_storage.html">Web Storage API</a>
-<a target="_top" href="js_api_web_workers.html">Web Worker API</a>
-<a target="_top" href="js_api_fetch.html">Web Fetch API</a>
-<a target="_top" href="js_api_geolocation.html">Web Geolocation API</a>
 <br>
 <h2 class="left">JS vs jQuery</h2>
 <a target="_top" href="js_jquery_selectors.html">jQuery Selectors</a>
@@ -696,7 +705,7 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>ECMAScript 2009 - ES5</h1>
+<h1>JavaScript ES5</h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="js_versions.html">&#10094; Previous</a>
   <a class="w3-right w3-btn" href="js_es6.html">Next &#10095;</a>
@@ -709,34 +718,65 @@ function w3_getStyleValue(elmnt,style) {
 
 <h2>ES5 Features</h2>
 <ul>
-  <li><code class="w3-codespan">&quot;use strict&quot;</code></li>
-  <li><code class="w3-codespan">String.trim()</code></li>
-  <li><code class="w3-codespan">Array.isArray()</code></li>
-  <li><code class="w3-codespan">Array.forEach()</code></li>
-  <li><code class="w3-codespan">Array.map()</code></li>
-  <li><code class="w3-codespan">Array.filter()</code></li>
-  <li><code class="w3-codespan">Array.reduce()</code></li>
-  <li><code class="w3-codespan">Array.reduceRight()</code></li>
-  <li><code class="w3-codespan">Array.every()</code></li>
-  <li><code class="w3-codespan">Array.some()</code></li>
-  <li><code class="w3-codespan">Array.indexOf()</code></li>
-  <li><code class="w3-codespan">Array.lastIndexOf()</code></li>
-  <li><code class="w3-codespan">JSON.parse()</code></li>
-  <li><code class="w3-codespan">JSON.stringify()</code></li>
-  <li><code class="w3-codespan">Date.now()</code></li>
-  <li>Property Getters and Setters</li>
-  <li>New Object Property Methods</li>
+  <li><a href="#mark_use_strict">&quot;use strict&quot;</a></li>
+  <li><a href="#mark_string_property_access">String[<i>number</i>] access</a></li>
+  <li><a href="#mark_string_multiline">Multiline strings</li>
+  <li><a href="#mark_string_trim">String.trim()</a></li>
+  <li><a href="#mark_isarray">Array.isArray()</a></li>
+  <li><a href="#mark_array_foreach">Array.forEach()</a></li>
+  <li><a href="#mark_array_map">Array.map()</a></li>
+  <li><a href="#mark_array_filter">Array.filter()</a></li>
+  <li><a href="#mark_array_reduce">Array.reduce()</a></li>
+  <li><a href="#mark_array_reduceright">Array.reduceRight()</a></li>
+  <li><a href="#mark_array_every">Array.every()</a></li>
+  <li><a href="#mark_array_some">Array.some()</a></li>
+  <li><a href="#mark_array_indexof">Array.indexOf()</a></li>
+  <li><a href="#mark_array_lastindexof">Array.lastIndexOf()</a></li>
+  <li><a href="#mark_json_parse">JSON.parse()</a></li>
+  <li><a href="#mark_json_stringify">JSON.stringify()</a></li>
+  <li><a href="#mark_date_now">Date.now()</a></li>
+  <li>Date.toISOString()</li>
+  <li><a href="#mark_date_tojson">Date.toJSON()</a></li>
+  <li><a href="#mark_getter">Property getters and setters</a></li>
+  <li><a href="#mark_reserved">Reserved words as property names</a></li>
+  <li><a href="#mark_object_methods">Object methods</a></li>
+  <li><a href="#mark_object_define_property">Object defineProperty()</a></li>
+  <li>Function.bind()</li>
+  <li><a href="#mark_trailing_commas">Trailing commas</a></li>
 </ul>
-<hr>
-<h2>ES5 Syntactical Changes</h2>
-<ul>
-  <li>Property access [ ] on strings</li>
-  <li>Trailing commas in array and object literals</li>
-  <li>Multiline string literals</li>
-  <li>Reserved words as property names</li>
-</ul>
-<hr>
 
+<p>ES5 is supported in all modern browsers:</p>
+
+<div class="w3-responsive">
+<table class="browserref notranslate">
+  <tbody><tr style="height:50px">
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 23</td>    
+    <td>IE10 / Edge</td>
+    <td>Firefox 21</td>
+    <td>Safari 6</td>
+    <td>Opera 15</td>
+  </tr>
+  <tr>
+    <td>Sep 2012</td>
+    <td>Sep 2012</td>    
+    <td>Apr 2013</td>
+    <td>Jul 2012</td>
+    <td>Jul 2013</td>
+  </tr>
+</tbody>
+</table>
+</div>
+<br>
+
+<hr>
+<a id="mark_use_strict"></a>
 <h2>The &quot;use strict&quot; Directive</h2>
 <p><code class="w3-codespan">&quot;use strict&quot;</code> defines that the JavaScript code should be executed in &quot;strict mode&quot;.</p>
 <p>With strict mode you can, for example, not use undeclared variables.</p>
@@ -747,8 +787,76 @@ like preventing you from using undeclared variables.</p>
 <p><code class="w3-codespan">"use strict"</code> is just a string expression. Old browsers will not throw an error if they don't understand it.</p>
 </div>
 <p>Read more in <a href="js_strict.html">JS Strict Mode</a>.</p>
-<hr>
 
+<hr>
+<a id="mark_string_property_access"></a>
+<h2>Property Access on Strings</h2>
+<p>The <code class="w3-codespan">charAt()</code> method returns the character at a specified 
+index (position) in a string:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+var str = &quot;HELLO WORLD&quot;;<br>
+str.charAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns H
+</div>
+  <a class="w3-btn w3-margin-bottom" href="tryit5bfd.html?filename=tryjs_es5_string_charat" target="_blank">Try it Yourself &raquo;</a>
+</div>
+<p>ES5 allows property access on strings:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+var str = &quot;HELLO WORLD&quot;;<br>
+str[0];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns H
+</div>
+  <a class="w3-btn w3-margin-bottom" href="tryitb545.html?filename=tryjs_es5_string_prop" target="_blank">Try it Yourself &raquo;</a>
+</div>
+<div class="w3-panel w3-note">
+<p>Property access on string might be a little unpredictable.</p>
+<p>Read more in <a href="js_string_methods.html">JS String Methods</a>.</p>
+</div>
+<hr>
+<a id="mark_string_multiline"></a>
+<h2>Strings Over Multiple Lines</h2>
+ES5 allows string literals over multiple lines if escaped with a backslash:
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+  &quot;Hello \<br>Dolly!&quot;;</div>
+<a class="w3-btn w3-margin-bottom" href="tryit5fae.html?filename=tryjs_string_break" target="_blank">Try it Yourself &raquo;</a>
+</div>
+
+<div class="w3-panel w3-note">
+<p>The \ method might not have universal support.<br>Older browsers might treat 
+the spaces around the backslash differently. <br>Some older browsers do 
+not allow spaces behind the \ character.</p>
+</div>
+
+<p>A safer way to break up a string literal, is to use string 
+addition:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+  &quot;Hello &quot; + <br>&quot;Dolly!&quot;;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit1a88.html?filename=tryjs_string_break_ok" target="_blank">Try it Yourself &raquo;</a>
+</div>
+
+<hr>
+<a id="mark_reserved"></a>
+<h2>Reserved Words as Property Names</h2>
+<p>ES5 allows reserved words as property names:</p>
+<div class="w3-example">
+<h3>Object Example</h3>
+<div class="w3-code notranslate jsHigh">
+  var obj = {name: &quot;John&quot;, new: &quot;yes&quot;}
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit6dd9.html?filename=tryjs_es5_property">Try it Yourself &raquo;</a>
+</div>
+
+<hr>
+<a id="mark_string_trim"></a>
 <h2>String.trim()</h2>
 <p><code class="w3-codespan">String.trim()</code> removes whitespace from both sides of a string.</p>
 <div class="w3-example">
@@ -759,8 +867,19 @@ like preventing you from using undeclared variables.</p>
 <a target="_blank" href="tryit4c9a.html?filename=tryjs_string_trim" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <p>Read more in <a href="js_string_methods.html">JS String Methods</a>.</p>
+
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+
+</div>
 <hr>
 
+<a id="mark_isarray"></a>
 <h2>Array.isArray()</h2>
 <p>The <code class="w3-codespan">isArray()</code> method checks whether an object is an array.</p>
 <div class="w3-example">
@@ -773,7 +892,7 @@ function myFunction() {<br>&nbsp;&nbsp;var fruits = [&quot;Banana&quot;, &quot;O
 
 <p>Read more in <a href="js_arrays.html">JS Arrays</a>.</p>
 <hr>
-
+<a id="mark_array_foreach"></a>
 <h2>Array.forEach()</h2>
 <p>The <code class="w3-codespan">forEach()</code> method calls a function once for each array element.</p>
 
@@ -791,7 +910,7 @@ txt = txt + value + &quot;&lt;br&gt;&quot;; <br>
 </div>
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 <hr>
-
+<a id="mark_array_map"></a>
 <h2>Array.map()</h2>
 <p>This example multiplies each array value by 2: </p>
 <div class="w3-example">
@@ -808,16 +927,7 @@ function myFunction(value) {<br>
 </div>
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 <hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
-<hr>
-
+<a id="mark_array_filter"></a>
 <h2>Array.filter()</h2>
 
 <p>This example creates a new array from elements with a value larger than 18:</p>
@@ -830,7 +940,7 @@ function myFunction(value) {<br>
 </div>
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 <hr>
-
+<a id="mark_array_reduce"></a>
 <h2>Array.reduce()</h2>
 
 <p>This example finds the sum of all numbers in an array:</p>
@@ -845,7 +955,7 @@ function myFunction(value) {<br>
 
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 <hr>
-
+<a id="mark_array_reduceright"></a>
 <h2>Array.reduceRight()</h2>
 
 <p>This example also finds the sum of all numbers in an array:</p>
@@ -856,11 +966,10 @@ function myFunction(value) {<br>
   <br>function myFunction(total, value) {<br>&nbsp;&nbsp;return total + value;<br>} </div>
   <a class="w3-btn w3-margin-bottom" href="tryitf62a.html?filename=tryjs_es5_array_reduce_right" target="_blank">Try it Yourself &raquo;</a>
 </div>
-
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 
 <hr>
-
+<a id="mark_array_every"></a>
 <h2>Array.every()</h2>
 
 <p>This example checks if all values are over 18:</p>
@@ -872,13 +981,10 @@ function myFunction(value) {<br>
   value &gt; 18;<br>} </div>
   <a class="w3-btn w3-margin-bottom" href="tryite654.html?filename=tryjs_es5_array_every" target="_blank">Try it Yourself &raquo;</a>
 </div>
-
-
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 
-
 <hr>
-
+<a id="mark_array_some"></a>
 <h2>Array.some()</h2>
 
 <p>This example checks if some values are over 18:</p>
@@ -890,14 +996,10 @@ function myFunction(value) {<br>
   value &gt; 18;<br>} </div>
   <a class="w3-btn w3-margin-bottom" href="tryit63de.html?filename=tryjs_es5_array_some" target="_blank">Try it Yourself &raquo;</a>
 </div>
-
-
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 
-
 <hr>
-
-
+<a id="mark_array_indexof"></a>
 <h2>Array.indexOf()</h2>
 <p>Search an array for an element value and returns its position.</p>
 <div class="w3-example">
@@ -909,8 +1011,9 @@ var a = fruits.indexOf("Apple");
 <a target="_blank" href="tryit1483.html?filename=tryjs_array_indexof" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
-<hr>
 
+<hr>
+<a id="mark_array_lastindexof"></a>
 <h2>Array.lastIndexOf()</h2>
 <p><code class="w3-codespan">Array.lastIndexOf()</code> is the same as <code class="w3-codespan">Array.indexOf()</code>, but searches from the end of the array.</p>
 <div class="w3-example">
@@ -921,11 +1024,10 @@ var a = fruits.lastIndexOf("Apple");
 </div>
 <a target="_blank" href="tryita0d0.html?filename=tryjs_array_lastindexof" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
-
 <p>Learn more in <a href="js_array_iteration.html">JS Array Iteration Methods</a>.</p>
 
 <hr>
-
+<a id="mark_json_parse"></a>
 <h2>JSON.parse()</h2>
 <p>A common use of JSON is to receive data from a web server.</p>
 <p>Imagine you received this text string from a web server:</p>
@@ -944,6 +1046,7 @@ var obj = JSON.parse('{&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &q
 <p>Read more in our <a href="js_json_intro.html">JSON Tutorial</a>.</p>
 
 <hr>
+<a id="mark_json_stringify"></a>
 <h2>JSON.stringify()</h2>
 <p>A common use of JSON is to send data to a web server.</p>
 <p>When sending data to a web server, the data has to be 
@@ -954,7 +1057,6 @@ a string.</p>
 var obj = {name:&quot;John&quot;, age:30, city:&quot;New York&quot;};
 </div>
 </div>
-
 <p>Use the JavaScript function <code class="w3-codespan">JSON.stringify()</code> to convert it into a string.</p>
  
 <div class="w3-example">
@@ -964,7 +1066,6 @@ var myJSON = JSON.stringify(obj);</div>
 <div class="w3-panel w3-note">
 <p>The result will be a string following the JSON notation.</p>
 </div>
-
 <p>myJSON is now a string, and ready to be sent to a server:</p>
 
 <div class="w3-example">
@@ -974,13 +1075,10 @@ var obj = {name:&quot;John&quot;, age:30, city:&quot;New York&quot;};<br>
 var myJSON = JSON.stringify(obj);<br>document.getElementById(&quot;demo&quot;).innerHTML = myJSON;</div>
 <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit059f.html?filename=tryjson_stringify">Try it Yourself &raquo;</a>
 </div>
-
 <p>Read more in our <a href="js_json_intro.html">JSON Tutorial</a>.</p>
 
-
 <hr>
-
-
+<a id="mark_date_now"></a>
 <h2>Date.now()</h2>
 <p><code class="w3-codespan">Date.now()</code> returns the number of milliseconds since zero date (January 1. 
 1970 00:00:00 UTC).</p>
@@ -994,6 +1092,21 @@ var timInMSs = Date.now();</div>
 <p>Learn more in <a href="js_dates.html">JS Dates</a>.</p>
 
 <hr>
+<a id="mark_date_tojson"></a>
+<h2>Date.toJSON()</h2>
+<p><code class="w3-codespan">Date.toJSON()</code> converts a Date object into a string, formatted as a JSON date.</p>
+<p>JSON dates have the same format as the ISO-8601 standard: YYYY-MM-DDTHH:mm:ss.sssZ:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+d = new Date();<br>
+document.getElementById("demo").innerHTML = d.toJSON();
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitef80.html?filename=tryjs_es5_date_tojson" target="_blank">Try it Yourself &raquo;</a>
+</div>
+
+<hr>
+<a id="mark_getter"></a>
 <h2>Property Getters and Setters</h2>
 <p>ES5 lets you define object methods with a syntax that looks like getting or setting
 a property.</p>
@@ -1038,7 +1151,9 @@ a property.</p>
 <p>Learn more about Gettes and Setters in <a href="js_object_accessors.html">JS Object Accessors</a></p>
 
 <hr>
-<h2>New Object Property Methods</h2>
+<a id="mark_object_define_property"></a>
+
+<h2>Object.defineProperty()</h2>
 <p><code class="w3-codespan">Object.defineProperty()</code> is a new Object method in ES5.</p>
 <p>It lets you define an object property and/or change a property's value and/or 
 metadata.</p>
@@ -1087,68 +1202,50 @@ metadata.</p>
   <a class="w3-btn w3-margin-bottom" href="tryit00e5.html?filename=tryjs_object_defineproperty3" target="_blank">Try it Yourself &raquo;</a>
 </div>
 
+<hr>
+<h2>E5 Object Methods</h2>
+<a id="mark_object_methods"></a>
 <p>ES5 added a lot of new Object Methods to JavaScript:</p>
 
 <div class="w3-example">
-<h3>ES5 New Object Methods</h3>
+<h3>Managing Objects</h3>
 <div class="w3-code notranslate jsHigh">
+// Create object with an existing object as prototype<br>
+Object.create(parent, donor)<br><br>
 // Adding or changing an object property<br>
 Object.defineProperty(object, property, descriptor)<br><br>
-// Adding or changing many object properties<br>
-  Object.defineProperties(object, descriptors)<br><br>
+// Adding or changing object properties<br>
+Object.defineProperties(object, descriptors)<br><br>
 // Accessing Properties<br>
-  Object.getOwnPropertyDescriptor(object, property)<br><br>
+Object.getOwnPropertyDescriptor(object, property)<br><br>
 // Returns all properties as an array<br>
-  Object.getOwnPropertyNames(object)<br><br>
-// Returns enumerable properties as an array<br>
-  Object.keys(object)<br><br>
+Object.getOwnPropertyNames(object)<br><br>
 // Accessing the prototype<br>
-  Object.getPrototypeOf(object)<br><br>
-  // Prevents adding properties to an object<br>
-  Object.preventExtensions(object)<br>
-  // Returns true if properties can be added to an object<br>
-  Object.isExtensible(object)<br><br>
-  // Prevents changes of object properties (not values)<br>
-  Object.seal(object)<br>
+Object.getPrototypeOf(object)<br><br>
+// Returns enumerable properties as an array<br>
+Object.keys(object)<br><br>
+</div>
+<h3>Protecting Objects</h3>
+<div class="w3-code notranslate jsHigh">
+// Prevents adding properties to an object<br>
+Object.preventExtensions(object)<br><br>
+// Returns true if properties can be added to an object<br>
+Object.isExtensible(object)<br><br>
+// Prevents changes of object properties (not values)<br>
+Object.seal(object)<br><br>
 // Returns true if object is sealed<br>
-  Object.isSealed(object)<br><br>
-  // Prevents any changes to an object<br>
-  Object.freeze(object)<br>
+Object.isSealed(object)<br><br>
+// Prevents any changes to an object<br>
+Object.freeze(object)<br><br>
 // Returns true if object is frozen<br>
-  Object.isFrozen(object)
+Object.isFrozen(object)
 </div>
 </div>
 
 <p>Learn more in <a href="js_object_es5.html">Object ECMAScript5</a>.</p>
 
 <hr>
-<h2>Property Access on Strings</h2>
-<p>The <code class="w3-codespan">charAt()</code> method returns the character at a specified 
-index (position) in a string:</p>
-
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate jsHigh">
-var str = &quot;HELLO WORLD&quot;;<br>
-str.charAt(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns H
-</div>
-  <a class="w3-btn w3-margin-bottom" href="tryit5bfd.html?filename=tryjs_es5_string_charat" target="_blank">Try it Yourself &raquo;</a>
-</div>
-<p>ES5 allows property access on strings:</p>
-
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate jsHigh">
-var str = &quot;HELLO WORLD&quot;;<br>
-str[0];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns H
-</div>
-  <a class="w3-btn w3-margin-bottom" href="tryitb545.html?filename=tryjs_es5_string_prop" target="_blank">Try it Yourself &raquo;</a>
-</div>
-<div class="w3-panel w3-note">
-<p>Property access on string might be a little unpredictable.</p>
-<p>Read more in <a href="js_string_methods.html">JS String Methods</a>.</p>
-</div>
-<hr>
+<a id="mark_trailing_commas"></a>
 <h2>Trailing Commas</h2>
 <p>ES5 allows trailing commas in object and array definitions:</p>
 <div class="w3-example">
@@ -1178,7 +1275,6 @@ points = [<br>
 </div>
 <div class="w3-panel w3-warning">
 <p>WARNING !!!</p>
-<p>Internet Explorer 8 will crash.</p>
 <p>JSON does not allow trailing commas.</p>
 </div>
 <div class="w3-example">
@@ -1195,74 +1291,7 @@ points = [<br>
     [40, 100, 1, 5, 25, 10,]</div>
 </div>
 
-<hr>
-<h2>Strings Over Multiple Lines</h2>
-ES5 allows string literals over multiple lines if escaped with a backslash:
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate jsHigh">
-  &quot;Hello \<br>Dolly!&quot;;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit5fae.html?filename=tryjs_string_break" target="_blank">Try it Yourself &raquo;</a>
-</div>
 
-<div class="w3-panel w3-note">
-<p>The \ method might not have universal support.<br>Older browsers might treat 
-the spaces around the backslash differently. <br>Some older browsers do 
-not allow spaces behind the \ character.</p>
-</div>
-
-<p>A safer way to break up a string literal, is to use string 
-addition:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate jsHigh">
-  &quot;Hello &quot; + <br>&quot;Dolly!&quot;;
-</div>
-<a class="w3-btn w3-margin-bottom" href="tryit1a88.html?filename=tryjs_string_break_ok" target="_blank">Try it Yourself &raquo;</a>
-</div>
-
-<hr>
-<h2>Reserved Words as Property Names</h2>
-<p>ES5 allows reserved words as property names:</p>
-<div class="w3-example">
-<h3>Object Example</h3>
-<div class="w3-code notranslate jsHigh">
-  var obj = {name: &quot;John&quot;, new: &quot;yes&quot;}
-</div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit6dd9.html?filename=tryjs_es5_property">Try it Yourself &raquo;</a>
-</div>
-
-<hr>
-<h2>Browser Support for ES5</h2>
-<p>Chrome 23, IE 10, and Safari 6 were the first browsers to fully support ES5:</p>
-
-<div class="w3-responsive">
-<table class="browserref notranslate">
-  <tbody><tr style="height:50px">
-    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
-    <th style="width:16%;" class="bsEdge" title="Edge"></th>
-    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
-    <th style="width:16%;" class="bsSafari" title="Safari"></th>
-    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
-  </tr>
-  <tr>
-    <td>Chrome 23</td>    
-    <td>IE10 / Edge</td>
-    <td>Firefox 21</td>
-    <td>Safari 6</td>
-    <td>Opera 15</td>
-  </tr>
-  <tr>
-    <td>Sep 2012</td>
-    <td>Sep 2012</td>    
-    <td>Apr 2013</td>
-    <td>Jul 2012</td>
-    <td>Jul 2013</td>
-  </tr>
-</tbody>
-</table>
-</div>
-<br>
 <br>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="js_versions.html">&#10094; Previous</a>
@@ -1479,9 +1508,9 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 
 <hr>
-<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button ws-grey w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px;">Report Error</a>
 </div>
 <!--
 <div class="w3-col l3 m3 s12">
@@ -1489,13 +1518,13 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 </div>
 -->
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button ws-grey w3-block w3-round" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Forum</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button ws-grey w3-block w3-round" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">About</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">SHOP</a>
+<a class="w3-button ws-grey w3-block w3-round" href="https://shop.w3schools.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px">Shop</a>
 </div>
 
 </div>
@@ -1838,5 +1867,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/js_es5.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 19:28:41 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_es5.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:14:53 GMT -->
 </html>

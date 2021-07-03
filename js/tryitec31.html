@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:33 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:41:55 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -490,6 +490,8 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <html>
 <body>
 
+<h2>JavaScript try catch</h2>
+
 <p>Please input a number between 5 and 10:</p>
 
 <input id="demo" type="text">
@@ -499,10 +501,9 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 
 <script>
 function myFunction() {
-  var message, x;
-  message = document.getElementById("p01");
+  const message = document.getElementById("p01");
   message.innerHTML = "";
-  x = document.getElementById("demo").value;
+  let x = document.getElementById("demo").value;
   try { 
     if(x == "")  throw "is empty";
     if(isNaN(x)) throw "is not a number";
@@ -521,7 +522,7 @@ function myFunction() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jun 2021 23:33:33 GMT -->
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:41:55 GMT -->
 </html>
 
 
