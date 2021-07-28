@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/js_ie_edge.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:15:14 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_ie_edge.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 09:26:14 GMT -->
 <head>
 <title>JavaScript IE &amp; Edge</title>
 <meta charset="utf-8">
@@ -149,7 +149,7 @@ googletag.cmd.push(function() {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -272,6 +272,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -596,6 +598,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_strings.html">JS Strings</a>
 <a target="_top" href="js_string_methods.html">JS String Methods</a>
 <a target="_top" href="js_string_search.html">JS String Search</a>
+<a target="_top" href="js_string_templates.html">JS String Templates</a>
 <a target="_top" href="js_numbers.html">JS Numbers</a>
 <a target="_top" href="js_number_methods.html">JS Number Methods</a>
 <a target="_top" href="js_arrays.html">JS Arrays</a>
@@ -637,6 +640,16 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_performance.html">JS Performance</a>
 <a target="_top" href="js_reserved.html">JS Reserved Words</a>
 <br>
+<h2 class="left">JS Versions</h2>
+<a target="_top" href="js_versions.html">JS Versions</a>
+<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
+<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
+<a target="_top" href="js_2016.html">JS 2016</a>
+<a target="_top" href="js_2017.html">JS 2017</a>
+<a target="_top" href="js_2018.html">JS 2018</a>
+<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
+<a target="_top" href="js_history.html">JS History</a>
+<br>
 <h2 class="left">JS Objects</h2>
 <a target="_top" href="js_object_definition.html">Object Definitions</a>
 <a target="_top" href="js_object_properties.html">Object Properties</a>
@@ -667,16 +680,6 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_asynchronous.html">JS Asynchronous</a>
 <a target="_top" href="js_promise.html">JS Promises</a>
 <a target="_top" href="js_async.html">JS Async/Await</a>
-<br>
-<h2 class="left">JS Versions</h2>
-<a target="_top" href="js_versions.html">JS Versions</a>
-<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
-<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
-<a target="_top" href="js_2016.html">JS 2016</a>
-<a target="_top" href="js_2017.html">JS 2017</a>
-<a target="_top" href="js_2018.html">JS 2018</a>
-<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
-<a target="_top" href="js_history.html">JS History</a>
 <br>
 <h2 class="left">JS HTML DOM</h2>
 <a target="_top" href="js_htmldom.html">DOM Intro</a>
@@ -781,52 +784,76 @@ function w3_getStyleValue(elmnt,style) {
 <a class="w3-left w3-btn" href="js_2018.html">&#10094; Previous</a>
 <a class="w3-right w3-btn" href="js_history.html">Next &#10095;</a>
 </div>
-<hr>
-<h3>Retirement Dates Published August 12, 2020:</h3>
+
 <div class="w3-panel w3-info">
-<h4>Microsoft 365 says Farewell to IE 11</h4>
+<h2>Internet Explorer Retirement</h2>
+
+<h4>Windows 11 Removes Internet Explorer</h4>
 <table class="ws-table-all">
-<tr><td width="130px"><b>30-11-2020</b></td><td>MS Teams stops supporting IE 11</td></tr>
-<tr><td><b>31-12-2020</b></td><td>Azure DevOps Services stops supporting IE 11 </td></tr>
-<tr><td><b>31-03-2021</b></td><td>Azure Portal stops supporting IE 11 </td></tr>
-<tr><td><b>17-08-2021</b></td><td>Microsoft ends support for IE 11 across Microsoft 365 Apps,
-and other web services like Office 365, OneDrive, and Outlook.</td></tr>
-</table>
-<h4>Windows 10 says Farwell to Edge Legacy</h4>
-<table class="ws-table-all">
-<tr><td width="130px"><b>31-12-2020</b></td><td>Azure DevOps Services stops supporting Edge Legacy</td></tr>
-<tr><td><b>09-03-2021</b></td><td>End of Windows updates for Edge Legacy</td></tr>
-<tr><td><b>13-04-2021</b></td><td>Future Windows 10 updates will remove Edge Legacy</td></tr>
+<tr>
+<td>Reported 24-06-2021:
+<p><b>Internet Explorer is disabled in Windows 11</b></p>
+Source: <a target="_blank"
+href="https://www.microsoft.com/en-us/windows/windows-11-specifications#primaryR4">
+Windows 11 specifications</a></td></tr>
 </table>
 
-<p class="w3-large"><a target="_blank"
-href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666">
-Read more ...</a></p>
-</div>
-
-<h3>Retirement Published May 19, 2021:</h3>
-<div class="w3-panel w3-info">
-<h4>Windows 10 says Farwell to IE 11</h4>
+<h4>Windows 10 Replaces Internet Explorer</h4>
 <table class="ws-table-all">
-<tr><td width="130px"><b>15-06-2020</b></td><td>
-Microsoft Edge with IE mode is replacing Internet Explorer 11 desktop application on Windows 10.
-IE 11 will go out of support and be retired on June 15, 2022 for certain versions of Windows 10.
+<tr><td>Reported 15-06-2020:
+<p><b>Internet Explorer is "replaced" by Edge in Windows 10</b></p>
+<a target="_blank"
+href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/">
+Source ...</a>
 </td></tr>
 </table>
 
-<p class="w3-large"><a target="_blank"
+<h4>Internet Explorer Retires</h4>
+<table class="ws-table-all">
+<tr><td>Reported 15-06-2020:
+<p><b>IE 11 goes out of support on June 15 2022</b></p>
+<a target="_blank"
 href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549">
-Read more ...</a></p>
+Source ...</a>
+</td></tr>
+</table>
+
+<h4>Retirement Dates:</h4>
+<table class="ws-table-all">
+<tr><td width="130px"><b>30-11-2020</b></td><td>MS Teams ends support for IE 11</td></tr>
+<tr><td><b>31-12-2020</b></td><td>Azure DevOps Services ends support for IE 11</td></tr>
+<tr><td><b>31-03-2021</b></td><td>Azure Portal ends support for IE 11</td></tr>
+<tr><td><b>17-08-2021</b></td><td>Microsoft ends support for IE 11 across web services:<br>
+Office 365 - OneDrive Outlook</td></tr>
+<tr><td><b>15-06-2022</b></td><td>Microsoft ends all support for IE 11</td></tr>
+</table>
+<p><a target="_blank"
+href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666">
+Source ...</a></p>
+<img alt="bbb" width="100%" src="img_m365_ProductTeam.png">
 </div>
+
 
 <h2>Microsoft Edge Legacy</h2>
 <p>Edge was the default browser for Windows 10.</p>
 <p>It was built with Microsoft's browser engine <b>EdgeHTML</b> 
 and their <b>Chakra</b> JavaScript engine.</p>
 <p>The first versions of Edge (12-18), are now referred to as "<b>Edge Legacy</b>".
-<p>Edge Legacy was not available for Windows 7 or Windows 8.</p>
 <p>The Microsoft support for Edge Legacy ended on March 9, 2021.</p>
 <p>Future Windows updates will replace Edge Legacy with <b>The New Edge</b>.</p>
+<div class="w3-panel w3-info">
+<h4>Retirement dates published August 17, 2020:</h4>
+<table class="ws-table-all">
+<tr><td width="140px"><b>31-12-2020</b></td><td>Azure DevOps Services stops supporting Edge Legacy</td></tr>
+<tr><td><b>09-03-2021</b></td><td>End of Windows updates for Edge Legacy</td></tr>
+<tr><td><b>13-04-2021</b></td><td>Future Windows updates will remove Edge Legacy</td></tr>
+</table>
+
+<p><a target="_blank"
+href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666">
+Source ...</a></p>
+</div>
+
 <hr>
 <h2>The New Edge</h2>
 <p>The new Microsoft Edge is <b>Chromium</b> based with <b>Blink</b> and <b>V8</b> engines.</p>
@@ -897,7 +924,7 @@ www.gov.uk //// designing-for-different-browsers-and-devices</a></p>
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -991,7 +1018,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -1440,5 +1467,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/js_ie_edge.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:15:15 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_ie_edge.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 09:26:59 GMT -->
 </html>

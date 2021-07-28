@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_replace.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:14 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_replace.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:51:01 GMT -->
 <head>
 <title>JavaScript String replace() Method</title>
 <meta charset="utf-8">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -195,6 +195,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -1620,61 +1622,63 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript String <span class="color_h1">replace()</span> Method</h1>
+<h1>JavaScript String replace()</h1>
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_repeat.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
 <a class="w3-right w3-btn" href="jsref_search.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div class="w3-example">
 <h3>Example</h3>
 <p>Return a string where "Microsoft" is replaced with "W3Schools":</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Visit Microsoft!&quot;;<br>
-var res = str.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
+let str = &quot;Visit Microsoft!&quot;;<br>
+str.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
 </div>
-<!--<p>The result of <em>res</em> will be:</p>
-<div class="w3-code notranslate">
-Visit W3Schools!
-</div>-->
 <a target="_blank" href="tryit828e.html?filename=tryjsref_replace" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <p>More "Try it Yourself" examples below.</p>
 <hr>
 
 <h2>Definition and Usage</h2>
-<p>The replace() method searches a string for a specified value, or a <em>regular expression</em>, and returns a new string where the specified values are replaced.</p>
+<p>The <code class="w3-codespan">replace()</code> method searches a string for a specified value, or a <em>regular expression</em>, and returns a new string where the specified values are replaced.</p>
 <p><strong>Note:</strong> If you are replacing a value (and not a <em>regular 
 expression</em>), only the first instance of the value will be replaced. To 
 replace all occurrences of a specified value, use the global (g) modifier (see 
 &quot;More Examples&quot; below).</p>
 <p>Read more about regular expressions in our <a href="../js/js_regexp.html">RegExp Tutorial</a> and our <a href="jsref_obj_regexp.html">RegExp Object Reference</a>.</p>
-<p>This method does not change the original string.</p>
-<hr>
+<p><code class="w3-codespan">replace()</code> does not change the original string.</p>
 
-<h2>&nbsp;Browser Support</h2>
-<div class="w3-responsive">
+<hr>
+<h2>Browser Support</h2>
+<p><code class="w3-codespan">replace()</code> is fully supported in all browsers:</p>
 <table class="browserref notranslate">
-  <tr>
-    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
-    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
-    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
-    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
-    <th style="width:16%;" class="bsSafari" title="Safari"></th>
-    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsIE" title="Internet Explorer"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
   </tr>
   <tr>
-    <td style="text-align:left;">replace()</td>
+    <td>Chrome</td>
+    <td>IE</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
     <td>Yes</td>
-    <td>Yes</td>    
+    <td>Yes</td>
+    <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
   </tr>
 </table>
-</div>
 
 <hr>
 
@@ -1723,13 +1727,9 @@ replace all occurrences of a specified value, use the global (g) modifier (see
 <h3>Example</h3>
 <p>Perform a <strong>global</strong> replacement:</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>
-var res = str.replace(/blue/g, &quot;red&quot;);
+let str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>
+str.replace(/blue/g, &quot;red&quot;);
 </div>
-<!--<p>The result of <em>res</em> will be:</p>
-<div class="w3-code notranslate">
-Mr Blue has a red house and a red car
-</div>-->
 <a target="_blank" href="tryit52f3.html?filename=tryjsref_replace2" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
@@ -1737,13 +1737,9 @@ Mr Blue has a red house and a red car
 <h3>Example</h3>
 <p>Perform a global, <strong>case-</strong><em><strong>insensitive</strong></em> replacement:</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>
-var res = str.replace(/blue/gi, &quot;red&quot;);
+let str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>
+str.replace(/blue/gi, &quot;red&quot;);
 </div>
-<!--<p>The result of <em>res</em> will be:</p>
-<div class="w3-code notranslate">
-Mr red has a red house and a red car
-</div>-->
 <a target="_blank" href="tryit970c.html?filename=tryjsref_replace3" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
@@ -1751,20 +1747,24 @@ Mr red has a red house and a red car
 <h3>Example</h3>
 <p>Using a <strong>function</strong> to return the replacement text:</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>var res = str.replace(/blue|house|car/gi, function (x) {<br>&nbsp;&nbsp;return x.toUpperCase();<br>});</div>
-<!--<p>The result of <em>res</em> will be:</p>
-<div class="w3-code notranslate">
- Mr BLUE has a BLUE HOUSE and a BLUE CAR.</div>-->
+let str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>
+str.replace(/blue|house|car/gi, function (x) {<br>&nbsp;&nbsp;return x.toUpperCase();<br>});</div>
 <a target="_blank" href="tryitd1de.html?filename=tryjsref_replace4" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
 <hr>
+<h2>Related Pages</h2>
+<p><a href="../js/js_strings.html">String Tutorial</a></p>
+<p><a href="../js/js_string_methods.html">String Methods</a></p>
+<p><a href="../js/js_string_search.html">String Search</a></p>
+
+<hr>
+
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_repeat.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
 <a class="w3-right w3-btn" href="jsref_search.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -1785,7 +1785,7 @@ var str = &quot;Mr Blue has a blue house and a blue car&quot;;<br>var res = str.
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1879,7 +1879,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -2336,5 +2336,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_replace.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:14 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_replace.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:51:01 GMT -->
 </html>

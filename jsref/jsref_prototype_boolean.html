@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_prototype_boolean.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:15:58 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_prototype_boolean.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:48:33 GMT -->
 <head>
-<title>JavaScript Boolean prototype Constructor</title>
+<title>Boolean prototype Constructor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -195,6 +195,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -1620,7 +1622,7 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript Boolean <span class="color_h1">prototype</span> Constructor</h1>
+<h1>JavaScript Boolean prototype</h1>
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_constructor_boolean.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" title="JavaScript Boolean Reference" href="jsref_obj_boolean.html"><span class="w3-hide-small">JavaScript Boolean </span>Reference</a>
@@ -1637,37 +1639,41 @@ function w3_getStyleValue(elmnt,style) {
   &nbsp;&nbsp;}<br>};</div>
 <p>Create a boolean, then call myColor():</p>
 <div class="w3-code notranslate jsHigh">
-var a = true;<br>
- var b = a.myColor();</div>
-<!--<p>The value of b is now:</p>
-<div class="w3-code notranslate">
- green </div>-->
+let a = true;<br>
+a.myColor()&nbsp;&nbsp;&nbsp;&nbsp;// Returns green
+</div>
 <a target="_blank" href="tryit358c.html?filename=tryjsref_prototype_boolean" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <hr>
 <h2>Definition and Usage</h2>
+<p>The <code class="w3-codespan">prototype</code> is a global constructor available for all JavaScript objects.</p>
+<p><code class="w3-codespan">Boolean.prototype</code> referres to the global Boolean() object.</p>
+<p>The <code class="w3-codespan">prototype</code> constructor allows you to add new properties and methods to booleans.</p>
+<p>When constructing a new property, ALL arrays will get the property and its value.</p>
+<p>When constructing a new method, ALL arrays will get the method.</p>
 
-<p>The <code class="w3-codespan">prototype</code> constructor allows you to add new properties and methods to 
-JavaScript booleans.</p>
-<p>When constructing a property, ALL booleans will be given the property, and its value, as default.</p>
-<p>When constructing a method, ALL booleans will have this method available.</p>
-<p><b>Note:</b>  Boolean.prototype does not refer to a single boolean, but to the 
-Boolean() object itself.</p>
-<p><b>Note:</b> Prototype is a global object constructor which is available for all JavaScript objects.</p>
 <hr>
-
 <h2>Browser Support</h2>
+<p><code class="w3-codespan">Boolean.prototype</code> is fully supported in all browsers:</p>
 <table class="browserref notranslate">
-  <tr>
-    <th style="width:20%;font-size:16px;text-align:left;">Property</th>
-    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
-    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
-    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
-    <th style="width:16%;" class="bsSafari" title="Safari"></th>
-    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsIE" title="Internet Explorer"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
   </tr>
   <tr>
-    <td style="text-align:left;">prototype</td>
+    <td>Chrome</td>
+    <td>IE</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
@@ -1675,6 +1681,7 @@ Boolean() object itself.</p>
     <td>Yes</td>
   </tr>
 </table>
+
 <hr>
 
 <h2>Syntax</h2>
@@ -1685,6 +1692,7 @@ Boolean() object itself.</p>
 
 <h2>Related Pages</h2>
 <p>JavaScript Tutorial: <a href="../js/js_booleans.html">JavaScript Booleans</a></p>
+<p>JavaScript Tutorial: <a href="../js/js_datatypes.html">JavaScript Data Types</a></p>
 <p>JavaScript Tutorial: <a href="../js/js_object_constructors.html">JavaScript Object Constructors</a></p>
 <hr>
 
@@ -1712,7 +1720,7 @@ Boolean() object itself.</p>
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1806,7 +1814,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -2263,5 +2271,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_prototype_boolean.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:15:58 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_prototype_boolean.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:48:33 GMT -->
 </html>

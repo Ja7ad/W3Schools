@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_lastindexof.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:11 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_lastindexof.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:50:58 GMT -->
 <head>
 <title>JavaScript String lastIndexOf() Method</title>
 <meta charset="utf-8">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -195,6 +195,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -1620,54 +1622,60 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript String <span class="color_h1">lastIndexOf()</span> Method</h1>
+<h1>JavaScript String lastIndexOf()</h1>
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_indexof.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
-<a class="w3-right w3-btn" href="jsref_localecompare.html"><span class="w3-hide-small">Next </span>&#10095;</a>
+<a class="w3-right w3-btn" href="jsref_length_string.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div class="w3-example">
 <h3>Example</h3>
 <p>Search a string for the last occurrence of "planet":</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Hello planet earth, you are a great planet.&quot;;<br>
-var n = str.lastIndexOf(&quot;planet&quot;);
+let str = &quot;Hello planet earth, you are a great planet.&quot;;<br>
+str.lastIndexOf(&quot;planet&quot;)&nbsp;&nbsp;&nbsp;// Returns 36<br>
+str.lastIndexOf(&quot;Planet&quot;)&nbsp;&nbsp;&nbsp;// Returns -1<br>
 </div>
-<!--<p> 
-The result of <em>n</em> will be:</p>
-<div class="w3-code notranslate">
-<script>
-var str="Hello planet earth, you are a great planet.";
-document.write(str.lastIndexOf("planet"));
-</script>
-</div>-->
 <a target="_blank" href="tryit1d39.html?filename=tryjsref_lastindexof" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <p>More "Try it Yourself" examples below.</p>
 <hr>
 
 <h2>Definition and Usage</h2>
-<p>The lastIndexOf() method returns the position of the last occurrence of a specified value in a string.</p>
-<p><b>Note:</b> The string is searched from the end to the beginning, but returns the index starting at the beginning, at position 0.</p>
-<p>This method returns -1 if the value to search for never occurs.</p>
-<p><b>Note:</b> The lastIndexOf() method is case sensitive!</p>
-<p><b>Tip:</b> Also look at the <a href="jsref_indexof.html">indexOf()</a> method.</p>
-<hr>
+<p>The <code class="w3-codespan">lastIndexOf()</code> method returns the position of the last occurrence of a specified value in a string.</p>
+<p><code class="w3-codespan">lastIndexOf()</code> searches the string from the end to the beginning, but returns the index s
+from the beginning, starting at position 0.</p>
+<p><code class="w3-codespan">lastIndexOf()</code> returns -1 if the value is not found.</p>
 
+<div class="w3-note">
+<p><code class="w3-codespan">lastindexOf()</code> is case sensitive.</p>
+</div>
+
+<p><b>Tip:</b> Also look at the <a href="jsref_indexof.html"><code class="w3-codespan">indexOf()</code></a> method.</p>
+
+<hr>
 <h2>Browser Support</h2>
+<p><code class="w3-codespan">lastIndexOf()</code> is fully supported in all browsers:</p>
 <table class="browserref notranslate">
-  <tr>
-    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
-    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
-    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
-    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
-    <th style="width:16%;" class="bsSafari" title="Safari"></th>
-    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsIE" title="Internet Explorer"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
   </tr>
   <tr>
-    <td style="text-align:left;">lastIndexOf()</td>
+    <td>Chrome</td>
+    <td>IE</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
@@ -1675,6 +1683,8 @@ document.write(str.lastIndexOf("planet"));
     <td>Yes</td>
   </tr>
 </table>
+
+<hr>
 
 <h2>Syntax</h2>
 <div class="w3-code w3-border notranslate"><div>
@@ -1724,26 +1734,25 @@ document.write(str.lastIndexOf("planet"));
 <h3>Example</h3>
 <p>Search a string for the last occurrence of "planet", starting the search at position 20:</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Hello planet earth, you are a great planet.&quot;;<br>
-var n = str.lastIndexOf(&quot;planet&quot;, 20);
+let str = &quot;Hello planet earth, you are a great planet.&quot;;<br>
+str.lastIndexOf(&quot;planet&quot;, 20)&nbsp;&nbsp;&nbsp;// Returns 6
 </div>
-<!--<p> 
-The result of <em>n</em> will be:</p>
-<div class="w3-code notranslate">
-<script>
-var str="Hello planet earth, you are a great planet.";
-document.write(str.lastIndexOf("planet",20));
-</script>
-</div>-->
 <a target="_blank" href="tryitdea9.html?filename=tryjsref_lastindexof2" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
+
 <hr>
+<h2>Related Pages</h2>
+<p><a href="../js/js_strings.html">String Tutorial</a></p>
+<p><a href="../js/js_string_methods.html">String Methods</a></p>
+<p><a href="../js/js_string_search.html">String Search</a></p>
+
+<hr>
+
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_indexof.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
-<a class="w3-right w3-btn" href="jsref_localecompare.html"><span class="w3-hide-small">Next </span>&#10095;</a>
+<a class="w3-right w3-btn" href="jsref_length_string.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -1764,7 +1773,7 @@ document.write(str.lastIndexOf("planet",20));
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1858,7 +1867,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -2315,5 +2324,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_lastindexof.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:11 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_lastindexof.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:50:58 GMT -->
 </html>

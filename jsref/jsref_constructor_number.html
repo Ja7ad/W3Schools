@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_constructor_number.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:17:01 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_constructor_number.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:49:43 GMT -->
 <head>
-<title>JavaScript Number constructor Property</title>
+<title>Number constructor Property</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -195,6 +195,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -1620,7 +1622,7 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript Number <span class="color_h1">constructor</span> Property</h1>
+<h1>JavaScript Number constructor</h1>
 
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-white w3-btn w3-border-grey" title="JavaScript Number Reference" href="jsref_obj_number.html">&#10094; <span class="w3-hide-small">JavaScript </span>Number Reference</a>
@@ -1630,43 +1632,43 @@ function w3_getStyleValue(elmnt,style) {
 
 <div class="w3-example">
 <h3>Example</h3>
-<p>The constructor property returns a number's constructor function:</p>
 <div class="w3-code notranslate jsHigh">
- var
-num = 134.5;
+let num = 134.5;<br>
+num.constructor;&nbsp;&nbsp;&nbsp;<br>
+// Returns function Number() { [native code] }
+
 </div>
-<!--<p>The constructor property returns:</p>
-<div class="w3-code notranslate">
-function Number() { [native code] }</div>-->
 <a target="_blank" class="w3-btn w3-margin-bottom" href="tryitc676.html?filename=tryjsref_constructor_num">Try it Yourself &raquo;</a>
 </div>
 <hr>
 <h2>Definition and Usage</h2>
 
-<p>In JavaScript, the constructor property returns the constructor function for 
-an object.</p>
-<p>The return value is a reference to the 
-function, not the name of the function:</p>
-<p>For JavaScript <strong>numbers</strong> the constructor property returns
-<strong>function Number() { [native code] }</strong></p>
-<p>For JavaScript <strong>strings</strong> the constructor property returns
-<strong>function String() { [native code] }</strong></p>
-<p>For JavaScript <strong>booleans</strong> the constructor property returns
-<strong>function Boolean() { [native code] }</strong></p>
-<hr>
+<p>The constructor property returns the function that created the Number prototype.</p>
+<p>For JavaScript numbers the constructor property returns:</p>
+<p><b>function Number() { [native code] }</b></p>
 
+<hr>
 <h2>Browser Support</h2>
+<p><code class="w3-codespan">Number.constructor</code> is fully supported in all browsers:</p>
 <table class="browserref notranslate">
-  <tr>
-    <th style="width:20%;font-size:16px;text-align:left;">Property</th>
-    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
-    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
-    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
-    <th style="width:16%;" class="bsSafari" title="Safari"></th>
-    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsIE" title="Internet Explorer"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
   </tr>
   <tr>
-    <td style="text-align:left;">constructor</td>
+    <td>Chrome</td>
+    <td>IE</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
@@ -1718,7 +1720,7 @@ function, not the name of the function:</p>
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1812,7 +1814,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -2269,5 +2271,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_constructor_number.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:17:01 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_constructor_number.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:49:43 GMT -->
 </html>

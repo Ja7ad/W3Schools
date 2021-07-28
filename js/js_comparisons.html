@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/js/js_comparisons.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:12:08 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_comparisons.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 09:21:12 GMT -->
 <head>
 <title>JavaScript Comparison and Logical Operators</title>
 <meta charset="utf-8">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -193,6 +193,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -517,6 +519,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_strings.html">JS Strings</a>
 <a target="_top" href="js_string_methods.html">JS String Methods</a>
 <a target="_top" href="js_string_search.html">JS String Search</a>
+<a target="_top" href="js_string_templates.html">JS String Templates</a>
 <a target="_top" href="js_numbers.html">JS Numbers</a>
 <a target="_top" href="js_number_methods.html">JS Number Methods</a>
 <a target="_top" href="js_arrays.html">JS Arrays</a>
@@ -558,6 +561,16 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_performance.html">JS Performance</a>
 <a target="_top" href="js_reserved.html">JS Reserved Words</a>
 <br>
+<h2 class="left">JS Versions</h2>
+<a target="_top" href="js_versions.html">JS Versions</a>
+<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
+<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
+<a target="_top" href="js_2016.html">JS 2016</a>
+<a target="_top" href="js_2017.html">JS 2017</a>
+<a target="_top" href="js_2018.html">JS 2018</a>
+<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
+<a target="_top" href="js_history.html">JS History</a>
+<br>
 <h2 class="left">JS Objects</h2>
 <a target="_top" href="js_object_definition.html">Object Definitions</a>
 <a target="_top" href="js_object_properties.html">Object Properties</a>
@@ -588,16 +601,6 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="js_asynchronous.html">JS Asynchronous</a>
 <a target="_top" href="js_promise.html">JS Promises</a>
 <a target="_top" href="js_async.html">JS Async/Await</a>
-<br>
-<h2 class="left">JS Versions</h2>
-<a target="_top" href="js_versions.html">JS Versions</a>
-<a target="_top" href="js_es5.html">JS 2009 (ES5)</a>
-<a target="_top" href="js_es6.html">JS 2015 (ES6)</a>
-<a target="_top" href="js_2016.html">JS 2016</a>
-<a target="_top" href="js_2017.html">JS 2017</a>
-<a target="_top" href="js_2018.html">JS 2018</a>
-<a target="_top" href="js_ie_edge.html">JS IE / Edge</a>
-<a target="_top" href="js_history.html">JS History</a>
 <br>
 <h2 class="left">JS HTML DOM</h2>
 <a target="_top" href="js_htmldom.html">DOM Intro</a>
@@ -726,36 +729,36 @@ function w3_getStyleValue(elmnt,style) {
 <td rowspan="3">equal to</td>
 <td>x == 8</td>
 <td>false</td>
-<td><a target="_blank" class="w3-btn" href="tryit8852.html?filename=tryjs_comparison1">Try it &raquo;</a></td> 
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit8852.html?filename=tryjs_comparison1">Try it &raquo;</a></td> 
 </tr>
 <tr style="background-color:#f5f5f5;">
 <td>x == 5</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryitca3c.html?filename=tryjs_comparison2">Try it &raquo;</a></td> 
+<td><a target="_blank" class="w3-btn btnsmall" href="tryitca3c.html?filename=tryjs_comparison2">Try it &raquo;</a></td> 
 </tr>
 <tr style="background-color:#f5f5f5;">
 <td>x == "5"</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryit5712.html?filename=tryjs_comparison12">Try it &raquo;</a></td> 
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit5712.html?filename=tryjs_comparison12">Try it &raquo;</a></td> 
 </tr>
 <tr style="background-color:#ffffff;">
 <td rowspan="2">===</td>
 <td rowspan="2">equal value and equal type</td>
 <td>x === 5</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryit9265.html?filename=tryjs_comparison4">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit9265.html?filename=tryjs_comparison4">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#ffffff;">
 <td>x === "5"</td>
 <td>false</td>
-<td><a target="_blank" class="w3-btn" href="tryitb138.html?filename=tryjs_comparison3">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryitb138.html?filename=tryjs_comparison3">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#f5f5f5;">
 <td>!=</td>
 <td>not equal</td>
 <td>x != 8</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryit7331.html?filename=tryjs_comparison5">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit7331.html?filename=tryjs_comparison5">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#fff;">
 <td rowspan="3">!==</td>
@@ -763,47 +766,47 @@ function w3_getStyleValue(elmnt,style) {
 <td>x !== 5</td>
 <td>false</td>
 <td>
-<a class="w3-btn" href="tryit2470.html?filename=tryjs_comparison7" target="_blank">Try it &raquo;</a></td>
+<a class="w3-btn btnsmall" href="tryit2470.html?filename=tryjs_comparison7" target="_blank">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#fff">
 <td>x !== &quot;5&quot;</td>
 <td>true</td>
 <td>
-<a class="w3-btn" href="tryit247e.html?filename=tryjs_comparison6" target="_blank">Try it &raquo;</a></td>
+<a class="w3-btn btnsmall" href="tryit247e.html?filename=tryjs_comparison6" target="_blank">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#fff">
 <td>x !== 8</td>
 <td>true</td>
 <td>
-<a class="w3-btn" href="tryit5809.html?filename=tryjs_comparison13" target="_blank">Try it &raquo;</a></td>
+<a class="w3-btn btnsmall" href="tryit5809.html?filename=tryjs_comparison13" target="_blank">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#f5f5f5">
 <td>&gt;</td>
 <td>greater than</td>
 <td>x &gt; 8</td>
 <td>false</td>
-<td><a target="_blank" class="w3-btn" href="tryit748c.html?filename=tryjs_comparison8">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit748c.html?filename=tryjs_comparison8">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#ffffff;">
 <td>&lt;</td>
 <td>less than</td>
 <td>x &lt; 8</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryitd86f.html?filename=tryjs_comparison9">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryitd86f.html?filename=tryjs_comparison9">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#f5f5f5;">
 <td>&gt;=</td>
 <td>greater than or equal to</td>
 <td>x &gt;= 8</td>
 <td>false</td>
-<td><a target="_blank" class="w3-btn" href="tryitd809.html?filename=tryjs_comparison10">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryitd809.html?filename=tryjs_comparison10">Try it &raquo;</a></td>
 </tr>
 <tr style="background-color:#ffffff;">
 <td>&lt;=</td>
 <td>less than or equal to</td>
 <td>x &lt;= 8</td>
 <td>true</td>
-<td><a target="_blank" class="w3-btn" href="tryit74aa.html?filename=tryjs_comparison11">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit74aa.html?filename=tryjs_comparison11">Try it &raquo;</a></td>
 </tr>
 </table>
 </div>
@@ -846,19 +849,19 @@ if (age &lt; 18) text = &quot;Too young to buy alcohol&quot;;
 <td>&amp;&amp;</td>
 <td>and</td>
 <td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
-<td><a target="_blank" class="w3-btn" href="tryit70ff.html?filename=tryjs_comparison_and">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit70ff.html?filename=tryjs_comparison_and">Try it &raquo;</a></td>
 </tr>
 <tr>
 <td>||</td>
 <td>or</td>
 <td>(x == 5 || y == 5) is false</td>
-<td><a target="_blank" class="w3-btn" href="tryit2e5f.html?filename=tryjs_comparison_or">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit2e5f.html?filename=tryjs_comparison_or">Try it &raquo;</a></td>
 </tr>
 <tr>
 <td>!</td>
 <td>not</td>
 <td> !(x == y) is true</td>
-<td><a target="_blank" class="w3-btn" href="tryit2171.html?filename=tryjs_comparison_not">Try it &raquo;</a></td>
+<td><a target="_blank" class="w3-btn btnsmall" href="tryit2171.html?filename=tryjs_comparison_not">Try it &raquo;</a></td>
 </tr>
 </table>
 </div>
@@ -896,42 +899,42 @@ string converts to <code class="w3-codespan">NaN</code> which is always <code cl
  <tr>
   <td>2 &lt; 12</td>
   <td>true</td>
-  <td><a target="_blank" class="w3-btn" href="tryit5319.html?filename=tryjs_comparison_20">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit5319.html?filename=tryjs_comparison_20">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>2 &lt; &quot;12&quot;</td>
   <td>true</td>
-  <td><a target="_blank" class="w3-btn" href="tryit672a-2.html?filename=tryjs_comparison_21">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit672a-2.html?filename=tryjs_comparison_21">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>2 &lt; &quot;John&quot;</td>
   <td>false</td>
-  <td><a target="_blank" class="w3-btn" href="tryit73ab.html?filename=tryjs_comparison_23">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit73ab.html?filename=tryjs_comparison_23">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>2 &gt; &quot;John&quot;</td>
   <td>false</td>
-  <td><a target="_blank" class="w3-btn" href="tryit2c72.html?filename=tryjs_comparison_24">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit2c72.html?filename=tryjs_comparison_24">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>2 == &quot;John&quot;</td>
   <td>false</td>
-  <td><a target="_blank" class="w3-btn" href="tryit6f1a.html?filename=tryjs_comparison_25">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit6f1a.html?filename=tryjs_comparison_25">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>&quot;2&quot; &lt; &quot;12&quot;</td>
   <td>false</td>
-  <td><a target="_blank" class="w3-btn" href="tryit0b49.html?filename=tryjs_comparison_26">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit0b49.html?filename=tryjs_comparison_26">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>&quot;2&quot; &gt; &quot;12&quot;</td>
   <td>true</td>
-  <td><a target="_blank" class="w3-btn" href="tryit94c8.html?filename=tryjs_comparison_27">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit94c8.html?filename=tryjs_comparison_27">Try it &raquo;</a></td>
  </tr>
  <tr>
   <td>&quot;2&quot; == &quot;12&quot;</td>
   <td>false</td>
-  <td><a target="_blank" class="w3-btn" href="tryit93cb.html?filename=tryjs_comparison_28">Try it &raquo;</a></td>
+  <td><a target="_blank" class="w3-btn btnsmall" href="tryit93cb.html?filename=tryjs_comparison_28">Try it &raquo;</a></td>
  </tr>
 </table>
 
@@ -995,7 +998,7 @@ alert(x <input name="ex1" maxlength="1" style="width: 14px;"> y);
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1089,7 +1092,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -1546,5 +1549,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/js/js_comparisons.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 18:12:11 GMT -->
+<!-- Mirrored from www.w3schools.com/js/js_comparisons.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 09:21:15 GMT -->
 </html>

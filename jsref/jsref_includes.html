@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_includes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:08 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_includes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:50:57 GMT -->
 <head>
 <title>JavaScript String includes() Method</title>
 <meta charset="utf-8">
@@ -71,7 +71,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -195,6 +195,8 @@ function w3_getStyleValue(elmnt,style) {
       <a class="w3-bar-item w3-button" href='../cpp/default.html' title='C++ Tutorial'>C++</a>
       <a class="w3-bar-item w3-button" href='../cs/index.html' title='C# Tutorial'>C#</a>
       <a class="w3-bar-item w3-button" href='../r/default.html' title='R Tutorial'>R</a>
+      <a class="w3-bar-item w3-button" href='../react/default.html' title='React Tutorial'>React</a>
+      <a class="w3-bar-item w3-button" href='../kotlin/index.html' title='Kotlin Tutorial'>Kotlin</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gSearch(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='gTra(this)' title='Translate W3Schools'>&#xe801;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
@@ -1620,42 +1622,39 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>JavaScript String <span class="color_h1">includes()</span> Method</h1>
+<h1>JavaScript String includes()</h1>
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_fromcharcode.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
 <a class="w3-right w3-btn" href="jsref_indexof.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div class="w3-example">
 <h3>Example</h3>
 <p>Check if a string includes "world":</p>
 <div class="w3-code notranslate jsHigh">
-var str = &quot;Hello world, welcome to the universe.&quot;;<br>
-var n = str.includes(&quot;world&quot;);
+let str = &quot;Hello world, welcome to the universe.&quot;;<br>
+str.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;// Returns true
 </div>
-<!--<p> 
-The result of <em>n</em> will be:</p>
-<div class="w3-code notranslate">
-true
-</div>-->
 <a target="_blank" href="tryitcd3b.html?filename=tryjsref_includes" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 <p>More "Try it Yourself" examples below.</p>
 <hr>
 
 <h2>Definition and Usage</h2>
-<p>The <code class="w3-codespan">includes()</code> method determines whether a string contains the 
-characters of a specified string.</p>
-<p>This method returns <code class="w3-codespan">true</code> if the string contains the characters, and <code class="w3-codespan">false</code> if not.</p>
-<p><b>Note:</b> The <code class="w3-codespan">includes()</code> method is case sensitive.</p>
+<p>The <code class="w3-codespan">includes()</code> method returns <code class="w3-codespan">true</code>
+if a string contains a specified string, otherwise <code class="w3-codespan">false</code>.</p>
+
+<div class="w3-note">
+<p><code class="w3-codespan">includes()</code> is case sensitive.</p>
+</div>
+
 <hr>
 
 <h2>Browser Support</h2>
+<p>The numbers in the table specify the first browser version that fully supports the method.</p>
 <table class="browserref notranslate">
-  <tr>
-    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+  <tr style="height:60px">
     <th style="width:16%;" class="bsChrome" title="Chrome"></th>
     <th style="width:16%;" class="bsEdge" title="Edge"></th>
     <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
@@ -1663,14 +1662,21 @@ characters of a specified string.</p>
     <th style="width:16%;" class="bsOpera" title="Opera"></th>                
   </tr>
   <tr>
-    <td style="text-align:left;">includes()</td>
-    <td>41</td>
-    <td>12.0</td>    
-    <td>40</td>
-    <td>9</td>
-    <td>28</td>
+    <td>Chrome 41</td>
+    <td>Edge 12</td>    
+    <td>Firefox 40</td>
+    <td>Safari 9</td>
+    <td>Opera 36</td>
+  </tr>
+  <tr>
+    <td>Mar 2015</td>
+    <td>Jul 2015</td>    
+    <td>Aug 2015</td>
+    <td>Oct 2015</td>
+    <td>Mar 2016</td>
   </tr>
 </table>
+<p><code class="w3-codespan">includes()</code> is not supported in Internet Explorer.</p>
 <hr>
 
 <h2>Syntax</h2>
@@ -1713,29 +1719,29 @@ characters of a specified string.</p>
 </table>
 
 <hr>
-
 <h2>More Examples</h2>
-
 <div class="w3-example">
 <p>Check if a string includes "world", starting the search at position 12:</p>
- <div class="w3-code notranslate jsHigh">
-var str = &quot;Hello world, welcome to the universe.&quot;;<br>
-var n = str.includes(&quot;world&quot;, 12);
+<div class="w3-code notranslate jsHigh">
+let str = &quot;Hello world, welcome to the universe.&quot;;<br>
+str.includes(&quot;world&quot;, 12)&nbsp;&nbsp;&nbsp;// Returns false
 </div>
-<!--<p> 
-The result of <em>n</em> will be:</p>
-<div class="w3-code notranslate">
- false
-</div>-->
- <a class="w3-btn w3-margin-bottom" href="tryit9f43.html?filename=tryjsref_includes2" target="_blank">Try it Yourself &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit9f43.html?filename=tryjsref_includes2" target="_blank">Try it Yourself &raquo;</a>
 </div>
+
 <hr>
+<h2>Related Pages</h2>
+<p><a href="../js/js_strings.html">String Tutorial</a></p>
+<p><a href="../js/js_string_methods.html">String Methods</a></p>
+<p><a href="../js/js_string_search.html">String Search</a></p>
+
+<hr>
+
 <div class="w3-clear w3-center nextprev">
 <a class="w3-left w3-btn" href="jsref_fromcharcode.html">&#10094;<span class="w3-hide-small"> Previous</span></a>
 <a class="w3-btn" href="jsref_obj_string.html"><span class="w3-hide-small">JavaScript String </span>Reference</a>
 <a class="w3-right w3-btn" href="jsref_indexof.html"><span class="w3-hide-small">Next </span>&#10095;</a>
 </div>
-<!--<p><a href="jsref_obj_string.asp" class="w3-btn w3-white w3-border" title="JavaScript String Reference">&#10094; JavaScript String Reference</a></p>-->
 
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -1756,7 +1762,7 @@ The result of <em>n</em> will be:</p>
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
 <div class="sidesection">
@@ -1850,7 +1856,7 @@ href="https://courses.w3schools.com/" target="_blank" onclick="ga('send', 'event
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="../images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -2307,5 +2313,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/jsref_includes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:18:08 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/jsref_includes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:50:57 GMT -->
 </html>

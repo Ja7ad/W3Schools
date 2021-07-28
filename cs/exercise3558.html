@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '1';exheadings[0] = 'Syntax';exnames[1] = 'comments';excounts[1] = '1';exheadings[1] = 'Comments';exnames[2] = 'variables';excounts[2] = '5';exheadings[2] = 'Variables';exnames[3] = 'data_types';excounts[3] = '4';exheadings[3] = 'Data Types';exnames[4] = 'user_input';excounts[4] = '2';exheadings[4] = 'User Input';exnames[5] = 'operators';excounts[5] = '4';exheadings[5] = 'Operators';exnames[6] = 'math';excounts[6] = '3';exheadings[6] = 'Math';exnames[7] = 'strings';excounts[7] = '6';exheadings[7] = 'Strings';exnames[8] = 'booleans';excounts[8] = '2';exheadings[8] = 'Booleans';exnames[9] = 'conditions';excounts[9] = '5';exheadings[9] = 'If...Else';exnames[10] = 'switch';excounts[10] = '2';exheadings[10] = 'Switch';exnames[11] = 'while_loop';excounts[11] = '5';exheadings[11] = 'Loops';exnames[12] = 'arrays';excounts[12] = '5';exheadings[12] = 'Arrays';exActiveNo = 12;exnames[13] = 'methods';excounts[13] = '4';exheadings[13] = 'Methods';exnames[14] = 'classes';excounts[14] = '7';exheadings[14] = 'Classes/Objects';exnames[15] = 'exceptions';excounts[15] = '2';exheadings[15] = 'Exceptions';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_arrays5 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:46:05 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_arrays5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:59:22 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -27,46 +27,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <!-- begin cmp -->
@@ -85,7 +53,7 @@ googletag.pubads().enableSingleRequest();
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -93,7 +61,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -111,10 +79,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
 }
@@ -1523,9 +1489,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1580,15 +1546,15 @@ foreach (string i in cars)
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');snhb.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
@@ -1778,7 +1744,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    
+    snhb.startAuction(['try_it_leaderboard']);
   }
 }
 
@@ -2246,5 +2212,5 @@ function colorcoding() {
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_arrays5 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:46:05 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_arrays5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:59:22 GMT -->
 </html>

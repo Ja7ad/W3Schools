@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_func_mysql_date_format2 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:46:16 GMT -->
+<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_func_mysql_date_format2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:59:50 GMT -->
 <head>
 <title>MySQL Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -62,7 +62,7 @@ snhb.options = {
 #adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
 #adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
 <script type="text/javascript">
-__cmp("setLogo", "../images/w3schools_logo_500_04AA6D.png");
+__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
 __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 </script>
 <script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
@@ -152,11 +152,11 @@ function browserResize() {
 .chromesupport,.iesupport,.safarisupport,.firefoxsupport,.operasupport {
 	width:20px; height:20px; float:left; margin-left:15px;background-repeat:no-repeat;
 }
-.iesupport		{background-image:url('../images/incompatible_ie2020.gif');}
-.chromesupport	{background-image:url('../images/compatible_chrome2020.gif');}
-.firefoxsupport	{background-image:url('../images/incompatible_firefox2020.gif');}
-.safarisupport	{background-image:url('../images/compatible_safari2020.gif');}
-.operasupport	{background-image:url('../images/compatible_opera2020.gif');}
+.iesupport		{background-image:url('https://www.w3schools.com/images/incompatible_ie2020.gif');}
+.chromesupport	{background-image:url('https://www.w3schools.com/images/compatible_chrome2020.gif');}
+.firefoxsupport	{background-image:url('https://www.w3schools.com/images/incompatible_firefox2020.gif');}
+.safarisupport	{background-image:url('https://www.w3schools.com/images/compatible_safari2020.gif');}
+.operasupport	{background-image:url('https://www.w3schools.com/images/compatible_opera2020.gif');}
 </style>
 </head>
 <body>
@@ -366,6 +366,8 @@ function w3schoolsNoWebSQLSelectStar(x) {
 function w3schoolsNoWebSQLSubmit() {
 	var t = document.getElementById("textareaCodeSQL").value;
 	document.getElementById("code").value = t;
+	
+	t=escape(t);document.getElementById("bt").value="1";
 		
 	document.getElementById("tryitform").action="https://tryit.w3schools.com/trymysql_view.php?x=" + Math.random();
 	validateForm();
@@ -384,5 +386,5 @@ w3schoolsWriteDBInfo();
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_func_mysql_date_format2 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Jul 2021 19:46:16 GMT -->
+<!-- Mirrored from www.w3schools.com/mysql/trymysql.asp?filename=trysql_func_mysql_date_format2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:59:50 GMT -->
 </html>
