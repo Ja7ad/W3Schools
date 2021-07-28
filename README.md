@@ -16,7 +16,11 @@ W3schools tutorials are available at any time within your local computer.
 
 3. Open Browser for access to w3schools from http://127.0.0.1 or http://localhost
 
+<<<<<<< HEAD
 ## ⁉️ How to download zipped edition?
+=======
+## ⁉️ How to used zipped edition?
+>>>>>>> fe93c2ea15184f24d2625de85be3cf62b55b4a7d
 
 1. Download Latest Release : [Release](https://github.com/Ja7adR/W3Schools/releases)
 2. Just run file `index.html`
