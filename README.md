@@ -8,7 +8,9 @@ W3schools tutorials are available at any time within your local computer.
 
 ## ⁉️ How to run docker image ?
 
-1. First pull image to your docker images : `docker pull ja7adr/w3schools`
+1. First pull image to your docker images : 
+  - `docker pull ja7adr/w3schools`
+  - `docker pull ghcr.io/ja7ad/w3schools:latest`
 2. Create container from image : 
 
 - `docker run -d -p 80:80 --name w3schools w3schools:latest`
