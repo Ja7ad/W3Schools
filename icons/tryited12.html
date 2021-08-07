@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-amazon by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:39:28 GMT -->
+<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-amazon by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Aug 2021 17:56:19 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -287,24 +287,6 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   .stack         {display:none;}
   #tryhome       {display:block;}
 }
-
-.fa {
-  display:inline-block;
-  font:normal normal normal 14px/1 FontAwesome;
-  font-size:inherit;
-  text-rendering:auto;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  transform:translate(0,0);
-}
-.fa-2x {
-  font-size:2em;
-}
-.fa-home:before {content: '\e800'; }
-.fa-save:before {content: '\e804'; }
-.fa-rotate:before {content: '\e813'; }
-.fa-menu:before { content: '\f0c9'; }
-.fa-adjust:before { content: '\e80b'; }
 .loader {
     border: 6px solid #f3f3f3; /* Light grey */
     border-top: 6px solid #3498db; /* Blue */
@@ -351,9 +333,6 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 }
 .fa {
   padding: 10px 10px!important;
-}
-#saveGDriveBtn, #loadGDriveBtn {
-  padding:22px 26px;
 }
 a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
     font-size: 28px!important;
@@ -416,48 +395,16 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
     </div>
   </div>
 </div>
-<div id="driveSaveModal" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content">
-    <div class="w3-display-container">
-      <span onclick="resetDriveSaveModal()" class="w3-button w3-display-topright ws-hover-black" style="font-weight:bold;">&times;</span>
-      <div id="driveText" class="w3-panel w3-large">
-        <h2>Save to Google Drive</h2>
-        <p>If you have a Google account, you can save this code to your Google Drive.</p>
-        <p>Google will ask you to confirm Google Drive access.</p>
-        <p><label class="w3-text-black"><b>Save file as:</b></label>
-        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryicons_fa-amazon">
-        <button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white w3-margin-top"  title="Save file to Google Drive" onclick="handleAuthClick(event,'save')"><img style="margin-right:5px" alt="Save file to Google Drive" title="Save file to Google Drive" src="https://www.w3schools.com/images/driveicon.png">Save file</button>
-        <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> The 10th of June 2021, we will discontinue the ability to save to Google Drive.<br><br>You will still be able to access your stored code on Google Drive.</p>
-      </div>
-      <div class="w3-panel w3-large loader" id="driveSavedPanel" style="display:none">
-      <p id="driveSavedText"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="driveLoadModal" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content">
-    <div class="w3-display-container">
-      <span onclick="resetDriveLoadModal()" class="w3-button w3-display-topright ws-hover-black" style="font-weight:bold;">&times;</span>
-      <div class="w3-panel w3-large">
-        <h2>Open from Google Drive</h2>
-        <p>If you have saved a file to Google Drive, you can open it here:</p>
-        <p><button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white" title="Open file from Google Drive" onclick="handleAuthClick(event,'open')"><img style="margin-right:5px" alt="Open file from Google Drive" title="Open file from Google Drive" src="https://www.w3schools.com/images/driveicon.png">Open file</button></p>
-        <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> The 10th of June 2021, we will discontinue the ability to save to Google Drive.<br><br>You will still be able to access your stored code on Google Drive.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
   <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
-  <a href="javascript:void(0);" onclick="openMenu();gDrive()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;x"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons w3-hide-small fa fa-save" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
   <button class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" style="background-color:#04AA6D;color:white;font-size:20px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('../index.html', ''); folder = folder.substr(0, folder.indexOf('../index.html')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <a class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" style="background-color:#04AA6D; color: white; font-size: 16px; padding: 8px 16px; margin-right: 10px; margin-top: 3px; display: block; float: right; border-radius: 25px;" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your own website</a>
   <span class="w3-right w3-hide-small w3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
 </div>
@@ -473,8 +420,6 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
   <div class="w3-bar-block">
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
     <a class="w3-bar-item w3-button" href="javascript:void(0);" title="Save" onclick="openMenu();click_savebtn()"><i class="fa fa-save" style="font-size:26px;margin-right:10px;"></i><span style="position:relative;top:-4px;left:2px;">Save Code</span></a>
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' id="saveGDriveBtn" title="Save to Google Drive" onclick="openMenu();click_google_savebtn()"><img src="https://www.w3schools.com/images/driveicon_32.png" alt="Save to Google Drive" title="Save to Google Drive" style="margin-right:10px;width:24px;"><span style="position:relative;left:1px;">Save to Google Drive</span></a>
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' id="loadGDriveBtn" title="Load from Google Drive" onclick="openMenu();click_google_loadbtn()"><img src="https://www.w3schools.com/images/driveicon_32.png" alt="Load from Google Drive" title="Load from Google Drive" style="margin-right:10px;width:24px;"><span style="position:relative;left:1px;">Load from Google Drive</span></a>
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
   </div>
   <footer class="w3-container w3-small ws-grey">
@@ -511,7 +456,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-amazon by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 11:39:28 GMT -->
+<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-amazon by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Aug 2021 17:56:19 GMT -->
 </html> 
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -748,16 +693,6 @@ function click_savebtn() {
   }
   document.getElementById('saveModal').style.display = 'block';
 }
-function click_google_savebtn() {
-  if (window.editor) {
-    window.editor.save();
-  }
-  document.getElementById('driveSaveModal').style.display='block'
-}
-
-function click_google_loadbtn() {
-  document.getElementById('driveLoadModal').style.display='block'
-}
 function retheme() {
   var cc = document.body.className;
   if (cc.indexOf("darktheme") > -1) {
@@ -798,152 +733,6 @@ function w3_getStyleValue(elmnt,style) {
     } else {
         return elmnt.currentStyle[style];
     }
-}
-//SAVE AND OPEN SCRIPT
-var oauthToken;
-var userAction;
-var pickerApiLoaded;
-var developerKey = 'AIzaSyAMZDPXiGcCNWs1UCWG9LS6kkW5YiABfJ0';
-var CLIENT_ID = '451843133508-ckbr5r6ch1ofqbmh87oll4u6ltinqv2t.apps.googleusercontent.com';
-var SCOPES = ['https://www.googleapis.com/auth/drive.file'];
-
-//Check if current user has authorized this application
-function checkAuth() {
-    gapi.auth.authorize(
-    {
-        'client_id': CLIENT_ID,
-        'scope': SCOPES.join(' '),
-        'immediate': true
-    }, handleAuthResult);
-}
-
-//Handle response from authorization server
-function handleAuthResult(authResult) {
-    if (authResult && !authResult.error) {
-        oauthToken = authResult.access_token;
-        loadApi();
-    }
-}
-
-// Initiate auth flow in response to user clicking authorize button
-function handleAuthClick(event,userClick) {
-    userAction = userClick;
-    gapi.auth.authorize(
-        {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-        handleAuthResult);
-    return false;
-}
-
-// Load API library
-function loadApi() {
-    gapi.client.load('drive', 'v3');
-    gapi.load('picker', {'callback': onPickerApiLoad});
-}
-function onPickerApiLoad() {
-    pickerApiLoaded = true;
-    if (userAction=="save") {
-        userAction="";
-        document.getElementById('driveText').style.display='none';
-        document.getElementById('driveSavedPanel').style.display='block';
-        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)     
-    }
-    if (userAction=="open") {
-        userAction="";
-        createPicker();
-    }
-}
-
-// Create and render a Picker object for picking HTML file
-function createPicker() {
-    if (pickerApiLoaded) {
-        var view = new google.picker.View(google.picker.ViewId.DOCS);
-        view.setMimeTypes("text/html");
-        var picker = new google.picker.PickerBuilder().
-            addView(view).
-            setOAuthToken(oauthToken).
-            setDeveloperKey(developerKey).
-            setCallback(pickerCallback).
-            build();
-        picker.setVisible(true);
-    }
-}
-// Put content of file in tryit editor
-function pickerCallback(data) {
-    var docID = '';
-    if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
-        var doc = data[google.picker.Response.DOCUMENTS][0];
-        docID = doc[google.picker.Document.ID];
-        getContentOfFile(docID);
-    }
-}
-
-//Get contents
-function getContentOfFile(theID){
-    gapi.client.request({'path': '/drive/v3/files/'+theID+'?alt=media&key='+developerKey,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
-        var myToken = gapi.auth.getToken();
-        var code = JSON.parse(theResponseTXT);
-        code = code.gapiRequest.data.body;
-        document.getElementById("textareaCode").value=code;
-        window.editor.getDoc().setValue(code);
-        submitTryit(1);
-        resetDriveLoadModal();
-        }
-    });
-}
-
-var createFileWithHTMLContent = function(name,data,callback) {
-    const boundary = '-------314159265358979323846';
-    const delimiter = "\r\n--" + boundary + "\r\n";
-    const close_delim = "\r\n--" + boundary + "--";
-    const contentType = 'text/html';
-
-    var metadata = {
-        'name': name,
-        'mimeType': contentType
-    };
-
-    var multipartRequestBody =
-        delimiter +
-        'Content-Type: application/json\r\n\r\n' +
-        JSON.stringify(metadata) +
-        delimiter +
-        'Content-Type: ' + contentType + '\r\n\r\n' +
-        data +
-        close_delim;
-
-    var request = gapi.client.request({
-        'path': '/upload/drive/v3/files',
-        'method': 'POST',
-        'params': {'uploadType': 'multipart'},
-        'headers': {
-            'Content-Type': 'multipart/related; boundary="' + boundary + '"'
-        },
-        'body': multipartRequestBody});
-    if (!callback) {
-        callback = function(file) {
-            console.log(file);
-            document.getElementById("driveSavedText").innerHTML = file.name + " saved in Google Drive";
-            document.getElementById("driveSavedPanel").className = "w3-panel w3-large";
-        };
-    }
-    request.execute(callback);
-}
-
-if (navigator.userAgent.indexOf("MSIE") > 0 || navigator.userAgent.indexOf("Edge") > 0) {
-    document.getElementById("saveGDriveBtn").style.display = "none";
-    document.getElementById("loadGDriveBtn").style.display = "none";
-}
-
-
-function resetDriveSaveModal() {
-    document.getElementById('driveSavedText').innerHTML='';
-    document.getElementById('driveSaveModal').style.display='none'
-    document.getElementById('driveSavedPanel').style.display='none'
-    document.getElementById('driveText').style.display='block'
-    document.getElementById("driveSavedPanel").className = "w3-panel w3-large loader";
-}
-function resetDriveLoadModal() {
-    document.getElementById('driveLoadModal').style.display='none'
 }
 
 function saveFile(code) {
@@ -1025,29 +814,11 @@ window.onclick = function(event) {
     if (event.target == document.getElementById("saveModal")) {
         hideAndResetModal();
     }
-    if (event.target == document.getElementById("driveSaveModal")) {
-        resetDriveSaveModal();
-    }
-    if (event.target == document.getElementById("driveLoadModal")) {
-        resetDriveLoadModal();
-    }
     if (event.target == document.getElementById("menuOverlay")) {
         openMenu();
     }
     
 }
-
-function gDrive() {
-
-  var gDri = document.createElement('script'); gDri.id = 'gDri'; gDri.type = 'text/javascript'; gDri.async = true;
-  gDri.src = 'https://apis.google.com/js/client.js?onload=checkAuth';
-  var el = document.getElementById('gDri');
-  if (el == null) {
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gDri, s);
-  }
-
-};
 </script>
-
 </body>
 </html>

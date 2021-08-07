@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'selectors';excounts[0] = '4';exheadings[0] = 'Selectors';exnames[1] = 'howto';excounts[1] = '4';exheadings[1] = 'How To...';exnames[2] = 'background';excounts[2] = '5';exheadings[2] = 'Background';exActiveNo = 2;exnames[3] = 'border';excounts[3] = '4';exheadings[3] = 'Border';exnames[4] = 'margin';excounts[4] = '4';exheadings[4] = 'Margin';exnames[5] = 'padding';excounts[5] = '3';exheadings[5] = 'Padding';exnames[6] = 'dimension';excounts[6] = '2';exheadings[6] = 'Height/Width';exnames[7] = 'boxmodel';excounts[7] = '4';exheadings[7] = 'Box Model';exnames[8] = 'outline';excounts[8] = '3';exheadings[8] = 'Outline';exnames[9] = 'text';excounts[9] = '5';exheadings[9] = 'Text';exnames[10] = 'font';excounts[10] = '5';exheadings[10] = 'Font';exnames[11] = 'link';excounts[11] = '4';exheadings[11] = 'Links';exnames[12] = 'list';excounts[12] = '4';exheadings[12] = 'Lists';exnames[13] = 'table';excounts[13] = '6';exheadings[13] = 'Tables';exnames[14] = 'display_visibility';excounts[14] = '4';exheadings[14] = 'Display/Visibility';exnames[15] = 'positioning';excounts[15] = '5';exheadings[15] = 'Positioning';exnames[16] = 'overflow';excounts[16] = '3';exheadings[16] = 'Overflow';exnames[17] = 'align';excounts[17] = '2';exheadings[17] = 'Align';exnames[18] = 'combinators';excounts[18] = '4';exheadings[18] = 'Combinators';exnames[19] = 'pseudo_classes';excounts[19] = '4';exheadings[19] = 'Pseudo-classes';exnames[20] = 'pseudo_elements';excounts[20] = '3';exheadings[20] = 'Pseudo-elements';exnames[21] = 'image_transparency';excounts[21] = '2';exheadings[21] = 'Opacity';exnames[22] = 'attribute_selectors';excounts[22] = '6';exheadings[22] = 'Attribute Selectors';exnames[23] = 'css3_borders';excounts[23] = '2';exheadings[23] = 'Rounded Corners';exnames[24] = 'css3_border_images';excounts[24] = '2';exheadings[24] = 'Border Images';exnames[25] = 'css3_backgrounds';excounts[25] = '5';exheadings[25] = 'Backgrounds';exnames[26] = 'css3_colors';excounts[26] = '4';exheadings[26] = 'Colors';exnames[27] = 'css3_gradients';excounts[27] = '7';exheadings[27] = 'Gradients';exnames[28] = 'css3_shadows';excounts[28] = '5';exheadings[28] = 'Shadow Effects';exnames[29] = 'css3_text_effects';excounts[29] = '3';exheadings[29] = 'Text Effects';exnames[30] = 'css3_fonts';excounts[30] = '2';exheadings[30] = 'Web Fonts';exnames[31] = 'css3_2dtransforms';excounts[31] = '4';exheadings[31] = '2D Transforms';exnames[32] = 'css3_3dtransforms';excounts[32] = '3';exheadings[32] = '3D Transforms';exnames[33] = 'css3_transitions';excounts[33] = '5';exheadings[33] = 'Transitions';exnames[34] = 'css3_animations';excounts[34] = '6';exheadings[34] = 'Animations';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/exercise.asp?filename=exercise_background4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:14:35 GMT -->
+<!-- Mirrored from www.w3schools.com/css/exercise.asp?filename=exercise_background4 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Aug 2021 18:25:02 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -27,46 +27,14 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <!-- begin cmp -->
@@ -93,7 +61,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -111,10 +79,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
 }
@@ -1523,9 +1489,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1585,7 +1551,7 @@ required = {
     <div class="codecontainerinner">
       <div style="overflow:auto;padding-bottom:10px;">
         <div class="w3-left" style="margin-top:7px">Edit This Code:</div>
-        <button class="w3s-exercisebtn w3-right" style="min-width:140px" type="button" onclick="submitTryit('', 1);">Check Your Code</button>
+        <button class="w3s-exercisebtn w3-right" style="min-width:140px" type="button" onclick="submitTryit('', 1);snhb.startAuction(['try_it_leaderboard']);">Check Your Code</button>
       </div>
       <textarea style="width:100%;height:95%;border:1px solid #d3d3d3;" autocomplete="off" id="textareaCode" wrap="logical"><!DOCTYPE html>
 <html>
@@ -1604,7 +1570,7 @@ body {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/exercise.asp?filename=exercise_background4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Jul 2021 12:14:35 GMT -->
+<!-- Mirrored from www.w3schools.com/css/exercise.asp?filename=exercise_background4 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Aug 2021 18:25:02 GMT -->
 </html>
 </textarea>
       <form autocomplete="off" style="display:none;">
