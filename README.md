@@ -13,8 +13,13 @@ W3schools tutorials are available at any time within your local computer.
   - `docker pull ghcr.io/ja7ad/w3schools:latest`
 2. Create container from image : 
 
-- `docker run -d -p 80:80 --name w3schools w3schools:latest`
-- `docker run -d -p 127.0.0.1:80:80 --name w3schools w3schools:latest`
+- `docker run -d -p 80:80 --name w3schools ja7adr/w3schools`
+- `docker run -d -p 127.0.0.1:80:80 --name w3schools ja7adr/w3schools`
+
+or
+
+- `docker run -d -p 80:80 --name w3schools ghcr.io/ja7ad/w3schools`
+- `docker run -d -p 127.0.0.1:80:80 --name w3schools ghcr.io/ja7ad/w3schools`
 
 3. Open Browser for access to w3schools from http://127.0.0.1 or http://localhost
 
