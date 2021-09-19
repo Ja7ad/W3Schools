@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 05:53:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><title>W3Schools Video Player</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/roboto-mono-v13-latin-500.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-sans-pro-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-sans-pro-v14-latin-600.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/freckle-face-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="files/videojs/video-js.css">
+<link rel="stylesheet" href="files/videojs/videojs-quality-menu.css">
+<link rel="stylesheet" href="files/videojs/videojs-playlist-ui.css">
+<link rel="stylesheet" href="../lib/w3schools27.css">
+<link rel="stylesheet" href="files/css/custom.css">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+</head>
+    <body>
+
+        <script>
+            let env = ""
+        </script>
+        
+        <div class="w3-bar w3-card-2 notranslate" style="position: fixed;z-index: 4;font-size: 18px;background-color: white;color:#282A35;padding-left:12px;padding-right:16px;font-family: 'Source Sans Pro', sans-serif;">
+            <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-left w3-padding-16" title="Home" style="width:77px">
+                <img src="files/images/w3schools_logo_500_04AA6D.png" height="42">
+            </a>
+          
+            <div id="loginactioncontainer" class="w3-right w3-padding-16" style="width:fit-content;padding-top:12px!important">
+                <div id="mypagediv"></div>
+                <a href="#" id="topbutton" onclick="ga('send', 'event', 'Videos' , 'PlayerTopButton');loginOrBuy();" style="display:none;"><button class="_1VfsI _1LtgI _3_H0V"><div id="topbuttontext">Log in and buy video</div></button></a>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal" style="display: none;padding-top: 75px;">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="view-plans">
+                      <div class="plans-container">
+                        <div class="pro-plan-bkg">
+                          <div class="pro-plan">
+                            <div class="time-badge">UNLIMITED PLAYBACKS</div>
+                            <div class="price">$9.99</div>
+                            <div class="name">Complete HTML video</div>
+                            <div class="description">Learn about HTML elements and how to structure the building blocks of a website. <br><br>Includes 22 chapters:</div>
+                            <div class="feature-list">
+                              <ul class="checked-list">
+                                <li>Introduction</li>
+                                <li>Editors</li>                      
+                                <li>Elements</li>
+                                <li>Attributes</li>                      
+                                <li>Headings</li>
+                                <li>Paragraphs</li>                      
+                                <li>Styles</li>
+                                <li>Formatting</li>                      
+                                <li>Comments</li>
+                                <li>Colors</li>                      
+                                <li>CSS</li>
+                                <li>Links</li>                      
+                                <li>Images</li>
+                                <li>Tables</li>                      
+                                <li>Lists</li>
+                                <li>Block vs. Inline</li>                      
+                                <li>Classes</li>
+                                <li>ID</li>                      
+                                <li>Iframes</li>
+                                <li>JavaScript</li>                      
+                                <li>Head</li>
+                                <li>Forms</li>                      
+                              </ul>
+                            </div>
+                            <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerModalButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="modalbuttontext">Log in and buy video</div></button></a>
+                          </div>
+                        </div>
+                        <div class="free-plan">
+                          <!--<div class="free-badge">FREE</div>-->
+                          <div class="price">$0</div>
+                          <div class="name">Free sample</div>
+                          <div class="description">The introduction video is free!</div>
+                          <div class="feature-list">
+                            <ul class="checked-list checked-list-green">
+                              <li>Introduction
+                              </li>
+                            </ul>
+                          </div>
+                          <br><button style="width:fit-content" class="_1VfsI _1LtgI _3_H0V" onclick="ga('send', 'event', 'Videos' , 'PlayerModalViewSample');">View sample</button>
+                        </div>
+                      </div>
+                    </div>  </div>
+          
+          </div>
+
+        <div class="videomain">
+            <h1>HTML VIDEOS</h1>            
+            <video
+                id="video"
+                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
+                preload="none"
+                controls>
+            </video>
+        </div>
+
+        <div class="header">CHAPTERS:</div>
+
+        <div class="videoleftmenu">
+            <div class="videoleftmenuinner">
+                <div class="vjs-playlist vjs-playlist.vjs-playlist-horizontal vjs-playlist-height"></div>
+            </div>
+        </div>
+
+        </div>
+        <div id="viewplans" class="view-plans" style="background-color:#fff;width:100%;height:900px;display:none;">
+            <div class="plans-container" style="padding-top:80px;">
+              <div class="pro-plan-bkg">
+                <div id="proplan_bottom" class="pro-plan" style="width: 100%; max-width: 660px; display: block;">
+                  <div class="time-badge">UNLIMITED PLAYBACKS</div>
+                  <div class="price">$9.99</div>
+                  <div class="name">Complete HTML video</div>
+                  <div class="description">Learn about HTML elements and how to structure the building blocks of a website. <br><br>Includes 22 chapters:</div>
+                            <div class="feature-list">
+                    <ul class="checked-list">
+                      <li>Introduction</li>
+                      <li>Editors</li>                      
+                      <li>Elements</li>
+                      <li>Attributes</li>                      
+                      <li>Headings</li>
+                      <li>Paragraphs</li>                      
+                      <li>Styles</li>
+                      <li>Formatting</li>                      
+                      <li>Comments</li>
+                      <li>Colors</li>                      
+                      <li>CSS</li>
+                      <li>Links</li>                      
+                      <li>Images</li>
+                      <li>Tables</li>                      
+                      <li>Lists</li>
+                      <li>Block vs. Inline</li>                      
+                      <li>Classes</li>
+                      <li>ID</li>                      
+                      <li>Iframes</li>
+                      <li>JavaScript</li>                      
+                      <li>Head</li>
+                      <li>Forms</li>                      
+                    </ul>
+                  </div>
+                  <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerBottomButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="planbuttontext">Log in and buy video</div></button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="videofooter">
+            While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
+            <a href="../about/about_privacy.html">cookie and privacy policy</a>.<br>
+            <a href="../about/about_copyright.html">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+            <br>
+            <div class="w3-center w3-small">
+              <a href="../index.html">
+                <img src="files/images/w3schools_logo_500_04AA6D.png" height="42">
+              </a>
+            </div>
+          </div>
+
+        
+        <script src="files/videojs/video.min.js"></script>
+        <script src="files/videojs/videojs-playlist.min.js"></script>
+        <script src="files/videojs/videojs-playlist-ui.min.js"></script>
+
+        <script>
+
+            const vodDomain = "https://videos"+env+".w3schools.com/"
+
+            const player = videojs('video', {
+                aspectRatio: '16:9',
+                responsive: true,  
+                html5: {vhs: {withCredentials: true}}  
+            });
+            
+        </script>
+
+        <script src="files/videojs/videojs-quality-menu.min.js"></script>
+            
+        <script>
+
+            videojs.getPlayer('video').ready(function() {
+                
+                this.qualityMenu({
+                    defaultResolution: '720p'
+                });
+
+            });
+
+            player.playlistUi();
+
+
+            player.playlist([
+                {
+                    name: '1. Introduction',
+                    description: 'HTML is the standard markup language for creating Web pages.',
+                    duration: 193,
+                    sources: [
+                        { src: `${vodDomain}files/intro/DASHISO1/01_w3schools_html_intro.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}files/intro/AppleHLS1/01_w3schools_html_intro.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_01_introduction.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_01_introduction.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/01_w3schools_html_intro.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '2. HTML Editors',
+                    description: '',
+                    duration: 87,
+                    sources: [
+                        { src: `${vodDomain}courses/5454aa48-b6f5-4c75-8349-1a1bd71be6ff/DASHISO1/02_w3schools_html_editors.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/5454aa48-b6f5-4c75-8349-1a1bd71be6ff/AppleHLS1/02_w3schools_html_editors.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_02_editors.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_02_editors.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/02_w3schools_html_editors.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '3. HTML Elements',
+                    description: '',
+                    duration: 136,
+                    sources: [
+                        { src: `${vodDomain}courses/35f99aed-4e29-476d-8984-cc11f7c57abd/DASHISO1/03_w3schools_html_elements.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/35f99aed-4e29-476d-8984-cc11f7c57abd/AppleHLS1/03_w3schools_html_elements.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_03_elements.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_03_elements.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/03_w3schools_html_elements.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '4. HTML Attributes',
+                    description: '',
+                    duration: 136,
+                    sources: [
+                        { src: `${vodDomain}courses/8e774f10-9c5f-4605-afb5-b95e29e48ea8/DASHISO1/04_w3schools_html_attributes.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/8e774f10-9c5f-4605-afb5-b95e29e48ea8/AppleHLS1/04_w3schools_html_attributes.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_04_attributes.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_04_attributes.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/04_w3schools_html_attributes.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '5. HTML Headings',
+                    description: '',
+                    duration: 109,
+                    sources: [
+                        { src: `${vodDomain}courses/a7967440-ca7b-43c3-85fb-cd55e5c9fdd8/DASHISO1/05_w3schools_html_headings.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/a7967440-ca7b-43c3-85fb-cd55e5c9fdd8/AppleHLS1/05_w3schools_html_headings.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_05_headings.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_05_headings.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/05_w3schools_html_headings.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '6. HTML Paragraphs',
+                    description: '',
+                    duration: 61,
+                    sources: [
+                        { src: `${vodDomain}courses/d6015dfa-f4fd-4102-a685-9db4b666ab29/DASHISO1/06_w3schools_html_paragraphs.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/d6015dfa-f4fd-4102-a685-9db4b666ab29/AppleHLS1/06_w3schools_html_paragraphs.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_06_paragraphs.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_06_paragraphs.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/06_w3schools_html_paragraphs.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '7. HTML Styles',
+                    description: '',
+                    duration: 105,
+                    sources: [
+                        { src: `${vodDomain}courses/469bb995-ebe4-46ce-ac01-e18b38af2525/DASHISO1/07_w3schools_html_styles.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/469bb995-ebe4-46ce-ac01-e18b38af2525/AppleHLS1/07_w3schools_html_styles.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_07_styles.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_07_styles.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/07_w3schools_html_styles.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '8. HTML Formatting',
+                    description: '',
+                    duration: 122,
+                    sources: [
+                        { src: `${vodDomain}courses/9abfa560-7ba3-40aa-9a48-9b30663ac009/DASHISO1/08_w3schools_html_formatting.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/9abfa560-7ba3-40aa-9a48-9b30663ac009/AppleHLS1/08_w3schools_html_formatting.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_08_formatting.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_08_formatting.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/08_w3schools_html_formatting.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '9. HTML Comments',
+                    description: '',
+                    duration: 47,
+                    sources: [
+                        { src: `${vodDomain}courses/7307b90f-dba6-43ff-b180-ba3aa8dbb782/DASHISO1/09_w3schools_html_comments.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/7307b90f-dba6-43ff-b180-ba3aa8dbb782/AppleHLS1/09_w3schools_html_comments.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_09_comments.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_09_comments.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/09_w3schools_html_comments.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '10. HTML Colors',
+                    description: '',
+                    duration: 185,
+                    sources: [
+                        { src: `${vodDomain}courses/f53eae6b-3e0c-41bf-a847-d37bd8aa1a0c/DASHISO1/10_w3schools_html_colors.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/f53eae6b-3e0c-41bf-a847-d37bd8aa1a0c/AppleHLS1/10_w3schools_html_colors.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_10_colors.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_10_colors.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/10_w3schools_html_colors.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '11. HTML CSS',
+                    description: '',
+                    duration: 134,
+                    sources: [
+                        { src: `${vodDomain}courses/dc41a391-016d-44bb-b4b9-65c13acc3308/DASHISO1/11_w3schools_html_css.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/dc41a391-016d-44bb-b4b9-65c13acc3308/AppleHLS1/11_w3schools_html_css.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_11_css.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_11_css.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/11_w3schools_html_css.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '12. HTML Links',
+                    description: '',
+                    duration: 206,
+                    sources: [
+                        { src: `${vodDomain}courses/25b58f91-d772-4446-9865-179596e10b8d/DASHISO1/12_w3schools_html_links.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/25b58f91-d772-4446-9865-179596e10b8d/AppleHLS1/12_w3schools_html_links.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_12_links.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_12_links.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/12_w3schools_html_links.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '13. HTML Images',
+                    description: '',
+                    duration: 222,
+                    sources: [
+                        { src: `${vodDomain}courses/9c8b1c6c-a0a0-4d26-bf3d-d7cc17645126/DASHISO1/13_w3schools_html_images.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/9c8b1c6c-a0a0-4d26-bf3d-d7cc17645126/AppleHLS1/13_w3schools_html_images.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_13_images.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_13_images.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/13_w3schools_html_images.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '14. HTML Table',
+                    description: '',
+                    duration: 189,
+                    sources: [
+                        { src: `${vodDomain}courses/422215c4-9fd3-4d3a-8d0e-6fac7f2d98f0/DASHISO1/14_w3schools_html_tables.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/422215c4-9fd3-4d3a-8d0e-6fac7f2d98f0/AppleHLS1/14_w3schools_html_tables.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_14_table.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_14_table.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/14_w3schools_html_tables.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '15. HTML Lists',
+                    description: '',
+                    duration: 108,
+                    sources: [
+                        { src: `${vodDomain}courses/a4f60001-9316-40fe-a13c-2a06d65ca604/DASHISO1/15_w3schools_html_lists.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/a4f60001-9316-40fe-a13c-2a06d65ca604/AppleHLS1/15_w3schools_html_lists.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_15_lists.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_15_lists.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/15_w3schools_html_lists.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '16. Block and Inline',
+                    description: '',
+                    duration: 77,
+                    sources: [
+                        { src: `${vodDomain}courses/667e5f69-9979-4928-a072-caf7a7f434ab/DASHISO1/16_w3schools_html_block_inline.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/667e5f69-9979-4928-a072-caf7a7f434ab/AppleHLS1/16_w3schools_html_block_inline.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_16_block_inline.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_16_block_inline.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/16_w3schools_html_block_inline.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '17. HTML Classes',
+                    description: '',
+                    duration: 104,
+                    sources: [
+                        { src: `${vodDomain}courses/c428742e-da02-4ea2-b556-af1128458f29/DASHISO1/17_w3schools_html_classes.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/c428742e-da02-4ea2-b556-af1128458f29/AppleHLS1/17_w3schools_html_classes.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_17_classes.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_17_classes.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/17_w3schools_html_classes.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '18. HTML Id',
+                    description: '',
+                    duration: 147,
+                    sources: [
+                        { src: `${vodDomain}courses/0ed873a6-08dd-4056-bbc7-e8d24e8c57cb/DASHISO1/18_w3schools_html_id.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/0ed873a6-08dd-4056-bbc7-e8d24e8c57cb/AppleHLS1/18_w3schools_html_id.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_18_id.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_18_id.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/18_w3schools_html_id.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '19. HTML Iframes',
+                    description: '',
+                    duration: 100,
+                    sources: [
+                        { src: `${vodDomain}courses/b89cc96e-c570-492a-b296-85e851168cd3/DASHISO1/19_w3schools_html_iframes.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/b89cc96e-c570-492a-b296-85e851168cd3/AppleHLS1/19_w3schools_html_iframes.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_19_iframes.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_19_iframes.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/19_w3schools_html_iframes.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '20. HTML Javascript',
+                    description: '',
+                    duration: 101,
+                    sources: [
+                        { src: `${vodDomain}courses/ea78e765-3efc-4a12-b477-f29244347655/DASHISO1/20_w3schools_html_javascript.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/ea78e765-3efc-4a12-b477-f29244347655/AppleHLS1/20_w3schools_html_javascript.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_20_javascript.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_20_javascript.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/20_w3schools_html_javascript.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '21. HTML Head',
+                    description: '',
+                    duration: 92,
+                    sources: [
+                        { src: `${vodDomain}courses/e36c3c30-8b8a-45ae-bdbe-cda74ffea0a5/DASHISO1/21_w3schools_html_head.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/e36c3c30-8b8a-45ae-bdbe-cda74ffea0a5/AppleHLS1/21_w3schools_html_head.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_21_head.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_21_head.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/21_w3schools_html_head.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '22. HTML Forms',
+                    description: '',
+                    duration: 158,
+                    sources: [
+                        { src: `${vodDomain}courses/d7ed5013-b223-4666-b6d9-a168fc8e0a31/DASHISO1/22_w3schools_html_forms.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/d7ed5013-b223-4666-b6d9-a168fc8e0a31/AppleHLS1/22_w3schools_html_forms.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_22_form.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_22_form.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/22_w3schools_html_forms.vtt',
+                            default: false
+                        }
+                    ]
+                },
+                {
+                    name: '23. Bloopers',
+                    description: '',
+                    duration: 90,
+                    sources: [
+                        { src: `${vodDomain}courses/bd199524-a5c8-4775-9c87-c897947b19eb/DASHISO1/23_w3schools_html_bloopers.mpd`, type: 'application/dash+xml', withCredentials: true },
+                        { src: `${vodDomain}courses/bd199524-a5c8-4775-9c87-c897947b19eb/AppleHLS1/23_w3schools_html_bloopers.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
+                    ],
+                    thumbnail: [
+                        {
+                            srcset: 'files/images/img_01_introduction.png',
+                            type: 'image/png',
+                            media: '(min-width: 400px;)'
+                        },
+                        {
+                            src: 'files/images/img_01_introduction.png'
+                        }
+                    ],
+                    textTracks: [
+                        {
+                            kind: 'captions',
+                            label: 'English',
+                            src: 'files/subs/23_w3schools_html_bloopers.vtt',
+                            default: false
+                        }
+                    ]
+                },
+            ]);
+                    player.playlist.autoadvance(0);
+        </script>
+    
+        <script>
+            const gwUrl = "https://videos-api"+env+".w3schools.com/courses/html-video-course";
+
+            const state = {
+                UNKNOWN: 0,
+                LOGGEDIN: 1,
+                PURCHASED: 2
+            };
+
+            let userState = state.UNKNOWN;
+            let cfTokenTime = Date.now();
+
+            const getCookie = name => {
+                let v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+                return v ? v[2] : null;
+            }
+
+            const accessTokenOK = () => {
+                 
+                let accessToken = getCookie("accessToken");
+                
+                return (accessToken && (Date.now() < (JSON.parse(atob(accessToken.split(".")[1])).exp*1000)));
+                             
+            }
+
+            const cfTokensOK = () => {
+               
+                let keyPairId = getCookie("CloudFront-Key-Pair-Id");
+                let policy = getCookie("CloudFront-Policy");
+                let signature = getCookie("CloudFront-Signature");
+
+                return (keyPairId !== null && policy !== null && signature !== null);
+
+            }
+
+            const loginOrBuy = () => {
+                if(userState === state.UNKNOWN) {
+                    window.location.href = "https://profile"+env+".w3schools.com/signup?redirect_url=https://billing"+env+".w3schools.com/courses/html-video-course";
+                }
+                else if(userState === state.PURCHASED) {
+                    window.location.href = "https://profile"+env+".w3schools.com/log-out";
+                }
+                else {
+                    window.location.href = "https://billing"+env+".w3schools.com/courses/html-video-course";
+                }
+            }
+            
+            const init = async() => {
+                let modal = document.getElementById("myModal");
+                let plans = document.getElementById("viewplans");
+                let topbutton = document.getElementById("topbutton");
+                let modalbuttontext = document.getElementById("modalbuttontext");
+                let planbuttontext = document.getElementById("planbuttontext");
+                let topbuttontext = document.getElementById("topbuttontext");
+                
+
+                if(userState === state.UNKNOWN){
+                    modal.style.display = "block";
+                    plans.style.display = "block";
+                    topbutton.style.display = "block";
+                    topbuttontext.style.display = "block";
+
+                    modalbuttontext.innerHTML = "Buy video";
+                    planbuttontext.innerHTML = "Buy video";
+                    topbuttontext.innerHTML = "Sign up and buy video";
+                }
+                else if(userState === state.LOGGEDIN){
+                    modal.style.display = "block";
+                    plans.style.display = "block";
+                    topbutton.style.display = "block";
+
+                    modalbuttontext.innerHTML = "Buy video";
+                    planbuttontext.innerHTML = "Buy video";
+                    topbuttontext.innerHTML = "Buy video";
+                }
+                else if(userState === state.PURCHASED) {
+                    modal.style.display = "none";
+                    plans.style.display = "none";
+
+                    topbutton.style.display = "block";
+                    topbuttontext.style.display = "block";
+                    topbuttontext.innerHTML = "Log out";
+                    //topbutton.style.display = "none";
+                    //topbuttontext.style.display = "none";
+                }
+
+                await new Promise(r => setTimeout(r, 50));
+
+                [...document.getElementsByClassName("vjs-playlist-item")].forEach(
+                        (element, index, array) => {
+                            if(index == 0 || userState === state.PURCHASED) {
+                                element.style.pointerEvents = "all"
+                            }
+                            else {
+                                let icon = document.createElement("div")
+                                icon.className = "playlist-locked"
+                                element.append(icon)
+                            }
+                        }
+                    );
+
+            }
+
+            const checkLogin = async () => {
+
+                if(accessTokenOK()) {
+                    if (cfTokensOK() && ((Date.now() - cfTokenTime) <= 3000000)) {
+                        userState = state.PURCHASED;
+                    }
+                    else {
+       
+                        const response = await fetch(
+                            gwUrl,
+                            {
+                                method: 'GET',
+                                cache: 'no-cache',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': getCookie("accessToken"),
+                                },
+                                credentials: 'include'
+                            }
+                        );
+
+                        cfTokenTime = Date.now();
+
+                        if(response.status === 200) {
+                            userState = state.LOGGEDIN;
+                            let product = await response.json();
+                            if(product.slug == "html-video-course") {
+                                userState = state.PURCHASED;
+                            }
+                        }
+                        else if(response.status === 402) {
+                            userState = state.LOGGEDIN;
+                        }
+                    }
+                }
+                
+                init();
+
+            }
+
+            player.on('beforeplaylistitem', (event, item) => {
+                if(item.playlistItemId_ > 1) {
+                    checkLogin();
+                }
+            });
+
+            checkLogin();
+
+        </script>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener("click", event => {
+                modal.style.display = "none";
+            });
+
+        </script>
+            
+    </body>
+
+<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 05:53:38 GMT -->
+</html>

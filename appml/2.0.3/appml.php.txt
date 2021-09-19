@@ -1,5 +1,5 @@
 <?php
-//Appml 2.0.31 - Created by Jan Egil Refsnes for W3Schools. Please don't remove this line.
+//Appml 2.0.32 - Created by Jan Egil Refsnes for W3Schools. Please don't remove this line.
 session_start();
 ob_start();
 header("Cache-Control: no-cache");
@@ -29,6 +29,7 @@ $maxLines=500;
 $recPos=1;
 $keyCounter=0;
 $paramCount=0;
+$totalCounter=0;
 //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 $txtRequest=app_readRequest();
 //if ($txtRequest=="") {exit();}

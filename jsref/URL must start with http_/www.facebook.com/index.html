@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>A potentially dangerous Request.Path value was detected from the client (:).</title>
+        <title>Runtime Error</title>
         <meta name="viewport" content="width=device-width" />
         <style>
          body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
@@ -27,42 +27,27 @@
 
             <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
 
-            <h2> <i>A potentially dangerous Request.Path value was detected from the client (:).</i> </h2></span>
+            <h2> <i>Runtime Error</i> </h2></span>
 
             <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
 
-            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
-
+            <b> Description: </b>An application error occurred on the server. The current custom error settings for this application prevent the details of the application error from being viewed remotely (for security reasons). It could, however, be viewed by browsers running on the local server machine.
             <br><br>
 
-            <b> Exception Details: </b>System.Web.HttpException: A potentially dangerous Request.Path value was detected from the client (:).<br><br>
-
-            <b>Source Error:</b> <br><br>
-
-            <table width=100% bgcolor="#ffffcc">
-               <tr>
-                  <td>
-                      <code>
-
-An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.                      </code>
-
-                  </td>
-               </tr>
-            </table>
-
-            <br>
-
-            <b>Stack Trace:</b> <br><br>
+            <b>Details:</b> To enable the details of this specific error message to be viewable on remote machines, please create a &lt;customErrors&gt; tag within a &quot;web.config&quot; configuration file located in the root directory of the current web application. This &lt;customErrors&gt; tag should then have its &quot;mode&quot; attribute set to &quot;Off&quot;.<br><br>
 
             <table width=100% bgcolor="#ffffcc">
                <tr>
                   <td>
                       <code><pre>
 
-[HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).]
-   System.Web.HttpRequest.ValidateInputIfRequiredByConfig() +11790525
-   System.Web.PipelineStepManager.ValidateHelper(HttpContext context) +54
-</pre>                      </code>
+&lt;!-- Web.Config Configuration File --&gt;
+
+&lt;configuration&gt;
+    &lt;system.web&gt;
+        &lt;customErrors mode=&quot;Off&quot;/&gt;
+    &lt;/system.web&gt;
+&lt;/configuration&gt;</pre>                      </code>
 
                   </td>
                </tr>
@@ -70,17 +55,28 @@ An unhandled exception was generated during the execution of the current web req
 
             <br>
 
-            <hr width=100% size=1 color=silver>
+            <b>Notes:</b> The current error page you are seeing can be replaced by a custom error page by modifying the &quot;defaultRedirect&quot; attribute of the application&#39;s &lt;customErrors&gt; configuration tag to point to a custom error page URL.<br><br>
 
-            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.4330.0
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+&lt;!-- Web.Config Configuration File --&gt;
+
+&lt;configuration&gt;
+    &lt;system.web&gt;
+        &lt;customErrors mode=&quot;RemoteOnly&quot; defaultRedirect=&quot;mycustompage.htm&quot;/&gt;
+    &lt;/system.web&gt;
+&lt;/configuration&gt;</pre>                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
 
             </font>
 
     </body>
 </html>
-<!-- 
-[HttpException]: A potentially dangerous Request.Path value was detected from the client (:).
-   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
-   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
---><!-- 
-This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->

@@ -1,0 +1,167 @@
+﻿WEBVTT
+
+00:00:00.040 --> 00:00:03.320
+Hello! So you want
+to learn how to make websites.
+
+00:00:03.320 --> 00:00:07.000
+In that case you need to learn HTML!
+
+00:00:08.240 --> 00:00:10.600
+So let's start at the very beginning.
+
+00:00:10.600 --> 00:00:13.280
+What exactly is HTML?
+
+00:00:13.280 --> 00:00:15.480
+And why do I need it?
+
+00:00:15.480 --> 00:00:18.680
+Let's break it down from the basics,
+and build our way up.
+
+00:00:19.680 --> 00:00:23.240
+HTML stands for HyperText Markup Language.
+
+00:00:23.520 --> 00:00:27.080
+It uses markup to describe
+the structure of web pages.
+
+00:00:28.160 --> 00:00:32.840
+The structure is built up by elements,
+and they are represented by tags!
+
+00:00:32.840 --> 00:00:36.400
+Tags label pieces of content
+such as "heading"
+
+00:00:37.440 --> 00:00:40.920
+"paragraph" "table" and so on.
+
+00:00:42.880 --> 00:00:44.800
+These tags aren't shown on the page,
+
+00:00:44.800 --> 00:00:47.880
+but are used to display content
+in different ways.
+
+00:00:49.160 --> 00:00:50.600
+That's a lot to digest!
+
+00:00:50.600 --> 00:00:52.480
+So let's go into it.
+
+00:00:52.480 --> 00:00:55.040
+First let's try it together.
+
+00:00:55.320 --> 00:00:58.800
+Don't worry about understanding,
+it'll all click as we work through it.
+
+00:01:00.800 --> 00:01:04.520
+We start by declaring
+that this is an HTML document.
+
+00:01:05.280 --> 00:01:09.200
+The &lt;html&gt; is the root
+element of any HTML page.
+
+00:01:10.600 --> 00:01:13.400
+The &lt;head&gt; contains meta information
+about the document.
+
+00:01:15.200 --> 00:01:18.200
+The &lt;title&gt; element specifies
+a title for the document.
+
+00:01:20.200 --> 00:01:22.800
+The &lt;body&gt; contains
+the visible page content.
+
+00:01:24.720 --> 00:01:30.280
+Finally, the &lt;h1&gt; defines a large heading,
+while &lt;p&gt; defines a paragraph.
+
+00:01:30.280 --> 00:01:33.480
+With everything set in the order, let's
+
+00:01:33.480 --> 00:01:36.600
+go into the explanation of how tags work.
+
+00:01:36.600 --> 00:01:39.520
+Tags typically come in pairs.
+
+00:01:39.520 --> 00:01:42.040
+A start tag, and the end tag.
+
+00:01:43.040 --> 00:01:45.520
+The end tag is written
+just like the start tag,
+
+00:01:46.040 --> 00:01:49.280
+but with a forward slash inserted
+before the tag name.
+
+00:01:50.520 --> 00:01:53.720
+Here we've got the tag name
+and the forward slash tag name.
+
+00:01:53.720 --> 00:01:57.080
+And the contents of the element
+in between them.
+
+00:01:57.600 --> 00:02:03.840
+So if this was a paragraph, we'd use
+&lt;p&gt; --- &lt;/p&gt; and some text in the middle.
+
+00:02:06.560 --> 00:02:07.320
+Let's play a game.
+
+00:02:07.320 --> 00:02:11.560
+See if we can correctly match start,
+and end tags, together.
+
+00:02:23.000 --> 00:02:27.920
+So what turns HTML code and elements
+into a viewable website?
+
+00:02:28.280 --> 00:02:30.480
+Well, that's where web browsers come in.
+
+00:02:30.920 --> 00:02:34.600
+The purpose of a web browser, be
+it Chrome, Firefox, Edge,
+
+00:02:34.600 --> 00:02:38.600
+or Safari, is to read HTML documents
+and display them.
+
+00:02:39.240 --> 00:02:42.000
+But, the browser
+does not display the HTML code.
+
+00:02:42.160 --> 00:02:45.880
+Instead, it uses it, to determine
+how to display the document.
+
+00:02:47.880 --> 00:02:51.720
+Let's see what kind of building blocks
+are hidden behind this webpage.
+
+00:02:53.400 --> 00:02:57.160
+This is a visualization
+of an HTML page structure.
+
+00:02:57.440 --> 00:03:00.960
+You can see the HTML,
+the head, with the page title
+
+00:03:00.960 --> 00:03:03.520
+below that, and then the body under that.
+
+00:03:04.760 --> 00:03:06.360
+And that's the basics.
+
+00:03:06.360 --> 00:03:10.120
+Let's delve into this further,
+but for now, take a break.

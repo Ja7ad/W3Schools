@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/CSS/trycss_navbar_vertical_iframe.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 14:37:36 GMT -->
+<head>
+<style>
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}
+body {margin:0;}
+ul.vertical {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position:fixed;
+  height:100%;
+  overflow:auto;
+  min-width:80px;
+}
+
+ul.vertical li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.vertical li a:hover:not(.active) {
+  background-color: #555;
+  color:white;
+}
+
+ul.vertical a.active {
+  background-color: #04AA6D;
+  color:white;
+}
+
+.main {
+  margin-left:25%;padding:1px 16px;height:500px;
+}
+@media screen and (max-width: 290px) {
+  .main{
+     margin-left:35%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<ul class="vertical">
+  <li><a class="active" href="javascript:void(0)">Home</a></li>
+  <li><a href="javascript:void(0)">News</a></li>
+  <li><a href="javascript:void(0)">Contact</a></li>
+  <li><a href="javascript:void(0)">About</a></li>
+</ul>
+<div class="main">
+<h2>Fixed Full-height Side Nav</h2>
+<h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+<p>Some text..</p>
+
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/CSS/trycss_navbar_vertical_iframe.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 14:37:36 GMT -->
+</html>

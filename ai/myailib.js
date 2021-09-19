@@ -1,11 +1,10 @@
 function Trainer(xArray, yArray) {
-// y = (weight * x) + bias
 this.xArr = xArray;
 this.yArr = yArray;
 this.points = this.xArr.length;
 this.learnc = 0.000001;
 this.weight = 0;
-this.bias = 0;
+this.bias = 1;
 this.cost;
 
 // Cost Error Function
