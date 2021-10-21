@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/tags/tryit.asp?filename=tryhtml5_fieldset_form by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:10:13 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/tryit.asp?filename=tryhtml5_fieldset_form by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:13:16 GMT -->
 <head>
 <title>Tryit Editor v3.7</title>
 <meta name="viewport" content="width=device-width">
@@ -29,38 +29,14 @@ ga('send', 'pageview');
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
 
   }
 }
@@ -80,10 +56,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
     if (window.screen.availWidth <= 768) {
@@ -459,14 +435,14 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 <script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
 <div id="saveModal" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content">
+  <div class="w3-modal-content w3-round">
     <div class="w3-display-container">
       <span onclick="hideAndResetModal()" class="w3-button w3-display-topright" style="font-weight:bold;">&times;</span>
       <div id="preSave" class="w3-panel">
@@ -474,12 +450,19 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
         <p>If you click the save button, your code will be saved, and you get a URL you can share with others.</p>
         <div style="height:34px">
         <p>
-            <button class="w3-btn" style="background-color:#04AA6D;color:white;margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
-            <button class="w3-btn w3-red ws-hover-black" title="Cancel" style="margin-right:15px" onclick="hideAndResetModal();">Cancel</button>
+            <button class="ws-btn" style="background-color:#04AA6D;color:white;margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
+            <button class="w3-btn w3-red ws-hover-black" title="Cancel" style="    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px;margin-right:15px" onclick="hideAndResetModal();">Cancel</button>
         </p>
         </div>
         <p>By clicking the "Save" button you agree to our <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">terms and conditions</a>.</p>
-        <p><a href="../default.html" style="background-color:#E7E9EB;color:black" class="w3-button" onclick="event.preventDefault();displayError()">Report Error</a></p>
+        <p><a href="../default.html" style="background-color:#E7E9EB;color:black;    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px;" class="w3-button" onclick="event.preventDefault();displayError()">Report Error</a></p>
+    <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> In October 2021, we are updating this solution to allow users to save code to their own Spaces: <a href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromSaveDisclaimer', 'click')">https://www.w3schools.com/spaces/</a><br><br>You will still be able to access previously stored code until the end of 2021.</p>
         <div id="saveDisclaimer" style="display:none;">
           <p>All code in shared files are supplied by users, and belongs to the poster.</p>
           <p>All shared files are made public. No license is enforced.</p>
@@ -509,7 +492,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
   <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons w3-hide-small fa fa-save" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
-  <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');">Run &#10095;</button>
+  <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Run &#10095;</button>
   <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your<span class="w3-hide-medium"> own</span> website</a>
   <!--<span class="w3-right w3-hide-small xxw3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>-->
   <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
@@ -561,7 +544,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/tags/tryit.asp?filename=tryhtml5_fieldset_form by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:10:13 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/tryit.asp?filename=tryhtml5_fieldset_form by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:13:16 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -577,9 +560,9 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
   </div>
 </div>
 <div id="err_form" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-display-container">
+  <div class="w3-modal-content w3-display-container w3-round">
     <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-padding ws-green" style="font-weight:bold;">&times;</span>
-    <div class="w3-container ws-green">
+    <div class="w3-container ws-green w3-round">
       <h2>Report a Problem:</h2>
     </div>
     <div class="w3-container"> 

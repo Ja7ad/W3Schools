@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'select';excounts[0] = '3';exheadings[0] = 'Select';exnames[1] = 'where';excounts[1] = '5';exheadings[1] = 'Where';exnames[2] = 'orderby';excounts[2] = '3';exheadings[2] = 'Order By';exnames[3] = 'insert';excounts[3] = '1';exheadings[3] = 'Insert';exnames[4] = 'null';excounts[4] = '2';exheadings[4] = 'Null';exnames[5] = 'update';excounts[5] = '3';exheadings[5] = 'Update';exnames[6] = 'delete';excounts[6] = '2';exheadings[6] = 'Delete';exnames[7] = 'functions';excounts[7] = '5';exheadings[7] = 'Functions';exnames[8] = 'like';excounts[8] = '5';exheadings[8] = 'Like';exnames[9] = 'wildcards';excounts[9] = '2';exheadings[9] = 'Wildcards';exnames[10] = 'in';excounts[10] = '2';exheadings[10] = 'In';exnames[11] = 'between';excounts[11] = '3';exheadings[11] = 'Between';exnames[12] = 'alias';excounts[12] = '2';exheadings[12] = 'Alias';exnames[13] = 'join';excounts[13] = '3';exheadings[13] = 'Join';exnames[14] = 'groupby';excounts[14] = '2';exheadings[14] = 'Group By';exnames[15] = 'database';excounts[15] = '7';exheadings[15] = 'Database';exActiveNo = 15;</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/mysql/exercise.asp?filename=exercise_database3 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:17 GMT -->
+<!-- Mirrored from www.w3schools.com/mysql/exercise.asp?filename=exercise_database3 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:20 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -26,38 +26,14 @@
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
 
   }
 }
@@ -77,10 +53,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
 }
@@ -1489,9 +1465,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1548,15 +1524,15 @@ CREATE TABLE Persons (
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
 </div>
 
 <br>
@@ -1746,7 +1722,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    
+    snhb.startAuction(['try_it_leaderboard']);
   }
 }
 
@@ -2214,5 +2190,5 @@ function colorcoding() {
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/mysql/exercise.asp?filename=exercise_database3 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:17 GMT -->
+<!-- Mirrored from www.w3schools.com/mysql/exercise.asp?filename=exercise_database3 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:20 GMT -->
 </html>

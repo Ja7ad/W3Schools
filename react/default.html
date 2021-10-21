@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/react/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:52:08 GMT -->
+<!-- Mirrored from www.w3schools.com/react/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:19:43 GMT -->
 <head>
 <title>React Tutorial</title>
 <script src="prism1.js"></script>
@@ -41,7 +41,7 @@ k42 = true;
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": ["main_leaderboard", "sidebar_top", "bottom_left", "bottom_right"]
+      "activeAdUnits": ["main_leaderboard_courses", "sidebar_top_courses", "bottom_left_courses", "bottom_right_courses"]
 
   }
 }
@@ -106,6 +106,19 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<style>
+.startlearningbtn {
+  font-size: 18px;
+  padding-left:25px;
+  padding-right:25px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top:6px;
+  /*background-color:#282A35!important;*/
+}
+/*.startlearningbtn:hover {
+  background-color:#000!important;
+}*/
+</style>
 </head><body>
 
 <div class="w3-bar w3-card-2 notranslate" style="position: relative;z-index: 4;font-size: 18px;background-color: white;color:#282A35;padding-left:12px;padding-right:16px;font-family: 'Source Sans Pro', sans-serif;">
@@ -124,7 +137,7 @@ function w3_getStyleValue(elmnt,style) {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -260,8 +273,8 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -514,27 +527,41 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="react_intro.html">React Intro</a>
 <a target="_top" href="react_getstarted.html">React Get Started</a>
 <a target="_top" href="react_es6.html">React ES6</a>
+<div class="tut_overview">
+  <a target="_top" href="react_es6.html">React ES6</a>
+  <a target="_top" href="react_es6_classes.html">ES6 Classes</a>
+  <a target="_top" href="react_es6_arrow.html">ES6 Arrow Functions</a>
+  <a target="_top" href="react_es6_variables.html">ES6 Variables</a>
+  <a target="_top" href="react_es6_array_methods.html">ES6 Array Methods</a>
+  <a target="_top" href="react_es6_destructuring.html">ES6 Destucturing</a>
+  <a target="_top" href="react_es6_spread.html">ES6 Spread Operator</a>
+  <a target="_top" href="react_es6_modules.html">ES6 Modules</a>
+  <a target="_top" href="react_es6_ternary.html">ES6 Ternary Operator</a>
+</div>
 <a target="_top" href="react_render.html">React Render HTML</a>
 <a target="_top" href="react_jsx.html">React JSX</a>
 <a target="_top" href="react_components.html">React Components</a>
+<a target="_top" href="react_class.html">React Class</a>
 <a target="_top" href="react_props.html">React Props</a>
-<a target="_top" href="react_state.html">React State</a>
-<a target="_top" href="react_lifecycle.html">React Lifecycle</a>
 <a target="_top" href="react_events.html">React Events</a>
+<a target="_top" href="react_conditional_rendering.html">React Conditionals</a>
+<a target="_top" href="react_lists.html">React Lists</a>
 <a target="_top" href="react_forms.html">React Forms</a>
-<a target="_top" href="react_css.html">React CSS</a>
-<a target="_top" href="react_sass.html">React Sass</a>
-<!--
+<a target="_top" href="react_router.html">React Router</a>
+<a target="_top" href="react_memo.html">React Memo</a>
+<a target="_top" href="react_css_styling.html">React CSS Styling</a>
+<a target="_top" href="react_sass_styling.html">React Sass Styling</a>
 <br>
-<a target="_top" href="react_conditions.asp">React Conditions</a>
-<a target="_top" href="react_lists.asp">React Lists and Keys</a>
-<a target="_top" href="reactjs_.asp">React Shared States</a>
-<a target="_top" href="reactjs_.asp">React Compositions</a>
-<a target="_top" href="reactjs_.asp">React Design Philosophy</a>
-<a target="_top" href="reactjs_.asp">React JSX Advanced</a>
-<a target="_top" href="reactjs_.asp">React References</a>
-
--->
+<h2 class="left">React Hooks</h2>
+<a target="_top" href="react_hooks.html">What is a Hook?</a>
+<a target="_top" href="react_usestate.html">useState</a>
+<a target="_top" href="react_useeffect.html">useEffect</a>
+<a target="_top" href="react_usecontext.html">useContext</a>
+<a target="_top" href="react_useref.html">useRef</a>
+<a target="_top" href="react_usereducer.html">useReducer</a>
+<a target="_top" href="react_usecallback.html">useCallback</a>
+<a target="_top" href="react_usememo.html">useMemo</a>
+<a target="_top" href="react_customhooks.html">Custom Hooks</a>
 
       <br><br>
     </div>
@@ -547,7 +574,7 @@ function w3_getStyleValue(elmnt,style) {
         <!-- MainLeaderboard-->
 
         <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="adngin-main_leaderboard-0"></div>
+        <div id="adngin-main_leaderboard_courses-0"></div>
         <!-- adspace leaderboard -->
 
       </div>
@@ -556,17 +583,22 @@ function w3_getStyleValue(elmnt,style) {
 <a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
 <a class="w3-right w3-btn" href="react_intro.html">Next &#10095;</a>
 </div>
-<div class="w3-panel w3-info intro">
-<p>React is a JavaScript library for building user interfaces.</p>
-<p>React is used to build single page applications.</p>
-<p>React allows us to create reusable UI components.</p>
-<a class="w3-btn w3-margin-bottom" href="react_intro.html" style="font-size: 18px;padding-left:25px;padding-right:25px;font-family: 'Source Sans Pro', sans-serif;margin-top:6px;">Start learning React now &raquo;</a>
+
+<div class="w3-panel w3-info intro" style="background-color:#f3ecea">
+  <div class="w3-hide-small" style="float:right;font-size:70px;color:#ffc0c7">[+:</div>
+  <p>React is a JavaScript library for building user interfaces.</p>
+  <p>React is used to build single-page applications.</p>
+  <p>React allows us to create reusable UI components.</p>
+  <a class="w3-btn w3-margin-bottom startlearningbtn" href="react_intro.html">Start learning React now &#10095;</a>
 </div>
+
+
+
 <hr>
 
 <h2>Learning by Examples</h2>
 
-<p>Our "Show React" tool makes it easy to demonstrate React, it shows both the code and the result.</p>
+<p>Our "Show React" tool makes it easy to demonstrate React. It shows both the code and the result.</p>
 
 <div class="w3-example">
 <h3>Example:</h3>
@@ -574,13 +606,11 @@ function w3_getStyleValue(elmnt,style) {
 <pre class="language-jsx w3-white"><code>import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Test extends React.Component {
-  render() {
-    return &lt;h1&gt;Hello World!&lt;/h1&gt;;
-  }
+function Hello(props) {
+  return &lt;h1&gt;Hello World!&lt;/h1&gt;;
 }
 
-ReactDOM.render(&lt;Test /&gt;, document.getElementById('root'));
+ReactDOM.render(&lt;Hello /&gt;, document.getElementById('root'));
 </code></pre>
 <p>
 <a target="_blank" class="w3-btn" href="showreact835b.html?filename=demo2_react_test">Run 
@@ -592,60 +622,53 @@ Example &raquo;</a>
 
 <h2>Create React App</h2>
 
-<p>In order to learn and test React, you should set up a React Environment on 
+<p>To learn and test React, you should set up a React Environment on 
 your computer.</p>
 <p>This tutorial uses the <code class="w3-codespan">create-react-app</code>.</p>
 
-<p>The <code class="w3-codespan">create-react-app</code> is an officially supported way to create React applications.</p>
+<p>The <code class="w3-codespan">create-react-app</code> tool is an officially supported way to create React applications.</p>
+<p><a href="https://nodejs.org/" target="_blank">Node.js</a> is required to use <code class="w3-codespan">create-react-app</code>.</p>
 
-<p>If you have NPM and Node.js installed, you can create a React application by 
-first installing the create-react-app.</p>
-<p>Install create-react-app by running this command in your terminal:</p>
-
-<div class="w3-example">
-<div class="w3-code notranslate w3-black">
-  C:\Users\<em>Your Name</em>&gt;npm install -g create-react-app</div>
-</div>
-
-<p>You are now ready to create your first React application!</p>
+<p>Open your terminal in the directory you would like to create your 
+application.</p>
 <p>Run this command to create a React application named
-<code class="w3-codespan">myfirstreact</code>:</p>
+<code class="w3-codespan">my-react-app</code>:</p>
 
 <div class="w3-example">
 <div class="w3-code notranslate w3-black">
-  C:\Users\<em>Your Name</em>&gt;npx create-react-app myfirstreact
+  npx create-react-app my-react-app
 </div>
 </div>
 
-<p>The <code class="w3-codespan">create-react-app</code> will set up everything you need to run a React application.</p>
+<p><code class="w3-codespan">create-react-app</code> will set up everything you need to run a React application.</p>
 
 <div class="w3-panel w3-note">
-<p><strong>Note:</strong> This tutorial uses <code class="w3-codespan">
-create-react-app</code> to demonstrate React examples. You will not be able to 
-run the same examples on your computer if you do not install the <code class="w3-codespan">create-react-app</code> 
-environment.</p>
+<p><strong>Note:</strong>
+If you've previously installed <code class="w3-codespan">create-react-app</code> globally,
+it is recommended that you uninstall the package to ensure npx always uses the latest version of
+<code class="w3-codespan">create-react-app</code>.
+To uninstall, run this command: <code class="w3-codespan">npm uninstall -g create-react-app</code>.
+</p>
 </div>
 
 <hr>
 
 <h2>Run the React Application</h2>
 
-<p>If you followed the two commands above, you are ready to run your first <em>real</em> React application!</p>
-
-<p>Run this command to move to the <code class="w3-codespan">myfirstreact</code> directory:</p>
+<p>Run this command to move to the <code class="w3-codespan">my-react-app</code> directory:</p>
 
 <div class="w3-example">
 <div class="w3-code notranslate w3-black">
-  C:\Users\<em>Your Name</em>&gt;cd myfirstreact
+  cd my-react-app
 </div>
 </div>
 
 <p>Run this command to execute the React application <code class="w3-codespan">
-myfirstreact</code>:</p>
+my-react-app</code>:</p>
 
 <div class="w3-example">
 <div class="w3-code notranslate w3-black">
-  C:\Users\<em>Your Name</em>\myfirstreact&gt;npm start
+  npm start
 </div>
 </div>
 
@@ -660,7 +683,7 @@ myfirstreact</code>:</p>
 <br>
 
 <div class="w3-panel w3-note">
-<p>You will learn more about the create-react-app in the <a href="react_getstarted.html">React Get Started</a> chapter.</p>
+<p>You will learn more about the <code class="w3-codespan">create-react-app</code> in the <a href="react_getstarted.html">React Get Started</a> chapter.</p>
 </div>
 
 <hr>
@@ -691,7 +714,7 @@ introduced in ECMAScript 6 (ES6), you will learn about them in the <a href="reac
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="adngin-sidebar_top-0"></div>
+    <div id="adngin-sidebar_top_courses-0"></div>
   
   </div>
 </div>
@@ -714,14 +737,14 @@ introduced in ECMAScript 6 (ES6), you will learn about them in the <a href="reac
     <span class="ribbon-vid ws-yellow">NEW</span>
   </div>
   <p style="font-size: 14px;line-height: 1.5;font-family: Source Sans Pro;padding-left:4px;padding-right:4px;">We just launched<br>W3Schools videos</p>
-  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px"></a>
+  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px" loading="lazy"></a>
   <a class="ws-button" style="font-size:16px;text-decoration: none !important;display: block !important; color:#FFC0C7!important;  width: 100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; paxdding-top: 10px; padding-bottom: 20px; font-family: 'Source Sans Pro', sans-serif; text-align: center;"  onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html">Explore now</a>
 </div>
 
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker" loading="lazy"></a>
 </div>
 
 <div class="sidesection">
@@ -815,7 +838,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -866,25 +889,25 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <div id="adngin-sidebar_sticky-0"></div>
+      <div id="adngin-sidebar_sticky_courses-0"></div>
         <script>
         window.addEventListener('adnginLoaderReady', function() {
           if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
             // adspace sticky
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses", "mid_content_courses" ]); });
             }
             else {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses"]); });
             }
           }
           else {
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content_courses"]); });
             }
           }  
         });
-      </script>    
+      </script>
       
     </div>
   </div>
@@ -905,11 +928,11 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div class="bottomad">
     <!-- BottomMediumRectangle -->
     <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_left_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
     <!-- adspace bmr -->
     <!-- RightBottomMediumRectangle -->
     <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_right_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -976,7 +999,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
 <a href="../html/default.html">HTML Tutorial</a><br>
 <a href="../css/default.html">CSS Tutorial</a><br>
 <a href="../js/default.html">JavaScript Tutorial</a><br>
@@ -993,7 +1016,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
 <a href="../tags/default.html">HTML Reference</a><br>
 <a href="../cssref/default.html">CSS Reference</a><br>
 <a href="../jsref/default.html">JavaScript Reference</a><br>
@@ -1010,7 +1033,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
 <a href="../html/html_examples.html">HTML Examples</a><br>
 <a href="../css/css_examples.html">CSS Examples</a><br>
 <a href="../js/js_examples.html">JavaScript Examples</a><br>
@@ -1042,7 +1065,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 Get Certified &raquo;</a>
 -->
 
-<h4>Web Courses</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Web Courses</h5>
 <a href="../../courses.w3schools.com/courses/html.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
 <a href="../../courses.w3schools.com/courses/css.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
 <a href="../../courses.w3schools.com/courses/javascript.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
@@ -1144,7 +1167,6 @@ function finishedPage() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
@@ -1219,6 +1241,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
@@ -1272,5 +1295,5 @@ function registerPoint(cc) {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]--></body>
 
-<!-- Mirrored from www.w3schools.com/react/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:52:26 GMT -->
+<!-- Mirrored from www.w3schools.com/react/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:20:28 GMT -->
 </html>

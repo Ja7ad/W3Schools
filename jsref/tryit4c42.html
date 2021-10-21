@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseenter by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:12:09 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseenter by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:14:37 GMT -->
 <head>
 <title>Tryit Editor v3.7</title>
 <meta name="viewport" content="width=device-width">
@@ -442,7 +442,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 </div>
 <script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
 <div id="saveModal" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content">
+  <div class="w3-modal-content w3-round">
     <div class="w3-display-container">
       <span onclick="hideAndResetModal()" class="w3-button w3-display-topright" style="font-weight:bold;">&times;</span>
       <div id="preSave" class="w3-panel">
@@ -450,12 +450,19 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
         <p>If you click the save button, your code will be saved, and you get a URL you can share with others.</p>
         <div style="height:34px">
         <p>
-            <button class="w3-btn" style="background-color:#04AA6D;color:white;margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
-            <button class="w3-btn w3-red ws-hover-black" title="Cancel" style="margin-right:15px" onclick="hideAndResetModal();">Cancel</button>
+            <button class="ws-btn" style="background-color:#04AA6D;color:white;margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
+            <button class="w3-btn w3-red ws-hover-black" title="Cancel" style="    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px;margin-right:15px" onclick="hideAndResetModal();">Cancel</button>
         </p>
         </div>
         <p>By clicking the "Save" button you agree to our <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">terms and conditions</a>.</p>
-        <p><a href="../default.html" style="background-color:#E7E9EB;color:black" class="w3-button" onclick="event.preventDefault();displayError()">Report Error</a></p>
+        <p><a href="../default.html" style="background-color:#E7E9EB;color:black;    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px;" class="w3-button" onclick="event.preventDefault();displayError()">Report Error</a></p>
+    <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> In October 2021, we are updating this solution to allow users to save code to their own Spaces: <a href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromSaveDisclaimer', 'click')">https://www.w3schools.com/spaces/</a><br><br>You will still be able to access previously stored code until the end of 2021.</p>
         <div id="saveDisclaimer" style="display:none;">
           <p>All code in shared files are supplied by users, and belongs to the poster.</p>
           <p>All shared files are made public. No license is enforced.</p>
@@ -536,7 +543,7 @@ function normalImg(x) {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseenter by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:12:09 GMT -->
+<!-- Mirrored from www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseenter by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:14:37 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -552,9 +559,9 @@ function normalImg(x) {
   </div>
 </div>
 <div id="err_form" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-display-container">
+  <div class="w3-modal-content w3-display-container w3-round">
     <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-padding ws-green" style="font-weight:bold;">&times;</span>
-    <div class="w3-container ws-green">
+    <div class="w3-container ws-green w3-round">
       <h2>Report a Problem:</h2>
     </div>
     <div class="w3-container"> 

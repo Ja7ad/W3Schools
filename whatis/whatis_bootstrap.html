@@ -2,14 +2,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/whatis/whatis_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 10:08:13 GMT -->
+<!-- Mirrored from www.w3schools.com/whatis/whatis_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 06:11:36 GMT -->
 <head>
 <title>What is Bootstrap</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips">
 <meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.">
@@ -109,6 +107,11 @@ function w3_getStyleValue(elmnt,style) {
 }
 </script>
 <link rel="stylesheet" href="../bootstrap4/w3-fix.css">
+<style>
+hr {
+ height:0!important;border-top:1px solid #bbb!important
+}
+</style>
 </head>
 <body>
 
@@ -128,7 +131,7 @@ function w3_getStyleValue(elmnt,style) {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -264,8 +267,8 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -575,10 +578,10 @@ function w3_getStyleValue(elmnt,style) {
       </div>
 <h1>What is Bootstrap?</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn w3-green" href="whatis_icons.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn w3-green" href="whatis_w3css.html">Next &#10095;</a>
+  <a class="w3-left ws-btn" href="whatis_icons.html">&#10094; Previous</a>
+  <a class="w3-right ws-btn" href="whatis_w3css.html">Next &#10095;</a>
 </div>
-<hr>
+<hr >
 
 <div class="w3-cell-row w3-card-2">
 <div class="w3-cell w3-white w3-hide-small w3-center" style="padding:16px;width:150px">
@@ -587,7 +590,7 @@ function w3_getStyleValue(elmnt,style) {
 <div class="w3-cell w3-container w3-light-gray w3-border-left w3-cell-top" style="padding:20px;">
 <p><b>Bootstrap</b> is the most popular <b>CSS Framework</b>
 for developing responsive and mobile-first websites.</p>
-<p><b>Bootstrap 4</b> is the newest version of Bootstrap</p>
+<p><b>Bootstrap 5</b> is the newest version of Bootstrap</p>
 </div>
 </div>
 <hr>
@@ -597,7 +600,7 @@ for developing responsive and mobile-first websites.</p>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;jumbotron text-center&quot;&gt;<br>&nbsp;&nbsp;&lt;h1&gt;My First Bootstrap 
+  &lt;div class=&quot;bg-primary text-white p-5 text-center&quot;&gt;<br>&nbsp;&nbsp;&lt;h1&gt;My First Bootstrap 
   Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;Resize this page to see the responsive 
   effect!&lt;/p&gt; <br>&lt;/div&gt;<br><br>&lt;div class=&quot;container-fluid&quot;&gt;<br>&nbsp; &lt;div class=&quot;row&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
   &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp; &nbsp;&nbsp;&nbsp; &lt;h2&gt;London&lt;/h2&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp; &lt;p&gt;London is the capital city of England.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &nbsp; &lt;p&gt;It is the most populous city in the United Kingdom,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with a 
@@ -626,8 +629,8 @@ for developing responsive and mobile-first websites.</p>
 
 <hr>
 <h2>Browser Support</h2>
-<p>Bootstrap 4 is the newest version of Bootstrap. </p>
-<p>Bootstrap 4 supports all major browsers except Internet Explorer 9.</p>
+<p>Bootstrap 5 is the newest version of Bootstrap. </p>
+<p>Bootstrap 5 supports all major browsers except Internet Explorer 11 and down.</p>
 <div class="w3-panel w3-note">
 <p>If you require support for IE9 or IE8, you must use Bootstrap 3.</p>
 </div>
@@ -641,15 +644,13 @@ for developing responsive and mobile-first websites.</p>
 <h3>Example</h3>
 <div class="w3-code notranslate htmlHigh">
 &lt;div class="container&quot;&gt;<br>
-&nbsp;&nbsp;&nbsp;
-&lt;h1&gt;This is a paragraph&lt;/h1&gt;<br>
-&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&lt;h1&gt;This is a paragraph&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&nbsp;
 &lt;p&gt;This is a paragraph&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;
+&nbsp;
 &lt;p&gt;This is a paragraph&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;
-&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;
+&nbsp;
 &lt;p&gt;This is a paragraph&lt;/p&gt;<br>
 &lt;/div&gt;
 </div>
@@ -689,10 +690,10 @@ for developing responsive and mobile-first websites.</p>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;container bg-primary text-white py-4&quot;&gt;<br>&lt;p&gt;London is the 
+  &lt;div class=&quot;container bg-primary text-white p-4&quot;&gt;<br>&lt;p&gt;London is the 
   most populous city in the United Kingdom, with a metropolitan area of over 9 
   million inhabitants.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class=&quot;container bg-success 
-  text-white py-4&quot;&gt;<br>&lt;p&gt;London is the most populous city in the United 
+  text-white p-4&quot;&gt;<br>&lt;p&gt;London is the most populous city in the United 
   Kingdom, with a metropolitan area of over 9 million inhabitants.&lt;/p&gt;<br>&lt;/div&gt;</div>
   <a target="_blank" href="tryit71b0.html?filename=trywhatis_bootstrap_colors" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
@@ -711,12 +712,11 @@ for developing responsive and mobile-first websites.</p>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;container&quot;&gt;<br>&nbsp;&nbsp;&nbsp;
-&lt;p class="text-muted"&gt;This text is 
-  muted.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p class="text-primary"&gt;This text is important.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p 
-  class="text-success"&gt;This text indicates success.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p 
-  class="text-info"&gt;This text represents some information.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p 
-  class="text-warning"&gt;This text represents a warning.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p 
+  &lt;div class=&quot;container&quot;&gt;<br>&nbsp;&nbsp;&lt;p class="text-muted"&gt;This text is 
+  muted.&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p class="text-primary"&gt;This text is important.&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p 
+  class="text-success"&gt;This text indicates success.&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p 
+  class="text-info"&gt;This text represents some information.&lt;/p&gt;<br>&nbsp; &lt;p 
+  class="text-warning"&gt;This text represents a warning.&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p 
   class="text-danger"&gt;This text represents danger.&lt;/p&gt;<br>&lt;/div&gt;<br>
 </div>
 <a target="_blank" href="tryit61a5.html?filename=trywhatis_bootstrap_txt_colors&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
@@ -871,13 +871,12 @@ devices and screen widths:</p>
 <hr>
 <h2>Full Bootstrap Tutorial</h2>
 <p>This has been a short description of Bootstrap.</p>
-<p>For a full Bootstrap tutorial go to <a href="../bootstrap4/default.html" >W3Schools Bootstrap Tutorial</a>.</p>
-<p>For a full Bootstrap reference go to <a href="../bootstrap4/bootstrap_ref_all_classes.html" >W3Schools Bootstrap Reference</a>.</p>
+<p>For a full Bootstrap 5 tutorial go to <a href="../bootstrap5/index.html" >W3Schools Bootstrap 5 Tutorial</a>.</p>
 
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn w3-green" href="whatis_icons.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn w3-green" href="whatis_w3css.html">Next &#10095;</a>
+  <a class="w3-left ws-btn" href="whatis_icons.html">&#10094; Previous</a>
+  <a class="w3-right ws-btn" href="whatis_w3css.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -911,14 +910,14 @@ devices and screen widths:</p>
     <span class="ribbon-vid ws-yellow">NEW</span>
   </div>
   <p style="font-size: 14px;line-height: 1.5;font-family: Source Sans Pro;padding-left:4px;padding-right:4px;">We just launched<br>W3Schools videos</p>
-  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px"></a>
+  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px" loading="lazy"></a>
   <a class="ws-button" style="font-size:16px;text-decoration: none !important;display: block !important; color:#FFC0C7!important;  width: 100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; paxdding-top: 10px; padding-bottom: 20px; font-family: 'Source Sans Pro', sans-serif; text-align: center;"  onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html">Explore now</a>
 </div>
 
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker" loading="lazy"></a>
 </div>
 
 <div class="sidesection">
@@ -1012,7 +1011,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -1173,7 +1172,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
 <a href="../html/default.html">HTML Tutorial</a><br>
 <a href="../css/default.html">CSS Tutorial</a><br>
 <a href="../js/default.html">JavaScript Tutorial</a><br>
@@ -1190,7 +1189,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
 <a href="../tags/default.html">HTML Reference</a><br>
 <a href="../cssref/default.html">CSS Reference</a><br>
 <a href="../jsref/default.html">JavaScript Reference</a><br>
@@ -1207,7 +1206,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
 <a href="../html/html_examples.html">HTML Examples</a><br>
 <a href="../css/css_examples.html">CSS Examples</a><br>
 <a href="../js/js_examples.html">JavaScript Examples</a><br>
@@ -1239,7 +1238,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 Get Certified &raquo;</a>
 -->
 
-<h4>Web Courses</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Web Courses</h5>
 <a href="../../courses.w3schools.com/courses/html.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
 <a href="../../courses.w3schools.com/courses/css.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
 <a href="../../courses.w3schools.com/courses/javascript.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
@@ -1341,7 +1340,6 @@ function finishedPage() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
@@ -1416,6 +1414,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
@@ -1470,5 +1469,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/whatis/whatis_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 10:08:25 GMT -->
+<!-- Mirrored from www.w3schools.com/whatis/whatis_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 06:11:37 GMT -->
 </html>

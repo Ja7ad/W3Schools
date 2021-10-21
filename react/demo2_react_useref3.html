@@ -1,0 +1,13 @@
+<input type="text" oninput="updatevalue()">
+<h2>Current Value: <span></span></h2>
+<h2>Previous Value:<span></span></h2>
+
+<script>
+prev_value = "";
+function updatevalue() {
+  var current_value = document.getElementsByTagName("input")[0].value
+  document.getElementsByTagName("span")[0].innerHTML = current_value;
+  document.getElementsByTagName("span")[1].innerHTML = prev_value;
+  prev_value = current_value;
+}
+</script>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_string_stristr by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:47 GMT -->
+<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_string_stristr by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:37 GMT -->
 <head>
 <title>PHP Tryit Editor v1.2</title>
 <meta name="viewport" content="width=device-width">
@@ -35,38 +35,14 @@ ga('send', 'pageview');
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
 
   }
 }
@@ -86,10 +62,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
     if (window.screen.availWidth <= 768) {
@@ -436,9 +412,9 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 
@@ -448,7 +424,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" title="Change Theme" style="font-size:28px;margin-top:-2px"></a>
-  <button id="runbtn" class="w3-button w3-bar-item ws-green w3-hover-white"  onclick="submitTryit(1);ga('send', 'event', 'runCodePHP', 'click');">Run &#10095;</button>
+  <button id="runbtn" class="w3-button w3-bar-item ws-green w3-hover-white"  onclick="submitTryit(1);ga('send', 'event', 'runCodePHP', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Run &#10095;</button>
   <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your<span class="w3-hide-medium"> own</span> website</a>
   <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;margin-top:3px;"><span id="framesize"></span></span>
 </div>
@@ -481,7 +457,7 @@ echo stristr("Hello world!","WORLD");
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_string_stristr by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:47 GMT -->
+<!-- Mirrored from www.w3schools.com/php/phptryit.asp?filename=tryphp_func_string_stristr by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:37 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

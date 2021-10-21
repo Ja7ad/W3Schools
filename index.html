@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:18:55 GMT -->
+<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:13:53 GMT -->
 <head>
 <title>W3Schools Online Web Tutorials</title>
 <meta charset="utf-8">
@@ -169,7 +169,7 @@ h1 {
 }
 
 .w3csstut {
-  height: 315px;
+  height: 390px;
 }
 
 .tut-button:hover,.tryit-button:hover,.exercise-button:hover,#getdiploma a:hover {
@@ -310,12 +310,6 @@ h1 {
   }
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .w3-hide-device {
-    display: none;
-  }
-}
-
 #w3_cert_badge {
   position: absolute;
   right: 5%;
@@ -334,7 +328,7 @@ h1 {
 }
 
 #howto_padding {
-  padding: 48px 24px 80px 24px
+  padding: 48px 24px 100px 24px
 }
 
 #getdiploma {
@@ -419,7 +413,7 @@ h1 {
   }
   
   #howto_padding {
-    padding: 2px 24px 80px 24px
+    padding: 2px 24px 90px 24px
   }
 
 }
@@ -493,7 +487,163 @@ h1 {
     display: none !important;
   }
 }
+#howto_iframe {
+   width: 100%;
+   border: 6px solid #e3e6e8;
+   height: 400px;
+   border-bottom-left-radius:4px;
+   border-bottom-right-radius:4px;
+}
 
+.vl-howto {
+  border-left: 50px solid #282A35;
+  height: 80px;
+  position: absolute;
+  top:-6px;
+  left:50%;
+  margin-left:-25px;
+}
+.vl-howtobtn {
+  width:50%;
+  margin-top:73px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ws-hide-1200 {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  #howto_iframe {
+    height: 360px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #howto_iframe {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #howto_iframe {
+    height: 280px;
+  }
+  .codeeditorbr-input {
+    margin-left: 15px;
+  }
+  .vl-howto {
+    height:45px;
+  }
+.vl-howtobtn {
+  margin-top:37px;
+}
+}
+@media screen and (max-width:584px) {
+  #howto_iframe {
+    height: 245px;
+  }
+}
+@media screen and (max-width:500px) {
+  #howto_iframe {
+    height: 215px;
+  }
+}
+@media screen and (max-width:450px) {
+  #howto_iframe {
+    height: 203px;
+  }
+}
+.codeeditorbr-container {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.codeeditorbr-row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.codeeditorbr-column {
+  float: left;
+}
+
+.codeeditorbr-left {
+  width: 20%;
+}
+
+.codeeditorbr-middle {
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+  .codeeditorbr-left {
+    width: 24%;
+  }
+
+  .codeeditorbr-middle {
+    width: 76%;
+  }
+}
+
+.codeeditorbr-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.codeeditorbr-dot {
+  margin-top: 5px;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.codeeditorbr-input {
+  width: 80%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 22px;
+  color: #666;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.hover-yellow:hover {
+  background-color: #fff080 !important;
+  color: black !important;
+}
+
+.codeeditorbr-tablink {
+  font-size: 17px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  display: inline-block;
+  padding: 6px 18px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ffffff;
+}
+
+.codeeditorbr-tablink:hover {
+  background-color: #E7E9EB !important
+}
 </style>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -523,7 +673,7 @@ h1 {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex ws-hide-1080" href="videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavDefault')">Videos <span class="ribbon-topnav ws-hide-1200">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex ws-hide-1080" href="videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavDefault')">Videos <span class="ribbon-topnav ws-hide-1200">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -646,8 +796,8 @@ h1 {
    <a class="w3-bar-item w3-button" href="w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="cybersecurity/index.html">Cyber Security</a>
@@ -1038,18 +1188,19 @@ function myFunction() {<br>
         <div style="height:70px;">
           <h5>A CSS framework for faster and better responsive web pages</h5>
         </div>
-        <a href="w3css/default.html" class="w3-button tut-button black-color w3-margin-bottom">Learn W3.CSS</a>
+        <a href="w3css/default.html" class="w3-button tut-button black-color w3-margin-bottom" style="margin-top:30px">Learn W3.CSS</a>
       </div>
     </div>
 
     <div class="w3-col l6 w3-center" style="padding:2% 3%;">
-      <div class="w3-card-2 w3-round" style="color:black;background-color:#E7E9EB;padding:24px;height:315px;">
+      <div class="w3-card-2 w3-round" style="color:black;background-color:#E7E9EB;padding:24px;height:390px;">
         <h2 style="font-size:45px;font-weight:700">Bootstrap</h2>
         <div style="height:70px;">
           <h5 class="w3-text-dark-grey">A CSS framework for designing better web pages</h5>
         </div>
         <a href="bootstrap/default.html" class="w3-button tut-button black-color">LEARN BS3</a>
         <a href="bootstrap4/default.html" class="w3-button tut-button black-color w3-margin-bottom" style="margin-top:16px;">LEARN BS4</a>
+        <a href="bootstrap5/index.html" class="w3-button tut-button black-color w3-margin-bottom" style="margin-top:16px;">LEARN BS5</a>
       </div>
     </div>
   </div>
@@ -1336,7 +1487,45 @@ function myFunction() {<br>
       </a>
     </div>
 
+  </div>
+</div>
 
+<div class="ws-black" style="padding:30px 3px 85px 3px">
+  <div class="w3-content w3-padding" style="max-width:974px;padding-top:78px;padding-bottom:125px">
+    <h1 style="font-family: 'Source Sans Pro', sans-serif;font-size:65px;font-weight:700;text-align:center">Code Editor</h1>
+    <h4 style="font-family: 'Source Sans Pro', sans-serif;margin-top:25px;" class="w3-center">With our online code editor, you can edit code and view the result in your browser</h4>
+    <br><br>
+    <div class="codeeditorbr-container">
+      <div class="codeeditorbr-row">
+        <div class="codeeditorbr-column codeeditorbr-left">
+          <span class="codeeditorbr-dot" style="background:#ED594A;"></span>
+          <span class="codeeditorbr-dot" style="background:#FDD800;"></span>
+          <span class="codeeditorbr-dot" style="background:#5AC05A;"></span>
+        </div>
+
+        <div class="codeeditorbr-column codeeditorbr-middle">
+          <input type="text" disabled class="codeeditorbr-input" value="www.w3schools.com/tryit/">
+        </div>
+      </div>
+        <div class="w3-bar" style="background-color:#f1f1f1">
+    <button class="w3-bar-item w3-button codeeditorbr-tablink ws-grey" style="color:black" onclick="openLangTab(event,'Frontend')">Frontend</button>
+    <button class="w3-bar-item w3-button codeeditorbr-tablink" style="color:black" onclick="openLangTab(event,'Backend')">Backend</button>
+  </div>
+   <div id="Frontend" class="proglang">
+      <img src="codeeditor.gif" style="width:100%;height:auto;display:block;border-bottom-left-radius:4px;border-bottom-right-radius:4px;"  loading="lazy">
+      </div>
+      
+         <div id="Backend" class="proglang" style="display:none">
+      <img src="tryit/best2.gif" style="width:100%;height:auto;display:block;border-bottom-left-radius:4px;border-bottom-right-radius:4px;" >
+      </div>
+
+    </div><br>
+    <!--
+    <a href="/tryit/tryit.asp?filename=tryhtml_default" target="_blank" class="ws-btn" style="font-size:18px;text-align:left;width:325px;">Try it Yourself (HTML/CSS/JS)</a><br><br>
+    <a href="/tryit/trycompiler.asp?filename=demo_python" target="_blank" class="ws-btn ws-yellow hover-yellow" style="font-size:18px;text-align:left;width:325px;">Try it Yourself (Python/PHP/Java etc.)</a>
+    -->
+    <a href="tryit/tryit80b6.html?filename=tryhtml_hello" target="_blank" class="ws-btn w3-mobile" style="font-size:18px;text-align:left;">Try Frontend Editor (HTML/CSS/JS)</a><br><br>
+    <a href="tryit/trycompiler5bd8.html?filename=demo_python" target="_blank" class="ws-btn w3-mobile ws-yellow hover-yellow" style="font-size:18px;text-align:left;">Try Backend Editor (Python/PHP/Java..)</a>
   </div>
 </div>
 
@@ -1344,8 +1533,7 @@ function myFunction() {<br>
 <div class="w3-content" style="max-width:1400px">
   <h1 style="font-size:65px;font-weight:700;">Color Picker</h1>
   <h4 style="margin-top:25px;">W3Schools' famous color picker</h4>
-  <a href="colors/colors_picker.html" class="w3-hover-opacity"><img style="width:150px;height:128px;margin-top:16px;" src="https://www.w3schools.com/images/colorpicker.png" alt="Colorpicker"></a>
-
+  <a href="colors/colors_picker.html" class="w3-hover-opacity"><img style="width:150px;height:128px;margin-top:16px;" src="https://www.w3schools.com/images/colorpicker.png" alt="Colorpicker" loading="lazy"></a>
 </div>
 </div>
 
@@ -1353,7 +1541,7 @@ function myFunction() {<br>
  <div class="w3-col l12 w3-center" style="padding:3%;">
   <h1 style="font-family: 'Freckle Face', cursive;font-size:48px">Code Game</h1>
   <h2 style="font-family: 'Freckle Face', cursive;">Help the Lynx collect pine cones!</h2>
-  <a href="codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <p><a class="w3-button tut-button black-color" href="codegame/index.html" target="_blank">Play Game</a></p>
  </div>
 </div>
@@ -1387,7 +1575,7 @@ function myFunction() {<br>
   <h2 style="font-size:45px;font-weight:700">Web Templates</h2>
   <h4>Browse our selection of <strong>free</strong> responsive HTML Templates</h4>
   <div class="w3-content">
-    <a href="w3css/w3css_templates.html"><img src="w3css_templates.jpg" style="width:100%;margin:16px 0 20px 0" alt="W3.CSS Templates"></a>
+    <a href="w3css/w3css_templates.html"><img src="w3css_templates.jpg" loading="lazy" style="width:100%;margin:16px 0 20px 0" alt="W3.CSS Templates"></a>
   </div>
   <p><a href="w3css/w3css_templates.html" class="w3-button tut-button black-color w3-padding-16 w3-mobile" style="width:50%">BROWSE TEMPLATES</a></p>
 </div>
@@ -1405,38 +1593,48 @@ function myFunction() {<br>
 
 </div>
 
-<div class="w3-white w3-center" id="howto_padding">
+<div class="w3-white w3-center w3-content" id="howto_padding">
   <h2 style="font-size:45px;font-weight:700">How To Section</h2>
   <h4 class="w3-text-dark-grey">Code snippets for HTML, CSS and JavaScript</h4>
-  <div class="w3-content w3-hide-device">
-    <div class="w3-row-padding" style="margin:32px -16px">
-      <div class="w3-col l6 s12">
-        <iframe src="howto/tryhow_css_sidenav_ifr.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+  <h6 style="margin-top:19px;">For example, how to create a slideshow:</h6>
+  <br>
+  <div class="codeeditorbr-container" style="text-align:left;">
+    <div class="codeeditorbr-row">
+      <div class="codeeditorbr-column codeeditorbr-left">
+        <span class="codeeditorbr-dot" style="background:#ED594A;"></span>
+        <span class="codeeditorbr-dot" style="background:#FDD800;"></span>
+        <span class="codeeditorbr-dot" style="background:#5AC05A;"></span>
       </div>
-      <div class="w3-col l6 w3-hide-small w3-hide-medium">
-        <iframe src="howto/tryhow_css_sidenav_ifr2.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+
+      <div class="codeeditorbr-column codeeditorbr-middle">
+        <input type="text" disabled class="codeeditorbr-input" value="www.w3schools.com/howto/">
       </div>
     </div>
+    <iframe src="howto/tryhow_js_slideshow_ifr.html" id="howto_iframe"></iframe>
   </div>
-
-  <p><a href="howto/default.html" class="w3-button tut-button black-color w3-padding-16 w3-mobile" style="width:50%;">LEARN HOW TO</a></p>
+  <div style="position:relative">
+  <div class="vl-howto"></div>
+  </div>
+  <a href="howto/default.html" class="w3-button tut-button black-color w3-padding-16 w3-mobile vl-howtobtn">LEARN HOW TO</a>
 </div>
 
 <footer class="w3-container w3-center w3-padding-32 ws-black">
  <div class="w3-container w3-padding-32">
-   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="../courses.w3schools.com/index.html" target="_blank" style="font-size:17px;margin-top:-9px">COURSES</a>
-   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="quiztest/default.html" style="font-size:17px;margin-top:-9px;margin-left:12px">QUIZZES</a>
-   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="exercises/index.html" style="font-size:17px;margin-top:-9px;margin-left:12px">EXERCISES</a>
-   <a class="w3-button w3-white w3-hide-large w3-round" href="../courses.w3schools.com/index.html" target="_blank" style="font-size:16px;margin-bottom:16px">COURSES</a>
-   <a class="w3-button w3-white w3-hide-large w3-round" href="quiztest/default.html" style="font-size:16px;margin-bottom:16px;">QUIZZES</a>
-   <a class="w3-button w3-white w3-hide-large w3-round" href="exercises/index.html" style="font-size:16px;margin-bottom:16px;">EXERCISES</a>
+   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="../courses.w3schools.com/index.html" target="_blank" style="font-size:17px;margin-top:-9px" title="Courses">COURSES</a>
+   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="quiztest/default.html" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Quizzes">QUIZZES</a>
+   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="exercises/index.html" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Exercises">EXERCISES</a>
+   <a class="w3-button w3-white w3-hide-small w3-round w3-hide-medium w3-left" href="spaces/index-2.html" target="_blank" style="font-size:17px;margin-top:-9px;margin-left:12px" onclick="ga('send', 'event', 'spacesFromBottomNavDefault', 'click');" title="Get Your Own Website With W3shools Spaces">SPACES</a>
+   <a class="w3-button w3-white w3-hide-large w3-round" href="../courses.w3schools.com/index.html" target="_blank" style="font-size:16px;margin-bottom:16px" title="Courses">COURSES</a>
+   <a class="w3-button w3-white w3-hide-large w3-round" href="quiztest/default.html" style="font-size:16px;margin-bottom:16px;" title="Quizzes">QUIZZES</a>
+   <a class="w3-button w3-white w3-hide-large w3-round" href="exercises/index.html" style="font-size:16px;margin-bottom:16px;" title="Exercises">EXERCISES</a>
    <nav class="w3-right w3-hide-medium w3-hide-small w3-wide">
-    <a href="../w3schools.invisionzone.com/index.html" target="_blank" class="w3-hover-text-green" style="text-decoration:none">FORUM</a> |
-    <a href="about/default.html" target="_top" class="w3-hover-text-green" style="text-decoration:none">ABOUT</a>
+    <a href="../w3schools.invisionzone.com/index.html" target="_blank" class="w3-hover-text-green" style="text-decoration:none" title="Forum">FORUM</a> |
+    <a href="about/default.html" target="_top" class="w3-hover-text-green" style="text-decoration:none" title="About W3Schools">ABOUT</a>
    </nav>
+   <p class="w3-hide-large"><a class="w3-button w3-white w3-round" target="_blank" href="spaces/index-2.html" style="margin:auto;display:block;max-width:300px;font-size:16px;margin-bottom:16px;" onclick="ga('send', 'event', 'spacesFromBottomNavDefault', 'click');" title="Get Your Own Website With W3shools Spaces">SPACES</a></p>
    <nav class="w3-center w3-hide-large w3-margin-top w3-wide">
-    <a href="../w3schools.invisionzone.com/index.html" target="_blank" class="w3-hover-text-green" style="text-decoration:none">FORUM</a> |
-    <a href="about/default.html" target="_top" class="w3-hover-text-green" style="text-decoration:none">ABOUT</a>
+    <a href="../w3schools.invisionzone.com/index.html" target="_blank" class="w3-hover-text-green" style="text-decoration:none" title="Forum">FORUM</a> |
+    <a href="about/default.html" target="_top" class="w3-hover-text-green" style="text-decoration:none" title="About W3Schools">ABOUT</a>
    </nav>
  </div>
  <div class="w3-container">
@@ -1463,6 +1661,20 @@ function myFunction() {<br>
 </div>
 
 <script>
+function openLangTab(evtEd, codeName) {
+  var indexEditor, proglanguage, progtablinks;
+  proglanguage = document.getElementsByClassName("proglang");
+  for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+    proglanguage[indexEditor].style.display = "none";
+  }
+  progtablinks = document.getElementsByClassName("codeeditorbr-tablink");
+  for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+    progtablinks[indexEditor].className = progtablinks[indexEditor].className.replace(" ws-grey", "");
+  }
+  document.getElementById(codeName).style.display = "block";
+  evtEd.currentTarget.className += " ws-grey";
+}
+
 function w3_open() {
   var x = document.getElementById("myAccordion");
   if (x.style.display === 'none') {
@@ -1728,5 +1940,5 @@ function setThemeMode() {
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:22:28 GMT -->
+<!-- Mirrored from www.w3schools.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:14:14 GMT -->
 </html>

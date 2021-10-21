@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '3';exheadings[0] = 'Syntax';exnames[1] = 'variables';excounts[1] = '4';exheadings[1] = 'Variables';exActiveNo = 1;exnames[2] = 'data_types';excounts[2] = '3';exheadings[2] = 'Data Types';exnames[3] = 'operators';excounts[3] = '4';exheadings[3] = 'Operators';exnames[4] = 'strings';excounts[4] = '4';exheadings[4] = 'Strings';exnames[5] = 'booleans';excounts[5] = '3';exheadings[5] = 'Booleans';exnames[6] = 'conditions';excounts[6] = '3';exheadings[6] = 'If...Else';exnames[7] = 'while_loop';excounts[7] = '3';exheadings[7] = 'While Loops';exnames[8] = 'arrays';excounts[8] = '3';exheadings[8] = 'Arrays';exnames[9] = 'functions';excounts[9] = '3';exheadings[9] = 'Functions';exnames[10] = 'classes';excounts[10] = '4';exheadings[10] = 'Classes';</script><html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:13 GMT -->
+<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:13 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Exercise v3.0</title>
@@ -25,12 +25,36 @@ ga('send', 'pageview');
 <script src="../lib/my-learning.js"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
-k42 = true;
+// GPT slots
+var gptAdSlots = [];
+window.googletag = window.googletag || { cmd: [] };
+googletag.cmd.push(function() {
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","exercise" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-      "activeAdUnits": ["try_it_leaderboard"]
+      "activeAdUnits": [],
+      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
   }
 }
 </script>
@@ -48,9 +72,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-                if (document.getElementById("adngin-try_it_leaderboard-0")) {
-                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
-              }
+              
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh([gptAdSlots[0]]);
+        });
          
     }
 }
@@ -1466,9 +1491,9 @@ function userAddOnePoint(n) {
   <div style="position:absolute;">
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="adngin-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
+  </div>
  
 </div>
   </div>
@@ -1508,15 +1533,15 @@ val birthyear = 1975
   </div>
     <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
-    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
+    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
 </div>
 
 <br>
@@ -1705,7 +1730,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    adngin.cmd.startAuction(['try_it_leaderboard']);  }
+      }
 }
 
 function checkassignmentcode() {
@@ -2164,5 +2189,5 @@ function colorcoding() {
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 13:00:13 GMT -->
+<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:13 GMT -->
 </html>

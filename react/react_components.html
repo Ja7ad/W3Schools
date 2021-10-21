@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/react/react_components.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 08:50:39 GMT -->
+<!-- Mirrored from www.w3schools.com/react/react_components.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 05:43:59 GMT -->
 <head>
 <title>React Components</title>
 <meta charset="utf-8">
@@ -39,7 +39,7 @@ k42 = true;
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": ["main_leaderboard", "sidebar_top", "bottom_left", "bottom_right"]
+      "activeAdUnits": ["main_leaderboard_courses", "sidebar_top_courses", "bottom_left_courses", "bottom_right_courses"]
 
   }
 }
@@ -124,7 +124,7 @@ function w3_getStyleValue(elmnt,style) {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -260,8 +260,8 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -514,27 +514,41 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="react_intro.html">React Intro</a>
 <a target="_top" href="react_getstarted.html">React Get Started</a>
 <a target="_top" href="react_es6.html">React ES6</a>
+<div class="tut_overview">
+  <a target="_top" href="react_es6.html">React ES6</a>
+  <a target="_top" href="react_es6_classes.html">ES6 Classes</a>
+  <a target="_top" href="react_es6_arrow.html">ES6 Arrow Functions</a>
+  <a target="_top" href="react_es6_variables.html">ES6 Variables</a>
+  <a target="_top" href="react_es6_array_methods.html">ES6 Array Methods</a>
+  <a target="_top" href="react_es6_destructuring.html">ES6 Destucturing</a>
+  <a target="_top" href="react_es6_spread.html">ES6 Spread Operator</a>
+  <a target="_top" href="react_es6_modules.html">ES6 Modules</a>
+  <a target="_top" href="react_es6_ternary.html">ES6 Ternary Operator</a>
+</div>
 <a target="_top" href="react_render.html">React Render HTML</a>
 <a target="_top" href="react_jsx.html">React JSX</a>
 <a target="_top" href="react_components.html">React Components</a>
+<a target="_top" href="react_class.html">React Class</a>
 <a target="_top" href="react_props.html">React Props</a>
-<a target="_top" href="react_state.html">React State</a>
-<a target="_top" href="react_lifecycle.html">React Lifecycle</a>
 <a target="_top" href="react_events.html">React Events</a>
+<a target="_top" href="react_conditional_rendering.html">React Conditionals</a>
+<a target="_top" href="react_lists.html">React Lists</a>
 <a target="_top" href="react_forms.html">React Forms</a>
-<a target="_top" href="react_css.html">React CSS</a>
-<a target="_top" href="react_sass.html">React Sass</a>
-<!--
+<a target="_top" href="react_router.html">React Router</a>
+<a target="_top" href="react_memo.html">React Memo</a>
+<a target="_top" href="react_css_styling.html">React CSS Styling</a>
+<a target="_top" href="react_sass_styling.html">React Sass Styling</a>
 <br>
-<a target="_top" href="react_conditions.asp">React Conditions</a>
-<a target="_top" href="react_lists.asp">React Lists and Keys</a>
-<a target="_top" href="reactjs_.asp">React Shared States</a>
-<a target="_top" href="reactjs_.asp">React Compositions</a>
-<a target="_top" href="reactjs_.asp">React Design Philosophy</a>
-<a target="_top" href="reactjs_.asp">React JSX Advanced</a>
-<a target="_top" href="reactjs_.asp">React References</a>
-
--->
+<h2 class="left">React Hooks</h2>
+<a target="_top" href="react_hooks.html">What is a Hook?</a>
+<a target="_top" href="react_usestate.html">useState</a>
+<a target="_top" href="react_useeffect.html">useEffect</a>
+<a target="_top" href="react_usecontext.html">useContext</a>
+<a target="_top" href="react_useref.html">useRef</a>
+<a target="_top" href="react_usereducer.html">useReducer</a>
+<a target="_top" href="react_usecallback.html">useCallback</a>
+<a target="_top" href="react_usememo.html">useMemo</a>
+<a target="_top" href="react_customhooks.html">Custom Hooks</a>
 
       <br><br>
     </div>
@@ -547,14 +561,14 @@ function w3_getStyleValue(elmnt,style) {
         <!-- MainLeaderboard-->
 
         <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="adngin-main_leaderboard-0"></div>
+        <div id="adngin-main_leaderboard_courses-0"></div>
         <!-- adspace leaderboard -->
 
       </div>
 <h1>React Components</h1>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="react_jsx.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="react_props.html">Next &#10095;</a>
+<a class="w3-right w3-btn" href="react_class.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -565,16 +579,23 @@ function w3_getStyleValue(elmnt,style) {
 <h2>React Components</h2>
 <p>Components are independent and reusable bits of code.
 They serve the same purpose as JavaScript functions,
-but work in isolation and return HTML via a render() function.</p>
+but work in isolation and return HTML.</p>
 <p>Components come in two types, Class components and Function components, in 
-this tutorial we will concentrate on Class components.</p>
-<hr>
-<h2>Create a Class Component</h2>
+this tutorial we will concentrate on Function components.</p>
+<div class="w3-panel w3-note">
+<p>In older React code bases, you may find Class components primarily used.
+It is now suggested to use Function components along with Hooks,
+which were added in React 16.8. There is an optional section on Class components for your reference.</p>
+</div>
 
-<p>When creating a React component, the component's name must start with an 
+<hr>
+<h2>Create Your First Component</h2>
+
+<p>When creating a React component, the component's name <em>MUST</em> start with an 
 upper case letter.</p>
-<p>The component has to include the <code class="w3-codespan">extends React.Component</code> statement, this statement creates an inheritance to 
-React.Component, and gives your component access to React.Component's functions.</p>
+<h3>Class Component</h3>
+<p>A class component must include the <code class="w3-codespan">extends React.Component</code> statement. 
+This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.</p>
 
 <p>The component also requires a <code class="w3-codespan">render()</code> method, 
 this method returns HTML.</p>
@@ -591,43 +612,28 @@ this method returns HTML.</p>
 <br>
 </div>
 
-<p>Now your React application has a component called Car, which returns a 
-<code class="w3-codespan">&lt;h2&gt;</code> element.</p>
-<p>To use this component in your application, use similar syntax as normal HTML:
-<code class="w3-codespan" style="white-space: nowrap;">&lt;Car /&gt;</code></p>
-
-<div class="w3-example">
-<h3>Example</h3>
-<p>Display the <code class="w3-codespan">Car</code> component in the "root" element:</p>
-<pre class="language-jsx w3-white"><code>ReactDOM.render(&lt;Car /&gt;, document.getElementById('root'));</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreactadd0.html?filename=demo2_react_component_class">Run 
-Example &raquo;</a>
-</p>
-</div>
-
-<hr>
-
-<h2>Create a Function Component</h2>
+<h3>Function Component</h3>
 <p>Here is the same example as above, but created using a Function component instead.</p>
 
-<p>A Function component also returns HTML, and behaves pretty much the same way 
-as a Class component, but Class components have some additions, and will be 
-preferred in this tutorial.</p>
+<p>A Function component also returns HTML, and behaves much the same way as a Class component,
+but Function components can be written using much less code,
+are easier to understand, and will be preferred in this tutorial.</p>
 
 <div class="w3-example">
 <h3>Example</h3>
 <p>Create a Function component called <code class="w3-codespan">Car</code></p>
 <pre class="language-jsx w3-white"><code>function Car() {
-  return &lt;h2&gt;Hi, I am also a Car!&lt;/h2&gt;;
+  return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
 }
 </code></pre>
 <br>
 </div>
-
-<p>Once again your React application has a Car component.</p>
-<p>Refer to the Car component as normal HTML 
-(except in React, components <em>must</em> start with an upper case letter):</p>
+<hr>
+<h2>Rendering a Component</h2>
+<p>Now your React application has a component called Car, which returns an 
+<code class="w3-codespan">&lt;h2&gt;</code> element.</p>
+<p>To use this component in your application, use similar syntax as normal HTML:
+<code class="w3-codespan" style="white-space: nowrap;">&lt;Car /&gt;</code></p>
 
 <div class="w3-example">
 <h3>Example</h3>
@@ -641,60 +647,9 @@ Example &raquo;</a>
 
 <hr>
 
-<h2>Component Constructor</h2>
-
-<p>If there is a <code class="w3-codepspan"><code class="w3-codespan">constructor()</code></code> function in your component, this function will be called when the 
-component gets initiated.</p>
-<p>The constructor function is where you initiate the component's properties.</p>
-<p>In React, component properties should be kept in an object called
-<code class="w3-codespan">state</code>.</p>
-<p>You will learn more about <code class="w3-codespan">state</code> later in 
-this tutorial.</p>
-<p>The constructor function is also where you honor the inheritance of the 
-parent component by including the <code class="w3-codespan">super()</code> 
-statement, which executes the parent component's constructor function, and your component has access to all the functions of 
-the parent component (<code class="w3-codespan">React.Component</code>).</p>
-<div class="w3-example">
-  <h3>Example</h3>
-<p>Create a constructor function in the Car component, and add a color property:</p>
-<pre class="language-jsx w3-white" data-line="2-5"><code>class Car extends React.Component {
-  constructor() {
-    super();
-    this.state = {color: &quot;red&quot;};
-  }
-  render() {
-    return &lt;h2&gt;I am a Car!&lt;/h2&gt;;
-  }
-}
-</code></pre>
-<br>
-</div>
-
-<p>Use the color property in the render() function:</p>
-
-<div class="w3-example">
-  <h3>Example</h3>
-<pre class="language-jsx w3-white" data-line="7"><code>class Car extends React.Component {
-  constructor() {
-    super();
-    this.state = {color: &quot;red&quot;};
-  }
-  render() {
-    return &lt;h2&gt;I am a {this.state.color} Car!&lt;/h2&gt;;
-  }
-}
-</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreactcfef.html?filename=demo2_react_component_constructor">Run 
-Example &raquo;</a>
-</p>
-</div>
-
-<hr>
-
 <h2>Props</h2>
 
-<p>Another way of handling component properties is by using <code class="w3-codespan">props</code>.</p>
+<p>Components can be passed as <code class="w3-codespan">props</code>, which stands for properties.</p>
 
 <p>Props are like function arguments, and you send them into the component as attributes.</p>
 <p>You will learn more about <code class="w3-codespan">props</code> in the next chapter.</p>
@@ -702,10 +657,8 @@ Example &raquo;</a>
   <h3>Example</h3>
 <p>Use an attribute to pass a color to the Car component, and use it in the 
 render() function:</p>
-<pre class="language-jsx w3-white" data-line="3,7"><code>class Car extends React.Component {
-  render() {
-    return &lt;h2&gt;I am a {this.props.color} Car!&lt;/h2&gt;;
-  }
+<pre class="language-jsx w3-white"><code>function Car(props) {
+  return &lt;h2&gt;I am a {props.color} Car!&lt;/h2&gt;;
 }
 
 ReactDOM.render(&lt;Car color=&quot;red&quot;/&gt;, document.getElementById('root'));
@@ -725,21 +678,17 @@ Example &raquo;</a>
 <div class="w3-example">
 <h3>Example</h3>
 <p>Use the Car component inside the Garage component:</p>
-<pre class="language-jsx w3-white" data-line="12"><code>class Car extends React.Component {
-  render() {
-    return &lt;h2&gt;I am a Car!&lt;/h2&gt;;
-  }
+<pre class="language-jsx w3-white"><code>function Car() {
+  return &lt;h2&gt;I am a Car!&lt;/h2&gt;;
 }
 
-class Garage extends React.Component {
-  render() {
-    return (
-      &lt;div&gt;
+function Garage() {
+  return (
+    &lt;&gt;
       &lt;h1&gt;Who lives in my Garage?&lt;/h1&gt;
       &lt;Car /&gt;
-      &lt;/div&gt;
-    );
-  }
+    &lt;/&gt;
+  );
 }
 
 ReactDOM.render(&lt;Garage /&gt;, document.getElementById('root'));
@@ -754,24 +703,22 @@ Example &raquo;</a>
 
 <h2>Components in Files</h2>
 
-<p>React is all about re-using code, and it can be smart to insert some of your 
-components in separate files.</p>
+<p>React is all about re-using code, and it is recommended to split your components into separate files.</p>
 
 <p>To do that, create a new file with a <code class="w3-codespan">.js</code> 
 file extension and put the code inside it:</p>
-<p>Note that the file must start by importing React (as before), and it has to 
-end with the statement <code class="w3-codespan" style="white-space:nowrap">export default Car;</code>.</p>
+
+<div class="w3-panel w3-note">
+<p>Note that the filename must start with an uppercase character.</p>
+
+</div>
+
 
 <div class="w3-example">
 <h3>Example</h3>
-<p>This is the new file, we named it &quot;App.js&quot;:</p>
-<pre class="language-jsx w3-white" data-line="10"><code>import React from 'react';
-import ReactDOM from 'react-dom';
-
-class Car extends React.Component {
-  render() {
-    return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
-  }
+<p>This is the new file, we named it &quot;Car.js&quot;:</p>
+<pre class="language-jsx w3-white"><code>function Car() {
+  return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
 }
 
 export default Car;
@@ -783,16 +730,17 @@ export default Car;
 application.</p>
 <div class="w3-example">
 <h3>Example</h3>
-<p>Now we import the &quot;App.js&quot; file in the application, and we can use the Car 
+<p>Now we import the &quot;Car.js&quot; file in the application, and we can use the 
+<code class="w3-codespan">Car</code> 
 component as if it was created here.</p>
-<pre class="language-jsx w3-white" data-line="3"><code>import React from 'react';
+<pre class="language-jsx w3-white"><code>import React from 'react';
 import ReactDOM from 'react-dom';
-import Car from './App.js';
+import Car from './Car.js';
 
 ReactDOM.render(&lt;Car /&gt;, document.getElementById('root'));
 </code></pre>
 <p>
-<a target="_blank" class="w3-btn" href="showreacte8a0.html?filename=demo3_react_export">Run 
+<a target="_blank" class="w3-btn" href="showreact8fdb.html?filename=demo2_react_comp_in_files">Run 
 Example &raquo;</a>
 </p>
 
@@ -801,7 +749,7 @@ Example &raquo;</a>
 <hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="react_jsx.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="react_props.html">Next &#10095;</a>
+<a class="w3-right w3-btn" href="react_class.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -812,7 +760,7 @@ Example &raquo;</a>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="adngin-sidebar_top-0"></div>
+    <div id="adngin-sidebar_top_courses-0"></div>
   
   </div>
 </div>
@@ -835,14 +783,14 @@ Example &raquo;</a>
     <span class="ribbon-vid ws-yellow">NEW</span>
   </div>
   <p style="font-size: 14px;line-height: 1.5;font-family: Source Sans Pro;padding-left:4px;padding-right:4px;">We just launched<br>W3Schools videos</p>
-  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px"></a>
+  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px" loading="lazy"></a>
   <a class="ws-button" style="font-size:16px;text-decoration: none !important;display: block !important; color:#FFC0C7!important;  width: 100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; paxdding-top: 10px; padding-bottom: 20px; font-family: 'Source Sans Pro', sans-serif; text-align: center;"  onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html">Explore now</a>
 </div>
 
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker" loading="lazy"></a>
 </div>
 
 <div class="sidesection">
@@ -936,7 +884,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -987,25 +935,25 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <div id="adngin-sidebar_sticky-0"></div>
+      <div id="adngin-sidebar_sticky_courses-0"></div>
         <script>
         window.addEventListener('adnginLoaderReady', function() {
           if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
             // adspace sticky
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses", "mid_content_courses" ]); });
             }
             else {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses"]); });
             }
           }
           else {
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content_courses"]); });
             }
           }  
         });
-      </script>    
+      </script>
       
     </div>
   </div>
@@ -1026,11 +974,11 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div class="bottomad">
     <!-- BottomMediumRectangle -->
     <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_left_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
     <!-- adspace bmr -->
     <!-- RightBottomMediumRectangle -->
     <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_right_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -1097,7 +1045,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
 <a href="../html/default.html">HTML Tutorial</a><br>
 <a href="../css/default.html">CSS Tutorial</a><br>
 <a href="../js/default.html">JavaScript Tutorial</a><br>
@@ -1114,7 +1062,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
 <a href="../tags/default.html">HTML Reference</a><br>
 <a href="../cssref/default.html">CSS Reference</a><br>
 <a href="../jsref/default.html">JavaScript Reference</a><br>
@@ -1131,7 +1079,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
 <a href="../html/html_examples.html">HTML Examples</a><br>
 <a href="../css/css_examples.html">CSS Examples</a><br>
 <a href="../js/js_examples.html">JavaScript Examples</a><br>
@@ -1163,7 +1111,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 Get Certified &raquo;</a>
 -->
 
-<h4>Web Courses</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Web Courses</h5>
 <a href="../../courses.w3schools.com/courses/html.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
 <a href="../../courses.w3schools.com/courses/css.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
 <a href="../../courses.w3schools.com/courses/javascript.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
@@ -1265,7 +1213,6 @@ function finishedPage() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
@@ -1340,6 +1287,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
@@ -1393,5 +1341,5 @@ function registerPoint(cc) {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]--></body>
 
-<!-- Mirrored from www.w3schools.com/react/react_components.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 08:50:45 GMT -->
+<!-- Mirrored from www.w3schools.com/react/react_components.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 05:44:03 GMT -->
 </html>

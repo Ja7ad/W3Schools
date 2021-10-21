@@ -23,11 +23,6 @@ this.transformMax = function(x, y) {
   this.yF = this.yMax / y
 }
 
-// Transform Y Function 
-this.transformY = function(a, b) {
-  this.yF = a;
-}
-
 // Plot One XY Point
 this.plotPoint = function(x, y, color, radius = 3) {
   this.ctx.fillStyle = color;

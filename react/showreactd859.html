@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_componentwillunmount by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 12:58:51 GMT -->
+<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_componentwillunmount by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:09:04 GMT -->
 <head>
 <title>Tryit Editor v3.6 - Show React</title>
 <meta name="viewport" content="width=device-width">
@@ -30,7 +30,7 @@ k42 = true;
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": ["try_it_leaderboard"]
+      "activeAdUnits": ["try_it_leaderboard_courses"]
 
   }
 }
@@ -51,8 +51,8 @@ function browserResize() {
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
         
-        if (document.getElementById("adngin-try_it_leaderboard-0")) {
-                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+        if (document.getElementById("adngin-try_it_leaderboard_courses-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard_courses"]); });
               }
          
     }
@@ -82,7 +82,7 @@ body {
   position:absolute;
   width:100%;
   top:99px;
-  background-color:#F1F1F1;
+  background-color:#E7E9EB;
 }
 .topnav-icons {
   margin-right:8px;
@@ -91,7 +91,7 @@ body {
   color:#999999;
 }
 .w3-bar-item:hover {
-  color:#999999 !important;
+  color:#757575 !important;
 }
 a.w3schoolslink {
   padding:0 !important;
@@ -120,7 +120,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   font-family:Consolas, monospace;
 }
 #container {
-  background-color:#F1F1F1;
+  background-color:#E7E9EB;
   width:100%;
   overflow:auto;
   position:absolute;
@@ -191,7 +191,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   opacity:0.9;
   padding:1px 6px;
   font-family:Consolas;
-  background-color:#F1F1F1;
+  background-color:#E7E9EB;
   font-size:16px;
 }
 #iframeResult, #iframeSource {
@@ -282,7 +282,7 @@ font-style:normal;
   z-index:2;
   padding:4px 12px;
   border-bottom:1px solid #d9d9d9;
-  background-color:#F1F1F1;
+  background-color:#E7E9EB;
 }
 .localhostdiv {
   overflow:hidden;
@@ -319,7 +319,7 @@ body.darktheme .trytopnav a {
 }
 body.darktheme #filenamecontainer span {
   background-color:#555555;
-  color:#f1f1f1;
+  color:#E7E9EB;
 }
 body.darktheme .codewindow {
   background-color: #282B34!important;
@@ -346,7 +346,7 @@ body.darktheme .codewindow {
 <!-- TryitLeaderboard -->
 
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="adngin-try_it_leaderboard-0"></div>
+  <div id="adngin-try_it_leaderboard_courses-0"></div>
   <!-- adspace tryit-->
  
 </div>
@@ -417,7 +417,7 @@ body.darktheme .codewindow {
 
 #resttab {
   z-index:1;
-  border-bottom:1px solid #d9d9d9;background-color:#F1F1F1;
+  border-bottom:1px solid #d9d9d9;background-color:#E7E9EB;
   width:100%;
   left:0px;
 }
@@ -450,18 +450,17 @@ body.darktheme .codewindow {
 
 
 
-
+<!--
 <div id="indexjstab" class="tabitem" onclick="clickTab('indexjs')">index.js</div>
 <div id="indexhtmltab" class="tabitem" onclick="clickTab('indexhtml')">index.html</div>
+-->
 
-
-
+<!--
 <div id="resttab">&nbsp;</div>
-
+-->
 
 <div id="indexjs">
 <pre style="margin:0" class="codewindow language-jsx xw3-white"><code>
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -549,7 +548,7 @@ ReactDOM.render(&lt;Container /&gt;, document.getElementById('root'));
 <script>
 var demotype = 2;
 
-          clickTab('indexjs');
+          //clickTab('indexjs');
           
 function clickTab(x) {
   if (demotype == 3 || demotype == 5) {document.getElementById("appjs").style.display = "none";}
@@ -754,5 +753,5 @@ function setCodewindowHeight() {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_componentwillunmount by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 12:58:52 GMT -->
+<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_componentwillunmount by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:09:04 GMT -->
 </html>

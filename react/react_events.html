@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/react/react_events.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 08:51:02 GMT -->
+<!-- Mirrored from www.w3schools.com/react/react_events.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 05:44:16 GMT -->
 <head>
 <title>React Events</title>
 <meta charset="utf-8">
@@ -39,7 +39,7 @@ k42 = true;
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": ["main_leaderboard", "sidebar_top", "bottom_left", "bottom_right"]
+      "activeAdUnits": ["main_leaderboard_courses", "sidebar_top_courses", "bottom_left_courses", "bottom_right_courses"]
 
   }
 }
@@ -124,7 +124,7 @@ function w3_getStyleValue(elmnt,style) {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -260,8 +260,8 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -514,27 +514,41 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="react_intro.html">React Intro</a>
 <a target="_top" href="react_getstarted.html">React Get Started</a>
 <a target="_top" href="react_es6.html">React ES6</a>
+<div class="tut_overview">
+  <a target="_top" href="react_es6.html">React ES6</a>
+  <a target="_top" href="react_es6_classes.html">ES6 Classes</a>
+  <a target="_top" href="react_es6_arrow.html">ES6 Arrow Functions</a>
+  <a target="_top" href="react_es6_variables.html">ES6 Variables</a>
+  <a target="_top" href="react_es6_array_methods.html">ES6 Array Methods</a>
+  <a target="_top" href="react_es6_destructuring.html">ES6 Destucturing</a>
+  <a target="_top" href="react_es6_spread.html">ES6 Spread Operator</a>
+  <a target="_top" href="react_es6_modules.html">ES6 Modules</a>
+  <a target="_top" href="react_es6_ternary.html">ES6 Ternary Operator</a>
+</div>
 <a target="_top" href="react_render.html">React Render HTML</a>
 <a target="_top" href="react_jsx.html">React JSX</a>
 <a target="_top" href="react_components.html">React Components</a>
+<a target="_top" href="react_class.html">React Class</a>
 <a target="_top" href="react_props.html">React Props</a>
-<a target="_top" href="react_state.html">React State</a>
-<a target="_top" href="react_lifecycle.html">React Lifecycle</a>
 <a target="_top" href="react_events.html">React Events</a>
+<a target="_top" href="react_conditional_rendering.html">React Conditionals</a>
+<a target="_top" href="react_lists.html">React Lists</a>
 <a target="_top" href="react_forms.html">React Forms</a>
-<a target="_top" href="react_css.html">React CSS</a>
-<a target="_top" href="react_sass.html">React Sass</a>
-<!--
+<a target="_top" href="react_router.html">React Router</a>
+<a target="_top" href="react_memo.html">React Memo</a>
+<a target="_top" href="react_css_styling.html">React CSS Styling</a>
+<a target="_top" href="react_sass_styling.html">React Sass Styling</a>
 <br>
-<a target="_top" href="react_conditions.asp">React Conditions</a>
-<a target="_top" href="react_lists.asp">React Lists and Keys</a>
-<a target="_top" href="reactjs_.asp">React Shared States</a>
-<a target="_top" href="reactjs_.asp">React Compositions</a>
-<a target="_top" href="reactjs_.asp">React Design Philosophy</a>
-<a target="_top" href="reactjs_.asp">React JSX Advanced</a>
-<a target="_top" href="reactjs_.asp">React References</a>
-
--->
+<h2 class="left">React Hooks</h2>
+<a target="_top" href="react_hooks.html">What is a Hook?</a>
+<a target="_top" href="react_usestate.html">useState</a>
+<a target="_top" href="react_useeffect.html">useEffect</a>
+<a target="_top" href="react_usecontext.html">useContext</a>
+<a target="_top" href="react_useref.html">useRef</a>
+<a target="_top" href="react_usereducer.html">useReducer</a>
+<a target="_top" href="react_usecallback.html">useCallback</a>
+<a target="_top" href="react_usememo.html">useMemo</a>
+<a target="_top" href="react_customhooks.html">Custom Hooks</a>
 
       <br><br>
     </div>
@@ -547,19 +561,19 @@ function w3_getStyleValue(elmnt,style) {
         <!-- MainLeaderboard-->
 
         <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="adngin-main_leaderboard-0"></div>
+        <div id="adngin-main_leaderboard_courses-0"></div>
         <!-- adspace leaderboard -->
 
       </div>
 <h1>React Events</h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="react_lifecycle.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="react_forms.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="react_props.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="react_conditional_rendering.html">Next &#10095;</a>
 </div>
 
 <hr>
 
-<p class="intro">Just like HTML, React can perform actions based on user events.</p>
+<p class="intro">Just like HTML DOM events, React can perform actions based on user events.</p>
 <p class="intro">React has the same events as HTML: click, change, mouseover etc.</p>
 
 <hr>
@@ -577,11 +591,6 @@ braces:</p>
 <h3>React:</h3>
 <pre class="language-jsx w3-white"><code>&lt;button onClick={shoot}&gt;Take the Shot!&lt;/button&gt;
 </code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreacte74e.html?filename=demo2_react_events">Run 
-Example &raquo;</a>
-</p>
-
 </div>
 
 <div class="w3-example">
@@ -591,24 +600,18 @@ Example &raquo;</a>
 <br>
 </div>
 
-<hr>
-<h2>Event Handlers</h2>
-<p>A good practice is to put the event handler as a method in the component 
-class:</p>
-
 <div class="w3-example">
 <h3>Example:</h3>
   <p>Put the <code class="w3-codespan">shoot</code> function inside the
   <code class="w3-codespan">Football</code> component:</p>
-<pre class="language-jsx w3-white" data-line="2-4"><code>class Football extends React.Component {
-  shoot() {
+<pre class="language-jsx w3-white"><code>function Football() {
+  const shoot = () =&gt; {
     alert(&quot;Great Shot!&quot;);
   }
-  render() {
-    return (
-      &lt;button onClick={this.shoot}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
+
+  return (
+    &lt;button onClick={shoot}&gt;Take the shot!&lt;/button&gt;
+  );
 }
 
 ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
@@ -621,104 +624,23 @@ Example &raquo;</a>
 
 <hr>
 
-<h2>Bind <code class="w3-codespan">this</code></h2>
-<p>For methods in React, the <code class="w3-codespan">this</code> keyword should 
-represent the component that owns the method.</p>
-<p>That is why you should use arrow functions. With arrow functions,
-<code class="w3-codespan">this</code> will always represent the object that defined 
-the arrow function.</p>
-
-<div class="w3-example">
-  <h3>Example:</h3>
-<pre class="language-jsx w3-white"><code>class Football extends React.Component {
-  shoot = () =&gt; {
-    alert(this);
-    /*
-    The 'this' keyword refers to the component object
-    */
-  }
-  render() {
-    return (
-      &lt;button onClick={this.shoot}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
-}
-
-ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
-</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreact52a1.html?filename=demo2_react_events_this">Run 
-Example &raquo;</a>
-</p>
-</div>
-
-<h3>Why Arrow Functions?</h3>
-
-<p>In class components, the <code class="w3-codespan">this</code> keyword is not defined by default, 
-so with regular functions the <code class="w3-codespan">this</code> keyword 
-represents the object that called the method, which can be the global window 
-object, a HTML button, or whatever.</p>
-<p>Read more about binding <code class="w3-codespan">this</code> in our <a href="react_es6.html#arrowthis">React 
-ES6 'What About this?'</a> chapter.</p>
-<p>If you <em>must</em> use regular functions instead of arrow functions you have to bind
-<code class="w3-codespan">this</code> to the component instance using the
-<code class="w3-codespan">bind()</code> method:</p>
-
-<div class="w3-example">
-<h3>Example:</h3>
-  <p>Make <code class="w3-codespan">this</code> available in the
-  <code class="w3-codespan">shoot</code> function by binding it in the
-  <code class="w3-codespan">constructor</code> function:</p>
-<pre class="language-jsx w3-white" data-line="4"><code>class Football extends React.Component {
-  constructor(props) {
-    super(props)
-    this.shoot = this.shoot.bind(this)
-  }
-  shoot() {
-    alert(this);
-    /*
-    Thanks to the binding in the constructor function,
-    the 'this' keyword now refers to the component object
-    */
-  }
-  render() {
-    return (
-      &lt;button onClick={this.shoot}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
-}
-
-ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
-</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreactb2f9.html?filename=demo2_react_events_this2">Run 
-Example &raquo;</a>
-</p>
-</div>
-
-<div class="w3-panel w3-note">
-<p>Without the binding, the <code class="w3-codespan">this</code> keyword would return <code class="w3-codespan">undefined</code>.</p>
-</div>
-
-<hr>
 <h2>Passing Arguments</h2>
 
-<p>If you want to send parameters into an event handler, you have two options:</p>
-<p>1. Make an anonymous arrow function:</p>
+<p>To pass an argument to an event handler, use an arrow function.</p>
+
 <div class="w3-example">
   <h3>Example:</h3>
-  <p>Send &quot;Goal&quot; as a parameter to the <code class="w3-codespan">shoot</code> 
+  <p>Send &quot;Goal!&quot; as a parameter to the <code class="w3-codespan">shoot</code> 
   function, using arrow 
   function:</p>
-<pre class="language-jsx w3-white" data-line="7"><code>class Football extends React.Component {
-  shoot = (a) =&gt; {
+<pre class="language-jsx w3-white"><code>function Football() {
+  const shoot = (a) =&gt; {
     alert(a);
   }
-  render() {
-    return (
-      &lt;button onClick={() =&gt; this.shoot(&quot;Goal&quot;)}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
+
+  return (
+    &lt;button onClick={() =&gt; shoot(&quot;Goal!&quot;)}&gt;Take the shot!&lt;/button&gt;
+  );
 }
 
 ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
@@ -729,70 +651,26 @@ Example &raquo;</a>
 </p>
 </div>
 
-
-<p>Or:</p>
-<p>2. Bind the event handler to <code class="w3-codespan">this</code>.</p>
-<p>Note that the first argument has to be <code class="w3-codespan">this</code>.</p>
-
-<div class="w3-example">
-<h3>Example:</h3>
-  <p>Send &quot;Goal&quot; as a parameter to the <code class="w3-codespan">shoot</code> 
-  function:</p>
-<pre class="language-jsx w3-white" data-line="7"><code>class Football extends React.Component {
-  shoot(a) {
-    alert(a);
-  }
-  render() {
-    return (
-      &lt;button onClick={this.shoot.bind(this, &quot;Goal&quot;)}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
-}
-
-ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
-</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreactbc8a.html?filename=demo2_react_events_argument2">Run 
-Example &raquo;</a>
-</p>
-</div>
-
-<div class="w3-panel w3-note">
-<p><strong>Note on the second example:</strong> If you send arguments without using the <code class="w3-codespan">bind</code> method, 
-(<code class="w3-codespan">this.shoot(this, &quot;Goal&quot;)</code> instead of
-<code class="w3-codespan">this.shoot.bind(this, &quot;Goal&quot;)</code>), the
-<code class="w3-codespan">shoot</code> function will be executed when the page 
-is loaded instead of 
-waiting for the button to be clicked. </p>
-</div>
-
-
-
 <hr>
 <h2>React Event Object</h2>
 <p>Event handlers have access to the React event that triggered the function.</p>
-<p>In our example the event is the &quot;click&quot; event. Notice that once 
-again the syntax is 
-different when using arrow functions or not.</p>
-
-<p>With the arrow function you have to send the event argument manually:</p>
+<p>In our example the event is the &quot;click&quot; event.</p>
 
 <div class="w3-example">
 <h3>Example:</h3>
   <p>Arrow Function: Sending the event object manually:</p>
-<pre class="language-jsx w3-white" data-line="11"><code>class Football extends React.Component {
-  shoot = (a, b) =&gt; {
+<pre class="language-jsx w3-white" data-line="11"><code>function Football() {
+  const shoot = (a, b) =&gt; {
     alert(b.type);
     /*
     'b' represents the React event that triggered the function,
     in this case the 'click' event
     */
   }
-  render() {
-    return (
-      &lt;button onClick={(ev) =&gt; this.shoot(&quot;Goal&quot;, ev)}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
+
+  return (
+    &lt;button onClick={(event) =&gt; shoot(&quot;Goal!&quot;, event)}&gt;Take the shot!&lt;/button&gt;
+  );
 }
 
 ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
@@ -803,40 +681,13 @@ Example &raquo;</a>
 </p>
 
 </div>
-<p>Without arrow function, the React event object is sent automatically as the 
-last argument when using the <code class="w3-codespan">bind()</code> method:</p>
-
-<div class="w3-example">
-<h3>Example:</h3>
-  <p>With the <code class="w3-codespan">bind()</code> method, the event object 
-  is sent as the last argument:</p>
-<pre class="language-jsx w3-white" data-line="11"><code>class Football extends React.Component {
-  shoot = (a, b) =&gt; {
-    alert(b.type);
-    /*
-    'b' represents the React event that triggered the function,
-    in this case the 'click' event
-    */
-  }
-  render() {
-    return (
-      &lt;button onClick={this.shoot.bind(this, &quot;Goal&quot;)}&gt;Take the shot!&lt;/button&gt;
-    );
-  }
-}
-
-ReactDOM.render(&lt;Football /&gt;, document.getElementById('root'));
-</code></pre>
-<p>
-<a target="_blank" class="w3-btn" href="showreactc997.html?filename=demo2_react_events_event2">Run 
-Example &raquo;</a>
-</p>
-</div>
+<p>This will come in handy when we look at <a href="react_forms.html">Form</a> in 
+a later chapter.</p>
 
 <hr>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="react_lifecycle.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="react_forms.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="react_props.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="react_conditional_rendering.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -847,7 +698,7 @@ Example &raquo;</a>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="adngin-sidebar_top-0"></div>
+    <div id="adngin-sidebar_top_courses-0"></div>
   
   </div>
 </div>
@@ -870,14 +721,14 @@ Example &raquo;</a>
     <span class="ribbon-vid ws-yellow">NEW</span>
   </div>
   <p style="font-size: 14px;line-height: 1.5;font-family: Source Sans Pro;padding-left:4px;padding-right:4px;">We just launched<br>W3Schools videos</p>
-  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px"></a>
+  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px" loading="lazy"></a>
   <a class="ws-button" style="font-size:16px;text-decoration: none !important;display: block !important; color:#FFC0C7!important;  width: 100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; paxdding-top: 10px; padding-bottom: 20px; font-family: 'Source Sans Pro', sans-serif; text-align: center;"  onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html">Explore now</a>
 </div>
 
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker" loading="lazy"></a>
 </div>
 
 <div class="sidesection">
@@ -971,7 +822,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -1022,25 +873,25 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <div id="adngin-sidebar_sticky-0"></div>
+      <div id="adngin-sidebar_sticky_courses-0"></div>
         <script>
         window.addEventListener('adnginLoaderReady', function() {
           if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
             // adspace sticky
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses", "mid_content_courses" ]); });
             }
             else {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky_courses"]); });
             }
           }
           else {
-            if (document.getElementById("adngin-mid_content-0")) {
-              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+            if (document.getElementById("adngin-mid_content_courses-0")) {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content_courses"]); });
             }
           }  
         });
-      </script>    
+      </script>
       
     </div>
   </div>
@@ -1061,11 +912,11 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
   <div class="bottomad">
     <!-- BottomMediumRectangle -->
     <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_left_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
     <!-- adspace bmr -->
     <!-- RightBottomMediumRectangle -->
     <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <div id="adngin-bottom_right_courses-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -1132,7 +983,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
 <a href="../html/default.html">HTML Tutorial</a><br>
 <a href="../css/default.html">CSS Tutorial</a><br>
 <a href="../js/default.html">JavaScript Tutorial</a><br>
@@ -1149,7 +1000,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
 <a href="../tags/default.html">HTML Reference</a><br>
 <a href="../cssref/default.html">CSS Reference</a><br>
 <a href="../jsref/default.html">JavaScript Reference</a><br>
@@ -1166,7 +1017,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
 <a href="../html/html_examples.html">HTML Examples</a><br>
 <a href="../css/css_examples.html">CSS Examples</a><br>
 <a href="../js/js_examples.html">JavaScript Examples</a><br>
@@ -1198,7 +1049,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 Get Certified &raquo;</a>
 -->
 
-<h4>Web Courses</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Web Courses</h5>
 <a href="../../courses.w3schools.com/courses/html.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
 <a href="../../courses.w3schools.com/courses/css.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
 <a href="../../courses.w3schools.com/courses/javascript.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
@@ -1300,7 +1151,6 @@ function finishedPage() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
@@ -1375,6 +1225,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
@@ -1428,5 +1279,5 @@ function registerPoint(cc) {
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]--></body>
 
-<!-- Mirrored from www.w3schools.com/react/react_events.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 08:51:10 GMT -->
+<!-- Mirrored from www.w3schools.com/react/react_events.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 05:44:20 GMT -->
 </html>

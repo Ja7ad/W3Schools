@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/bootstrap/bootstrap_ver.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:27:40 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/bootstrap_ver.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:18:01 GMT -->
 <head>
-<title>Bootstrap 3 or Bootstrap 4</title>
+<title>Bootstrap 3, 4 or 5</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips">
@@ -107,7 +107,7 @@ function w3_getStyleValue(elmnt,style) {
 <style>
 .split {
   height: 100%;
-  width: 50%;
+  width: 33.33%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -118,12 +118,18 @@ function w3_getStyleValue(elmnt,style) {
 
 .left {
   left: 0;
+  background-color: #846bae;
+}
+
+.middle {
+  left:33.34%;
   background-color: #775ba4;
 }
 
+
 .right {
   right: 0;
-  background-color: #6138ad;
+  background-color: #6c3ec1;
 }
 
 .centered {
@@ -134,7 +140,7 @@ function w3_getStyleValue(elmnt,style) {
   text-align: center;
 }
 
-a.topnav-icons.fa-menu {
+a.topnav-icons.fa-menu,.displ {
   display: none;
 }
 
@@ -148,7 +154,7 @@ a.topnav-icons.fa-menu {
 }
 
 .myLink:hover h1 {
-  font-size: 41px;
+  font-size: 38px;
 }
 
 .mySpan {
@@ -161,7 +167,7 @@ a.topnav-icons.fa-menu {
 
 .myh1 {
    line-height: 90px;
-   font-size: 40px;
+   font-size: 36px;
 }
 .myP {
    font-size: 15px;
@@ -197,6 +203,7 @@ a.topnav-icons.fa-menu {
   }
   .myLink .myh1 {
     font-size: 16px;
+    line-height:28px;
   }
   .myP {
     display: none;
@@ -204,11 +211,14 @@ a.topnav-icons.fa-menu {
   .myLink:hover h1 {
     font-size: 17px;
   }
+  .displ {
+  display: block;
+}
 }
 
 @media only screen and (max-height: 620px) {
   .centered {
-    margin-top: 45px;
+    margin-top: 65px;
   }
   .myLink .mySpan {
     font-size: 25px;
@@ -274,7 +284,7 @@ a.topnav-icons.fa-menu {
   <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <div class="w3-right w3-padding-16">
-    <a class="w3-bar-item w3-btn bar-item-hover w3-right w3-hide-small" id="topnav_login_btn" style="width:130px;background-color:#04AA6D;color:white;border-radius:25px;" href="../../profile.w3schools.com/log-ina0ec.html?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" target="_blank" title="Login">Login</a>
+    <a class="w3-bar-item w3-btn ws-hover-green w3-right w3-hide-small" id="topnav_login_btn" style="width:130px;background-color:#04AA6D;color:white;border-radius:25px;" href="../../profile.w3schools.com/log-ina0ec.html?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" target="_blank" title="Login">Login</a>
     <a class="w3-bar-item w3-button bar-item-hover w3-right w3-hide-small barex" style="width:140px;border-radius:25px;margin-right:15px" href="../../courses.w3schools.com/index.html" target="_blank" id="cert_navbtn" onclick="ga('send', 'event', 'Courses' , 'Clicked on courses in Default top navigation');" title="Courses">Paid Courses</a>
     <a class="w3-bar-item w3-button bar-item-hover w3-right ws-hide-900 w3-hide-small barex ws-pink" style="border-radius: 25px; margin-right: 15px;" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTopnavMain', 'click');" title="W3schools Spaces">Website <span class="ribbon-topnav ws-hide-1066">NEW</span></a>
   </div>
@@ -296,7 +306,7 @@ a.topnav-icons.fa-menu {
       <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
       <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
       <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
-      <a class="w3-bar-item w3-button" href='bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button ws-green" href='bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
       <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
       <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
       <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Tutorial'>JAVA</a>
@@ -396,8 +406,8 @@ a.topnav-icons.fa-menu {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -636,31 +646,44 @@ a.topnav-icons.fa-menu {
     </div>
   </div>
 
+
 <div class="split left">
   <div class="centered">
     <a href="default.html" class="myLink">
       <div style="display:inline-block">
         <span class="mySpan">B3</span>
-        <h1 class="myh1">Learn Bootstrap 3 &raquo;</h1>
+        <h1 class="myh1">Learn <br class="displ">Bootstrap 3</h1>
       </div>
     </a>
     <p class="myP">Bootstrap is a free <b>CSS framework</b>. Bootstrap 3 is the most stable version of Bootstrap, and it is still supported by the team for critical bugfixes and documentation changes.</p>
   </div>
 </div>
 
-<div class="split right">
+<div class="split middle">
   <div class="centered">
     <a href="../bootstrap4/default.html" class="myLink">
       <div style="display:inline-block">
         <span class="mySpan">B4</span>
-        <h1 class="myh1">Learn Bootstrap 4 &raquo;</h1>
+        <h1 class="myh1">Learn <br class="displ">Bootstrap 4</h1>
       </div>
     </a>
     <p class="myP">Bootstrap 4 is a newer version of Bootstrap; with new components, faster stylesheet and more responsiveness. However, Internet Explorer 9 and down is not supported.</p>
   </div>
 </div>
-<div id="right">
+
+<div class="split right">
+  <div class="centered">
+    <a href="../bootstrap5/index.html" class="myLink">
+      <div style="display:inline-block">
+        <span class="mySpan">B5</span>
+        <h1 class="myh1">Learn <br class="displ">Bootstrap 5</h1>
+      </div>
+    </a>
+    <p class="myP">Bootstrap 5 is the <strong>newest </strong>version of Bootstrap; with a smooth overhaul. However, Internet Explorer 11 and down is not supported, and jQuery is replaced with JavaScript.</p>
+  </div>
 </div>
+
+
 
 <script src="../lib/w3schools_footer.js"></script>
 <script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
@@ -670,5 +693,5 @@ a.topnav-icons.fa-menu {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/bootstrap/bootstrap_ver.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 03:27:41 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap/bootstrap_ver.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:18:06 GMT -->
 </html>

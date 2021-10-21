@@ -1,0 +1,13 @@
+<h1>I have rendered <span>0</span> times!</h1>
+
+<script>
+var n = 0;
+(function () {
+window.setTimeout(mycounter, 1000);
+})()
+
+function mycounter() {
+  n++
+  document.getElementsByTagName("span")[0].innerHTML = n
+}
+</script>

@@ -1,0 +1,13 @@
+<h2>My Todos</h2>
+<p>todo 1</p>
+<p>todo 2</p>
+<hr>
+<div>Count: <span>0</span><button onclick="mycount()">+</button></div>
+
+<script>
+var n = 0;
+function mycount() {
+  n++
+  document.getElementsByTagName("span")[0].innerHTML = n;
+}
+</script>

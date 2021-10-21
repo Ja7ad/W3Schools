@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/css_units.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 06:49:21 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_units.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:41:23 GMT -->
 <head>
 <title>CSS Units</title>
 <meta charset="utf-8">
@@ -124,7 +124,7 @@ function w3_getStyleValue(elmnt,style) {
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:116px">Tutorials <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
   <a class="w3-bar-item w3-button w3-hide-small barex bar-item-hover w3-padding-24 ws-hide-800" href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' style="font-size:20px;"></i><i class='fa fa-caret-up' style="display:none"></i></a>
-  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
+  <a class="w3-bar-item w3-button w3-hide-medium bar-item-hover w3-hide-small w3-padding-24 barex" href="../videos/index.html" title="Video Tutorials" onclick="ga('send', 'event', 'Videos' , 'fromTopnavMain')">Videos <span class="ribbon-topnav ws-hide-1080">NEW</span></a>
 
   <a class="w3-bar-item w3-button bar-item-hover w3-padding-24" href="javascript:void(0)" onclick="w3_open()" id="navbtn_menu" title="Menu" style="width:93px">Menu <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
 
@@ -260,8 +260,8 @@ function w3_getStyleValue(elmnt,style) {
    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
    <a class="w3-bar-item w3-button" href="../browsers/default.html">Web Statistics</a>
    <a class="w3-bar-item w3-button" href="../../courses.w3schools.com/index.html">Web Certificates</a>
-   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
    <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+   <a class="w3-bar-item w3-button" href='../tryit/default.html'>Code Editor</a>
    <a class="w3-bar-item w3-button" href="../typingspeed/default.html">Test Your Typing Speed</a>
    <a class="w3-bar-item w3-button" href="../codegame/index.html" target="_blank">Play a Code Game</a>
    <a class="w3-bar-item w3-button" href="../cybersecurity/index.html">Cyber Security</a>
@@ -590,6 +590,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="css_display_visibility.html">CSS Display</a>
 <a target="_top" href="css_max-width.html">CSS Max-width</a>
 <a target="_top" href="css_positioning.html">CSS Position</a>
+<a target="_top" href="css_z-index.html">CSS Z-index</a>
 <a target="_top" href="css_overflow.html">CSS Overflow</a>
 <a target="_top" href="css_float.html">CSS Float</a>
 <div class="tut_overview">
@@ -619,6 +620,7 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="css_units.html">CSS Units</a>
 <a target="_top" href="css_specificity.html">CSS Specificity</a>
 <a target="_top" href="css_important.html">CSS !important</a>
+<a target="_top" href="css_math_functions.html">CSS Math Functions</a>
 <br>
 <h2 class="left"><span class="left_h2">CSS Advanced</span></h2>
 <a target="_top" href="css3_borders.html">CSS Rounded Corners</a>
@@ -630,6 +632,7 @@ function w3_getStyleValue(elmnt,style) {
 <div class="tut_overview">
 <a target="_top" href="css3_gradients.html">Linear Gradients</a>
 <a target="_top" href="css3_gradients_radial.html">Radial Gradients</a>
+<a target="_top" href="css3_gradients_conic.html">Conic Gradients</a>
 </div>
 <a target="_top" href="css3_shadows.html">CSS Shadows</a>
 <div class="tut_overview">
@@ -765,37 +768,37 @@ as for print layout.</p>
   <tr>
     <td>cm</td>
     <td>centimeters
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit4e65.html?filename=trycss_unit_cm">Try it</a>
+    <a target="_blank" class="w3-btn btnsmall" href="tryit4e65.html?filename=trycss_unit_cm">Try it</a>
     </td>
   </tr>
     <tr>
     <td>mm</td>
     <td>millimeters
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit834b.html?filename=trycss_unit_mm">Try it</a>  
+    <a target="_blank" class="w3-btn btnsmall" href="tryit834b.html?filename=trycss_unit_mm">Try it</a>  
     </td>
     </tr>
   <tr>
     <td>in</td>
     <td>inches (1in = 96px = 2.54cm)
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit840b.html?filename=trycss_unit_in">Try it</a>
+    <a target="_blank" class="w3-btn btnsmall" href="tryit840b.html?filename=trycss_unit_in">Try it</a>
     </td>
   </tr>
     <tr>
     <td>px *</td>
     <td>pixels (1px = 1/96th of 1in)
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit1dbd.html?filename=trycss_unit_px">Try it</a> 
+    <a target="_blank" class="w3-btn btnsmall" href="tryit1dbd.html?filename=trycss_unit_px">Try it</a> 
     </td>
     </tr>
   <tr>
     <td>pt</td>
     <td>points (1pt = 1/72 of 1in)
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit9793.html?filename=trycss_unit_pt">Try it</a> 
+    <a target="_blank" class="w3-btn btnsmall" href="tryit9793.html?filename=trycss_unit_pt">Try it</a> 
     </td>
   </tr>
   <tr>
     <td>pc</td>
     <td>picas (1pc = 12 pt)
-    <a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit1589.html?filename=trycss_unit_pc">Try it</a>  
+    <a target="_blank" class="w3-btn btnsmall" href="tryit1589.html?filename=trycss_unit_pc">Try it</a>  
     </td>
   </tr>
 </table>
@@ -816,47 +819,47 @@ Relative length units scales better between different rendering mediums.</p>
   <tr>
     <td>em</td>
     <td>Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryitadcf.html?filename=trycss_unit_em">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryitadcf.html?filename=trycss_unit_em">Try it</a></td>
   </tr>
   <tr>
     <td>ex</td>
     <td>Relative to the x-height of the current font (rarely used)</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit415f.html?filename=trycss_unit_ex">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit415f.html?filename=trycss_unit_ex">Try it</a></td>
   </tr>
   <tr>
     <td>ch</td>
     <td>Relative to width of the &quot;0&quot; (zero)</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryitc941.html?filename=trycss_unit_ch">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryitc941.html?filename=trycss_unit_ch">Try it</a></td>
   </tr>
   <tr>
     <td>rem</td>
     <td>Relative to font-size of the root element</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit78ff.html?filename=trycss_unit_rem">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit78ff.html?filename=trycss_unit_rem">Try it</a></td>
   </tr>
   <tr>
     <td>vw</td>
     <td>Relative to 1% of the width of the viewport*</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit01d1.html?filename=trycss_unit_vw">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit01d1.html?filename=trycss_unit_vw">Try it</a></td>
   </tr>
   <tr>
     <td>vh</td>
     <td>Relative to 1% of the height of the viewport*</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryitf9f0.html?filename=trycss_unit_vh">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryitf9f0.html?filename=trycss_unit_vh">Try it</a></td>
   </tr>
   <tr>
     <td>vmin</td>
     <td>Relative to 1% of viewport's* smaller dimension</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit7044.html?filename=trycss_unit_vmin">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit7044.html?filename=trycss_unit_vmin">Try it</a></td>
   </tr>
   <tr>
     <td>vmax</td>
     <td>Relative to 1% of viewport's* larger dimension</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit4a37.html?filename=trycss_unit_vmax">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit4a37.html?filename=trycss_unit_vmax">Try it</a></td>
   </tr>
   <tr>
     <td>%</td>
     <td>Relative to the parent element</td>
-    <td><a target="_blank" class="w3-btn btnsmall" href="../cssref/tryit696f.html?filename=trycss_unit_percentage">Try it</a></td>
+    <td><a target="_blank" class="w3-btn btnsmall" href="tryit696f.html?filename=trycss_unit_percentage">Try it</a></td>
   </tr>
     </table>
 </div>
@@ -977,14 +980,14 @@ length unit.</p>
     <span class="ribbon-vid ws-yellow">NEW</span>
   </div>
   <p style="font-size: 14px;line-height: 1.5;font-family: Source Sans Pro;padding-left:4px;padding-right:4px;">We just launched<br>W3Schools videos</p>
-  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px"></a>
+  <a onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html" class="w3-hover-opacity"><img src="https://www.w3schools.com/images/htmlvideoad_footer.png" style="max-width:100%;padding:5px 10px 25px 10px" loading="lazy"></a>
   <a class="ws-button" style="font-size:16px;text-decoration: none !important;display: block !important; color:#FFC0C7!important;  width: 100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; paxdding-top: 10px; padding-bottom: 20px; font-family: 'Source Sans Pro', sans-serif; text-align: center;"  onclick="ga('send', 'event', 'Videos' , 'fromSidebar');" href="../videos/index.html">Explore now</a>
 </div>
 
 <div class="sidesection">
 <h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
 <a href="../colors/colors_picker.html">
-<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker"></a>
+<img src="https://www.w3schools.com/images/colorpicker.gif" alt="colorpicker" loading="lazy"></a>
 </div>
 
 <div class="sidesection">
@@ -1078,7 +1081,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 }
 </style>
   <h4><a href="../codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
-  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game"></a>
+  <a href="../codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="https://www.w3schools.com/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
   <a class="w3-btn w3-block ws-black" href="../codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
 </div>
 
@@ -1239,7 +1242,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
 <a href="../html/default.html">HTML Tutorial</a><br>
 <a href="default.html">CSS Tutorial</a><br>
 <a href="../js/default.html">JavaScript Tutorial</a><br>
@@ -1256,7 +1259,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
 <a href="../tags/default.html">HTML Reference</a><br>
 <a href="../cssref/default.html">CSS Reference</a><br>
 <a href="../jsref/default.html">JavaScript Reference</a><br>
@@ -1273,7 +1276,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
 <a href="../html/html_examples.html">HTML Examples</a><br>
 <a href="css_examples.html">CSS Examples</a><br>
 <a href="../js/js_examples.html">JavaScript Examples</a><br>
@@ -1305,7 +1308,7 @@ href="../../courses.w3schools.com/index.html" target="_blank" onclick="ga('send'
 Get Certified &raquo;</a>
 -->
 
-<h4>Web Courses</h4>
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Web Courses</h5>
 <a href="../../courses.w3schools.com/courses/html.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML Course</a><br>
 <a href="../../courses.w3schools.com/courses/css.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS Course</a><br>
 <a href="../../courses.w3schools.com/courses/javascript.html" target="_blank" onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript Course</a><br>
@@ -1407,7 +1410,6 @@ function finishedPage() {
       y = this.responseText;
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
@@ -1482,6 +1484,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
@@ -1536,5 +1539,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/css_units.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Sep 2021 06:49:37 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_units.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:41:51 GMT -->
 </html>

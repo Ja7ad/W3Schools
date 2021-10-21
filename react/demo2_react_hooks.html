@@ -1,0 +1,10 @@
+<h1>My favorite color is <span>red</span>!</h1>
+<button type="button" onclick="setColor('blue')">Blue</button>
+<button type="button" onclick="setColor('red')">Red</button>
+<button type="button" onclick="setColor('pink')">Pink</button>
+<button type="button" onclick="setColor('green')">Green</button>
+<script>
+function setColor(x) {
+  document.getElementsByTagName("span")[0].innerHTML = x;
+}
+</script>

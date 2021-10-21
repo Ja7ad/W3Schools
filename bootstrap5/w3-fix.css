@@ -1,0 +1,88 @@
+﻿div.top {
+    padding-top:20px;
+}
+div.top img{
+    margin-bottom:15px;
+}
+div.topnav {
+ margin:0;
+ padding:0;
+}
+.w3schools-logo:link, .w3-logo:visited {
+    text-decoration:none;
+}
+a{
+    text-decoration:underline;
+}
+
+
+.w3-bar a, .w3-button, .w3-btn, .nav-link, .btn, .dropdown-item,.page-link,.card-link,.navbar-brand{
+    text-decoration:none !important;
+}
+.btn-link:hover{
+    text-decoration:underline !important;
+}
+.linkborder {
+  text-decoration:none;
+}
+.linkborder:hover {
+  text-decoration:underline;
+}
+
+.w3-bar .w3-bar-item {
+  xcolor: #f1f1f1!important;
+}
+.img-responsive {
+    display:inline;
+}
+ h1, h2, h3, h4, h5, h6 {
+
+    line-height: 1.5;
+}
+.fix h1,.fix h2,.fix h3,.fix h4,.fix h5,.fix h6 {
+      font-weight: 500;
+    line-height: 1.1;
+}
+.fix p,.fix blockquote,.fix dl,.fix pre,.fix abbr {
+  margin-bottom:0
+}
+.fix h1 {
+  font-size:40px;
+}
+.fix h2 {
+  font-size:32px;
+}
+.fix h3 {
+  font-size:28px;
+}
+.fix h4 {
+  font-size:24px;
+}
+.fix h5 {
+  font-size:20px;
+}
+.fix h6 {
+  font-size:16px;
+}
+
+.fix pre{
+    display: block;
+    margin-top: 0;
+    xmargin-bottom: 1rem;
+    font-size: 90%;
+    color: #292b2c;
+
+}
+.fix {
+  font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.w3-panel.w3-note p {
+    padding-top:16px;padding-bottom:8px;
+}
+
+.margin-bottom-add {
+  margin-bottom:6px;
+}
+.margin-bottom-remove {
+  margin-bottom:-6px;
+}

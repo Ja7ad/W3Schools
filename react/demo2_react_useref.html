@@ -1,0 +1,9 @@
+<input type="text" oninput="countRenders()">
+<h1>Render Count: <span>0</span></h1>
+<script>
+var n = 0;
+function countRenders() {
+  n++
+  document.getElementsByTagName("span")[0].innerHTML = n;
+}
+</script>

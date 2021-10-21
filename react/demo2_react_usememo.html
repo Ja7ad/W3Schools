@@ -1,0 +1,40 @@
+<h2>My Todos</h2>
+<div></div>
+<button onclick="addtodo()">Add Todo</button>
+<hr>
+Count: <span>0</span><button onclick="mycount()">+</button>
+<h2>Expensive Calculation</h2>
+<span>1000000000</span>
+
+<script>
+var a = 0;
+var b = 1000000000;
+function mycount() {
+  expensive();
+  a++
+  document.getElementsByTagName("span")[0].innerHTML = a;
+}
+function expensive() {
+  var c = 0;
+  for (let i = 0; i < 1000000000; i++) {
+    c += 1;
+  }
+  b++;
+  document.getElementsByTagName("span")[1].innerHTML = b;
+}
+function addtodo() {
+  mycount2();
+  document.getElementsByTagName("div")[0].innerHTML += "<p>New Todo</p>";
+}
+function mycount2() {
+  expensive2();
+  document.getElementsByTagName("span")[0].innerHTML = a;
+}
+function expensive2() {
+  var c = 0;
+  for (let i = 0; i < 1000000000; i++) {
+    c += 1;
+  }
+  document.getElementsByTagName("span")[1].innerHTML = b;
+}
+</script>

@@ -1,0 +1,12 @@
+<p>Count: <span>0</span></p>
+<button onclick="calculate()">+</button>
+<p>Calculation: <span>0</span></p>
+
+<script>
+var n = 0;
+function calculate() {
+  n++
+  document.getElementsByTagName("span")[0].innerHTML = n;
+  document.getElementsByTagName("span")[1].innerHTML = n*2;
+}
+</script>
