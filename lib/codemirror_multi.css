@@ -201,6 +201,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
 
 body.darktheme .CodeMirror {
   background-color:rgb(40, 44, 52);
+  background-color:rgb(21,32,43);
   color:rgb(255, 255, 255);
 }
 
@@ -364,7 +365,7 @@ div.CodeMirror-dragcursors {
   visibility: visible;
 }
 
-.CodeMirror-selected { background: #d9d9d9; }
+.CodeMirror-selected { background: #d9d9d9;}
 .CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }
 .CodeMirror-crosshair { cursor: crosshair; }
 .CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #d7d4f0; }
@@ -390,3 +391,11 @@ div.CodeMirror-dragcursors {
 
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
+
+.darktheme .CodeMirror-selected,
+.darktheme .CodeMirror-line::selection, .darktheme .CodeMirror-line > span::selection, .darktheme .CodeMirror-line > span > span::selection {
+  background: #0066ff;
+}
+.darktheme .CodeMirror-line::-moz-selection, .darktheme .CodeMirror-line > span::-moz-selection, .darktheme .CodeMirror-line > span > span::-moz-selection {
+  background: #0066ff;
+}

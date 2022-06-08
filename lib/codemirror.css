@@ -218,7 +218,7 @@ body.darktheme .cm-s-default .cm-comment {color: #999;}
 body.darktheme .cm-s-default .cm-string {color: #88c999/*green*/;}
 body.darktheme .cm-s-default .cm-m-javascript.cm-string {color: #88c999/*green*/;}
 body.darktheme .cm-s-default .cm-m-sql.cm-string {color: #ff9999/*red*/;}
-body.darktheme .cm-s-default .cm-string-2 {color: #f50;}
+body.darktheme .cm-s-default .cm-string-2 {color: #faca6b;}
 body.darktheme .cm-s-default .cm-meta {color: #999;}
 body.darktheme .cm-s-default .cm-qualifier {color: #ff9999/*red*/;}
 body.darktheme .cm-s-default .cm-builtin {color: #ff9999/*red*/;}
@@ -259,6 +259,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 
 body.darktheme .CodeMirror {
   background-color:rgb(40, 44, 52);
+  background-color:rgb(21,32,43);
   color:rgb(255, 255, 255);
 }
 

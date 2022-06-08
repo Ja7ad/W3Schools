@@ -2,14 +2,14 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'bs4_containers';excounts[0] = '2';exheadings[0] = 'Containers';exActiveNo = 0;exnames[1] = 'bs4_typography';excounts[1] = '3';exheadings[1] = 'Typography';exnames[2] = 'bs4_colors';excounts[2] = '2';exheadings[2] = 'Colors';exnames[3] = 'bs4_tables';excounts[3] = '5';exheadings[3] = 'Tables';exnames[4] = 'bs4_images';excounts[4] = '4';exheadings[4] = 'Images';exnames[5] = 'bs4_alerts';excounts[5] = '3';exheadings[5] = 'Alerts';exnames[6] = 'bs4_buttons';excounts[6] = '7';exheadings[6] = 'Buttons';exnames[7] = 'bs4_badges';excounts[7] = '3';exheadings[7] = 'Badges';exnames[8] = 'bs4_progressbars';excounts[8] = '4';exheadings[8] = 'Progress Bar';exnames[9] = 'bs4_spinners';excounts[9] = '2';exheadings[9] = 'Spinners';exnames[10] = 'bs4_pagination';excounts[10] = '3';exheadings[10] = 'Pagination';exnames[11] = 'bs4_list_groups';excounts[11] = '2';exheadings[11] = 'List Groups';exnames[12] = 'bs4_cards';excounts[12] = '2';exheadings[12] = 'Cards';exnames[13] = 'bs4_dropdowns';excounts[13] = '1';exheadings[13] = 'Dropdowns';exnames[14] = 'bs4_collapse';excounts[14] = '1';exheadings[14] = 'Collapse';exnames[15] = 'bs4_navs';excounts[15] = '3';exheadings[15] = 'Navs';exnames[16] = 'bs4_navbars';excounts[16] = '3';exheadings[16] = 'Navbars';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/bootstrap4/exercise_bs4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 06:51:01 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap4/exercise_bs4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 19:41:03 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="../lib/fonts/fontawesomeafe9.woff2?80702bb7" as="font" type="font/woff2" crossorigin> 
 <link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
-<link rel="stylesheet" href="../lib/w3schools28.css">
+<link rel="stylesheet" href="../lib/w3schools30.css">
 <link rel="stylesheet" href="../lib/codemirror.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,8 +21,9 @@
   ga('require', 'GTM-WJ88MZ5');
   ga('send', 'pageview');
 </script>
-<script src="../lib/my-learning.js"></script>
+<script src="../lib/my-learning21cd.js?v=1.0.9"></script>
 
+<script src="../lib/uic2c70.js?v=1.0.3"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
@@ -37,6 +38,7 @@ k42 = true;
 
   }
 }
+uic_r_a()
 </script>
 <script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
 <script>
@@ -96,10 +98,12 @@ if (exsection == "JS") {
     storageBlip = "jq_";
 } else if (exsection == "PHP") {
     storageBlip = "php_";
-} else if (exsection == "CSS") {
+} else if (exsection == "CSS" || exsection == "CSS_2") {
     storageBlip = "css_";
 } else if (exsection == "GIT") {
     storageBlip = "git_";
+} else if (exsection == "REACT") {
+    storageBlip = "react_";
 } else {
     storageBlip = "";
 }
@@ -149,14 +153,18 @@ function setAnswerObj(nam, val, all) {
   if (userLoggedOn) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          localStorage.setItem(nam, val);
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          if (this.responseText == "NOTLOGGEDIN") {
+            localStorage.setItem(nam, val);
+          } else {
+            retval = this.responseText;
+            retval = JSON.parse(retval);
+            //alert(retval["recordcount"])
+            checkCompletedExercises(0);
+          }
         } else {
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          //alert(retval["recordcount"])
-          checkCompletedExercises(0);
+          localStorage.setItem(nam, val);
         }
       }
     };
@@ -164,7 +172,15 @@ function setAnswerObj(nam, val, all) {
 //  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
     xhttp.withCredentials = true;
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("n=" + nam + "&v=" + val + "&a=" + all);
+    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
+    xhttp.send(reqData);
+
+    if (MyLearning._version === '2') { // send a copy to mylv1
+      MyLearning.makeLegacyPostRequest(
+        MyLearning.getUrl('api.exercise.html', '1.5L'),
+        reqData
+      );
+    }
   } else {
     localStorage.setItem(nam, val);
   }
@@ -927,7 +943,6 @@ function codeCheckCorrectClose() {
 	right: 25px;
 	top: 120px;
 	color: #04AA6D;
-	xxtext-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	background-color: #dff0d8;
   background-color: #D9EEE1;
   border-radius:5px;
@@ -982,7 +997,7 @@ function codeCheckCorrectClose() {
     background-color:#ffffff;
 }
 #topTD,#topTD2 {
-    background-color:#ffffff;
+    xxbackground-color:#ffffff;
     padding:20px;
     vertical-align:top;
 }
@@ -1008,6 +1023,7 @@ function codeCheckCorrectClose() {
 .exercisemenuinner {
     background-color:#555555;
     background-color:#282A35;
+    background-color:#38444d;
     position:fixed;
     height:100%;
     height:auto;
@@ -1021,6 +1037,10 @@ function codeCheckCorrectClose() {
         box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 
 }
+body.darkpagetheme .exercisemenuinner {
+    background-color:#38444d;
+}
+
 .exercisemenuinner:hover {
     overflow:auto;
 }
@@ -1060,6 +1080,16 @@ function codeCheckCorrectClose() {
 }
 .w3s-exercisebtn:hover, .w3s-exercisebtn:active {
   background-color: #059862 !important;
+}
+.menucontainer {
+  width:260px;
+  background-color:#fff;
+  overflow:auto;
+  padding:10px 5px;
+}
+body.darkpagetheme .menucontainer {
+  background-color:rgb(21,32,43);
+  color:#ddd;
 }
 @media screen and (min-width: 900px) {
     .codecontainer {
@@ -1130,8 +1160,15 @@ function codeCheckCorrectClose() {
     color:#555555;
     font-size:16px;
 }
+body.darkpagetheme .exercisemenu a.exbtn {
+    background-color:rgb(21,32,43);
+    color:#eee;
+}
 .exercisemenu a.exbtn:hover {
     background-color:#f1f1f1;
+}
+body.darkpagetheme .exercisemenu a.exbtn:hover {
+    background-color:#000;
 }
 div.exmenulinks a.active {
     background-color:#04AA6D !important;    
@@ -1160,6 +1197,9 @@ div.exmenulinks a.active {
     right:0;
     top:0;
     cursor:pointer;
+}
+body.darkpagetheme .menubtn {
+    color:#ddd;
 }
 .menubtn:hover {
     color:#000000;
@@ -1256,36 +1296,32 @@ var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
 
+
+  userLoggedOn = MyLearning.userIsLoggedIn();
+
+  if (!userLoggedOn) {
+    getFromLocalStorage();
+    w3LoadExercise();
+    return false;
+  }
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
-    if (this.readyState == 4 && this.status == 200) {
-      if (this.responseText == "NOTLOGGEDIN") {
-        getFromLocalStorage();
-      } else {
-        userLoggedOn = true;
-        retval = this.responseText;
-        retval = JSON.parse(retval);
-        if (retval["recordcount"] == 0) {
-          //getFromLocalStorage();
-          for (i = 0; i < exnames.length; i++) {
-            numberofexercises += Number(excounts[i]);
-            aa = "";
-            l = excounts[i];
-            for (j = 0; j < l; j++) {
-              if (j > 0) {aa += ","; }
-              aa += "0";
-            }
-            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-          }
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        if (this.responseText == "NOTLOGGEDIN") {
+          userLoggedOn = false;
+          getFromLocalStorage();
         } else {
-          if (retval["exscore"]) userscore = retval["exscore"];
-          for (i = 0; i < exnames.length; i++) {
-            aa = "";
-            numberofexercises += Number(excounts[i]);
-            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-            } else {
+          userLoggedOn = true;
+          retval = this.responseText;
+          retval = JSON.parse(retval);
+          if (retval["recordcount"] == 0) {
+            //getFromLocalStorage();
+            for (i = 0; i < exnames.length; i++) {
+              numberofexercises += Number(excounts[i]);
+              aa = "";
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1293,10 +1329,31 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          }
+          } else {
+            if (retval["exscore"]) userscore = retval["exscore"];
+            for (i = 0; i < exnames.length; i++) {
+              aa = "";
+              numberofexercises += Number(excounts[i]);
+              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+              } else {
+                l = excounts[i];
+                for (j = 0; j < l; j++) {
+                  if (j > 0) {aa += ","; }
+                  aa += "0";
+                }
+                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+              }
+            }
+          }      
+          drawUserProgress();  
         }
-        drawUserProgress();
       }
+      // else {
+      //   userLoggedOn = false;
+      //   getFromLocalStorage();
+      // }
+
       w3LoadExercise();
     }
   };
@@ -1444,8 +1501,12 @@ function userAddOnePoint(n) {
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="W3Schools BS4 Exercise" />
     <meta property="og:description"   content="I completed all the BS4 exercises on w3schools.com" />
+    <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="436">
+    <meta property="og:image:height" content="228">
 </head>
-<body>
+<body class="w3-white">
     <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -1455,7 +1516,7 @@ function userAddOnePoint(n) {
   js.src = "http://connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<table style="width:100%;height:100%;background-color:#f1f1f1;position:absolute;overflow:auto;min-height:650px;">
+<table style="width:100%;height:100%;position:absolute;overflow:auto;min-height:650px;">
 <tr>
 <td id="topTD">
   <div id="menubtn"  class="fa fa-menu" onclick="open_menu()" onmouseover="showtooltip(0)" onmouseout="hidetooltip(0)" ontouchstart="open_menu();return false;"></div>
@@ -1503,7 +1564,7 @@ function userAddOnePoint(n) {
 
 
 
-<div style="position:relative;width:100%;">
+<div style="position:relative;width:100%;" class="notranslate">
   <div id="assignmentNotCorrect" onclick="closeNotCorrect(event)">
     <h2>Not Correct</h2>
     <p>Click <u>here</u> to try again.</p>   
@@ -1516,15 +1577,15 @@ function userAddOnePoint(n) {
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');uic_r_p();">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
@@ -1567,6 +1628,15 @@ function userAddOnePoint(n) {
   outline:10px solid #f1f1f1;
 }
 
+body.darkpagetheme #assignmentcontainer[contenteditable],body.darkpagetheme  #assignmentcontainer[contenteditable]~#showcorrectanswercontainer {
+  background-color:#38444d;
+}
+
+body.darkpagetheme #assignmentcontainer,body.darkpagetheme  #showcorrectanswercontainer {
+  background-color:#38444d;
+}
+
+
 #showcorrectanswercontainer {
   display:none;
 }
@@ -1574,21 +1644,21 @@ function userAddOnePoint(n) {
   background-color:#ffffff;
   display:inline-block;
   border:none;
-  padding:0;
-  outline-offset:0;
+  height:1.3em;
+  padding:1px 2px;
+/*
   height:1.2em;
+  padding:0;
+  outline-offset:0;*/
 }
+/*
 .editablesection:focus {
   outline:2px solid #ffffff;
 }
-
+*/
 .meassureInputWidth {
   display:inline-block;
   position:absolute;
-}
-
-#answerbutton:focus {
-  xbox-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
 
 .w3-codespan {
@@ -1612,7 +1682,6 @@ function userAddOnePoint(n) {
   position:absolute;
   right:20px;
   bottom:20px;
-  xxpadding:20px;
 }
 .showanswerbutton:hover,.showanswerbutton:active, .hideanswerbutton:hover,.hideanswerbutton:active {
   background-color:#000!important;
@@ -1670,6 +1739,20 @@ function initAssignment() {
     editable = true;
     document.getElementById("assignmentcontainer").innerHTML = txt;
     document.getElementById("assignmentcontainer").setAttribute("contenteditable", "true");
+    document.getElementById("assignmentcontainer").addEventListener("keydown", function(e) {
+      if(e.keyCode == 9){
+        e.preventDefault();
+         var doc = document.getElementById("assignmentcontainer").ownerDocument.defaultView;
+        var sel = doc.getSelection();
+        var range = sel.getRangeAt(0);
+        var blankspaces = document.createTextNode("    ");
+        range.insertNode(blankspaces);
+        range.setStartAfter(blankspaces);
+        range.setEndAfter(blankspaces); 
+        sel.removeAllRanges();
+        sel.addRange(range);        
+      }    
+    });    
   } else {
     newtxt = "";
     for (i = 0; i < txt.length; i++) {
@@ -1699,7 +1782,8 @@ function initAssignment() {
     inputs = document.getElementsByClassName("editablesection");
     templates = document.getElementsByClassName("meassureInputWidth");
     for (i = 0; i < inputs.length; i++) {
-      inputs[i].style.width = ((templates[i].offsetWidth) + 1) + "px";
+      //inputs[i].style.width = ((templates[i].offsetWidth) + 1) + "px";
+      inputs[i].style.width = ((templates[i].offsetWidth) + 4) + "px";      
       templates[i].style.display = 'none';
       templates[i].innerHTML = "w3exercise_input_no_" + i;
       cc = formanswers[i];
@@ -1714,7 +1798,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    snhb.startAuction(['try_it_leaderboard']);
+    uic_r_p();
   }
 }
 
@@ -1752,6 +1836,14 @@ function checkassignmentcode() {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
       }
+      if (exsection == "CSS_2") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (exsection == "CSS") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
       if (editable == true) {
         if (check == correct) {
           result = "correct";
@@ -1771,8 +1863,16 @@ function checkassignmentcode() {
     moreCorrect = (document.getElementById("correctcode" + cc));
   }
   if (result == "correct") {
+    var answerButtonElm = document.getElementById("answerbutton"),
+        answerSubmitted = answerButtonElm.getAttribute('data-answer-submitted');
+
     answers[exActiveNo].splice((exNo-1), 1, 1);
-    setAnswerObj("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString(), false);
+
+    if (answerSubmitted !== 'true') { // prevent sending twice
+      setAnswerObj("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString(), false);
+      answerButtonElm.setAttribute('data-answer-submitted', 'true');
+    }
+
     score_arr = checkCompletedExercises();
     document.getElementById("assignmentCorrect").style.display = "block";
     if (userLoggedOn) {
@@ -1817,11 +1917,13 @@ function showanswer() {
   if (editable == true) {
     document.getElementById("showcorrectanswercontainer").innerHTML = correcttxt;
   } else {
-    if (exsection == "HTML_2"  || exsection == "R") {
+    if (exsection == "HTML_2"  || exsection == "R" || exsection == "REACT" || exsection == "CSS_2" || exsection == "CSS") {
       correcttxt = correcttxt.replace(/&lt;/g, "<");
       correcttxt = correcttxt.replace(/&gt;/g, ">");
+      correcttxt = correcttxt.replace(/&amp;/g, "&");      
       txt = txt.replace(/&lt;/g, "<");
       txt = txt.replace(/&gt;/g, ">");
+      txt = txt.replace(/&amp;/g, "&");      
     }
     from = 0;
     to = 0;
@@ -1953,7 +2055,7 @@ if (window.addEventListener) {
 </table>
 <div id="exercisemenu" class="exercisemenu">
 
-<div style="width:260px;background-color:#fff;xborder-right:1px solid #000;overflow:auto;padding:10px 5px;">
+<div class="menucontainer">
 <div style="float:left;width:75px">
 <a href="../index.html" target="_blank"><span class="menubtn fa fa-home" onmouseover="showtooltip(1)" onmouseout="hidetooltip(1)" ontouchstart="location='../index.html';return false;"></span></a>
 <div class="tooltip">Go to w3schools.com</div>
@@ -2085,7 +2187,9 @@ function close_menu() {
       document.getElementById("codeTD2").style.paddingLeft = "20px";
     }
     if (w > 900) {    
-        document.getElementById("tryitLeaderboard").style.paddingLeft = "30px";
+        if (document.getElementById("tryitLeaderboard")) {
+          document.getElementById("tryitLeaderboard").style.paddingLeft = "30px";
+        }
         document.getElementById("exercisemenu").style.display = "none";
     } else {
         document.getElementById("exercisemenu").style.display = "none";
@@ -2099,7 +2203,9 @@ function open_menu() {
           document.getElementById("codeTD").style.paddingLeft = "280px";        
           document.getElementById("codeTD2").style.paddingLeft = "280px";
         }
-        document.getElementById("tryitLeaderboard").style.paddingLeft = "0";
+        if (document.getElementById("tryitLeaderboard")) {
+          document.getElementById("tryitLeaderboard").style.paddingLeft = "0";
+        }
     }
     document.getElementById("exercisemenu").style.display = "block";    
 }
@@ -2143,7 +2249,7 @@ function colorcoding() {
   </div>
 </div>
 
-<div id="id02" class="w3-modal" style="z-index:3;">
+<div id="id02" class="w3-modal" style="z-index:3;color:#000!important">
   <div class="w3-modal-content w3-card-4 w3-padding w3-center">
     <header class="w3-container w3-display-container"> 
       <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
@@ -2165,7 +2271,9 @@ function colorcoding() {
         //-->
       </script>
 
-
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.w3schools.com/bootstrap4/exercise_bs4.asp" target="_blank" title="LinkedIn">
+        <span class="fa fa-linkedin-square fa-2x" style="font-size: 50px;color:#2867B2"></span>
+      </a>
 
         <br>
       
@@ -2177,10 +2285,25 @@ function colorcoding() {
     <br>
   </div>
 </div>
-
+<script>
+uic_r_r()
+</script>
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_jsx.js"></script>
+<script>
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+  if (y == "dark") {
+    document.body.className += " darkpagetheme";
+  }
+})();
+</script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/bootstrap4/exercise_bs4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 06:51:03 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap4/exercise_bs4.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 19:41:55 GMT -->
 </html>

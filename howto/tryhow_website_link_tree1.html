@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_website_link_tree1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 19:59:51 GMT -->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<title>Links website</title>
+<style>
+
+body {
+    background-image: url(img_link_tree_template1_bg.jpg); /* The image used for background*/
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-container {
+  text-align: center;
+  width: 100%;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  jusify-content: center;
+  align-items: center;
+}
+
+.link {
+  min-width: 50% !important;
+}
+
+@media (min-width: 1200px) .container {
+  max-width: 1140px;
+}
+@media (min-width: 992px) .container {
+  max-width: 960px;
+}
+@media (min-width: 768px) {
+.container {
+    max-width: 720px;
+  }
+
+.link {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+.container {
+    max-width: 540px;
+  }
+}
+
+.w3-purple, .w3-hover-purple:hover {
+color: #fff!important;
+background-color: rgba(156, 39, 176, 0.6) !important;
+}
+</style>
+  </head>
+
+
+  <body class="w3-white">
+    <!-- Content container -->
+    <div class="container">
+
+      <!-- Image and name container. Change to your picture here. -->
+    <div class="image-container">
+    <img src="img_link_tree_template1_bio.jpg" class="w3-margin" alt="Photo by Art Hauntington" max-width="100%" height="150px" style="border-radius: 50%; alt=">
+     <div class="w3-text-white">
+     <p class="w3-text-white w3-large">Welcome to <span class="w3-tag w3-large w3-round w3-black w3-text-white"><strong>Jane's</strong></span> link site!</p>
+     <p class="w3-large"><strong>See what I am up to.</strong></p>
+      </div>
+
+    <!-- Links section 1. Replace the # inside of the "" with your links. -->
+    <div class="links-container">
+      <a href="#" class="w3-button w3-hover-pink w3-large w3-round w3-purple w3-border link" target="_blank"><i class="fab fa-facebook">&nbsp;</i>Facebook</a>
+      <br>
+      <a href="#" class="w3-button w3-hover-pink w3-large w3-round w3-purple w3-border link" target="_blank"><i class="fab fa-instagram">&nbsp;</i>Instagram</a>
+      <br>
+      <a href="#" class="w3-button w3-hover-pink w3-large w3-round w3-purple w3-border link" target="_blank"><i class="fab fa-twitter">&nbsp;</i>Twitter</a>
+      <br>
+      <a href="#" class="w3-button w3-hover-pink w3-large w3-round w3-purple w3-border link" target="_blank"><i class="fa fa-code">&nbsp;</i>Blog</a>
+    </div>
+  </div>
+</div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-center w3-text-white w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:500px">
+      <h4 class="w3-center"><b>Get in touch.</b></h4>
+      <form action="https://www.w3schools.com/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border w3-opacity-min" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border w3-opacity-min" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border w3-opacity-min" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-hover-pink w3-large w3-round w3-purple w3-border link">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  </body>  
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_website_link_tree1.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 19:59:53 GMT -->
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '3';exheadings[0] = 'Syntax';exnames[1] = 'variables';excounts[1] = '4';exheadings[1] = 'Variables';exActiveNo = 1;exnames[2] = 'data_types';excounts[2] = '3';exheadings[2] = 'Data Types';exnames[3] = 'operators';excounts[3] = '4';exheadings[3] = 'Operators';exnames[4] = 'strings';excounts[4] = '4';exheadings[4] = 'Strings';exnames[5] = 'booleans';excounts[5] = '3';exheadings[5] = 'Booleans';exnames[6] = 'conditions';excounts[6] = '3';exheadings[6] = 'If...Else';exnames[7] = 'while_loop';excounts[7] = '3';exheadings[7] = 'While Loops';exnames[8] = 'arrays';excounts[8] = '3';exheadings[8] = 'Arrays';exnames[9] = 'functions';excounts[9] = '3';exheadings[9] = 'Functions';exnames[10] = 'classes';excounts[10] = '4';exheadings[10] = 'Classes';</script><html lang="en-US">
+<script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '3';exheadings[0] = 'Syntax';exnames[1] = 'variables';excounts[1] = '4';exheadings[1] = 'Variables';exActiveNo = 1;exnames[2] = 'data_types';excounts[2] = '3';exheadings[2] = 'Data Types';exnames[3] = 'operators';excounts[3] = '4';exheadings[3] = 'Operators';exnames[4] = 'strings';excounts[4] = '4';exheadings[4] = 'Strings';exnames[5] = 'booleans';excounts[5] = '3';exheadings[5] = 'Booleans';exnames[6] = 'conditions';excounts[6] = '3';exheadings[6] = 'If...Else';exnames[7] = 'while_loop';excounts[7] = '3';exheadings[7] = 'While Loops';exnames[8] = 'arrays';excounts[8] = '3';exheadings[8] = 'Arrays';exnames[9] = 'for_loop';excounts[9] = '2';exheadings[9] = 'For Loops';exnames[10] = 'functions';excounts[10] = '3';exheadings[10] = 'Functions';exnames[11] = 'classes';excounts[11] = '4';exheadings[11] = 'Classes';</script><html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:13 GMT -->
+<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:26:30 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Exercise v3.0</title>
@@ -22,41 +22,19 @@ ga('require', 'displayfeatures');
 ga('require', 'GTM-WJ88MZ5');
 ga('send', 'pageview');
 </script>
-<script src="../lib/my-learning.js"></script>
+<script src="../lib/my-learning21cd.js?v=1.0.9"></script>
+<script src="../lib/uic2c70.js?v=1.0.3"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
   }
 }
+uic_r_a()
 </script>
 <script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
 <script>
@@ -72,10 +50,9 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
 }
@@ -107,6 +84,8 @@ if (exsection == "JS") {
     storageBlip = "jsref_";
 } else if (exsection == "JAVA") {
     storageBlip = "java_";
+} else if (exsection == "C") {
+    storageBlip = "c_";
 } else if (exsection == "CPP") {
     storageBlip = "cpp_";
 } else if (exsection == "R") {
@@ -117,6 +96,8 @@ if (exsection == "JS") {
     storageBlip = "bs3_";
 } else if (exsection == "BS4") {
     storageBlip = "bs4_";
+} else if (exsection == "BS5") {
+    storageBlip = "bs5_";
 } else if (exsection == "JQ") {
     storageBlip = "jq_";
 } else if (exsection == "PHP") {
@@ -129,6 +110,10 @@ if (exsection == "JS") {
     storageBlip = "go_";    
 } else if (exsection == "TYPESCRIPT") {
     storageBlip = "typescript_";       
+} else if (exsection == "AWS") {
+    storageBlip = "aws_";
+} else if (exsection == "AWSSL") {
+    storageBlip = "awssl_";         
 } else {
     storageBlip = "";
 }
@@ -178,14 +163,18 @@ function setAnswerObj(nam, val, all) {
   if (userLoggedOn) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          localStorage.setItem(nam, val);
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          if (this.responseText == "NOTLOGGEDIN") {
+            localStorage.setItem(nam, val);
+          } else {
+            retval = this.responseText;
+            retval = JSON.parse(retval);
+            //alert(retval["recordcount"])
+            checkCompletedExercises(0);
+          }
         } else {
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          //alert(retval["recordcount"])
-          checkCompletedExercises(0);
+          localStorage.setItem(nam, val);
         }
       }
     };
@@ -193,7 +182,15 @@ function setAnswerObj(nam, val, all) {
 //  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
     xhttp.withCredentials = true;
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("n=" + nam + "&v=" + val + "&a=" + all);
+    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
+    xhttp.send(reqData);
+
+    if (MyLearning._version === '2') { // send a copy to mylv1
+      MyLearning.makeLegacyPostRequest(
+        MyLearning.getUrl('api.exercise.html', '1.5L'),
+        reqData
+      );
+    }
   } else {
     localStorage.setItem(nam, val);
   }
@@ -1285,36 +1282,32 @@ var userLoggedOn = false;
 var userscore = 0;
 var numberofexercises = 0;
 function constructAnswerObj() {
+
+  userLoggedOn = MyLearning.userIsLoggedIn();
+
+  if (!userLoggedOn) {
+    getFromLocalStorage();
+    w3LoadExercise();
+    return false;
+  }
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     var i, aa, l, retval;
-    if (this.readyState == 4 && this.status == 200) {
-      if (this.responseText == "NOTLOGGEDIN") {
-        getFromLocalStorage();
-      } else {
-        userLoggedOn = true;
-        retval = this.responseText;
-        retval = JSON.parse(retval);
-        if (retval["recordcount"] == 0) {
-          //getFromLocalStorage();
-          for (i = 0; i < exnames.length; i++) {
-            numberofexercises += Number(excounts[i]);
-            aa = "";
-            l = excounts[i];
-            for (j = 0; j < l; j++) {
-              if (j > 0) {aa += ","; }
-              aa += "0";
-            }
-            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-          }
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        if (this.responseText == "NOTLOGGEDIN") {
+          userLoggedOn = false;
+          getFromLocalStorage();
         } else {
-          if (retval["exscore"]) userscore = retval["exscore"];
-          for (i = 0; i < exnames.length; i++) {
-            aa = "";
-            numberofexercises += Number(excounts[i]);
-            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-            } else {
+          userLoggedOn = true;
+          retval = this.responseText;
+          retval = JSON.parse(retval);
+          if (retval["recordcount"] == 0) {
+            //getFromLocalStorage();
+            for (i = 0; i < exnames.length; i++) {
+              numberofexercises += Number(excounts[i]);
+              aa = "";
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1322,10 +1315,31 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          }
+          } else {
+            if (retval["exscore"]) userscore = retval["exscore"];
+            for (i = 0; i < exnames.length; i++) {
+              aa = "";
+              numberofexercises += Number(excounts[i]);
+              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+              } else {
+                l = excounts[i];
+                for (j = 0; j < l; j++) {
+                  if (j > 0) {aa += ","; }
+                  aa += "0";
+                }
+                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+              }
+            }
+          }      
+          drawUserProgress();  
         }
-        drawUserProgress();
       }
+      // else {
+      //   userLoggedOn = false;
+      //   getFromLocalStorage();
+      // }
+
       w3LoadExercise();
     }
   };
@@ -1471,6 +1485,10 @@ function userAddOnePoint(n) {
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="W3Schools KOTLIN Exercise" />
     <meta property="og:description"   content="I completed all the KOTLIN exercises on w3schools.com" />
+    <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="436">
+    <meta property="og:image:height" content="228">
 </head>
 <body>
     <!-- Load Facebook SDK for JavaScript -->
@@ -1491,9 +1509,9 @@ function userAddOnePoint(n) {
   <div style="position:absolute;">
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1533,15 +1551,15 @@ val birthyear = 1975
   </div>
     <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
-    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');uic_r_p();">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
@@ -1730,7 +1748,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-      }
+    uic_r_p();  }
 }
 
 function checkassignmentcode() {
@@ -1755,10 +1773,28 @@ function checkassignmentcode() {
         correct = correct.replace(/&lt;/g, "<");
         correct = correct.replace(/&gt;/g, ">");
       }
+      if (exsection == "BS5") {
+        correct = document.getElementById("correctcode" + cc).innerHTML;
+        correct = correct.replace(/&lt;/g, "<");
+        correct = correct.replace(/&gt;/g, ">");
+      }
+      if (exsection == "TYPESCRIPT") {
+        correct = document.getElementById("correctcode" + cc).innerHTML;
+        correct = correct.replace(/&lt;/g, "<");
+        correct = correct.replace(/&gt;/g, ">");
+      }
       if (exsection == "SQL") {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
       }
+      if (exsection == "AWS") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (exsection == "AWSSL") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }    
       if (exsection == "MySQL") {
         check = check.toLowerCase();
         correct = correct.toLowerCase();
@@ -1786,14 +1822,22 @@ function checkassignmentcode() {
     moreCorrect = (document.getElementById("correctcode" + cc));
   }
   if (result == "correct") {
+    var answerButtonElm = document.getElementById("answerbutton"),
+        answerSubmitted = answerButtonElm.getAttribute('data-answer-submitted');
+
     answers[exActiveNo].splice((exNo-1), 1, 1);
-    setAnswerObj("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString(), false);
+
+    if (answerSubmitted !== 'true') { // prevent sending twice
+      setAnswerObj("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString(), false);
+      answerButtonElm.setAttribute('data-answer-submitted', 'true');
+    }
+
     score_arr = checkCompletedExercises();
     document.getElementById("assignmentCorrect").style.display = "block";
     if (userLoggedOn) {
       userAddOnePoint();
     }
-    if (exNo >= 4 && 2==11) {
+    if (exNo >= 4 && 2==12) {
       document.getElementById("answerbutton").style.display = "none";
       document.getElementById("correctnextbtn").style.display = "none";
       document.getElementById("assignmentCorrect").onclick = "";
@@ -1832,7 +1876,7 @@ function showanswer() {
   if (editable == true) {
     document.getElementById("showcorrectanswercontainer").innerHTML = correcttxt;
   } else {
-    if (exsection == "HTML_2"  || exsection == "R") {
+    if (exsection == "HTML_2"  || exsection == "R" || exsection == "TYPESCRIPT") {
       correcttxt = correcttxt.replace(/&lt;/g, "<");
       correcttxt = correcttxt.replace(/&gt;/g, ">");
       txt = txt.replace(/&lt;/g, "<");
@@ -2050,7 +2094,7 @@ function describeArc(x, y, radius, startAngle, endAngle){
 
 </div>
 <div class="exercisemenuinner">
-<div><div onclick='openmenuitems(0)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Syntax </div><div class='exmenulinks'><a class='exbtn' href='exercisef5ec.html?filename=exercise_syntax1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercisefc77.html?filename=exercise_syntax2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise895b.html?filename=exercise_syntax3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_syntax.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Syntax Tutorial</a></div></div><div><div onclick='openmenuitems(1)' class='exmenuitemheader active'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Variables </div><div class='exmenulinks'><a class='exbtn' href='exercise4829.html?filename=exercise_variables1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn active' href='exercisebf42.html?filename=exercise_variables2'><i class='fa fa-check active'></i> Exercise 2</a><a class='exbtn' href='exercise96a8.html?filename=exercise_variables3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise48a7.html?filename=exercise_variables4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_variables.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Variables Tutorial</a></div></div><div><div onclick='openmenuitems(2)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Data Types </div><div class='exmenulinks'><a class='exbtn' href='exercisec32b.html?filename=exercise_data_types1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise470a.html?filename=exercise_data_types2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise8b26.html?filename=exercise_data_types3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_data_types.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Data Types Tutorial</a></div></div><div><div onclick='openmenuitems(3)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Operators </div><div class='exmenulinks'><a class='exbtn' href='exerciseb46c.html?filename=exercise_operators1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise6d20.html?filename=exercise_operators2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercised482.html?filename=exercise_operators3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise59b3.html?filename=exercise_operators4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_operators.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Operators Tutorial</a></div></div><div><div onclick='openmenuitems(4)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Strings </div><div class='exmenulinks'><a class='exbtn' href='exerciseb1ec.html?filename=exercise_strings1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise1a14.html?filename=exercise_strings2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise4800.html?filename=exercise_strings3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exerciseae1a.html?filename=exercise_strings4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_strings.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Strings Tutorial</a></div></div><div><div onclick='openmenuitems(5)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Booleans </div><div class='exmenulinks'><a class='exbtn' href='exerciseb806.html?filename=exercise_booleans1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise392d.html?filename=exercise_booleans2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise3c7b.html?filename=exercise_booleans3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_booleans.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Booleans Tutorial</a></div></div><div><div onclick='openmenuitems(6)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN If...Else </div><div class='exmenulinks'><a class='exbtn' href='exercisee036.html?filename=exercise_conditions1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercisef71c.html?filename=exercise_conditions2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisedd45.html?filename=exercise_conditions3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_conditions.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN If...Else Tutorial</a></div></div><div><div onclick='openmenuitems(7)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN While Loops </div><div class='exmenulinks'><a class='exbtn' href='exercise2184.html?filename=exercise_while_loop1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise4995.html?filename=exercise_while_loop2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercised0b1.html?filename=exercise_while_loop3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_while_loop.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN While Loops Tutorial</a></div></div><div><div onclick='openmenuitems(8)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Arrays </div><div class='exmenulinks'><a class='exbtn' href='exercise996a.html?filename=exercise_arrays1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise2171.html?filename=exercise_arrays2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisee7ec.html?filename=exercise_arrays3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_arrays.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Arrays Tutorial</a></div></div><div><div onclick='openmenuitems(9)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Functions </div><div class='exmenulinks'><a class='exbtn' href='exercise75c3.html?filename=exercise_functions1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise2f71.html?filename=exercise_functions2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisef48c.html?filename=exercise_functions3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_functions.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Functions Tutorial</a></div></div><div><div onclick='openmenuitems(10)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Classes </div><div class='exmenulinks'><a class='exbtn' href='exercise37be.html?filename=exercise_classes1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise84fb.html?filename=exercise_classes2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisec88d.html?filename=exercise_classes3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise3e6e.html?filename=exercise_classes4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_classes.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Classes Tutorial</a></div></div><br>
+<div><div onclick='openmenuitems(0)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Syntax </div><div class='exmenulinks'><a class='exbtn' href='exercisef5ec.html?filename=exercise_syntax1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercisefc77.html?filename=exercise_syntax2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise895b.html?filename=exercise_syntax3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_syntax.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Syntax Tutorial</a></div></div><div><div onclick='openmenuitems(1)' class='exmenuitemheader active'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Variables </div><div class='exmenulinks'><a class='exbtn' href='exercise4829.html?filename=exercise_variables1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn active' href='exercisebf42.html?filename=exercise_variables2'><i class='fa fa-check active'></i> Exercise 2</a><a class='exbtn' href='exercise96a8.html?filename=exercise_variables3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise48a7.html?filename=exercise_variables4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_variables.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Variables Tutorial</a></div></div><div><div onclick='openmenuitems(2)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Data Types </div><div class='exmenulinks'><a class='exbtn' href='exercisec32b.html?filename=exercise_data_types1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise470a.html?filename=exercise_data_types2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise8b26.html?filename=exercise_data_types3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_data_types.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Data Types Tutorial</a></div></div><div><div onclick='openmenuitems(3)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Operators </div><div class='exmenulinks'><a class='exbtn' href='exerciseb46c.html?filename=exercise_operators1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise6d20.html?filename=exercise_operators2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercised482.html?filename=exercise_operators3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise59b3.html?filename=exercise_operators4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_operators.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Operators Tutorial</a></div></div><div><div onclick='openmenuitems(4)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Strings </div><div class='exmenulinks'><a class='exbtn' href='exerciseb1ec.html?filename=exercise_strings1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise1a14.html?filename=exercise_strings2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise4800.html?filename=exercise_strings3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exerciseae1a.html?filename=exercise_strings4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_strings.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Strings Tutorial</a></div></div><div><div onclick='openmenuitems(5)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Booleans </div><div class='exmenulinks'><a class='exbtn' href='exerciseb806.html?filename=exercise_booleans1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise392d.html?filename=exercise_booleans2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercise3c7b.html?filename=exercise_booleans3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_booleans.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Booleans Tutorial</a></div></div><div><div onclick='openmenuitems(6)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN If...Else </div><div class='exmenulinks'><a class='exbtn' href='exercisee036.html?filename=exercise_conditions1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercisef71c.html?filename=exercise_conditions2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisedd45.html?filename=exercise_conditions3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_conditions.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN If...Else Tutorial</a></div></div><div><div onclick='openmenuitems(7)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN While Loops </div><div class='exmenulinks'><a class='exbtn' href='exercise2184.html?filename=exercise_while_loop1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise4995.html?filename=exercise_while_loop2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercised0b1.html?filename=exercise_while_loop3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_while_loop.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN While Loops Tutorial</a></div></div><div><div onclick='openmenuitems(8)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Arrays </div><div class='exmenulinks'><a class='exbtn' href='exercise996a.html?filename=exercise_arrays1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise2171.html?filename=exercise_arrays2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisee7ec.html?filename=exercise_arrays3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_arrays.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Arrays Tutorial</a></div></div><div><div onclick='openmenuitems(9)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN For Loops </div><div class='exmenulinks'><a class='exbtn' href='exercise0b9e.html?filename=exercise_for_loop1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercisebe09.html?filename=exercise_for_loop2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='kotlin_for_loop.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN For Loops Tutorial</a></div></div><div><div onclick='openmenuitems(10)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Functions </div><div class='exmenulinks'><a class='exbtn' href='exercise75c3.html?filename=exercise_functions1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise2f71.html?filename=exercise_functions2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisef48c.html?filename=exercise_functions3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='kotlin_functions.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Functions Tutorial</a></div></div><div><div onclick='openmenuitems(11)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>KOTLIN Classes </div><div class='exmenulinks'><a class='exbtn' href='exercise37be.html?filename=exercise_classes1'><i class='fa fa-check'></i> Exercise 1</a><a class='exbtn' href='exercise84fb.html?filename=exercise_classes2'><i class='fa fa-check'></i> Exercise 2</a><a class='exbtn' href='exercisec88d.html?filename=exercise_classes3'><i class='fa fa-check'></i> Exercise 3</a><a class='exbtn' href='exercise3e6e.html?filename=exercise_classes4'><i class='fa fa-check'></i> Exercise 4</a><a class='exbtn' href='kotlin_classes.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to KOTLIN Classes Tutorial</a></div></div><br>
 </div>
 </div>
 <script>
@@ -2096,7 +2140,9 @@ function close_menu() {
       document.getElementById("codeTD2").style.paddingLeft = "20px";
     }
     if (w > 900) {    
-        document.getElementById("tryitLeaderboard").style.paddingLeft = "30px";
+        if (document.getElementById("tryitLeaderboard")) {
+          document.getElementById("tryitLeaderboard").style.paddingLeft = "30px";
+        }
         document.getElementById("exercisemenu").style.display = "none";
     } else {
         document.getElementById("exercisemenu").style.display = "none";
@@ -2110,7 +2156,9 @@ function open_menu() {
           document.getElementById("codeTD").style.paddingLeft = "280px";        
           document.getElementById("codeTD2").style.paddingLeft = "280px";
         }
-        document.getElementById("tryitLeaderboard").style.paddingLeft = "0";
+        if (document.getElementById("tryitLeaderboard")) {
+          document.getElementById("tryitLeaderboard").style.paddingLeft = "0";
+        }
     }
     document.getElementById("exercisemenu").style.display = "block";    
 }
@@ -2143,7 +2191,7 @@ function colorcoding() {
       <h2>Reset the Score?</h2>
     </header>
     <div class="w3-container w3-padding">
-      <p>This will reset the score of ALL 37 exercises.</p>
+      <p>This will reset the score of ALL 39 exercises.</p>
       <p>Are you sure you want to continue?</p>
       <br>
       <button class="w3s-exercisebtn" onclick="resetScore()">Reset</button>
@@ -2160,13 +2208,13 @@ function colorcoding() {
       <h2>Congratulations!</h2>
     </header>
     <div class="w3-container w3-padding">
-      <h3>You have finished all 37&nbsp;KOTLIN exercises.</h3>
+      <h3>You have finished all 39&nbsp;KOTLIN exercises.</h3>
               <p>Share your score:</p>
               <a href="https://www.facebook.com/sharer.php?u=https://www.w3schools.com/KOTLIN/exercise.php" target="_blank" title="Share your score on Facebook"><span style="color:#3B5998;font-size:50px;" class="fa fa-facebook-square fa-2x"></span></a>
       <script>
         <!--
         try{
-        var c35 = "I completed all  exercises from W3Schools.";
+        var c35 = "I completed all 39%20KOTLIN exercises from W3Schools.";
         txt='<a href="https://twitter.com/intent/tweet?url=https://www.w3schools.com/KOTLIN/exercise.php&text='+c35+'" target="_blank" title="Share your score on Twitter"><span style="color:#1DA1F2;font-size:50px;" class="fa fa-twitter-square fa-2x"></span></a>';
         document.write(txt);
         } catch(e) {}
@@ -2184,10 +2232,12 @@ function colorcoding() {
     <br>
   </div>
 </div>
-
+<script>
+uic_r_r()
+</script>
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:13 GMT -->
+<!-- Mirrored from www.w3schools.com/kotlin/exercise.php?filename=exercise_variables2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:26:30 GMT -->
 </html>

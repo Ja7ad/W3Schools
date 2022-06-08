@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:30:58 GMT -->
+<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:43:31 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head><title>W3Schools Video Player</title>
 <meta charset="utf-8">
@@ -44,7 +44,7 @@ ga('send', 'pageview');
           
             <div id="loginactioncontainer" class="w3-right w3-padding-16" style="width:fit-content;padding-top:12px!important">
                 <div id="mypagediv"></div>
-                <a href="#" id="topbutton" onclick="ga('send', 'event', 'Videos' , 'PlayerTopButton');loginOrBuy();" style="display:none;"><button class="_1VfsI _1LtgI _3_H0V"><div id="topbuttontext">Log in and buy video</div></button></a>
+                <a href="#" id="topbutton" onclick="ga('send', 'event', 'Videos' , 'PlayerTopButton');loginOrBuy();" style="display:none;"><button class="_1VfsI _1LtgI _3_H0V"><div id="topbuttontext">Log in and subscribe</div></button></a>
             </div>
         </div>
 
@@ -56,9 +56,8 @@ ga('send', 'pageview');
                       <div class="plans-container">
                         <div class="pro-plan-bkg">
                           <div class="pro-plan">
-                            <div class="time-badge">UNLIMITED PLAYBACKS</div>
-                            <div class="price">$9.99</div>
                             <div class="name">Complete HTML video</div>
+                            <p style="font-family: Source Sans Pro!important;font-style: normal;color:white">Subscribe to PRO for $4.99/month to access the video.</p>
                             <div class="description">Learn about HTML elements and how to structure the building blocks of a website. <br><br>Includes 22 chapters:</div>
                             <div class="feature-list">
                               <ul class="checked-list">
@@ -86,7 +85,7 @@ ga('send', 'pageview');
                                 <li>Forms</li>                      
                               </ul>
                             </div>
-                            <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerModalButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="modalbuttontext">Log in and buy video</div></button></a>
+                            <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerModalButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="modalbuttontext">Log in and subscribe</div></button></a>
                           </div>
                         </div>
                         <div class="free-plan">
@@ -130,9 +129,8 @@ ga('send', 'pageview');
             <div class="plans-container" style="padding-top:80px;">
               <div class="pro-plan-bkg">
                 <div id="proplan_bottom" class="pro-plan" style="width: 100%; max-width: 660px; display: block;">
-                  <div class="time-badge">UNLIMITED PLAYBACKS</div>
-                  <div class="price">$9.99</div>
                   <div class="name">Complete HTML video</div>
+                  <p style="font-family: Source Sans Pro!important;font-style: normal;color:white">Subscribe to PRO for $4.99/month to access the video.</p>
                   <div class="description">Learn about HTML elements and how to structure the building blocks of a website. <br><br>Includes 22 chapters:</div>
                             <div class="feature-list">
                     <ul class="checked-list">
@@ -160,7 +158,7 @@ ga('send', 'pageview');
                       <li>Forms</li>                      
                     </ul>
                   </div>
-                  <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerBottomButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="planbuttontext">Log in and buy video</div></button></a>
+                  <br><a href="#" onclick="ga('send', 'event', 'Videos' , 'PlayerBottomButton');loginOrBuy();"><button class="_1VfsI _1LtgI _3_H0V"><div id="planbuttontext">Log in and subscribe</div></button></a>
                 </div>
               </div>
             </div>
@@ -169,7 +167,7 @@ ga('send', 'pageview');
         <div class="videofooter">
             While using W3Schools, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>, 
             <a href="../about/about_privacy.html">cookie and privacy policy</a>.<br>
-            <a href="../about/about_copyright.html">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+            <a href="../about/about_copyright.html">Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
             <br>
             <div class="w3-center w3-small">
               <a href="../index.html">
@@ -180,6 +178,7 @@ ga('send', 'pageview');
 
         
         <script src="files/videojs/video.min.js"></script>
+        <script src="files/videojs/youtube.js"></script>
         <script src="files/videojs/videojs-playlist.min.js"></script>
         <script src="files/videojs/videojs-playlist-ui.min.js"></script>
 
@@ -215,10 +214,10 @@ ga('send', 'pageview');
                     name: '1. Introduction',
                     description: 'HTML is the standard markup language for creating Web pages.',
                     duration: 193,
-                    sources: [
-                        { src: `${vodDomain}files/intro/DASHISO1/01_w3schools_html_intro.mpd`, type: 'application/dash+xml', withCredentials: true },
-                        { src: `${vodDomain}files/intro/AppleHLS1/01_w3schools_html_intro.m3u8`, type: 'application/x-mpegURL', withCredentials: true },
-                    ],
+                     sources: [{
+                         src: 'https://youtu.be/ewZ_YWbIWXI',
+                         type: 'video/youtube'
+                     }],
                     thumbnail: [
                         {
                             srcset: 'files/images/img_01_introduction.png',
@@ -832,7 +831,12 @@ ga('send', 'pageview');
                         }
                     ]
                 },
-            ]);
+            ].map(item => {
+              if(navigator.userAgent.indexOf('Safari') > -1 && navigator.userAgent.indexOf('Chrome') <= -1) {
+                item.sources = item.sources.filter(source => source.type === 'application/x-mpegURL');
+              }
+              return item;
+            }));
                     player.playlist.autoadvance(0);
         </script>
     
@@ -873,13 +877,13 @@ ga('send', 'pageview');
 
             const loginOrBuy = () => {
                 if(userState === state.UNKNOWN) {
-                    window.location.href = "https://profile"+env+".w3schools.com/signup?redirect_url=https://billing"+env+".w3schools.com/courses/html-video-course";
+                    window.location.href = "https://profile"+env+".w3schools.com/signup?redirect_url=https://billing"+env+".w3schools.com/products/spaces";
                 }
                 else if(userState === state.PURCHASED) {
                     window.location.href = "https://profile"+env+".w3schools.com/log-out";
                 }
                 else {
-                    window.location.href = "https://billing"+env+".w3schools.com/courses/html-video-course";
+                    window.location.href = "https://billing"+env+".w3schools.com/products/spaces";
                 }
             }
             
@@ -898,18 +902,18 @@ ga('send', 'pageview');
                     topbutton.style.display = "block";
                     topbuttontext.style.display = "block";
 
-                    modalbuttontext.innerHTML = "Buy video";
-                    planbuttontext.innerHTML = "Buy video";
-                    topbuttontext.innerHTML = "Sign up and buy video";
+                    modalbuttontext.innerHTML = "Subscribe";
+                    planbuttontext.innerHTML = "Subscribe";
+                    topbuttontext.innerHTML = "Sign up and subscribe";
                 }
                 else if(userState === state.LOGGEDIN){
                     modal.style.display = "block";
                     plans.style.display = "block";
                     topbutton.style.display = "block";
 
-                    modalbuttontext.innerHTML = "Buy video";
-                    planbuttontext.innerHTML = "Buy video";
-                    topbuttontext.innerHTML = "Buy video";
+                    modalbuttontext.innerHTML = "Subscribe";
+                    planbuttontext.innerHTML = "Subscribe";
+                    topbuttontext.innerHTML = "Subscribe";
                 }
                 else if(userState === state.PURCHASED) {
                     modal.style.display = "none";
@@ -1002,5 +1006,5 @@ ga('send', 'pageview');
             
     </body>
 
-<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:30:58 GMT -->
+<!-- Mirrored from www.w3schools.com/videos/video_player.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:43:38 GMT -->
 </html>

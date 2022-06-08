@@ -1,4 +1,4 @@
-.w3-sidebar {
+﻿.w3-sidebar {
   overflow: inherit;
 }
 
@@ -639,6 +639,7 @@ ul {list-style-type: none;}
 
 #myTableSearch tr:hover {
   background-color: #e2e2e2;
+  color:#000;
 }
 
 #myFilterListInput {
@@ -1098,7 +1099,7 @@ div.imgmod img:hover {
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: #f44336;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -2358,6 +2359,11 @@ position:relative;
   .w3-card-4 {
     background-color:white;
   }
+  body.darkpagetheme .howtocontainer{
+    xbackground-color:#1d2a35!important;
+    xcolor:#ddd;
+  }
+  
 }
 @media screen and (max-width: 600px) {
   .howtocontainer {
@@ -2395,3 +2401,12 @@ position:relative;
   color: #dddddd;
   cursor:auto;
 }
+
+body.darkpagetheme .howtocontainer,body.darkpagetheme .w3-card-4,body.darkpagetheme .howto-container {
+  background-color:#1d2a35!important;
+  color:#ddd;
+}
+body.darkpagetheme ul.paginationw3 li a {
+    color: #ddd;
+}
+

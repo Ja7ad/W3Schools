@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_atn&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:18 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_atn&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:29:33 GMT -->
 <head>
 <title>SQL Tryit Editor v1.6</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
 <link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
-<link rel="stylesheet" href="../lib/w3schools28.css">
+<link rel="stylesheet" href="../lib/w3schools30.css">
 <link rel="stylesheet" href="../lib/codemirror.css">
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_sql.js"></script>
@@ -25,6 +25,7 @@ ga('require', 'GTM-WJ88MZ5');
 ga('send', 'pageview');
 </script>
 
+<script src="../lib/uic2c70.js?v=1.0.3"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
@@ -39,6 +40,7 @@ k42 = true;
 
   }
 }
+uic_r_a()
 </script>
 <script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
 <script>
@@ -111,7 +113,7 @@ function browserResize() {
 }
 #dbInfo {
     height:auto;
-    color:#222222;
+    xxcolor:#222222;
     font-family:verdana;
     font-size:12px;
     text-align:center;
@@ -136,9 +138,18 @@ function browserResize() {
 </style>
 </head>
 <body>
+<script>
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme darkpagetheme";
+  }
+})();
+</script>
 
 
-<div id='tryitLeaderboard' style="background-color:#ffffff">
+<div id='tryitLeaderboard' class="w3-white">
 <!-- TryitLeaderboard -->
 
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
@@ -150,22 +161,20 @@ function browserResize() {
 <div class="w3-container">
   <div class="w3-row">
     <div class="w3-col l10">
-      <div style="padding:15px;padding-bottom:40px;margin-bottom:40px;background-color:#E7E9EB;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+      <div class="ws-grey" style="padding:15px;padding-bottom:40px;margin-bottom:40px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
       <form method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
         <h3>SQL Statement:</h3>
-        <textarea id="textareaCodeSQL" wrap="logical">
-SELECT Atn(5) AS AtnNum;
-
-        </textarea>
+        <textarea id="textareaCodeSQL" wrap="logical">SELECT Atn(5) AS AtnNum;
+</textarea>
         <p>Edit the SQL Statement, and click "Run SQL" to see the result.</p>
         <input type="hidden" name="code" id="code" />
         <input type="hidden" id="bt" name="bt" />
       </form>
-      <button class="ws-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeSQL', 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Run SQL &raquo;</button>
+      <button class="ws-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeSQL', 'click');uic_r_p();">Run SQL &raquo;</button>
       <h3>Result:</h3>
       <div id="resultSQL">
         <iframe id="iframeResultSQL" frameborder="0" name="view"></iframe>
-        <div id="divResultSQL">
+        <div class="w3-white" id="divResultSQL">
           <div style="margin:10px;margin-bottom:30px;">Click <b>"Run SQL"</b> to execute the SQL statement above.</div>
           <div style="margin:10px;">W3Schools has created an SQL database in your browser.</div>		
           <div style="margin:10px;">The menu to the right displays the database, and will reflect any changes.</div>
@@ -179,7 +188,7 @@ SELECT Atn(5) AS AtnNum;
     <span id="buttonshowdesc" class="w3-badge w3-black" style="cursor:pointer;user-select:none" onclick="document.getElementById('descriptionDIV').style.display = 'block';document.getElementById('buttonhidedesc').style.display = '';this.style.display = 'none';">?</span>
     <span id="buttonhidedesc" class="w3-badge w3-black" style="display:none;cursor:pointer;user-select:none" onclick="document.getElementById('descriptionDIV').style.display = 'none';document.getElementById('buttonshowdesc').style.display = '';this.style.display = 'none';">&times;</span>    
     <br>
-    at <a style="color:#555555;" href="../index.html">w3schools.com</a>
+    at <a href="../index.html">w3schools.com</a>
   </h3>
   <div id="descriptionDIV" style="text-align:center;display:none;">
     <div id="nostatementsupport" style="display:none;">
@@ -226,15 +235,21 @@ SELECT Atn(5) AS AtnNum;
           <div id="yourIX" style="margin-top:10px;margin-bottom:20px;"></div>
           <button title="Restore the database back to its original content" id="restoreDBBtn" class="w3-btn ws-black w3-round ws-hover-black" type="button" onclick="w3schoolsWebSQL1.w3ClearDatabase()" style="display:none;">Restore Database</button>
         </div>
-      <div style="position:sticky;margin:auto;margin-top:20px;top:0">
+      <div id="sqlstickyadcontainer" style="position:sticky;margin:auto;margin-top:20px;top:0">
       
       <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
       <div id="adngin-sidebar_sticky-0"></div>
       <!-- adspace sticky-->
       <script>
-        window.addEventListener('adnginLoaderReady', function() {
-          adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
-        });
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+            });
+          }
+        }
       </script>  
       
     </div>
@@ -244,10 +259,6 @@ SELECT Atn(5) AS AtnNum;
     </div>
   </div>
 </div>
-
-
-
-
 
 <input type="hidden" id="sSupport" value="-1" />
 <script type="text/javascript">
@@ -374,11 +385,17 @@ function validateForm() {
 		document.getElementById("code").value="<h1>Error</h1>";
 	}
 }
-
 w3schoolsWriteDBInfo();
-
+function docReady(fn) {
+  document.addEventListener("DOMContentLoaded", fn);
+  if (document.readyState === "interactive" || document.readyState === "complete" ) {
+    fn();
+  }
+}
+uic_r_z();
+uic_r_s()
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_atn&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:10:18 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_atn&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:29:33 GMT -->
 </html>

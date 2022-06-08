@@ -3,7 +3,7 @@
 <html lang="en-US">
 
  
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=alternate by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:13:33 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=alternate by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:41:39 GMT -->
 <head>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,13 +40,23 @@
  function change_position(val)
  {
  
-   document.getElementById("myDIV").className = "my" + val;
    var x=document.getElementById("demoParent");
    var y=document.getElementById("demoDIV").cloneNode(true);
    var cc;
    x.removeChild(document.getElementById("demoDIV"));
    x.appendChild(y);
    
+  var s="demoDIV";
+  
+   s="myDIV ";
+   s=s.trim();
+  
+  document.getElementById(s).style.animationDirection=val;
+  
+   document.getElementById(s).style.WebkitAnimationDirection=val;
+  
+   document.getElementById(s).style.MozAnimationDirection=val;
+  
  var x="animation-direction:<span id='enlargecssprop'>" + val + "</span>";
  var y="#myDIV {<br>  ###CSSPROP###;<br>}<br>";
  var z=y.replace("###CSSPROP###",x);
@@ -312,9 +322,7 @@ function browserResize() {
         <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="alternate-reverse" /><label for="value_4">alternate-reverse</label></div>
        
     </form>
-    <div id="pfooter"><footer>
-	<p><strong>Note:</strong> The animation-direction property is not supported in Internet Explorer 9 and earlier versions.</p>
-</footer></div>
+    <div id="pfooter"></div>
   </div>
   <div class="resultcontainer">
    <div class="demoHeader">Result:</div>
@@ -341,5 +349,5 @@ function browserResize() {
  </body>
 
 
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=alternate by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:13:33 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-direction&preval=alternate by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:41:39 GMT -->
 </html>

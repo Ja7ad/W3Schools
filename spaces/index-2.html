@@ -1,14 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from www.w3schools.com/spaces/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:29:24 GMT -->
+<!-- Mirrored from www.w3schools.com/spaces/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:42:44 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    <meta name="Keywords" content="HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C++, jQuery, Bootstrap, C#, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Courses, Lessons, References, Examples, Source code, Demos, Tips, Website, Website Builder, Webpage">
-    <meta name="Description" content="Create a Website With W3Schools Spaces">
-    <title>Create a Free Website With W3Schools Spaces</title>
+    <meta name="Description" content="Create a Free Website with W3Schools.com. Use W3Schools Spaces to create your own professional website. Choose a free template, or start from scratch, and add the features you need.">
+    <meta name="Keywords" content="Website, Website Builder, Template, Domain, Webpage">
+    <title>Create a Free Website | Free Website Builder | W3Schools.com</title>
+    <meta property="og:title" content="Create a Free Website | Free Website Builder | W3Schools.com">
+    <meta property="og:description" content="Create a Free Website with W3Schools.com. Use W3Schools Spaces to create your own professional website. Choose a free template, or start from scratch, and add the features you need.">
+    <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="436">
+    <meta property="og:image:height" content="228">
     <link href="files/2.eea0ab50.chunk.css" rel="stylesheet">
     <link href="files/main.19ba76e6.chunk.css" rel="stylesheet">
 <link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
@@ -143,16 +149,17 @@ transform:translate(0, 0);
   top:12px;
   margin-right:12px;
 }
-._1VfsI._OD95i._3_H0V.signup {
-  margin-right:20px;
+._1VfsI._OD95i._3_H0V.login {
   background-color:#fff;
   color: #282A35;
   border: 2px solid #04AA6D;
 }
-._1VfsI._OD95i._3_H0V.signup:hover {
+._1VfsI._OD95i._3_H0V.login:hover {
   border: 2px solid #059862;
+  background-color:#f1f1f1;
+  color:black;
 }
-._1VfsI._OD95i._3_H0V.signup:active {
+._1VfsI._OD95i._3_H0V.login:active {
   background-color:#fff;
   border: 2px solid #03744B;
 }
@@ -166,6 +173,9 @@ transform:translate(0, 0);
 }
 .view-plans .plans-container .free-plan {
   height: 590px;
+  height: 620px;
+  padding: 50px 30px 37px;  
+  padding: 50px 10px 37px 30px;    
 }
 
 .view-plans .getstarted_terms {
@@ -176,10 +186,11 @@ transform:translate(0, 0);
 }
 
 .view-plans .plans-container {
-  min-width: 1280px;
+  min-width: 980px;
+  height:700px;
 }    
 .view-plans .plans-container .pro-plan-bkg {
-    width: 1250px;
+    width: 950px;
 }
 .view-plans .plans-container .pro-plan-bkg .pro-plan {
     margin-left: 0;
@@ -195,18 +206,45 @@ transform:translate(0, 0);
   float:left!important;
   width:300px!important;
 }
-.basicplan {
+.proplan {
   margin-left:368px!important;
   width:270px!important;  
 }
 .proplanborder {
   margin-top:50px;
-  padding-left:34px;
-  border-left:2px solid #eee;
+  xpadding-left:34px;
+  xborder-left:2px solid #eee;
   border-right:2px solid #eee;
 }
 .plans_floatcontainer {
   overflow:auto;
+}
+#plans_pro_btn button:hover,#plans_premium_btn button:hover {
+  background-color:#059862!important;
+}
+.multiple_users {
+  background-color:rgba(217,238,225,.3);
+  text-align:center;
+  padding:0 0 16px 0;
+}
+.multiple_users a{
+  font-size:14px;
+  font-weight:bold;
+  color:#04AA6D;
+}
+.agreementcontainer {
+  background-color:rgba(217,238,225,.3);
+}
+.agreement {
+  margin:auto;
+  max-width:292px;
+  font-family: Source Sans Pro;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  text-align: center;
 }
 @media (max-width:1000px) {
   .how-it-works {
@@ -230,16 +268,17 @@ transform:translate(0, 0);
   margin-bottom:50px;
 }
 }
-@media (max-width:1200px) {
+@media (max-width:900px) {
   .plans-container .pro-plan-bkg {
-    height: 1560px!important;
+    height: 1120px!important;
   }
   .view-plans .plans-container {
     min-width: 300px;
   }  
   .view-plans .plans-container .pro-plan-bkg {
     margin: 0;
-    top: 700px;
+    top: 620px;
+    top: 670px;
     width:100%;
   } 
   .view-plans .plans-container .pro-plan-bkg .pro-plan {
@@ -256,23 +295,23 @@ transform:translate(0, 0);
   .view-plans  .getstarted_terms {
     margin-top:18px;
   }  
-  .basicplan,.proplan,.premiumplan {
+  .proplan,.premiumplan {
     float:none!important;
     width:100%!important;
   }
-  .basicplan {
-    margin-left:34px!important;
-  }
-  .basicplanborder {
-    border-bottom:5px solid rgba(217,238,225,.3);
+  .proplan {
+    margin-left:0px!important;
+    padding-left:34px!important;    
   }
   .proplanborder {
-    border-left:none;
-    border-right:none;
-    border-bottom:5px solid rgba(217,238,225,.3);
-    border-top:5px solid rgba(217,238,225,.3);
+    border:none;
     margin-top:0;
     padding-top:50px;
+    padding-bottom:15px;
+  }
+  .premiumplan {
+    border-top:5px solid rgba(217,238,225,.3);
+    margin-top:0;
   }
   .plans_floatcontainer {
     overflow:visible;
@@ -284,7 +323,82 @@ transform:translate(0, 0);
 }
 .ws-hover-text-green:hover {
   color:#059862!important;
-} 
+}
+
+.plans_btn {
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 18px;
+  font-weight:600;
+  background-color:#04AA6D;
+  color:#fff;
+  border-radius:50px;
+  padding:10px 40px;
+}
+
+.plans_btn #properiod2,.plans_btn #premiumperiod2 {
+  opacity:0.9; 
+  font-size:16px;
+  }
+.new-user-landing-row {
+    padding: 74px 0;
+    background:linear-gradient(rgb(40, 42, 53, 0.90),rgb(40, 42, 53, 0.90)),url(files/priscilla-du-preez-XkKCui44iM0-unsplash.921aa0c0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.herodiv {
+  text-align:center;
+  width:100%;
+  color:#fff;
+  padding: 100px 10px;
+}
+.herodiv h1 {
+  font-size:60px;
+  xfont-weight:normal;
+  margin:15px 0;
+}
+
+.herodiv h3 {
+  font-size:30px;
+  margin:10px 0;
+}
+.herodiv p {
+  font-size:20px;
+}
+
+@media (max-width:900px) {
+.herodiv {
+  padding: 80px 10px 80px 10px;
+}
+.herodiv h1 {
+  font-size:40px;
+  margin:10px 0;
+}
+
+.herodiv h3 {
+  font-size:20px;
+  margin:10px 0;
+}
+.herodiv p {
+  font-size:16px;
+  line-height:35px;
+}
+.hide-small {
+  display:none;
+}
+}
+._1VfsI._OD95i._3_H0V.login {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #04AA6D;
+    margin-right:25px;
+    height:42px;
+}
+._1VfsI._OD95i._3_H0V.login:hover {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+
 </style>   
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -302,43 +416,26 @@ transform:translate(0, 0);
 
 
 
-    <div class="w3-bar w3-card-2 notranslate" style="min-width:390px;padding-left:12px;font-family: 'Source Sans Pro', sans-serif;">
-      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-left w3-padding-16" title="Home" style="width:77px">
+    <div class="w3-bar notranslate" style="position:absolute;top:10px;min-width:390px;padding-left:12px;font-family: 'Source Sans Pro', sans-serif;">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-left" title="Home" style="width:77px;padding-top:12px">
         <i class="fa fa-logo ws-text-green ws-hover-text-green" style="position:relative;font-size:42px!important;"></i>
       </a>
-      <a href="../../profile.w3schools.com/signup7ef1.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkLogin')"><button class="_1VfsI _OD95i _3_H0V signup ws-hover-text-green"><span>Sign up</span></button></a>
-      <a href="../../profile.w3schools.com/log-in7ef1.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkSignup')"><button class="_1VfsI _OD95i _3_H0V login"><span>Log in</span></button></a>
-    </div>
-   
+
+<!--      <a href="https://profile.w3schools.com/signup?redirect_url=https%3A%2F%2Fspaces.w3schools.com%2Fcreatespace%2Fstepone" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkLogin')"><button class="_1VfsI _OD95i _3_H0V signup"><span>Sign up</span></button></a>
+-->      <a href="../../profile.w3schools.com/log-in8653.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com%2Fcreatespace%2Fstepone" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkSignup')"><button class="_1VfsI _OD95i _3_H0V login"><span>Log in</span></button></a>
+    </div>  
     <div id="root">
     
       <div class="quota-info-bar-container"></div>
       <div class="container-fluid">
         <div title="Photo by Priscilla Du Preez on Unsplash https://unsplash.com/photos/XkKCui44iM0" class="new-user-landing-row row">
-          <div class="col-md-1"></div>
-          <div class="col-md-3">
+          <div class="w3-col herodiv">
             <h1>Create a Free Website</h1>
-            <p style="margin-bottom:30px;">Build your own website with W3Schools Spaces.</p>
-              <a href="../../profile.w3schools.com/signup7ef1.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkTop')"><button class="_1VfsI _OD95i _3_H0V mobb" style="font-size:19px;width:270px;"><span>Get your own Website</span></button></a>
-          </div>
-          <div class="col-lg-3 col-md-2"></div>
-          <div class="col-lg-4 col-md-5 topfree">
-            <div class="terms-card">
-              <h2 class="list-header">Free Website Builder</h2>
-              <ul class="checked-list">
-                <li>Create a website</li>
-                <li>Free templates</li>
-                <li>500 requests / month</li>
-                <li>100 MB data / month</li>
-                <li>100 MB storage</li>
-<!--            <li>5 MB files maximum</li> -->
-                <li>w3spaces.com subdomain</li>
-                <li>SSL certificate</li>
-              </ul>
-              <a href="../../profile.w3schools.com/signup7ef1.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkTop')"><button class="_1VfsI _OD95i _3_H0V" style="padding-left:20px;padding-right:20px;"><span>Get started for free</span></button></a>
-              <div class="getstarted_terms">By clicking the "Get started" button, you agree to W3Schools' <a href="../about/about_copyright.html" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-              </div>
-            </div>
+            <h3>Everything you need right in the browser.</h3>
+            <p style="margin-top:15px;">Build your own website with <span style="font-weight:bold;color:#FFC0C7;">W3Schools Spaces</span>.<span class="hide-small"> It is easy to use - try it!</span></p>
+            <p style="margin-top:25px;">
+            <a title="Get your own Website" href="../../profile.w3schools.com/signup8653.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com%2Fcreatespace%2Fstepone" onclick="ga('send', 'event', 'spacesLandingAnchor', 'LinkTopText')"><button class="_1VfsI _OD95i _3_H0V mobb" style="font-size:19px;width:270px;"><span>Get started for free</span></button></a>
+            </p>
           </div>
         </div>
         <div class="feature-list row ws-black">
@@ -356,7 +453,7 @@ transform:translate(0, 0);
           </div>
           <div class="feature-item col-md-4">
             <h3>File manager</h3>
-            <h4>Upload and handle files in browser</h4>
+            <h4>Upload and handle files in your browser</h4>
           </div>
           <div class="feature-item col-md-4">
             <h3>Experiment</h3>
@@ -385,11 +482,11 @@ transform:translate(0, 0);
               <br><br>              
               <img src="files/Frame.a8fb68c5.svg" class="code-paper" alt="Edit your code and make it yours">
               <br><br>              
-              <div class="step">3. Edit your code<br>and make it yours</div>
+              <div class="step">3. Edit code directly<br>in your browser</div>
               <br><br>              
               <img src="files/Frame%20(1).577c15ca.svg" class="globe" alt="Share your space with someone">
               <br><br>              
-              <div class="step">4. Share your space<br>with someone</div>
+              <div class="step">4. Share your website<br>with the world</div>
               <br><br>              
             </div>
           </div>
@@ -416,23 +513,66 @@ transform:translate(0, 0);
             <div class="steps">
               <div class="step">1. Join W3Schools - and create a space</div>
               <div class="step">2. Choose a template - or start from scratch</div>
-              <div class="step">3. Edit your code and make it yours</div>
-              <div class="step">4. Share your space with someone</div>
+              <div class="step">3. Edit code directly in your browser</div>
+              <div class="step">4. Share your website with the world</div>
             </div>
           </div>
         </div>
         <div class="view-plans-container row">
+
+<script>
+function toggle_month_year() {
+  var img;
+  img = document.getElementById("selectorimage");
+  if (img.src.indexOf("selector.png") > -1) {
+    img.src = "selector_right.png";
+    document.getElementById("freeperiod1").innerHTML = "/year";
+    document.getElementById("proprice1").innerHTML = "$49.99";
+    document.getElementById("proprice2").innerHTML = "$49.99";
+    document.getElementById("premiumprice1").innerHTML = "$129.99";
+    document.getElementById("premiumprice2").innerHTML = "$129.99";
+    document.getElementById("properiod1").innerHTML = "/year";
+    document.getElementById("properiod2").innerHTML = "/year";
+    document.getElementById("premiumperiod1").innerHTML = "/year";
+    document.getElementById("premiumperiod2").innerHTML = "/year";
+    document.getElementById("plans_pro_btn").href = "https://billing.w3schools.com/products/spaces?frequency=yearly&amp;selectedPlan=pro-yearly";
+    document.getElementById("plans_premium_btn").href = "https://billing.w3schools.com/products/spaces?frequency=yearly&amp;selectedPlan=premium-yearly";
+  } else {
+    img.src = "selector.png";
+    document.getElementById("freeperiod1").innerHTML = "/month";
+    document.getElementById("proprice1").innerHTML = "$4.99";
+    document.getElementById("proprice2").innerHTML = "$4.99";
+    document.getElementById("premiumprice1").innerHTML = "$12.99";
+    document.getElementById("premiumprice2").innerHTML = "$12.99";
+    document.getElementById("properiod1").innerHTML = "/month";
+    document.getElementById("properiod2").innerHTML = "/month";
+    document.getElementById("premiumperiod1").innerHTML = "/month";
+    document.getElementById("premiumperiod2").innerHTML = "/month";
+    document.getElementById("plans_pro_btn").href = "https://billing.w3schools.com/products/spaces?frequency=monthly&amp;selectedPlan=pro-monthly";
+    document.getElementById("plans_premium_btn").href = "https://billing.w3schools.com/products/spaces?frequency=monthly&amp;selectedPlan=premium-monthly";
+ }
+}
+</script>
+
         
           <div class="view-plans view-plans-header-row">
             <h2 class="heading">Start Free - upgrade later</h2>
           </div>
           <div class="view-plans">
-            <h3 class="subheading">Master new skills</h3>
+            <h3 class="subheading" id="masternewskills">Master new skills</h3>
           </div>
+            <div style="position:relative;width:100%;>">
+              <div style="position:absolute;top:20px;text-align:center;width:100%;>">
+                Monthly&nbsp;&nbsp;&nbsp;
+                <img id="selectorimage" src="selector.png" style="width:50px;cursor:pointer;" onclick="toggle_month_year()">
+                &nbsp;&nbsp;&nbsp;Yearly<span class="hide-small"> (get 2 months for free)</span>
+              </div>
+            </div>
           <div class="view-plans">
             <div class="plans-container">
               <div class="pro-plan-bkg">
 <div class="plans_floatcontainer">
+<!--
                 <div class="pro-plan basicplan">
                   <div style="margin-top:50px;">
                     <div class="price">$0.99<span class="period">/month</span></div>
@@ -447,37 +587,48 @@ transform:translate(0, 0);
                         <li>2 500 requests / month</li>
                         <li>w3spaces.com subdomain</li>
                         <li>SSL certificate</li>
-                        <li>Ad-free Spaces</li>
                       </ul>
                     </div>
                   </div>
                 </div>
+-->
                 <div class="pro-plan proplan">
                   <div class="proplanborder">
-                    <div class="price">$6.99<span class="period">/month</span></div>
+                    <div class="price"><span id="proprice1">$4.99</span><span id="properiod1" class="period">/month</span></div>
                     <div class="name">Pro</div>
                     <div class="description">For those running multiple spaces with more traffic.</div>
                     <div class="feature-list">
                       <ul class="checked-list">
+                        <li>Browse W3Schools without ads</li>
                         <li>Build static sites</li>
                         <li>10 spaces</li>
                         <li>3 GB storage</li>
                         <li>15 GB data / month</li>
-                        <li>400 000 requests / month</li>
+                        <li>200 000 requests / month</li>
                         <li>w3spaces.com subdomain</li>
                         <li>SSL certificate</li>
-                        <li>Ad-free Spaces</li>
                       </ul>
+                      <a
+                        title="Go Pro"
+                        id="plans_pro_btn"
+                        href="https://billing.w3schools.com/products/spaces?frequency=monthly&amp;selectedPlan=pro-monthly"
+                        onclick="ga('send', 'event', 'spacesFromLanding', 'LinkPlansPro')">
+                          <button class="plans_btn">
+                            <span id="proprice2">$4.99</span>
+                            <span id="properiod2">/month</span>
+                          </button>
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div class="pro-plan premiumplan">
                   <div style="margin-top:50px;margin-left:34px;">                
-                    <div class="price">$12.99<span class="period">/month</span></div>
+                    <div class="price"><span id="premiumprice1">$12.99</span><span class="period" id="premiumperiod1">/month</span></div>
                     <div class="name">Premium</div>
                     <div class="description">Build more sites and grow your online presence.</div>
                     <div class="feature-list">
                       <ul class="checked-list">
+                        <li>Browse W3Schools without ads</li>
                         <li>Build static sites</li>
                         <li>20 spaces</li>
                         <li>10 GB storage</li>
@@ -485,8 +636,18 @@ transform:translate(0, 0);
                         <li>5 000 000 requests / month</li>
                         <li>w3spaces.com subdomain</li>
                         <li>SSL certificate</li>
-                        <li>Ad-free Spaces</li>
                       </ul>
+                      <a
+                        title="Go Premium"
+                        id="plans_premium_btn"
+                        href="https://billing.w3schools.com/products/spaces?frequency=monthly&amp;selectedPlan=premium-monthly"
+                        onclick="ga('send', 'event', 'spacesFromLanding', 'LinkPlansPremium')">
+                          <button class="plans_btn">
+                            <span id="premiumprice2">$12.99</span>
+                            <span id="premiumperiod2">/month</span>
+                          </button>
+                      </a>
+
                     </div>
                   </div>
                 </div>
@@ -498,12 +659,13 @@ transform:translate(0, 0);
 text-align: center;
     color: #282a35;
 font-weight: 700;margin-top:-22px;margin-bottom:27px;">FREE</div>
-                <div class="price" stxyle="margin-top:50px;">$0<span class="period">/month</span></div>
+                <div class="price" stxyle="margin-top:50px;">$0<span class="period" id="freeperiod1">/month</span></div>
                
                 <div class="name">Free</div>
                 <div class="description">For new web developers ready to create their first site.</div>
                 <div class="feature-list">
                   <ul class="checked-list">
+                    <li style="color:pink">Browse W3Schools with ads</li>
                     <li>Build static sites</li>
                     <li>1 space</li>
                     <li>100 MB storage</li>
@@ -513,14 +675,12 @@ font-weight: 700;margin-top:-22px;margin-bottom:27px;">FREE</div>
                     <li>SSL certificate</li>
                   </ul>
                 </div>
-                <a href="../../profile.w3schools.com/signup7ef1.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkBottom')"><button class="_1VfsI _1LtgI _3_H0V"><span></span>Get started for free</button></a>
+                <a href="../../profile.w3schools.com/signup8653.html?redirect_url=https%3A%2F%2Fspaces.w3schools.com%2Fcreatespace%2Fstepone" onclick="ga('send', 'event', 'spacesFromLanding', 'LinkBottom')"><button class="_1VfsI _1LtgI _3_H0V"><span></span>Get started for free</button></a>
               </div>
             </div>
           </div>
-          <div class="view-plans">
-            <div class="getstarted_terms">By clicking the "Get started for free" button, you agree to W3Schools' <a href="../about/about_copyright.html" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></div>
-          </div>
-          <div class="hide-large" style="width:100%;height:1550px;">
+          <div style="height:40px;">&nbsp;</div>
+          <div class="hide-large" style="width:100%;height:1150px;">
           </div>          
         </div>
         <div class="_kCx4y  _39ys9">
@@ -533,7 +693,18 @@ font-weight: 700;margin-top:-22px;margin-bottom:27px;">FREE</div>
         <div class="notification-wrapper"></div>
       </div>
       <div class="footer-terms">
-        <div class="_1ak-Y" style="position: relative;padding-bottom:10px;">© 1999 - 2021 <a href="../index.html" target="_blank" rel="noopener noreferrer">W3schools</a>. All rights reserved. <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Cookie policy</a>, <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a> and <a href="../about/about_copyright.html" target="_blank" rel="noopener noreferrer">Terms</a>.</div>
+          <div class="multiple_users">
+            <strong>Looking to add multiple users?</strong><br>
+            <a href="https://support.w3schools.com/hc/en-gb/articles/4411122929553-How-do-I-do-bulk-enrolments" target="_blank">
+              Read here for how to get in touch.
+            </a>
+          </div>
+          <div class="agreementcontainer">
+          <div class="agreement">
+            By selecting a plan: Free, Pro, or Premium, you agree to W3Schools' <a href="../about/about_copyright.html" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          </div>
+          </div>
+        <div class="_1ak-Y" style="position: relative;padding-bottom:10px;">© 1999 - 2022 <a href="../index.html" target="_blank" rel="noopener noreferrer">W3schools</a>. All rights reserved. <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Cookie policy</a>, <a href="../about/about_privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a> and <a href="../about/about_copyright.html" target="_blank" rel="noopener noreferrer">Terms</a>.</div>
         <div class="_1ak-Y" id="err_form" style="display:none;position:relative;">
         <h2>Report Abuse</h2>
           <p>Reporting abusive content helps us to maintain the quality of Spaces.<br> If you encounter any Space you believe are abusive, do not hesitate to send us an e-mail:</p>
@@ -550,5 +721,5 @@ function displayError() {
     </div>
   </body>
 
-<!-- Mirrored from www.w3schools.com/spaces/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:29:40 GMT -->
+<!-- Mirrored from www.w3schools.com/spaces/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:42:58 GMT -->
 </html>

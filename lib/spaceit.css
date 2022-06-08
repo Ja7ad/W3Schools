@@ -1,0 +1,419 @@
+﻿.spaceit-modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.175);
+    border-radius: 16px;
+    width: 540px;
+    height: fit-content;
+    padding: 28px 28px 20px 28px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #282A35;
+}
+
+.spaceit-modal-container {
+    width: 100%;
+}
+
+.spaceit-modal-login-image-container {
+    position: relative;
+    margin-left: -30px;
+    margin-right: -29px;
+    min-height: 288px;
+}
+
+.spaceit-modal-login-image {
+    width: 100%;
+}
+
+.spaceit-modal-login-header {
+    width: 100%;
+    display:flex;
+    xxgap:10px;
+    margin-bottom: -15px;
+}
+
+.spaceit-modal-login-header img {
+    margin-right:5px;
+}
+
+.spaceit-modal h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.spaceit-modal-margin-top {
+    margin-top: 30px;
+}
+
+.spaceit-modal p {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.spaceit-modal li {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+}
+
+.spaceit-modal-close-button a {
+    position: absolute;
+    z-index: 1000;
+    top: 32px;
+    right: 32px;
+}
+
+.spaceit-modal-button-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 20px;
+    xxgap: 13px;
+}
+
+.spaceit-loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.spaceit-loader {
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    min-height: 90px;
+    /*border-width: 12px;
+    border-style: solid;
+    border-color: #04aa6d #04aa6d #04aa6d transparent;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;*/
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spaceit-loader-text {
+    text-align: center;
+}
+
+.spaceit-hidden {
+    display: none;
+}
+
+.spaceit-modal-button-primary {
+    background: #04AA6D;
+    border: 1px solid #04AA6D;
+    border-radius: 25px;
+    align-items: center;
+    padding: 10px 40px;
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0px;
+    margin-right: 5px;    
+    margin-left: 5px;    
+}
+
+.spaceit-modal-button-primary:hover {
+    color: #FFFFFF;
+    background-color: #059862;
+}
+
+.spaceit-modal-button-secondary {
+    background: #FFFFFF;
+    border: 2px solid #04AA6D;
+    border-radius: 25px;
+    align-items: center;
+    padding: 10px 40px;
+    color: #282A35;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0px;
+    margin-right: 5px;    
+    margin-left: 5px;    
+}
+
+
+#spaceItSignButton.spaceit-modal-button-primary {
+    background: #282A35;
+    border: 1px solid #282A35;
+    color: #FFFFFF;
+}
+
+#spaceItSignButton.spaceit-modal-button-primary:hover {
+    background-color: #333333;
+    background-color: #444;
+    
+}
+
+#spaceItLoginButton.spaceit-modal-button-secondary {
+    background: #FFFFFF;
+    border: 2px solid #282A35;
+    color: #282A35;
+}
+
+#spaceItLoginButton.spaceit-modal-button-secondary:hover {
+    border: 2px solid #798488;
+}
+
+.spaceit-modal-button-disabled {
+    pointer-events: none;
+    color: #ccc;
+}
+
+
+.spaceit-modal-input-group {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    height: 46px;
+}
+
+.spaceit-modal-input {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    height: 46px;
+    padding: 12px;
+    outline: 0;
+    border: 1px solid #ced4da;
+    border-right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.spaceit-modal-input-group-append {
+    display: flex;
+}
+
+.spaceit-modal-input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.spaceit-modal-input-validation-error {
+    margin-top: 6px;
+    color: #d9212c;
+}
+
+.spaceit-modal select {
+    border-radius: 4px;
+    outline: 0;
+    height: 46px;
+    width: 100%;
+    padding: 9px;
+    color: #282A35;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+.spaceit-modal select option {
+    color: inherit;
+    background-color: #320a28;
+}
+
+.spaceit-modal select:focus {
+    outline: none;
+}
+
+.spaceit-modal select.minimal {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  .spaceit-modal select.minimal:focus {
+    /*background-image:
+      linear-gradient(45deg, #6C757D 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, #6C757D 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+      */
+    background-repeat: no-repeat;
+    border-color: #6C757D;
+    outline: 0;
+  }
+  
+.spaceit-modal-file-input {
+    border-radius: 4px;
+    outline: 0;
+    height: 46px;
+    width: 100%;
+    padding: 9px;
+    color: #282A35;
+    border: 1px solid #ced4da;
+}
+
+.spaceit-modal-success-img {
+    padding: 36px 0px 20px 0px;
+}
+
+.spaceit-modal-success-header {
+    text-align: center;
+}
+
+.spaceit-modal-success-text {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    text-align: left;
+}
+
+.spaceit-modal-success-button {
+    display: flex;
+    justify-content: center;
+}
+
+.spaceit-success-button-icon {
+    margin-left: 8px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .spaceit-modal-login-image-container {
+        min-height: 50px;
+    }
+    #spaceItModalParentContainer {
+      width:75%!important;
+      margin:auto;
+    }
+    .spaceit-modal-login-header img {
+      display:none;
+    }
+    #spaceItLoginButton,#spaceItSignButton {
+      margin-bottom:10px;
+    }
+}
+
+@media (max-height: 800px) {
+    #spaceItModal.w3-modal {
+        display: flex !important;
+        padding-top: 0px !important;
+    }
+}
+
+
+@media (max-height: 530px) {
+    #spaceItModal.w3-modal {
+        display: flex !important;
+        padding-top: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .spaceit-save-button {
+        margin-right: 0px !important;
+    }
+
+    .spaceit-modal-button-primary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .spaceit-modal-button-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 34%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space:nowrap;
+    text-align: center;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext:empty {
+    display: none;
+}

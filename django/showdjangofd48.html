@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_tags_now by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 21:20:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Tryit Editor v3.6 - Show Django</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="../lib/w3schools30.css">
+<script src="../lib/prism2.js"></script>
+<link rel="stylesheet" href="../lib/prism1.css">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+<script src="../lib/uic2c70.js?v=1.0.3"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+k42 = true;
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+      "activeAdUnits": ["try_it_leaderboard_courses"]
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+                if (document.getElementById("adngin-try_it_leaderboard_courses-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard_courses"]); });
+              }
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();    
+}
+</script>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color:#000000;
+  margin:0px;
+  font-size:100%;
+}
+.trytopnav {
+  height:40px;
+  overflow:hidden;
+  min-width:380px;
+  position:absolute;
+  width:100%;
+  top:99px;
+  background-color:#E7E9EB;
+}
+.topnav-icons {
+  margin-right:8px;
+}
+.trytopnav a {
+  color:#999999;
+}
+.w3-bar-item:hover {
+  color:#999999 !important;
+}
+a.w3schoolslink {
+  padding:0 !important;
+  display:inline !important;
+}
+a.w3schoolslink:hover,a.w3schoolslink:active {
+  text-decoration:underline !important;
+  background-color:transparent !important;
+}
+#dragbar{
+  position:absolute;
+  cursor: col-resize;
+  z-index:3;
+  padding:5px;
+}
+#shield {
+  display:none;
+  top:0;
+  left:0;
+  width:100%;
+  position:absolute;
+  height:100%;
+  z-index:4;
+}
+#framesize span {
+  font-family:Consolas, monospace;
+}
+#container {
+  background-color:#E7E9EB;
+  width:100%;
+  min-width:600px;
+  overflow:auto;
+  position:absolute;
+  top:138px;
+  bottom:0;
+  height:auto;
+}
+#textareacontainer, #iframecontainer {
+  float:left;
+  height:100%;
+  width:50%;
+}
+#textarea, #iframe {
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:1px;
+}
+#textarea {
+  padding-left:10px;
+  padding-right:5px;
+}
+#iframe {
+  padding-left:5px;
+  padding-right:10px;  
+}
+#textareawrapper {
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  position:relative;
+  xxbox-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  overflow:auto;
+}
+#iframewrapper {
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  xxbox-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#textareaCode, .codewindow {
+  background-color: #ffffff!important;
+  font-family: consolas,"courier new",monospace;
+  font-size:15px;
+  height:100%;
+  width:100%;
+  padding:12px 8px 8px 8px;
+  resize: none;
+  border:none;
+  line-height:normal;
+  overflow:hidden!important;
+  word-wrap:break-word;
+}
+#filenamecontainer {
+  position:absolute;
+  text-align:center;
+  z-index:4;
+  width:100%;
+}
+#filenamecontainer span {
+  opacity:0.9;
+  padding:1px 6px;
+  font-family:Consolas;
+  background-color:#F1F1F1;
+  font-size:16px;
+}
+#iframeResult, #iframeSource {
+  background-color: #fff;
+  xcolor:#ffffff;
+  font-family: initial;  
+  height:100%;
+  width:100%;  
+  xpadding:8px;
+}
+#textareacontainer.horizontal,#iframecontainer.horizontal{
+  height:50%;
+  float:none;
+  width:100%;
+}
+#textarea.horizontal{
+  height:100%;
+  padding-left:10px;
+  padding-right:10px;
+}
+#iframe.horizontal{
+  height:100%;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;  
+}
+#container.horizontal{
+  min-height:200px;
+  margin-left:0;
+}
+#tryitLeaderboard {
+  background-color:#ffffff;
+  overflow:hidden;
+  text-align:center;
+  margin-top:5px;
+  height:90px;
+}
+@media screen and (max-width: 727px) {
+  .trytopnav {top:70px;}
+  #container {top:108px;}
+}
+@media screen and (max-width: 467px) {
+  .trytopnav {top:60px;}
+  #container {top:98px;}
+}
+@media only screen and (max-device-width: 768px) {
+  #iframewrapper {overflow: auto;}
+  #container     {min-width:320px;}
+  .stack         {display:none;}
+  #tryhome       {display:block;}
+}
+
+#iframewrapper {
+	
+}
+
+.localhostoutercontainer {
+  position: absolute;
+  width: 100%;
+  background-color: #E7E9EB;
+  height: 30px;;
+}
+.localhostcontainer {
+  position:relative;
+  width:auto;
+  right:0;
+  left:0;
+  z-index:2;
+  xpadding:6px 12px;
+  xxborder-bottom:1px solid #d9d9d9;
+  background-color:#F1F1F1;
+  background-color:#38444d;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+  overflow:hidden;
+  padding-top:4px;
+}
+.localhostdiv {
+  overflow:hidden;
+  font-family:arial;
+  xborder:1px solid #d9d9d9;
+  background-color:#fff;
+  font-size:15px;
+  padding-left:10px;
+  border-radius:20px;
+  width:60%;
+  float:left;
+}
+.localhostbuttoncontainer {
+  width:20%;
+  min-width:100px;
+  color:#ffc107;
+  float:left;  
+  font-size:16px;
+  overflow:auto;
+}
+div.localhostbuttoncontainer span{
+  display:inline-block;
+  color:#ffc107;
+  position:relative;
+  padding-bottom:4px;
+  padding-left:2px;  
+}
+
+div.localhostbuttoncontainer span:first-child{
+  color:#dc3545;
+  padding-left:12px;
+
+}
+div.localhostbuttoncontainer span:last-child{
+  color:#04AA6D;
+  padding-left:2px;    
+}
+
+body.darktheme .localhostoutercontainer {
+  background-color: #38444d;
+}
+body.darktheme .localhostcontainer {
+  background-color:rgb(21,32,43)
+}
+
+body.darktheme .localhostdiv {
+  border:1px solid #595959;
+  background-color:#ffffff;
+}
+
+body.darktheme {
+  background-color:#1d2a35;
+}
+body.darktheme #tryitLeaderboard{
+  background-color:#1d2a35;
+}
+body.darktheme .trytopnav{
+  background-color:#38444d;
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#38444d;
+}
+body.darktheme .trytopnav a {
+  color:#dddddd;
+}
+body.darktheme #filenamecontainer span {
+  background-color:#555555;
+  color:#f1f1f1;
+}
+.darktheme #textareawrapper {
+  background-color:rgb(21,32,43)!important;
+  color: #fff;
+}
+
+#templatetab, #viewstab, #childtemplatetab, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+  width:70px;
+  cursor:pointer;
+}
+#templatetab {
+  width:120px;
+  left:0;
+}
+#viewstab {
+  width:100px;
+  left:120px;
+}
+#childtemplatetab {
+  width:150px;
+  left:220px;
+}
+
+#resttab {
+  z-index:1;
+  xborder-bottom:1px solid #d9d9d9;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+.tabitem {
+  background-color:#38444d;
+  color:#ddd;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  opacity:0.5;
+}
+.tabitem.tabselected{
+  opacity:1;
+}
+
+.darktheme .tabitem {
+  background-color:rgb(21,32,43)
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+.trytopnav {
+  height:48px!important;
+}
+.fa {
+  padding: 8px 16px;
+}
+a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
+  font-size: 28px!important;
+  padding: 8px 16px;
+  }
+
+</style>
+<!--[if lt IE 8]>
+<style>
+#textareacontainer, #iframecontainer {width:48%;}
+#container {height:500px;}
+#textarea, #iframe {width:90%;height:450px;}
+#textareaCode, #iframeResult, .codewindow {height:450px;}
+.stack {display:none;}
+</style>
+<![endif]-->
+</head>
+<body>
+<div id='tryitLeaderboard'>
+<!-- TryitLeaderboard -->
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard_courses-0"></div>
+  <!-- adspace tryit-->
+</div>
+<div class="trytopnav">
+<div class="w3-bar" style="overflow:auto">
+<!--
+  <a id="tryhome" href="https://www.w3schools.com" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
+  <span class="w3-right w3-hide-small w3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>
+  <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
+-->
+</div>
+
+</div>
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <div id="templatetab" class="tabitem" onclick="clickTab('template')">
+                  
+          template.html        
+                  
+        </div>
+        <div id="viewstab" class="tabitem" onclick="clickTab('views')">views.py</div>
+                                        <div id="resttab">&nbsp;</div>
+
+        <div id="template">
+        <pre style="margin:0" class="codewindow language-django xw3-white"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;{% now "Y-m-d" %}&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;        </code></pre>
+        </div>
+
+
+        <div id="views" style="display:none;">
+        <pre style="margin:0" class="codewindow language-python xw3-white"><code>
+from django.http import HttpResponse
+from django.template import loader
+
+def testing(request):
+  template = loader.get_template('template.html')
+  return HttpResponse(template.render())        </code></pre>
+        </div>
+
+               
+      </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="iframewrapper">
+        <div id="iframeResult" style="position:relative;">
+          <div class="localhostoutercontainer">
+            <div class="localhostcontainer">
+              <div class="localhostbuttoncontainer">
+                <span>&#11044;</span>
+                <span>&#11044;</span>
+                <span>&#11044;</span>
+              </div>
+              <div class="localhostdiv">127.0.0.1:8000/members/testing</div>
+            </div>
+          </div>
+          <iframe style="width:100%;height:100%;border:none;padding-top:32px;" src="demo_tags_now.html"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var demotype = 0, clicktab = "template";
+clickTab(clicktab);
+
+function clickTab(x) {
+  document.getElementById("template").style.display = "none";
+  document.getElementById("views").style.display = "none";
+  if (document.getElementById("childtemplate")) document.getElementById("childtemplate").style.display = "none";
+  document.getElementById(x).style.display = "block";
+
+  document.getElementById("templatetab").className = document.getElementById("templatetab").className.replace(" tabselected", "");
+  document.getElementById("viewstab").className = document.getElementById("viewstab").className.replace(" tabselected", "");
+  if (document.getElementById("childtemplatetab")) document.getElementById("childtemplatetab").className = document.getElementById("childtemplatetab").className.replace(" tabselected", "");
+  
+  document.getElementById(x + "tab").className += " tabselected";
+}
+
+var currentStack=true;
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "<%=stack%>" == " horizontal") {restack(true);}
+function restack(horizontal) {
+    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    tc = document.getElementById("textareacontainer");
+    ic = document.getElementById("iframecontainer");
+    t = document.getElementById("textarea");
+    i = document.getElementById("iframe");
+    c = document.getElementById("container");    
+    tc.className = tc.className.replace("horizontal", "");
+    ic.className = ic.className.replace("horizontal", "");        
+    t.className = t.className.replace("horizontal", "");        
+    i.className = i.className.replace("horizontal", "");        
+    c.className = c.className.replace("horizontal", "");                        
+    stack = "";
+    if (horizontal) {
+        tc.className = tc.className + " horizontal";
+        ic.className = ic.className + " horizontal";        
+        t.className = t.className + " horizontal";        
+        i.className = i.className + " horizontal";                
+        c.className = c.className + " horizontal";                
+        stack = " horizontal";
+        document.getElementById("textareacontainer").style.height = "50%";
+        document.getElementById("iframecontainer").style.height = "50%";
+        document.getElementById("textareacontainer").style.width = "100%";
+        document.getElementById("iframecontainer").style.width = "100%";
+        currentStack = false;
+    } else {
+        document.getElementById("textareacontainer").style.height = "100%";
+        document.getElementById("iframecontainer").style.height = "100%";
+        document.getElementById("textareacontainer").style.width = "50%";
+        document.getElementById("iframecontainer").style.width = "50%";
+        currentStack = true;
+    }
+//    if (window.editor) {
+//      window.editor.refresh();
+//    }
+    fixDragBtn();
+    showFrameSize();
+    setCodewindowHeight();
+}
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
+function showFrameSize() {
+  /*var t;
+  var width, height;
+  width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+  height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+  document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";*/
+}
+var dragging = false;
+var stack;
+function fixDragBtn() {
+  var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+  var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+  if (stack != " horizontal") {
+    document.getElementById("dragbar").style.width = "5px";    
+    textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+    leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+    buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+    textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+    dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+    document.getElementById("dragbar").style.top = containertop + "px";
+    document.getElementById("dragbar").style.left = dragleft + "px";
+    document.getElementById("dragbar").style.height = textareaheight;
+    document.getElementById("dragbar").style.cursor = "col-resize";
+    
+  } else {
+    document.getElementById("dragbar").style.height = "5px";
+    if (window.getComputedStyle) {
+        textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+        textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+        leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+        buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+    } else {
+        dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+    }
+    textareawidth = Number(textareawidth.replace("px", ""));
+    leftpadding = Number(leftpadding .replace("px", ""));
+    buttonwidth = Number(buttonwidth .replace("px", ""));
+    dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+    document.getElementById("dragbar").style.top = dragleft + "px";
+    document.getElementById("dragbar").style.left = "5px";
+    document.getElementById("dragbar").style.width = textareaheight;
+    document.getElementById("dragbar").style.cursor = "row-resize";        
+  }
+}
+function dragstart(e) {
+  e.preventDefault();
+  dragging = true;
+  var main = document.getElementById("iframecontainer");
+}
+function dragmove(e) {
+  if (dragging) 
+  {
+    document.getElementById("shield").style.display = "block";        
+    if (stack != " horizontal") {
+      var percentage = (e.pageX / window.innerWidth) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.width = percentage + "%";
+        document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+        fixDragBtn();
+      }
+    } else {
+      var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+      var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.height = percentage + "%";
+        document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+        fixDragBtn();
+      }
+    }
+    showFrameSize();
+    setCodewindowHeight();
+  }
+}
+function dragend() {
+  document.getElementById("shield").style.display = "none";
+  dragging = false;
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
+  }
+}
+if (window.addEventListener) {              
+  document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+  document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+  window.addEventListener("mousemove", function(e) {dragmove(e);});
+  window.addEventListener("touchmove", function(e) {dragmove(e);});
+  window.addEventListener("mouseup", dragend);
+  window.addEventListener("touchend", dragend);
+  window.addEventListener("load", fixDragBtn);
+  window.addEventListener("load", showFrameSize);
+  window.addEventListener("load", setCodewindowHeight);
+}
+/*function colorcoding() {  
+  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    mode: "text/x-python",
+    htmlMode: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true,
+    readOnly: true
+  });
+}
+colorcoding();*/
+function w3_getStyleValue(elmnt,style) {
+    if (window.getComputedStyle) {
+        return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+    } else {
+        return elmnt.currentStyle[style];
+    }
+}
+function setCodewindowHeight() {
+  var i;
+  var txw = document.getElementById("textareawrapper");
+  var txwh = w3_getStyleValue(txw,"height");
+  var qwsa = document.getElementsByClassName("codewindow");
+  for (i = 0; i < qwsa.length; i++) {
+    qwsa[i].style.height = txwh;
+    qwsa[i].style.setProperty("overflow", "auto", "important");
+  }
+}
+uic_r_e()
+</script>
+</body>
+
+<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_tags_now by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 21:20:27 GMT -->
+</html>

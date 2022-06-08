@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/tryit/trycompiler.asp?filename=demo_python by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:29:18 GMT -->
+<!-- Mirrored from www.w3schools.com/tryit/trycompiler.asp?filename=demo_python by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:42:25 GMT -->
 <head>
 <title>Tryit Compiler v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -13,7 +13,7 @@
 <meta property="og:image:height" content="200">
 <link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
 <link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
-<link rel="stylesheet" href="../lib/w3schools28.css">
+<link rel="stylesheet" href="../lib/w3schools30.css">
 <link rel="stylesheet" href="../lib/codemirror_multi.css">
 <script src="../lib/codemirror_multi.js"></script>
 <script src="../lib/codemirror_htmlmixed.js"></script>
@@ -44,6 +44,7 @@ ga('require', 'GTM-WJ88MZ5');
 ga('send', 'pageview');
 </script>
 
+<script src="../lib/uic2c70.js?v=1.0.3"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
@@ -58,6 +59,7 @@ k42 = true;
 
   }
 }
+uic_r_a()
 </script>
 <script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
 <script>
@@ -251,27 +253,6 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:90px;
 }
 .w3-dropdown-content {width:350px}
-body.darktheme {
-  background-color:rgb(40, 44, 52);
-}
-body.darktheme #tryitLeaderboard{
-  background-color:rgb(40, 44, 52);
-}
-body.darktheme .trytopnav{
-  background-color:#616161;
-  color:#dddddd;
-}
-body.darktheme #container {
-  background-color:#616161;
-}
-body.darktheme #textareaCode, body.darktheme #textareaCodeInput, body.darktheme #textareaCode2, body.darktheme #textareaCode3 {
-  background-color:rgb(40, 44, 52);
-  color:#fff;
-}
-
-body.darktheme .trytopnav a,body.darktheme .trytopnav button {
-  color:#dddddd;
-}
 
 #runbtn {
   background-color:#04AA6D;
@@ -417,16 +398,69 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
   color:#000!important;
   outline:1px solid #ccc;
 }
+
+
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;  
+  color: #ddd;  
+
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;
+  color: #ddd;  
+  
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  background-color:#38444d;  
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+  background-color:#38444d;  
+}
+body.darktheme #textareaCode, body.darktheme #textareaCodeInput, body.darktheme #textareaCode2, body.darktheme #textareaCode3 {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+  background-color:#1d2a35;
+  background-color:rgb(21,32,43);
+  
+  color: #ddd;    
+}
+
+body.darktheme .trytopnav a,body.darktheme .trytopnav button {
+  color:#dddddd;
+}
+
 body.darktheme .tabs {
   background-color:#616161;
+  background-color:#38444d;  
+  color: #ddd;  
+}
+body.darktheme .tab {
+  background-color:#616161;
+  background-color:#4b5b68;  
+  color: #ddd;  
 }
 body.darktheme .tab.active {
     background: rgb(40, 44, 52);
     color:#fff;
+  background-color:#1d2a35;
+  background-color:rgb(21,32,43);
+  
+  color: #ddd;  
     border-bottom-color: rgb(40, 44, 52)!important;
+    border-bottom-color: #1d2a35!important;
 }
 body.darktheme #textareawrapper {
     background-color: rgb(40, 44, 52)!important;
+  background-color:#1d2a35!important;
+  background-color:rgb(21,32,43)!important;
+  
+  xxcolor: #ddd;  
+    
 }
 </style>
 <!--[if lt IE 8]>
@@ -456,7 +490,7 @@ body.darktheme #textareawrapper {
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" title="Change Theme" style="font-size:28px;margin-top:-2px"></a>
-  <button id="runbtn" class="w3-button w3-bar-item ws-green w3-hover-white" onclick="submitTryit(1);ga('send', 'event', 'runCompiler' + document.getElementById('langOption').options[document.getElementById('langOption').selectedIndex].text, 'click');adngin.cmd.startAuction(['try_it_leaderboard']);">Run &#10095;</button>
+  <button id="runbtn" class="w3-button w3-bar-item ws-green w3-hover-white" onclick="submitTryit(1);ga('send', 'event', 'runCompiler' + document.getElementById('langOption').options[document.getElementById('langOption').selectedIndex].text, 'click');uic_r_p();">Run &#10095;</button>
   <select class="w3-select w3-bar-item" id="langOption" onchange="jumpToLang(this)" style="cursor:pointer;font-size:16px;padding:9px 16px;margin-top:3px;margin-left:8px;">
   </select>
   <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your<span class="w3-hide-medium"> own</span> website</a>
@@ -474,7 +508,7 @@ body.darktheme #textareawrapper {
   </div>
   <footer class="w3-container w3-small ws-grey">
   <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2021</a></p>
+  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a></p>
   </footer>
 </div>
 
@@ -529,7 +563,7 @@ body.darktheme #textareawrapper {
     <div class="w3-center w3-container ws-green" style="padding:20px">
       <h2>Confirm your selection</h2>
     </div>
-    <div class="w3-container w3-center w3-padding-16" style="font-size:17px">
+    <div class="w3-container w3-center w3-padding-16" style="font-size:17px;color:#000;">
       <p>The source code will be changed.</p>
       <p>Are you sure you want to discard it and move to a new language?</p>
       <div class="w3-container" style="padding:16px">
@@ -1072,11 +1106,9 @@ window.onclick = function(event) {
         openMenu();
     } 
 }
-
-
+uic_r_e()
 </script>
-
 </body>
 
-<!-- Mirrored from www.w3schools.com/tryit/trycompiler.asp?filename=demo_python by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 04:29:18 GMT -->
+<!-- Mirrored from www.w3schools.com/tryit/trycompiler.asp?filename=demo_python by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 12:42:44 GMT -->
 </html>

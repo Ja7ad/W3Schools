@@ -89,11 +89,13 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	background: #f5f2f0;
 	background: #f1f1f1;
+	background: #E7E9EB;
 }
 
 .w3-example pre[class*="language-"] {
 	background: #f5f2f0;
 	background: #f1f1f1;
+	background: #fff!important;
   border-left: 4px solid #04AA6D;
 }
 
@@ -239,6 +241,7 @@ pre[data-line] {
 .darktheme pre[class*="language-"] {
 	color: white;
   background-color: rgb(40,44,52)!important;
+  background-color: rgb(21,32,43)!important;  
 }
 .darktheme .token.comment,
 .darktheme .token.prolog,
@@ -309,4 +312,15 @@ pre[data-line] {
 .darktheme .token.italic {
 	font-style: italic;
 }
+
+.darktheme pre[class*="language-"]::-moz-selection,.darktheme pre[class*="language-"] ::-moz-selection,
+.darktheme code[class*="language-"]::-moz-selection,.darktheme code[class*="language-"] ::-moz-selection {
+	background: #0066ff;	
+}
+
+.darktheme pre[class*="language-"]::selection, .darktheme pre[class*="language-"] ::selection,
+.darktheme code[class*="language-"]::selection, .darktheme code[class*="language-"] ::selection {
+	background: #0066ff;		
+}
+
 
