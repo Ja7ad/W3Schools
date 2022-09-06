@@ -707,6 +707,7 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .darktheme .jskeywordcolor{color:#c5a5c5/*purple*/!important}
 .darktheme .jsstringcolor{color:#88c999/*green*/!important}
 .darktheme .jsstringtempcolor{color:orange/*green*/!important}
+.darktheme .jsregexpcolor{color:#faca6b/*green*/!important}
 .darktheme .jsnumbercolor{color:#80b6ff/*blue*/!important}
 .darktheme .jspropertycolor{color:white!important}
 .darktheme .javacolor{color:white!important}

@@ -2,32 +2,36 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_random_getstate by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 21:19:22 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_random_getstate by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:43:18 GMT -->
 <head>
-<title>Python Tryit Editor v1.0</title>
+<title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo.png">
+<meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="200">
-<meta property="og:image:height" content="200">
-<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="W3Schools online PYTHON editor">
+<meta property="og:description" content="The W3Schools online code editor allows you to edit code and view the result in your browser">
 <link rel="stylesheet" href="../lib/w3schools30.css">
-<link rel="stylesheet" href="../lib/codemirror.css">
-<script src="../lib/codemirror.js"></script>
-<script src="../lib/codemirror_python.js"></script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-3855518-1', 'auto');
-ga('require', 'displayfeatures');
-ga('require', 'GTM-WJ88MZ5');
-ga('send', 'pageview');
-</script>
+<link rel='stylesheet' href='../lib/codemirror.css'>
+<script src='../lib/codemirror.js'></script>
+<script src='../lib/codemirror_python.js'></script>
 
-<script src="../lib/uic2c70.js?v=1.0.3"></script>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
+</script>
+<!-- End Google Tag Manager -->
+
+<script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
@@ -71,6 +75,7 @@ function browserResize() {
     fixDragBtn();
     showFrameSize();    
 }
+var fileID = "";
 </script>
 <style>
 * {
@@ -90,6 +95,7 @@ body {
   position:absolute;
   width:100%;
   top:99px;
+
   background-color:#E7E9EB;
 }
 .topnav-icons {
@@ -124,8 +130,9 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   z-index:4;
 }
-#framesize span {
-  font-family:Consolas, monospace;
+#framesize {
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+  font-size: 14px;
 }
 #container {
   background-color:#E7E9EB;
@@ -133,6 +140,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   overflow:auto;
   position:absolute;
   top:144px;
+
   bottom:0;
   height:auto;
 }
@@ -141,7 +149,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
-#textarea, #iframe {
+#textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
   padding-bottom:10px;
@@ -153,9 +161,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 }
 #iframe {
   padding-left:5px;
-  padding-right:10px;
-  color:#ffffff;
-  font-family: consolas,"courier new",monospace;    
+  padding-right:10px;  
+    
+    color:#ffffff;
+    font-family: consolas,"courier new",monospace;    
+  
 }
 #textareawrapper {
   width:100%;
@@ -170,12 +180,14 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
   box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  color:#ffffff;
-  font-family: consolas,"courier new",monospace;  
+  
+    color:#ffffff;
+    font-family: consolas,"courier new",monospace;  
+  
 }
-#textareaCode {
+#textareaCode, #textareaCode2 {
   background-color: #ffffff;
-  font-family: consolas,"courier new",monospace;
+  font-family: consolas,Menlo,"courier new",monospace;
   font-size:15px;
   height:100%;
   width:100%;
@@ -184,23 +196,66 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   border:none;
   line-height:normal;    
 }
+  .localhostcontainer {
+    position:absolute;
+    width:auto;
+    right:0;
+    left:0;
+    z-index:2;
+    padding:4px 12px;
+    border-bottom:1px solid #d9d9d9;
+    background-color:#E7E9EB;
+  }
+  .localhostdiv {
+    overflow:hidden;
+    font-family:arial;
+    border:1px solid #d9d9d9;
+    background-color:#fff;
+    font-size:14px;
+    padding-left:10px;
+  }
+  #filenamecontainer {
+    position:absolute;
+    text-align:center;
+    z-index:4;
+    width:100%;
+  }
+  #filenamecontainer span {
+    opacity:0.9;
+    padding:1px 6px;
+    font-family:Consolas;
+    background-color:#E7E9EB;
+    font-size:16px;
+  }
+  body.darktheme #filenamecontainer span {
+    background-color:#555555;
+    color:#E7E9EB;
+  }
+
 .CodeMirror.cm-s-default {
   line-height:normal;
   padding: 4px;
+  
   height:100%;
   width:100%;
 }
+
 #iframeResult, #iframeSource {
-  background-color: #000000;
-  color:#ffffff;
-  font-family: consolas,"courier new",monospace!important;  
+  background-color: #ffffff;
+  
+    background-color: #000000;
+    color:#ffffff;
+    font-family: consolas,"courier new",monospace!important;      
+    padding:8px;    
+  
   height:100%;
   width:100%;  
-  padding:8px;
 }
-#iframeResult * {
-  font-family: consolas,"courier new",monospace!important;  
-}
+
+  #iframeResult * {
+    font-family: consolas,"courier new",monospace!important;  
+  }
+
 #stackV {background-color:#999999;}
 #stackV:hover {background-color:#BBBBBB !important;}
 #stackV.horizontal {background-color:transparent;}
@@ -228,62 +283,71 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   margin-left:0;
 }
 #tryitLeaderboard {
-  background-color:#ffffff;
   overflow:hidden;
   text-align:center;
   margin-top:5px;
   height:90px;
 }
 .w3-dropdown-content {width:350px}
-/*body.darktheme {
-  background-color:rgb(40, 44, 52);
+
+#breadcrumb ul {
+  font-family:'Montserrat', 'Source Sans Pro', sans-serif;
+  list-style: none;
+  display: inline-table;
+  padding-inline-start: 1px;
+  font-size: 12px;
+  margin-block-start: 6px;
+  margin-block-end: 6px;	
 }
-body.darktheme #tryitLeaderboard{
-  background-color:rgb(40, 44, 52);
+#breadcrumb li {
+  display: inline;
 }
-body.darktheme .trytopnav{
-  background-color:#616161;
-  color:#dddddd;
+#breadcrumb a {
+  float: left;
+  background: #E7E9EB;
+  padding: 3px 10px 3px 20px;
+  position: relative;
+  margin: 0 5px 0 0; 
+  text-decoration: none;
+  color: #555;
 }
-body.darktheme #container {
-  background-color:#616161;
+#breadcrumb a:after {
+  content: "";  
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #E7E9EB;
+  position: absolute; 
+  right: -12px;
+  top: 0;
+  z-index: 1;
 }
-body.darktheme #textareaCode {
-  background-color:rgb(40, 44, 52);
+#breadcrumb a:before {
+  content: "";  
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #fff;
+  position: absolute; 
+  left: 0; 
+  top: 0;
+}
+#breadcrumb ul li:first-child a:before {
+  display: none; 
+}
+#breadcrumb ul:last-child li{
+  padding-right: 5px;
+}
+#breadcrumb ul li a:hover {
+  background: #04AA6D;
   color:#fff;
 }
-body.darktheme .trytopnav a,body.darktheme .trytopnav button {
-  color:#dddddd;
-}
-*/
-
-body.darktheme {
-  background-color:rgb(40, 44, 52);
-  background-color:#1d2a35; 
-}
-body.darktheme #tryitLeaderboard{
-  background-color:rgb(40, 44, 52);
-  background-color:#1d2a35;  
-}
-body.darktheme .trytopnav{
-  background-color:#616161;
-  background-color:#38444d;    
-  color:#dddddd;
-}
-body.darktheme #container {
-  background-color:#616161;
-  background-color:#38444d;    
-}
-body.darktheme #textareaCode {
-  background-color:rgb(40, 44, 52);
-  background-color:#1d2a35;  
+#breadcrumb ul li a:hover:after {
+  border-left-color: #04AA6D;
   color:#fff;
 }
-body.darktheme .trytopnav a,body.darktheme .trytopnav button {
-  color:#dddddd;
+#breadcrumb li:last-child {
+  display: inline-block!important;
+  margin-top: 3px!important;
 }
-
-
 #runbtn {
   background-color:#04AA6D;
   color:white;
@@ -314,50 +378,188 @@ body.darktheme .trytopnav a,body.darktheme .trytopnav button {
   background-color: #059862 !important;
   color:white!important;
 }
-  
+
 @media screen and (max-width: 727px) {
   .trytopnav {top:70px;}
   #container {top:116px;}
-
+  #breadcrumb {display:none;}
+  #tryhome  {display:block;}
 }
 @media screen and (max-width: 467px) {
   .trytopnav {top:60px;}
   #container {top:106px;}
-  
   .w3-dropdown-content {width:100%}
 }
 @media only screen and (max-device-width: 768px) {
   #iframewrapper {overflow: auto;}
-  #container     {min-width:320px;}
+  #container     {min-width:310px;}
   .stack         {display:none;}
   #tryhome       {display:block;}
+  .trytopnav     {min-width:310px;}  
 }
 
-#runloadercontainer{
-  display:none;
-  position:absolute;
-  background-color:#000;
-  z-index:9;
-}
-#runloader{
-  margin:auto;
-  border: 10px solid #333;
-  border-top: 10px solid #04AA6D;
-  border-radius: 50%;
-  max-width: 150px;
-  max-height: 150px;
-  animation: spin 2s linear infinite;
-  position:relative;
-}
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+  #runloadercontainer{
+    display:none;
+    position:absolute;
+    background-color:#000;
+    z-index:9;
+  }
+  #runloader{
+    margin:auto;
+    border: 10px solid #333;
+    border-top: 10px solid #04AA6D;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    animation: spin 2s linear infinite;
+    position:relative;
+  }
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
 #iframewrapper {
 	
 }
+  .tabs-container {
+  }
+  .tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:#E7E9EB;
+    
+  }
+  .tab {
+    padding: 5px 10px;
+    background: #ddd;
+    width: fit-content;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;            
+  
+    }
+  .tab.active {
+    background: #fff;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  .tab-pane.active { 
+    display: block;
+  }
+
+.fa {
+  padding: 10px 10px!important;
+}
 a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-icons.fa-adjust {
     font-size: 28px!important;
+}
+.darktheme #breadcrumb li {
+  color:#fff;
+}
+.darktheme #breadcrumb a {
+  background:#616161;
+  background-color:#38444d;  
+  color: #ddd;
+}	
+.darktheme #breadcrumb a:after {
+  border-left: 12px solid #616161;
+  border-left: 12px solid #38444d; 
+}
+.darktheme #breadcrumb a:before {
+  border-left: 12px solid rgb(40, 44, 52);
+  border-left: 12px solid #1d2a35;  
+}
+.darktheme .currentcrumb {
+  color:#ddd;
+}
+
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;  
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  background-color:#38444d;
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+  background-color:#38444d;
+}
+body.darktheme .trytopnav a {
+  color:#dddddd;
+}
+body.darktheme #textareaCode {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+}
+
+body.darktheme #textareawrapper {
+  background-color:rgb(21,32,43);
+}
+body.darktheme .tabs {
+    background-color:#38444d;
+  }
+body.darktheme .tab {
+    background: rgb(21,32,43);
+    color:#fff;
+    opacity:0.5;
+    }
+body.darktheme .tab.active {
+    background: rgb(21,32,43);
+    color:#fff;    
+    opacity:1;
+  }
+
+body.darktheme ::-webkit-scrollbar {width:12px;height:3px;}
+body.darktheme ::-webkit-scrollbar-track-piece {background-color:#000;}
+body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161; background-color:#38444d;}
+body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
+
+
+#file1filetab, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+}
+#file1filetab {
+  width:auto;
+  left:0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;            
+}
+#resttab {
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+.tabitem {
+  background-color:#eaeaea;
+}
+.tabitem.tabselected{ 
+  background-color:#fff;
+}
+.darktheme .tabitem {
+  background-color:#444;
+}
+.darktheme .tabitem.tabselected{
+  background-color:rgb(21,32,43);
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+.darktheme #file1filetab {
+  border-right:1px solid rgb(21,32,43);
 }
 
 </style>
@@ -366,12 +568,16 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
 #textareacontainer, #iframecontainer {width:48%;}
 #container {height:500px;}
 #textarea, #iframe {width:90%;height:450px;}
-#textareaCode, #iframeResult {height:450px;}
+#textareaCode, #textareaCode2, #iframeResult, .codewindow {height:450px;}
 .stack {display:none;}
 </style>
 <![endif]-->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
@@ -384,23 +590,32 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
 
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
-  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
-  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
-  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
-  <a href="javascript:void(0);" class="w3-bar-item w3-button topnav-icons fa fa-adjust" onclick="retheme()" title="Change Theme" title="Change Theme" style="font-size:28px;margin-top:-2px"></a>
-  <button id="runbtn" class="w3-button w3-bar-item ws-green w3-hover-white" onclick="submitTryit(1);ga('send', 'event', 'runCodePython', 'click');uic_r_p();">Run &#10095;</button>
-  <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your<span class="w3-hide-medium"> own</span> website</a>
-  <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;margin-top:3px;"><span id="framesize"></span></span>
+  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;"></a>
+
+  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
+
+  <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+  <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank">Get your<span class="w3-hide-medium"> own</span> website</a>
+  <!--<span class="w3-right w3-hide-small xxw3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>-->
+  <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
 </div>
 
 </div>
+
 <div id="shield"></div>
+
 <a href="javascript:void(0)" id="dragbar"></a>
 <div id="container">
 <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
-<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent w3-hover-dark-grey" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
   <div class="w3-bar-block">
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
+    <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
   </div>
   <footer class="w3-container w3-small ws-grey">
   <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
@@ -411,41 +626,53 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-ic
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
-        <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">import random
+        
+            <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">import random
 
 x = random.getstate()
 
 print(x)
 </textarea>
-        <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
-          <input type="hidden" name="code" id="code" />
-        </form>
+            <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+              <input type="hidden" name="code" id="code" />
+            </form>
+                  
        </div>
     </div>
   </div>
   <div id="iframecontainer">
     <div id="iframe">
-      <div id="runloadercontainer"><div id="runloader"></div></div>
+      
+        <div id="runloadercontainer"><div id="runloader"></div></div>
+      
       <div id="iframewrapper">
-        <div id="iframeResult" style="white-space:nowrap;overflow:auto;">3(2147483648, 3103207354, 496875541, 757866351, 2961889146, 1723687987, 3983212609, 4294563582, 2167504868, 4131303989, 30541827, 1847032101, 4046416791, 886984731, 358944830, 42211964, 3168821458, 1211076867, 1421058748, 1013130355, 2069454997, 3779430210, 2160036842, 2400645795, 3850228842, 3463710532, 2538873538, 1405505158, 3230075244, 245688412, 3898651951, 427677002, 3472227126, 267743468, 2245627246, 4228296001, 3063901127, 2807318768, 391618047, 823239808, 1584318905, 1579453613, 997403543, 1764763131, 1472699256, 2450503703, 261739515, 526827084, 4092732213, 1741873752, 497895734, 3392207753, 3977517516, 2887569271, 2529992687, 1221719415, 3327554247, 113661918, 4241769877, 451015713, 2342033285, 1184277155, 1489314301, 4123384057, 1132920368, 437432721, 913685165, 1925484129, 1090190256, 1383618750, 2330515266, 338100431, 627709766, 2567213954, 568760880, 149137593, 963971225, 912750668, 1743082519, 530115509, 1730692772, 2750879488, 1642212454, 3992049402, 2126902815, 2163010782, 1781522632, 2085203126, 4007264263, 723964955, 1275337085, 1169521472, 3974170437, 2615467417, 2309106671, 537031725, 1630797687, 1553216255, 1399060812, 1112021028, 3288841091, 1508036158, 744192872, 1147369365, 3964491971, 3082686983, 2017113167, 1599927836, 2504510940, 4116660910, 560351097, 1527973632, 3130259314, 3087905315, 2581843632, 1484241468, 3319499724, 3693833991, 3812658967, 2952080689, 2456484788, 285399166, 2866352648, 1929410588, 360250710, 2602635685, 719044063, 3692092492, 3978526775, 2926625573, 2484360426, 4131425768, 2432536633, 2761638805, 3836314513, 356597858, 1278720734, 1649424437, 1861916655, 3224655028, 1508896360, 336881532, 977794399, 2023346979, 2932377126, 2531952665, 2098284188, 4002328022, 3832083721, 3116464025, 3313180663, 4162917240, 802241637, 1980169014, 359925233, 2113670677, 814110330, 2070953523, 1266510215, 2832453410, 3829922378, 3739864126, 1710477925, 2946319458, 3375908310, 933695863, 347880229, 1269302116, 1183913056, 1020900670, 1411857584, 1811427321, 864459895, 916844091, 1482364269, 506057606, 3712935876, 2328269942, 3521169425, 2192820157, 22176442, 1447728893, 3537320730, 3874347462, 3543997871, 760929304, 4232176725, 1273688311, 1126452889, 1508949270, 2834035775, 978319625, 3518745531, 963480, 1844562876, 3608767420, 1922645405, 2427409295, 560090799, 3914228582, 562403051, 2895467506, 4160342092, 2400640403, 1586062546, 1727948911, 636688453, 2632459682, 4147539603, 1060496114, 1392220045, 114715597, 572941511, 4142183733, 1925432945, 335335855, 2692189346, 2753967402, 3408546647, 3220664231, 2188379244, 3968453480, 3722713854, 3880170020, 3834634009, 3652114754, 505217010, 1630964016, 2838375131, 4029856210, 1445668832, 3089413533, 444128611, 881282628, 2528808033, 1832771694, 2481239136, 1307853641, 2907584135, 1524267515, 2947013478, 1600674079, 3204172870, 2966380869, 16786239, 4125290902, 3344548977, 1544440254, 2580789726, 2641271019, 1130936490, 1189045462, 1378453560, 1543102053, 3305989421, 2678474942, 4219470166, 4068803097, 197208581, 540234917, 2959687507, 612179788, 4063006856, 553784112, 2725875649, 2433590363, 3203730746, 993361898, 1031808673, 2203741953, 1033337536, 204726970, 1097816360, 3862589176, 4232402667, 3472709511, 1952882048, 802707612, 3004227299, 3778541798, 2740767108, 724089176, 3689608439, 2595938463, 2077786960, 507860463, 3520064008, 318543445, 1444443937, 837095585, 1503544416, 1215011040, 9072081, 1989078373, 3742746541, 4095454360, 3611196247, 3100793229, 617564546, 2254333491, 3452557022, 4215820403, 2284991454, 4026046537, 2092823841, 3843589413, 588762946, 3201120103, 490388376, 3668364523, 1331856465, 714917151, 3332770498, 3953322202, 1119284145, 389701966, 19841203, 279359256, 2154072802, 3520518677, 1177165312, 3413175909, 2855839919, 2054150973, 3812689400, 3937032386, 183120664, 1538238349, 1422998930, 2450700661, 2233649402, 3645600498, 1332010287, 3213722001, 3900223002, 4174876127, 255227276, 241752154, 919896928, 3475848964, 3543181050, 646555009, 2659780675, 2989654225, 2823518802, 2299901621, 3259214603, 4127736893, 847572108, 2095656117, 3567001579, 2118804340, 3311843851, 747056621, 1497229373, 3792292943, 2605570869, 1395127771, 639495642, 3684559704, 1144008382, 1598832020, 1079774075, 1604252873, 4013700616, 3685618614, 3561094387, 1671168930, 2156551410, 1245896923, 1641177213, 1431412261, 4051858921, 3964242481, 900846560, 2075088993, 775596786, 2476905916, 2648635760, 1829773870, 4081908499, 1874211396, 2034477267, 3610792957, 1945026204, 1617344457, 3414740698, 2774287287, 4042042561, 1371858782, 3285975299, 3014047142, 219399020, 1811289578, 2546747426, 3794952230, 2616407199, 659178664, 452839981, 644484588, 3618831842, 3555083573, 3842098866, 4083101841, 387129499, 2191512888, 2107001564, 588982144, 2854070442, 3631763639, 1840230311, 265676729, 3701927, 2302123645, 2795520987, 3277278721, 3001424752, 3113094712, 3095452314, 1038685259, 4080521261, 2666218888, 1437157770, 1673503188, 337018274, 3759300102, 3738357700, 733520350, 565853502, 2083195153, 1300455347, 3493801974, 316069680, 2274789976, 3865791379, 1206297504, 319200528, 206937392, 4013686611, 545116722, 477123439, 2249566481, 196414087, 457961193, 1589564583, 3479638366, 1065661106, 179609447, 3213254729, 3901252195, 3676308627, 1010862253, 2517046198, 2037333705, 1881903526, 1094275464, 810687727, 1644041947, 2400545602, 1052834040, 1121106038, 3269988811, 106464388, 549892110, 1753402521, 249202119, 3429841671, 2047330503, 1631675380, 2593138286, 365790248, 672447557, 674660303, 1079278551, 4134822575, 2290315889, 3688356281, 3995073583, 4203056589, 998809636, 4241935872, 2552976229, 1721192811, 485049386, 1275027385, 3322575066, 2572285048, 2371982480, 1866150220, 2965420094, 240673242, 4288898419, 3789682248, 3593329681, 1263196631, 2388104963, 2252298379, 902023350, 3508664743, 597843166, 2522558877, 805716972, 1793963741, 920578445, 274009908, 1595577988, 2801045907, 3625547835, 3709586820, 3460191333, 1905466644, 1464135327, 2406535026, 936355512, 157611015, 2586224737, 1615581096, 650173611, 1226032064, 1266588890, 1054089997, 3475408923, 2714818886, 48253405, 3812068102, 276733063, 979568804, 3184644452, 3972098485, 3891772147, 3290558857, 808736677, 1525153261, 524729090, 373631980, 1245523017, 1976376576, 2354900878, 1406787568, 1053720232, 392716890, 2654583277, 1062155354, 991722775, 3833903838, 653671427, 2938939791, 55240300, 2209622499, 3407446491, 228872433, 2763642956, 3245769557, 1257178620, 4017924808, 2191433338, 2136630027, 1399349192, 3171528095, 268456624, 710861821, 1656520577, 3952909742, 3144570086, 2276605883, 1699441591, 2951651173, 878549598, 819230133, 4053629439, 1810377574, 869207813, 3370189165, 288709678, 494002815, 1841235633, 1706282786, 36196380, 3263724312, 2041112509, 1334451109, 1541506188, 2960231685, 909508816, 1364918519, 3506906261, 4100077784, 2636525026, 3728515895, 1647345277, 1733172084, 2814596348, 1065312351, 1890425055, 2165528352, 205773904, 1574853755, 4016646824, 762370041, 1775261235, 1603862364, 995260862, 3283169324, 2348948442, 1012358937, 2673073448, 316445370, 1311535543, 2726324604, 384006089, 2299262434, 2573795791, 2463632521, 3849012891, 4139899535, 2737753182, 3765117040, 2831778236, 4294105582, 688571532, 2857040204, 3708245388, 1257799323, 944183133, 624)None
+              
+          <div id="iframeResult" style="white-space:nowrap;overflow:auto;">3(2147483648, 3103207354, 496875541, 757866351, 2961889146, 1723687987, 3983212609, 4294563582, 2167504868, 4131303989, 30541827, 1847032101, 4046416791, 886984731, 358944830, 42211964, 3168821458, 1211076867, 1421058748, 1013130355, 2069454997, 3779430210, 2160036842, 2400645795, 3850228842, 3463710532, 2538873538, 1405505158, 3230075244, 245688412, 3898651951, 427677002, 3472227126, 267743468, 2245627246, 4228296001, 3063901127, 2807318768, 391618047, 823239808, 1584318905, 1579453613, 997403543, 1764763131, 1472699256, 2450503703, 261739515, 526827084, 4092732213, 1741873752, 497895734, 3392207753, 3977517516, 2887569271, 2529992687, 1221719415, 3327554247, 113661918, 4241769877, 451015713, 2342033285, 1184277155, 1489314301, 4123384057, 1132920368, 437432721, 913685165, 1925484129, 1090190256, 1383618750, 2330515266, 338100431, 627709766, 2567213954, 568760880, 149137593, 963971225, 912750668, 1743082519, 530115509, 1730692772, 2750879488, 1642212454, 3992049402, 2126902815, 2163010782, 1781522632, 2085203126, 4007264263, 723964955, 1275337085, 1169521472, 3974170437, 2615467417, 2309106671, 537031725, 1630797687, 1553216255, 1399060812, 1112021028, 3288841091, 1508036158, 744192872, 1147369365, 3964491971, 3082686983, 2017113167, 1599927836, 2504510940, 4116660910, 560351097, 1527973632, 3130259314, 3087905315, 2581843632, 1484241468, 3319499724, 3693833991, 3812658967, 2952080689, 2456484788, 285399166, 2866352648, 1929410588, 360250710, 2602635685, 719044063, 3692092492, 3978526775, 2926625573, 2484360426, 4131425768, 2432536633, 2761638805, 3836314513, 356597858, 1278720734, 1649424437, 1861916655, 3224655028, 1508896360, 336881532, 977794399, 2023346979, 2932377126, 2531952665, 2098284188, 4002328022, 3832083721, 3116464025, 3313180663, 4162917240, 802241637, 1980169014, 359925233, 2113670677, 814110330, 2070953523, 1266510215, 2832453410, 3829922378, 3739864126, 1710477925, 2946319458, 3375908310, 933695863, 347880229, 1269302116, 1183913056, 1020900670, 1411857584, 1811427321, 864459895, 916844091, 1482364269, 506057606, 3712935876, 2328269942, 3521169425, 2192820157, 22176442, 1447728893, 3537320730, 3874347462, 3543997871, 760929304, 4232176725, 1273688311, 1126452889, 1508949270, 2834035775, 978319625, 3518745531, 963480, 1844562876, 3608767420, 1922645405, 2427409295, 560090799, 3914228582, 562403051, 2895467506, 4160342092, 2400640403, 1586062546, 1727948911, 636688453, 2632459682, 4147539603, 1060496114, 1392220045, 114715597, 572941511, 4142183733, 1925432945, 335335855, 2692189346, 2753967402, 3408546647, 3220664231, 2188379244, 3968453480, 3722713854, 3880170020, 3834634009, 3652114754, 505217010, 1630964016, 2838375131, 4029856210, 1445668832, 3089413533, 444128611, 881282628, 2528808033, 1832771694, 2481239136, 1307853641, 2907584135, 1524267515, 2947013478, 1600674079, 3204172870, 2966380869, 16786239, 4125290902, 3344548977, 1544440254, 2580789726, 2641271019, 1130936490, 1189045462, 1378453560, 1543102053, 3305989421, 2678474942, 4219470166, 4068803097, 197208581, 540234917, 2959687507, 612179788, 4063006856, 553784112, 2725875649, 2433590363, 3203730746, 993361898, 1031808673, 2203741953, 1033337536, 204726970, 1097816360, 3862589176, 4232402667, 3472709511, 1952882048, 802707612, 3004227299, 3778541798, 2740767108, 724089176, 3689608439, 2595938463, 2077786960, 507860463, 3520064008, 318543445, 1444443937, 837095585, 1503544416, 1215011040, 9072081, 1989078373, 3742746541, 4095454360, 3611196247, 3100793229, 617564546, 2254333491, 3452557022, 4215820403, 2284991454, 4026046537, 2092823841, 3843589413, 588762946, 3201120103, 490388376, 3668364523, 1331856465, 714917151, 3332770498, 3953322202, 1119284145, 389701966, 19841203, 279359256, 2154072802, 3520518677, 1177165312, 3413175909, 2855839919, 2054150973, 3812689400, 3937032386, 183120664, 1538238349, 1422998930, 2450700661, 2233649402, 3645600498, 1332010287, 3213722001, 3900223002, 4174876127, 255227276, 241752154, 919896928, 3475848964, 3543181050, 646555009, 2659780675, 2989654225, 2823518802, 2299901621, 3259214603, 4127736893, 847572108, 2095656117, 3567001579, 2118804340, 3311843851, 747056621, 1497229373, 3792292943, 2605570869, 1395127771, 639495642, 3684559704, 1144008382, 1598832020, 1079774075, 1604252873, 4013700616, 3685618614, 3561094387, 1671168930, 2156551410, 1245896923, 1641177213, 1431412261, 4051858921, 3964242481, 900846560, 2075088993, 775596786, 2476905916, 2648635760, 1829773870, 4081908499, 1874211396, 2034477267, 3610792957, 1945026204, 1617344457, 3414740698, 2774287287, 4042042561, 1371858782, 3285975299, 3014047142, 219399020, 1811289578, 2546747426, 3794952230, 2616407199, 659178664, 452839981, 644484588, 3618831842, 3555083573, 3842098866, 4083101841, 387129499, 2191512888, 2107001564, 588982144, 2854070442, 3631763639, 1840230311, 265676729, 3701927, 2302123645, 2795520987, 3277278721, 3001424752, 3113094712, 3095452314, 1038685259, 4080521261, 2666218888, 1437157770, 1673503188, 337018274, 3759300102, 3738357700, 733520350, 565853502, 2083195153, 1300455347, 3493801974, 316069680, 2274789976, 3865791379, 1206297504, 319200528, 206937392, 4013686611, 545116722, 477123439, 2249566481, 196414087, 457961193, 1589564583, 3479638366, 1065661106, 179609447, 3213254729, 3901252195, 3676308627, 1010862253, 2517046198, 2037333705, 1881903526, 1094275464, 810687727, 1644041947, 2400545602, 1052834040, 1121106038, 3269988811, 106464388, 549892110, 1753402521, 249202119, 3429841671, 2047330503, 1631675380, 2593138286, 365790248, 672447557, 674660303, 1079278551, 4134822575, 2290315889, 3688356281, 3995073583, 4203056589, 998809636, 4241935872, 2552976229, 1721192811, 485049386, 1275027385, 3322575066, 2572285048, 2371982480, 1866150220, 2965420094, 240673242, 4288898419, 3789682248, 3593329681, 1263196631, 2388104963, 2252298379, 902023350, 3508664743, 597843166, 2522558877, 805716972, 1793963741, 920578445, 274009908, 1595577988, 2801045907, 3625547835, 3709586820, 3460191333, 1905466644, 1464135327, 2406535026, 936355512, 157611015, 2586224737, 1615581096, 650173611, 1226032064, 1266588890, 1054089997, 3475408923, 2714818886, 48253405, 3812068102, 276733063, 979568804, 3184644452, 3972098485, 3891772147, 3290558857, 808736677, 1525153261, 524729090, 373631980, 1245523017, 1976376576, 2354900878, 1406787568, 1053720232, 392716890, 2654583277, 1062155354, 991722775, 3833903838, 653671427, 2938939791, 55240300, 2209622499, 3407446491, 228872433, 2763642956, 3245769557, 1257178620, 4017924808, 2191433338, 2136630027, 1399349192, 3171528095, 268456624, 710861821, 1656520577, 3952909742, 3144570086, 2276605883, 1699441591, 2951651173, 878549598, 819230133, 4053629439, 1810377574, 869207813, 3370189165, 288709678, 494002815, 1841235633, 1706282786, 36196380, 3263724312, 2041112509, 1334451109, 1541506188, 2960231685, 909508816, 1364918519, 3506906261, 4100077784, 2636525026, 3728515895, 1647345277, 1733172084, 2814596348, 1065312351, 1890425055, 2165528352, 205773904, 1574853755, 4016646824, 762370041, 1775261235, 1603862364, 995260862, 3283169324, 2348948442, 1012358937, 2673073448, 316445370, 1311535543, 2726324604, 384006089, 2299262434, 2573795791, 2463632521, 3849012891, 4139899535, 2737753182, 3765117040, 2831778236, 4294105582, 688571532, 2857040204, 3708245388, 1257799323, 944183133, 624)None
 </div>
+                  
       </div>
     </div>
   </div>
+  
 </div>
 <script>
 
 function submitTryit(n) {
-  if (window.editor) {
-    window.editor.save();
-  }
+  
+    if (window.editor) {
+      window.editor.save();
+    }
+  
   var text = document.getElementById("textareaCode").value;
+
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
   ifr.setAttribute("name", "iframeResult");  
+
   document.getElementById("iframewrapper").innerHTML = "";
   document.getElementById("iframewrapper").appendChild(ifr);
+
   document.getElementById("iframeResult").addEventListener("load", hideSpinner);
   displaySpinner();
   var t=text;
@@ -456,12 +683,16 @@ function submitTryit(n) {
     t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
     pos=t.search(/script/i);
   }
+    
   document.getElementById("code").value=t;
-  document.getElementById("codeForm").action = "https://try.w3schools.com/try_python.php?x=" + Math.random();
+  
+    document.getElementById("codeForm").action = "https://try.w3schools.com/try_python.php?x=" + Math.random();  
+  
   document.getElementById('codeForm').method = "post";
   document.getElementById('codeForm').acceptCharset = "utf-8";
   document.getElementById('codeForm').target = "iframeResult";
   document.getElementById("codeForm").submit();
+    
 }
 
 function hideSpinner() {
@@ -487,7 +718,6 @@ function displaySpinner() {
   top = top - h
   r.style.top = top + "px";
 }
-
 
 var currentStack=true;
 if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
@@ -532,25 +762,6 @@ function restack(horizontal) {
     fixDragBtn();
     showFrameSize();
 }
-function retheme() {
-  var cc = document.body.className;
-  if (cc.indexOf("darktheme") > -1) {
-    document.body.className = cc.replace("darktheme", "");
-    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
-    localStorage.setItem("preferredmode", "light");
-  } else {
-    document.body.className += " darktheme";
-    if (opener) {opener.document.body.className += " darktheme";}
-    localStorage.setItem("preferredmode", "dark");
-  }
-}
-(
-function setThemeMode() {
-  var x = localStorage.getItem("preferredmode");
-  if (x == "dark") {
-    document.body.className += " darktheme";
-  }
-})();
 function showFrameSize() {
   var t;
   var width, height;
@@ -644,19 +855,48 @@ if (window.addEventListener) {
   window.addEventListener("load", showFrameSize);
 }
 
-
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
 function colorcoding() {
   var ua = navigator.userAgent;
   //Opera Mini refreshes the page when trying to edit the textarea.
   if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
   window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
-    mode: "text/x-python",
-    lineWrapping: true,
-    smartIndent: false
+  mode: "text/x-python",
+  lineWrapping: true,
+  smartIndent: false,
+  htmlMode: true,
+  autocorrect: false,      
+  addModeClass: true,
+
+  
+    //mode: "text/x-python",
+    //lineWrapping: true,
+    //smartIndent: false
+  
   });
 //  window.editor.on("change", function () {window.editor.save();});
 }
+
 colorcoding();
+
 
 function w3_getStyleValue(elmnt,style) {
     if (window.getComputedStyle) {
@@ -696,11 +936,12 @@ function openMenu() {
 window.onclick = function(event) {
     if (event.target == document.getElementById("menuOverlay")) {
         openMenu();
-    } 
+    }
 }
 uic_r_e()
 </script>
+
 </body>
 
-<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_random_getstate by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 21:19:22 GMT -->
+<!-- Mirrored from www.w3schools.com/python/trypython.asp?filename=demo_ref_random_getstate by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:43:18 GMT -->
 </html>

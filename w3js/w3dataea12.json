@@ -1,1 +1,6 @@
-{"error" : "No such file or directory: appml_config.php."}
+<br />
+<b>Fatal error</b>:  Uncaught Error: Class &quot;mysqli&quot; not found in C:\webs\w3schools\w3js\w3data.php:270
+Stack trace:
+#0 C:\webs\w3schools\w3js\w3data.php(35): app_getDbConnection()
+#1 {main}
+  thrown in <b>C:\webs\w3schools\w3js\w3data.php</b> on line <b>270</b><br />

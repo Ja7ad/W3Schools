@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/django/demo_filters_timesince2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:58:03 GMT -->
+<body>
+
+<h1>
+<script>
+today = new Date()
+past = new Date(2004,10,18)
+var diff = new Date(today.getTime() - past.getTime());
+var years = diff.getUTCFullYear() - 1970;
+var months = diff.getUTCMonth();
+var message = years + " years, " + months + " months"
+document.write(message);
+</script>
+</h1>
+
+<p>In views.py you can see what the mybirthdate variable looks like.</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/django/demo_filters_timesince2.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:58:03 GMT -->
+</html>    

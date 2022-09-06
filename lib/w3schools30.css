@@ -891,6 +891,10 @@ hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
 .phonebr {display:none;}
 @media screen and (max-width: 475px) {.phonebr {display:initial;}}
 
+table.gstl_50 {/*google search suggestions*/
+  ddcolor:#000;
+}
+
 /*NYTT:*/
 #main {
   padding:16px 32px 32px 32px;
@@ -1091,6 +1095,11 @@ a.btnsmall {
   color: black!important;
 } 
 
+.ws-hover-yellow:hover {
+  background-color:#fff080!important;
+  color: black!important;  
+} 
+
 .ws-green {
   background-color:#04AA6D!important;
   color: white!important;
@@ -1122,6 +1131,11 @@ a.btnsmall {
 .ws-pink {
   background-color:#FFC0C7!important;
   color: black!important;
+} 
+
+.ws-hover-pink:hover {
+  background-color:#ffb3bb!important;
+  color: black!important;  
 } 
 
 .ws-light-pink {

@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '1';exheadings[0] = 'Syntax';exnames[1] = 'comments';excounts[1] = '1';exheadings[1] = 'Comments';exnames[2] = 'variables';excounts[2] = '5';exheadings[2] = 'Variables';exnames[3] = 'data_types';excounts[3] = '4';exheadings[3] = 'Data Types';exnames[4] = 'user_input';excounts[4] = '2';exheadings[4] = 'User Input';exnames[5] = 'operators';excounts[5] = '4';exheadings[5] = 'Operators';exnames[6] = 'math';excounts[6] = '3';exheadings[6] = 'Math';exnames[7] = 'strings';excounts[7] = '6';exheadings[7] = 'Strings';exnames[8] = 'booleans';excounts[8] = '2';exheadings[8] = 'Booleans';exnames[9] = 'conditions';excounts[9] = '5';exheadings[9] = 'If...Else';exActiveNo = 9;exnames[10] = 'switch';excounts[10] = '2';exheadings[10] = 'Switch';exnames[11] = 'while_loop';excounts[11] = '5';exheadings[11] = 'Loops';exnames[12] = 'arrays';excounts[12] = '5';exheadings[12] = 'Arrays';exnames[13] = 'methods';excounts[13] = '4';exheadings[13] = 'Methods';exnames[14] = 'classes';excounts[14] = '7';exheadings[14] = 'Classes/Objects';exnames[15] = 'exceptions';excounts[15] = '2';exheadings[15] = 'Exceptions';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_conditions2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:26:28 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_conditions2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:58:05 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -11,54 +11,29 @@
 <link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
 <link rel="stylesheet" href="../lib/w3schools30.css">
 <link rel="stylesheet" href="../lib/codemirror.css">
+<!-- Google Tag Manager -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-3855518-1', 'auto');
-  ga('require', 'displayfeatures');
-  ga('require', 'GTM-WJ88MZ5');
-  ga('send', 'pageview');
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
 </script>
-<script src="../lib/my-learning21cd.js?v=1.0.9"></script>
+<!-- End Google Tag Manager -->
+<script src="../lib/my-learning008c.js?v=1.0.10"></script>
 
-<script src="../lib/uic2c70.js?v=1.0.3"></script>
+<script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
 
   }
 }
@@ -79,8 +54,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        uic_r_n();
+        
+        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
 }
@@ -1529,7 +1506,11 @@ function userAddOnePoint(n) {
     <meta property="og:image:height" content="228">
 </head>
 <body class="w3-white">
-    <!-- Load Facebook SDK for JavaScript -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -1548,9 +1529,9 @@ function userAddOnePoint(n) {
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>uic_r_o();</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1605,15 +1586,15 @@ if (x == y)
   <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
   
-  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();ga('send', 'event', 'checkExercise', 'click');">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();ga('send', 'event', 'showAnswerExercise', 'click');">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();ga('send', 'event', 'hideAnswerExercise', 'click');">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" style="xpadding:20px;" type="button" onclick="checkassignmentcode();uic_r_p();">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
@@ -1826,7 +1807,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-    
+    uic_r_p();
   }
 }
 
@@ -2333,5 +2314,5 @@ function setThemeMode() {
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_conditions2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 20:26:28 GMT -->
+<!-- Mirrored from www.w3schools.com/cs/exercise.asp?filename=exercise_conditions2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:58:05 GMT -->
 </html>

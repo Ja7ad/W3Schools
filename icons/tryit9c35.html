@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-insert_comment by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 18:38:33 GMT -->
+<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-insert_comment by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 13:23:42 GMT -->
 <head>
-<title>Tryit Editor v3.7</title>
+<title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
@@ -13,22 +13,25 @@
 <meta property="og:image:height" content="228">
 <meta property="og:title" content="W3Schools online HTML editor">
 <meta property="og:description" content="The W3Schools online code editor allows you to edit code and view the result in your browser">
-<link rel="preload" href="../lib/fonts/montserrat-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../lib/w3schools30.css">
-<link rel="stylesheet" href="../lib/codemirror.css">
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-3855518-1', 'auto');
-ga('require', 'displayfeatures');
-ga('require', 'GTM-WJ88MZ5');
-ga('send', 'pageview');
-</script>
+<link rel='stylesheet' href='../lib/codemirror.css'>
+<script src='../lib/codemirror.js'></script>
+<script src='../lib/codemirror_jsx.js'></script>
 
-<script src="../lib/uic2c70.js?v=1.0.3"></script>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
+</script>
+<!-- End Google Tag Manager -->
+
+<script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
@@ -86,7 +89,7 @@ body {
   font-size:100%;
 }
 .trytopnav {
-  height:40px;
+  height:48px;
   overflow:hidden;
   min-width:380px;
   position:absolute;
@@ -98,7 +101,7 @@ body {
 .topnav-icons {
   margin-right:8px;
 }
-.trytopnav a {
+.trytopnav a,.trytopnav button {
   color:#999999;
 }
 .w3-bar .w3-bar-item:hover {
@@ -146,7 +149,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
-#textarea, #iframe {
+#textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
   padding-bottom:10px;
@@ -159,6 +162,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframe {
   padding-left:5px;
   padding-right:10px;  
+  
 }
 #textareawrapper {
   width:100%;
@@ -173,8 +177,9 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
   box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
 }
-#textareaCode {
+#textareaCode, #textareaCode2 {
   background-color: #ffffff;
   font-family: consolas,Menlo,"courier new",monospace;
   font-size:15px;
@@ -185,17 +190,57 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   border:none;
   line-height:normal;    
 }
+  .localhostcontainer {
+    position:absolute;
+    width:auto;
+    right:0;
+    left:0;
+    z-index:2;
+    padding:4px 12px;
+    border-bottom:1px solid #d9d9d9;
+    background-color:#E7E9EB;
+  }
+  .localhostdiv {
+    overflow:hidden;
+    font-family:arial;
+    border:1px solid #d9d9d9;
+    background-color:#fff;
+    font-size:14px;
+    padding-left:10px;
+  }
+  #filenamecontainer {
+    position:absolute;
+    text-align:center;
+    z-index:4;
+    width:100%;
+  }
+  #filenamecontainer span {
+    opacity:0.9;
+    padding:1px 6px;
+    font-family:Consolas;
+    background-color:#E7E9EB;
+    font-size:16px;
+  }
+  body.darktheme #filenamecontainer span {
+    background-color:#555555;
+    color:#E7E9EB;
+  }
+
 .CodeMirror.cm-s-default {
   line-height:normal;
   padding: 4px;
+  
   height:100%;
   width:100%;
 }
+
 #iframeResult, #iframeSource {
   background-color: #ffffff;
+  
   height:100%;
   width:100%;  
 }
+
 #stackV {background-color:#999999;}
 #stackV:hover {background-color:#BBBBBB !important;}
 #stackV.horizontal {background-color:transparent;}
@@ -337,63 +382,45 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   #tryhome       {display:block;}
   .trytopnav     {min-width:310px;}  
 }
+
 #iframewrapper {
 	
 }
+  .tabs-container {
+  }
+  .tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:#E7E9EB;
+    
+  }
+  .tab {
+    padding: 5px 10px;
+    background: #ddd;
+    width: fit-content;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;            
+  
+    }
+  .tab.active {
+    background: #fff;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  .tab-pane.active { 
+    display: block;
+  }
 
-.trytopnav {
-  height:48px!important;
-}
 .fa {
   padding: 10px 10px!important;
 }
-a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
+a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-icons.fa-adjust {
     font-size: 28px!important;
 }
-
-
-
-
-/*OLD
-.darktheme #breadcrumb li {
-  color:#fff;
-}
-.darktheme #breadcrumb a {
-  background:#616161;
-  color: #ddd;
-}	
-.darktheme #breadcrumb a:after {
-  border-left: 12px solid #616161;
-}
-.darktheme #breadcrumb a:before {
-  border-left: 12px solid rgb(40, 44, 52);
-}
-.darktheme .currentcrumb {
-  color:#ddd;
-}
-
-body.darktheme {
-  background-color:rgb(40, 44, 52);
-}
-body.darktheme #tryitLeaderboard{
-  background-color:rgb(40, 44, 52);
-}
-body.darktheme .trytopnav{
-  background-color:#616161;
-  color:#dddddd;
-}
-body.darktheme #container {
-  background-color:#616161;
-}
-body.darktheme .trytopnav a {
-  color:#dddddd;
-}
-body.darktheme ::-webkit-scrollbar {width:12px;height:3px;}
-body.darktheme ::-webkit-scrollbar-track-piece {background-color:#000;}
-body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161;}
-body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
-*/
-
 .darktheme #breadcrumb li {
   color:#fff;
 }
@@ -434,12 +461,70 @@ body.darktheme #container {
 body.darktheme .trytopnav a {
   color:#dddddd;
 }
+body.darktheme #textareaCode {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+}
+
+body.darktheme #textareawrapper {
+  background-color:rgb(21,32,43);
+}
+body.darktheme .tabs {
+    background-color:#38444d;
+  }
+body.darktheme .tab {
+    background: rgb(21,32,43);
+    color:#fff;
+    opacity:0.5;
+    }
+body.darktheme .tab.active {
+    background: rgb(21,32,43);
+    color:#fff;    
+    opacity:1;
+  }
+
 body.darktheme ::-webkit-scrollbar {width:12px;height:3px;}
 body.darktheme ::-webkit-scrollbar-track-piece {background-color:#000;}
 body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161; background-color:#38444d;}
 body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
 
 
+#file1filetab, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+}
+#file1filetab {
+  width:auto;
+  left:0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;            
+}
+#resttab {
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+.tabitem {
+  background-color:#eaeaea;
+}
+.tabitem.tabselected{ 
+  background-color:#fff;
+}
+.darktheme .tabitem {
+  background-color:#444;
+}
+.darktheme .tabitem.tabselected{
+  background-color:rgb(21,32,43);
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+.darktheme #file1filetab {
+  border-right:1px solid rgb(21,32,43);
+}
 
 </style>
 <!--[if lt IE 8]>
@@ -447,12 +532,16 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 #textareacontainer, #iframecontainer {width:48%;}
 #container {height:500px;}
 #textarea, #iframe {width:90%;height:450px;}
-#textareaCode, #iframeResult {height:450px;}
+#textareaCode, #textareaCode2, #iframeResult, .codewindow {height:450px;}
 .stack {display:none;}
 </style>
 <![endif]-->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
@@ -467,11 +556,15 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 <div class="w3-bar" style="overflow:auto">
   <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;"></a>
+
   <a href="javascript:void(0);" onclick="spaceIt.showDialog()" title="Save code" class="w3-button w3-bar-item topnav-icons fa fa-save" style="margin-top:-2px;"></a>
+
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
-  <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');uic_r_p();">Run &#10095;</button>
-  <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Get your<span class="w3-hide-medium"> own</span> website</a>
+
+  <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" onclick="submitTryit(1);uic_r_p();">Run &#10095;</button>
+
+  <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank">Get your<span class="w3-hide-medium"> own</span> website</a>
   <!--<span class="w3-right w3-hide-small xxw3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>-->
   <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
 </div>
@@ -486,7 +579,9 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 <span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
   <div class="w3-bar-block">
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+
     <a class="w3-bar-item w3-button" href="javascript:void(0);" title="Save" onclick="openMenu();spaceIt.showDialog()"><i class="fa fa-save" style="font-size:26px;margin-right:10px;"></i><span style="position:relative;top:-4px;left:2px;">Save Code</span></a>
+
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
     <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
   </div>
@@ -499,7 +594,8 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
-        <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
+        
+            <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
 <html>
 <head>
 <title>Google Icons</title>
@@ -522,88 +618,84 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-insert_comment by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 18:38:33 GMT -->
+<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-insert_comment by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 13:23:42 GMT -->
 </html>
 </textarea>
-        <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
-          <input type="hidden" name="code" id="code" />
-        </form>
+            <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+              <input type="hidden" name="code" id="code" />
+            </form>
+                  
        </div>
     </div>
   </div>
   <div id="iframecontainer">
     <div id="iframe">
-      <div id="iframewrapper"></div>
+      
+      <div id="iframewrapper">
+                
+      </div>
     </div>
   </div>
+  
 </div>
-<style>
-#backtotutcontainer {
-  position:absolute;
-  bottom:0;
-  background-color:#F1F1F1;
-  width:100%;
-  height:50px;
-  padding-left:10px;
-  color:#555;
-}
-.w3-btn:hover.w3-blue, .w3-btn:active.w3-blue {
-  background-color: #0d8bf2!important;
-  color: #fff!important;
-  box-shadow: none;
-}
-body.darktheme #backtotutcontainer {
-  background-color:#616161;
-  color:#ddd;
-}
-</style>
-
-<script src="../lib/codemirror.js"></script>
-<script src="../lib/codemirror_jsx.js"></script>
 <script>
 submitTryit()
-
 function submitTryit(n) {
-  if (window.editor) {
-    window.editor.save();
-  }
+  
+    if (window.editor) {
+      window.editor.save();
+    }
+  
   var text = document.getElementById("textareaCode").value;
+
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
   ifr.setAttribute("name", "iframeResult");  
+
   ifr.setAttribute("allowfullscreen", "true");  
+
   document.getElementById("iframewrapper").innerHTML = "";
   document.getElementById("iframewrapper").appendChild(ifr);
-  if (fileID != "") {
-    var t=text;
-    t=t.replace(/=/gi,"w3equalsign");
-    t=t.replace(/\+/gi,"w3plussign");    
-    var pos=t.search(/script/i)
-    while (pos>0) {
-      t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
-	    pos=t.search(/script/i);
-    }
-    document.getElementById("code").value=t;
-    document.getElementById("codeForm").action = "https://tryit.w3schools.com/tryit_view.php?x=" + Math.random();
-    document.getElementById('codeForm').method = "post";
-    document.getElementById('codeForm').acceptCharset = "utf-8";
-    document.getElementById('codeForm').target = "iframeResult";
-    document.getElementById("codeForm").submit();
-  } else {
-    var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
-    ifrw.document.open();
-    ifrw.document.write(text);  
-    ifrw.document.close();
-    //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
-    //(and back to false to prevent the content from being editable)
-    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
-    if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
-      ifrw.document.body.contentEditable = true;
-      ifrw.document.body.contentEditable = false;
-    }
+    
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+  //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+  //(and back to false to prevent the content from being editable)
+  //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+  if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+    ifrw.document.body.contentEditable = true;
+    ifrw.document.body.contentEditable = false;
   }
+    
 }
+
+function hideSpinner() {
+  document.getElementById("runloadercontainer").style.display = "none";
+}
+function displaySpinner() {
+  var i, c, w, h, r, top;
+  i = document.getElementById("iframeResult");
+  w = w3_getStyleValue(i, "width");
+  h = w3_getStyleValue(i, "height");
+  c = document.getElementById("runloadercontainer");
+  c.style.width = w;
+  c.style.height = h;
+  c.style.display = "block";
+  w = Number(w.replace("px", "")) / 5;
+  r = document.getElementById("runloader");
+  r.style.width = w + "px";
+  r.style.height = w + "px";
+  h = w3_getStyleValue(r, "height");
+  h = Number(h.replace("px", "")) / 2;
+  top = w3_getStyleValue(c, "height");
+  top = Number(top.replace("px", "")) / 2;
+  top = top - h
+  r.style.top = top + "px";
+}
+
 var currentStack=true;
 if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
 function restack(horizontal) {
@@ -764,15 +856,26 @@ function colorcoding() {
   //Opera Mini refreshes the page when trying to edit the textarea.
   if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
   window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
-    mode: "text/html",
-    htmlMode: true,
-    lineWrapping: true,
-    smartIndent: false,
-    addModeClass: true
+  mode: "text/html",
+  lineWrapping: true,
+  smartIndent: false,
+  htmlMode: true,
+  autocorrect: false,      
+  addModeClass: true,
+
+    
+    //mode: "text/html",
+    //htmlMode: true,
+    //lineWrapping: true,
+    //smartIndent: false,
+    //addModeClass: true
+  
   });
 //  window.editor.on("change", function () {window.editor.save();});
 }
+
 colorcoding();
+
 
 function w3_getStyleValue(elmnt,style) {
     if (window.getComputedStyle) {
@@ -816,7 +919,9 @@ window.onclick = function(event) {
 }
 uic_r_e()
 </script>
-<script src="../lib/spaceit.js"></script>
+
+<script src="../lib/spaceit0ff5.js?v=1.0.2"></script>
 <link rel="stylesheet" type="text/css" href="../lib/spaceit.css" />
+
 </body>
 </html>
