@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'constants';excounts[0] = '5';exheadings[0] = 'Constants';exnames[1] = 'optimizers';excounts[1] = '3';exheadings[1] = 'Optimizers';exnames[2] = 'sparse_data';excounts[2] = '3';exheadings[2] = 'Sparse Data';exActiveNo = 2;exnames[3] = 'graphs';excounts[3] = '2';exheadings[3] = 'Graphs';exnames[4] = 'spatial_data';excounts[4] = '2';exheadings[4] = 'Spatial Data';exnames[5] = 'interpolation';excounts[5] = '1';exheadings[5] = 'Interpolation';exnames[6] = 'matlab_arrays';excounts[6] = '2';exheadings[6] = 'Matlab Arrays';exnames[7] = 'statistical_significance_tests';excounts[7] = '2';exheadings[7] = 'Significance Tests';</script><html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/python/scipy/exercise.php?filename=exercise_sparse_data3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:44:06 GMT -->
+<!-- Mirrored from www.w3schools.com/python/scipy/exercise.php?filename=exercise_sparse_data3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:04:04 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Exercise v3.0</title>
@@ -21,7 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
 </script>
 <!-- End Google Tag Manager -->
-<script src="../../lib/my-learning008c.js?v=1.0.10"></script>
+<script src="../../lib/common-depse209.js?v=1.0.0"></script>
+<script src="../../lib/user-session0ff5.js?v=1.0.2"></script>
+<script src="../../lib/my-learning248b.js?v=1.0.11"></script>
 <script src="../../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
@@ -109,6 +111,8 @@ if (exsection == "JS") {
     storageBlip = "go_";    
 } else if (exsection == "TYPESCRIPT") {
     storageBlip = "typescript_";       
+} else if (exsection == "MONGODB") {
+    storageBlip = "mongodb_";       
 } else if (exsection == "AWS") {
     storageBlip = "aws_";
 } else if (exsection == "AWSSL") {
@@ -159,42 +163,38 @@ function hideCorrectAnswer() {
 }
 
 function setAnswerObj(nam, val, all) {
+  var storeLocally = true;
+
   if (userLoggedOn) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4) {
-        if (this.status == 200) {
-          if (this.responseText == "NOTLOGGEDIN") {
-            localStorage.setItem(nam, val);
-          } else {
-            retval = this.responseText;
-            retval = JSON.parse(retval);
-            //alert(retval["recordcount"])
-            checkCompletedExercises(0);
-          }
-        } else {
+    var reqDataStr = "n=" + nam + "&v=" + val + "&a=" + all;
+
+    MyLearning.makePostRequest(
+      MyLearning.getUrl('api.exercise.html'),
+      reqDataStr,
+      function(reqRes) {
+        var storeLocally = true;
+
+        if (
+          reqRes.error.code === '0'
+          && reqRes.status === 200
+          && reqRes.dataStr !== 'NOTLOGGEDIN'
+        ) {
+          checkCompletedExercises(0);
+          storeLocally = false;
+        }
+
+        if (storeLocally) {
           localStorage.setItem(nam, val);
         }
       }
-    };
-    xhttp.open("POST.html", MyLearning.getUrl('api.exercise.html'), true);
-//  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
-    xhttp.withCredentials = true;
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
-    xhttp.send(reqData);
-
-    if (MyLearning._version === '2') { // send a copy to mylv1
-      MyLearning.makeLegacyPostRequest(
-        MyLearning.getUrl('api.exercise.html', '1.5L'),
-        reqData
-      );
-    }
+    );
   } else {
     localStorage.setItem(nam, val);
   }
+
   answerObj[nam] = val;
 }
+
 function checkCode(jsonObj) {
     var func, cc, i, l, errs = [], bptxt = "", feilmargin = 0, score_arr = [];
     document.getElementById("codeCheckWarningText").innerHTML = "";
@@ -1290,23 +1290,43 @@ function constructAnswerObj() {
     return false;
   }
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    var i, aa, l, retval;
-    if (this.readyState == 4) {
-      if (this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          userLoggedOn = false;
-          getFromLocalStorage();
+  var reqDataStr = "t=" + storageBlip;
+
+  MyLearning.makePostRequest(
+    MyLearning.getUrl('api.exercise.get'),
+    reqDataStr,
+    function(reqRes) {
+      if (
+        reqRes.error.code === '0'
+        && reqRes.status === 200
+        && reqRes.dataStr !== 'NOTLOGGEDIN'
+      ) {
+        var i, aa, l, retval;
+
+        userLoggedOn = true;
+
+        retval = JSON.parse(reqRes.dataStr);
+
+        if (retval["recordcount"] == 0) {
+          //getFromLocalStorage();
+          for (i = 0; i < exnames.length; i++) {
+            numberofexercises += Number(excounts[i]);
+            aa = "";
+            l = excounts[i];
+            for (j = 0; j < l; j++) {
+              if (j > 0) {aa += ","; }
+              aa += "0";
+            }
+            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+          }
         } else {
-          userLoggedOn = true;
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          if (retval["recordcount"] == 0) {
-            //getFromLocalStorage();
-            for (i = 0; i < exnames.length; i++) {
-              numberofexercises += Number(excounts[i]);
-              aa = "";
+          if (retval["exscore"]) userscore = retval["exscore"];
+          for (i = 0; i < exnames.length; i++) {
+            aa = "";
+            numberofexercises += Number(excounts[i]);
+            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+            } else {
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1314,39 +1334,18 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          } else {
-            if (retval["exscore"]) userscore = retval["exscore"];
-            for (i = 0; i < exnames.length; i++) {
-              aa = "";
-              numberofexercises += Number(excounts[i]);
-              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-              } else {
-                l = excounts[i];
-                for (j = 0; j < l; j++) {
-                  if (j > 0) {aa += ","; }
-                  aa += "0";
-                }
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-              }
-            }
-          }      
-          drawUserProgress();  
+          }
         }
+
+        drawUserProgress();
+      } else {
+        userLoggedOn = false;
+        getFromLocalStorage();
       }
-      // else {
-      //   userLoggedOn = false;
-      //   getFromLocalStorage();
-      // }
 
       w3LoadExercise();
     }
-  };
-  xhttp.open("POST.html", MyLearning.getUrl('api.exercise.get'), true);
-//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj2.php", true);  
-  xhttp.withCredentials = true;
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("t=" + storageBlip);
+  );
 }
 
 function getFromLocalStorage() {
@@ -2249,5 +2248,5 @@ uic_r_r()
 <script src="../../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/python/scipy/exercise.php?filename=exercise_sparse_data3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:44:06 GMT -->
+<!-- Mirrored from www.w3schools.com/python/scipy/exercise.php?filename=exercise_sparse_data3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:04:04 GMT -->
 </html>

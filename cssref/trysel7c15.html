@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cssref/trysel.asp?selector=p:lang(it) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:18:06 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/trysel.php?selector=p:lang(it) by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,22 +15,20 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
 </script>
 <!-- End Google Tag Manager -->
-
-<script src="../lib/uicf700.js?v=1.0.1"></script>
+<script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
-
 k42 = true;
-
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-
       "activeAdUnits": ["try_it_leaderboard"]
-
   }
 }
 uic_r_a()
@@ -50,13 +48,18 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
                 adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
               }
          
     }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();   
 }
+var fileID = "";
 </script>
 <script src="../jquery/jquery.js"></script>
 <script>
@@ -154,7 +157,7 @@ w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the second &lt;
 w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the second &lt;li&gt; element of their parent, counting from the &lt;li&gt; element.');
 w3SelDescriptions.push('Selects all &lt;b&gt; elements that are the only child of their parent.');
 w3SelDescriptions.push('Selects all &lt;h3&gt; elements that are the only child of its type, of their parent.');
-w3SelDescriptions.push('Selects the document’s root element.');
+w3SelDescriptions.push('Selects the documentï¿½s root element.');
 
 function w3jQuerySelectorLoad() {
  var l = w3Sels.length, x = "";
@@ -162,11 +165,9 @@ function w3jQuerySelectorLoad() {
   x = x + "<div id='seldiv_" + w3Sels[i] + "' onclick='clickSelOpt(\"" + w3Sels[i] + "\",this);'>" + w3Sels[i] + "</div>";
  }
  document.getElementById("selectorOptions").innerHTML = x;
- 
-   clickSelOpt('p:lang(it)');
-  
-}
+  clickSelOpt('ul + p');
 
+}
 function clickSelOpt(sel) {
  var l = w3Sels.length, ll, x, y, z, patt, arrPos, i, cc, dd;
  currentSelector = sel;
@@ -497,14 +498,13 @@ font-weight:normal;
 <noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id='tryitLeaderboard' style="background-color:#ffffff">
+<div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
-
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
   <div id="adngin-try_it_leaderboard-0"></div>
   <!-- adspace tryit-->
- 
 </div>
+
 <div class="container">
   <div class="textareacontainer">
     <div class="textarea">
@@ -673,5 +673,5 @@ uic_r_e()
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/cssref/trysel.asp?selector=p:lang(it) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:18:06 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/trysel.php?selector=p:lang(it) by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:45 GMT -->
 </html>

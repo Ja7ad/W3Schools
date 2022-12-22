@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-failed by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:31:09 GMT -->
+<!-- Mirrored from www.w3schools.com/icons/tryit.asp?filename=tryicons_google-failed by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 16:50:58 GMT -->
 <head>
 <title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
@@ -73,7 +73,9 @@ function browserResize() {
       restack(window.innerHeight > window.innerWidth);
     }
     fixDragBtn();
-    showFrameSize();    
+    showFrameSize();  
+  
+      
 }
 var fileID = "";
 </script>
@@ -149,6 +151,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
+
 #textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
@@ -162,21 +165,28 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframe {
   padding-left:5px;
   padding-right:10px;  
+  position:relative;  
   
 }
 #textareawrapper {
   width:100%;
   height:100%;
+  
+  overflow:auto;
+  
   background-color: #ffffff;
   position:relative;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
 }
 #iframewrapper {
   width:100%;
   height:100%;
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   
 }
 #textareaCode, #textareaCode2 {
@@ -190,6 +200,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   border:none;
   line-height:normal;    
 }
+/*
   .localhostcontainer {
     position:absolute;
     width:auto;
@@ -208,6 +219,88 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
     font-size:14px;
     padding-left:10px;
   }
+*/
+
+.localhostoutercontainer {
+  position: absolute;
+  width: auto;
+  left:5px;
+  right:10px;
+  background-color: #E7E9EB;
+  height: 30px;
+  z-index: 9;
+}
+.localhostoutercontainer.horizontal {
+  left:10px;
+}
+.localhostcontainer {
+  position:relative;
+  width:auto;
+  right:0;
+  left:0;
+  z-index:2;
+  xpadding:6px 12px;
+  xxborder-bottom:1px solid #d9d9d9;
+  background-color:#F1F1F1;
+  background-color:#38444d;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+  overflow:hidden;
+  padding-top:4px;
+}
+.localhostdiv {
+  overflow:hidden;
+  font-family:arial;
+  color:#000;
+  background-color:#fff;
+  font-size:15px;
+  padding-left:10px;
+  border-radius:20px;
+  width:60%;
+  float:left;
+  font-family: consolas,Menlo,"courier new",monospace;  
+}
+.localhostbuttoncontainer {
+  width:20%;
+  min-width:100px;
+  color:#ffc107;
+  float:left;  
+  font-size:16px;
+  overflow:auto;
+}
+div.localhostbuttoncontainer span{
+  display:inline-block;
+  color:#ffc107;
+  position:relative;
+  padding-bottom:4px;
+  padding-left:2px;  
+}
+
+div.localhostbuttoncontainer span:first-child{
+  color:#dc3545;
+  padding-left:12px;
+
+}
+div.localhostbuttoncontainer span:last-child{
+  color:#04AA6D;
+  padding-left:2px;    
+}
+
+body.darktheme .localhostoutercontainer {
+  background-color: #38444d;
+}
+body.darktheme .localhostcontainer {
+  background-color:rgb(21,32,43)
+}
+
+body.darktheme .localhostdiv {
+  border:1px solid #595959;
+  background-color:#ffffff;
+}
+
+/**/
+
+
   #filenamecontainer {
     position:absolute;
     text-align:center;
@@ -237,6 +330,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframeResult, #iframeSource {
   background-color: #ffffff;
   
+  
   height:100%;
   width:100%;  
 }
@@ -252,6 +346,8 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   float:none;
   width:100%;
 }
+
+
 #textarea.horizontal{
   height:100%;
   padding-left:10px;
@@ -386,7 +482,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframewrapper {
 	
 }
+
+/*
   .tabs-container {
+  height:100%;
+  overflow:auto;
   }
   .tabs {
     list-style-type: none;
@@ -414,7 +514,60 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   .tab-pane.active { 
     display: block;
   }
+*/
 
+.tabitem, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+  width:70px;
+  cursor:pointer;
+}
+
+/*  
+#progqcstab {
+  width:120px;
+  left:0;
+}
+#prog2qcstab {
+  width:100px;
+  left:120px;
+}
+#childtemplatetab {
+  width:150px;
+  left:220px;
+}
+*/
+.tabitem {
+  background-color:#38444d;
+  color:#ddd;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  opacity:0.5;
+}
+#resttab {
+  cursor:default;
+
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+
+
+.tabitem.tabselected{
+  opacity:1;
+}
+
+.darktheme .tabitem {
+  background-color:rgb(21,32,43)
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+
+/**/
 .fa {
   padding: 10px 10px!important;
 }
@@ -489,6 +642,7 @@ body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161;
 body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
 
 
+/*
 #file1filetab, #resttab {
   position:absolute;
   z-index:2;
@@ -522,6 +676,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 .darktheme #resttab {
   background-color:#38444d;
 }
+*/
 .darktheme #file1filetab {
   border-right:1px solid rgb(21,32,43);
 }

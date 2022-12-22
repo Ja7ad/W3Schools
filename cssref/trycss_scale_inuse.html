@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_scale_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:11 GMT -->
+<head>
+<style>
+#div1
+{
+position: relative;
+height: 200px;
+width: 200px;
+margin: 30px;
+padding:30px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+}
+</style>
+<script>
+
+function changeOrg()
+{
+var x=document.getElementById('ox').value;
+var y=document.getElementById('oy').value;
+document.getElementById('div2').style.scale=x + ' ' + y;
+document.getElementById('origin').innerHTML=x + ' ' + y;     
+}
+</script>
+</head>
+
+<body>
+
+<p>Scale the red div element, try changing its X-axis and Y-axis.</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p>Scale</p>
+<p>
+  X-axis:<input type="range" min="-2" max="2" value="1" step="0.1" oninput="changeOrg()" id="ox" />
+</p>
+<p>
+  Y-axis:<input type="range" min="-2" max="2" value="1" step="0.1" oninput="changeOrg()" id="oy" />
+</p>
+<p>
+  scale: <span id="origin">1 1</span>;
+</p>
+
+ 
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_scale_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:11 GMT -->
+</html>

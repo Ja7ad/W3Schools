@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>set conn=Server.CreateObject("ADODB.Connection")<br>conn.Provider="Microsoft.Jet.OLEDB.4.0"<br>conn.Open(Server.Mappath("/db/northwind.mdb"))<br>set rs = Server.CreateObject("ADODB.recordset")<br>sql="SELECT Companyname, Contactname FROM Customers WHERE CompanyName>'E'"<br>rs.Open sql, conn<br>%&gt;</FONT><br><br>&lt;table border="1" width="100%"><br>&lt;tr><br><FONT COLOR=#ff0000>&lt;%for each x in rs.Fields<br>&nbsp;&nbsp;&nbsp;   response.write("&lt;th>" & x.name & "&lt;/th>")<br>next%&gt;</FONT><br>&lt;/tr><br><FONT COLOR=#ff0000>&lt;%do until rs.EOF%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;   &lt;tr><br>&nbsp;&nbsp;&nbsp;   <FONT COLOR=#ff0000>&lt;%for each x in rs.Fields%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;td><FONT COLOR=#ff0000>&lt;%Response.Write(x.value)%&gt;</FONT>&nbsp;&lt;/td><br>&nbsp;&nbsp;&nbsp;   <FONT COLOR=#ff0000>&lt;%next<br>&nbsp;&nbsp;&nbsp;   rs.MoveNext%&gt;</FONT><br>&nbsp;&nbsp;&nbsp;   &lt;/tr><br><FONT COLOR=#ff0000>&lt;%loop<br>rs.close<br>conn.close<br>%&gt;</FONT><br>&lt;/table><br><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 </HTML>

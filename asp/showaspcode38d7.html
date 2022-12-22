@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_ado_getrows by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_ado_getrows by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>set conn=Server.CreateObject("ADODB.Connection")<br>conn.Provider="Microsoft.Jet.OLEDB.4.0"<br>conn.Open(Server.Mappath("/db/northwind.mdb"))<br>set rs = Server.CreateObject("ADODB.recordset")<br>rs.Open "Select * from Customers", conn<br><br>'The first number indicates how many records to copy<br>'The second number indicates what recordnumber to start on<br>p=rs.GetRows(2,0)<br><br>response.write("&lt;p>This example returns the value of the first column in the first two records:&lt;/p>")<br>response.write(p(0,0))<br>response.write("&lt;br>")<br>response.write(p(0,1))<br><br>response.write("&lt;p>This example returns the value of the first three columns in the first record:&lt;/p>")<br>response.write(p(0,0))<br>response.write("&lt;br>")<br>response.write(p(1,0))<br>response.write("&lt;br>")<br>response.write(p(2,0))<br><br>rs.close<br>conn.close<br>%&gt;</FONT><br><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_ado_getrows by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_ado_getrows by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 </HTML>

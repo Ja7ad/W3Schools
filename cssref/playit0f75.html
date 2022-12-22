@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/cssref/playit.php?filename=playcss_max-width&preval=none by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:37:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" type="text/css" href="../trystyle.css" />
+<title>W3Schools CSS max-width demonstration</title>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
+</script>
+<!-- End Google Tag Manager -->
+<script src="../lib/uic3447.js?v=1.0.5"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+k42 = true;
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+      "activeAdUnits": ["try_it_leaderboard"]
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+}
+var fileID = "";
+</script>
+<script type="text/javascript">
+ <!--
+ function playit_onload()
+ {
+ var preval=""
+ preval=document.getElementById("preselectedValue").value
+ if (preval!="")
+  {
+  change_position(preval)
+  var x=document.getElementsByTagName("input")
+  var l=x.length
+  for (i=0;i<l;i++)
+   {
+   if (x[i].value==preval)
+    {
+    x[i].checked=true
+    }
+   }
+   document.getElementById("container").style.display="block";
+   }
+ }
+ 
+ function click_position(obj)
+ {
+ change_position(obj.value)
+ }
+ 
+ function change_position(val)
+ {
+    var s="demoDIV";
+      document.getElementById(s).style.maxWidth=val;
+ 
+ var x="max-width:<span id='enlargecssprop'>" + val + "</span>";
+ var y=`###CSSPROP###;`;
+ var z=y.replace("###CSSPROP###",x);
+    document.getElementById("styleDIV").innerHTML="div {\n&nbsp;&nbsp;&nbsp;&nbsp;" + z + "}";
+  }
+if (!String.prototype.trim) {
+   String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+} 
+ //-->
+ </script>
+<style> 
+body {
+ font-family:verdana;
+ font-size:14px;
+}
+.container {
+ width:100%;
+ max-width:974px;
+ min-width:0;
+ background-color:#f1f1f1;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin:auto;
+    left:0;
+    right:0;
+    height:auto;
+    bottom:auto;
+    display:none}
+.codecontainer {
+    width:50%;
+    float:left;
+}
+.codecontainer .radio {
+ line-height:2;
+}
+.resultcontainer {
+    width:48%;
+    float:left;
+}
+.playit {
+    background-color:#ffffff;
+    padding:15px;
+    margin:15px;
+    margin-top:0;
+    font-family:Consolas,'Courier New', Courier, monospace;
+    font-size:16px;
+}
+#enlargecssprop {
+ font-weight:bold;
+ color:#000000;
+}
+#demoDIV {
+ margin-left:10px;
+ margin-top:3px;
+ margin-right:15px;
+ background-color:#ffffff;
+ border:1px solid #c3c3c3;
+ height:280px;
+ 
+    max-width:none;
+  
+}
+#styleDIV {
+ font-family:consolas,Courier new;
+ font-size:14px;
+ margin-left:10px;
+ margin-right:15px;
+ background-color:#ffffff;
+ padding:10px;
+ color:#222222;
+ text-align:left;
+ }
+div.demoHeader {
+ font-size:24px;
+ margin-top:15px;
+ margin-left:15px;
+ margin-bottom:15px;
+ color:#555555;
+}
+div.playitFooter {
+ font-size:14px;
+ color:#555555;
+ padding:15px;
+}
+#pfooter {
+ margin:15px;
+}
+@media screen and (max-width: 728px) {
+    .codecontainer {
+        width:100%;
+        text-align:center;
+    }
+    .resultcontainer {
+        width:100%;
+        text-align:center;
+    }
+    .playitFooter {
+     display:none;
+    }
+    .container {
+     top:60px;
+    }
+}
+ 
+  </style>
+</head>
+<body class="darktheme">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id='tryitLeaderboard'>
+<!-- TryitLeaderboard -->
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+</div>
+
+ <div id="container" class="container">
+ 
+  <div class="codecontainer">
+    <div class="demoHeader">CSS Property:</div>
+    <form class="playit" action="javascript:return false;">
+                max-width:<br><br>
+    <input type="hidden" id="preselectedValue" value="none" />
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="none" /><label for="value_1">none</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="50px" /><label for="value_2">50px</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="150px" /><label for="value_3">150px</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="50%" /><label for="value_4">50%</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_5" value="100%" /><label for="value_5">100%</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_6" value="initial" /><label for="value_6">initial</label></div>
+       
+    </form>
+    <div id="pfooter"></div>
+  </div>
+  <div class="resultcontainer">
+   <div class="demoHeader">Result:</div>
+ 
+   <div id="demoParent">
+    <div id="demoDIV"><div>
+    <p>Change this DIV's max-width by clicking the radiobuttons on the left.</p>
+  </div></div>
+   </div>
+   <div class="demoHeader">CSS Code:</div>
+   <pre id="styleDIV">
+div {
+    
+    max-width:<span id='enlargecssprop'>none;</span>
+      }
+</pre>
+  </div>
+  <div style="clear:both;"></div>
+ 
+  <div class="playitFooter" style="float:left;">Click the property values   above to see the result</div>
+  <div class="playitFooter" style="text-align:right;">
+   <a style="color:#555555" href="../index.html">
+   W3Schools.com</a> - Play it
+  </div>
+  <div style="clear:both;"></div>
+</div>
+<script type="text/javascript">playit_onload()</script>
+ </body>
+
+<!-- Mirrored from www.w3schools.com/cssref/playit.php?filename=playcss_max-width&preval=none by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:37:31 GMT -->
+</html>

@@ -2,7 +2,7 @@
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'getstarted';excounts[0] = '3';exheadings[0] = 'Get Started';exnames[1] = 'new_files';excounts[1] = '1';exheadings[1] = 'New Files';exnames[2] = 'staging_environment';excounts[2] = '2';exheadings[2] = 'Staging Environment';exnames[3] = 'commit';excounts[3] = '4';exheadings[3] = 'Commit';exnames[4] = 'help';excounts[4] = '2';exheadings[4] = 'Help';exnames[5] = 'branch';excounts[5] = '4';exheadings[5] = 'Branch';exnames[6] = 'branch_merge';excounts[6] = '2';exheadings[6] = 'Branch Merge';exnames[7] = 'remote_getstarted';excounts[7] = '1';exheadings[7] = 'Remote Get Started';exActiveNo = 7;exnames[8] = 'pull_from_remote';excounts[8] = '4';exheadings[8] = 'Pull from Remote';exnames[9] = 'push_to_remote';excounts[9] = '1';exheadings[9] = 'Push to Remote';exnames[10] = 'branch_pull_from_remote';excounts[10] = '2';exheadings[10] = 'Pull Branch from Remote';exnames[11] = 'clone';excounts[11] = '3';exheadings[11] = 'Clone';exnames[12] = 'ignore';excounts[12] = '4';exheadings[12] = '.gitignore';exnames[13] = 'remote_add_ssh';excounts[13] = '2';exheadings[13] = 'Remote Add SSH';exnames[14] = 'revert';excounts[14] = '4';exheadings[14] = 'Revert';exnames[15] = 'reset';excounts[15] = '1';exheadings[15] = 'Reset';exnames[16] = 'amend';excounts[16] = '1';exheadings[16] = 'Amend';</script>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/git/exercise.asp?filename=exercise_remote_getstarted1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:12:02 GMT -->
+<!-- Mirrored from www.w3schools.com/git/exercise.asp?filename=exercise_remote_getstarted1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:31:52 GMT -->
 <head>
 <title>Exercise v3.0</title>
 <meta name="viewport" content="width=device-width">
@@ -20,7 +20,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
 </script>
 <!-- End Google Tag Manager -->
-<script src="../lib/my-learning008c.js?v=1.0.10"></script>
+<script src="../lib/common-depse209.js?v=1.0.0"></script>
+<script src="../lib/user-session0ff5.js?v=1.0.2"></script>
+<script src="../lib/my-learning248b.js?v=1.0.11"></script>
 
 <script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
@@ -149,42 +151,38 @@ function hideCorrectAnswer() {
 }
 
 function setAnswerObj(nam, val, all) {
+  var storeLocally = true;
+
   if (userLoggedOn) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4) {
-        if (this.status == 200) {
-          if (this.responseText == "NOTLOGGEDIN") {
-            localStorage.setItem(nam, val);
-          } else {
-            retval = this.responseText;
-            retval = JSON.parse(retval);
-            //alert(retval["recordcount"])
-            checkCompletedExercises(0);
-          }
-        } else {
+    var reqDataStr = "n=" + nam + "&v=" + val + "&a=" + all;
+
+    MyLearning.makePostRequest(
+      MyLearning.getUrl('api.exercise.html'),
+      reqDataStr,
+      function(reqRes) {
+        var storeLocally = true;
+
+        if (
+          reqRes.error.code === '0'
+          && reqRes.status === 200
+          && reqRes.dataStr !== 'NOTLOGGEDIN'
+        ) {
+          checkCompletedExercises(0);
+          storeLocally = false;
+        }
+
+        if (storeLocally) {
           localStorage.setItem(nam, val);
         }
       }
-    };
-    xhttp.open("POST.html", MyLearning.getUrl('api.exercise.html'), true);
-//  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
-    xhttp.withCredentials = true;
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
-    xhttp.send(reqData);
-
-    if (MyLearning._version === '2') { // send a copy to mylv1
-      MyLearning.makeLegacyPostRequest(
-        MyLearning.getUrl('api.exercise.html', '1.5L'),
-        reqData
-      );
-    }
+    );
   } else {
     localStorage.setItem(nam, val);
   }
+
   answerObj[nam] = val;
 }
+
 function checkCode(jsonObj) {
     var func, cc, i, l, errs = [], bptxt = "", feilmargin = 0, score_arr = [];
     document.getElementById("codeCheckWarningText").innerHTML = "";
@@ -1304,23 +1302,43 @@ function constructAnswerObj() {
     return false;
   }
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    var i, aa, l, retval;
-    if (this.readyState == 4) {
-      if (this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          userLoggedOn = false;
-          getFromLocalStorage();
+  var reqDataStr = "t=" + storageBlip;
+
+  MyLearning.makePostRequest(
+    MyLearning.getUrl('api.exercise.get'),
+    reqDataStr,
+    function(reqRes) {
+      if (
+        reqRes.error.code === '0'
+        && reqRes.status === 200
+        && reqRes.dataStr !== 'NOTLOGGEDIN'
+      ) {
+        var i, aa, l, retval;
+
+        userLoggedOn = true;
+
+        retval = JSON.parse(reqRes.dataStr);
+
+        if (retval["recordcount"] == 0) {
+          //getFromLocalStorage();
+          for (i = 0; i < exnames.length; i++) {
+            numberofexercises += Number(excounts[i]);
+            aa = "";
+            l = excounts[i];
+            for (j = 0; j < l; j++) {
+              if (j > 0) {aa += ","; }
+              aa += "0";
+            }
+            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+          }
         } else {
-          userLoggedOn = true;
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          if (retval["recordcount"] == 0) {
-            //getFromLocalStorage();
-            for (i = 0; i < exnames.length; i++) {
-              numberofexercises += Number(excounts[i]);
-              aa = "";
+          if (retval["exscore"]) userscore = retval["exscore"];
+          for (i = 0; i < exnames.length; i++) {
+            aa = "";
+            numberofexercises += Number(excounts[i]);
+            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+            } else {
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1328,39 +1346,18 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          } else {
-            if (retval["exscore"]) userscore = retval["exscore"];
-            for (i = 0; i < exnames.length; i++) {
-              aa = "";
-              numberofexercises += Number(excounts[i]);
-              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-              } else {
-                l = excounts[i];
-                for (j = 0; j < l; j++) {
-                  if (j > 0) {aa += ","; }
-                  aa += "0";
-                }
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-              }
-            }
-          }      
-          drawUserProgress();  
+          }
         }
+
+        drawUserProgress();
+      } else {
+        userLoggedOn = false;
+        getFromLocalStorage();
       }
-      // else {
-      //   userLoggedOn = false;
-      //   getFromLocalStorage();
-      // }
 
       w3LoadExercise();
     }
-  };
-  xhttp.open("POST.html", MyLearning.getUrl('api.exercise.get'), true);
-//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj2.php", true);  
-  xhttp.withCredentials = true;
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("t=" + storageBlip);
+  );
 }
 
 function getFromLocalStorage() {
@@ -2302,5 +2299,5 @@ function setThemeMode() {
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/git/exercise.asp?filename=exercise_remote_getstarted1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:12:02 GMT -->
+<!-- Mirrored from www.w3schools.com/git/exercise.asp?filename=exercise_remote_getstarted1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:31:52 GMT -->
 </html>

@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_radiob by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_radiob by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br><FONT COLOR=#ff0000>&lt;%<br>dim cars<br>cars=Request.Form("cars")<br>%&gt;</FONT><br>&lt;body><br>&lt;form action="demo_radiob.asp" method="post"><br>&lt;p>Please select your favorite car:&lt;/p><br><br>&lt;input type="radio" name="cars"<br><FONT COLOR=#ff0000>&lt;%if cars="Volvo" then Response.Write("checked")%&gt;</FONT><br>value="Volvo">Volvo<br>&lt;br><br>&lt;input type="radio" name="cars"<br><FONT COLOR=#ff0000>&lt;%if cars="Saab" then Response.Write("checked")%&gt;</FONT><br>value="Saab">Saab<br>&lt;br><br>&lt;input type="radio" name="cars"<br><FONT COLOR=#ff0000>&lt;%if cars="BMW" then Response.Write("checked")%&gt;</FONT><br>value="BMW">BMW<br>&lt;br>&lt;br><br>&lt;input type="submit" value="Submit" /><br>&lt;/form><br><FONT COLOR=#ff0000>&lt;%<br>if cars&lt;>"" then<br>&nbsp;&nbsp;  Response.Write("&lt;p>Your favorite car is: " & cars & "&lt;/p>")<br>end if<br>%&gt;</FONT><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_radiob by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_radiob by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 </HTML>

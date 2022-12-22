@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_filters_slugify by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:45:21 GMT -->
+<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_filters_slugify by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:09:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>Tryit Editor v3.6 - Show Django</title>
+<title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
-<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="W3Schools online DJANGO editor">
+<meta property="og:description" content="The W3Schools online code editor allows you to edit code and view the result in your browser">
 <link rel="stylesheet" href="../lib/w3schools30.css">
-<script src="../lib/prism2.js"></script>
-<link rel="stylesheet" href="../lib/prism1.css">
-<!-- Google Tag Manager -->
+<link rel='stylesheet' href='../lib/prism1.css'><script src='../lib/prism2.js'></script><!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
 </script>
 <!-- End Google Tag Manager -->
 <script src="../lib/uic3447.js?v=1.0.5"></script>
@@ -29,7 +34,7 @@ k42 = true;
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-      "activeAdUnits": ["try_it_leaderboard_courses"]
+      "activeAdUnits": ["try_it_leaderboard"]
   }
 }
 uic_r_a()
@@ -49,8 +54,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-                if (document.getElementById("adngin-try_it_leaderboard_courses-0")) {
-                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard_courses"]); });
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
               }
          
     }
@@ -59,7 +64,10 @@ function browserResize() {
     }
     fixDragBtn();
     showFrameSize();    
+    setCodewindowHeight();
+    
 }
+var fileID = "";
 </script>
 <style>
 * {
@@ -73,7 +81,7 @@ body {
   font-size:100%;
 }
 .trytopnav {
-  height:40px;
+  height:48px;
   overflow:hidden;
   min-width:380px;
   position:absolute;
@@ -84,11 +92,11 @@ body {
 .topnav-icons {
   margin-right:8px;
 }
-.trytopnav a {
+.trytopnav a,.trytopnav button {
   color:#999999;
 }
-.w3-bar-item:hover {
-  color:#999999 !important;
+.w3-bar .w3-bar-item:hover {
+  color:#757575 !important;
 }
 a.w3schoolslink {
   padding:0 !important;
@@ -113,16 +121,16 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   z-index:4;
 }
-#framesize span {
-  font-family:Consolas, monospace;
+#framesize {
+  font-family: 'Montserrat', 'Source Sans Pro', sans-serif;
+  font-size: 14px;
 }
 #container {
   background-color:#E7E9EB;
   width:100%;
-  min-width:600px;
   overflow:auto;
   position:absolute;
-  top:138px;
+  top:144px;
   bottom:0;
   height:auto;
 }
@@ -131,7 +139,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
-#textarea, #iframe {
+#textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
   padding-bottom:10px;
@@ -139,112 +147,69 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 }
 #textarea {
   padding-left:10px;
-  padding-right:5px;
+  padding-right:5px;  
 }
 #iframe {
   padding-left:5px;
   padding-right:10px;  
-}
+  position:relative;
+  }
 #textareawrapper {
   width:100%;
   height:100%;
-  background-color: #ffffff;
-  position:relative;
-  xxbox-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   overflow:auto;
+  overflow:hidden;  background-color: #ffffff;
+  position:relative;
+        
 }
 #iframewrapper {
   width:100%;
   height:100%;
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
-  xxbox-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-#textareaCode, .codewindow {
-  background-color: #ffffff!important;
-  font-family: consolas,"courier new",monospace;
+    }
+#textareaCode, #textareaCode2 {
+  background-color: #ffffff;
+  font-family: consolas,Menlo,"courier new",monospace;
   font-size:15px;
   height:100%;
   width:100%;
-  padding:12px 8px 8px 8px;
+  padding:8px;
   resize: none;
   border:none;
-  line-height:normal;
-  overflow:hidden!important;
-  word-wrap:break-word;
+  line-height:normal;    
 }
-#filenamecontainer {
-  position:absolute;
-  text-align:center;
-  z-index:4;
-  width:100%;
-}
-#filenamecontainer span {
-  opacity:0.9;
-  padding:1px 6px;
-  font-family:Consolas;
-  background-color:#F1F1F1;
-  font-size:16px;
-}
-#iframeResult, #iframeSource {
-  background-color: #fff;
-  xcolor:#ffffff;
-  font-family: initial;  
-  height:100%;
-  width:100%;  
-  xpadding:8px;
-}
-#textareacontainer.horizontal,#iframecontainer.horizontal{
-  height:50%;
-  float:none;
-  width:100%;
-}
-#textarea.horizontal{
-  height:100%;
-  padding-left:10px;
-  padding-right:10px;
-}
-#iframe.horizontal{
-  height:100%;
-  padding-right:10px;
-  padding-bottom:10px;
-  padding-left:10px;  
-}
-#container.horizontal{
-  min-height:200px;
-  margin-left:0;
-}
-#tryitLeaderboard {
-  background-color:#ffffff;
-  overflow:hidden;
-  text-align:center;
-  margin-top:5px;
-  height:90px;
-}
-@media screen and (max-width: 727px) {
-  .trytopnav {top:70px;}
-  #container {top:108px;}
-}
-@media screen and (max-width: 467px) {
-  .trytopnav {top:60px;}
-  #container {top:98px;}
-}
-@media only screen and (max-device-width: 768px) {
-  #iframewrapper {overflow: auto;}
-  #container     {min-width:320px;}
-  .stack         {display:none;}
-  #tryhome       {display:block;}
-}
-
-#iframewrapper {
-	
-}
-
+/*
+  .localhostcontainer {
+    position:absolute;
+    width:auto;
+    right:0;
+    left:0;
+    z-index:2;
+    padding:4px 12px;
+    border-bottom:1px solid #d9d9d9;
+    background-color:#E7E9EB;
+  }
+  .localhostdiv {
+    overflow:hidden;
+    font-family:arial;
+    border:1px solid #d9d9d9;
+    background-color:#fff;
+    font-size:14px;
+    padding-left:10px;
+  }
+*/
 .localhostoutercontainer {
   position: absolute;
-  width: 100%;
+  width: auto;
+  left:5px;
+  right:10px;
   background-color: #E7E9EB;
-  height: 30px;;
+  height: 30px;
+  z-index: 9;
+}
+.localhostoutercontainer.horizontal {
+  left:10px;
 }
 .localhostcontainer {
   position:relative;
@@ -264,13 +229,14 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 .localhostdiv {
   overflow:hidden;
   font-family:arial;
-  xborder:1px solid #d9d9d9;
+  color:#000;
   background-color:#fff;
   font-size:15px;
   padding-left:10px;
   border-radius:20px;
   width:60%;
   float:left;
+  font-family: consolas,Menlo,"courier new",monospace;  
 }
 .localhostbuttoncontainer {
   width:20%;
@@ -310,32 +276,251 @@ body.darktheme .localhostdiv {
   background-color:#ffffff;
 }
 
-body.darktheme {
-  background-color:#1d2a35;
+/**/
+
+
+
+
+
+  #filenamecontainer {
+    position:absolute;
+    text-align:center;
+    z-index:4;
+    width:100%;
+  }
+  #filenamecontainer span {
+    opacity:0.9;
+    padding:1px 6px;
+    font-family:Consolas;
+    background-color:#E7E9EB;
+    font-size:16px;
+  }
+  body.darktheme #filenamecontainer span {
+    background-color:#555555;
+    color:#E7E9EB;
+  }
+  #textareaCode, .codewindow {
+    background-color: #ffffff!important;
+    font-family: consolas,"courier new",monospace;
+    font-size:15px;
+    height:100%;
+    width:100%;
+    padding:12px 8px 8px 8px;
+    resize: none;
+    border:none;
+    line-height:normal;
+    overflow:hidden!important;
+    word-wrap:break-word;
+  }
+  #iframeResult, #iframeSource {
+    font-family: initial;  
+  }
+  body.darktheme .localhostcontainer {
+    border-bottom:1px solid #595959;
+    background-color:#616161;
+    background-color:#38444d;  
+    background-color:rgb(21,32,43)
+    
+    
+  }
+  body.darktheme .localhostdiv {
+    border:1px solid #595959;
+    background-color:#ffffff;
+  }
+  body.darktheme .codewindow {
+    background-color: #282B34!important;
+    background-color:rgb(21,32,43)!important;
+    color: #fff;
+  }
+  .darktheme #textareawrapper {
+    background-color: #282B34!important;
+    background-color:rgb(21,32,43)!important;
+    color: #fff;
+  }
+#iframeResult, #iframeSource {
+  background-color: #ffffff;
+            padding-top:32px;
+      height:100%;
+  width:100%;  
 }
-body.darktheme #tryitLeaderboard{
-  background-color:#1d2a35;
-}
-body.darktheme .trytopnav{
-  background-color:#38444d;
-  color:#dddddd;
-}
-body.darktheme #container {
-  background-color:#38444d;
-}
-body.darktheme .trytopnav a {
-  color:#dddddd;
-}
-body.darktheme #filenamecontainer span {
-  background-color:#555555;
-  color:#f1f1f1;
-}
-.darktheme #textareawrapper {
-  background-color:rgb(21,32,43)!important;
-  color: #fff;
+#stackV {background-color:#999999;}
+#stackV:hover {background-color:#BBBBBB !important;}
+#stackV.horizontal {background-color:transparent;}
+#stackV.horizontal:hover {background-color:#BBBBBB !important;}
+#stackH.horizontal {background-color:#999999;}
+#stackH.horizontal:hover {background-color:#999999 !important;}
+#textareacontainer.horizontal,#iframecontainer.horizontal{
+  height:50%;
+  float:none;
+  width:100%;
 }
 
-#templatetab, #viewstab, #childtemplatetab, #resttab {
+#textarea.horizontal{
+  height:100%;
+  padding-left:10px;
+  padding-right:10px;
+}
+#iframe.horizontal{
+  height:100%;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;  
+}
+#container.horizontal{
+  min-height:200px;
+  margin-left:0;
+}
+#tryitLeaderboard {
+  overflow:hidden;
+  text-align:center;
+  margin-top:5px;
+  height:90px;
+}
+.w3-dropdown-content {width:350px}
+
+#breadcrumb ul {
+  font-family:'Montserrat', 'Source Sans Pro', sans-serif;
+  list-style: none;
+  display: inline-table;
+  padding-inline-start: 1px;
+  font-size: 12px;
+  margin-block-start: 6px;
+  margin-block-end: 6px;	
+}
+#breadcrumb li {
+  display: inline;
+}
+#breadcrumb a {
+  float: left;
+  background: #E7E9EB;
+  padding: 3px 10px 3px 20px;
+  position: relative;
+  margin: 0 5px 0 0; 
+  text-decoration: none;
+  color: #555;
+}
+#breadcrumb a:after {
+  content: "";  
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #E7E9EB;
+  position: absolute; 
+  right: -12px;
+  top: 0;
+  z-index: 1;
+}
+#breadcrumb a:before {
+  content: "";  
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #fff;
+  position: absolute; 
+  left: 0; 
+  top: 0;
+}
+#breadcrumb ul li:first-child a:before {
+  display: none; 
+}
+#breadcrumb ul:last-child li{
+  padding-right: 5px;
+}
+#breadcrumb ul li a:hover {
+  background: #04AA6D;
+  color:#fff;
+}
+#breadcrumb ul li a:hover:after {
+  border-left-color: #04AA6D;
+  color:#fff;
+}
+#breadcrumb li:last-child {
+  display: inline-block!important;
+  margin-top: 3px!important;
+}
+#runbtn {
+  background-color:#04AA6D;
+  color:white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  padding:6px 25px;
+  margin-top:4px;
+  border-radius:5px;
+  word-spacing:10px;
+}
+#runbtn:hover {
+  background-color: #059862 !important;
+  color:white!important;
+}
+#getwebsitebtn {
+  background-color:#04AA6D;
+  font-family: 'Source Sans Pro', sans-serif;  
+  color: white;
+  font-size: 18px;
+  padding:6px 15px;
+  margin-top:4px;
+  margin-right: 10px;
+  display: block;
+  float: right;
+  border-radius: 5px;
+}
+#getwebsitebtn:hover {
+  background-color: #059862 !important;
+  color:white!important;
+}
+@media screen and (max-width: 727px) {
+  .trytopnav {top:70px;}
+  #container {top:116px;}
+  #breadcrumb {display:none;}
+  #tryhome  {display:block;}
+}
+@media screen and (max-width: 467px) {
+  .trytopnav {top:60px;}
+  #container {top:106px;}
+  .w3-dropdown-content {width:100%}
+}
+@media only screen and (max-device-width: 768px) {
+  #iframewrapper {overflow: auto;}
+  #container     {min-width:310px;}
+  .stack         {display:none;}
+  #tryhome       {display:block;}
+  .trytopnav     {min-width:310px;}  
+}
+#iframewrapper {
+}
+
+/*
+  .tabs-container {
+  height:100%;
+  overflow:auto;
+  }
+  .tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:#E7E9EB;
+    
+  }
+  .tab {
+    padding: 5px 10px;
+    background: #ddd;
+    width: fit-content;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;            
+  
+    }
+  .tab.active {
+    background: #fff;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  .tab-pane.active { 
+    display: block;
+  }
+*/
+
+.tabitem, #resttab {
   position:absolute;
   z-index:2;
   font-family:arial;
@@ -343,11 +528,12 @@ body.darktheme #filenamecontainer span {
   width:70px;
   cursor:pointer;
 }
-#templatetab {
+#template_q_htmltab {width: 140px;left: 0px;}#views_q_pytab {width: 90px;left: 140px;}/*  
+#progqcstab {
   width:120px;
   left:0;
 }
-#viewstab {
+#prog2qcstab {
   width:100px;
   left:120px;
 }
@@ -355,14 +541,7 @@ body.darktheme #filenamecontainer span {
   width:150px;
   left:220px;
 }
-
-#resttab {
-  z-index:1;
-  xborder-bottom:1px solid #d9d9d9;
-  background-color:#E7E9EB;
-  width:100%;
-  left:0px;
-}
+*/
 .tabitem {
   background-color:#38444d;
   color:#ddd;
@@ -370,6 +549,16 @@ body.darktheme #filenamecontainer span {
   border-top-right-radius:10px;
   opacity:0.5;
 }
+#resttab {
+  cursor:default;
+
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+
+
 .tabitem.tabselected{
   opacity:1;
 }
@@ -380,16 +569,124 @@ body.darktheme #filenamecontainer span {
 .darktheme #resttab {
   background-color:#38444d;
 }
-.trytopnav {
-  height:48px!important;
-}
+
+
+/**/
+
+
 .fa {
-  padding: 8px 16px;
+  padding: 10px 10px!important;
 }
-a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
-  font-size: 28px!important;
-  padding: 8px 16px;
+a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-icons.fa-adjust {
+    font-size: 28px!important;
+}
+.darktheme #breadcrumb li {
+  color:#fff;
+}
+.darktheme #breadcrumb a {
+  background:#616161;
+  background-color:#38444d;  
+  color: #ddd;
+}	
+.darktheme #breadcrumb a:after {
+  border-left: 12px solid #616161;
+  border-left: 12px solid #38444d; 
+}
+.darktheme #breadcrumb a:before {
+  border-left: 12px solid rgb(40, 44, 52);
+  border-left: 12px solid #1d2a35;  
+}
+.darktheme .currentcrumb {
+  color:#ddd;
+}
+
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;  
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  background-color:#38444d;
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+  background-color:#38444d;
+}
+body.darktheme .trytopnav a {
+  color:#dddddd;
+}
+body.darktheme #textareaCode {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+}
+
+body.darktheme #textareawrapper {
+  background-color:rgb(21,32,43);
+}
+body.darktheme .tabs {
+    background-color:#38444d;
   }
+body.darktheme .tab {
+    background: rgb(21,32,43);
+    color:#fff;
+    opacity:0.5;
+    }
+body.darktheme .tab.active {
+    background: rgb(21,32,43);
+    color:#fff;    
+    opacity:1;
+  }
+
+body.darktheme ::-webkit-scrollbar {width:12px;height:3px;}
+body.darktheme ::-webkit-scrollbar-track-piece {background-color:#000;}
+body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161; background-color:#38444d;}
+body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
+
+/*
+#file1filetab, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+}
+#file1filetab {
+  width:auto;
+  left:0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;            
+}
+#resttab {
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+*/
+/*
+.tabitem {
+  background-color:#eaeaea;
+}
+
+.tabitem.tabselected{ 
+  background-color:#fff;
+.darktheme .tabitem {
+  background-color:#444;
+}
+.darktheme .tabitem.tabselected{
+  background-color:rgb(21,32,43);
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+}*/
+.darktheme #file1filetab {
+  border-right:1px solid rgb(21,32,43);
+}
 
 </style>
 <!--[if lt IE 8]>
@@ -397,7 +694,7 @@ a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
 #textareacontainer, #iframecontainer {width:48%;}
 #container {height:500px;}
 #textarea, #iframe {width:90%;height:450px;}
-#textareaCode, #iframeResult, .codewindow {height:450px;}
+#textareaCode, #textareaCode2, #iframeResult, .codewindow {height:450px;}
 .stack {display:none;}
 </style>
 <![endif]-->
@@ -410,38 +707,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="adngin-try_it_leaderboard_courses-0"></div>
+  <div id="adngin-try_it_leaderboard-0"></div>
   <!-- adspace tryit-->
 </div>
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
-<!--
-  <a id="tryhome" href="https://www.w3schools.com" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
-  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
+  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
-  <span class="w3-right w3-hide-small w3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>
-  <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
--->
+  <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="../spaces/index.html" target="_blank">Get your<span class="w3-hide-medium"> own</span> website</a>
+  <!--<span class="w3-right w3-hide-small xxw3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>-->
+  <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
 </div>
 
 </div>
+
 <div id="shield"></div>
+
 <a href="javascript:void(0)" id="dragbar"></a>
 <div id="container">
+<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+  <div class="w3-bar-block">
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
+    <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
+  </div>
+  <footer class="w3-container w3-small ws-grey">
+  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
+  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a></p>
+  </footer>
+</div>
+<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
-        <div id="templatetab" class="tabitem" onclick="clickTab('template')">
-                  
-          template.html        
-                  
-        </div>
-        <div id="viewstab" class="tabitem" onclick="clickTab('views')">views.py</div>
-                                        <div id="resttab">&nbsp;</div>
-
-        <div id="template">
-        <pre style="margin:0" class="codewindow language-django xw3-white"><code>
-&lt;!DOCTYPE html&gt;
+                                  
+                        <div id="template_q_htmltab" class="tabitem" onclick="clickTab('template_q_html')">
+                template.html              </div>
+                          <div id="views_q_pytab" class="tabitem" onclick="clickTab('views_q_py')">
+                views.py              </div>
+                        <div id="resttab">&nbsp;</div>
+                            <div style="padding-top:32px;" id='template_q_html'>
+                  <pre style="margin:0" class="codewindow language-django xw3-white"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
 
@@ -450,13 +759,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;p&gt;In views.py you can see what the text variable looks like.&lt;/p&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;        </code></pre>
-        </div>
-
-
-        <div id="views" style="display:none;">
-        <pre style="margin:0" class="codewindow language-python xw3-white"><code>
-from django.http import HttpResponse
+&lt;/html&gt;                  </code></pre>
+                </div>
+                              <div style="padding-top:32px;" id='views_q_py'>
+                  <pre style="margin:0" class="codewindow language-python xw3-white"><code>from django.http import HttpResponse
 from django.template import loader
 
 def testing(request):
@@ -464,66 +770,138 @@ def testing(request):
   context = {
     'text': 'Hi, my name is Linus',   
   }
-  return HttpResponse(template.render(context, request))        </code></pre>
-        </div>
+  return HttpResponse(template.render(context, request))                    </code></pre>
+                </div>
+                        
+<!--          
+            <div class="tabs-container">
+              <ul class="tabs">
+                                  <li class="tab active" data-tab="0" style="cursor:pointer">template.html</li>
+                                  <li class="tab " data-tab="1" style="cursor:pointer">views.py</li>
+                              </ul>
+                              <div class="tab-pane active" data-pane="0">
+                  <pre style="margin:0" class="codewindow language-django xw3-white"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
 
-               
-      </div>
+&lt;p&gt;{{ text|slugify }}&lt;/p&gt;
+
+&lt;p&gt;In views.py you can see what the text variable looks like.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;                  </code></pre>
+                </div>
+                              <div class="tab-pane " data-pane="1">
+                  <pre style="margin:0" class="codewindow language-python xw3-white"><code>from django.http import HttpResponse
+from django.template import loader
+
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'text': 'Hi, my name is Linus',   
+  }
+  return HttpResponse(template.render(context, request))                    </code></pre>
+                </div>
+                          </div>
+-->
+
+
+                              
+                
+       </div>
     </div>
   </div>
   <div id="iframecontainer">
     <div id="iframe">
-      <div id="iframewrapper">
-        <div id="iframeResult" style="position:relative;">
-          <div class="localhostoutercontainer">
-            <div class="localhostcontainer">
-              <div class="localhostbuttoncontainer">
-                <span>&#11044;</span>
-                <span>&#11044;</span>
-                <span>&#11044;</span>
+                                <div class="localhostoutercontainer">
+                <div class="localhostcontainer">
+                  <div class="localhostbuttoncontainer">
+                    <span>&#11044;</span>
+                    <span>&#11044;</span>
+                    <span>&#11044;</span>
+                  </div>
+                  <div class="localhostdiv">127.0.0.1:8000/testing</div>
+                </div>
               </div>
-              <div class="localhostdiv">127.0.0.1:8000/members/testing</div>
-            </div>
-          </div>
-          <iframe style="width:100%;height:100%;border:none;padding-top:32px;" src="demo_filters_slugify.html"></iframe>
-        </div>
+                  <div id="iframewrapper">
+                  <iframe id="iframeResult" frameborder="0" src="demo_filters_slugify.html"></iframe>
+                
       </div>
     </div>
   </div>
-</div>
-
-
-<script>
-var demotype = 0, clicktab = "template";
-clickTab(clicktab);
-
-function clickTab(x) {
-  document.getElementById("template").style.display = "none";
-  document.getElementById("views").style.display = "none";
-  if (document.getElementById("childtemplate")) document.getElementById("childtemplate").style.display = "none";
-  document.getElementById(x).style.display = "block";
-
-  document.getElementById("templatetab").className = document.getElementById("templatetab").className.replace(" tabselected", "");
-  document.getElementById("viewstab").className = document.getElementById("viewstab").className.replace(" tabselected", "");
-  if (document.getElementById("childtemplatetab")) document.getElementById("childtemplatetab").className = document.getElementById("childtemplatetab").className.replace(" tabselected", "");
   
-  document.getElementById(x + "tab").className += " tabselected";
+</div>
+<script>
+function submitTryit(n) {
+      if (window.editor) {
+      window.editor.save();
+    }
+    var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  ifr.setAttribute("name", "iframeResult");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+    
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+  //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+  //(and back to false to prevent the content from being editable)
+  //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+  if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+    ifrw.document.body.contentEditable = true;
+    ifrw.document.body.contentEditable = false;
+  }  
+    
+}
+
+function hideSpinner() {
+  document.getElementById("runloadercontainer").style.display = "none";
+}
+function displaySpinner() {
+  var i, c, w, h, r, top;
+  i = document.getElementById("iframeResult");
+  w = w3_getStyleValue(i, "width");
+  h = w3_getStyleValue(i, "height");
+  c = document.getElementById("runloadercontainer");
+  c.style.width = w;
+  c.style.height = h;
+  c.style.display = "block";
+  w = Number(w.replace("px", "")) / 5;
+  r = document.getElementById("runloader");
+  r.style.width = w + "px";
+  r.style.height = w + "px";
+  h = w3_getStyleValue(r, "height");
+  h = Number(h.replace("px", "")) / 2;
+  top = w3_getStyleValue(c, "height");
+  top = Number(top.replace("px", "")) / 2;
+  top = top - h
+  r.style.top = top + "px";
 }
 
 var currentStack=true;
-if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "<%=stack%>" == " horizontal") {restack(true);}
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
 function restack(horizontal) {
-    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
     tc = document.getElementById("textareacontainer");
     ic = document.getElementById("iframecontainer");
     t = document.getElementById("textarea");
     i = document.getElementById("iframe");
     c = document.getElementById("container");    
+    sv = document.getElementById("stackV");
+    sh = document.getElementById("stackH");
+    b = document.getElementsByClassName("localhostoutercontainer");
     tc.className = tc.className.replace("horizontal", "");
     ic.className = ic.className.replace("horizontal", "");        
     t.className = t.className.replace("horizontal", "");        
     i.className = i.className.replace("horizontal", "");        
     c.className = c.className.replace("horizontal", "");                        
+    if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
+    if (sv) {sv.className = sv.className.replace("horizontal", "")};
+    if (sv) {sh.className = sh.className.replace("horizontal", "")};
     stack = "";
     if (horizontal) {
         tc.className = tc.className + " horizontal";
@@ -531,51 +909,33 @@ function restack(horizontal) {
         t.className = t.className + " horizontal";        
         i.className = i.className + " horizontal";                
         c.className = c.className + " horizontal";                
+        if (sv) {sv.className = sv.className + " horizontal"};
+        if (sv) {sh.className = sh.className + " horizontal"};
+        if (b[0]) {b[0].className = b[0].className + " horizontal"};        
         stack = " horizontal";
         document.getElementById("textareacontainer").style.height = "50%";
         document.getElementById("iframecontainer").style.height = "50%";
         document.getElementById("textareacontainer").style.width = "100%";
         document.getElementById("iframecontainer").style.width = "100%";
-        currentStack = false;
+        currentStack=false;
     } else {
         document.getElementById("textareacontainer").style.height = "100%";
         document.getElementById("iframecontainer").style.height = "100%";
         document.getElementById("textareacontainer").style.width = "50%";
         document.getElementById("iframecontainer").style.width = "50%";
-        currentStack = true;
+        currentStack=true;        
     }
-//    if (window.editor) {
-//      window.editor.refresh();
-//    }
     fixDragBtn();
     showFrameSize();
     setCodewindowHeight();
+    
 }
-function retheme() {
-  var cc = document.body.className;
-  if (cc.indexOf("darktheme") > -1) {
-    document.body.className = cc.replace("darktheme", "");
-    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
-    localStorage.setItem("preferredmode", "light");
-  } else {
-    document.body.className += " darktheme";
-    if (opener) {opener.document.body.className += " darktheme";}
-    localStorage.setItem("preferredmode", "dark");
-  }
-}
-(
-function setThemeMode() {
-  var x = localStorage.getItem("preferredmode");
-  if (x == "dark") {
-    document.body.className += " darktheme";
-  }
-})();
 function showFrameSize() {
-  /*var t;
+  var t;
   var width, height;
   width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
   height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
-  document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";*/
+  document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
 }
 var dragging = false;
 var stack;
@@ -641,8 +1001,9 @@ function dragmove(e) {
         fixDragBtn();
       }
     }
-    showFrameSize();
+    showFrameSize();    
     setCodewindowHeight();
+    
   }
 }
 function dragend() {
@@ -662,19 +1023,90 @@ if (window.addEventListener) {
   window.addEventListener("touchend", dragend);
   window.addEventListener("load", fixDragBtn);
   window.addEventListener("load", showFrameSize);
-  window.addEventListener("load", setCodewindowHeight);
+    window.addEventListener("load", setCodewindowHeight);
+  
 }
-/*function colorcoding() {  
+
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
+function colorcoding() {
+  var ua = navigator.userAgent;
+  //Opera Mini refreshes the page when trying to edit the textarea.
+  if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
   window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
-    mode: "text/x-python",
-    htmlMode: true,
-    lineWrapping: true,
-    smartIndent: false,
-    addModeClass: true,
-    readOnly: true
-  });
+  mode: "text/html",
+  lineWrapping: true,
+  smartIndent: false,
+  htmlMode: true,
+  autocorrect: false,      
+  addModeClass: true,
+    });
 }
-colorcoding();*/
+  var editors = document.getElementsByClassName('editor');
+  var editorList = [];
+  for (var i = 0; i < editors.length; i++) {
+    var self = editors[i];
+    var editor = CodeMirror.fromTextArea(self, {
+      mode: "text/html",
+      lineNumbers: false,
+      autoRefresh: true,
+      scrollbarStyle: "null",
+
+      lineWrapping: true,
+      smartIndent: false,
+      htmlMode: true,
+      autocorrect: false,      
+      addModeClass: true,      
+    });
+    editorList[i] = editor;
+    editor.save();
+  }
+/*
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) {
+    var self = tabs[i];
+    self.addEventListener('click', function() {
+      var data = this.getAttribute('data-tab');
+      document.querySelectorAll('.tab-pane.active')[0].classList.remove('active');
+      document.querySelectorAll('.tab-pane[data-pane="'+data+'"]')[0].classList.add('active');
+      document.querySelectorAll('.tab.active')[0].classList.remove('active');
+      this.classList.add('active');
+      for (x in editorList) {
+        editorList[x].refresh();
+      }
+    });
+  }
+*/
+    clickTab("template_q_html");
+
+  
+
+function clickTab(x) {
+      document.getElementById("template_q_html").style.display = "none";
+    document.getElementById("template_q_htmltab").className = document.getElementById("template_q_htmltab").className.replace(" tabselected", "");
+      document.getElementById("views_q_py").style.display = "none";
+    document.getElementById("views_q_pytab").className = document.getElementById("views_q_pytab").className.replace(" tabselected", "");
+    document.getElementById(x).style.display = "block";  
+  document.getElementById(x + "tab").className += " tabselected";
+}
+
 function w3_getStyleValue(elmnt,style) {
     if (window.getComputedStyle) {
         return window.getComputedStyle(elmnt,null).getPropertyValue(style);
@@ -682,19 +1114,57 @@ function w3_getStyleValue(elmnt,style) {
         return elmnt.currentStyle[style];
     }
 }
+
+function openMenu() {
+    var x = document.getElementById("navbarDropMenu");
+    var y = document.getElementById("menuOverlay");
+    var z = document.getElementById("menuButton");
+    if (z.className.indexOf("w3-text-gray") == -1) {
+        z.className += " w3-text-gray";
+    } else { 
+        z.className = z.className.replace(" w3-text-gray", "");
+    }
+    if (z.className.indexOf("w3-gray") == -1) {
+        z.className += " w3-gray";
+    } else { 
+        z.className = z.className.replace(" w3-gray", "");
+    }
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+    if (y.className.indexOf("w3-show") == -1) {
+        y.className += " w3-show";
+    } else { 
+        y.className = y.className.replace(" w3-show", "");
+    }
+
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == document.getElementById("menuOverlay")) {
+        openMenu();
+    }
+}
 function setCodewindowHeight() {
   var i;
   var txw = document.getElementById("textareawrapper");
   var txwh = w3_getStyleValue(txw,"height");
+  txwh = txwh.replace("px","");
+  txwh = Number(txwh);
+  txwh = txwh - 33;
+  txwh = txwh + "px";
   var qwsa = document.getElementsByClassName("codewindow");
   for (i = 0; i < qwsa.length; i++) {
     qwsa[i].style.height = txwh;
     qwsa[i].style.setProperty("overflow", "auto", "important");
   }
 }
+
 uic_r_e()
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_filters_slugify by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:45:22 GMT -->
+<!-- Mirrored from www.w3schools.com/django/showdjango.php?filename=demo_filters_slugify by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:09:19 GMT -->
 </html>

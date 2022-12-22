@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'bs5_containers';excounts[0] = '2';exheadings[0] = 'Containers';exnames[1] = 'bs5_typography';excounts[1] = '3';exheadings[1] = 'Typography';exnames[2] = 'bs5_colors';excounts[2] = '2';exheadings[2] = 'Colors';exnames[3] = 'bs5_images';excounts[3] = '4';exheadings[3] = 'Images';exnames[4] = 'bs5_tables';excounts[4] = '5';exheadings[4] = 'Tables';exnames[5] = 'bs5_alerts';excounts[5] = '3';exheadings[5] = 'Alerts';exnames[6] = 'bs5_buttons';excounts[6] = '7';exheadings[6] = 'Buttons';exnames[7] = 'bs5_badges';excounts[7] = '3';exheadings[7] = 'Badges';exnames[8] = 'bs5_progressbars';excounts[8] = '4';exheadings[8] = 'Progress Bar';exnames[9] = 'bs5_spinners';excounts[9] = '2';exheadings[9] = 'Spinners';exnames[10] = 'bs5_pagination';excounts[10] = '3';exheadings[10] = 'Pagination';exActiveNo = 10;exnames[11] = 'bs5_list_groups';excounts[11] = '2';exheadings[11] = 'List Groups';exnames[12] = 'bs5_cards';excounts[12] = '2';exheadings[12] = 'Cards';exnames[13] = 'bs5_dropdowns';excounts[13] = '1';exheadings[13] = 'Dropdowns';exnames[14] = 'bs5_collapse';excounts[14] = '1';exheadings[14] = 'Collapse';exnames[15] = 'bs5_navs';excounts[15] = '3';exheadings[15] = 'Navs';exnames[16] = 'bs5_navbars';excounts[16] = '3';exheadings[16] = 'Navbars';</script><html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/bootstrap5/exercise.php?filename=exercise_bs5_pagination3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:39:42 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap5/exercise.php?filename=exercise_bs5_pagination3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:00:28 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Exercise v3.0</title>
@@ -21,7 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
 </script>
 <!-- End Google Tag Manager -->
-<script src="../lib/my-learning008c.js?v=1.0.10"></script>
+<script src="../lib/common-depse209.js?v=1.0.0"></script>
+<script src="../lib/user-session0ff5.js?v=1.0.2"></script>
+<script src="../lib/my-learning248b.js?v=1.0.11"></script>
 <script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
@@ -109,6 +111,8 @@ if (exsection == "JS") {
     storageBlip = "go_";    
 } else if (exsection == "TYPESCRIPT") {
     storageBlip = "typescript_";       
+} else if (exsection == "MONGODB") {
+    storageBlip = "mongodb_";       
 } else if (exsection == "AWS") {
     storageBlip = "aws_";
 } else if (exsection == "AWSSL") {
@@ -159,42 +163,38 @@ function hideCorrectAnswer() {
 }
 
 function setAnswerObj(nam, val, all) {
+  var storeLocally = true;
+
   if (userLoggedOn) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4) {
-        if (this.status == 200) {
-          if (this.responseText == "NOTLOGGEDIN") {
-            localStorage.setItem(nam, val);
-          } else {
-            retval = this.responseText;
-            retval = JSON.parse(retval);
-            //alert(retval["recordcount"])
-            checkCompletedExercises(0);
-          }
-        } else {
+    var reqDataStr = "n=" + nam + "&v=" + val + "&a=" + all;
+
+    MyLearning.makePostRequest(
+      MyLearning.getUrl('api.exercise.html'),
+      reqDataStr,
+      function(reqRes) {
+        var storeLocally = true;
+
+        if (
+          reqRes.error.code === '0'
+          && reqRes.status === 200
+          && reqRes.dataStr !== 'NOTLOGGEDIN'
+        ) {
+          checkCompletedExercises(0);
+          storeLocally = false;
+        }
+
+        if (storeLocally) {
           localStorage.setItem(nam, val);
         }
       }
-    };
-    xhttp.open("POST.html", MyLearning.getUrl('api.exercise.html'), true);
-//  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
-    xhttp.withCredentials = true;
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
-    xhttp.send(reqData);
-
-    if (MyLearning._version === '2') { // send a copy to mylv1
-      MyLearning.makeLegacyPostRequest(
-        MyLearning.getUrl('api.exercise.html', '1.5L'),
-        reqData
-      );
-    }
+    );
   } else {
     localStorage.setItem(nam, val);
   }
+
   answerObj[nam] = val;
 }
+
 function checkCode(jsonObj) {
     var func, cc, i, l, errs = [], bptxt = "", feilmargin = 0, score_arr = [];
     document.getElementById("codeCheckWarningText").innerHTML = "";
@@ -1290,23 +1290,43 @@ function constructAnswerObj() {
     return false;
   }
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    var i, aa, l, retval;
-    if (this.readyState == 4) {
-      if (this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          userLoggedOn = false;
-          getFromLocalStorage();
+  var reqDataStr = "t=" + storageBlip;
+
+  MyLearning.makePostRequest(
+    MyLearning.getUrl('api.exercise.get'),
+    reqDataStr,
+    function(reqRes) {
+      if (
+        reqRes.error.code === '0'
+        && reqRes.status === 200
+        && reqRes.dataStr !== 'NOTLOGGEDIN'
+      ) {
+        var i, aa, l, retval;
+
+        userLoggedOn = true;
+
+        retval = JSON.parse(reqRes.dataStr);
+
+        if (retval["recordcount"] == 0) {
+          //getFromLocalStorage();
+          for (i = 0; i < exnames.length; i++) {
+            numberofexercises += Number(excounts[i]);
+            aa = "";
+            l = excounts[i];
+            for (j = 0; j < l; j++) {
+              if (j > 0) {aa += ","; }
+              aa += "0";
+            }
+            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+          }
         } else {
-          userLoggedOn = true;
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          if (retval["recordcount"] == 0) {
-            //getFromLocalStorage();
-            for (i = 0; i < exnames.length; i++) {
-              numberofexercises += Number(excounts[i]);
-              aa = "";
+          if (retval["exscore"]) userscore = retval["exscore"];
+          for (i = 0; i < exnames.length; i++) {
+            aa = "";
+            numberofexercises += Number(excounts[i]);
+            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+            } else {
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1314,39 +1334,18 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          } else {
-            if (retval["exscore"]) userscore = retval["exscore"];
-            for (i = 0; i < exnames.length; i++) {
-              aa = "";
-              numberofexercises += Number(excounts[i]);
-              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-              } else {
-                l = excounts[i];
-                for (j = 0; j < l; j++) {
-                  if (j > 0) {aa += ","; }
-                  aa += "0";
-                }
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-              }
-            }
-          }      
-          drawUserProgress();  
+          }
         }
+
+        drawUserProgress();
+      } else {
+        userLoggedOn = false;
+        getFromLocalStorage();
       }
-      // else {
-      //   userLoggedOn = false;
-      //   getFromLocalStorage();
-      // }
 
       w3LoadExercise();
     }
-  };
-  xhttp.open("POST.html", MyLearning.getUrl('api.exercise.get'), true);
-//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj2.php", true);  
-  xhttp.withCredentials = true;
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("t=" + storageBlip);
+  );
 }
 
 function getFromLocalStorage() {
@@ -2246,5 +2245,5 @@ uic_r_r()
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/bootstrap5/exercise.php?filename=exercise_bs5_pagination3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:39:42 GMT -->
+<!-- Mirrored from www.w3schools.com/bootstrap5/exercise.php?filename=exercise_bs5_pagination3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:00:28 GMT -->
 </html>

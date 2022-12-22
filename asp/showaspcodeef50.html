@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>set conn=Server.CreateObject("ADODB.Connection")<br>conn.Provider="Microsoft.Jet.OLEDB.4.0"<br>conn.Open(Server.Mappath("/db/northwind.mdb"))<br><br>set rs=Server.CreateObject("ADODB.recordset")<br>sql="SELECT DISTINCT Country FROM Customers ORDER BY Country"<br>rs.Open sql,conn<br><br>country=request.form("country")<br><br>%&gt;</FONT><br><br>&lt;form method="post"><br>Choose Country &lt;select name="country"><br><FONT COLOR=#ff0000>&lt;%&nbsp; do until rs.EOF<br>&nbsp;&nbsp;&nbsp;   response.write("&lt;option")<br>&nbsp;&nbsp;&nbsp;   if rs.fields("country")=country then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     response.write(" selected")<br>&nbsp;&nbsp;&nbsp;   end if<br>&nbsp;&nbsp;&nbsp;   response.write(">")<br>&nbsp;&nbsp;&nbsp;   response.write(rs.fields("Country"))<br>&nbsp;&nbsp;&nbsp;   rs.MoveNext<br>loop<br>rs.Close<br>set rs=Nothing %&gt;</FONT><br>&lt;/select><br>&lt;input type="submit" value="Show customers"><br>&lt;/form><br><br><FONT COLOR=#ff0000>&lt;%<br>if country&lt;>"" then<br>&nbsp;&nbsp;  sql="SELECT Companyname,Contactname,Country FROM Customers WHERE country='" & country & "'"<br>&nbsp;&nbsp;  set rs=Server.CreateObject("ADODB.Recordset")<br>&nbsp;&nbsp;  rs.Open sql,conn<br>%&gt;</FONT><br>&nbsp;&nbsp;  &lt;table width="100%" cellspacing="0" cellpadding="2" border="1"><br>&nbsp;&nbsp;  &lt;tr><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;th>Companyname&lt;/th><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;th>Contactname&lt;/th><br>&nbsp;&nbsp;&nbsp;&nbsp;    &lt;th>Country&lt;/th><br>&nbsp;&nbsp;  &lt;/tr><br><FONT COLOR=#ff0000>&lt;%<br>do until rs.EOF<br>&nbsp;&nbsp;  response.write("&lt;tr>")<br>&nbsp;&nbsp;  response.write("&lt;td>" & rs.fields("companyname") & "&lt;/td>")<br>&nbsp;&nbsp;  response.write("&lt;td>" & rs.fields("contactname") & "&lt;/td>")<br>&nbsp;&nbsp;  response.write("&lt;td>" & rs.fields("country") & "&lt;/td>")<br>&nbsp;&nbsp;  response.write("&lt;/tr>")<br>&nbsp;&nbsp;  rs.MoveNext<br>loop<br>rs.close<br>conn.Close<br>set rs=Nothing<br>set conn=Nothing%&gt;</FONT><br>&lt;/table><br><FONT COLOR=#ff0000>&lt;%&nbsp; end if %&gt;</FONT><br><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:17 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_query_4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:21 GMT -->
 </HTML>

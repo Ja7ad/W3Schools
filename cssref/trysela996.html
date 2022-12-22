@@ -1,677 +1,76 @@
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="https://www.w3schools.com/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Sorry! We can't seem to find the resource you're looking for">
+    <title>404 - Page not found | W3Schools.com</title>
+    <link rel="stylesheet" type="text/css" href="/w3css/3/w3.css" />
 
-<!-- Mirrored from www.w3schools.com/cssref/trysel.asp?selector=li:nth-last-child(1) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:18:06 GMT -->
-<head>
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Try CSS Selector</title>
-<link rel="stylesheet" type="text/css" href="../trystyle.css" />
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTCFC3S');
-</script>
-<!-- End Google Tag Manager -->
-
-<script src="../lib/uicf700.js?v=1.0.1"></script>
-<script data-cfasync="false" type="text/javascript">
-var k42 = false;
-
-k42 = true;
-
-</script>
-<script data-cfasync="false" type="text/javascript">
-    window.snigelPubConf = {
-    "adengine": {
-
-      "activeAdUnits": ["try_it_leaderboard"]
-
-  }
-}
-uic_r_a()
-</script>
-<script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
-<script>
-if (window.addEventListener) {              
-    window.addEventListener("resize", browserResize);
-} else if (window.attachEvent) {                 
-    window.attachEvent("onresize", browserResize);
-}
-var xbeforeResize = window.innerWidth;
-
-function browserResize() {
-    var afterResize = window.innerWidth;
-    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
-        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
-        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
-        xbeforeResize = afterResize;
         
-        if (document.getElementById("adngin-try_it_leaderboard-0")) {
-                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
-              }
-         
+    <style type="text/css">
+    @import url("https://fonts.googleapis.com/css?family=Inter:300,400,600,700");
+    
+    html, body, h1, h2, p {
+      font-family:"Inter", sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
     }
-}
-</script>
-<script src="../jquery/jquery.js"></script>
-<script>
-/*! jQuery Color v@2.1.2 http://github.com/jquery/jquery-color | jquery.org/license */
-(function(a,b){function m(a,b,c){var d=h[b.type]||{};return a==null?c||!b.def?null:b.def:(a=d.floor?~~a:parseFloat(a),isNaN(a)?b.def:d.mod?(a+d.mod)%d.mod:0>a?0:d.max<a?d.max:a)}function n(b){var c=f(),d=c._rgba=[];return b=b.toLowerCase(),l(e,function(a,e){var f,h=e.re.exec(b),i=h&&e.parse(h),j=e.space||"rgba";if(i)return f=c[j](i),c[g[j].cache]=f[g[j].cache],d=c._rgba=f._rgba,!1}),d.length?(d.join()==="0,0,0,0"&&a.extend(d,k.transparent),c):k[b]}function o(a,b,c){return c=(c+1)%1,c*6<1?a+(b-a)*c*6:c*2<1?b:c*3<2?a+(b-a)*(2/3-c)*6:a}var c="backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor",d=/^([\-+])=\s*(\d+\.?\d*)/,e=[{re:/rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d?(?:\.\d+)?)\s*)?\)/,parse:function(a){return[a[1],a[2],a[3],a[4]]}},{re:/rgba?\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d?(?:\.\d+)?)\s*)?\)/,parse:function(a){return[a[1]*2.55,a[2]*2.55,a[3]*2.55,a[4]]}},{re:/#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})/,parse:function(a){return[parseInt(a[1],16),parseInt(a[2],16),parseInt(a[3],16)]}},{re:/#([a-f0-9])([a-f0-9])([a-f0-9])/,parse:function(a){return[parseInt(a[1]+a[1],16),parseInt(a[2]+a[2],16),parseInt(a[3]+a[3],16)]}},{re:/hsla?\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d?(?:\.\d+)?)\s*)?\)/,space:"hsla",parse:function(a){return[a[1],a[2]/100,a[3]/100,a[4]]}}],f=a.Color=function(b,c,d,e){return new a.Color.fn.parse(b,c,d,e)},g={rgba:{props:{red:{idx:0,type:"byte"},green:{idx:1,type:"byte"},blue:{idx:2,type:"byte"}}},hsla:{props:{hue:{idx:0,type:"degrees"},saturation:{idx:1,type:"percent"},lightness:{idx:2,type:"percent"}}}},h={"byte":{floor:!0,max:255},percent:{max:1},degrees:{mod:360,floor:!0}},i=f.support={},j=a("<p>")[0],k,l=a.each;j.style.cssText="background-color:rgba(1,1,1,.5)",i.rgba=j.style.backgroundColor.indexOf("rgba")>-1,l(g,function(a,b){b.cache="_"+a,b.props.alpha={idx:3,type:"percent",def:1}}),f.fn=a.extend(f.prototype,{parse:function(c,d,e,h){if(c===b)return this._rgba=[null,null,null,null],this;if(c.jquery||c.nodeType)c=a(c).css(d),d=b;var i=this,j=a.type(c),o=this._rgba=[];d!==b&&(c=[c,d,e,h],j="array");if(j==="string")return this.parse(n(c)||k._default);if(j==="array")return l(g.rgba.props,function(a,b){o[b.idx]=m(c[b.idx],b)}),this;if(j==="object")return c instanceof f?l(g,function(a,b){c[b.cache]&&(i[b.cache]=c[b.cache].slice())}):l(g,function(b,d){var e=d.cache;l(d.props,function(a,b){if(!i[e]&&d.to){if(a==="alpha"||c[a]==null)return;i[e]=d.to(i._rgba)}i[e][b.idx]=m(c[a],b,!0)}),i[e]&&a.inArray(null,i[e].slice(0,3))<0&&(i[e][3]=1,d.from&&(i._rgba=d.from(i[e])))}),this},is:function(a){var b=f(a),c=!0,d=this;return l(g,function(a,e){var f,g=b[e.cache];return g&&(f=d[e.cache]||e.to&&e.to(d._rgba)||[],l(e.props,function(a,b){if(g[b.idx]!=null)return c=g[b.idx]===f[b.idx],c})),c}),c},_space:function(){var a=[],b=this;return l(g,function(c,d){b[d.cache]&&a.push(c)}),a.pop()},transition:function(a,b){var c=f(a),d=c._space(),e=g[d],i=this.alpha()===0?f("transparent"):this,j=i[e.cache]||e.to(i._rgba),k=j.slice();return c=c[e.cache],l(e.props,function(a,d){var e=d.idx,f=j[e],g=c[e],i=h[d.type]||{};if(g===null)return;f===null?k[e]=g:(i.mod&&(g-f>i.mod/2?f+=i.mod:f-g>i.mod/2&&(f-=i.mod)),k[e]=m((g-f)*b+f,d))}),this[d](k)},blend:function(b){if(this._rgba[3]===1)return this;var c=this._rgba.slice(),d=c.pop(),e=f(b)._rgba;return f(a.map(c,function(a,b){return(1-d)*e[b]+d*a}))},toRgbaString:function(){var b="rgba(",c=a.map(this._rgba,function(a,b){return a==null?b>2?1:0:a});return c[3]===1&&(c.pop(),b="rgb("),b+c.join()+")"},toHslaString:function(){var b="hsla(",c=a.map(this.hsla(),function(a,b){return a==null&&(a=b>2?1:0),b&&b<3&&(a=Math.round(a*100)+"%"),a});return c[3]===1&&(c.pop(),b="hsl("),b+c.join()+")"},toHexString:function(b){var c=this._rgba.slice(),d=c.pop();return b&&c.push(~~(d*255)),"#"+a.map(c,function(a){return a=(a||0).toString(16),a.length===1?"0"+a:a}).join("")},toString:function(){return this._rgba[3]===0?"transparent":this.toRgbaString()}}),f.fn.parse.prototype=f.fn,g.hsla.to=function(a){if(a[0]==null||a[1]==null||a[2]==null)return[null,null,null,a[3]];var b=a[0]/255,c=a[1]/255,d=a[2]/255,e=a[3],f=Math.max(b,c,d),g=Math.min(b,c,d),h=f-g,i=f+g,j=i*.5,k,l;return g===f?k=0:b===f?k=60*(c-d)/h+360:c===f?k=60*(d-b)/h+120:k=60*(b-c)/h+240,h===0?l=0:j<=.5?l=h/i:l=h/(2-i),[Math.round(k)%360,l,j,e==null?1:e]},g.hsla.from=function(a){if(a[0]==null||a[1]==null||a[2]==null)return[null,null,null,a[3]];var b=a[0]/360,c=a[1],d=a[2],e=a[3],f=d<=.5?d*(1+c):d+c-d*c,g=2*d-f;return[Math.round(o(g,f,b+1/3)*255),Math.round(o(g,f,b)*255),Math.round(o(g,f,b-1/3)*255),e]},l(g,function(c,e){var g=e.props,h=e.cache,i=e.to,j=e.from;f.fn[c]=function(c){i&&!this[h]&&(this[h]=i(this._rgba));if(c===b)return this[h].slice();var d,e=a.type(c),k=e==="array"||e==="object"?c:arguments,n=this[h].slice();return l(g,function(a,b){var c=k[e==="object"?a:b.idx];c==null&&(c=n[b.idx]),n[b.idx]=m(c,b)}),j?(d=f(j(n)),d[h]=n,d):f(n)},l(g,function(b,e){if(f.fn[b])return;f.fn[b]=function(f){var g=a.type(f),h=b==="alpha"?this._hsla?"hsla":"rgba":c,i=this[h](),j=i[e.idx],k;return g==="undefined"?j:(g==="function"&&(f=f.call(this,j),g=a.type(f)),f==null&&e.empty?this:(g==="string"&&(k=d.exec(f),k&&(f=j+parseFloat(k[2])*(k[1]==="+"?1:-1))),i[e.idx]=f,this[h](i)))}})}),f.hook=function(b){var c=b.split(" ");l(c,function(b,c){a.cssHooks[c]={set:function(b,d){var e,g,h="";if(d!=="transparent"&&(a.type(d)!=="string"||(e=n(d)))){d=f(e||d);if(!i.rgba&&d._rgba[3]!==1){g=c==="backgroundColor"?b.parentNode:b;while((h===""||h==="transparent")&&g&&g.style)try{h=a.css(g,"backgroundColor"),g=g.parentNode}catch(j){}d=d.blend(h&&h!=="transparent"?h:"_default")}d=d.toRgbaString()}try{b.style[c]=d}catch(j){}}},a.fx.step[c]=function(b){b.colorInit||(b.start=f(b.elem,c),b.end=f(b.end),b.colorInit=!0),a.cssHooks[c].set(b.elem,b.start.transition(b.end,b.pos))}})},f.hook(c),a.cssHooks.borderColor={expand:function(a){var b={};return l(["Top","Right","Bottom","Left"],function(c,d){b["border"+d+"Color"]=a}),b}},k=a.Color.names={aqua:"#00ffff",black:"#000000",blue:"#0000ff",fuchsia:"#ff00ff",gray:"#808080",green:"#008000",lime:"#00ff00",maroon:"#800000",navy:"#000080",olive:"#808000",purple:"#800080",red:"#ff0000",silver:"#c0c0c0",teal:"#008080",white:"#ffffff",yellow:"#ffff00",transparent:[null,null,null,0],_default:"#ffffff"}})(jQuery);
-</script>
-<script>
-var resultHTML = "", currentSelector = "", w3Sels = [];
-w3Sels.push(".intro");
-w3Sels.push("#Lastname");
-w3Sels.push(".intro, #Lastname");
-w3Sels.push("h1");
-w3Sels.push("h1, p");
-w3Sels.push("div p");
-w3Sels.push("div > p");
-w3Sels.push("ul + p");
-w3Sels.push("ul ~ table");
-w3Sels.push("*");
-w3Sels.push("p.myquote");
-w3Sels.push("[id]");
-w3Sels.push("[id=my-Address]");
-w3Sels.push("[id$=ess]");
-w3Sels.push("[id|=my]");
-w3Sels.push("[id^=L]");
-w3Sels.push("[title~=beautiful]");
-w3Sels.push("[id*=s]");
-w3Sels.push(":checked");
-w3Sels.push(":disabled");
-w3Sels.push(":enabled");
-w3Sels.push(":empty");
-w3Sels.push(":focus");
-w3Sels.push("p:first-child");
-w3Sels.push("p::first-letter");
-w3Sels.push("p::first-line");
-w3Sels.push("p:first-of-type");
-w3Sels.push("h1:hover");
-w3Sels.push("input:in-range");
-w3Sels.push("input:out-of-range");
-w3Sels.push("input:invalid");
-w3Sels.push("input:valid");
-w3Sels.push("p:lang(it)");
-w3Sels.push("p:last-child");
-w3Sels.push("p:last-of-type");
-w3Sels.push("tr:nth-child(even)");
-w3Sels.push("tr:nth-child(odd)");
-w3Sels.push("li:nth-child(1)");
-w3Sels.push("li:nth-last-child(1)");
-w3Sels.push("li:nth-of-type(2)");
-w3Sels.push("li:nth-last-of-type(2)");
-w3Sels.push("b:only-child");
-w3Sels.push("h3:only-of-type");
-w3Sels.push(":root");
+    </style>
 
-var w3SelDescriptions = [];
-w3SelDescriptions.push('Selects all elements with class="intro".');
-w3SelDescriptions.push('Selects the element with id="Lastname"');
-w3SelDescriptions.push('Selects all elements with class="intro", and the element with id="Lastname"');
-w3SelDescriptions.push('Selects all &lt;h1&gt; elements.');
-w3SelDescriptions.push('Selects all &lt;h1&gt; elements and all &lt;p&gt; elements.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are inside a &lt;div&gt; element.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are next to &lt;ul&gt; elements.');
-w3SelDescriptions.push('Selects all &lt;table&gt; elements that are siblings of a &lt;ul&gt; element.');
-w3SelDescriptions.push("Selects all elements.");
-w3SelDescriptions.push('Selects all &lt;p&gt; elements with class="myquote".');
-w3SelDescriptions.push('Selects all elements with an id attribute.');
-w3SelDescriptions.push('Selects all elements with an id attribute value equal to "my-Address"');
-w3SelDescriptions.push('Selects all elements with an id attribute value ending with "ess"');
-w3SelDescriptions.push('Selects all elements with an id attribute value equal to "my" or starting with "my" followed by a hyphen (-)');
-w3SelDescriptions.push('Selects all elements with an id attribute value starting with the letter "L"');
-w3SelDescriptions.push('Selects all elements with a title attribute value containing the word "beautiful"');
-w3SelDescriptions.push('Selects all elements with an id attribute value containing the string "s"');
-w3SelDescriptions.push("Selects all checked form elements.");
-w3SelDescriptions.push("Selects all disabled form elements.");
-w3SelDescriptions.push("Selects all enabled form elements.");
-w3SelDescriptions.push('Selects all empty elements<br>(like &lt;input /&gt;)');
-w3SelDescriptions.push('Selects the element that currently has focus.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are the first child of their parent.');
-w3SelDescriptions.push('Selects the first letter of all &lt;p&gt; elements.');
-w3SelDescriptions.push('Selects the first line of all &lt;p&gt; elements.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are the first &lt;p&gt; element of their parent.');
-w3SelDescriptions.push('Selects all &lt;h1&gt; elements, but only when you hover them.<br><br>Try hover (mouse over) the H1 element in the result.');
-w3SelDescriptions.push('Selects all &lt;input&gt; elements with a max and/or min value, where the value is within the specific range.<br><br>Try typing a number higher than 10, and you will see the styling disappear.');
-w3SelDescriptions.push('Selects all &lt;input&gt; elements with a max and/or min value, where the value is outside the specific range.<br><br>Try typing in the "Your lucky number" field, and if you are out of range, the styling will appear.');
-w3SelDescriptions.push('Selects all &lt;input&gt; elements where the value is invalid according to their limitations.<br><br>Try typing in the input fields, and if your input is invalid, the styling will appear.');
-w3SelDescriptions.push('Selects all &lt;input&gt; elements where the value is valid according to their limitations.<br><br>Try typing in the input fields, and if your input is invalid, the styling will disappear.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements with a lang attribute value starting with "it"');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are the last child of their parent.');
-w3SelDescriptions.push('Selects all &lt;p&gt; elements that are the last &lt;p&gt; element of their parent.');
-w3SelDescriptions.push('Selects all even &lt;tr&gt; elements.');
-w3SelDescriptions.push('Selects all odd &lt;tr&gt; elements.');
-w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the first child of their parent.');
-w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the first child of their parent, counting from the last child.');
-w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the second &lt;li&gt; element of their parent.');
-w3SelDescriptions.push('Selects all &lt;li&gt; elements that are the second &lt;li&gt; element of their parent, counting from the &lt;li&gt; element.');
-w3SelDescriptions.push('Selects all &lt;b&gt; elements that are the only child of their parent.');
-w3SelDescriptions.push('Selects all &lt;h3&gt; elements that are the only child of its type, of their parent.');
-w3SelDescriptions.push('Selects the document’s root element.');
-
-function w3jQuerySelectorLoad() {
- var l = w3Sels.length, x = "";
- for (i = 0; i < l; i++) {
-  x = x + "<div id='seldiv_" + w3Sels[i] + "' onclick='clickSelOpt(\"" + w3Sels[i] + "\",this);'>" + w3Sels[i] + "</div>";
- }
- document.getElementById("selectorOptions").innerHTML = x;
- 
-   clickSelOpt('li:nth-last-child(1)');
-  
-}
-
-function clickSelOpt(sel) {
- var l = w3Sels.length, ll, x, y, z, patt, arrPos, i, cc, dd;
- currentSelector = sel;
- if (resultHTML !== "") {
-  document.getElementById("iframeResult").innerHTML = resultHTML;
-  resultHTML = "";
- }
- z = document.getElementById("selectorOptions").getElementsByTagName("DIV");
- for (i = 0; i < z.length; i++) {
-  z[i].style.fontWeight = "normal";
- }
- $("#iframeResult p").css("background-color","");
- $("#iframeResult p").css("borderColor","");
- for (i = 0; i < l; i++) {
-  if (w3Sels[i] !== "p::first-letter" && w3Sels[i] !== "p::first-line" && w3Sels[i] !== "input:in-range" && w3Sels[i] !== "input:out-of-range" && w3Sels[i] !== "input:invalid" && w3Sels[i] !== "input:valid") {
-   $("#iframeResult " + w3Sels[i] + " :not(.noSel)").css("background-color","");
-   $("#iframeResult " + w3Sels[i] + " :not(.noSel)").css("borderColor","");
-  }
-  if (w3Sels[i] === sel) {arrPos=i; }
- }
- $("option").css("color","black"); 
- $("#iframeResult .newsletter").css("border-color","#0099FF");    
- $("#iframeResult .newsletter").css("background-color","#99D6FF");  
- document.getElementById("selectorDescription").style.display="block";
- document.getElementById("selectorDescription").innerHTML = "<p style='line-height:20px;'><b>Selector:</b><br>" + w3Sels[arrPos] + "</p><p>" + w3SelDescriptions[arrPos] + "</p>";
- $("#iframeResult :radio").css("outlineColor","transparent");  
- $("#iframeResult :checkbox").css("outlineColor","transparent");  
-    $("select").css("color","#000000");
-    paintElements(sel,1);
- if (sel === ":focus") {
-  document.getElementsByTagName("INPUT")[0].focus();
- }
- if (sel === ":root") {
-  markSelector("#iframeResult");
- } else {
-  document.getElementById("iframeResult").style.backgroundColor="";
-  document.getElementById("iframeResult").style.borderColor="";  
- }
- patt = /,/g;
- x = "#iframeResult " + sel;
- if (sel === "*") {
-  x = "#helpIntro,#iframeResult p,#Lastname,#iframeResult .helpUl,#iframeResult li,#iframeResult .helpTable,#iframeResult tr,#iframeResult td,#iframeResult th,#iframeResult .helpHref,#iframeResult .newsletter,#iframeResult input,#iframeResult"
-  if (sel === "*") {x=x+",#iframeResult :text"; }
-  markSelector(x,sel);
-  if (sel === "*") {  
-   x = "#iframeResult :radio,#iframeResult :checkbox";
-   markRadioSelector(x);
-  }
-  return;
- } 
- if (sel === ":empty") {
-//  x = "#iframeResult :text";
-  x = "#iframeResult input";
-  markSelector(x,sel);
-  x = "#iframeResult :radio,#iframeResult :checkbox";
-  markRadioSelector(x);
-  return;
- } 
- if (sel === "[id]") {
-  x = "#Lastname, #my-Address, .helpUl";
-  markSelector(x,sel);
-  return;
- } 
-
- if (sel === "p::first-letter") {
-  resultHTML = document.getElementById("iframeResult").innerHTML;
-  x = document.getElementsByTagName("p");
-  ll = x.length;
-  for (i = 0; i < ll; i++) {
-   cc = x[i].innerHTML;
-   if (cc.indexOf('<span class="markup">&lt;p&gt;</span><span><b><span class="markup">&lt;b&gt;</span>') >- 1) {
-    x[i].innerHTML = "<span class='markup'>&lt;p&gt;</span><span><b><span class='markup'>&lt;b&gt;</span><span style='background-color:#FFFF99;border-color:#FF6666;'>" + cc.substr(83,1) + "</span>" + cc.substr(84);
-   } else if (cc.indexOf('<span class="markup">&lt;p&gt;</span>') >- 1) {
-    x[i].innerHTML = "<span class='markup'>&lt;p&gt;</span><span style='background-color:#FFFF99;border-color:#FF6666;'>" + cc.substr(37,1) + "</span>" + cc.substr(38);
-
-   } else if (cc.indexOf('<span class="markup">&lt;p class="myquote"&gt;</span>') >- 1) {
-    x[i].innerHTML = '<span class="markup">&lt;p class="myquote"&gt;</span><span style="background-color:#FFFF99;border-color:#FF6666;">' + cc.substr(53,1) + '</span>' + cc.substr(54);
-
-   } else if (cc.indexOf('<span class="markup">&lt;p id="my-Address"&gt;</span>') >- 1) {
-    x[i].innerHTML = '<span class="markup">&lt;p id="my-Address"&gt;</span><span style="background-color:#FFFF99;border-color:#FF6666;">' + cc.substr(53,1) + "</span>" + cc.substr(54);
-   } else if (cc.indexOf('<span class="markup">&lt;p lang="it" title="Hello beautiful"&gt;</span>') >- 1) {
-    x[i].innerHTML = '<span class="markup">&lt;p lang="it" title="Hello beautiful"&gt;</span><span style="background-color:#FFFF99;border-color:#FF6666;">' + cc.substr(71,1) + "</span>" + cc.substr(72);
-   }
-  }
-  paintElements(sel,2);
-  return;
- }
- if (sel === "p::first-line") {
-  resultHTML = document.getElementById("iframeResult").innerHTML;
-  x = document.getElementsByTagName("p");
-  ll = x.length;
-  for (i = 0; i < ll; i++) {
-   cc = x[i].innerHTML;
-   if (cc.indexOf('All my friends are great!') >- 1) {
-    x[i].innerHTML = '<span class="markup">&lt;p class="myquote"&gt;</span><span style="background-color:#FFFF99;border-color:#FF6666;">All my friends are great!</span><span class="markup">&lt;br&gt;</span><br>But I really like Daisy!!<span class="markup">&lt;/p&gt;</span>';
-   } else if (cc.indexOf('Ciao bella') >- 1) {
-    x[i].innerHTML = cc.replace("Ciao bella",'<span style="background-color:#FFFF99;border-color:#FF6666;">Ciao bella</span>');
-   } else if (cc.indexOf('My latest disco') >- 1) {
-    x[i].innerHTML = cc.replace("My latest discoveries has led me to believe that we are all animals:",'<span style="background-color:#FFFF99;border-color:#FF6666;">My latest discoveries has led me to believe that we are all animals:</span>');
-   } else if (cc.indexOf('I have many friends') >- 1) {
-    x[i].innerHTML = cc.replace("I have many friends:",'<span style="background-color:#FFFF99;border-color:#FF6666;">I have many friends:</span>');
-   } else if (cc.indexOf('I live in Duckburg') >- 1) {
-    x[i].innerHTML = cc.replace("I live in Duckburg",'<span style="background-color:#FFFF99;border-color:#FF6666;">I live in Duckburg</span>');
-   } else if (cc.indexOf('My name is Donald') >- 1) {
-    x[i].innerHTML = '<span class="markup">&lt;p&gt;</span><span style="background-color:#FFFF99;border-color:#FF6666;">My name is Donald <span id="Lastname" style=""><span class="markup">&lt;span id="Lastname"&gt;</span>Duck.</span><span class="markup">&lt;/span&gt;</span></span><span class="markup">&lt;/p&gt;</span>'
-   }
-  }
-  paintElements(sel,2);
-  return;
- }
- if (sel === "h1:hover") {
-  $("h1").hover(function(){
-   $("h1").css("background-color","#FFFF99");
-   $("h1").css("border-color","#FF6666");
-  },function(){
-   $("h1").css("background-color","");
-   $("h1").css("border-color","");
-  });
- } else {
-  $("h1").hover(function(){
-   $("h1").css("background-color","");
-   $("h1").css("border-color","");
-  },function(){
-   $("h1").css("background-color","");
-   $("h1").css("border-color","");
-  });
- }
- if (sel === ".intro") {x = "#iframeResult #helpIntro"; }
- if (sel === ".intro, #Lastname") {x = "#iframeResult #helpIntro, #Lastname"; } 
- if (sel === "div > p") {x = "#iframeResult div.intro > p"; }
- if (sel === "div p") {x = "#iframeResult div.intro p"; } 
- if (sel === "[id^=L]") {x = "#iframeResult #Lastname, .helpUl"; }
- x = x.replace(patt,",#iframeResult ");
-    if (sel === ":radio" || sel === ":checkbox" || sel === ":checked") {
-  markRadioSelector(x);
- } else {
-  y=x + ":not(.noSel)";
-  markSelector(y,sel);
-  if (sel === ":input" || sel === ":enabled" || sel === ":disabled" || sel === "*") { markRadioSelector(x); }
- }
-}
-
-function paintElements(sel,n) {
- if (n === 2 && sel !== "tr:nth-child(even)" && sel !== "tr:nth-child(odd)") {
-  $("#iframeResult tr").css("background-color","#f1f1f1");  
- }
-}
-
-function markSelector(x,sel) {
-    $(x).animate({borderColor:"#FF6666"},10);     
-    $(x).animate({backgroundColor:"#FFFF99"},100,function () { paintElements(sel,2); });         
-}
-
-function markRadioSelector(x) {
-    $(x).animate({outlineColor:"#FF0000"},100);             
-}
-
-function changeLuckyNumber(obj) {
- if (currentSelector === "input:in-range" || currentSelector === "input:valid") {
-  var x = obj.value;
-  if (isNaN(x) === true || Number(x)<1 || Number(x)>10) {
-   obj.style.backgroundColor = "";
-   obj.style.borderColor = "";
-  } else {
-   obj.style.backgroundColor = "#FFFF99";
-   obj.style.borderColor = "#FF6666";
-  }
- } else if (currentSelector === "input:out-of-range" || currentSelector === "input:invalid") {
-  var x = obj.value;
-  if (isNaN(x) === true || Number(x)<1 || Number(x)>10) {
-   obj.style.backgroundColor = "#FFFF99";
-   obj.style.borderColor = "#FF6666";
-  } else {
-   obj.style.backgroundColor = "";
-   obj.style.borderColor = "";
-  }
- }
-}
-
-function changeEmail(obj) {
- if (currentSelector === "input:invalid") {
-  if (obj.checkValidity() === false) {
-   obj.style.backgroundColor = "#FFFF99";
-   obj.style.borderColor = "#FF6666";
-  } else {
-   obj.style.backgroundColor = "";
-   obj.style.borderColor = "";
-  }
- } else if (currentSelector === "input:valid") {
-  if (obj.checkValidity() === true) {
-   obj.style.backgroundColor = "#FFFF99";
-   obj.style.borderColor = "#FF6666";
-  } else {
-   obj.style.backgroundColor = "";
-   obj.style.borderColor = "";
-  }
- }
-}
-</script>
-<style>
-body {
- line-height:15px;
-}
-
-h1 {
- line-height:34px;
- margin-bottom:0px;
- margin-top:10px;
-}
-#iframeResult
-{
-font-family:Arial;
-border-radius:5px;
-}
-#iframeResult * :not(.noSel)
-{
-border:1px solid transparent;
-}
-#iframeResult span.markup
-{
-color:#aaaaaa;
-font-size:12px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-font-weight:normal;
-}
-
-#selectorOptions div {
- font-family:"Courier New", Courier, monospace;
- font-family:Verdana, Geneva, Tahoma, sans-serif;
- font-size:14px; 
- line-height:16px;
- cursor:pointer;
-}
-#selectorOptions div:hover {
- background-color:#f1f1f1;
-}
-#content, #footer {
- background-color:#f1f1f1;
-}
-#content {
- border-top:none;
-}
-.headerText, #footer {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:16px;
- color:#222222;
-}
-#selectorDescription {
- padding:10px;
- display:none;
- width:225px;
- background-color:#f1f1f1;
- border:1px solid #d3d3d3;
- border-radius:5px;
- position:fixed;
- top:150px;
- left:230px;
- text-align:center;
- font-family:Verdana;
- font-size:12px;
-}
-.smalldevice {
- display:none;
-}
-@media screen and (max-width: 1160px)  {
-    .smalldevice {
-     display:inline;
-    }
-    .largedevice {
-     display:none;
-    }
-}
-@media screen and (max-width: 950px)  {
- #selectorDescription {
-  left:200px;
-      width:150px;
- }
-}
-@media only screen and (max-width: 768px) {
-    #textareaCode {
-        padding:5px;
-    }
-    .iframewrapper {
-        overflow: auto;
-    }
-    .container {
-     min-width:320px;
-    }
-    .textarea, .iframe {
-        height:97%;
-    }
-    .textareacontainer, .iframecontainer {
-        height:50%;
-        float:none;
-        width:98%;
-    }
-    .textarea, .iframe {
-        height:97%;
-        padding:15px;            
-    }
- .textareacontainer {
-     height:300px;
- }
- 
- .container {
-     bottom:initial;
-     height:initial;
-     min-width:250px;
- }
- #selectorDescription {
-  width:40%;
-  position:absolute;
-  top:55px;
-  left:initial;
-  right:10%;
- }
-}
-@media screen and (max-height: 700px) {
-    .footerText {
-     display:none;
-    }
-}
-
-</style>
-</head>
-<body onload="w3jQuerySelectorLoad();">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id='tryitLeaderboard' style="background-color:#ffffff">
-<!-- TryitLeaderboard -->
-
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="adngin-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
- 
-</div>
-<div class="container">
-  <div class="textareacontainer">
-    <div class="textarea">
-      <div style="overflow:auto;">
-        <div class="headerText">
-          <span class="smalldevice">Click a selector:</span>
-          <span class="largedevice">Click a selector to see which element(s)   that gets selected in the result:</span>
-        </div>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KTCFC3S');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTCFC3S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <div class="w3-container" style="padding: 40px 50px">
+          <a href="https://www.w3schools.com">
+          <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path d="M33.693 7.90419C33.693 7.90419 34.699 8.98204 36.1042 8.98204C37.2139 8.98204 38.0203 8.31138 38.0203 7.39321C38.0203 6.26746 36.9904 5.7485 35.7449 5.7485H35.0103L34.5712 4.75848L36.5193 2.4511C36.9345 1.95609 37.2858 1.64471 37.2858 1.64471C37.2858 1.64471 36.9744 1.66068 36.3437 1.66068H33.174V0L39.665 0V1.21357L37.0622 4.22355C38.5313 4.43114 39.9684 5.47705 39.9684 7.32136C39.9684 9.13373 38.5952 10.8104 36.2239 10.8104C33.9644 10.8104 32.7109 9.38922 32.7109 9.38922L33.693 7.90419Z" fill="#04AA6D"/>
+              <path d="M21.0301 10.1478L29.6049 25.4132L33.8364 17.8683L25.7406 3.45715H16.3195L12.4153 10.4112L8.5111 3.45715H0.0400391L12.3674 25.4132L12.4153 25.3334L12.4632 25.4132L21.0301 10.1478Z" fill="#04AA6D"/>
+              <path d="M0.12793 35.7604H1.38142C1.38142 36.1277 1.70078 36.479 2.26765 36.479C2.7946 36.479 3.14589 36.2155 3.14589 35.8642C3.14589 35.5608 2.91436 35.4251 2.51516 35.3372L1.79659 35.1536C0.583019 34.8342 0.271642 34.1875 0.271642 33.5009C0.271642 32.6626 1.10198 31.8961 2.27563 31.8961C3.23372 31.8961 4.31955 32.3831 4.30358 33.5808H3.03412C3.03412 33.2135 2.69879 32.9819 2.31555 32.9819C1.90038 32.9819 1.61296 33.2215 1.61296 33.5568C1.61296 33.8362 1.87643 33.9959 2.18781 34.0678L3.05009 34.2993C4.26366 34.6107 4.47923 35.3692 4.47923 35.8642C4.47923 36.958 3.38541 37.5568 2.2916 37.5568C1.22973 37.5568 0.151882 36.9101 0.12793 35.7604Z" fill="#04AA6D"/>
+              <path d="M5.58887 34.7225C5.58887 33.0139 6.96212 31.8961 8.51901 31.8961C9.45314 31.8961 10.2116 32.3113 10.7066 32.934L9.76452 33.6845C9.48507 33.3492 9.02998 33.1416 8.54296 33.1416C7.60883 33.1416 6.93817 33.8123 6.93817 34.7225C6.93817 35.6247 7.60883 36.3113 8.54296 36.3113C9.02998 36.3113 9.48507 36.1037 9.76452 35.7684L10.7066 36.5189C10.2116 37.1416 9.45314 37.5568 8.51901 37.5568C6.96212 37.5568 5.58887 36.431 5.58887 34.7225Z" fill="#04AA6D"/>
+              <path d="M17.158 34.3952V37.4132H15.8167V34.491C15.8167 33.6288 15.2977 33.1657 14.6989 33.1657C14.0842 33.1657 13.3257 33.525 13.3257 34.5709V37.4212H11.9844V29.1018H13.3337V32.8463C13.5971 32.1916 14.4674 31.8882 15.0023 31.8882C16.3916 31.8962 17.158 32.8303 17.158 34.3952Z" fill="#04AA6D"/>
+              <path d="M18.5635 34.7225C18.5635 33.0139 19.8888 31.8961 21.4218 31.8961C22.9547 31.8961 24.296 33.0139 24.296 34.7225C24.296 36.431 22.9547 37.5568 21.4218 37.5568C19.8888 37.5568 18.5635 36.431 18.5635 34.7225ZM22.9467 34.7225C22.9467 33.7963 22.2521 33.1416 21.4218 33.1416C20.5914 33.1416 19.9128 33.7963 19.9128 34.7225C19.9128 35.6646 20.5914 36.3113 21.4218 36.3113C22.2521 36.3113 22.9467 35.6646 22.9467 34.7225Z" fill="#04AA6D"/>
+              <path d="M25.4375 34.7225C25.4375 33.0139 26.7628 31.8961 28.2958 31.8961C29.8287 31.8961 31.17 33.0139 31.17 34.7225C31.17 36.431 29.8287 37.5568 28.2958 37.5568C26.7708 37.5568 25.4375 36.431 25.4375 34.7225ZM29.8207 34.7225C29.8207 33.7963 29.1261 33.1416 28.2958 33.1416C27.4654 33.1416 26.7868 33.7963 26.7868 34.7225C26.7868 35.6646 27.4654 36.3113 28.2958 36.3113C29.1341 36.3113 29.8207 35.6646 29.8207 34.7225Z" fill="#04AA6D"/>
+              <path d="M32.6553 37.4212V29.1018H33.9966V37.4212H32.6553Z" fill="#04AA6D"/>
+              <path d="M35.457 35.7604H36.7105C36.7105 36.1277 37.0299 36.479 37.5968 36.479C38.1237 36.479 38.475 36.2155 38.475 35.8642C38.475 35.5608 38.2435 35.4251 37.8443 35.3372L37.1257 35.1536C35.9121 34.8342 35.6007 34.1875 35.6007 33.5009C35.6007 32.6626 36.4311 31.8961 37.6047 31.8961C38.5628 31.8961 39.6486 32.3831 39.6327 33.5808H38.3552C38.3552 33.2135 38.0199 32.9819 37.6367 32.9819C37.2215 32.9819 36.9341 33.2215 36.9341 33.5568C36.9341 33.8362 37.1975 33.9959 37.5089 34.0678L38.3712 34.2993C39.5848 34.6107 39.8003 35.3692 39.8003 35.8642C39.8003 36.958 38.7065 37.5568 37.6127 37.5568C36.5508 37.5568 35.481 36.9101 35.457 35.7604Z" fill="#04AA6D"/>
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="40" height="37.5569" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+    </div>
+    <div class="w3-row">
+      <div class="w3-container w3-half" style="padding: 100px 0px 100px 50px;">
+        <h2 style="font-size: 30px;">Sorry!</h2>
+        <h1 style="font-weight:bold; font-size: 36px;">We can't seem to find the resource you're looking for.</h1>
+        <p style="font-size: 16px; opacity: 0.7">Please check that the Web site address is spelled correctly.<br>Or go to our <a href="/default.asp">home page</a>, and use the menus to navigate to a specific section.</p> 
       </div>
-      <div class="textareawrapper" style="padding-top:5px;overflow:auto;">
-   <div id="selectorOptions" style="margin:10px;margin-right:0px;">
-   </div>
-   <div id="selectorDescription"></div>
-       </div>
-    </div>
-  </div>
-  <div class="iframecontainer">
-    <div class="iframe">
-      <div style="overflow:auto;">
-        <div class="headerText">Result:</div>
-      </div>
-      <div class="iframewrapper">
-        <div id="iframeResult" class="result_output" style="overflow:auto;">
-
-
-
-       <div id="selectorResult" style="padding:5px;" class="noSel">
-       <div class="noSel">
-<h1><span class="markup">&lt;h1&gt;</span>Welcome to My Homepage<span class="markup">&lt;/h1&gt;</span></h1>
-
-<div id="helpIntro">
-<span class="markup">&lt;div class="intro"&gt;</span>
-<div class="intro">
-<p style="margin-top:4px;"><span class="markup">&lt;p&gt;</span>My name is Donald <span id="Lastname"><span class="markup">&lt;span id="Lastname"&gt;</span>Duck.<span class="markup">&lt;/span&gt;</span></span><span class="markup">&lt;/p&gt;</span></p>
-<p id="my-Address"><span class="markup">&lt;p id="my-Address"&gt;</span>I live in Duckburg<span class="markup">&lt;/p&gt;</span></p>
-<p style="margin-bottom:4px;"><span class="markup">&lt;p&gt;</span>I have many friends:<span class="markup">&lt;/p&gt;</span></p>
-</div>
-<span class="markup">&lt;/div&gt;</span>
-</div>
-
-<br>
-<div class="helpUl">
-<span class="markup">&lt;ul id="Listfriends&gt;</span>
-<ul id="Listfriends" style="margin-top:0px;margin-bottom:0px;">
-
-<li><span class="markup">&lt;li&gt;</span>Goofy<span class="markup">&lt;/li&gt;</span></li>
-<li><span class="markup">&lt;li&gt;</span>Mickey<span class="markup">&lt;/li&gt;</span></li>
-<li><span class="markup">&lt;li&gt;</span>Daisy<span class="markup">&lt;/li&gt;</span></li>
-<li><span class="markup">&lt;li&gt;</span>Pluto<span class="markup">&lt;/li&gt;</span></li>
-</ul>       
-<span class="markup">&lt;/ul&gt;</span>
-</div>
-
-<ul style="display:none;"></ul>
-<p class="myquote"><span class="markup">&lt;p class="myquote"&gt;</span>All my friends are great!<span class="markup">&lt;br&gt;</span><br>But I really like Daisy!!<span class="markup">&lt;/p&gt;</span></p>
-
-<p lang="it" title="Hello beautiful"><span class="markup">&lt;p lang="it" title="Hello beautiful"&gt;</span>Ciao bella<span class="markup">&lt;/p&gt;</span></p>
-
-
-<h3><span class="markup">&lt;h3&gt;</span>We are all animals!<span class="markup">&lt;/h3&gt;</span></h3>
-
-<p><span class="markup">&lt;p&gt;</span><span><b><span class="markup">&lt;b&gt;</span>My latest discoveries have led me to believe that we are all animals:<span class="markup">&lt;/b&gt;</span></b></span><span class="markup">&lt;/p&gt;</span></p>
-
-<div class="helpTable" style="width:220px;">
-<span class="markup">&lt;table&gt;</span>
-<ul style="display:none;"></ul>
-
-<table cellpadding="2" cellspacing="2">
-<tr>
-<th style="background-color:#f1f1f1;">Name</th>
-<th style="background-color:#f1f1f1;">Type of Animal</th>
-</tr>
-<tr>
-<td style="background-color:#f1f1f1;">Mickey</td>
-<td style="background-color:#f1f1f1;">Mouse</td>
-</tr>
-<tr>
-<td style="background-color:#f1f1f1;">Goofey</td>
-<td style="background-color:#f1f1f1;">Dog</td>
-</tr>
-<tr>
-<td style="background-color:#f1f1f1;">Daisy</td>
-<td style="background-color:#f1f1f1;">Duck</td>
-</tr>
-<tr>
-<td style="background-color:#f1f1f1;">Pluto</td>
-<td style="background-color:#f1f1f1;">Dog</td>
-</tr>
-</table>
-<span class="markup">&lt;/table&gt;</span>
-</div>
-
-<div class="noSel newsletter" style="background-color:#99D6FF;border:1px solid #0099FF;padding:10px;">
-<form>
- <h4>Subscribe to my newsletter:</h4>
- <div style="overflow:auto;">
-  <div style="width:100px;float:left;">Name:</div><div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
-    </div>
- <div style="overflow:auto;">
-  <div style="width:100px;float:left;">E-mail:</div><div style="width:180px;float:left;"><input type="email" style="width:150px" class="markup" onchange="changeEmail(this)" /></div>
-    </div>
-<!--
-  <div style="width:65px;float:left;">Password:</div><div style="width:180px;float:left;"><input type="password" style="width:150px" name="password" value="password" /></div>
-  <div class="noSel" style="clear:both;"></div>      
--->
-  <div class="noSel" style="margin-top:10px;">
-   Female: <input name="rr" type="radio" id="rr1" checked="checked" style="outline:2px solid transparent"/>
-   Male: <input name="rr" type="radio" id="rr2" style="outline:2px solid transparent" />
-   Other: <input name="rr" type="radio" id="rr3" disabled="disabled" style="outline:2px solid transparent" />  
-  </div>
-  <h4>Newscategories:</h4>
- <div style="overflow:auto;">
-  <div style="width:60px;float:left;">Ducks:</div><div style="width:20px;float:left;"><input id="cc1" type="checkbox" checked="checked" style="outline:2px solid transparent" /></div>
-    </div>
- <div style="overflow:auto;">
-  <div style="width:60px;float:left;">Dogs:</div><div style="width:20px;float:left;"><input id="cc2" type="checkbox" style="outline:2px solid transparent" /></div>
-    </div>
- <div style="overflow:auto;">
-  <div style="width:60px;float:left;">Humans:</div><div style="width:20px;float:left;"><input id="cc3" type="checkbox" style="outline:2px solid transparent" /></div>
-    </div>
- <div class="noSel" style="clear:both;"></div>
- <p class="noSel">Your lucky number (between 1 and 10): <input type="number" min="1" max="10" value="7" onchange="changeLuckyNumber(this)" /></p>
-<!-- 
- <input class="noSel" type="reset" value="Reset" style="outline:2px solid transparent" />
- <input class="noSel" type="submit" value="Submit" style="outline:2px solid transparent" /> 
- <input class="noSel" type="button" value="Cancel" style="outline:2px solid transparent" />
- <div style="margin-top:10px;">
-  <div style="width:120px;float:left;text-align:center;">
-   <h4 style="margin:0px;font-size:14px;">My Favourite:</h4>
-   <select multiple class="myselect">
-    <option>Donald</option>
-    <option selected>Mickey</option>
-    <option>Goofy</option>  
-   </select>
-  </div>
-  <div style="width:250px;float:left;">
-   <h4 style="font-size:14px;margin-top:0px;">Upload image:</h4>
-   <input type="file" />
-  </div>
-  <input type="image" src="arrow-r.jpg" style="float:right;border:3px solid transparent" />
-  <div style="clear:both"></div>  
- </div> 
--->
-</form>
-</div>
-
-<br>
-
-
-
-
-       </div>
-
-  </div>
-        
-        
-        
-        </div>
+      <div class="w3-container w3-half" style="padding: 100px;">
+        <div style="position:relative;display:block;width:312px;height:312px;background-color:#d6eee2;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;">
+          <svg class="-smile-icon" style="width:148px;height:217px;position:absolute;top:50%;left:50%;margin-top:-108.5px;margin-left:-74px" width="142" height="210" viewBox="0 0 142 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.8136 0C11.7148 2.96327 11.8926 5.74876 12.3272 8.31693C12.7816 10.8851 13.473 13.1372 14.441 15.0337C15.409 16.9302 16.6338 18.4316 18.1155 19.5181C19.5971 20.6046 21.3553 21.1578 23.3901 21.1578C24.8322 21.1578 26.057 20.9405 27.0645 20.5256C28.0721 20.1107 29.0006 19.5774 29.8105 18.9254C30.6205 18.2735 31.4107 17.6018 32.1811 16.8907C32.9516 16.1795 33.7615 15.488 34.6308 14.8559C35.5 14.2237 36.4878 13.6706 37.594 13.2557C38.7003 12.8409 40.0634 12.6235 41.6438 12.6235C43.1847 12.6235 44.6861 12.9001 46.148 13.4335C47.6099 13.9866 48.9137 14.7768 50.0398 15.8041C51.1856 16.8511 52.0943 18.1155 52.7857 19.6366C53.4772 21.138 53.8328 22.8567 53.8328 24.7927C53.8328 27.2226 53.2796 29.3957 52.1536 31.3317C51.0473 33.2677 49.5261 34.8876 47.6297 36.231C45.7134 37.5743 43.5403 38.5818 41.0907 39.2732C38.6411 39.9646 36.0729 40.3203 33.4059 40.3203C28.803 40.3203 24.4766 39.4708 20.4071 37.7916C16.3375 36.1124 12.8013 33.6035 9.7788 30.2451C6.75626 26.9065 4.36589 22.6987 2.60768 17.6611C0.849471 12.6235 0 6.7365 0 0H11.8136ZM102.351 25.2471C102.351 27.1238 101.996 28.882 101.304 30.5217C100.613 32.1614 99.6647 33.564 98.4399 34.7493C97.2348 35.9346 95.8124 36.8829 94.1728 37.5743C92.5331 38.2657 90.7946 38.6213 88.9772 38.6213C87.1004 38.6213 85.3422 38.2657 83.7025 37.5743C82.0629 36.8829 80.6603 35.9346 79.4749 34.7493C78.2896 33.564 77.3414 32.1416 76.65 30.5217C75.9585 28.882 75.6029 27.1238 75.6029 25.2471C75.6029 23.3703 75.9388 21.6121 76.65 20.012C77.3414 18.4118 78.2896 16.9894 79.4749 15.7844C80.6603 14.5596 82.0826 13.6113 83.7025 12.9199C85.3422 12.2285 87.1004 11.8729 88.9772 11.8729C90.8144 11.8729 92.5331 12.2285 94.1728 12.9199C95.8124 13.6113 97.2348 14.5596 98.4399 15.7844C99.645 16.9894 100.613 18.4118 101.304 20.012C101.996 21.6121 102.351 23.3703 102.351 25.2471Z" fill="#04AA6D"/>
+            <path d="M59.1272 117.267H30.2255V100.554H59.1075V72.8569H74.0424V100.554H102.786V117.267H74.0424V144.963H59.1075V117.267H59.1272Z" fill="#04AA6D"/>
+            <path d="M4.22766 170.309H18.3328V192.514H127.895V170.309H142V209.227H4.22766V170.309Z" fill="#04AA6D"/>
+          </svg>
+          </div> 
       </div>
     </div>
-  </div>
-  <div class="footerText">Click the CSS Selectors and see the specified element(s) get selected. &copy; <a href="../index.html">w3schools.com</a></div>      
-</div>
-<script>
-uic_r_e()
-</script>
-</body>
-
-<!-- Mirrored from www.w3schools.com/cssref/trysel.asp?selector=li:nth-last-child(1) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:18:06 GMT -->
+  </body>
 </html>

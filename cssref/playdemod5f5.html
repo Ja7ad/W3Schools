@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/cssref/playdemo.asp?filename=playcss_grid-template by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:16:44 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playdemo.php?filename=playcss_grid-template by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:36:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -15,22 +15,20 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
 </script>
 <!-- End Google Tag Manager -->
-
-<script src="../lib/uic2c70.js?v=1.0.3"></script>
+<script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
-
 k42 = true;
-
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-
       "activeAdUnits": ["try_it_leaderboard"]
-
   }
 }
 uic_r_a()
@@ -50,13 +48,18 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
                 adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
               }
          
     }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();   
 }
+var fileID = "";
 </script>
 <body class="darktheme">
 <!-- Google Tag Manager (noscript) -->
@@ -65,11 +68,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
-
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
   <div id="adngin-try_it_leaderboard-0"></div>
   <!-- adspace tryit-->
- 
 </div>
 
 <style>
@@ -228,9 +229,7 @@ auto / auto auto|
 	</div>
 	
 </div>
-</div>
-
-</div>
+</div></div>
 <script>
 var temp = document.createElement("div");
 temp.innerHTML = document.getElementById("tempcontainer").innerHTML;
@@ -432,6 +431,7 @@ var propertylist = [
 //"animation-play-state",
 //"animation-timing-function",
 //"backface-visibility",
+"aspect-ratio",
 "backdrop-filter",
 "background",
 //"background-attachment",
@@ -441,9 +441,22 @@ var propertylist = [
 "background-image",
 "background-origin",
 "background-position",
+"background-position-x",
+"background-position-y",
 "background-repeat",
 "background-size",
+"block-size",
 "border",
+"border-block",
+"border-block-color",
+"border-block-end-color",
+"border-block-end-style",
+"border-block-end-width",
+"border-block-start-color",
+"border-block-start-style",
+"border-block-start-width",
+"border-block-style",
+"border-block-width",
 "border-bottom",
 "border-bottom-color",
 "border-bottom-left-radius",
@@ -452,12 +465,24 @@ var propertylist = [
 "border-bottom-width",
 "border-collapse",
 "border-color",
+"border-end-end-radius",
+"border-end-start-radius",
 "border-image",
 "border-image-outset",
 "border-image-repeat",
 "border-image-slice",
 "border-image-source",
 "border-image-width",
+"border-inline",
+"border-inline-color",
+"border-inline-end-color",
+"border-inline-end-style",
+"border-inline-end-width",
+"border-inline-start-color",
+"border-inline-start-style",
+"border-inline-start-width",
+"border-inline-style",
+"border-inline-width",
 "border-left",
 "border-left-color",
 "border-left-style",
@@ -468,6 +493,8 @@ var propertylist = [
 "border-right-style",
 "border-right-width",
 "border-spacing",
+"border-start-end-radius",
+"border-start-start-radius",
 "border-style",
 "border-top",
 "border-top-color",
@@ -478,6 +505,7 @@ var propertylist = [
 "border-width",
 "bottom",
 //"box-decoration-break",
+"box-reflect",
 "box-shadow",
 "box-sizing",
 //"break-after",
@@ -553,6 +581,14 @@ var propertylist = [
 "image-rendering",
 //"@import",
 //"isolation",
+"inline-size",
+"inset",
+"inset-block",
+"inset-block-end",
+"inset-block-start",
+"inset-inline",
+"inset-inline-end",
+"inset-inline-start",
 "justify-content",
 //"@keyframes",
 "left",
@@ -563,7 +599,13 @@ var propertylist = [
 "list-style-position",
 "list-style-type",
 "margin",
+"margin-block",
+"margin-block-end",
+"margin-block-start",
 "margin-bottom",
+"margin-inline",
+"margin-inline-end",
+"margin-inline-start",
 "margin-left",
 "margin-right",
 "margin-top",
@@ -576,6 +618,10 @@ var propertylist = [
 //"max-height",
 //"max-width",
 //"@media",
+"max-block-size",
+"max-inline-size",
+"min-block-size",
+"min-inline-size",
 "min-height",
 "min-width",
 "mix-blend-mode",
@@ -594,10 +640,17 @@ var propertylist = [
 "overflow-x",
 "overflow-y",
 "padding",
+"padding-block",
+"padding-block-end",
+"padding-block-start",
 "padding-bottom",
+"padding-inline",
+"padding-inline-end",
+"padding-inline-start",
 "padding-left",
 "padding-right",
 "padding-top",
+"paint-order",
 //"page-break-after",
 //"page-break-before",
 //"page-break-inside",
@@ -608,8 +661,35 @@ var propertylist = [
 "quotes",
 //"resize",
 "right",
+"rotate",
 "row-gap",
+"scale",
 //"scroll-behavior",
+//"scroll-margin",
+//"scroll-margin-block",
+//"scroll-margin-block-end",
+//"scroll-margin-block-start",
+//"scroll-margin-bottom",
+//"scroll-margin-inline",
+//"scroll-margin-inline-end",
+//"scroll-margin-inline-start",
+//"scroll-margin-left",
+//"scroll-margin-right",
+//"scroll-margin-top",
+//"scroll-padding",
+//"scroll-padding-bottom",
+//"scroll-padding-block",
+//"scroll-padding-block-end",
+//"scroll-padding-block-start",
+//"scroll-padding-inline",
+//"scroll-padding-inline-end",
+//"scroll-padding-inline-start",
+//"scroll-padding-left",
+//"scroll-padding-right",
+//"scroll-padding-top",
+//"scroll-scroll-align",
+//"scroll-scroll-stop",
+//"scroll-scroll-type",
 "tab-size",
 "table-layout",
 "text-align",
@@ -621,6 +701,7 @@ var propertylist = [
 "text-emphasis",
 "text-indent",
 //"text-justify",
+"text-orientation",
 "text-overflow",
 "text-shadow",
 "text-transform",
@@ -633,6 +714,7 @@ var propertylist = [
 //"transition-duration",
 //"transition-property",
 //"transition-timing-function",
+"translate",
 "unicode-bidi",
 //"user-select",
 "vertical-align",
@@ -650,25 +732,27 @@ var propertylist = [
 <h1>CSS grid-template</h1>
 
 <div class="w3-clear w3-center nextprev container">
-<a id="prevbtn" class="w3-left w3-btn" href="#">&#10094;<span class="w3-hide-small"> Previous</span></a>
+<a id="prevbtn" class="w3-left w3-btn" href="#">&#10094;<span class="w3-hide-small"> 
+  Previous</span></a>
 <select id="select_properties" onchange="goto_new_css_property(this)"></select>
-<a id="nextbtn" class="w3-right w3-btn" href="#"><span class="w3-hide-small">Next </span>&#10095;</a>
+<a id="nextbtn" class="w3-right w3-btn" href="#"><span class="w3-hide-small">Next </span>
+  &#10095;</a>
 </div>
 <br>
 <p>Demo of the different values of the grid-template property.</p>
-
-<p style="font-size:90%;opacity:0.6;margin:0">To stop the demo, click one of the possible values.</p>
-
+<p style="font-size:90%;margin:0">Click the property values below to see the 
+result:</p>
 <div class="animated_demo">
 
 </div>
 
 <p>Play more with the code in our Tryit yourself editor:
-<a target="_blank" href="tryit59e7.html?filename=trycss_play_grid-template" class="ws-btn">Try it Yourself &#10095;</a>
+<a target="_blank" href="tryit59e7.html?filename=trycss_play_grid-template" class="ws-btn">
+Try it Yourself &#10095;</a>
 </p>
 </body>
 
-<!-- Mirrored from www.w3schools.com/cssref/playdemo.asp?filename=playcss_grid-template by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:16:45 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playdemo.php?filename=playcss_grid-template by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:36:56 GMT -->
 </html>
 <script>
 pelle();

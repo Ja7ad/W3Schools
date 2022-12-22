@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trysqlserver.asp?filename=trysql_func_sqlserver_radians2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:01:31 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysqlserver.asp?filename=trysql_func_sqlserver_radians2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:22:19 GMT -->
 <head>
 <title>SQLSERVER Tryit Editor v1.0</title>
 <meta name="viewport" content="width=device-width">
@@ -25,14 +25,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-k42 = true;
+// GPT slots
+var gptAdSlots = [];
+window.googletag = window.googletag || { cmd: [] };
+googletag.cmd.push(function() {
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": ["try_it_leaderboard"]
+      "activeAdUnits": [],
+      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
 
   }
 }
@@ -53,10 +77,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
-        if (document.getElementById("adngin-try_it_leaderboard-0")) {
-                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
-              }
+              
+        uic_r_m();
          
     }
 }
@@ -135,9 +157,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id='tryitLeaderboard' style="background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="adngin-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>uic_r_o();</script>
+  </div>
  
 </div>
 
@@ -155,7 +177,7 @@ SELECT RADIANS(-45);
         <input type="hidden" name="code" id="code" />
         <input type="hidden" id="bt" name="bt" />
       </form>
-      <button class="w3-green w3-btn" type="button" onclick="w3schoolsSQLSubmit();adngin.cmd.startAuction(['try_it_leaderboard']);">Run SQL &raquo;</button>
+      <button class="w3-green w3-btn" type="button" onclick="w3schoolsSQLSubmit();">Run SQL &raquo;</button>
       <h3>Result:</h3>
       <div id="resultSQL">
         <iframe id="iframeResultSQL" frameborder="0" name="view"></iframe>
@@ -355,5 +377,5 @@ uic_r_e()
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trysqlserver.asp?filename=trysql_func_sqlserver_radians2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:01:31 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysqlserver.asp?filename=trysql_func_sqlserver_radians2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:22:19 GMT -->
 </html>

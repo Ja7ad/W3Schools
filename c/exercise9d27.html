@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'syntax';excounts[0] = '1';exheadings[0] = 'Syntax';exnames[1] = 'comments';excounts[1] = '1';exheadings[1] = 'Comments';exnames[2] = 'variables';excounts[2] = '4';exheadings[2] = 'Variables';exnames[3] = 'data_types';excounts[3] = '2';exheadings[3] = 'Data Types';exnames[4] = 'operators';excounts[4] = '4';exheadings[4] = 'Operators';exnames[5] = 'conditions';excounts[5] = '4';exheadings[5] = 'If...Else';exnames[6] = 'switch';excounts[6] = '2';exheadings[6] = 'Switch';exnames[7] = 'while_loop';excounts[7] = '5';exheadings[7] = 'Loops';exnames[8] = 'arrays';excounts[8] = '4';exheadings[8] = 'Arrays';exActiveNo = 8;exnames[9] = 'strings';excounts[9] = '4';exheadings[9] = 'Strings';exnames[10] = 'pointers';excounts[10] = '1';exheadings[10] = 'Pointers';exnames[11] = 'functions';excounts[11] = '4';exheadings[11] = 'Functions';exnames[12] = 'structs';excounts[12] = '3';exheadings[12] = 'Structures';</script><html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/c/exercise.php?filename=exercise_arrays4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:58:00 GMT -->
+<!-- Mirrored from www.w3schools.com/c/exercise.php?filename=exercise_arrays4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:18:09 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <title>Exercise v3.0</title>
@@ -21,40 +21,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KTCFC3S');
 </script>
 <!-- End Google Tag Manager -->
-<script src="../lib/my-learning008c.js?v=1.0.10"></script>
+<script src="../lib/common-depse209.js?v=1.0.0"></script>
+<script src="../lib/user-session0ff5.js?v=1.0.2"></script>
+<script src="../lib/my-learning248b.js?v=1.0.11"></script>
 <script src="../lib/uic3447.js?v=1.0.5"></script>
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","exercise" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
   }
 }
 uic_r_a()
@@ -73,8 +51,9 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        uic_r_n();
+                if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
 }
@@ -132,6 +111,8 @@ if (exsection == "JS") {
     storageBlip = "go_";    
 } else if (exsection == "TYPESCRIPT") {
     storageBlip = "typescript_";       
+} else if (exsection == "MONGODB") {
+    storageBlip = "mongodb_";       
 } else if (exsection == "AWS") {
     storageBlip = "aws_";
 } else if (exsection == "AWSSL") {
@@ -182,42 +163,38 @@ function hideCorrectAnswer() {
 }
 
 function setAnswerObj(nam, val, all) {
+  var storeLocally = true;
+
   if (userLoggedOn) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4) {
-        if (this.status == 200) {
-          if (this.responseText == "NOTLOGGEDIN") {
-            localStorage.setItem(nam, val);
-          } else {
-            retval = this.responseText;
-            retval = JSON.parse(retval);
-            //alert(retval["recordcount"])
-            checkCompletedExercises(0);
-          }
-        } else {
+    var reqDataStr = "n=" + nam + "&v=" + val + "&a=" + all;
+
+    MyLearning.makePostRequest(
+      MyLearning.getUrl('api.exercise.html'),
+      reqDataStr,
+      function(reqRes) {
+        var storeLocally = true;
+
+        if (
+          reqRes.error.code === '0'
+          && reqRes.status === 200
+          && reqRes.dataStr !== 'NOTLOGGEDIN'
+        ) {
+          checkCompletedExercises(0);
+          storeLocally = false;
+        }
+
+        if (storeLocally) {
           localStorage.setItem(nam, val);
         }
       }
-    };
-    xhttp.open("POST.html", MyLearning.getUrl('api.exercise.html'), true);
-//  xhttp.open("POST", "https://mypage.w3schools.com/mypage/set_exercise_obj.php", true);
-    xhttp.withCredentials = true;
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    var reqData = "n=" + nam + "&v=" + val + "&a=" + all;
-    xhttp.send(reqData);
-
-    if (MyLearning._version === '2') { // send a copy to mylv1
-      MyLearning.makeLegacyPostRequest(
-        MyLearning.getUrl('api.exercise.html', '1.5L'),
-        reqData
-      );
-    }
+    );
   } else {
     localStorage.setItem(nam, val);
   }
+
   answerObj[nam] = val;
 }
+
 function checkCode(jsonObj) {
     var func, cc, i, l, errs = [], bptxt = "", feilmargin = 0, score_arr = [];
     document.getElementById("codeCheckWarningText").innerHTML = "";
@@ -1313,23 +1290,43 @@ function constructAnswerObj() {
     return false;
   }
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    var i, aa, l, retval;
-    if (this.readyState == 4) {
-      if (this.status == 200) {
-        if (this.responseText == "NOTLOGGEDIN") {
-          userLoggedOn = false;
-          getFromLocalStorage();
+  var reqDataStr = "t=" + storageBlip;
+
+  MyLearning.makePostRequest(
+    MyLearning.getUrl('api.exercise.get'),
+    reqDataStr,
+    function(reqRes) {
+      if (
+        reqRes.error.code === '0'
+        && reqRes.status === 200
+        && reqRes.dataStr !== 'NOTLOGGEDIN'
+      ) {
+        var i, aa, l, retval;
+
+        userLoggedOn = true;
+
+        retval = JSON.parse(reqRes.dataStr);
+
+        if (retval["recordcount"] == 0) {
+          //getFromLocalStorage();
+          for (i = 0; i < exnames.length; i++) {
+            numberofexercises += Number(excounts[i]);
+            aa = "";
+            l = excounts[i];
+            for (j = 0; j < l; j++) {
+              if (j > 0) {aa += ","; }
+              aa += "0";
+            }
+            answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
+          }
         } else {
-          userLoggedOn = true;
-          retval = this.responseText;
-          retval = JSON.parse(retval);
-          if (retval["recordcount"] == 0) {
-            //getFromLocalStorage();
-            for (i = 0; i < exnames.length; i++) {
-              numberofexercises += Number(excounts[i]);
-              aa = "";
+          if (retval["exscore"]) userscore = retval["exscore"];
+          for (i = 0; i < exnames.length; i++) {
+            aa = "";
+            numberofexercises += Number(excounts[i]);
+            if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
+              answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
+            } else {
               l = excounts[i];
               for (j = 0; j < l; j++) {
                 if (j > 0) {aa += ","; }
@@ -1337,39 +1334,18 @@ function constructAnswerObj() {
               }
               answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
             }
-          } else {
-            if (retval["exscore"]) userscore = retval["exscore"];
-            for (i = 0; i < exnames.length; i++) {
-              aa = "";
-              numberofexercises += Number(excounts[i]);
-              if (retval["w3exerciseanswers_" + storageBlip + exnames[i]]) {
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = retval["w3exerciseanswers_" + storageBlip + exnames[i]];
-              } else {
-                l = excounts[i];
-                for (j = 0; j < l; j++) {
-                  if (j > 0) {aa += ","; }
-                  aa += "0";
-                }
-                answerObj["w3exerciseanswers_" + storageBlip + exnames[i]] = aa;
-              }
-            }
-          }      
-          drawUserProgress();  
+          }
         }
+
+        drawUserProgress();
+      } else {
+        userLoggedOn = false;
+        getFromLocalStorage();
       }
-      // else {
-      //   userLoggedOn = false;
-      //   getFromLocalStorage();
-      // }
 
       w3LoadExercise();
     }
-  };
-  xhttp.open("POST.html", MyLearning.getUrl('api.exercise.get'), true);
-//xhttp.open("POST", "https://mypage.w3schools.com/mypage/get_exercise_obj2.php", true);  
-  xhttp.withCredentials = true;
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("t=" + storageBlip);
+  );
 }
 
 function getFromLocalStorage() {
@@ -1531,9 +1507,9 @@ function userAddOnePoint(n) {
   <div style="position:absolute;">
 <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
 <!-- TryitLeaderboard -->
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>uic_r_o();</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
   </div>
@@ -1583,15 +1559,15 @@ for (i = 0; i < 4; i++) {
   </div>
     <pre id="assignmentcontainer" style="overflow:auto"></pre>
   <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
-    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+    <button class="w3s-exercisebtn showanswerbutton hide-from-small" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();">Submit Answer &#10095;</button>
-  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();">Show Answer</button>
-  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();">Hide Answer</button>
+<button id="answerbutton" class="w3s-exercisebtn" type="button" onclick="checkassignmentcode();uic_r_p();">Submit Answer &#10095;</button>
+  <button class="w3s-exercisebtn showanswerbutton hide-from-large" type="button" onclick="showanswer();uic_r_p();">Show Answer</button>
+  <button class="w3s-exercisebtn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();uic_r_p();">Hide Answer</button>
 </div>
 
 <br>
@@ -1780,7 +1756,7 @@ function initAssignment() {
 function checkKey(event) {
   if (event.keyCode == 13) {
     checkassignmentcode();
-      }
+    uic_r_p();  }
 }
 
 function checkassignmentcode() {
@@ -2271,5 +2247,5 @@ uic_r_r()
 <script src="../lib/codemirror_jsx.js"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/c/exercise.php?filename=exercise_arrays4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:58:00 GMT -->
+<!-- Mirrored from www.w3schools.com/c/exercise.php?filename=exercise_arrays4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:18:09 GMT -->
 </html>

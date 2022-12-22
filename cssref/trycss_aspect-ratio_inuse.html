@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_aspect-ratio_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:42 GMT -->
+<head>
+<style>
+#div1
+{
+position: relative;
+height: 150px;
+width: 200px;
+margin: 30px;
+padding: 30px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding: 5px;
+width: 70px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+overflow: hidden;
+aspect-ratio: 1/1;
+}
+</style>
+<script>
+
+function changeAspRat()
+{
+  let width = document.getElementById('inpWidth').value;
+  let aspRatWidth = document.getElementById('inpRatWidth').value;
+  let aspRatHeight = document.getElementById('inpRatHeight').value;
+  document.getElementById('div2').style.width = width+'px';
+  document.getElementById('div2').style.aspectRatio = aspRatWidth+"/"+aspRatHeight;
+  document.getElementById('pAspRat').innerHTML = 'width: ' + width + 'px;<br>apect-ratio: ' + aspRatWidth+"/"+aspRatHeight +';';     
+}
+</script>
+</head>
+
+<body>
+
+<p>Play with aspect-ratio and width CSS properties.</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p>Aspect ratio and width</p>
+<p>
+  width:<br><input type="range" min="50" max="100" value="75" step="1" oninput="changeAspRat()" id="inpWidth" />
+</p>
+<p>
+  Aspect ratio width number:<br><input type="range" min="1" max="16" value="1" step="0.5" oninput="changeAspRat()" id="inpRatWidth" />
+</p>
+<p>
+  Aspect ratio height number:<br><input type="range" min="1" max="9" value="1" step="0.5" oninput="changeAspRat()" id="inpRatHeight" />
+</p>
+
+<p id="pAspRat">
+  width: 70px;<br>
+  aspect-ratio: 1/1;
+</p>
+
+ 
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_aspect-ratio_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:42 GMT -->
+</html>

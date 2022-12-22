@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_weekday2&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:01:31 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_weekday2&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:22:20 GMT -->
 <head>
 <title>SQL Tryit Editor v1.6</title>
 <meta name="viewport" content="width=device-width">
@@ -28,49 +28,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script data-cfasync="false" type="text/javascript">
 var k42 = false;
 
-// GPT slots
-var gptAdSlots = [];
-window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  var stickyMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], []). 
-  // Tablet ad
-  addSize([983, 0], [120, 600]). 
-  // Desktop
-  addSize([1143, 0], [160, 600]).   
-  // Large Desktop
-  addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
-  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
-  defineSizeMapping(stickyMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
+k42 = true;
 
 </script>
 <script data-cfasync="false" type="text/javascript">
     window.snigelPubConf = {
     "adengine": {
 
-      "activeAdUnits": [],
-      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0", "div-gpt-ad-1472547360578-0"]
+      "activeAdUnits": ["try_it_leaderboard"]
 
   }
 }
@@ -91,8 +56,10 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-          uic_r_m();
+        
+        if (document.getElementById("adngin-try_it_leaderboard-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["try_it_leaderboard"]); });
+              }
          
     }
 }
@@ -188,9 +155,9 @@ function setThemeMode() {
 <div id='tryitLeaderboard' class="w3-white">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>uic_r_o();</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="adngin-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 
@@ -206,7 +173,7 @@ function setThemeMode() {
         <input type="hidden" name="code" id="code" />
         <input type="hidden" id="bt" name="bt" />
       </form>
-      <button class="ws-btn" type="button" onclick="w3schoolsSQLSubmit();">Run SQL &raquo;</button>
+      <button class="ws-btn" type="button" onclick="w3schoolsSQLSubmit();uic_r_p();">Run SQL &raquo;</button>
       <h3>Result:</h3>
       <div id="resultSQL">
         <iframe id="iframeResultSQL" frameborder="0" name="view"></iframe>
@@ -273,10 +240,20 @@ function setThemeMode() {
         </div>
       <div id="sqlstickyadcontainer" style="position:sticky;margin:auto;margin-top:20px;top:0">
       
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="adngin-sidebar_sticky-0"></div>
+      <!-- adspace sticky-->
       <script>
-        function secondSnigel() { console.log("google") };
-        uic_r_v();
-      </script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+            });
+          }
+        }
+      </script>  
       
     </div>
       </div>
@@ -399,8 +376,6 @@ function w3schoolsNoWebSQLSubmit() {
 	var t = document.getElementById("textareaCodeSQL").value;
 	document.getElementById("code").value = t;
 	
-	t=escape(t);document.getElementById("bt").value="1";
-	
 	  document.getElementById("tryitform").action="https://tryit.w3schools.com/trysql_view.asp?x=" + Math.random();
   
 	validateForm();
@@ -425,5 +400,5 @@ uic_r_s()
 </script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_weekday2&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:01:31 GMT -->
+<!-- Mirrored from www.w3schools.com/sql/trysql.asp?filename=trysql_func_ms_weekday2&ss=-1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:22:20 GMT -->
 </html>

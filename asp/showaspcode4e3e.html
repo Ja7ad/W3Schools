@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_contentlinking by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:13 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_contentlinking by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:17 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br>&lt;p><br>The example below builds a table of contents.<br>&lt;/p><br><br><FONT COLOR=#ff0000>&lt;%<br>dim c<br>dim i<br>set nl=server.createobject("MSWC.Nextlink")<br>c = nl.GetListCount("text\links.txt")<br>i = 1<br>%&gt;</FONT><br>&lt;ul><br><FONT COLOR=#ff0000>&lt;%do while (i &lt;= c) %&gt;</FONT><br>&lt;li>&lt;a href="<FONT COLOR=#ff0000>&lt;%=nl.GetNthURL("text\links.txt", i)%&gt;</FONT>"><br><FONT COLOR=#ff0000>&lt;%=nl.GetNthDescription("text\links.txt", i)%&gt;</FONT>&lt;/a><br><FONT COLOR=#ff0000>&lt;%<br>i = (i + 1)<br>loop<br>%&gt;</FONT><br>&lt;/ul><br>&lt;p><br>The text file contains a list of page urls<br>and link descriptions. It contains one line of text for each page. Note that the url and<br>description MUST be separated by the TAB character.<br>&lt;/p><br>&lt;p><br>&lt;a href="text/links.txt">&lt;img src="/images/btn_view_text.gif">&lt;/a><br>&lt;/p><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_contentlinking by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:13 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_contentlinking by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:17 GMT -->
 </HTML>

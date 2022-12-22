@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/python/pandas/trypandas.asp?filename=demo_ref_df_count by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:43:19 GMT -->
+<!-- Mirrored from www.w3schools.com/python/pandas/trypandas.asp?filename=demo_ref_df_count by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:06:12 GMT -->
 <head>
 <title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
@@ -73,7 +73,9 @@ function browserResize() {
       restack(window.innerHeight > window.innerWidth);
     }
     fixDragBtn();
-    showFrameSize();    
+    showFrameSize();  
+  
+      
 }
 var fileID = "";
 </script>
@@ -149,6 +151,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
+
+#iframecontainer {
+  padding-top:32px;
+}
+
 #textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
@@ -162,6 +169,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframe {
   padding-left:5px;
   padding-right:10px;  
+  position:relative;  
     
     color:#ffffff;
     font-family: consolas,"courier new",monospace;    
@@ -170,16 +178,18 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #textareawrapper {
   width:100%;
   height:100%;
+  
+  overflow:auto;
+  
   background-color: #ffffff;
   position:relative;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
 }
 #iframewrapper {
   width:100%;
   height:100%;
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   
     color:#ffffff;
     font-family: consolas,"courier new",monospace;  
@@ -196,6 +206,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   border:none;
   line-height:normal;    
 }
+/*
   .localhostcontainer {
     position:absolute;
     width:auto;
@@ -214,6 +225,88 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
     font-size:14px;
     padding-left:10px;
   }
+*/
+
+.localhostoutercontainer {
+  position: absolute;
+  width: auto;
+  left:5px;
+  right:10px;
+  background-color: #E7E9EB;
+  height: 30px;
+  z-index: 9;
+}
+.localhostoutercontainer.horizontal {
+  left:10px;
+}
+.localhostcontainer {
+  position:relative;
+  width:auto;
+  right:0;
+  left:0;
+  z-index:2;
+  xpadding:6px 12px;
+  xxborder-bottom:1px solid #d9d9d9;
+  background-color:#F1F1F1;
+  background-color:#38444d;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+  overflow:hidden;
+  padding-top:4px;
+}
+.localhostdiv {
+  overflow:hidden;
+  font-family:arial;
+  color:#000;
+  background-color:#fff;
+  font-size:15px;
+  padding-left:10px;
+  border-radius:20px;
+  width:60%;
+  float:left;
+  font-family: consolas,Menlo,"courier new",monospace;  
+}
+.localhostbuttoncontainer {
+  width:20%;
+  min-width:100px;
+  color:#ffc107;
+  float:left;  
+  font-size:16px;
+  overflow:auto;
+}
+div.localhostbuttoncontainer span{
+  display:inline-block;
+  color:#ffc107;
+  position:relative;
+  padding-bottom:4px;
+  padding-left:2px;  
+}
+
+div.localhostbuttoncontainer span:first-child{
+  color:#dc3545;
+  padding-left:12px;
+
+}
+div.localhostbuttoncontainer span:last-child{
+  color:#04AA6D;
+  padding-left:2px;    
+}
+
+body.darktheme .localhostoutercontainer {
+  background-color: #38444d;
+}
+body.darktheme .localhostcontainer {
+  background-color:rgb(21,32,43)
+}
+
+body.darktheme .localhostdiv {
+  border:1px solid #595959;
+  background-color:#ffffff;
+}
+
+/**/
+
+
   #filenamecontainer {
     position:absolute;
     text-align:center;
@@ -248,6 +341,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
     font-family: consolas,"courier new",monospace!important;      
     padding:8px;    
   
+  
   height:100%;
   width:100%;  
 }
@@ -267,6 +361,12 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   float:none;
   width:100%;
 }
+
+#iframecontainer.horizontal {
+  padding-top:0;
+}
+
+
 #textarea.horizontal{
   height:100%;
   padding-left:10px;
@@ -422,7 +522,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframewrapper {
 	
 }
+
+/*
   .tabs-container {
+  height:100%;
+  overflow:auto;
   }
   .tabs {
     list-style-type: none;
@@ -450,7 +554,60 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   .tab-pane.active { 
     display: block;
   }
+*/
 
+.tabitem, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+  width:70px;
+  cursor:pointer;
+}
+#Python_-_codetab {width: 120px;left: 0px;}#data_q_csvtab {width: 90px;left: 120px;}
+/*  
+#progqcstab {
+  width:120px;
+  left:0;
+}
+#prog2qcstab {
+  width:100px;
+  left:120px;
+}
+#childtemplatetab {
+  width:150px;
+  left:220px;
+}
+*/
+.tabitem {
+  background-color:#38444d;
+  color:#ddd;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  opacity:0.5;
+}
+#resttab {
+  cursor:default;
+
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+
+
+.tabitem.tabselected{
+  opacity:1;
+}
+
+.darktheme .tabitem {
+  background-color:rgb(21,32,43)
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+
+/**/
 .fa {
   padding: 10px 10px!important;
 }
@@ -525,6 +682,7 @@ body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161;
 body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
 
 
+/*
 #file1filetab, #resttab {
   position:absolute;
   z-index:2;
@@ -558,6 +716,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 .darktheme #resttab {
   background-color:#38444d;
 }
+*/
 .darktheme #file1filetab {
   border-right:1px solid rgb(21,32,43);
 }
@@ -609,25 +768,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a href="javascript:void(0)" id="dragbar"></a>
 <div id="container">
-<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
-<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
-  <div class="w3-bar-block">
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
-
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
-    <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
+  <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+    <span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+    <div class="w3-bar-block">
+      <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+      
+      <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
+      <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
+    </div>
+    <footer class="w3-container w3-small ws-grey">
+      <p>
+        <a style="display:inline;padding:0;" href="../../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
+        <a style="display:inline;padding:0;" href="../../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a>
+      </p>
+    </footer>
   </div>
-  <footer class="w3-container w3-small ws-grey">
-  <p><a style="display:inline;padding:0;" href="../../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a></p>
-  </footer>
-</div>
-<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
         
-            <textarea class="editor" id="textareaCode" wrap="logical" spellcheck="false">import pandas as pd
+                <div id="Python_-_codetab" class="tabitem" onclick="clickTab('Python_-_code')">
+                  Python code
+                </div>
+              
+                <div id="data_q_csvtab" class="tabitem" onclick="clickTab('data_q_csv')">
+                  data.csv
+                </div>
+              
+              <div id="resttab">&nbsp;</div>
+
+
+
+              
+                <div style="padding-top:32px;" id='Python_-_code'>
+                  <textarea class="editor" id="textareaCode">import pandas as pd
 
 data = {
   "Duration": [50, 40, None, None, 90, 20],
@@ -638,7 +813,10 @@ df = pd.DataFrame(data)
 
 print(df.count())
 </textarea>
-            <textarea class="editor" id="textareaCode2" style="display:none">Duration,Pulse,Maxpulse,Calories
+                </div>
+              
+                <div style="padding-top:32px;" id='data_q_csv'>
+                  <textarea class="editor" id="textareaCode2">Duration,Pulse,Maxpulse,Calories
 60,110,130,409.1
 60,117,145,479.0
 60,103,135,340.0
@@ -809,6 +987,256 @@ print(df.count())
 75,120,150,320.4
 75,125,150,330.4
 </textarea>
+                </div>
+              
+          
+<!--
+            <div class="tabs-container">
+              <ul class="tabs">
+                
+                  <li class="tab active" data-tab="0" style="cursor:pointer">Python code</li>
+                
+                  <li class="tab " data-tab="1" style="cursor:pointer">data.csv</li>
+                
+              </ul>
+                
+
+                  <div class="tab-pane active" data-pane="0">
+                    <textarea class="editor" id="textareaCode">import pandas as pd
+
+data = {
+  "Duration": [50, 40, None, None, 90, 20],
+  "Pulse": [109, 140, 110, 125, 138, 170]
+}
+
+df = pd.DataFrame(data)
+
+print(df.count())
+</textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="1">
+                    <textarea class="editor" id="textareaCode2">Duration,Pulse,Maxpulse,Calories
+60,110,130,409.1
+60,117,145,479.0
+60,103,135,340.0
+45,109,175,282.4
+45,117,148,406.0
+60,102,127,300.5
+60,110,136,374.0
+45,104,134,253.3
+30,109,133,195.1
+60,98,124,269.0
+60,103,147,329.3
+60,100,120,250.7
+60,106,128,345.3
+60,104,132,379.3
+60,98,123,275.0
+60,98,120,215.2
+60,100,120,300.0
+45,90,112,
+60,103,123,323.0
+45,97,125,243.0
+60,108,131,364.2
+45,100,119,282.0
+60,130,101,300.0
+45,105,132,246.0
+60,102,126,334.5
+60,100,120,250.0
+60,92,118,241.0
+60,103,132
+60,100,132,280.0
+60,102,129,380.3
+60,92,115,243.0
+45,90,112,180.1
+60,101,124,299.0
+60,93,113,223.0
+60,107,136,361.0
+60,114,140,415.0
+60,102,127,300.5
+60,100,120,300.1
+60,100,120,300.0
+45,104,129,266.0
+45,90,112,180.1
+60,98,126,286.0
+60,100,122,329.4
+60,111,138,400.0
+60,111,131,397.0
+60,99,119,273.0
+60,109,153,387.6
+45,111,136,300.0
+45,108,129,298.0
+60,111,139,397.6
+60,107,136,380.2
+80,123,146,643.1
+60,106,130,263.0
+60,118,151,486.0
+30,136,175,238.0
+60,121,146,450.7
+60,118,121,413.0
+45,115,144,305.0
+20,153,172,226.4
+45,123,152,321.0
+210,108,160,1376.0
+160,110,137,1034.4
+160,109,135,853.0
+45,118,141,341.0
+20,110,130,131.4
+180,90,130,800.4
+150,105,135,873.4
+150,107,130,816.0
+20,106,136,110.4
+300,108,143,1500.2
+150,97,129,1115.0
+60,109,153,387.6
+90,100,127,700.0
+150,97,127,953.2
+45,114,146,304.0
+90,98,125,563.2
+45,105,134,251.0
+45,110,141,300.0
+120,100,130,500.4
+270,100,131,1729.0
+30,159,182,319.2
+45,149,169,344.0
+30,103,139,151.1
+120,100,130,500.0
+45,100,120,225.3
+30,151,170,300.1
+45,102,136,234.0
+120,100,157,1000.1
+45,129,103,242.0
+20,83,107,50.3
+180,101,127,600.1
+45,107,137,
+30,90,107,105.3
+15,80,100,50.5
+20,150,171,127.4
+20,151,168,229.4
+30,95,128,128.2
+25,152,168,244.2
+30,109,131,188.2
+90,93,124,604.1
+20,95,112,77.7
+90,90,110,500.0
+90,90,100,500.0
+90,90,100,500.4
+30,92,108,92.7
+30,93,128,124.0
+180,90,120,800.3
+30,90,120,86.2
+90,90,120,500.3
+210,137,184,1860.4
+60,102,124,325.2
+45,107,124,275.0
+15,124,139,124.2
+45,100,120,225.3
+60,108,131,367.6
+60,108,151,351.7
+60,116,141,443.0
+60,97,122,277.4
+60,105,125,
+60,103,124,332.7
+30,112,137,193.9
+45,100,120,100.7
+60,119,169,336.7
+60,107,127,344.9
+60,111,151,368.5
+60,98,122,271.0
+60,97,124,275.3
+60,109,127,382.0
+90,99,125,466.4
+60,114,151,384.0
+60,104,134,342.5
+60,107,138,357.5
+60,103,133,335.0
+60,106,132,327.5
+60,103,136,339.0
+20,136,156,189.0
+45,117,143,317.7
+45,115,137,318.0
+45,113,138,308.0
+20,141,162,222.4
+60,108,135,390.0
+60,97,127,
+45,100,120,250.4
+45,122,149,335.4
+60,136,170,470.2
+45,106,126,270.8
+60,107,136,400.0
+60,112,146,361.9
+30,103,127,185.0
+60,110,150,409.4
+60,106,134,343.0
+60,109,129,353.2
+60,109,138,374.0
+30,150,167,275.8
+60,105,128,328.0
+60,111,151,368.5
+60,97,131,270.4
+60,100,120,270.4
+60,114,150,382.8
+30,80,120,240.9
+30,85,120,250.4
+45,90,130,260.4
+45,95,130,270.0
+45,100,140,280.9
+60,105,140,290.8
+60,110,145,300.4
+60,115,145,310.2
+75,120,150,320.4
+75,125,150,330.4
+</textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="2">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="3">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="4">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="5">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="6">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="7">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="8">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="9">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                
+
+                  <div class="tab-pane " data-pane="10">
+                    <textarea class="editor" id="textareaCode"></textarea>
+                  </div>
+                            
+            </div>
+-->
             <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
               <input type="hidden" name="code" id="code" />
               <input type="hidden" name="mcode" id="mcode" />
@@ -822,14 +1250,19 @@ print(df.count())
       
         <div id="runloadercontainer"><div id="runloader"></div></div>
       
+      
       <div id="iframewrapper">
               
-          <div id="iframeResult" style="white-space:nowrap;overflow:auto;"><pre>
+          <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+            <div>
+              <pre>
   Duration    4
   Pulse       6
   dtype: int64
 </pre>
-</div>
+
+            </div>
+          </div>
                   
       </div>
     </div>
@@ -840,8 +1273,8 @@ print(df.count())
 
 function submitTryit(n) {
   
-    if (window.editor) {
-      window.editor.save();
+    for (var i = 0; i < editors.length; i++) {
+      editorList[i].save();
     }
   
   var text = document.getElementById("textareaCode").value;
@@ -915,7 +1348,7 @@ function displaySpinner() {
 var currentStack=true;
 if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
 function restack(horizontal) {
-    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
     tc = document.getElementById("textareacontainer");
     ic = document.getElementById("iframecontainer");
     t = document.getElementById("textarea");
@@ -923,11 +1356,13 @@ function restack(horizontal) {
     c = document.getElementById("container");    
     sv = document.getElementById("stackV");
     sh = document.getElementById("stackH");
+    b = document.getElementsByClassName("localhostoutercontainer");
     tc.className = tc.className.replace("horizontal", "");
     ic.className = ic.className.replace("horizontal", "");        
     t.className = t.className.replace("horizontal", "");        
     i.className = i.className.replace("horizontal", "");        
     c.className = c.className.replace("horizontal", "");                        
+    if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
     if (sv) {sv.className = sv.className.replace("horizontal", "")};
     if (sv) {sh.className = sh.className.replace("horizontal", "")};
     stack = "";
@@ -939,6 +1374,7 @@ function restack(horizontal) {
         c.className = c.className + " horizontal";                
         if (sv) {sv.className = sv.className + " horizontal"};
         if (sv) {sh.className = sh.className + " horizontal"};
+        if (b[0]) {b[0].className = b[0].className + " horizontal"};        
         stack = " horizontal";
         document.getElementById("textareacontainer").style.height = "50%";
         document.getElementById("iframecontainer").style.height = "50%";
@@ -954,6 +1390,7 @@ function restack(horizontal) {
     }
     fixDragBtn();
     showFrameSize();
+      
 }
 function showFrameSize() {
   var t;
@@ -1026,7 +1463,9 @@ function dragmove(e) {
         fixDragBtn();
       }
     }
-    showFrameSize();    
+    showFrameSize();  
+  
+      
   }
 }
 function dragend() {
@@ -1046,6 +1485,7 @@ if (window.addEventListener) {
   window.addEventListener("touchend", dragend);
   window.addEventListener("load", fixDragBtn);
   window.addEventListener("load", showFrameSize);
+  
 }
 
 function retheme() {
@@ -1090,8 +1530,62 @@ function colorcoding() {
 //  window.editor.on("change", function () {window.editor.save();});
 }
 
-colorcoding();
+  var editors = document.getElementsByClassName('editor');
+  var editorList = [];
+  for (var i = 0; i < editors.length; i++) {
+    var self = editors[i];
+    var editor = CodeMirror.fromTextArea(self, {
+      mode: "text/x-python",
+      lineNumbers: false,
+      autoRefresh: true,
+      scrollbarStyle: "null",
+      
+      lineWrapping: true,
+      smartIndent: false,
+      htmlMode: true,
+      autocorrect: false,      
+      addModeClass: true,      
+      
+      
+    });
+    editorList[i] = editor;
+    editor.save();
+  }
 
+/*  
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) {
+    var self = tabs[i];
+    self.addEventListener('click', function() {
+      var data = this.getAttribute('data-tab');
+      document.querySelectorAll('.tab-pane.active')[0].classList.remove('active');
+      document.querySelectorAll('.tab-pane[data-pane="'+data+'"]')[0].classList.add('active');
+      document.querySelectorAll('.tab.active')[0].classList.remove('active');
+      this.classList.add('active');
+      for (x in editorList) {
+        editorList[x].refresh();
+      }
+      
+    });
+  }
+*/
+  
+  clickTab("Python_-_code");
+
+
+
+function clickTab(x) {
+    
+      document.getElementById("Python_-_code").style.display = "none";
+      document.getElementById("Python_-_codetab").className = document.getElementById("Python_-_codetab").className.replace(" tabselected", "");
+      
+      document.getElementById("data_q_csv").style.display = "none";
+      document.getElementById("data_q_csvtab").className = document.getElementById("data_q_csvtab").className.replace(" tabselected", "");
+    
+    document.getElementById(x).style.display = "block";  
+    document.getElementById(x + "tab").className += " tabselected";
+  
+}
 
 function w3_getStyleValue(elmnt,style) {
     if (window.getComputedStyle) {
@@ -1133,10 +1627,27 @@ window.onclick = function(event) {
         openMenu();
     }
 }
+function setCodewindowHeight() {
+  var i;
+  var txw = document.getElementById("textareawrapper");
+  var txwh = w3_getStyleValue(txw,"height");
+
+  txwh = txwh.replace("px","");
+  txwh = Number(txwh);
+  txwh = txwh - 33;
+  txwh = txwh + "px";
+  
+  var qwsa = document.getElementsByClassName("codewindow");
+  for (i = 0; i < qwsa.length; i++) {
+    qwsa[i].style.height = txwh;
+    qwsa[i].style.setProperty("overflow", "auto", "important");
+  }
+}
+
 uic_r_e()
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/python/pandas/trypandas.asp?filename=demo_ref_df_count by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:43:19 GMT -->
+<!-- Mirrored from www.w3schools.com/python/pandas/trypandas.asp?filename=demo_ref_df_count by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:06:12 GMT -->
 </html>

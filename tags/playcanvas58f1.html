@@ -3,7 +3,7 @@
 <html lang="en-US">
 
  
-<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_filltexttext by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:14:48 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_filltexttext by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:31 GMT -->
 <head>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,14 +172,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -190,32 +184,6 @@ snhb.options = {
                      reconsiderationAppealIntervalSeconds: 0
                      }
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
 
 </script>
 <!-- begin cmp -->
@@ -242,7 +210,7 @@ __cmp("setPrivacyPolicy", "../about/about_privacy.html");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -260,10 +228,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
 }
@@ -277,9 +243,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id='tryitLeaderboard' style="background-color:#ffffff">
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 
@@ -335,5 +301,5 @@ var c=document.getElementById('myCanvas');<br>  var ctx=c.getContext('2d');<br> 
  </body>
 
 
-<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_filltexttext by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:14:48 GMT -->
+<!-- Mirrored from www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_filltexttext by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:31 GMT -->
 </html>

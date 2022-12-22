@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_translate_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:29 GMT -->
+<head>
+<style>
+#div1
+{
+position: relative;
+height: 200px;
+width: 200px;
+margin: 50px;
+padding:10px;
+border: 1px solid black;
+perspective: 200px;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+}
+</style>
+<script>
+
+function changeOrg()
+{
+var x=document.getElementById('ox').value;
+var y=document.getElementById('oy').value;
+var z=document.getElementById('oz').value;
+document.getElementById('div2').style.translate=x + 'px ' + y + 'px ' + z + 'px';
+document.getElementById('origin').innerHTML=x + 'px ' + y + 'px ' + z + 'px';     
+}
+</script>
+</head>
+
+<body>
+
+<p>Translate the red div element, try changing its X-axis, Y-axis and Z-axis.</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p>Translate</p>
+<p>
+  X-axis:<input type="range" min="-100" max="200" value="0" oninput="changeOrg()" id="ox" />
+</p>
+<p>
+  Y-axis:<input type="range" min="-100" max="200" value="0" oninput="changeOrg()" id="oy" />
+</p>
+<p>
+  Z-axis:<input type="range" min="-100" max="200" value="0" oninput="changeOrg()" id="oz"/>
+</p>
+<p>
+  translate: <span id="origin">0px 0px 0px</span>;
+</p>
+
+ 
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_translate_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:29 GMT -->
+</html>

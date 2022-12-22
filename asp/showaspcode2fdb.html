@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_cookies by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_cookies by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 <FONT COLOR=#ff0000>&lt;%<br>dim numvisits<br>response.cookies("NumVisits").Expires=date+365 <br>numvisits=request.cookies("NumVisits")<br><br>if numvisits="" then<br>&nbsp;&nbsp;  response.cookies("NumVisits")=1<br>&nbsp;&nbsp;  response.write("Welcome! This is the first time you are visiting this Web page.")<br>else<br>&nbsp;&nbsp;  response.cookies("NumVisits")=numvisits+1<br>&nbsp;&nbsp;  response.write("You have visited this ")<br>&nbsp;&nbsp;  response.write("Web page " & numvisits)<br>&nbsp;&nbsp;  if numvisits=1 then<br>&nbsp;&nbsp;&nbsp;&nbsp;    response.write " time before!"<br>&nbsp;&nbsp;  else<br>&nbsp;&nbsp;&nbsp;&nbsp;    response.write " times before!"<br>&nbsp;&nbsp;  end if<br>end if<br>%&gt;</FONT><br>&lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_cookies by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_cookies by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 </HTML>

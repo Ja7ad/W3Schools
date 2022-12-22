@@ -816,7 +816,7 @@ body.darkpagetheme .w3-pale-red {background-color: #FFC0C7!important;color:#000;
 body.darkpagetheme .w3-warning .w3-codespan,body.darkpagetheme .w3-note .w3-codespan,body.darkpagetheme .w3-pale-red .w3-codespan {color:crimson;}
 body.darkpagetheme .w3-example {background-color: #38444d;}
 .darktheme .w3-code {background-color: rgb(21,32,43);}
-body.darkpagetheme .w3-info {background-color:rgb(21,32,43);}
+body.darkpagetheme .w3-info {background-color:#193d3d/*rgb(21,32,43)*/;}
 body.darkpagetheme #w3-exerciseform {background-color: #38444d;color: #ddd;}
 body.darkpagetheme #w3-exerciseform .exercisewindow {background-color: rgb(21,32,43);color: #ddd;}
 body.darkpagetheme #w3-exerciseform .exercisewindow pre {background-color: #38444d;color: #ddd;}
@@ -862,6 +862,10 @@ body.darkpagetheme .invert-on-dark {filter: invert(1);}
 #div-gpt-ad-1422003450156-3 {float:none;margin-left:auto;margin-right:auto}
 }
 /*@media (max-width:1510px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}*/
+@media (max-width:1900px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(22){display:none;}}
+@media (max-width:1800px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(21){display:none;}}
+@media (max-width:1730px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(20){display:none;}}
+@media (max-width:1600px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(19){display:none;}}
 @media (max-width:1550px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(18){display:none;}}
 @media (max-width:1475px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(17){display:none;}}
 @media (max-width:1430px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(16){display:none;}}
@@ -956,9 +960,12 @@ h1 {
 h2 {
   font-size: 32px;
 }
-.w3-btn:hover,.w3-btn:active,.w3-example a:focus,.nextprev a:focus {
+.w3-btn:hover,.w3-btn:active,.nextprev a:focus {
   box-shadow: none;
   background-color: #059862 !important;
+}
+.w3-example a:focus {
+  box-shadow: none;
 }
 .w3-btn:hover.w3-blue,.w3-btn:active.w3-blue,.w3-button:hover.w3-blue,.w3-button:active.w3-blue {
   background-color: #0d8bf2!important;color: #fff!important;
@@ -991,7 +998,7 @@ h2 {
   color:white!important;
 }
 
-@media screen and (min-width:860px) {
+@media screen and (min-width:861px) {
   #myAccordion {
     display: none !important;
   }

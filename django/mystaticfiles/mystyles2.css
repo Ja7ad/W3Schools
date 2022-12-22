@@ -1,0 +1,63 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&amp;display=swap');
+body {
+  margin:0;
+  font: 600 18px 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.64px;
+  color: #585d74;
+}
+.topnav {
+  background-color:#375BDC;
+  color:#ffffff;
+  padding:10px;
+}
+.topnav a:link, .topnav a:visited {
+  text-decoration: none;
+  color: #ffffff; 
+}
+.topnav a:hover, .topnav a:active {
+  text-decoration: underline;
+}
+.mycard {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to bottom, #375BDC, #4D70EF); 
+  background-size: 100% 120px;
+  background-repeat: no-repeat;
+  margin: 40px auto;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23); 
+  padding: 20px;
+}
+.mycard h1 {
+  text-align: center;
+  color:#ffffff;
+  margin:20px 0 60px 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #375BDC, #4D70EF); 
+  background-size: 50px 60px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform .25s;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  padding: 15px;
+  padding-left: 70px;
+  margin-top: 5px;
+}
+li:hover {
+  transform: scale(1.1);
+}
+a:link, a:visited {
+  color: #375BDC; 
+}
+.main, .main h1 {
+  text-align:center;
+  color:#375BDC;
+}

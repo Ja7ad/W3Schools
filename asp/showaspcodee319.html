@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_reqquery2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_reqquery2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 &lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br><br><FONT COLOR=#ff0000>&lt;%<br>If Request.QueryString&lt;>"" Then<br>&nbsp;&nbsp;&nbsp;&nbsp;    If Request.QueryString("name")&lt;>", " Then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      name=Request.QueryString("name")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if instr(name,"/")=0 and instr(name,"\")=0 and instr(name,"&lt;")=0 then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        name1=Request.QueryString("name")(1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        name2=Request.QueryString("name")(2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            response.write("Illegal input")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            response.end<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        end if<br>&nbsp;&nbsp;&nbsp;&nbsp;    end if<br>end if<br>%&gt;</FONT><br><br>&lt;form action="demo_reqquery2.asp" method="get"><br>First name:<br>&lt;input type="text" name="name" value="<FONT COLOR=#ff0000>&lt;%=name1%&gt;</FONT>" /><br>&lt;br><br>Last name:<br>&lt;input type="text" name="name" value="<FONT COLOR=#ff0000>&lt;%=name2%&gt;</FONT>" /><br>&lt;br><br>&lt;input type="submit" value="Submit" /><br>&lt;/form><br>&lt;hr><br><FONT COLOR=#ff0000>&lt;%<br>If Request.QueryString&lt;>"" Then<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;p>")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("The information received from the form was:")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;/p>&lt;p>")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("name=" & name)<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;/p>&lt;p>")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("The name property's count is: ")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write(Request.QueryString("name").Count)<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;/p>&lt;p>")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("First name=" & name1)<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;/p>&lt;p>")<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("Last name=" & name2)<br>&nbsp;&nbsp;&nbsp;&nbsp;    Response.Write("&lt;/p>")<br>end if<br>%&gt;</FONT><br>&lt;/body><br>&lt;/html><br><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_reqquery2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:09 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_reqquery2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:13 GMT -->
 </HTML>

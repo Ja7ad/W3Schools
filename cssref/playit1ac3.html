@@ -1,16 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 
- 
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:15:00 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.php?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
- <title>Playit</title>
- <link rel="stylesheet" type="text/css" href="../trystyle.css" />
- <script type="text/javascript">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" type="text/css" href="../trystyle.css" />
+<title>W3Schools CSS animation-iteration-count demonstration</title>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
+  var subjectFolder = location.pathname;
+  subjectFolder = subjectFolder.replace("../index.html", "");
+  subjectFolder = subjectFolder.substr(0, subjectFolder.indexOf("../index.html"));
+</script>
+<!-- End Google Tag Manager -->
+<script src="../lib/uic3447.js?v=1.0.5"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+// GPT slots
+var gptAdSlots = [];
+window.googletag = window.googletag || { cmd: [] };
+googletag.cmd.push(function() {
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+      "activeAdUnits": [],
+      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+              
+        uic_r_m();
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+}
+var fileID = "";
+</script>
+<script type="text/javascript">
  <!--
  function playit_onload()
  {
@@ -39,21 +112,20 @@
  
  function change_position(val)
  {
- 
-   document.getElementById("myDIV").className = "my" + val;
-   var x=document.getElementById("demoParent");
-   var y=document.getElementById("demoDIV").cloneNode(true);
-   var cc;
-   x.removeChild(document.getElementById("demoDIV"));
-   x.appendChild(y);
-   
+      document.getElementById("myDIV").className = "my" + val;
+     var x=document.getElementById("demoParent");
+     var y=document.getElementById("demoDIV").cloneNode(true);
+     var cc;
+     x.removeChild(document.getElementById("demoDIV"));
+     x.appendChild(y);
+     
  var x="animation-iteration-count:<span id='enlargecssprop'>" + val + "</span>";
- var y="#myDIV {<br>  ###CSSPROP###;<br>}<br>";
+ var y=`#myDIV {
+  ###CSSPROP###;
+}`;
  var z=y.replace("###CSSPROP###",x);
- 
-  document.getElementById("styleDIV").innerHTML=z;
- 
- }
+    document.getElementById("styleDIV").innerHTML=z;
+  }
 if (!String.prototype.trim) {
    String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
 } 
@@ -75,8 +147,7 @@ body {
     right:0;
     height:auto;
     bottom:auto;
- display:none;
-}
+    display:none}
 .codecontainer {
     width:50%;
     float:left;
@@ -109,10 +180,11 @@ body {
  height:280px;
  
 }
-    #myDIV {
+
+#myDIV {
   animation-iteration-count:1;
-} 
-#styleDIV {
+}
+  #styleDIV {
  font-family:consolas,Courier new;
  font-size:14px;
  margin-left:10px;
@@ -154,7 +226,8 @@ div.playitFooter {
     }
 }
  
- #myDIV
+ 
+  #myDIV
   {
   width:100px;
   height:100px;
@@ -210,96 +283,19 @@ div.playitFooter {
   from {left:0px;}
   to {left:200px;}
   }
- </style>
- <!-- Google Tag Manager -->
- <script>
- (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
- '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
- })(window,document,'script','dataLayer','GTM-KTCFC3S');
- </script>
- <!-- End Google Tag Manager -->
 
-<script type='text/javascript'>
-var k42 = false;
-var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
-
-k42 = true;
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
-
-var snhb = snhb || {}; snhb.queue = snhb.queue || [];
-snhb.options = {
-               logOutputEnabled : false,
-               autoStartAuction: false,
-               gdpr: {
-                     mainGeo: "us",
-                     reconsiderationAppealIntervalSeconds: 0
-                     }
-               };
-
-</script>
-<!-- begin cmp -->
-<script src="http://cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
-<style>
-#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #04AA6D!important;border-color: #04AA6D!important;}
-#snigel-cmp-framework .sn-b-def { border-color: #04AA6D!important;color: #04AA6D!important;}
-#snigel-cmp-framework .sn-selector ul li { color: #04AA6D!important}
-#snigel-cmp-framework .sn-selector ul li:after { background-color: #04AA6D!important; }
-#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#04AA6D!important;}
-#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #04AA6D!important; }
-#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #04AA6D!important; }
-#snigel-cmp-framework .sn-logo .sn-inner-logo img { max-height: 60px; margin: auto!important;}
-#snigel-cmp-framework h1 { margin: 10px 0!important;}
-#adconsent-usp-link {border: 1px solid #04AA6D!important;color: #04AA6D!important;}
-#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#04AA6D!important;}
-#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #04AA6D!important;background-color: #04AA6D!important;}</style>
-<script type="text/javascript">
-__cmp("setLogo", "https://www.w3schools.com/images/w3schools_logo_500_04AA6D.png");
-__cmp("setPrivacyPolicy", "../about/about_privacy.html");
-</script>
-<script async type="text/javascript" src="http://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
-<!-- end cmp -->
-<script>
-  snhb.queue.push(function(){
-
-    snhb.startAuction(["try_it_leaderboard"]);
-
-   });
-</script>
-<script>
-if (window.addEventListener) {              
-    window.addEventListener("resize", browserResize);
-} else if (window.attachEvent) {                 
-    window.attachEvent("onresize", browserResize);
-}
-var xbeforeResize = window.innerWidth;
-
-function browserResize() {
-    var afterResize = window.innerWidth;
-    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
-        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
-        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
-        xbeforeResize = afterResize;
-        
-        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
-         
-    }
-}
-</script>
+   </style>
 </head>
-<body>
+<body class="darktheme">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id='tryitLeaderboard' style="background-color:#ffffff">
+<div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
-
-  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
-  <div id="snhb-try_it_leaderboard-0"></div>
-  <!-- adspace tryit-->
- 
+  <div id='div-gpt-ad-1428407818244-0'>
+    <script type='text/javascript'>uic_r_o();</script>
+  </div>
 </div>
 
  <div id="container" class="container">
@@ -309,14 +305,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form class="playit" action="javascript:return false;">
                 animation-iteration-count:<br><br>
     <input type="hidden" id="preselectedValue" value="infinite" />
-    
-        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="1" /><label for="value_1">1</label></div>
-    
-        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="2" /><label for="value_2">2</label></div>
-    
-        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="5" /><label for="value_3">5</label></div>
-    
-        <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="infinite" /><label for="value_4">infinite</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_1" value="1" /><label for="value_1">1</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_2" value="2" /><label for="value_2">2</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_3" value="5" /><label for="value_3">5</label></div>
+            <div class="radio"><input autocomplete="off" type="radio" name="radio_position" onclick="click_position(this)" id="value_4" value="infinite" /><label for="value_4">infinite</label></div>
        
     </form>
     <div id="pfooter"></div>
@@ -326,12 +318,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  
    <div id="demoParent">
     <div id="demoDIV"><div>
-	<div id="myDIV" class="my1"></div>
-</div></div>
+    <div id="myDIV" class="my1"/>
+  </div></div>
    </div>
    <div class="demoHeader">CSS Code:</div>
    <pre id="styleDIV">
-#myDIV {<br>  animation-iteration-count:<span id='enlargecssprop'>1</span>;<br>}<br></pre>
+
+#myDIV {
+  animation-iteration-count:<span id='enlargecssprop'>1;</span>
+}
+  </pre>
   </div>
   <div style="clear:both;"></div>
  
@@ -341,10 +337,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    W3Schools.com</a> - Play it
   </div>
   <div style="clear:both;"></div>
- </div>
+</div>
 <script type="text/javascript">playit_onload()</script>
  </body>
 
-
-<!-- Mirrored from www.w3schools.com/cssref/playit.asp?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:15:00 GMT -->
+<!-- Mirrored from www.w3schools.com/cssref/playit.php?filename=playcss_animation-iteration-count&preval=infinite by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:34:42 GMT -->
 </html>

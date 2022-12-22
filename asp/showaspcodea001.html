@@ -1,7 +1,7 @@
 
 <HTML>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_hitcounter by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:10 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_hitcounter by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:14 GMT -->
 <HEAD>
 <style>
 html,body {
@@ -11,5 +11,5 @@ html,body {
 </HEAD>
 <FONT COLOR=#ff0000>&lt;%<br>Set FS=Server.CreateObject("Scripting.FileSystemObject")<br>Set RS=FS.OpenTextFile(Server.MapPath("counter.txt"), 1, False)<br>fcount=RS.ReadLine<br>RS.Close<br><br>fcount=fcount+1<br><br>'This code is disabled due to the write access security on our server:<br>'Set RS=FS.OpenTextFile(Server.MapPath("counter.txt"), 2, False)<br>'RS.Write fcount<br>'RS.Close<br><br>Set RS=Nothing<br>Set FS=Nothing<br><br>%&gt;</FONT><br>&lt;!DOCTYPE html><br>&lt;html><br>&lt;body><br>&lt;p><br>This page has been visited <FONT COLOR=#ff0000>&lt;%=fcount%&gt;</FONT>&nbsp; times.<br>&lt;/p><br>&lt;/body><br>&lt;/html><br>
 
-<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_hitcounter by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:46:10 GMT -->
+<!-- Mirrored from www.w3schools.com/asp/showaspcode.asp?source=demo_hitcounter by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 18:10:14 GMT -->
 </HTML>

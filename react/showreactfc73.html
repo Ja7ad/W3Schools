@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_shouldcomponentupdate2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:56:10 GMT -->
+<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_shouldcomponentupdate2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:16:16 GMT -->
 <head>
 <title>W3Schools Tryit Editor</title>
 <meta name="viewport" content="width=device-width">
@@ -72,7 +72,11 @@ function browserResize() {
       restack(window.innerHeight > window.innerWidth);
     }
     fixDragBtn();
-    showFrameSize();    
+    showFrameSize();  
+
+    setCodewindowHeight();
+  
+      
 }
 var fileID = "";
 </script>
@@ -148,6 +152,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   width:50%;
 }
+
 #textarea, #textarea2, #iframe {
   height:100%;
   width:100%;
@@ -161,21 +166,24 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframe {
   padding-left:5px;
   padding-right:10px;  
+  position:relative;  
   
 }
 #textareawrapper {
   width:100%;
   height:100%;
+  
+  overflow:auto;
+  overflow:hidden;
   background-color: #ffffff;
   position:relative;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
 }
 #iframewrapper {
   width:100%;
   height:100%;
   -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   
 }
 #textareaCode, #textareaCode2 {
@@ -189,6 +197,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   border:none;
   line-height:normal;    
 }
+/*
   .localhostcontainer {
     position:absolute;
     width:auto;
@@ -207,6 +216,88 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
     font-size:14px;
     padding-left:10px;
   }
+*/
+
+.localhostoutercontainer {
+  position: absolute;
+  width: auto;
+  left:5px;
+  right:10px;
+  background-color: #E7E9EB;
+  height: 30px;
+  z-index: 9;
+}
+.localhostoutercontainer.horizontal {
+  left:10px;
+}
+.localhostcontainer {
+  position:relative;
+  width:auto;
+  right:0;
+  left:0;
+  z-index:2;
+  xpadding:6px 12px;
+  xxborder-bottom:1px solid #d9d9d9;
+  background-color:#F1F1F1;
+  background-color:#38444d;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+  overflow:hidden;
+  padding-top:4px;
+}
+.localhostdiv {
+  overflow:hidden;
+  font-family:arial;
+  color:#000;
+  background-color:#fff;
+  font-size:15px;
+  padding-left:10px;
+  border-radius:20px;
+  width:60%;
+  float:left;
+  font-family: consolas,Menlo,"courier new",monospace;  
+}
+.localhostbuttoncontainer {
+  width:20%;
+  min-width:100px;
+  color:#ffc107;
+  float:left;  
+  font-size:16px;
+  overflow:auto;
+}
+div.localhostbuttoncontainer span{
+  display:inline-block;
+  color:#ffc107;
+  position:relative;
+  padding-bottom:4px;
+  padding-left:2px;  
+}
+
+div.localhostbuttoncontainer span:first-child{
+  color:#dc3545;
+  padding-left:12px;
+
+}
+div.localhostbuttoncontainer span:last-child{
+  color:#04AA6D;
+  padding-left:2px;    
+}
+
+body.darktheme .localhostoutercontainer {
+  background-color: #38444d;
+}
+body.darktheme .localhostcontainer {
+  background-color:rgb(21,32,43)
+}
+
+body.darktheme .localhostdiv {
+  border:1px solid #595959;
+  background-color:#ffffff;
+}
+
+/**/
+
+
   #filenamecontainer {
     position:absolute;
     text-align:center;
@@ -245,6 +336,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
     border-bottom:1px solid #595959;
     background-color:#616161;
     background-color:#38444d;  
+    background-color:rgb(21,32,43)
     
   }
   body.darktheme .localhostdiv {
@@ -265,6 +357,9 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframeResult, #iframeSource {
   background-color: #ffffff;
   
+    padding-top:32px;
+  
+  
   height:100%;
   width:100%;  
 }
@@ -280,6 +375,8 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   float:none;
   width:100%;
 }
+
+
 #textarea.horizontal{
   height:100%;
   padding-left:10px;
@@ -414,7 +511,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframewrapper {
 	
 }
+
+/*
   .tabs-container {
+  height:100%;
+  overflow:auto;
   }
   .tabs {
     list-style-type: none;
@@ -442,7 +543,60 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   .tab-pane.active { 
     display: block;
   }
+*/
 
+.tabitem, #resttab {
+  position:absolute;
+  z-index:2;
+  font-family:arial;
+  padding:4px 12px;
+  width:70px;
+  cursor:pointer;
+}
+
+/*  
+#progqcstab {
+  width:120px;
+  left:0;
+}
+#prog2qcstab {
+  width:100px;
+  left:120px;
+}
+#childtemplatetab {
+  width:150px;
+  left:220px;
+}
+*/
+.tabitem {
+  background-color:#38444d;
+  color:#ddd;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  opacity:0.5;
+}
+#resttab {
+  cursor:default;
+
+  z-index:1;
+  background-color:#E7E9EB;
+  width:100%;
+  left:0px;
+}
+
+
+.tabitem.tabselected{
+  opacity:1;
+}
+
+.darktheme .tabitem {
+  background-color:rgb(21,32,43)
+}
+.darktheme #resttab {
+  background-color:#38444d;
+}
+
+/**/
 .fa {
   padding: 10px 10px!important;
 }
@@ -517,6 +671,7 @@ body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161;
 body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;background-color: #4b5b68}
 
 
+/*
 #file1filetab, #resttab {
   position:absolute;
   z-index:2;
@@ -550,6 +705,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;backgr
 .darktheme #resttab {
   background-color:#38444d;
 }
+*/
 .darktheme #file1filetab {
   border-right:1px solid rgb(21,32,43);
 }
@@ -599,20 +755,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <a href="javascript:void(0)" id="dragbar"></a>
 <div id="container">
-<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
-<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
-  <div class="w3-bar-block">
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
-
-    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
-    <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
+  <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+    <span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+    <div class="w3-bar-block">
+      <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+      
+      <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
+      <a class="w3-bar-item w3-button" style="height: 62px;padding-top: 18px;" href='https://spaces.w3schools.com/' target="_blank" title="Go to Spaces"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px;" src="https://www.w3schools.com/images/spaces-icon-tryit.svg" /><span style="position:relative;top:-4px;left:2px;">Go to Spaces</span></a>    
+    </div>
+    <footer class="w3-container w3-small ws-grey">
+      <p>
+        <a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
+        <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a>
+      </p>
+    </footer>
   </div>
-  <footer class="w3-container w3-small ws-grey">
-  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2022</a></p>
-  </footer>
-</div>
-<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
@@ -652,36 +810,56 @@ root.render(&lt;Header /&gt;);
   <div id="iframecontainer">
     <div id="iframe">
       
+              <div class="localhostoutercontainer">
+                <div class="localhostcontainer">
+                  <div class="localhostbuttoncontainer">
+                    <span>&#11044;</span>
+                    <span>&#11044;</span>
+                    <span>&#11044;</span>
+                  </div>
+                  <div class="localhostdiv">localhost:3000</div>
+                </div>
+              </div>
+            
+      
       <div id="iframewrapper">
         
-            <div id="iframeResult" style="position:relative;">
-              <div class="localhostcontainer">
-                <div class="localhostdiv">localhost:3000</div>
-              </div>
-            </div>
-                  
+          <iframe id="iframeResult" frameborder="0" src="demo2_react_lifecycle_shouldcomponentupdate2.html"></iframe>
+                
       </div>
     </div>
   </div>
   
 </div>
 <script>
-submitTryit()
+
 function submitTryit(n) {
   
     if (window.editor) {
       window.editor.save();
     }
   
+  var text = document.getElementById("textareaCode").value;
+
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
   ifr.setAttribute("name", "iframeResult");  
 
-  ifr.setAttribute("style", "padding-top:30px;");  
-  document.getElementById("iframeResult").appendChild(ifr);
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
     
-  ifr.src = "demo2_react_lifecycle_shouldcomponentupdate2.html";
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+  //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+  //(and back to false to prevent the content from being editable)
+  //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+  if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+    ifrw.document.body.contentEditable = true;
+    ifrw.document.body.contentEditable = false;
+  }
     
 }
 
@@ -712,7 +890,7 @@ function displaySpinner() {
 var currentStack=true;
 if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
 function restack(horizontal) {
-    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    var tc, ic, t, i, c, f, sv, sh, d, b, height, flt, width;
     tc = document.getElementById("textareacontainer");
     ic = document.getElementById("iframecontainer");
     t = document.getElementById("textarea");
@@ -720,11 +898,13 @@ function restack(horizontal) {
     c = document.getElementById("container");    
     sv = document.getElementById("stackV");
     sh = document.getElementById("stackH");
+    b = document.getElementsByClassName("localhostoutercontainer");
     tc.className = tc.className.replace("horizontal", "");
     ic.className = ic.className.replace("horizontal", "");        
     t.className = t.className.replace("horizontal", "");        
     i.className = i.className.replace("horizontal", "");        
     c.className = c.className.replace("horizontal", "");                        
+    if (b[0]) {b[0].className = b[0].className.replace("horizontal", "")};
     if (sv) {sv.className = sv.className.replace("horizontal", "")};
     if (sv) {sh.className = sh.className.replace("horizontal", "")};
     stack = "";
@@ -736,6 +916,7 @@ function restack(horizontal) {
         c.className = c.className + " horizontal";                
         if (sv) {sv.className = sv.className + " horizontal"};
         if (sv) {sh.className = sh.className + " horizontal"};
+        if (b[0]) {b[0].className = b[0].className + " horizontal"};        
         stack = " horizontal";
         document.getElementById("textareacontainer").style.height = "50%";
         document.getElementById("iframecontainer").style.height = "50%";
@@ -751,6 +932,9 @@ function restack(horizontal) {
     }
     fixDragBtn();
     showFrameSize();
+
+    setCodewindowHeight();
+      
 }
 function showFrameSize() {
   var t;
@@ -823,7 +1007,11 @@ function dragmove(e) {
         fixDragBtn();
       }
     }
-    showFrameSize();    
+    showFrameSize();  
+
+    setCodewindowHeight();
+  
+      
   }
 }
 function dragend() {
@@ -843,6 +1031,9 @@ if (window.addEventListener) {
   window.addEventListener("touchend", dragend);
   window.addEventListener("load", fixDragBtn);
   window.addEventListener("load", showFrameSize);
+
+  window.addEventListener("load", setCodewindowHeight);
+  
 }
 
 function retheme() {
@@ -869,7 +1060,7 @@ function colorcoding() {
   //Opera Mini refreshes the page when trying to edit the textarea.
   if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
   window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
-  mode: "",
+  mode: "text/html",
   lineWrapping: true,
   smartIndent: false,
   htmlMode: true,
@@ -887,6 +1078,12 @@ function colorcoding() {
 //  window.editor.on("change", function () {window.editor.save();});
 }
 
+
+function clickTab(x) {
+  
+  return false;
+  
+}
 
 function w3_getStyleValue(elmnt,style) {
     if (window.getComputedStyle) {
@@ -928,10 +1125,22 @@ window.onclick = function(event) {
         openMenu();
     }
 }
+function setCodewindowHeight() {
+  var i;
+  var txw = document.getElementById("textareawrapper");
+  var txwh = w3_getStyleValue(txw,"height");
+  
+  var qwsa = document.getElementsByClassName("codewindow");
+  for (i = 0; i < qwsa.length; i++) {
+    qwsa[i].style.height = txwh;
+    qwsa[i].style.setProperty("overflow", "auto", "important");
+  }
+}
+
 uic_r_e()
 </script>
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_shouldcomponentupdate2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:56:11 GMT -->
+<!-- Mirrored from www.w3schools.com/react/showreact.asp?filename=demo2_react_lifecycle_shouldcomponentupdate2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:16:17 GMT -->
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_rotate_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:09 GMT -->
+<head>
+<style>
+#div1
+{
+position: relative;
+height: 150px;
+width: 200px;
+margin: 30px;
+padding:30px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+rotate: z 0deg;
+}
+</style>
+<script>
+
+function changeRot()
+{
+  let axis = document.querySelector('input[name="rBtn-axis"]:checked').value;
+  let angle = document.getElementById('inpAngle').value;
+  document.getElementById('div2').style.rotate = axis + ' ' + angle +'deg';
+  document.getElementById('pRotate').innerHTML = 'rotate: ' + axis + ' ' + angle +'deg;';     
+}
+</script>
+</head>
+
+<body>
+
+<p>Rotate the red div element, try changing its axis and angle value.</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p>Rotate</p>
+<p>
+  Angle:<br><input type="range" min="-180" max="180" value="0" step="1" oninput="changeRot()" id="inpAngle" />
+</p>
+<p>Select axis:</p>
+<input type="radio" name="rBtn-axis" id="x" value="x" oninput="changeRot()"><label for="x">x</label> <br>
+<input type="radio" name="rBtn-axis" id="y" value="y" oninput="changeRot()"><label for="y">y</label> <br>
+<input type="radio" name="rBtn-axis" id="z" value="z" checked oninput="changeRot()"><label for="z">z</label>
+
+<p id="pRotate">rotate: z 0deg;</p>
+
+ 
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/trycss_rotate_inuse.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Dec 2022 17:38:09 GMT -->
+</html>
